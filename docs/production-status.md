@@ -12,4 +12,4 @@ The 60–120 FPS goal is met in the measured desktop scenario; physical low-tier
 
 Custom meshes and free CC0 textures replace paid Meshy generation. The upstream skill validator's hardcoded Meshy and browser fields do not fit this method. Its raw outputs and the adapted native-runtime checks are retained. Zero paid generations or credits were used.
 
-Java, SDK paths, signing credentials, local tools, and build binaries are outside Git source tracking. Windows uses an embedded PCK. Android is locally debug-signed. Downloadable builds can be published in a GitHub release after the playable-game review.
+Java, SDK paths, signing credentials, local tools, and build binaries are outside Git source tracking. Windows uses an embedded PCK. Android is locally debug-signed. Downloadable builds are published in GitHub release v0.1.0. The GitHub asset digests match the tested local EXE and APK and the packaged ZIP/checksum file. Source is on the main branch. See delivery.json for the verified download URLs and hashes.

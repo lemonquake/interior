@@ -2,7 +2,6 @@ FAIL: props.json: generation must use Meshy model meshy-5
 FAIL: props.json: current official Meshy pricing verification is required
 FAIL: props.json: positive creditsPerTexturedTask is required
 FAIL: props.json: hardCreditCeiling must be positive and no greater than the room credit budget
-FAIL: Runtime gate: strangestElement review is required
 FAIL: Form gate: prop fabric_sofa requires an accepted, hashed Meshy GLB
 FAIL: Form gate: prop leather_sofa requires an accepted, hashed Meshy GLB
 FAIL: Form gate: prop marble_table requires an accepted, hashed Meshy GLB

@@ -1,0 +1,40 @@
+{
+  "repository": "https://github.com/lemonquake/interior",
+  "version": "v0.1.0",
+  "releaseUrl": "https://github.com/lemonquake/interior/releases/tag/v0.1.0",
+  "publishedAt": "2026-10-04T22:56:20Z",
+  "verifiedAt": "2026-10-04T22:58:27.631312+00:00",
+  "releaseSourceCommit": "6bd82304165c81cc1f4fd0267db42b0de9fd6edd",
+  "assets": [
+    {
+      "name": "Interior.exe",
+      "url": "https://github.com/lemonquake/interior/releases/download/v0.1.0/Interior.exe",
+      "bytes": 116379432,
+      "sha256": "451916848ff7cc6999124c1d7acb9401e77d875180dd2eaa93137b0e38bb8577",
+      "githubDigestMatches": true
+    },
+    {
+      "name": "Interior.apk",
+      "url": "https://github.com/lemonquake/interior/releases/download/v0.1.0/Interior.apk",
+      "bytes": 64677273,
+      "sha256": "93cd81bd2d4d6fb5647c1b646c18c1100aa84af98290ab742c6d7e40e204f129",
+      "githubDigestMatches": true
+    },
+    {
+      "name": "Interior-Windows-x64.zip",
+      "url": "https://github.com/lemonquake/interior/releases/download/v0.1.0/Interior-Windows-x64.zip",
+      "bytes": 46170105,
+      "sha256": "83ec271866daa47554e8501b65bd952ddacfb103839526f540c25de6c104cc90",
+      "githubDigestMatches": true
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "url": "https://github.com/lemonquake/interior/releases/download/v0.1.0/SHA256SUMS.txt",
+      "bytes": 252,
+      "sha256": "ca774a974cf633b181fce32ce209442becf356c8d3819301f831a4f882214c05",
+      "githubDigestMatches": true
+    }
+  ],
+  "androidSigning": "Local debug key; installable APK",
+  "physicalPhoneFpsMeasured": false
+}

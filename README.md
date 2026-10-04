@@ -4,6 +4,8 @@
 
 The Blender model, Godot game, Windows EXE, and Android APK are built. The owner approved Function, Form, and the playable Runtime for GitHub publication. Open `room/runtime-review.html` for actual exported-game screenshots and measurements.
 
+[Download Interior v0.1.0](https://github.com/lemonquake/interior/releases/tag/v0.1.0): [Windows EXE](https://github.com/lemonquake/interior/releases/download/v0.1.0/Interior.exe), [Windows ZIP with notices](https://github.com/lemonquake/interior/releases/download/v0.1.0/Interior-Windows-x64.zip), and [Android APK](https://github.com/lemonquake/interior/releases/download/v0.1.0/Interior.apk). All four uploaded asset digests match their local files; `docs/delivery.json` records verification. Blender source: `room/living_room.blend`; Godot project: `game/project.godot`.
+
 The room uses owner-approved estimated dimensions: 6.6 × 5.4 × 2.9 m. Unseen walls, ceiling, and object backs are inferred from one photograph. The layout and object identities follow the reference; fine shapes and materials differ. This is a procedural approximation, not a measured scan.
 
 ## Play

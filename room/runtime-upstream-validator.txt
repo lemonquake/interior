@@ -1,0 +1,58 @@
+FAIL: props.json: generation must use Meshy model meshy-5
+FAIL: props.json: current official Meshy pricing verification is required
+FAIL: props.json: positive creditsPerTexturedTask is required
+FAIL: props.json: hardCreditCeiling must be positive and no greater than the room credit budget
+FAIL: Runtime gate: explicit approval is required
+FAIL: Runtime gate: strangestElement review is required
+FAIL: final-report.json: gates.runtime must be true
+FAIL: Form gate: prop fabric_sofa requires an accepted, hashed Meshy GLB
+FAIL: Form gate: prop leather_sofa requires an accepted, hashed Meshy GLB
+FAIL: Form gate: prop marble_table requires an accepted, hashed Meshy GLB
+FAIL: Form gate: prop tv_console requires an accepted, hashed Meshy GLB
+FAIL: Form gate: prop television requires an accepted, hashed Meshy GLB
+FAIL: Form gate: prop standing_fan requires an accepted, hashed Meshy GLB
+FAIL: Form gate: prop potted_plant requires an accepted, hashed Meshy GLB
+FAIL: Form gate: prop red_flowers requires an accepted, hashed Meshy GLB
+FAIL: Form gate: prop purple_flowers requires an accepted, hashed Meshy GLB
+FAIL: Form gate: prop yellow_flowers requires an accepted, hashed Meshy GLB
+FAIL: Form gate: prop photo_frame requires an accepted, hashed Meshy GLB
+FAIL: Form gate: prop wall_shelf requires an accepted, hashed Meshy GLB
+FAIL: Form gate: prop digital_clock requires an accepted, hashed Meshy GLB
+FAIL: Form gate: prop computer_desk requires an accepted, hashed Meshy GLB
+FAIL: Form gate: prop monitor requires an accepted, hashed Meshy GLB
+FAIL: Form gate: prop computer_tower requires an accepted, hashed Meshy GLB
+FAIL: Form gate: prop baby_crib requires an accepted, hashed Meshy GLB
+FAIL: Form gate: prop high_chair requires an accepted, hashed Meshy GLB
+FAIL: Form gate: prop pet_enclosure requires an accepted, hashed Meshy GLB
+FAIL: Form gate: prop fish_bowl requires an accepted, hashed Meshy GLB
+FAIL: Form gate: prop bass_guitar requires an accepted, hashed Meshy GLB
+FAIL: Form gate: prop tissue_box requires an accepted, hashed Meshy GLB
+FAIL: Form gate: prop woven_tray requires an accepted, hashed Meshy GLB
+FAIL: Form gate: prop storage_bin requires an accepted, hashed Meshy GLB
+FAIL: Form gate: formChecks.floorPlanParity must be true
+FAIL: Form gate: formChecks.primaryArrival must be true
+FAIL: Form gate: formChecks.symmetry must be true
+FAIL: Form gate: formChecks.shell must be true
+FAIL: Form gate: formChecks.manifold must be true
+FAIL: Form gate: formChecks.booleans must be true
+FAIL: Form gate: formChecks.collisions must be true
+FAIL: Form gate: formChecks.support must be true
+FAIL: Form gate: formChecks.attachmentOrientation must be true
+FAIL: Form gate: formChecks.ceilingAttachmentOrientation must be true
+FAIL: Form gate: formChecks.seatingOrientation must be true
+FAIL: Form gate: formChecks.focalDistribution must be true
+FAIL: Form gate: formChecks.heroClearance must be true
+FAIL: Form gate: formChecks.colonnades must be true
+FAIL: Form gate: formChecks.screenClearance must be true
+FAIL: Form gate: formChecks.scale must be true
+FAIL: Form gate: formChecks.camera must be true
+FAIL: Form gate: formChecks.ceilingCoverage must be true
+FAIL: Form gate: formChecks.environmentCoverage must be true
+FAIL: Form gate: formChecks.provenance must be true
+FAIL: Runtime gate: runtimeChecks.vlow must be true
+FAIL: Runtime gate: runtimeChecks.textureTiers must be true
+FAIL: Runtime gate: runtimeChecks.lightmap must be true
+FAIL: Runtime gate: runtimeChecks.lightingManifest must be true
+FAIL: Runtime gate: runtimeChecks.performance must be true
+FAIL: Runtime gate: browser capture is required
+FAIL: Runtime gate: browser errors must be empty

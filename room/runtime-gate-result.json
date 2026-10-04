@@ -1,0 +1,9 @@
+{
+  "gate": "runtime",
+  "passed": false,
+  "errors": [
+    "Explicit owner approval pending: runtime"
+  ],
+  "adaptation": "Procedural Blender sources replace Meshy task/credit requirements; human reviews remain required.",
+  "blenderSourceSha256": "7935d7271cd17f5da855a1375869cea104012d83cc6d2c29108f1003261fa5bf"
+}

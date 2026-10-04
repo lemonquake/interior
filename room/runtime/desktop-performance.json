@@ -1,0 +1,68 @@
+{
+  "measuredAt": "2026-10-04T22:51:53.175034+00:00",
+  "source": "Exported Windows EXE, VSync disabled, 120 FPS cap, real wall-clock frame durations",
+  "hardware": "NVIDIA GeForce RTX 4060",
+  "runs": [
+    {
+      "frames": 2400,
+      "median_frame_ms": 8.366,
+      "mobile_controls": false,
+      "objects": 48,
+      "p99_frame_ms": 8.888,
+      "quality": 0,
+      "renderer": "NVIDIA GeForce RTX 4060",
+      "scenario": "camera sweep and sixteen active bodies",
+      "scene": "living-room",
+      "qualityName": "low",
+      "medianFps": 119.5,
+      "slowestOnePercentFps": 112.5,
+      "viewport": [
+        1280,
+        720
+      ],
+      "warmupSeconds": 2,
+      "sampleSeconds": 20
+    },
+    {
+      "frames": 2401,
+      "median_frame_ms": 8.529,
+      "mobile_controls": false,
+      "objects": 48,
+      "p99_frame_ms": 8.87,
+      "quality": 1,
+      "renderer": "NVIDIA GeForce RTX 4060",
+      "scenario": "camera sweep and sixteen active bodies",
+      "scene": "living-room",
+      "qualityName": "medium",
+      "medianFps": 117.2,
+      "slowestOnePercentFps": 112.7,
+      "viewport": [
+        1280,
+        720
+      ],
+      "warmupSeconds": 2,
+      "sampleSeconds": 20
+    },
+    {
+      "frames": 2399,
+      "median_frame_ms": 8.105,
+      "mobile_controls": false,
+      "objects": 48,
+      "p99_frame_ms": 10.141,
+      "quality": 2,
+      "renderer": "NVIDIA GeForce RTX 4060",
+      "scenario": "camera sweep and sixteen active bodies",
+      "scene": "living-room",
+      "qualityName": "high",
+      "medianFps": 123.4,
+      "slowestOnePercentFps": 98.6,
+      "viewport": [
+        1280,
+        720
+      ],
+      "warmupSeconds": 2,
+      "sampleSeconds": 20
+    }
+  ],
+  "limits": "A bounded camera sweep and sixteen active bodies; not an exhaustive worst-case test. No physical low-tier Android FPS claim."
+}

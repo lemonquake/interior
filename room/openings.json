@@ -1,0 +1,9 @@
+{
+  "schema": "game-room.opening-schedule.v1",
+  "roomId": "interior-living-room",
+  "openings": [],
+  "primaryArrival": {
+    "openingId": null,
+    "exception": "Single photographed room: no doorway visible. Player starts inside; do not invent visible architecture. Rear-wall survey pending."
+  }
+}

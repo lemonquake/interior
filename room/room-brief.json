@@ -1,0 +1,76 @@
+{
+  "schema": "game-room.room-brief.v1",
+  "roomId": "interior-living-room",
+  "family": "gameplay-room",
+  "purpose": "Recreate the photographed living room as a physics mystery game",
+  "runtimeSurface": "Godot 4.7.2 Windows x86_64 / Android arm64 Compatibility",
+  "boundsMeters": [
+    6.6,
+    5.4,
+    2.9
+  ],
+  "measurementStatus": "Estimated dimensions approved by owner; unseen rear walls and ceiling inferred",
+  "hero": {
+    "id": "television",
+    "role": "Primary visual focus and final mystery console",
+    "reservedBoundsMeters": [
+      1.7,
+      0.35,
+      1.0
+    ]
+  },
+  "symmetry": {
+    "mode": "none",
+    "order": 1,
+    "appliesTo": [],
+    "exceptions": [
+      "Asymmetric existing home layout reproduced from reference"
+    ]
+  },
+  "productionCamera": {
+    "viewport": [
+      1440,
+      900
+    ],
+    "verticalFovDegrees": 75,
+    "location": [
+      2.2,
+      -3.55,
+      1.8
+    ],
+    "target": [
+      -0.45,
+      1.6,
+      1.2
+    ]
+  },
+  "environment": {
+    "type": "none"
+  },
+  "performanceBudget": {
+    "maxSceneTriangles": 160000,
+    "maxVLowBytes": 12000000,
+    "maxHighTextureBytes": 64000000,
+    "targetFpsDesktop": [
+      60,
+      120
+    ],
+    "targetFpsMobile": 60,
+    "lowMobileRenderHeight": 540,
+    "maxAwakeRigidBodies": 16,
+    "lighting": "Static base illumination; dynamic shadows off on low"
+  },
+  "creditBudget": {
+    "maximumCredits": 0
+  },
+  "artifacts": {
+    "floorPlan": "plans/lower-room.png",
+    "reflectedCeilingPlan": "plans/reflected-ceiling.png",
+    "planMetadata": "plan-metadata.json",
+    "visualTarget": "images/reference.png",
+    "openingContactSheet": "masks/openings-contact.png",
+    "wallElevations": [
+      "plans/tv-wall-elevation.png"
+    ]
+  }
+}

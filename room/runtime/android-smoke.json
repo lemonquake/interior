@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "testedAt": "2026-10-04T22:45:21.112134+00:00",
+  "apkSha256": "93cd81bd2d4d6fb5647c1b646c18c1100aa84af98290ab742c6d7e40e204f129",
+  "device": "Android 16/API 36, medium_phone emulator, 2 GB guest RAM, ARM64 native bridge",
+  "graphics": "Hardware GLES translator backed by NVIDIA RTX 4060",
+  "package": "com.aljayleodones.interior",
+  "version": "0.1.0",
+  "minimumAndroidApi": 24,
+  "targetAndroidApi": 36,
+  "architectures": [
+    "armeabi-v7a",
+    "arm64-v8a"
+  ],
+  "observedActions": [
+    "APK installation",
+    "Landscape menu and author credit",
+    "Tap Play",
+    "Left-finger movement",
+    "Right-finger look",
+    "Hold the clock with Hold / Drop",
+    "Clock note discovered; journal count 1/3",
+    "Throw releases clock with physics",
+    "Pause",
+    "Switch Low to High graphics",
+    "Resume"
+  ],
+  "captures": [
+    "android-menu.png",
+    "android-play.png",
+    "android-look.png",
+    "android-held.png",
+    "android-throw.png",
+    "android-pause.png",
+    "android-high.png"
+  ],
+  "godotErrors": [],
+  "physicalPhoneTested": false,
+  "performanceClaim": "Emulator compatibility and interaction only; no physical low-tier phone FPS measurement.",
+  "earlierFailure": "SwiftShader emulator GLSL compiler rejected the engine defaults. Hardware graphics passed. Unused mobile light limits were reduced to the two actual fixtures. Touch button bugs found by APK taps were fixed and covered by integration checks."
+}

@@ -1,0 +1,8 @@
+.local/
+game/.godot/
+builds/
+*.blend1
+*.log
+__pycache__/
+*.keystore
+game/.godot-export-credentials

@@ -1,0 +1,53 @@
+{
+  "measuredAt": "2026-10-04T22:51:53.453084+00:00",
+  "checks": {
+    "sourceHashMatches": true,
+    "glbHashMatches": true,
+    "triangleBudget": true,
+    "assetBytesBudget": true,
+    "decodedTextureBudget": true,
+    "fixtureManifestMatches": true,
+    "staticVertexLightingPresent": true,
+    "integrationPassed": true,
+    "desktopTargetInMeasuredScenario": true,
+    "androidSmokePassed": true
+  },
+  "artifacts": {
+    "Interior.exe": {
+      "path": "builds/windows/Interior.exe",
+      "bytes": 116379432,
+      "sha256": "451916848ff7cc6999124c1d7acb9401e77d875180dd2eaa93137b0e38bb8577"
+    },
+    "Interior.apk": {
+      "path": "builds/android/Interior.apk",
+      "bytes": 64677273,
+      "sha256": "93cd81bd2d4d6fb5647c1b646c18c1100aa84af98290ab742c6d7e40e204f129"
+    }
+  },
+  "actorCount": 48,
+  "triangles": 73784,
+  "meshCount": 40,
+  "textureCount": 17,
+  "decodedTextureUpperBoundBytesWithMipmaps": 30059176,
+  "staticColorPrimitives": 6,
+  "lighting": {
+    "method": "RoomLight vertex-color bake",
+    "fixtureManifest": "room-layout.json fixtures",
+    "staticCastersOnly": true,
+    "receiverVertices": 7250,
+    "dynamicLights": "Same fixture positions; restrained additive fill"
+  },
+  "humanRuntimeApproval": "pending",
+  "correctionsAfterFormApproval": [
+    "Added the visible black side storage rack and adjusted its bins and plants.",
+    "Separated loose cushions, crib toy, keyboard, and display rack as physics assemblies.",
+    "Replaced broad collision boxes with measured compound supports.",
+    "Preserved the initial arrangement until touch; contacts wake unattached furnishings."
+  ],
+  "limitations": [
+    "Estimated dimensions and unseen geometry from one photograph.",
+    "Procedural approximation retains layout and object identity; fine shapes and materials differ.",
+    "Low-tier physical phone performance remains unmeasured.",
+    "Android is signed with a local debug key for installation, not Play Store release signing."
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "customMeshes": "tools/build_room_study.py, authored procedural geometry",
+  "reference": "Owner supplied photo, source for room only",
+  "externalTextures": [
+    {
+      "name": "Wood Floor",
+      "author": "Dimitrios Savva",
+      "license": "CC0",
+      "source": "https://polyhaven.com/a/wood_floor",
+      "download": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/wood_floor/wood_floor_diff_1k.jpg",
+      "path": "textures/wood_floor_diff_1k.jpg",
+      "sha256": "2a1c07687b6dbb214c4b9213739c6d92d425f1f0fc8ab3ac157f105d78240789"
+    },
+    {
+      "name": "Marble 01",
+      "author": "Rob Tuytel",
+      "license": "CC0",
+      "source": "https://polyhaven.com/a/marble_01",
+      "path": "textures/marble_01_diff_1k.jpg"
+    }
+  ],
+  "paidGeneration": false,
+  "authoredTextures": "tools/make_materials.py; deterministic native material generation",
+  "portraitInserts": "Small texture inserts sampled from owner supplied room photo"
+}

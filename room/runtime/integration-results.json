@@ -1,0 +1,21 @@
+{
+  "physics_integration": {
+    "checks": 25,
+    "failures": [],
+    "passed": true,
+    "scene": "control lab"
+  },
+  "settling": {
+    "moved": [],
+    "passed": true,
+    "seconds": 4
+  },
+  "room_integration": {
+    "anchored": 13,
+    "checks": 79,
+    "clues": 3,
+    "failures": [],
+    "objects": 48,
+    "passed": true
+  }
+}

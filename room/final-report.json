@@ -1,0 +1,48 @@
+{
+  "schema": "game-room.room-final-report.v1",
+  "roomId": "interior-living-room",
+  "gates": {
+    "function": true,
+    "form": true,
+    "runtime": false
+  },
+  "formChecks": {
+    "structuralManifold": true,
+    "fullHeightWalls": true,
+    "thickSubstrates": true,
+    "sourceMeters": true,
+    "noUnscheduledApertures": true
+  },
+  "runtimeChecks": {
+    "sourceHashMatches": true,
+    "glbHashMatches": true,
+    "triangleBudget": true,
+    "assetBytesBudget": true,
+    "decodedTextureBudget": true,
+    "fixtureManifestMatches": true,
+    "staticVertexLightingPresent": true,
+    "integrationPassed": true,
+    "desktopTargetInMeasuredScenario": true,
+    "androidSmokePassed": true,
+    "loadedApplicationCapture": "runtime/living-room-play.png"
+  },
+  "reviewRenders": {
+    "corners": [
+      "renders/corner-1.png",
+      "renders/corner-2.png",
+      "renders/corner-3.png",
+      "renders/corner-4.png"
+    ],
+    "ceiling": [
+      "renders/ceiling-center-up.png",
+      "renders/ceiling-oblique-a.png",
+      "renders/ceiling-oblique-b.png"
+    ]
+  },
+  "limitations": [
+    "Estimated dimensions and unseen geometry from one photograph.",
+    "Procedural approximation retains layout and object identity; fine shapes and materials differ.",
+    "Low-tier physical phone performance remains unmeasured.",
+    "Android is signed with a local debug key for installation, not Play Store release signing."
+  ]
+}

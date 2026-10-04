@@ -1,0 +1,760 @@
+{
+  "schema": "game-room.prop-manifest.v1",
+  "roomId": "interior-living-room",
+  "generation": {
+    "provider": "procedural-blender",
+    "apiModel": null,
+    "pricingSource": null,
+    "pricingVerifiedAt": null,
+    "creditsPerTexturedTask": 0,
+    "hardCreditCeiling": 0,
+    "maxChargedAttemptsPerAsset": 2,
+    "reason": "Free custom mesh workflow explicitly requested; Meshy is unused."
+  },
+  "assets": [
+    {
+      "id": "fabric_sofa",
+      "function": "Living room furnishing and physics interaction",
+      "description": "Brown fabric sofa",
+      "class": "reusable",
+      "dimensionsMeters": [
+        2.18,
+        0.96,
+        1.08
+      ],
+      "attachmentFace": "floor",
+      "semanticFront": "negative-y",
+      "intendedInstances": 1,
+      "targetPolycount": 3600,
+      "rejectionCriteria": [
+        "Unsupported floating parts",
+        "Silhouette differs from photo",
+        "Surface intersects movement aisle",
+        "Excessive triangle count"
+      ],
+      "image": {
+        "source": "images/fabric_sofa.png",
+        "generator": "Blender 5.2.1 procedural mesh studio render",
+        "prompt": "Brown fabric sofa; isolated complete mesh, neutral three quarter studio view, all supports visible",
+        "approved": true,
+        "approvedBy": "Owner: explicit approval in this chat",
+        "approvedAt": "2026-10-04T21:44:57.054681+00:00"
+      },
+      "sourceMethod": "procedural-blender",
+      "attempts": []
+    },
+    {
+      "id": "leather_sofa",
+      "function": "Living room furnishing and physics interaction",
+      "description": "Dark leather sofa",
+      "class": "reusable",
+      "dimensionsMeters": [
+        2.18,
+        0.96,
+        1.08
+      ],
+      "attachmentFace": "floor",
+      "semanticFront": "negative-y",
+      "intendedInstances": 1,
+      "targetPolycount": 3600,
+      "rejectionCriteria": [
+        "Unsupported floating parts",
+        "Silhouette differs from photo",
+        "Surface intersects movement aisle",
+        "Excessive triangle count"
+      ],
+      "image": {
+        "source": "images/leather_sofa.png",
+        "generator": "Blender 5.2.1 procedural mesh studio render",
+        "prompt": "Dark leather sofa; isolated complete mesh, neutral three quarter studio view, all supports visible",
+        "approved": true,
+        "approvedBy": "Owner: explicit approval in this chat",
+        "approvedAt": "2026-10-04T21:44:57.054681+00:00"
+      },
+      "sourceMethod": "procedural-blender",
+      "attempts": []
+    },
+    {
+      "id": "marble_table",
+      "function": "Living room furnishing and physics interaction",
+      "description": "Marble top pedestal table",
+      "class": "reusable",
+      "dimensionsMeters": [
+        1.65,
+        1.32,
+        0.84
+      ],
+      "attachmentFace": "floor",
+      "semanticFront": "negative-y",
+      "intendedInstances": 1,
+      "targetPolycount": 1500,
+      "rejectionCriteria": [
+        "Unsupported floating parts",
+        "Silhouette differs from photo",
+        "Surface intersects movement aisle",
+        "Excessive triangle count"
+      ],
+      "image": {
+        "source": "images/marble_table.png",
+        "generator": "Blender 5.2.1 procedural mesh studio render",
+        "prompt": "Marble top pedestal table; isolated complete mesh, neutral three quarter studio view, all supports visible",
+        "approved": true,
+        "approvedBy": "Owner: explicit approval in this chat",
+        "approvedAt": "2026-10-04T21:44:57.054681+00:00"
+      },
+      "sourceMethod": "procedural-blender",
+      "attempts": []
+    },
+    {
+      "id": "tv_console",
+      "function": "Living room furnishing and physics interaction",
+      "description": "Oak and white TV cabinet",
+      "class": "reusable",
+      "dimensionsMeters": [
+        2.7,
+        0.5,
+        0.58
+      ],
+      "attachmentFace": "floor",
+      "semanticFront": "negative-y",
+      "intendedInstances": 1,
+      "targetPolycount": 1800,
+      "rejectionCriteria": [
+        "Unsupported floating parts",
+        "Silhouette differs from photo",
+        "Surface intersects movement aisle",
+        "Excessive triangle count"
+      ],
+      "image": {
+        "source": "images/tv_console.png",
+        "generator": "Blender 5.2.1 procedural mesh studio render",
+        "prompt": "Oak and white TV cabinet; isolated complete mesh, neutral three quarter studio view, all supports visible",
+        "approved": true,
+        "approvedBy": "Owner: explicit approval in this chat",
+        "approvedAt": "2026-10-04T21:44:57.054681+00:00"
+      },
+      "sourceMethod": "procedural-blender",
+      "attempts": []
+    },
+    {
+      "id": "television",
+      "function": "Living room furnishing and physics interaction",
+      "description": "Wall mounted television",
+      "class": "hero",
+      "dimensionsMeters": [
+        1.48,
+        0.083,
+        0.865
+      ],
+      "attachmentFace": "wall",
+      "semanticFront": "negative-y",
+      "intendedInstances": 1,
+      "targetPolycount": 400,
+      "rejectionCriteria": [
+        "Unsupported floating parts",
+        "Silhouette differs from photo",
+        "Surface intersects movement aisle",
+        "Excessive triangle count"
+      ],
+      "image": {
+        "source": "images/television.png",
+        "generator": "Blender 5.2.1 procedural mesh studio render",
+        "prompt": "Wall mounted television; isolated complete mesh, neutral three quarter studio view, all supports visible",
+        "approved": true,
+        "approvedBy": "Owner: explicit approval in this chat",
+        "approvedAt": "2026-10-04T21:44:57.054681+00:00"
+      },
+      "sourceMethod": "procedural-blender",
+      "attempts": []
+    },
+    {
+      "id": "standing_fan",
+      "function": "Living room furnishing and physics interaction",
+      "description": "Black pedestal fan",
+      "class": "reusable",
+      "dimensionsMeters": [
+        0.6,
+        0.55,
+        1.6
+      ],
+      "attachmentFace": "floor",
+      "semanticFront": "negative-y",
+      "intendedInstances": 1,
+      "targetPolycount": 5000,
+      "rejectionCriteria": [
+        "Unsupported floating parts",
+        "Silhouette differs from photo",
+        "Surface intersects movement aisle",
+        "Excessive triangle count"
+      ],
+      "image": {
+        "source": "images/standing_fan.png",
+        "generator": "Blender 5.2.1 procedural mesh studio render",
+        "prompt": "Black pedestal fan; isolated complete mesh, neutral three quarter studio view, all supports visible",
+        "approved": true,
+        "approvedBy": "Owner: explicit approval in this chat",
+        "approvedAt": "2026-10-04T21:44:57.054681+00:00"
+      },
+      "sourceMethod": "procedural-blender",
+      "attempts": []
+    },
+    {
+      "id": "potted_plant",
+      "function": "Living room furnishing and physics interaction",
+      "description": "Small leafy plant in white pot",
+      "class": "reusable",
+      "dimensionsMeters": [
+        0.36,
+        0.36,
+        0.43
+      ],
+      "attachmentFace": "freestanding",
+      "semanticFront": "negative-y",
+      "intendedInstances": 4,
+      "targetPolycount": 3800,
+      "rejectionCriteria": [
+        "Unsupported floating parts",
+        "Silhouette differs from photo",
+        "Surface intersects movement aisle",
+        "Excessive triangle count"
+      ],
+      "image": {
+        "source": "images/potted_plant.png",
+        "generator": "Blender 5.2.1 procedural mesh studio render",
+        "prompt": "Small leafy plant in white pot; isolated complete mesh, neutral three quarter studio view, all supports visible",
+        "approved": true,
+        "approvedBy": "Owner: explicit approval in this chat",
+        "approvedAt": "2026-10-04T21:44:57.054681+00:00"
+      },
+      "sourceMethod": "procedural-blender",
+      "attempts": []
+    },
+    {
+      "id": "red_flowers",
+      "function": "Living room furnishing and physics interaction",
+      "description": "Red flowers in white vase",
+      "class": "reusable",
+      "dimensionsMeters": [
+        0.3,
+        0.3,
+        0.37
+      ],
+      "attachmentFace": "freestanding",
+      "semanticFront": "negative-y",
+      "intendedInstances": 1,
+      "targetPolycount": 4200,
+      "rejectionCriteria": [
+        "Unsupported floating parts",
+        "Silhouette differs from photo",
+        "Surface intersects movement aisle",
+        "Excessive triangle count"
+      ],
+      "image": {
+        "source": "images/red_flowers.png",
+        "generator": "Blender 5.2.1 procedural mesh studio render",
+        "prompt": "Red flowers in white vase; isolated complete mesh, neutral three quarter studio view, all supports visible",
+        "approved": true,
+        "approvedBy": "Owner: explicit approval in this chat",
+        "approvedAt": "2026-10-04T21:44:57.054681+00:00"
+      },
+      "sourceMethod": "procedural-blender",
+      "attempts": []
+    },
+    {
+      "id": "purple_flowers",
+      "function": "Living room furnishing and physics interaction",
+      "description": "Purple flowers in white pot",
+      "class": "reusable",
+      "dimensionsMeters": [
+        0.3,
+        0.3,
+        0.37
+      ],
+      "attachmentFace": "freestanding",
+      "semanticFront": "negative-y",
+      "intendedInstances": 2,
+      "targetPolycount": 4200,
+      "rejectionCriteria": [
+        "Unsupported floating parts",
+        "Silhouette differs from photo",
+        "Surface intersects movement aisle",
+        "Excessive triangle count"
+      ],
+      "image": {
+        "source": "images/purple_flowers.png",
+        "generator": "Blender 5.2.1 procedural mesh studio render",
+        "prompt": "Purple flowers in white pot; isolated complete mesh, neutral three quarter studio view, all supports visible",
+        "approved": true,
+        "approvedBy": "Owner: explicit approval in this chat",
+        "approvedAt": "2026-10-04T21:44:57.054681+00:00"
+      },
+      "sourceMethod": "procedural-blender",
+      "attempts": []
+    },
+    {
+      "id": "yellow_flowers",
+      "function": "Living room furnishing and physics interaction",
+      "description": "Yellow flowers in white pot",
+      "class": "reusable",
+      "dimensionsMeters": [
+        0.3,
+        0.3,
+        0.37
+      ],
+      "attachmentFace": "freestanding",
+      "semanticFront": "negative-y",
+      "intendedInstances": 2,
+      "targetPolycount": 4200,
+      "rejectionCriteria": [
+        "Unsupported floating parts",
+        "Silhouette differs from photo",
+        "Surface intersects movement aisle",
+        "Excessive triangle count"
+      ],
+      "image": {
+        "source": "images/yellow_flowers.png",
+        "generator": "Blender 5.2.1 procedural mesh studio render",
+        "prompt": "Yellow flowers in white pot; isolated complete mesh, neutral three quarter studio view, all supports visible",
+        "approved": true,
+        "approvedBy": "Owner: explicit approval in this chat",
+        "approvedAt": "2026-10-04T21:44:57.054681+00:00"
+      },
+      "sourceMethod": "procedural-blender",
+      "attempts": []
+    },
+    {
+      "id": "photo_frame",
+      "function": "Living room furnishing and physics interaction",
+      "description": "Framed family photograph",
+      "class": "reusable",
+      "dimensionsMeters": [
+        0.28,
+        0.04,
+        0.35
+      ],
+      "attachmentFace": "wall",
+      "semanticFront": "negative-y",
+      "intendedInstances": 8,
+      "targetPolycount": 450,
+      "rejectionCriteria": [
+        "Unsupported floating parts",
+        "Silhouette differs from photo",
+        "Surface intersects movement aisle",
+        "Excessive triangle count"
+      ],
+      "image": {
+        "source": "images/photo_frame.png",
+        "generator": "Blender 5.2.1 procedural mesh studio render",
+        "prompt": "Framed family photograph; isolated complete mesh, neutral three quarter studio view, all supports visible",
+        "approved": true,
+        "approvedBy": "Owner: explicit approval in this chat",
+        "approvedAt": "2026-10-04T21:44:57.054681+00:00"
+      },
+      "sourceMethod": "procedural-blender",
+      "attempts": []
+    },
+    {
+      "id": "wall_shelf",
+      "function": "Living room furnishing and physics interaction",
+      "description": "Small white shelf with rail",
+      "class": "reusable",
+      "dimensionsMeters": [
+        0.61,
+        0.25,
+        0.24
+      ],
+      "attachmentFace": "wall",
+      "semanticFront": "negative-y",
+      "intendedInstances": 4,
+      "targetPolycount": 1100,
+      "rejectionCriteria": [
+        "Unsupported floating parts",
+        "Silhouette differs from photo",
+        "Surface intersects movement aisle",
+        "Excessive triangle count"
+      ],
+      "image": {
+        "source": "images/wall_shelf.png",
+        "generator": "Blender 5.2.1 procedural mesh studio render",
+        "prompt": "Small white shelf with rail; isolated complete mesh, neutral three quarter studio view, all supports visible",
+        "approved": true,
+        "approvedBy": "Owner: explicit approval in this chat",
+        "approvedAt": "2026-10-04T21:44:57.054681+00:00"
+      },
+      "sourceMethod": "procedural-blender",
+      "attempts": []
+    },
+    {
+      "id": "digital_clock",
+      "function": "Living room furnishing and physics interaction",
+      "description": "Digital clock showing 5:08",
+      "class": "reusable",
+      "dimensionsMeters": [
+        0.39,
+        0.09,
+        0.2
+      ],
+      "attachmentFace": "freestanding",
+      "semanticFront": "negative-y",
+      "intendedInstances": 1,
+      "targetPolycount": 1500,
+      "rejectionCriteria": [
+        "Unsupported floating parts",
+        "Silhouette differs from photo",
+        "Surface intersects movement aisle",
+        "Excessive triangle count"
+      ],
+      "image": {
+        "source": "images/digital_clock.png",
+        "generator": "Blender 5.2.1 procedural mesh studio render",
+        "prompt": "Digital clock showing 5:08; isolated complete mesh, neutral three quarter studio view, all supports visible",
+        "approved": true,
+        "approvedBy": "Owner: explicit approval in this chat",
+        "approvedAt": "2026-10-04T21:44:57.054681+00:00"
+      },
+      "sourceMethod": "procedural-blender",
+      "attempts": []
+    },
+    {
+      "id": "computer_desk",
+      "function": "Living room furnishing and physics interaction",
+      "description": "Black metal computer shelving desk",
+      "class": "reusable",
+      "dimensionsMeters": [
+        1.14,
+        0.53,
+        1.45
+      ],
+      "attachmentFace": "floor",
+      "semanticFront": "negative-y",
+      "intendedInstances": 1,
+      "targetPolycount": 1600,
+      "rejectionCriteria": [
+        "Unsupported floating parts",
+        "Silhouette differs from photo",
+        "Surface intersects movement aisle",
+        "Excessive triangle count"
+      ],
+      "image": {
+        "source": "images/computer_desk.png",
+        "generator": "Blender 5.2.1 procedural mesh studio render",
+        "prompt": "Black metal computer shelving desk; isolated complete mesh, neutral three quarter studio view, all supports visible",
+        "approved": true,
+        "approvedBy": "Owner: explicit approval in this chat",
+        "approvedAt": "2026-10-04T21:44:57.054681+00:00"
+      },
+      "sourceMethod": "procedural-blender",
+      "attempts": []
+    },
+    {
+      "id": "monitor",
+      "function": "Living room furnishing and physics interaction",
+      "description": "Computer monitor",
+      "class": "reusable",
+      "dimensionsMeters": [
+        0.61,
+        0.16,
+        0.43
+      ],
+      "attachmentFace": "freestanding",
+      "semanticFront": "negative-y",
+      "intendedInstances": 1,
+      "targetPolycount": 800,
+      "rejectionCriteria": [
+        "Unsupported floating parts",
+        "Silhouette differs from photo",
+        "Surface intersects movement aisle",
+        "Excessive triangle count"
+      ],
+      "image": {
+        "source": "images/monitor.png",
+        "generator": "Blender 5.2.1 procedural mesh studio render",
+        "prompt": "Computer monitor; isolated complete mesh, neutral three quarter studio view, all supports visible",
+        "approved": true,
+        "approvedBy": "Owner: explicit approval in this chat",
+        "approvedAt": "2026-10-04T21:44:57.054681+00:00"
+      },
+      "sourceMethod": "procedural-blender",
+      "attempts": []
+    },
+    {
+      "id": "computer_tower",
+      "function": "Living room furnishing and physics interaction",
+      "description": "Computer tower with exposed cooling fans",
+      "class": "reusable",
+      "dimensionsMeters": [
+        0.25,
+        0.41,
+        0.47
+      ],
+      "attachmentFace": "freestanding",
+      "semanticFront": "negative-y",
+      "intendedInstances": 1,
+      "targetPolycount": 1300,
+      "rejectionCriteria": [
+        "Unsupported floating parts",
+        "Silhouette differs from photo",
+        "Surface intersects movement aisle",
+        "Excessive triangle count"
+      ],
+      "image": {
+        "source": "images/computer_tower.png",
+        "generator": "Blender 5.2.1 procedural mesh studio render",
+        "prompt": "Computer tower with exposed cooling fans; isolated complete mesh, neutral three quarter studio view, all supports visible",
+        "approved": true,
+        "approvedBy": "Owner: explicit approval in this chat",
+        "approvedAt": "2026-10-04T21:44:57.054681+00:00"
+      },
+      "sourceMethod": "procedural-blender",
+      "attempts": []
+    },
+    {
+      "id": "baby_crib",
+      "function": "Living room furnishing and physics interaction",
+      "description": "Gray bedside crib with straps and casters",
+      "class": "reusable",
+      "dimensionsMeters": [
+        1.07,
+        0.7,
+        0.97
+      ],
+      "attachmentFace": "floor",
+      "semanticFront": "negative-y",
+      "intendedInstances": 1,
+      "targetPolycount": 3400,
+      "rejectionCriteria": [
+        "Unsupported floating parts",
+        "Silhouette differs from photo",
+        "Surface intersects movement aisle",
+        "Excessive triangle count"
+      ],
+      "image": {
+        "source": "images/baby_crib.png",
+        "generator": "Blender 5.2.1 procedural mesh studio render",
+        "prompt": "Gray bedside crib with straps and casters; isolated complete mesh, neutral three quarter studio view, all supports visible",
+        "approved": true,
+        "approvedBy": "Owner: explicit approval in this chat",
+        "approvedAt": "2026-10-04T21:44:57.054681+00:00"
+      },
+      "sourceMethod": "procedural-blender",
+      "attempts": []
+    },
+    {
+      "id": "high_chair",
+      "function": "Living room furnishing and physics interaction",
+      "description": "White and rattan high chair",
+      "class": "reusable",
+      "dimensionsMeters": [
+        0.65,
+        0.72,
+        1.07
+      ],
+      "attachmentFace": "floor",
+      "semanticFront": "negative-y",
+      "intendedInstances": 1,
+      "targetPolycount": 3500,
+      "rejectionCriteria": [
+        "Unsupported floating parts",
+        "Silhouette differs from photo",
+        "Surface intersects movement aisle",
+        "Excessive triangle count"
+      ],
+      "image": {
+        "source": "images/high_chair.png",
+        "generator": "Blender 5.2.1 procedural mesh studio render",
+        "prompt": "White and rattan high chair; isolated complete mesh, neutral three quarter studio view, all supports visible",
+        "approved": true,
+        "approvedBy": "Owner: explicit approval in this chat",
+        "approvedAt": "2026-10-04T21:44:57.054681+00:00"
+      },
+      "sourceMethod": "procedural-blender",
+      "attempts": []
+    },
+    {
+      "id": "pet_enclosure",
+      "function": "Living room furnishing and physics interaction",
+      "description": "Three level acrylic pet enclosure on black rack",
+      "class": "reusable",
+      "dimensionsMeters": [
+        0.83,
+        0.52,
+        1.87
+      ],
+      "attachmentFace": "floor",
+      "semanticFront": "negative-y",
+      "intendedInstances": 1,
+      "targetPolycount": 6200,
+      "rejectionCriteria": [
+        "Unsupported floating parts",
+        "Silhouette differs from photo",
+        "Surface intersects movement aisle",
+        "Excessive triangle count"
+      ],
+      "image": {
+        "source": "images/pet_enclosure.png",
+        "generator": "Blender 5.2.1 procedural mesh studio render",
+        "prompt": "Three level acrylic pet enclosure on black rack; isolated complete mesh, neutral three quarter studio view, all supports visible",
+        "approved": true,
+        "approvedBy": "Owner: explicit approval in this chat",
+        "approvedAt": "2026-10-04T21:44:57.054681+00:00"
+      },
+      "sourceMethod": "procedural-blender",
+      "attempts": []
+    },
+    {
+      "id": "fish_bowl",
+      "function": "Living room furnishing and physics interaction",
+      "description": "Round fish bowl with plants",
+      "class": "reusable",
+      "dimensionsMeters": [
+        0.4,
+        0.4,
+        0.32
+      ],
+      "attachmentFace": "freestanding",
+      "semanticFront": "negative-y",
+      "intendedInstances": 1,
+      "targetPolycount": 2000,
+      "rejectionCriteria": [
+        "Unsupported floating parts",
+        "Silhouette differs from photo",
+        "Surface intersects movement aisle",
+        "Excessive triangle count"
+      ],
+      "image": {
+        "source": "images/fish_bowl.png",
+        "generator": "Blender 5.2.1 procedural mesh studio render",
+        "prompt": "Round fish bowl with plants; isolated complete mesh, neutral three quarter studio view, all supports visible",
+        "approved": true,
+        "approvedBy": "Owner: explicit approval in this chat",
+        "approvedAt": "2026-10-04T21:44:57.054681+00:00"
+      },
+      "sourceMethod": "procedural-blender",
+      "attempts": []
+    },
+    {
+      "id": "bass_guitar",
+      "function": "Living room furnishing and physics interaction",
+      "description": "Black bass guitar with maple neck",
+      "class": "reusable",
+      "dimensionsMeters": [
+        0.4,
+        0.14,
+        1.26
+      ],
+      "attachmentFace": "freestanding",
+      "semanticFront": "negative-y",
+      "intendedInstances": 1,
+      "targetPolycount": 1700,
+      "rejectionCriteria": [
+        "Unsupported floating parts",
+        "Silhouette differs from photo",
+        "Surface intersects movement aisle",
+        "Excessive triangle count"
+      ],
+      "image": {
+        "source": "images/bass_guitar.png",
+        "generator": "Blender 5.2.1 procedural mesh studio render",
+        "prompt": "Black bass guitar with maple neck; isolated complete mesh, neutral three quarter studio view, all supports visible",
+        "approved": true,
+        "approvedBy": "Owner: explicit approval in this chat",
+        "approvedAt": "2026-10-04T21:44:57.054681+00:00"
+      },
+      "sourceMethod": "procedural-blender",
+      "attempts": []
+    },
+    {
+      "id": "tissue_box",
+      "function": "Living room furnishing and physics interaction",
+      "description": "Wood tissue holder",
+      "class": "reusable",
+      "dimensionsMeters": [
+        0.24,
+        0.15,
+        0.16
+      ],
+      "attachmentFace": "freestanding",
+      "semanticFront": "negative-y",
+      "intendedInstances": 1,
+      "targetPolycount": 400,
+      "rejectionCriteria": [
+        "Unsupported floating parts",
+        "Silhouette differs from photo",
+        "Surface intersects movement aisle",
+        "Excessive triangle count"
+      ],
+      "image": {
+        "source": "images/tissue_box.png",
+        "generator": "Blender 5.2.1 procedural mesh studio render",
+        "prompt": "Wood tissue holder; isolated complete mesh, neutral three quarter studio view, all supports visible",
+        "approved": true,
+        "approvedBy": "Owner: explicit approval in this chat",
+        "approvedAt": "2026-10-04T21:44:57.054681+00:00"
+      },
+      "sourceMethod": "procedural-blender",
+      "attempts": []
+    },
+    {
+      "id": "woven_tray",
+      "function": "Living room furnishing and physics interaction",
+      "description": "Round woven tray",
+      "class": "reusable",
+      "dimensionsMeters": [
+        0.54,
+        0.54,
+        0.07
+      ],
+      "attachmentFace": "freestanding",
+      "semanticFront": "negative-y",
+      "intendedInstances": 1,
+      "targetPolycount": 1200,
+      "rejectionCriteria": [
+        "Unsupported floating parts",
+        "Silhouette differs from photo",
+        "Surface intersects movement aisle",
+        "Excessive triangle count"
+      ],
+      "image": {
+        "source": "images/woven_tray.png",
+        "generator": "Blender 5.2.1 procedural mesh studio render",
+        "prompt": "Round woven tray; isolated complete mesh, neutral three quarter studio view, all supports visible",
+        "approved": true,
+        "approvedBy": "Owner: explicit approval in this chat",
+        "approvedAt": "2026-10-04T21:44:57.054681+00:00"
+      },
+      "sourceMethod": "procedural-blender",
+      "attempts": []
+    },
+    {
+      "id": "storage_bin",
+      "function": "Living room furnishing and physics interaction",
+      "description": "Gray desk storage bin",
+      "class": "reusable",
+      "dimensionsMeters": [
+        0.38,
+        0.33,
+        0.22
+      ],
+      "attachmentFace": "freestanding",
+      "semanticFront": "negative-y",
+      "intendedInstances": 2,
+      "targetPolycount": 400,
+      "rejectionCriteria": [
+        "Unsupported floating parts",
+        "Silhouette differs from photo",
+        "Surface intersects movement aisle",
+        "Excessive triangle count"
+      ],
+      "image": {
+        "source": "images/storage_bin.png",
+        "generator": "Blender 5.2.1 procedural mesh studio render",
+        "prompt": "Gray desk storage bin; isolated complete mesh, neutral three quarter studio view, all supports visible",
+        "approved": true,
+        "approvedBy": "Owner: explicit approval in this chat",
+        "approvedAt": "2026-10-04T21:44:57.054681+00:00"
+      },
+      "sourceMethod": "procedural-blender",
+      "attempts": []
+    }
+  ]
+}

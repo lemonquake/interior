@@ -1,0 +1,30 @@
+FAIL: props.json: generation must use Meshy model meshy-5
+FAIL: props.json: current official Meshy pricing verification is required
+FAIL: props.json: positive creditsPerTexturedTask is required
+FAIL: props.json: hardCreditCeiling must be positive and no greater than the room credit budget
+FAIL: prop fabric_sofa: reference image requires explicit approval
+FAIL: prop leather_sofa: reference image requires explicit approval
+FAIL: prop marble_table: reference image requires explicit approval
+FAIL: prop tv_console: reference image requires explicit approval
+FAIL: prop television: reference image requires explicit approval
+FAIL: prop standing_fan: reference image requires explicit approval
+FAIL: prop potted_plant: reference image requires explicit approval
+FAIL: prop red_flowers: reference image requires explicit approval
+FAIL: prop purple_flowers: reference image requires explicit approval
+FAIL: prop yellow_flowers: reference image requires explicit approval
+FAIL: prop photo_frame: reference image requires explicit approval
+FAIL: prop wall_shelf: reference image requires explicit approval
+FAIL: prop digital_clock: reference image requires explicit approval
+FAIL: prop computer_desk: reference image requires explicit approval
+FAIL: prop monitor: reference image requires explicit approval
+FAIL: prop computer_tower: reference image requires explicit approval
+FAIL: prop baby_crib: reference image requires explicit approval
+FAIL: prop high_chair: reference image requires explicit approval
+FAIL: prop pet_enclosure: reference image requires explicit approval
+FAIL: prop fish_bowl: reference image requires explicit approval
+FAIL: prop bass_guitar: reference image requires explicit approval
+FAIL: prop tissue_box: reference image requires explicit approval
+FAIL: prop woven_tray: reference image requires explicit approval
+FAIL: prop storage_bin: reference image requires explicit approval
+FAIL: Function gate: explicit approval is required
+FAIL: final-report.json: gates.function must be true

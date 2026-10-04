@@ -1,0 +1,7 @@
+{
+  "gate": "form",
+  "passed": true,
+  "errors": [],
+  "adaptation": "Procedural Blender sources replace Meshy task/credit requirements; human reviews remain required.",
+  "blenderSourceSha256": "d4b0b6030b0a72dc7efe6c8f9b445b30baf3275ce0757d7d6a1eccbde3d395be"
+}

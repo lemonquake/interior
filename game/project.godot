@@ -1,0 +1,42 @@
+; Interior by Aljay Leodones
+config_version=5
+
+[application]
+config/name="Interior"
+run/main_scene="res://main.tscn"
+config/features=PackedStringArray("4.7", "GL Compatibility")
+config/description="A first-person physics mystery in a reconstructed living room."
+config/icon="res://assets/icon.svg"
+
+[display]
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/size/window_width_override=1280
+window/size/window_height_override=720
+window/stretch/mode="canvas_items"
+window/handheld/orientation=0
+
+[rendering]
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/default_filters/use_nearest_mipmap_filter=false
+textures/vram_compression/import_etc2_astc=true
+lights_and_shadows/directional_shadow/size=1024
+limits/opengl/max_lights_per_object.mobile=2
+limits/opengl/max_renderable_lights.mobile=2
+environment/defaults/default_clear_color=Color(0.085, 0.07, 0.06, 1)
+
+[physics]
+common/physics_ticks_per_second=60
+3d/physics_engine="GodotPhysics3D"
+
+[audio]
+driver/enable_input=false
+
+[input_devices]
+pointing/emulate_mouse_from_touch=true
+
+[layer_names]
+3d_physics/layer_1="Player"
+3d_physics/layer_2="Room"
+3d_physics/layer_3="Objects"

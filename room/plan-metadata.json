@@ -1,0 +1,855 @@
+{
+  "schema": "game-room.plan-metadata.v1",
+  "roomId": "interior-living-room",
+  "style": "monochrome-engineering",
+  "projectionSource": "actual-meshes",
+  "layers": [
+    "lower-room",
+    "reflected-ceiling"
+  ],
+  "semanticLabelsOutsideImage": true,
+  "aiInspirationIncluded": false,
+  "coverage": [
+    "room-outline",
+    "cutouts",
+    "openings",
+    "exterior-apron",
+    "main-sign",
+    "ingress-props",
+    "floor-markers",
+    "barriers",
+    "columns",
+    "circulation",
+    "placed-features"
+  ],
+  "features": [
+    {
+      "id": "fabric_sofa_0",
+      "assetId": "fabric_sofa",
+      "location": [
+        -2.08,
+        -0.45,
+        0
+      ],
+      "rotationDegrees": [
+        0,
+        0,
+        -90
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "meshObject": "fabric_sofa_0"
+    },
+    {
+      "id": "leather_sofa_1",
+      "assetId": "leather_sofa",
+      "location": [
+        0.2,
+        -2.21,
+        0
+      ],
+      "rotationDegrees": [
+        0,
+        0,
+        180
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "meshObject": "leather_sofa_1"
+    },
+    {
+      "id": "marble_table_2",
+      "assetId": "marble_table",
+      "location": [
+        -0.65,
+        -0.15,
+        0
+      ],
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "meshObject": "marble_table_2"
+    },
+    {
+      "id": "tv_console_3",
+      "assetId": "tv_console",
+      "location": [
+        -0.55,
+        2.42,
+        0.1
+      ],
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "meshObject": "tv_console_3"
+    },
+    {
+      "id": "television_4",
+      "assetId": "television",
+      "location": [
+        -0.55,
+        2.6,
+        1.77
+      ],
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "meshObject": "television_4"
+    },
+    {
+      "id": "standing_fan_5",
+      "assetId": "standing_fan",
+      "location": [
+        1.03,
+        1.35,
+        0
+      ],
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "meshObject": "standing_fan_5"
+    },
+    {
+      "id": "computer_desk_6",
+      "assetId": "computer_desk",
+      "location": [
+        2.17,
+        2.15,
+        0
+      ],
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "meshObject": "computer_desk_6"
+    },
+    {
+      "id": "monitor_7",
+      "assetId": "monitor",
+      "location": [
+        2.17,
+        2.2,
+        0.74
+      ],
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "meshObject": "monitor_7"
+    },
+    {
+      "id": "computer_tower_8",
+      "assetId": "computer_tower",
+      "location": [
+        2.09,
+        2.2,
+        1.4
+      ],
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "meshObject": "computer_tower_8"
+    },
+    {
+      "id": "baby_crib_9",
+      "assetId": "baby_crib",
+      "location": [
+        2.05,
+        0.99,
+        0
+      ],
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "meshObject": "baby_crib_9"
+    },
+    {
+      "id": "high_chair_10",
+      "assetId": "high_chair",
+      "location": [
+        2.89,
+        0.77,
+        0
+      ],
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "meshObject": "high_chair_10"
+    },
+    {
+      "id": "pet_enclosure_11",
+      "assetId": "pet_enclosure",
+      "location": [
+        -2.97,
+        1.11,
+        0
+      ],
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "meshObject": "pet_enclosure_11"
+    },
+    {
+      "id": "fish_bowl_12",
+      "assetId": "fish_bowl",
+      "location": [
+        -2.97,
+        1.1,
+        0.49
+      ],
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "meshObject": "fish_bowl_12"
+    },
+    {
+      "id": "bass_guitar_13",
+      "assetId": "bass_guitar",
+      "location": [
+        2.98,
+        1.94,
+        0
+      ],
+      "rotationDegrees": [
+        0,
+        0,
+        -18
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "meshObject": "bass_guitar_13"
+    },
+    {
+      "id": "woven_tray_14",
+      "assetId": "woven_tray",
+      "location": [
+        -0.65,
+        -0.14,
+        0.843
+      ],
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "meshObject": "woven_tray_14"
+    },
+    {
+      "id": "potted_plant_15",
+      "assetId": "potted_plant",
+      "location": [
+        -0.53,
+        -0.14,
+        0.89
+      ],
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "meshObject": "potted_plant_15"
+    },
+    {
+      "id": "tissue_box_16",
+      "assetId": "tissue_box",
+      "location": [
+        -0.81,
+        -0.21,
+        0.89
+      ],
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "meshObject": "tissue_box_16"
+    },
+    {
+      "id": "digital_clock_17",
+      "assetId": "digital_clock",
+      "location": [
+        -0.55,
+        2.34,
+        0.69
+      ],
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "meshObject": "digital_clock_17"
+    },
+    {
+      "id": "red_flowers_18",
+      "assetId": "red_flowers",
+      "location": [
+        -1.58,
+        2.34,
+        0.69
+      ],
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "meshObject": "red_flowers_18"
+    },
+    {
+      "id": "photo_frame_19",
+      "assetId": "photo_frame",
+      "location": [
+        -1.13,
+        2.29,
+        0.93
+      ],
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "meshObject": "photo_frame_19"
+    },
+    {
+      "id": "purple_flowers_20",
+      "assetId": "purple_flowers",
+      "location": [
+        0.45,
+        2.32,
+        0.69
+      ],
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "meshObject": "purple_flowers_20"
+    },
+    {
+      "id": "wall_shelf_21",
+      "assetId": "wall_shelf",
+      "location": [
+        -2.15,
+        2.5,
+        2.35
+      ],
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "meshObject": "wall_shelf_21"
+    },
+    {
+      "id": "yellow_flowers_22",
+      "assetId": "yellow_flowers",
+      "location": [
+        -2.15,
+        2.5,
+        2.3930000000000002
+      ],
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "meshObject": "yellow_flowers_22"
+    },
+    {
+      "id": "wall_shelf_23",
+      "assetId": "wall_shelf",
+      "location": [
+        -2.1,
+        2.5,
+        1.72
+      ],
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "meshObject": "wall_shelf_23"
+    },
+    {
+      "id": "potted_plant_24",
+      "assetId": "potted_plant",
+      "location": [
+        -2.1,
+        2.5,
+        1.763
+      ],
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "meshObject": "potted_plant_24"
+    },
+    {
+      "id": "wall_shelf_25",
+      "assetId": "wall_shelf",
+      "location": [
+        1.21,
+        2.5,
+        2.26
+      ],
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "meshObject": "wall_shelf_25"
+    },
+    {
+      "id": "yellow_flowers_26",
+      "assetId": "yellow_flowers",
+      "location": [
+        1.21,
+        2.5,
+        2.303
+      ],
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "meshObject": "yellow_flowers_26"
+    },
+    {
+      "id": "wall_shelf_27",
+      "assetId": "wall_shelf",
+      "location": [
+        1.24,
+        2.5,
+        1.71
+      ],
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "meshObject": "wall_shelf_27"
+    },
+    {
+      "id": "purple_flowers_28",
+      "assetId": "purple_flowers",
+      "location": [
+        1.24,
+        2.5,
+        1.753
+      ],
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "meshObject": "purple_flowers_28"
+    },
+    {
+      "id": "photo_frame_29",
+      "assetId": "photo_frame",
+      "location": [
+        1.96,
+        2.61,
+        2.46
+      ],
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "meshObject": "photo_frame_29"
+    },
+    {
+      "id": "photo_frame_30",
+      "assetId": "photo_frame",
+      "location": [
+        2.42,
+        2.61,
+        2.49
+      ],
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "meshObject": "photo_frame_30"
+    },
+    {
+      "id": "photo_frame_31",
+      "assetId": "photo_frame",
+      "location": [
+        2.82,
+        2.61,
+        2.16
+      ],
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "meshObject": "photo_frame_31"
+    },
+    {
+      "id": "photo_frame_32",
+      "assetId": "photo_frame",
+      "location": [
+        -1.12,
+        2.61,
+        2.64
+      ],
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "meshObject": "photo_frame_32"
+    },
+    {
+      "id": "photo_frame_33",
+      "assetId": "photo_frame",
+      "location": [
+        0.35,
+        2.61,
+        2.65
+      ],
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "meshObject": "photo_frame_33"
+    },
+    {
+      "id": "photo_frame_34",
+      "assetId": "photo_frame",
+      "location": [
+        1.11,
+        2.4,
+        1.34
+      ],
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "meshObject": "photo_frame_34"
+    },
+    {
+      "id": "photo_frame_35",
+      "assetId": "photo_frame",
+      "location": [
+        1.13,
+        2.4,
+        0.87
+      ],
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "meshObject": "photo_frame_35"
+    },
+    {
+      "id": "storage_bin_36",
+      "assetId": "storage_bin",
+      "location": [
+        2.58,
+        2.36,
+        0.12
+      ],
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "meshObject": "storage_bin_36"
+    },
+    {
+      "id": "storage_bin_37",
+      "assetId": "storage_bin",
+      "location": [
+        2.76,
+        2.36,
+        0.12
+      ],
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "meshObject": "storage_bin_37"
+    },
+    {
+      "id": "potted_plant_38",
+      "assetId": "potted_plant",
+      "location": [
+        2.7,
+        2.43,
+        1.14
+      ],
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.7,
+        0.7,
+        0.7
+      ],
+      "meshObject": "potted_plant_38"
+    },
+    {
+      "id": "potted_plant_39",
+      "assetId": "potted_plant",
+      "location": [
+        3.05,
+        2.43,
+        1.14
+      ],
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.7,
+        0.7,
+        0.7
+      ],
+      "meshObject": "potted_plant_39"
+    }
+  ],
+  "notApplicable": {
+    "cutouts": "None visible",
+    "openings": "None visible",
+    "exteriorApron": "Not shown; closed room initial spawn",
+    "mainSign": "Existing home has none",
+    "ingressProps": "Not shown",
+    "floorMarkers": "No artificial floor markers",
+    "columns": "None visible"
+  },
+  "roomOutline": [
+    [
+      -3.3,
+      -2.7
+    ],
+    [
+      3.3,
+      -2.7
+    ],
+    [
+      3.3,
+      2.7
+    ],
+    [
+      -3.3,
+      2.7
+    ]
+  ],
+  "ceiling": "Inferred plain white 2.9 m ceiling with two flush light fixtures; not evidenced by photo"
+}

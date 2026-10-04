@@ -1,0 +1,55 @@
+{
+  "schema": "game-room.milestone-reviews.v1",
+  "roomId": "interior-living-room",
+  "function": {
+    "status": "approved",
+    "approvedBy": "Owner: explicit approval in this chat",
+    "approvedAt": "2026-10-04T21:44:57.054681+00:00",
+    "evidence": [
+      "renders/layout-study.png",
+      "plans/lower-room.png",
+      "plans/reflected-ceiling.png",
+      "plans/tv-wall-elevation.png",
+      "images/prop-contact-sheet.jpg"
+    ],
+    "strangestElement": "Pet enclosure tubes: model includes visible supports and full acrylic enclosure; unseen connections remain estimates.",
+    "approvalText": "Approve the estimated layout and all 24 object references"
+  },
+  "form": {
+    "status": "approved",
+    "approvedBy": "Owner: approval in this chat while reviewing form-review.html",
+    "approvedAt": "2026-10-04T22:05:52.697698+00:00",
+    "evidence": [
+      "living_room.blend",
+      "renders/final-production.png",
+      "renders/corner-1.png",
+      "renders/corner-2.png",
+      "renders/corner-3.png",
+      "renders/corner-4.png",
+      "renders/ceiling-center-up.png",
+      "renders/ceiling-oblique-a.png",
+      "renders/ceiling-oblique-b.png",
+      "form-audit.json"
+    ],
+    "strangestElement": "The acrylic pet enclosure retains full sides, wheels, tube openings, and rack support; translucent panels preserve readable contents.",
+    "approvalText": "I like it"
+  },
+  "runtime": {
+    "status": "pending",
+    "approvedBy": null,
+    "approvedAt": null,
+    "evidence": [
+      "runtime/living-room-menu.png",
+      "runtime/living-room-play.png",
+      "runtime/android-menu.png",
+      "runtime/android-play.png",
+      "runtime/android-held.png",
+      "runtime/android-throw.png",
+      "runtime/android-pause.png",
+      "runtime/integration-results.json",
+      "runtime/desktop-performance.json",
+      "runtime/android-smoke.json",
+      "runtime/runtime-audit.json"
+    ]
+  }
+}

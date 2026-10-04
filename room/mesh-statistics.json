@@ -1,0 +1,101 @@
+{
+  "assets": {
+    "fabric_sofa": {
+      "vertices": 1024,
+      "triangles": 1996
+    },
+    "leather_sofa": {
+      "vertices": 1024,
+      "triangles": 1996
+    },
+    "marble_table": {
+      "vertices": 368,
+      "triangles": 708
+    },
+    "tv_console": {
+      "vertices": 636,
+      "triangles": 1236
+    },
+    "television": {
+      "vertices": 192,
+      "triangles": 376
+    },
+    "standing_fan": {
+      "vertices": 2158,
+      "triangles": 4192
+    },
+    "potted_plant": {
+      "vertices": 1600,
+      "triangles": 3096
+    },
+    "red_flowers": {
+      "vertices": 1794,
+      "triangles": 3296
+    },
+    "purple_flowers": {
+      "vertices": 1794,
+      "triangles": 3296
+    },
+    "yellow_flowers": {
+      "vertices": 1794,
+      "triangles": 3296
+    },
+    "photo_frame": {
+      "vertices": 112,
+      "triangles": 212
+    },
+    "wall_shelf": {
+      "vertices": 384,
+      "triangles": 744
+    },
+    "digital_clock": {
+      "vertices": 1944,
+      "triangles": 2028
+    },
+    "computer_desk": {
+      "vertices": 504,
+      "triangles": 972
+    },
+    "monitor": {
+      "vertices": 212,
+      "triangles": 412
+    },
+    "computer_tower": {
+      "vertices": 496,
+      "triangles": 980
+    },
+    "baby_crib": {
+      "vertices": 938,
+      "triangles": 1808
+    },
+    "high_chair": {
+      "vertices": 1256,
+      "triangles": 2216
+    },
+    "pet_enclosure": {
+      "vertices": 1592,
+      "triangles": 3088
+    },
+    "fish_bowl": {
+      "vertices": 520,
+      "triangles": 1012
+    },
+    "bass_guitar": {
+      "vertices": 810,
+      "triangles": 1568
+    },
+    "tissue_box": {
+      "vertices": 192,
+      "triangles": 376
+    },
+    "woven_tray": {
+      "vertices": 272,
+      "triangles": 540
+    },
+    "storage_bin": {
+      "vertices": 104,
+      "triangles": 200
+    }
+  },
+  "instanceCount": 40
+}

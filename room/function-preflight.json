@@ -1,0 +1,10 @@
+{
+  "preflightReady": true,
+  "errors": [],
+  "humanApprovalRecorded": true,
+  "gatePassed": true,
+  "assetMethod": "custom-procedural",
+  "chargedCredits": 0,
+  "placedPropTriangles": 59440,
+  "upstreamValidatorAdaptation": "Meshy pricing/task/credit fields are inapplicable to the explicitly requested free procedural pipeline; upstream output retained separately."
+}

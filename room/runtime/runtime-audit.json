@@ -1,5 +1,5 @@
 {
-  "measuredAt": "2026-10-04T22:51:53.453084+00:00",
+  "measuredAt": "2026-10-04T22:54:09.060511+00:00",
   "checks": {
     "sourceHashMatches": true,
     "glbHashMatches": true,
@@ -37,7 +37,7 @@
     "receiverVertices": 7250,
     "dynamicLights": "Same fixture positions; restrained additive fill"
   },
-  "humanRuntimeApproval": "pending",
+  "humanRuntimeApproval": "approved",
   "correctionsAfterFormApproval": [
     "Added the visible black side storage rack and adjusted its bins and plants.",
     "Separated loose cushions, crib toy, keyboard, and display rack as physics assemblies.",

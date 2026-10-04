@@ -4,7 +4,7 @@
   "function": {
     "status": "approved",
     "approvedBy": "Owner: explicit approval in this chat",
-    "approvedAt": "2026-10-04T21:44:57.054681+00:00",
+    "approvedAt": "2026-10-05T05:44:57.054681+08:00",
     "evidence": [
       "renders/layout-study.png",
       "plans/lower-room.png",
@@ -18,7 +18,7 @@
   "form": {
     "status": "approved",
     "approvedBy": "Owner: approval in this chat while reviewing form-review.html",
-    "approvedAt": "2026-10-04T22:05:52.697698+00:00",
+    "approvedAt": "2026-10-05T06:05:52.697698+08:00",
     "evidence": [
       "living_room.blend",
       "renders/final-production.png",
@@ -35,9 +35,9 @@
     "approvalText": "I like it"
   },
   "runtime": {
-    "status": "pending",
-    "approvedBy": null,
-    "approvedAt": null,
+    "status": "approved",
+    "approvedBy": "Owner: explicit playable-game and publication approval in this chat",
+    "approvedAt": "2026-10-05T06:54:08.756922+08:00",
     "evidence": [
       "runtime/living-room-menu.png",
       "runtime/living-room-play.png",
@@ -50,6 +50,8 @@
       "runtime/desktop-performance.json",
       "runtime/android-smoke.json",
       "runtime/runtime-audit.json"
-    ]
+    ],
+    "approvalText": "Approve game and publish",
+    "strangestElement": "Wall-mounted TV and shelves detach on grabbing; the structural room shell remains fixed."
   }
 }

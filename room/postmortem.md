@@ -1,6 +1,6 @@
 # Interior observations
 
-The room layout and all 24 prop references were approved at Function. The final model was approved at Form. The native runtime exports are ready for owner review. Dimensions and hidden geometry remain estimates from one image.
+The room layout and all 24 prop references were approved at Function. The final model was approved at Form. The owner approved the native runtime exports and repository publication. Dimensions and hidden geometry remain estimates from one image.
 
 The source needed accurate support geometry after conversion to Godot. Compound collisions now follow shelf boards, legs, casters, cabinet supports, pots, and enclosure sides. Keeping decorative foliage out of the pot collider improved target rays and support behavior. A four-second physics settling check exposed initial overlaps; staged furnishing poses preserve the photographed arrangement until interaction, then normal rigid bodies and contact wake-up apply.
 

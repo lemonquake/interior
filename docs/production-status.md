@@ -2,7 +2,7 @@
 
 Interior by Aljay Leodones recreates the owner-approved estimated room with a native Godot physics mystery, Windows EXE, and Android APK.
 
-Function approval: the owner approved the estimated layout and all 24 prop references. Form approval: the owner said “I like it” while reviewing the final Blender room. Runtime review is pending. Repository publication remains behind that explicit human review gate.
+Function approval: the owner approved the estimated layout and all 24 prop references. Form approval: the owner said “I like it” while reviewing the final Blender room. Runtime approval: the owner explicitly replied “Approve game and publish.” All human review gates are now approved.
 
 Final source: `room/living_room.blend`. Runtime: `game/assets/living_room.glb` and `room_manifest.json`, 48 movable assemblies, 73,784 triangles. Technical corrections after Form approval add the photographed black side rack, adjust its supported bins/plants, separate loose components, and refine collision supports. These corrections are documented in the Runtime review.
 

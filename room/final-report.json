@@ -4,7 +4,7 @@
   "gates": {
     "function": true,
     "form": true,
-    "runtime": false
+    "runtime": true
   },
   "formChecks": {
     "structuralManifold": true,

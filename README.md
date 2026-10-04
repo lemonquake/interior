@@ -2,7 +2,7 @@
 
 **By Aljay Leodones.** A first-person physics mystery in a recreation of the owner's living room.
 
-The Blender model, Godot game, Windows EXE, and Android APK are built. Function and Form reviews were approved; review of the playable game is pending before GitHub publication. Open `room/runtime-review.html` for actual exported-game screenshots and measurements.
+The Blender model, Godot game, Windows EXE, and Android APK are built. The owner approved Function, Form, and the playable Runtime for GitHub publication. Open `room/runtime-review.html` for actual exported-game screenshots and measurements.
 
 The room uses owner-approved estimated dimensions: 6.6 × 5.4 × 2.9 m. Unseen walls, ceiling, and object backs are inferred from one photograph. The layout and object identities follow the reference; fine shapes and materials differ. This is a procedural approximation, not a measured scan.
 

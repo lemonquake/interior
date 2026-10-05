@@ -108,13 +108,13 @@ func _apply_outdoors(on: bool) -> void:
 			"glow": env.glow_intensity, "bloom": env.glow_bloom}
 		env.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
 		env.ambient_light_color = InteriorNight.AMBIENT
-		env.ambient_light_energy = .6 if _mobile else .38
+		env.ambient_light_energy = .45 if _mobile else .38
 		env.ambient_light_sky_contribution = 0.0
 		env.adjustment_enabled = true
 		env.adjustment_saturation = .82
 		env.adjustment_contrast = 1.08
 		env.adjustment_brightness = 1.0
-		env.tonemap_exposure = (1.0 if _mobile else 1.3)
+		env.tonemap_exposure = (.9 if _mobile else 1.3)
 		env.glow_intensity = .9
 		env.glow_bloom = .06
 		_zone = -1.0

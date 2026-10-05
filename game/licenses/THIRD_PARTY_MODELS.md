@@ -102,3 +102,35 @@ No attribution is required; listed for provenance.
 | dark_wooden_planks | Amal Kumar | https://polyhaven.com/a/dark_wooden_planks |
 | fabric_pattern_07 | Rob Tuytel | https://polyhaven.com/a/fabric_pattern_07 |
 | kloofendal_28d_misty_puresky | Greg Zaal, Jenelle van Heerden | https://polyhaven.com/a/kloofendal_28d_misty_puresky |
+
+## 0.7 rice fields (night)
+
+Downloaded by `tools/assets/fetch_fields.py` and converted by `tools/blender/process_downloads.py` ("0.7 fields" entries),
+stored under `game/assets/models/fields/` and `game/assets/outdoor/textures/`.
+
+### Sketchfab models (CC BY 4.0, modified: rescaled, re-pivoted)
+
+| Game asset | Original title | Author | Source |
+|---|---|---|---|
+| bahay_kubo | Bahay Kubo | kidomanait | https://sketchfab.com/3d-models/9d4f540f5a2b4aa1aaf755250eda6875 |
+| bamboo_clump | bamboo | evolveduk | https://sketchfab.com/3d-models/a02bf0e3ffe44617ad49daf3cd94fe59 |
+| cattails | Cattails | AlkaliDragon | https://sketchfab.com/3d-models/2f35ed566d3d4d74abd6e7c48d82f8eb |
+| reeds | Reed Plants Pack | Nicholas-3D | https://sketchfab.com/3d-models/bc77ea5218e44f2dbc23b2a4aef0c898 |
+| scarecrow | Scarecrow | Onigraphics - VR e Games | https://sketchfab.com/3d-models/537a7926a30049e2b89a22e813a70f94 |
+
+### Poly Haven (CC0 1.0)
+
+Models: dead_tree_trunk (fallen_trunk), dead_tree_trunk_02 (dead_trunk_b), tree_stump_01 (tree_stump), root_cluster_01
+(root_cluster), rock_moss_set_01, boulder_01, modular_electricity_poles (power_pole), wooden_lantern_01 (lantern),
+wooden_bucket_02 (bucket), fern_02 (fern). Textures: muddy_tracks, brown_mud_02, withered_grass, leafy_grass.
+https://polyhaven.com/license
+
+### Moon and water
+
+- Moon colour map: NASA Scientific Visualization Studio, CGI Moon Kit (LRO colour mosaic), public domain,
+  https://svs.gsfc.nasa.gov/4720 (`game/assets/fields/sky/moon_color.jpg`).
+- Water: "Water Shader" by StayAtHomeDev (uploaded by Verssales), CC0, https://godotshaders.com/shader/water-shader/;
+  the downloaded original is `game/assets/fields/water/water_stayathomedev_cc0.gdshader`, and
+  `game/scripts/night_water.gdshader` is built on it.
+- The SIRADO sign, rice, grass, dikes, road, pond, fireflies and night sky are generated in this project.
+

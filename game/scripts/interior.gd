@@ -292,7 +292,8 @@ func _build_ui() -> void:
 	touch.player = player
 	touch.theme = theme
 	ui.add_child(touch)
-	touch.hold_pressed.connect(player.toggle_hold)
+	touch.hold_pressed.connect(player.hold_pressed)
+	touch.hold_released.connect(player.hold_released)
 	touch.throw_pressed.connect(player.touch_throw)
 	touch.inspect_pressed.connect(player.inspect_object)
 	touch.pause_pressed.connect(func(): _show_menu("pause"))
@@ -367,7 +368,7 @@ func _show_menu(kind: String) -> void:
 	quality_select.custom_minimum_size.y = 49
 	quality_select.item_selected.connect(_apply_quality)
 	menu_content.add_child(quality_select)
-	menu_content.add_child(_label("Drag left to move • drag right to look\nSprint • Jump • Crouch • Hold / Drop • Throw\nInspect to open the TV screen" if mobile else "WASD move • Shift sprint • Space jump • C crouch\nMouse look • E hold / drop / use • Left click throw\nF inspect • Q TV channel • J notes • Esc pause", 18))
+	menu_content.add_child(_label("Drag left to move • drag right to look\nSprint • Jump • Crouch • Hold / Drop • Throw\nInspect to open the TV screen" if mobile else "WASD move • Shift sprint • Space jump • C crouch\nMouse look • E hold / drop / use • hold E to pull doors, gates and props\nLeft click throw • F inspect • Q TV channel • J notes • Esc pause", 18))
 	if not mobile:
 		_button("Quit", func(): get_tree().quit())
 
@@ -418,6 +419,10 @@ func _on_target_changed(body: InteriorObject) -> void:
 		prompt.text = ("Hold / Drop • " + text.replace("Q • Change channel", "Throw • Channel")) if mobile else ("E • " + text)
 	if body == null and player != null and is_instance_valid(player.door_target):
 		prompt.text = ("Hold / Drop • " if mobile else "E • ") + str(player.door_target.call("prompt_text"))
+		if player.door_hit.is_finite() and player.door_target.has_method("grab"):
+			prompt.text += "     Keep holding • pull" if mobile else "     Hold E • pull"
+	if player != null and player.is_pulling():
+		prompt.text = "Pulling • let go of Hold / Drop to release" if mobile else "Pulling • release E to let go"
 	if body != null and body.is_in_group("mystery_console"):
 		prompt.text += "     Inspect" if mobile else "     F • Inspect"
 
@@ -596,6 +601,8 @@ func _process(delta: float) -> void:
 		fps_label.text = "%d FPS" % Engine.get_frames_per_second()
 	if player.held != null:
 		prompt.text = ("Hold / Drop • drop     Throw • throw" if mobile else "E • Drop     Left click • Throw")
+		if player._grabbed_on_press and player._hold_down:
+			prompt.text = "Dragging • let go to drop" if mobile else "Dragging • release E to drop"
 	else:
 		_on_target_changed(player.target)
 	if benchmarking and time_elapsed > 62:

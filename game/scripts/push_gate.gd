@@ -5,6 +5,8 @@ extends Node3D
 ## swing outward toward the lane, up to OPEN_LIMIT, carry a little momentum and creak.
 ## The leaves are AnimatableBody3D children carrying "open_sign" (+1 / -1) and "width" metas,
 ## with their hinge at the node origin and the leaf running along local +Z.
+## Hold E (0.7) to take hold of a leaf and pull it toward you (or push it away) by hand; while it is
+## locked, pulling only rattles it.
 
 const OPEN_LIMIT := 1.75     # rad, about 100 degrees
 const PLAYER_RADIUS := .24
@@ -21,6 +23,10 @@ var _player: CharacterBody3D
 var _audio: AudioStreamPlayer3D
 var _creak: AudioStreamPlayer3D
 var _rattle_wait := 0.0
+var _pull_leaf := -1
+var _pull_angle := 0.0     # angle of the grab point around its hinge, in the leaf's frame
+var _pull_hand := Vector3.ZERO
+var _pull_start := 0.0
 var _clank: Array[AudioStream] = []
 
 func _ready() -> void:
@@ -65,6 +71,44 @@ func toggle() -> void:
 	if locked:
 		unlock()
 
+## Hold E on a leaf: `point` is where the view ray met it.
+func grab(point: Vector3, collider: Object = null) -> void:
+	var best := -1
+	var best_d := INF
+	for i in _leaves.size():
+		if collider == _leaves[i]:
+			best = i
+			break
+		var d := _leaves[i].global_position.distance_to(point)
+		if d < best_d:
+			best_d = d
+			best = i
+	if best < 0:
+		return
+	_pull_leaf = best
+	var local := _leaves[best].to_local(point)
+	_pull_angle = atan2(local.x, local.z)
+	_pull_hand = point
+	_pull_start = _angle[best]
+
+func drag_to(hand: Vector3, _delta: float) -> void:
+	_pull_hand = hand
+
+## Lets go; the leaf swings on with its momentum. Returns how far (rad) it moved while held.
+func release() -> float:
+	var moved := absf(_angle[_pull_leaf] - _pull_start) if _pull_leaf >= 0 else 0.0
+	_pull_leaf = -1
+	return moved
+
+## Opening angle (rad) that brings the held point of leaf i under the hand.
+func _hand_angle(i: int) -> float:
+	var leaf := _leaves[i]
+	var rel := _pull_hand - leaf.global_position
+	var parent_yaw := (leaf.get_parent() as Node3D).global_rotation.y if leaf.get_parent() is Node3D else 0.0
+	var leaf_yaw := wrapf(atan2(rel.x, rel.z) - _pull_angle - parent_yaw, -PI, PI)
+	var open_sign := float(leaf.get_meta("open_sign", 1.0))
+	return clampf(wrapf(leaf_yaw - _base_yaw[i], -PI, PI) * open_sign, 0.0, OPEN_LIMIT)
+
 func unlock() -> void:
 	if not locked:
 		return
@@ -107,6 +151,15 @@ func _physics_process(delta: float) -> void:
 	var creak := 0.0
 	for i in _leaves.size():
 		var push := _push_rate(i)
+		if i == _pull_leaf:
+			if locked:
+				if _pull_hand.distance_to(_leaves[i].global_position) > .2 and absf(_hand_angle(i) - _angle[i]) > .05:
+					_rattle(delta)
+				continue
+			push = clampf((_hand_angle(i) - _angle[i]) * 8.0, -2.6, 2.6)
+			if absf(push) < .02:
+				push = 0.0
+				_speed[i] *= exp(-12.0 * delta)
 		if locked:
 			if absf(push) > .05:
 				_rattle(delta)

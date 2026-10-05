@@ -96,7 +96,6 @@ static func build(parent: Node3D) -> Dictionary:
 	f._rice_and_grass()
 	f._walls()
 	f._fireflies()
-	f._mist()
 	f._commit()
 	for key in f.audio_spots:
 		f.root.set_meta("audio_" + key, f.audio_spots[key])
@@ -1121,33 +1120,6 @@ func _fireflies() -> void:
 		swarm.add_child(particles, true)
 		particles.position = spot[0]
 		_stats.fireflies += particles.amount
-
-## Low, wispy mist lying on the paddies (Forward+ volumetric fog; the global fog density stays 0).
-func _mist() -> void:
-	var mist := FogVolume.new()
-	mist.name = "Paddy mist"
-	mist.shape = RenderingServer.FOG_VOLUME_SHAPE_BOX
-	mist.size = Vector3(FIELD_RECT.size.x, 2.6, FIELD_RECT.size.y)
-	var material := FogMaterial.new()
-	material.resource_name = "Fields / paddy mist"
-	material.density = .05
-	material.albedo = Color(.74, .8, .95)
-	material.height_falloff = 1.6
-	material.edge_fade = .3
-	var noise := FastNoiseLite.new()
-	noise.seed = 5
-	noise.frequency = .09
-	noise.fractal_octaves = 3
-	var texture := NoiseTexture3D.new()
-	texture.width = 64
-	texture.height = 16
-	texture.depth = 64
-	texture.seamless = true
-	texture.noise = noise
-	material.density_texture = texture
-	mist.material = material
-	root.add_child(mist)
-	mist.position = Vector3(FIELD_RECT.get_center().x, WATER_Y + 1.05, FIELD_RECT.get_center().y)
 
 # ---------------------------------------------------------------- commit
 

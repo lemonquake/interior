@@ -44,12 +44,25 @@ const PUSH_FORCE := 520.0           # N sustained shove into props
 const THROW_CHARGE_TIME := 0.6
 const OBSTRUCT_DISTANCE := 0.55
 const OBSTRUCT_TIME := 0.3
+## Hold (E) shorter than this is a tap: pick up / drop, open / close, unlock (as before 0.7).
+## Held longer, it pulls: a door or gate leaf follows the view, a prop is dragged and dropped on release.
+const TAP_TIME := 0.28
 
 var camera: Camera3D
 var held: InteriorObject
 var target: InteriorObject
 ## Hinged door under the crosshair (InteriorHingedDoor) when no prop is targeted.
 var door_target: Node3D
+## Where the view ray met the targeted door or gate leaf (INF when aiming through an open doorway).
+var door_hit := Vector3.INF
+var door_hit_collider: Object
+## The door or gate being pulled while Hold (E) is held down.
+var pulling: Node3D
+var _hold_down := false
+var _hold_down_time := 0.0
+var _grabbed_on_press := false
+var _pull_distance := 1.2
+var _pull_anchor := Vector3.ZERO
 var touch_move := Vector2.ZERO
 var touch_sprinting := false
 var touch_crouching := false
@@ -192,7 +205,9 @@ func _unhandled_input(event: InputEvent) -> void:
 		elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
 			_hold_distance = maxf(_hold_distance - 0.1, HOLD_MIN_DISTANCE)
 	if event.is_action_pressed("hold"):
-		toggle_hold()
+		hold_pressed()
+	elif event.is_action_released("hold"):
+		hold_released()
 	if event.is_action_pressed("throw") and is_instance_valid(held):
 		charging_throw = true
 		throw_charge = 0.0
@@ -301,6 +316,59 @@ func _physics_process(delta: float) -> void:
 		throw_charge = minf(1.0, throw_charge + delta / THROW_CHARGE_TIME)
 	update_target()
 	update_hold(delta)
+	_update_pull(delta)
+
+## Hold (E) went down: drop what is held, use the TV, take hold of a door or gate leaf, or pick up.
+func hold_pressed() -> void:
+	_hold_down = true
+	_hold_down_time = Time.get_ticks_msec() / 1000.0
+	_grabbed_on_press = false
+	if held != null:
+		release_object()
+		return
+	update_target()
+	if target == null and door_target != null and door_hit.is_finite() and door_target.has_method("grab"):
+		pulling = door_target
+		pulling.call("grab", door_hit, door_hit_collider)
+		_pull_anchor = door_hit
+		_pull_distance = clampf(camera.global_position.distance_to(door_hit), HOLD_MIN_DISTANCE, REACH)
+		return
+	toggle_hold()
+	_grabbed_on_press = held != null
+
+## Hold (E) came up: a short press was a tap (toggle the door, unlock the gate, keep carrying);
+## after a long press, a pulled leaf swings on by itself and a dragged prop is let go.
+func hold_released() -> void:
+	if not _hold_down:
+		return
+	_hold_down = false
+	var duration := Time.get_ticks_msec() / 1000.0 - _hold_down_time
+	if pulling != null:
+		var door := pulling
+		pulling = null
+		if not is_instance_valid(door):
+			return
+		var moved := float(door.call("release"))
+		if duration < TAP_TIME and moved < .05:
+			door.call("toggle")
+		return
+	if _grabbed_on_press and duration >= TAP_TIME and is_instance_valid(held):
+		release_object()
+	_grabbed_on_press = false
+
+func is_pulling() -> bool:
+	return pulling != null and is_instance_valid(pulling)
+
+func _update_pull(delta: float) -> void:
+	if pulling == null:
+		return
+	# Walked off (or the leaf swung away): let go once the hand is far from where it took hold.
+	if not is_instance_valid(pulling) or camera.global_position.distance_to(_pull_anchor) > REACH + 1.8:
+		if is_instance_valid(pulling):
+			pulling.call("release")
+		pulling = null
+		return
+	pulling.call("drag_to", camera.global_position - camera.global_basis.z * _pull_distance, delta)
 
 func _update_stance() -> void:
 	var wants_crouch := touch_crouching or (InputMap.has_action("crouch") and Input.is_action_pressed("crouch"))
@@ -405,6 +473,10 @@ func _end_teleport() -> void:
 
 func reset_motion(spawn_position: Vector3, restore_stance := true) -> void:
 	release_object()
+	if is_pulling():
+		pulling.call("release")
+	pulling = null
+	_hold_down = false
 	# Jolt moves the kinematic character to a teleport target as a sweep; with
 	# the capsule briefly disabled nothing on the way gets launched.
 	if _collision != null and is_inside_tree():
@@ -441,10 +513,14 @@ func update_target() -> void:
 	var hit := ray_hit(REACH, 6)
 	var next := hit.get("collider") as InteriorObject
 	door_target = null
+	door_hit = Vector3.INF
+	door_hit_collider = null
 	if next == null and hit and hit.collider is Node:
 		var door := (hit.collider as Node).get_parent()
 		if door != null and door.is_in_group("interior_doors"):
 			door_target = door as Node3D
+			door_hit = hit.position
+			door_hit_collider = hit.collider
 	if next == null and door_target == null:
 		# An open door: aiming through its doorway (within reach, nothing nearer) targets it too.
 		var from := camera.global_position

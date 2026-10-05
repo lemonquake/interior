@@ -6,11 +6,22 @@ extends InteriorHingedDoor
 
 @export var slide_distance := 1.0
 
+var _grab_offset := 0.0
+
 func _ready() -> void:
 	super._ready()
 	label = "studio door" if label == "door" else label
 
-func _overlaps(p: float) -> int:
+func _grab_frame(local: Vector3) -> void:
+	_grab_offset = local.x - slide_distance * _t
+
+## Holding E slides the panel along with the hand.
+func _hand_target(local: Vector3) -> float:
+	if slide_distance <= .001:
+		return _t
+	return clampf((local.x - _grab_offset) / slide_distance, 0.0, 1.0)
+
+func _overlaps_t(t: float) -> int:
 	if _shape == null or _body == null or not is_inside_tree():
 		return 0
 	if _query == null:
@@ -18,7 +29,6 @@ func _overlaps(p: float) -> int:
 		_query.shape = _shape.shape
 		_query.collision_mask = PLAYER_MASK | PROP_MASK
 		_query.exclude = [_body.get_rid()]
-	var t := p * p * (3.0 - 2.0 * p)
 	_query.transform = global_transform * Transform3D(Basis.IDENTITY, Vector3(slide_distance * t, 0, 0)) * _shape.transform
 	var mask := 0
 	for hit in get_world_3d().direct_space_state.intersect_shape(_query, 8):
@@ -27,8 +37,7 @@ func _overlaps(p: float) -> int:
 			mask |= collider.collision_layer & (PLAYER_MASK | PROP_MASK)
 	return mask
 
-func _apply() -> void:
+func _apply_t(t: float) -> void:
 	if _body == null:
 		return
-	var t := _progress * _progress * (3.0 - 2.0 * _progress)
 	_body.position = Vector3(slide_distance * t, 0, 0)

@@ -2,7 +2,7 @@
 
 By Aljay Leodones. A first-person physics mystery in a recreation of the owner's family room.
 
-Version 0.6 opens the courtyard gate onto a walkable, fog-bound ghost town: empty streets in Davao City with parked Philippine tricycles, an abandoned jeepney, empty street-food carts and the rusted, bent sign of Malasugue Street. The TV now turns on to a "News Order - Davao City" emergency broadcast behind a CRT filter, every other channel is static, and the digital clock shows times that make no sense. Walking uses an adult stride with a head bob locked to the footsteps, which sound different on wood, carpet, tile, concrete, asphalt and grass. Version 0.3 relights and declutters the room, rebuilds prop physics on Jolt (rolling, toppling, physical holding and charged throws) and makes the room an editable scene. Version 0.2 added acceleration and momentum-based prop interactions, a connected three-level hamster playground, aquariums below its stand, and the kitchen, rear entrance and right wall from the owner's additional photographs. Eight supplied family photographs appear in the room's frames.
+Version 0.7 turns the game to a full-moon night. Past the last street lamp at the end of Malasugue Street, a half-kilometre dirt road runs out of town through flooded rice paddies to a dead end under a giant tree: the moon and its glittering path reflect in the paddies, an irrigation canal and a pond with a little jetty, rice and verge grass bow when the wind gusts, fireflies drift over the water and mist lies on the fields. An abandoned bahay kubo still has a lantern burning, and a scarecrow stands in the rice. Outdoors your footsteps echo; crickets, frogs, toads, owls and a tokay gecko call from around you in 3D. Hold E to pull doors, the gate and props by hand. Version 0.6 opens the courtyard gate onto a walkable, fog-bound ghost town: empty streets in Davao City with parked Philippine tricycles, an abandoned jeepney, empty street-food carts and the rusted, bent sign of Malasugue Street. The TV now turns on to a "News Order - Davao City" emergency broadcast behind a CRT filter, every other channel is static, and the digital clock shows times that make no sense. Walking uses an adult stride with a head bob locked to the footsteps, which sound different on wood, carpet, tile, concrete, asphalt and grass. Version 0.3 relights and declutters the room, rebuilds prop physics on Jolt (rolling, toppling, physical holding and charged throws) and makes the room an editable scene. Version 0.2 added acceleration and momentum-based prop interactions, a connected three-level hamster playground, aquariums below its stand, and the kitchen, rear entrance and right wall from the owner's additional photographs. Eight supplied family photographs appear in the room's frames.
 
 ## Play
 
@@ -15,6 +15,7 @@ Run `builds/windows/Interior.exe`, or install `builds/android/Interior.apk`. Win
 | Jump | Space | Jump |
 | Crouch | Hold C | Crouch / Stand |
 | Hold or drop; open or close a door; unlock the gate; TV on / off | E | Hold / Drop |
+| Pull a door or gate by hand; drag a prop (let go to drop) | Hold E | Hold the Hold / Drop button |
 | Push the unlocked gate open | Walk into it | Walk into it |
 | Change TV channel (aiming at the TV) | Q or mouse wheel | Throw |
 | Throw | Left click | Throw |
@@ -23,6 +24,8 @@ Run `builds/windows/Interior.exe`, or install `builds/android/Interior.apk`. Win
 | Pause / resume | Esc | Pause / Resume |
 
 The navy door opens onto the balcony from the owner's photographs: an aquarium beside the shoe rack, a railing with a frosted floral screen, and concrete stairs down to a small courtyard. Daylight there is lit separately, so the room looks the same while the door is closed. At the foot of the stair, E unlocks the white courtyard gate, but it only opens when you push it. Beyond it, the lane, Malasugue Street and the streets around the block can be walked. Police barricades close the streets at the edge of the play area.
+
+At the north end of street B the barricade was dragged aside: the dirt road leads into the rice fields. Walk out onto the jetty at the pond to stand in the moonlight; the road ends at a fallen tree and a SIRADO (road closed) barrier.
 
 Holding the clock, table plant and small cabinet photo reveals three notes. Inspect the TV and solve its lock, then keep exploring. Restart restores the room arrangement.
 
@@ -46,6 +49,6 @@ Low uses 65% 3D render scale without antialiasing or dynamic shadows; Medium use
 
 ## Asset sources
 
-The hamster is adapted from Asia Matusik's CC BY 4.0 model, with a new skin rig and animation library. Free CC0 wood and marble textures came from Poly Haven. Other new geometry and surface maps are authored locally. Family photographs are owner-supplied. Attribution and source details are in `game/licenses/ASSET_LICENSES.md` and the asset provenance files. Godot's full copyright notice is included in the game resources.
+Night fields (0.7): Sketchfab CC BY models (bahay kubo, bamboo, cattails, reeds, scarecrow), Poly Haven CC0 models and ground textures, the NASA CGI Moon Kit map (public domain), StayAtHomeDev's CC0 water shader as the base of the paddy water, and Wikimedia Commons night recordings (see `game/licenses/NIGHT_SOUNDS.md`). The hamster is adapted from Asia Matusik's CC BY 4.0 model, with a new skin rig and animation library. Free CC0 wood and marble textures came from Poly Haven. Other new geometry and surface maps are authored locally. Family photographs are owner-supplied. Attribution and source details are in `game/licenses/ASSET_LICENSES.md` and the asset provenance files. Godot's full copyright notice is included in the game resources.
 
 The previous downloadable [v0.1.0 release](https://github.com/lemonquake/interior/releases/tag/v0.1.0) and `docs/delivery.json` are historical; they do not contain the 0.2 changes.

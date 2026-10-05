@@ -247,6 +247,8 @@ func _run() -> void:
 	await _place(Vector3(1.91, .05, 1.3), PI)
 	player.update_target()
 	main.touch.hold_pressed.emit()
+	# A tap: the finger lifts again (hold-to-pull, 0.7, completes a tap on release).
+	main.touch.hold_released.emit()
 	await _frames(50)
 	check(door.is_open(), "Android Hold/Drop button opens the targeted door")
 	check(balcony.visible, "Balcony is shown while the door is open")
@@ -255,6 +257,8 @@ func _run() -> void:
 	player.update_target()
 	check(player.door_target == door, "Aiming through the open doorway targets the door")
 	main.touch.hold_pressed.emit()
+	# A tap: the finger lifts again (hold-to-pull, 0.7, completes a tap on release).
+	main.touch.hold_released.emit()
 	await _frames(50)
 	check(not door.is_open() and not balcony.visible, "Hold/Drop closes it again and the balcony is hidden from inside")
 

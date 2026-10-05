@@ -7,6 +7,8 @@ extends Node3D
 ## - Android (Compatibility): half the rice and grass, shorter rice range, fewer fireflies, no stars
 ##   in the water.
 ## - The hut lantern flickers. The scarecrow turns to face you whenever you are not looking at it.
+## - Desktop (Forward+): a low, wispy mist lies on the paddies (a FogVolume made here, since the
+##   Compatibility renderer has no fog shaders; the global volumetric density stays 0).
 
 const OUTDOOR_LAYER := 2
 
@@ -35,6 +37,34 @@ func _ready() -> void:
 		_crow_yaw = _crow.rotation.y
 	if mobile:
 		_mobile_budget()
+	else:
+		_add_mist()
+
+func _add_mist() -> void:
+	var rect := InteriorFieldsBuilder.FIELD_RECT
+	var mist := FogVolume.new()
+	mist.name = "Paddy mist"
+	mist.shape = RenderingServer.FOG_VOLUME_SHAPE_BOX
+	mist.size = Vector3(rect.size.x, 2.6, rect.size.y)
+	var material := FogMaterial.new()
+	material.density = .05
+	material.albedo = Color(.74, .8, .95)
+	material.height_falloff = 1.6
+	material.edge_fade = .3
+	var noise := FastNoiseLite.new()
+	noise.seed = 5
+	noise.frequency = .09
+	noise.fractal_octaves = 3
+	var texture := NoiseTexture3D.new()
+	texture.width = 64
+	texture.height = 16
+	texture.depth = 64
+	texture.seamless = true
+	texture.noise = noise
+	material.density_texture = texture
+	mist.material = material
+	add_child(mist)
+	mist.position = Vector3(rect.get_center().x, InteriorFieldsBuilder.WATER_Y + 1.05, rect.get_center().y)
 
 func _mobile_budget() -> void:
 	for node in find_children("*", "MultiMeshInstance3D", true, false):

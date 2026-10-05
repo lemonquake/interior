@@ -2,6 +2,8 @@ class_name InteriorTouchControls
 extends Control
 
 signal hold_pressed
+## The Hold / Drop finger lifted (0.7): ends a hold-to-pull.
+signal hold_released
 signal throw_pressed
 signal pause_pressed
 signal inspect_pressed
@@ -15,12 +17,13 @@ var radius := 68.0
 var _buttons: Array[Button] = []
 var _button_fingers: Dictionary[int, Button] = {}
 var _sprint_button: Button
+var _hold_button: Button
 var _crouch_button: Button
 
 func _ready() -> void:
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	mouse_filter = Control.MOUSE_FILTER_IGNORE
-	_button("Hold / Drop", Vector2(-205, -110), hold_pressed.emit)
+	_hold_button = _button("Hold / Drop", Vector2(-205, -110), hold_pressed.emit)
 	_button("Throw", Vector2(-205, -192), throw_pressed.emit)
 	_button("Inspect", Vector2(-205, -274), inspect_pressed.emit)
 	_button("Pause", Vector2(-120, 20), pause_pressed.emit, true)
@@ -108,6 +111,8 @@ func _input(event: InputEvent) -> void:
 		else:
 			if _button_fingers.has(event.index):
 				var was_sprinting := _button_fingers[event.index] == _sprint_button
+				if _button_fingers[event.index] == _hold_button:
+					hold_released.emit()
 				_button_fingers.erase(event.index)
 				if was_sprinting:
 					player.touch_sprinting = _button_fingers.values().has(_sprint_button)

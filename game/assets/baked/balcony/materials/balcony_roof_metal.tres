@@ -8,8 +8,8 @@
 resource_name = "Balcony / roof metal"
 albedo_color = Color(0.6, 0.62, 0.62, 1)
 albedo_texture = ExtResource("1_685su")
-metallic = 1.0
-roughness = 0.512
+metallic = 0.2
+roughness = 0.45
 roughness_texture = ExtResource("3_cmsbo")
 normal_enabled = true
 normal_scale = 0.3

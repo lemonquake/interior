@@ -40,8 +40,10 @@ func _run() -> void:
 		check(texture != null and texture.get_width() >= 512,"Photo must have a usable imported texture: " + str(i))
 	var movable := get_nodes_in_group("movable")
 	check(get_nodes_in_group("original_room_props").size() == InteriorRoomBuilder.load_manifest().actors.size(),"Every manifest actor (45 after decluttering) must be one original physical prop assembly")
-	check(get_nodes_in_group("aquariums").size() == 2,"Both aquariums must be below the linked habitats")
-	var aquariums := get_nodes_in_group("aquariums")
+	# The balcony tank (balcony_integration covers it) is the third aquarium.
+	var aquariums := get_nodes_in_group("aquariums").filter(func(node: Node) -> bool: return main.room.is_ancestor_of(node))
+	check(aquariums.size() == 2,"Both room aquariums must be below the linked habitats")
+	check(get_nodes_in_group("aquariums").size() == 3,"The balcony aquarium is the only other one")
 	for aquarium in aquariums:
 		check(aquarium.global_position.y < .3,"Aquariums must occupy the lower shelf")
 		check(aquarium.fish.size() == 2,"Each aquarium must contain two live fish")

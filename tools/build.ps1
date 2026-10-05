@@ -12,14 +12,14 @@ $gamePath = Join-Path $projectRoot 'game'
 & $GodotPath --headless --path $gamePath --editor --import --quit
 if ($LASTEXITCODE -ne 0) { throw 'Godot import failed' }
 $testReports = @{}
-foreach ($test in @('physics_integration','room_integration','settling','tabletop_stability','movement_stress','hamster_stress','surroundings_integration','upgrade_integration','touch_integration')) {
-    $stepBudget = if ($test -like '*stress' -or $test -eq 'tabletop_stability') { 16000 } else { 1200 }
+foreach ($test in @('physics_integration','room_integration','settling','tabletop_stability','movement_stress','hamster_stress','surroundings_integration','upgrade_integration','touch_integration','balcony_integration')) {
+    $stepBudget = if ($test -like '*stress' -or $test -eq 'tabletop_stability') { 16000 } elseif ($test -eq 'balcony_integration') { 6000 } else { 1200 }
     $testArguments = @('--headless','--fixed-fps','60','--path',$gamePath,'--script',"res://tests/$test.gd",'--quit-after',"$stepBudget")
     if ($test -eq 'touch_integration') { $testArguments += @('--','--mobile-test') }
     $testOutput = & $GodotPath @testArguments 2>&1
     $testOutput | ForEach-Object { Write-Host $_ }
     if ($LASTEXITCODE -ne 0) { throw "$test failed" }
-    $marker = @{physics_integration='INTERIOR_INTEGRATION ';room_integration='INTERIOR_ROOM_INTEGRATION ';settling='INTERIOR_SETTLING ';tabletop_stability='INTERIOR_TABLETOP_STABILITY ';movement_stress='INTERIOR_MOVEMENT_STRESS ';hamster_stress='INTERIOR_HAMSTER_STRESS ';surroundings_integration='INTERIOR_SURROUNDINGS_INTEGRATION ';upgrade_integration='INTERIOR_UPGRADE_INTEGRATION ';touch_integration='INTERIOR_TOUCH_INTEGRATION '}[$test]
+    $marker = @{physics_integration='INTERIOR_INTEGRATION ';room_integration='INTERIOR_ROOM_INTEGRATION ';settling='INTERIOR_SETTLING ';tabletop_stability='INTERIOR_TABLETOP_STABILITY ';movement_stress='INTERIOR_MOVEMENT_STRESS ';hamster_stress='INTERIOR_HAMSTER_STRESS ';surroundings_integration='INTERIOR_SURROUNDINGS_INTEGRATION ';upgrade_integration='INTERIOR_UPGRADE_INTEGRATION ';touch_integration='INTERIOR_TOUCH_INTEGRATION ';balcony_integration='INTERIOR_BALCONY_INTEGRATION '}[$test]
     $reportLine = $testOutput | Where-Object { "$_".StartsWith($marker) } | Select-Object -Last 1
     if (-not $reportLine) { throw "$test did not complete; inspect Godot diagnostics" }
     $report = "$reportLine".Substring($marker.Length) | ConvertFrom-Json

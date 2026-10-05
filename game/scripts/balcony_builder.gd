@@ -67,7 +67,7 @@ func _build_all() -> void:
 
 func _prepare_balcony_materials() -> void:
 	_lib("plaster", "warm_plaster", Color(.97, .96, .93))
-	_lib("yellow", "warm_plaster", Color(.93, .75, .36))
+	_lib("yellow", "warm_plaster", Color(.90, .76, .42))
 	_lib("concrete", "warm_plaster", Color(.66, .65, .62))
 	_lib("concrete dark", "warm_plaster", Color(.50, .49, .47))
 	_lib("block", "warm_plaster", Color(.60, .60, .57))
@@ -81,6 +81,10 @@ func _prepare_balcony_materials() -> void:
 	_lib("steel", "brushed_steel", Color(.74, .73, .71))
 	_lib("roof metal", "brushed_steel", Color(.60, .62, .62))
 	_lib("roof rust", "brushed_steel", Color(.52, .40, .30))
+	# Without reflection probes fully metallic paint reads black outdoors; keep it satin.
+	for key in ["steel", "roof metal", "roof rust"]:
+		(_materials[key] as BaseMaterial3D).metallic = .2
+		(_materials[key] as BaseMaterial3D).roughness = .45
 	_lib("rattan", "rattan", Color(1, 1, 1))
 	_lib("walnut", "walnut", Color(1, 1, 1))
 	_lib("oak", "oak", Color(1, 1, 1))
@@ -103,8 +107,8 @@ func _prepare_balcony_materials() -> void:
 	_flat("tarp orange", Color(.86, .37, .14), .8)
 	_flat("tarp blue", Color(.16, .42, .78), .8)
 	_flat("bottle blue", Color(.22, .52, .92), .25)
-	var glass := _flat("glass dark", Color(.05, .07, .08), .05)
-	glass.metallic = .4
+	var glass := _flat("glass dark", Color(.15, .19, .22), .1)
+	glass.metallic = .2
 	glass.metallic_specular = .9
 	var cover := _flat("plastic cover", Color(.92, .94, .96, .45), .2)
 	cover.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
@@ -355,7 +359,6 @@ func _build_courtyard() -> void:
 	_collider("Courtyard floor", Vector3(cx, GROUND - .15 + .005, (Z_WALL + YARD_Z) * .5), Vector3(FENCE_X - YARD_X + .4, .3, YARD_Z - Z_WALL))
 	# Ground floor facade beneath the balcony, behind the low wall.
 	_box("Ground floor wall", Vector3(X_END - .075, (GROUND - .2) * .5, (Z_WALL + YARD_Z) * .5), Vector3(.15, -GROUND - .2, YARD_Z - Z_WALL), "yellow", false)
-	_window(Vector3(X_END, -1.5, 4.5), .8, .9)
 	# Low block wall closing the gap beside the stair foot.
 	_box("Low block wall", Vector3(YARD_X - .05, GROUND + .5, (STAIR_Z + YARD_Z) * .5), Vector3(.12, 1.0, YARD_Z - STAIR_Z), "block", false)
 	_box("Low wall cap", Vector3(YARD_X - .05, GROUND + 1.01, (STAIR_Z + YARD_Z) * .5), Vector3(.16, .03, YARD_Z - STAIR_Z), "concrete")
@@ -503,7 +506,7 @@ func _build_props() -> void:
 		_ring_planter(item[0], item[1], item[2])
 	_greenery_panel()
 	_plant_print()
-	for item: Array in [["RattanChair1", Vector3(1.95, 0, 4.12), PI * .5 + .25], ["RattanChair2", Vector3(2.75, 0, 4.18), PI * .5 - .1]]:
+	for item: Array in [["RattanChair1", Vector3(2.2, 0, 4.15), -PI * .5 + .2], ["RattanChair2", Vector3(2.95, 0, 4.2), -PI * .5 - .15]]:
 		_rattan_chair(item[0], item[1], item[2])
 	_begin_prop("Doormat", Vector3(X_END - .32, 0, (Z_WALL + STAIR_Z) * .5 + .02))
 	_box("Doormat pile", Vector3(0, .006, 0), Vector3(.42, .012, .66), "doormat")
@@ -611,7 +614,7 @@ func _greenery_panel() -> void:
 		var length := random.randf_range(.25, .5)
 		for j in 6:
 			var t := float(j) / 5
-			_sphere(Vector3(x + sin(t * 3.0 + i) * .01, -t * length, -.04), Vector3(.04, .05, .04) * (1.0 - t * .4), "petal purple", 6)
+			_sphere(Vector3(x + sin(t * 3.0 + i) * .01, -t * length, -.04), Vector3(.028, .04, .028) * (1.0 - t * .4), "petal purple", 6)
 	_end_prop()
 
 func _plant_print() -> void:

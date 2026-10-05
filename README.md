@@ -2,7 +2,7 @@
 
 By Aljay Leodones. A first-person physics mystery in a recreation of the owner's family room.
 
-Version 0.2 adds acceleration and momentum-based prop interactions, a connected three-level hamster playground, aquariums below its stand, and the kitchen, rear entrance and right wall from the owner's additional photographs. Eight supplied family photographs appear in the room's frames.
+Version 0.3 relights and declutters the room, rebuilds prop physics on Jolt (rolling, toppling, physical holding and charged throws) and makes the room an editable scene. Version 0.2 added acceleration and momentum-based prop interactions, a connected three-level hamster playground, aquariums below its stand, and the kitchen, rear entrance and right wall from the owner's additional photographs. Eight supplied family photographs appear in the room's frames.
 
 ## Play
 
@@ -28,9 +28,9 @@ Three skinned hamsters wander, use the playground and travel through the externa
 
 ## Edit and build
 
-Open `game/project.godot` in Godot 4.7.2. The game uses GDScript, GodotPhysics3D at 60 Hz and the Compatibility renderer. Run `tools/build.ps1 -GodotPath <Godot console executable>` to import, check completed test reports and export both platforms. Use `-TestsOnly` to skip exports. Godot export templates, Java 21 and an Android SDK are required. SDK paths and signing configuration belong in local Godot editor settings; credentials are excluded from Git.
+Open `game/project.godot` in Godot 4.7.2. `main.tscn` instances `scenes/room/living_room.tscn`: the whole furnished room is regular nodes (props, colliders, lights, environment) with meshes and materials stored as separate files under `game/assets/baked/`, so it can be edited directly in the editor. The game uses GDScript, Jolt Physics at 60 Hz with physics interpolation, Forward+ on desktop and the Compatibility renderer on Android.
 
-The original furnished-room source remains `room/living_room.blend`. Its existing GLB is supplemented by editable runtime geometry in `room_surroundings.gd`, `hamster_enclosure.gd` and `aquarium.gd`. Re-exporting the original Blender room does not bake these additions into the .blend file. `tools/prepare_surfaces.py`, `prepare_reference_room.py` and `prepare_hamster.py` reproduce the new materials, photo derivatives and hamster rig. The photo preparation step needs the owner's local originals; prepared game assets are already included.
+The room scene was generated from `scripts/room_builder.gd` (the original `living_room.glb`, `room_manifest.json` and the procedural surroundings). `godot --headless --path game --script res://editor/bake_room.gd` regenerates it and overwrites manual edits, so only run it after changing the builder code. Run `tools/build.ps1 -GodotPath <Godot console executable>` to import, check completed test reports and export both platforms. Use `-TestsOnly` to skip exports. Godot export templates, Java 21 and an Android SDK are required. SDK paths and signing configuration belong in local Godot editor settings; credentials are excluded from Git.
 
 Run the EXE with `--log-file <log path> -- --autoplay --benchmark --quality-high --render-size=1920x1080` for the 60-second rendered camera sweep after a two-second warmup. Sixteen props stay active during the sweep. Use `-- --capture-review "--capture-path=<absolute directory>" --render-size=1920x1080` for room and menu captures. `--mobile-test` exposes the touch interface on desktop.
 

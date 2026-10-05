@@ -35,6 +35,7 @@ const MATERIALS := {
 	"foliage": {"friction": 0.80, "bounce": 0.05, "linear_damp": 0.20, "angular_damp": 0.40, "rolling": 0.12, "spin": 0.30, "sound": "foliage"},
 	"cardboard": {"friction": 0.55, "bounce": 0.08, "linear_damp": 0.05, "angular_damp": 0.05, "rolling": 0.04, "spin": 0.15, "sound": "cardboard"},
 	"foam": {"friction": 0.90, "bounce": 0.30, "linear_damp": 0.40, "angular_damp": 0.40, "rolling": 0.10, "spin": 0.30, "sound": "soft"},
+	"fruit": {"friction": 0.75, "bounce": 0.12, "linear_damp": 0.0, "angular_damp": 0.05, "rolling": 0.06, "spin": 0.15, "sound": "soft"},
 }
 
 ## Physical material of the existing living-room actors (room_manifest assetId).

@@ -21,7 +21,7 @@ func _run() -> void:
 	for i in 3:
 		await physics_frame
 	var bodies := get_nodes_in_group("movable")
-	check(bodies.size() == main.room_manifest.actors.size(), "Every exported actor must have a physics body")
+	check(get_nodes_in_group("original_room_props").size() == main.room_manifest.actors.size(), "Every exported actor must have a physics body")
 	var query := PhysicsShapeQueryParameters3D.new()
 	query.shape = main.player.get_child(0).shape
 	query.transform = main.player.global_transform.translated(Vector3(0,.85,0))

@@ -1,0 +1,72 @@
+{
+  "method": "Deterministic local procedural PBR maps, no downloaded content or full-room photographic planes",
+  "seed": 51005,
+  "sources": "Owner room-reference photos; existing licensed project surface maps; owner's family inserts",
+  "maps": [
+    {
+      "file": "blue_ceiling_color.jpg",
+      "sha256": "604ef4f50999662a03e079e9e6d5abf06a1b554976dbb6c298d5664c4884b963",
+      "bytes": 29680
+    },
+    {
+      "file": "blue_ceiling_normal.png",
+      "sha256": "3190ef15bb3b95c5e2ba5d5180fd7cf75451b0302d3c200b6bd717bf5987d34c",
+      "bytes": 390269
+    },
+    {
+      "file": "blue_ceiling_roughness.jpg",
+      "sha256": "9a0b561b20ec7d368affcf7855f7b9b0d58ca3ec5237dd771d89b697c32a7c28",
+      "bytes": 80278
+    },
+    {
+      "file": "fridge_magnets.png",
+      "sha256": "7c3c52a11c6dac3739393dff29e87bf38a621682ce6c9d01ed2829c7f7609350",
+      "bytes": 37553
+    },
+    {
+      "file": "leaf_curtain_color.jpg",
+      "sha256": "5dacbecac2004f791ce4ce908476e471f002694f6740f8dd0b513976538471ae",
+      "bytes": 56695
+    },
+    {
+      "file": "leaf_curtain_normal.png",
+      "sha256": "d6f30dec77359afdf1a8583a217256a753191c80888886971c69ae46f686cb9a",
+      "bytes": 359860
+    },
+    {
+      "file": "leaf_curtain_roughness.jpg",
+      "sha256": "ac454a26f496d43269f757f3447cbbee861169fbf1decc6058b161bbbff5ac5f",
+      "bytes": 3404
+    },
+    {
+      "file": "navy_enamel_color.jpg",
+      "sha256": "2fb98bab9773599c2e8c2231764672d31b7eb78b2cb709fedb16b7e96446591c",
+      "bytes": 15273
+    },
+    {
+      "file": "navy_enamel_normal.png",
+      "sha256": "b412d187d182ad8f7b2e5e6ec2cf7a50d562121a152b5c40ae02c37fa11d6740",
+      "bytes": 340079
+    },
+    {
+      "file": "navy_enamel_roughness.jpg",
+      "sha256": "0dc428b10789c2ed0736f5b2d42a21041d4fc42ee1f27fb2946502f03b725509",
+      "bytes": 71449
+    },
+    {
+      "file": "pale_slat_color.jpg",
+      "sha256": "e9eda3eab074cd168bfd71634e37b2eb3f26ae9e817e809114ab0f0f5d5d19c2",
+      "bytes": 31474
+    },
+    {
+      "file": "pale_slat_normal.png",
+      "sha256": "ca22349381f83b2fe3d935ee1ea72d9bb40b76d9d662d8fe3e17849b7dd86950",
+      "bytes": 344670
+    },
+    {
+      "file": "pale_slat_roughness.jpg",
+      "sha256": "d44c1febad56136ee7f345a5ea38182f84af34db9dae0e318cfa4fefd24f70dd",
+      "bytes": 60444
+    }
+  ]
+}

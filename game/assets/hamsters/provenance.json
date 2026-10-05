@@ -1,0 +1,40 @@
+{
+  "source": "Asia Matusik / Hamster",
+  "license": "CC-BY-4.0",
+  "source_url": "https://sketchfab.com/3d-models/hamster-c6a24007915a4aa9ae47fd912191c7b4",
+  "download_url": "https://huggingface.co/datasets/allenai/objaverse/resolve/main/glbs/000-087/c6a24007915a4aa9ae47fd912191c7b4.glb",
+  "source_sha256": "64556f56d059caae20ea3c4a9a3bdf081c99417b9ccb0153bb1aebff5c844b67",
+  "output_sha256": "cdce999df5650698e006105682dfbc0ca45464131eb3c0ac77be6c9850333cfe",
+  "vertices": 3219,
+  "triangles": 5174,
+  "bones": [
+    "root",
+    "body",
+    "head",
+    "ear_L",
+    "ear_R",
+    "front_L",
+    "front_R",
+    "hind_L",
+    "hind_R"
+  ],
+  "animations": [
+    "walk",
+    "run",
+    "idle_sniff",
+    "idle_groom",
+    "idle_rear",
+    "idle_rest",
+    "eat",
+    "dig"
+  ],
+  "texture_resolution": [
+    512,
+    512
+  ],
+  "normal_resolution": [
+    256,
+    256
+  ],
+  "changes": "Engine scale normalization; rounded original ear tips; repacked non-overlapping UVs and golden coat bake; short-fur normal map; six fine head-skinned whisker ribbons; nine-bone quadruped skin; walk/run and four distinct idle clips plus eat/dig; original downloaded mesh retained."
+}

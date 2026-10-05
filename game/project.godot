@@ -29,6 +29,7 @@ environment/defaults/default_clear_color=Color(0.085, 0.07, 0.06, 1)
 [physics]
 common/physics_ticks_per_second=60
 3d/physics_engine="GodotPhysics3D"
+3d/solver/contact_max_allowed_penetration=0.001
 
 [audio]
 driver/enable_input=false

@@ -1,21 +1,554 @@
 {
-  "physics_integration": {
-    "checks": 25,
+  "tabletop_stability": {
+    "checks": 6310,
+    "failures": [],
+    "fixed_delta_seconds": 0.0166666666666667,
+    "passed": true,
+    "phases": [
+      {
+        "bodies": [
+          {
+            "frozen": false,
+            "late_drift_m": 0.0,
+            "late_max_speed_m_s": 9.5063827757258E-05,
+            "late_max_spin_rad_s": 0.000120388744107913,
+            "name": "marble_table_2",
+            "position": "(-0.650005, 0.004002, 0.149993)",
+            "sleeping": true
+          },
+          {
+            "frozen": false,
+            "late_drift_m": 0.0,
+            "late_max_speed_m_s": 9.97640017885715E-05,
+            "late_max_spin_rad_s": 0.000615863420534879,
+            "name": "woven_tray_14",
+            "position": "(-0.649972, 0.838066, 0.139997)",
+            "sleeping": true
+          },
+          {
+            "frozen": false,
+            "late_drift_m": 0.0,
+            "late_max_speed_m_s": 7.19216332072392E-05,
+            "late_max_spin_rad_s": 0.000124719750601798,
+            "name": "potted_plant_15",
+            "position": "(-0.529943, 0.893076, 0.139981)",
+            "sleeping": true
+          },
+          {
+            "frozen": false,
+            "late_drift_m": 0.0,
+            "late_max_speed_m_s": 0.000167599879205227,
+            "late_max_spin_rad_s": 0.000775141350459307,
+            "name": "tissue_box_16",
+            "position": "(-0.809922, 0.893048, 0.210014)",
+            "sleeping": true
+          }
+        ],
+        "phase": "wake_stack",
+        "simulated_seconds": 8.0
+      },
+      {
+        "bodies": [
+          {
+            "frozen": false,
+            "late_drift_m": 0.0,
+            "late_max_speed_m_s": 8.80395527929068E-05,
+            "late_max_spin_rad_s": 3.20115650538355E-05,
+            "name": "marble_table_2",
+            "position": "(-0.650009, 0.004009, 0.149992)",
+            "sleeping": true
+          },
+          {
+            "frozen": false,
+            "late_drift_m": 0.0,
+            "late_max_speed_m_s": 0.000221628928557038,
+            "late_max_spin_rad_s": 0.000554997357539833,
+            "name": "woven_tray_14",
+            "position": "(-0.657098, 1.078776, 0.13808)",
+            "sleeping": true
+          },
+          {
+            "frozen": false,
+            "late_drift_m": 0.0,
+            "late_max_speed_m_s": 0.000146175007103011,
+            "late_max_spin_rad_s": 0.000306738365907222,
+            "name": "potted_plant_15",
+            "position": "(-0.529933, 0.938012, 0.268622)",
+            "sleeping": true
+          },
+          {
+            "frozen": false,
+            "late_drift_m": 0.0,
+            "late_max_speed_m_s": 0.000142871518619359,
+            "late_max_spin_rad_s": 0.000393760506995022,
+            "name": "tissue_box_16",
+            "position": "(-0.810673, 0.938644, 0.456702)",
+            "sleeping": true
+          }
+        ],
+        "phase": "grab_drop_woven_tray_14",
+        "simulated_seconds": 6.0
+      },
+      {
+        "bodies": [
+          {
+            "frozen": false,
+            "late_drift_m": 0.0,
+            "late_max_speed_m_s": 0.000123339879792184,
+            "late_max_spin_rad_s": 0.000278760184301063,
+            "name": "marble_table_2",
+            "position": "(-0.65016, 0.004003, 0.150002)",
+            "sleeping": true
+          },
+          {
+            "frozen": false,
+            "late_drift_m": 0.0,
+            "late_max_speed_m_s": 0.000193229352589697,
+            "late_max_spin_rad_s": 0.000461721821920946,
+            "name": "woven_tray_14",
+            "position": "(-0.657445, 1.078758, 0.13773)",
+            "sleeping": true
+          },
+          {
+            "frozen": false,
+            "late_drift_m": 0.0,
+            "late_max_speed_m_s": 0.000324750639265403,
+            "late_max_spin_rad_s": 0.00032521752291359,
+            "name": "potted_plant_15",
+            "position": "(-0.530259, 0.938006, 0.268609)",
+            "sleeping": true
+          },
+          {
+            "frozen": false,
+            "late_drift_m": 0.0,
+            "late_max_speed_m_s": 0.00023347137903329,
+            "late_max_spin_rad_s": 0.000202524897758849,
+            "name": "tissue_box_16",
+            "position": "(-0.811614, 0.938341, 0.456522)",
+            "sleeping": true
+          }
+        ],
+        "phase": "grab_drop_potted_plant_15",
+        "simulated_seconds": 6.0
+      },
+      {
+        "bodies": [
+          {
+            "frozen": false,
+            "late_drift_m": 0.0,
+            "late_max_speed_m_s": 7.60663897381164E-05,
+            "late_max_spin_rad_s": 7.88213510531932E-05,
+            "name": "marble_table_2",
+            "position": "(-0.650266, 0.004001, 0.150161)",
+            "sleeping": true
+          },
+          {
+            "frozen": false,
+            "late_drift_m": 0.0,
+            "late_max_speed_m_s": 0.000634043652098626,
+            "late_max_spin_rad_s": 0.00220511434599757,
+            "name": "woven_tray_14",
+            "position": "(-0.657692, 1.07873, 0.13731)",
+            "sleeping": true
+          },
+          {
+            "frozen": false,
+            "late_drift_m": 0.0,
+            "late_max_speed_m_s": 8.98735306691378E-05,
+            "late_max_spin_rad_s": 0.000611243769526482,
+            "name": "potted_plant_15",
+            "position": "(-0.5306, 0.938014, 0.268977)",
+            "sleeping": true
+          },
+          {
+            "frozen": false,
+            "late_drift_m": 0.0,
+            "late_max_speed_m_s": 3.88092994398903E-05,
+            "late_max_spin_rad_s": 0.000440964126028121,
+            "name": "tissue_box_16",
+            "position": "(-0.811878, 0.93833, 0.456936)",
+            "sleeping": true
+          }
+        ],
+        "phase": "grab_drop_tissue_box_16",
+        "simulated_seconds": 6.0
+      }
+    ],
+    "simulated_seconds": 27.5
+  },
+  "hamster_stress": {
+    "animations": [
+      "walk",
+      "dig",
+      "run",
+      "idle_sniff",
+      "eat",
+      "idle_rear",
+      "idle_rest",
+      "idle_groom"
+    ],
+    "checks": 480146,
+    "colliders": 176,
+    "connector_count": 2,
+    "cpu_stress_ms": 606.623,
+    "failures": [],
+    "max_blocked_seconds": 1.28333333333333,
+    "max_route_vertices": 48,
+    "max_speed_mps": 0.19,
+    "min_resident_separation_m": 0.119313232600689,
+    "passed": true,
+    "residents": 3,
+    "simulation_hz": 60,
+    "skinned_vertex_deformation": {
+      "0:dig": {
+        "max_displacement_m": 0.00635885472875088,
+        "mean_displacement_m": 0.000278674852430854,
+        "vertex_samples": 1689
+      },
+      "0:eat": {
+        "max_displacement_m": 0.00250977932009846,
+        "mean_displacement_m": 0.00068664738379488,
+        "vertex_samples": 1689
+      },
+      "0:idle_groom": {
+        "max_displacement_m": 0.00645457520149648,
+        "mean_displacement_m": 0.00166760217034321,
+        "vertex_samples": 1689
+      },
+      "0:idle_rear": {
+        "max_displacement_m": 0.0622172340750694,
+        "mean_displacement_m": 0.0302290795880557,
+        "vertex_samples": 1689
+      },
+      "0:idle_rest": {
+        "max_displacement_m": 0.00133141810656525,
+        "mean_displacement_m": 0.000629618491138294,
+        "vertex_samples": 1689
+      },
+      "0:idle_sniff": {
+        "max_displacement_m": 0.0133818633854389,
+        "mean_displacement_m": 0.00338748777318475,
+        "vertex_samples": 1689
+      },
+      "0:run": {
+        "max_displacement_m": 0.0203770575113595,
+        "mean_displacement_m": 0.00400529637352558,
+        "vertex_samples": 1689
+      },
+      "0:walk": {
+        "max_displacement_m": 0.0139612089842558,
+        "mean_displacement_m": 0.00329852423813027,
+        "vertex_samples": 1689
+      },
+      "1:dig": {
+        "max_displacement_m": 0.00635885472875088,
+        "mean_displacement_m": 0.000278674852430854,
+        "vertex_samples": 1689
+      },
+      "1:eat": {
+        "max_displacement_m": 0.00250977932009846,
+        "mean_displacement_m": 0.00068664738379488,
+        "vertex_samples": 1689
+      },
+      "1:idle_groom": {
+        "max_displacement_m": 0.00645457520149648,
+        "mean_displacement_m": 0.00166760217034321,
+        "vertex_samples": 1689
+      },
+      "1:idle_rear": {
+        "max_displacement_m": 0.0622172340750694,
+        "mean_displacement_m": 0.0302290795880557,
+        "vertex_samples": 1689
+      },
+      "1:idle_rest": {
+        "max_displacement_m": 0.00133141810656525,
+        "mean_displacement_m": 0.000629618491138294,
+        "vertex_samples": 1689
+      },
+      "1:idle_sniff": {
+        "max_displacement_m": 0.0133818633854389,
+        "mean_displacement_m": 0.00338748777318475,
+        "vertex_samples": 1689
+      },
+      "1:run": {
+        "max_displacement_m": 0.0203770575113595,
+        "mean_displacement_m": 0.00400529637352558,
+        "vertex_samples": 1689
+      },
+      "1:walk": {
+        "max_displacement_m": 0.0139612089842558,
+        "mean_displacement_m": 0.00329852423813027,
+        "vertex_samples": 1689
+      },
+      "2:dig": {
+        "max_displacement_m": 0.00635885472875088,
+        "mean_displacement_m": 0.000278674852430854,
+        "vertex_samples": 1689
+      },
+      "2:eat": {
+        "max_displacement_m": 0.00250977932009846,
+        "mean_displacement_m": 0.00068664738379488,
+        "vertex_samples": 1689
+      },
+      "2:idle_groom": {
+        "max_displacement_m": 0.00645457520149648,
+        "mean_displacement_m": 0.00166760217034321,
+        "vertex_samples": 1689
+      },
+      "2:idle_rear": {
+        "max_displacement_m": 0.0622172340750694,
+        "mean_displacement_m": 0.0302290795880557,
+        "vertex_samples": 1689
+      },
+      "2:idle_rest": {
+        "max_displacement_m": 0.00133141810656525,
+        "mean_displacement_m": 0.000629618491138294,
+        "vertex_samples": 1689
+      },
+      "2:idle_sniff": {
+        "max_displacement_m": 0.0133818633854389,
+        "mean_displacement_m": 0.00338748777318475,
+        "vertex_samples": 1689
+      },
+      "2:run": {
+        "max_displacement_m": 0.0203770575113595,
+        "mean_displacement_m": 0.00400529637352558,
+        "vertex_samples": 1689
+      },
+      "2:walk": {
+        "max_displacement_m": 0.0139612089842558,
+        "mean_displacement_m": 0.00329852423813027,
+        "vertex_samples": 1689
+      }
+    },
+    "snapshots": [
+      {
+        "blocked_seconds": 0.0,
+        "clip": "walk",
+        "elapsed": 166.666666666691,
+        "level": 0,
+        "position": [
+          0.0530001632869244,
+          0.649999976158142,
+          -0.170000001788139
+        ],
+        "resident": 0,
+        "state": "wander",
+        "transfer": false,
+        "visited": {
+          "bridge": 1,
+          "food": 1,
+          "hide": 2,
+          "idle": 7,
+          "idle_groom": 2,
+          "idle_rear": 2,
+          "idle_rest": 2,
+          "idle_sniff": 1,
+          "sand": 1,
+          "tunnel": 3,
+          "water": 1,
+          "wheel": 1
+        },
+        "visited_levels": {
+          "0": true,
+          "1": true,
+          "2": true
+        }
+      },
+      {
+        "blocked_seconds": 0.0,
+        "clip": "walk",
+        "elapsed": 166.666666666691,
+        "level": 1,
+        "position": [
+          -0.311608284711838,
+          1.05948221683502,
+          -0.0199999995529652
+        ],
+        "resident": 1,
+        "state": "wander",
+        "transfer": true,
+        "visited": {
+          "bridge": 1,
+          "food": 1,
+          "hide": 1,
+          "idle": 9,
+          "idle_groom": 2,
+          "idle_rear": 3,
+          "idle_rest": 2,
+          "idle_sniff": 2,
+          "sand": 1,
+          "tunnel": 3,
+          "water": 3,
+          "wheel": 1
+        },
+        "visited_levels": {
+          "0": true,
+          "1": true,
+          "2": true
+        }
+      },
+      {
+        "blocked_seconds": 0.0,
+        "clip": "idle_groom",
+        "elapsed": 166.666666666691,
+        "level": 1,
+        "position": [
+          0.0,
+          1.04999995231628,
+          -0.170000001788139
+        ],
+        "resident": 2,
+        "state": "idle",
+        "transfer": false,
+        "visited": {
+          "bridge": 1,
+          "food": 1,
+          "hide": 1,
+          "idle": 7,
+          "idle_groom": 2,
+          "idle_rear": 1,
+          "idle_rest": 2,
+          "idle_sniff": 2,
+          "sand": 1,
+          "tunnel": 2,
+          "water": 2,
+          "wheel": 2
+        },
+        "visited_levels": {
+          "0": true,
+          "1": true,
+          "2": true
+        }
+      }
+    ],
+    "steps": 10000
+  },
+  "room_integration": {
+    "anchored": 10,
+    "checks": 83,
+    "clues": 3,
+    "failures": [],
+    "objects": 55,
+    "passed": true
+  },
+  "upgrade_integration": {
+    "checks": 225,
     "failures": [],
     "passed": true,
-    "scene": "control lab"
+    "results": {
+      "cold_scene_nodes": 1264,
+      "hamsters": 3,
+      "movable_props": 55,
+      "visuals": {
+        "detail_meshes": 29,
+        "family_photos": 8,
+        "meshes": 47,
+        "surface_materials": 113
+      }
+    }
+  },
+  "movement_stress": {
+    "checks": 260111,
+    "failures": [],
+    "fixed_delta_seconds": 0.0166666666666667,
+    "fixed_steps": 10000,
+    "metrics": {
+      "airborne_horizontal_speed_m_s": 5.40000009536743,
+      "first_walk_speed_m_s": 0.349999994039536,
+      "heavy_push_peak_m_s": 2.89362692832947,
+      "jump_apex_m": 0.784787476062775,
+      "light_push_peak_m_s": 5.01246643066406,
+      "max_player_speed_m_s": 7.22595643997192,
+      "max_prop_speed_m_s": 5.99639177322388,
+      "max_prop_spin_rad_s": 10.856255531311,
+      "offset_center_of_mass_contacts": {
+        "approaching_added_speed_m_s": 5.97869300842285,
+        "approaching_surface_speed_m_s": -6.38104629516602,
+        "separating_added_speed_m_s": 0.0,
+        "separating_surface_speed_m_s": 6.38104629516602
+      },
+      "sprint_speed_m_s": 5.59999990463257,
+      "stress_nodes": 18,
+      "two_frame_braking_speed_m_s": 5.20000028610229,
+      "walk_speed_m_s": 3.20000004768372
+    },
+    "passed": true,
+    "seed": 20261005,
+    "simulated_seconds": 166.666666666667
+  },
+  "surroundings_integration": {
+    "actual_rendered_triangles": 35224,
+    "checks": 29,
+    "failures": [],
+    "kitchen_player_position": [
+      -4.61313772201538,
+      0.000352171249687672,
+      1.92999994754791
+    ],
+    "passed": true,
+    "stats": {
+      "colliders": 66,
+      "dynamic_props": 6,
+      "family_photos": 11,
+      "features": [
+        "Walkable left kitchen extension",
+        "Navy louvered kitchen cabinets and tiled L counter",
+        "Kitchen barred window with blue valance",
+        "Sink dish rack cookware and everyday counter items",
+        "Dark refrigerator with family snapshots and alphabet magnets",
+        "Rear navy paneled entrance and vertical pale slats",
+        "Tall mirror routers and visible cable runs",
+        "Open studio niche with guitars keyboard and acoustic panels",
+        "Right slatted wall and family-photo gallery",
+        "Leaf-pattern curtain doorway and shallow closet",
+        "Tall cupboard household shelf and laundry baskets"
+      ],
+      "kitchen_bounds": [
+        -5.65,
+        -3.3,
+        -2.7,
+        2.7
+      ],
+      "kitchen_entrance": [
+        -3.3,
+        0,
+        1.95
+      ],
+      "static_batches": 37,
+      "triangles_added": 35224,
+      "triangles_removed": 6126
+    },
+    "visible_geometry_vertices": {
+      "fridge": 222,
+      "kitchen_cabinets": 3600,
+      "right_cabinet": 738,
+      "right_slats": 3258,
+      "window_bars": 1152
+    }
   },
   "settling": {
     "moved": [],
     "passed": true,
     "seconds": 4
   },
-  "room_integration": {
-    "anchored": 13,
-    "checks": 79,
-    "clues": 3,
+  "physics_integration": {
+    "checks": 25,
     "failures": [],
-    "objects": 48,
-    "passed": true
+    "passed": true,
+    "scene": "control lab"
+  },
+  "touch_integration": {
+    "checks": 29,
+    "failures": [],
+    "passed": true,
+    "results": {
+      "actual_scene_restarts": 2,
+      "buttons": 7,
+      "first_sprint_speed_m_s": 0.449999988079071,
+      "later_sprint_speed_m_s": 2.25,
+      "mobile_mode": true,
+      "viewport": "(1280.0, 720.0)"
+    }
   }
 }

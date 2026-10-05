@@ -1,0 +1,170 @@
+[
+  {
+    "index": 0,
+    "source": "E:\\DSLR\\000 - My Babies\\_DSF3803.JPG",
+    "sourceSha256": "438a22fe8fb75e6f3861504185e3112bcba3ea3960897c488e8f1e340540752f",
+    "sourceUnchanged": true,
+    "originalSize": [
+      7728,
+      5152
+    ],
+    "imageSize": [
+      7728,
+      5152
+    ],
+    "resampledContentSize": [
+      756,
+      504
+    ],
+    "texture": "res://assets/family/family_0.jpg",
+    "textureSha256": "212429db208ca69eadbdfb60eccf9c73c2a6f1cc11c23fca49546b5cc0000e5f",
+    "method": "EXIF orientation; full-image uniform Lanczos fit; warm paper margin; no crop or retouch"
+  },
+  {
+    "index": 1,
+    "source": "E:\\DSLR\\000 - My Babies\\_DSF3800.JPG",
+    "sourceSha256": "e6904cae5957cd356ff015c3204b8a9b221a5c449f4cf826aac9e2fe8b76745f",
+    "sourceUnchanged": true,
+    "originalSize": [
+      7728,
+      5152
+    ],
+    "imageSize": [
+      5152,
+      7728
+    ],
+    "resampledContentSize": [
+      683,
+      1024
+    ],
+    "texture": "res://assets/family/family_1.jpg",
+    "textureSha256": "879085444787db2a29f55122f3fde3bef9264cd0ee68183d760120bfb68edd7a",
+    "method": "EXIF orientation; full-image uniform Lanczos fit; warm paper margin; no crop or retouch"
+  },
+  {
+    "index": 2,
+    "source": "E:\\DSLR\\000 - My Babies\\Azrin Pic1.png",
+    "sourceSha256": "5f251ea2132b57b59548048edc6251efcd7f00ed9514ec046bb5e5c9b52b8453",
+    "sourceUnchanged": true,
+    "originalSize": [
+      1086,
+      1448
+    ],
+    "imageSize": [
+      1086,
+      1448
+    ],
+    "resampledContentSize": [
+      756,
+      1008
+    ],
+    "texture": "res://assets/family/family_2.jpg",
+    "textureSha256": "f28f0015b2db8a5cd1162518c7f0aaf9f46a58fd27f42c3fc20df45fa6ecfc1c",
+    "method": "EXIF orientation; full-image uniform Lanczos fit; warm paper margin; no crop or retouch"
+  },
+  {
+    "index": 3,
+    "source": "E:\\DSLR\\000 - My Babies\\Azraellll.png",
+    "sourceSha256": "8fab413afef8e29810475eeb9df3c8d642d6e67fd2a98b942cba8bc0d3976e8b",
+    "sourceUnchanged": true,
+    "originalSize": [
+      502,
+      528
+    ],
+    "imageSize": [
+      502,
+      528
+    ],
+    "resampledContentSize": [
+      756,
+      795
+    ],
+    "texture": "res://assets/family/family_3.jpg",
+    "textureSha256": "c770ec1934cebcc42046467b2f90c0949bff9268046ae433abd1a9a7e95b113c",
+    "method": "EXIF orientation; full-image uniform Lanczos fit; warm paper margin; no crop or retouch"
+  },
+  {
+    "index": 4,
+    "source": "E:\\DSLR\\000 - My Babies\\Azrin and Azrael.png",
+    "sourceSha256": "0635b03529a84fa4d9c2199c24bd1d9eb3e7ef909e5894e7eaf9f86faba20936",
+    "sourceUnchanged": true,
+    "originalSize": [
+      1086,
+      1448
+    ],
+    "imageSize": [
+      1086,
+      1448
+    ],
+    "resampledContentSize": [
+      756,
+      1008
+    ],
+    "texture": "res://assets/family/family_4.jpg",
+    "textureSha256": "862882a3bf07c7fc6d7f82543d158fed4216d6daf590e94bcde9ff7bcf259bf9",
+    "method": "EXIF orientation; full-image uniform Lanczos fit; warm paper margin; no crop or retouch"
+  },
+  {
+    "index": 5,
+    "source": "E:\\DSLR\\000 - My Family\\2 Bbs.jpg",
+    "sourceSha256": "759bb844b12d8234db73a1b70028f9fa81361c21ff08c0b49f573cb02c8f52c0",
+    "sourceUnchanged": true,
+    "originalSize": [
+      1086,
+      1448
+    ],
+    "imageSize": [
+      1086,
+      1448
+    ],
+    "resampledContentSize": [
+      756,
+      1008
+    ],
+    "texture": "res://assets/family/family_5.jpg",
+    "textureSha256": "75ff2121789c225b7f0553aedc61a56652474b718f3285ce9df3f4262646fb5a",
+    "method": "EXIF orientation; full-image uniform Lanczos fit; warm paper margin; no crop or retouch"
+  },
+  {
+    "index": 6,
+    "source": "E:\\DSLR\\000 - My Family\\15ed4ec2-8954-4d3b-84f9-3550b80f3a69.jpg",
+    "sourceSha256": "c5f48aa15b84b040a342217ed2edca00256c0b4ef182c2abf635b9fcde7951cf",
+    "sourceUnchanged": true,
+    "originalSize": [
+      720,
+      1280
+    ],
+    "imageSize": [
+      720,
+      1280
+    ],
+    "resampledContentSize": [
+      576,
+      1024
+    ],
+    "texture": "res://assets/family/family_6.jpg",
+    "textureSha256": "3412cf38329791f5ede623cd56c4f30e4a618072cca1146689c2551808463325",
+    "method": "EXIF orientation; full-image uniform Lanczos fit; warm paper margin; no crop or retouch"
+  },
+  {
+    "index": 7,
+    "source": "E:\\DSLR\\000 - My Family\\870671d7-24d2-4cac-9f24-b6e876dbfff2.jpg",
+    "sourceSha256": "5e0e622d36428fc4b4e251a3e25c984f258a34f7bfbc82e52bdf1dc7877d0ad1",
+    "sourceUnchanged": true,
+    "originalSize": [
+      2048,
+      1365
+    ],
+    "imageSize": [
+      2048,
+      1365
+    ],
+    "resampledContentSize": [
+      756,
+      504
+    ],
+    "texture": "res://assets/family/family_7.jpg",
+    "textureSha256": "dc24447b11e348e08e9ea15b920d8e68ba53f89ff4f2c995295aeba3b76a5db7",
+    "method": "EXIF orientation; full-image uniform Lanczos fit; warm paper margin; no crop or retouch"
+  }
+]

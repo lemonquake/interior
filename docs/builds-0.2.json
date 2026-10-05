@@ -1,0 +1,140 @@
+{
+  "version": "0.2.0",
+  "generated_utc": "2026-10-05T00:44:44.0983952Z",
+  "engine": "Godot 4.7.2 stable",
+  "renderer": "Compatibility",
+  "artifacts": [
+    {
+      "path": "builds/windows/Interior.exe",
+      "bytes": 131415936,
+      "sha256": "b04f373991ec4826a48f5fc566625cf426aefd201e5768a438f0bb7de6d32db4"
+    },
+    {
+      "path": "builds/android/Interior.apk",
+      "bytes": 79736039,
+      "sha256": "c63ad1aa69da38a4fb1874d344c9b62e703a064a183e5281a8ed32cfd3c4f7bf"
+    },
+    {
+      "path": "builds/Interior-Windows-x64.zip",
+      "bytes": 54584619,
+      "sha256": "d861c42289465238b95ee7096fa9adee477bdce102a4d2ca1cf7052ea68d8230"
+    }
+  ],
+  "automated_suites": [
+    {
+      "name": "tabletop_stability",
+      "passed": true,
+      "checks": 6310
+    },
+    {
+      "name": "hamster_stress",
+      "passed": true,
+      "checks": 480146
+    },
+    {
+      "name": "room_integration",
+      "passed": true,
+      "checks": 83
+    },
+    {
+      "name": "upgrade_integration",
+      "passed": true,
+      "checks": 225
+    },
+    {
+      "name": "movement_stress",
+      "passed": true,
+      "checks": 260111
+    },
+    {
+      "name": "surroundings_integration",
+      "passed": true,
+      "checks": 29
+    },
+    {
+      "name": "settling",
+      "passed": true,
+      "checks": null
+    },
+    {
+      "name": "physics_integration",
+      "passed": true,
+      "checks": 25
+    },
+    {
+      "name": "touch_integration",
+      "passed": true,
+      "checks": 29
+    }
+  ],
+  "test_report": "room/runtime/integration-results.json",
+  "build_log": ".local/upgrade-build-delivery.log",
+  "windows": {
+    "cold_launch": "passed",
+    "embedded_pck": true,
+    "capture": "work/lemondev/2026-10-05/captures-exe-tablefix/living-room-play.png",
+    "benchmark_exe_sha256": "b04f373991ec4826a48f5fc566625cf426aefd201e5768a438f0bb7de6d32db4",
+    "benchmark": {
+      "frames": 7201,
+      "frames_above_16_67ms": 0,
+      "logical_viewport": "(1280.0, 720.0)",
+      "max_frame_ms": 11.689,
+      "median_frame_ms": 8.45,
+      "mobile_controls": false,
+      "objects": 55,
+      "p95_frame_ms": 10.071,
+      "p99_frame_ms": 10.263,
+      "quality": 2,
+      "render_scale": 1.0,
+      "renderer": "NVIDIA GeForce RTX 4060",
+      "sample_seconds": 60,
+      "scenario": "camera sweep and sixteen active bodies with three animated hamsters",
+      "scene": "living-room",
+      "warmup_seconds": 2,
+      "window_pixels": "(1920, 1080)"
+    }
+  },
+  "android": {
+    "install": "passed",
+    "cold_launch": "passed",
+    "package": "com.aljayleodones.interior",
+    "version_code": 2,
+    "signing": "local debug key",
+    "abis": [
+      "armeabi-v7a",
+      "arm64-v8a"
+    ],
+    "device": "Android 16 API 36 x86_64 emulator with ARM native bridge and host GPU",
+    "native_ui_checks": [
+      "Play",
+      "Crouch/Stand toggle",
+      "Movement drag",
+      "Pause"
+    ],
+    "captures": [
+      "work/lemondev/2026-10-05/android-final-crouch.png",
+      "work/lemondev/2026-10-05/android-final-pause.png"
+    ],
+    "diagnostics": "No script errors or crashes observed. Cached shader failed to load; engine recompiled it and rendered successfully.",
+    "physical_phone_performance": "not measured"
+  },
+  "tabletop_fix": {
+    "checks": 6310,
+    "simulated_seconds": 27.5,
+    "phases": [
+      "wake complete stack",
+      "grab/drop tray",
+      "grab/drop plant",
+      "grab/drop tissue box"
+    ],
+    "all_bodies_sleep_naturally": true,
+    "freeze_used_to_settle": false,
+    "final_two_second_drift_m": 0,
+    "legacy_configuration_failed_assertions": 18
+  },
+  "limitations": [
+    "Simplified reference reconstruction with estimated dimensions",
+    "Commercial lighting comparison remains unverified",
+    "Small gap below decorative green storage bag"
+  ]
+}

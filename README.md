@@ -1,57 +1,47 @@
 # Interior
 
-**By Aljay Leodones.** A first-person physics mystery in a recreation of the owner's living room.
+By Aljay Leodones. A first-person physics mystery in a recreation of the owner's family room.
 
-The Blender model, Godot game, Windows EXE, and Android APK are built. The owner approved Function, Form, and the playable Runtime for GitHub publication. Open `room/runtime-review.html` for actual exported-game screenshots and measurements.
-
-[Download Interior v0.1.0](https://github.com/lemonquake/interior/releases/tag/v0.1.0): [Windows EXE](https://github.com/lemonquake/interior/releases/download/v0.1.0/Interior.exe), [Windows ZIP with notices](https://github.com/lemonquake/interior/releases/download/v0.1.0/Interior-Windows-x64.zip), and [Android APK](https://github.com/lemonquake/interior/releases/download/v0.1.0/Interior.apk). All four uploaded asset digests match their local files; `docs/delivery.json` records verification. Blender source: `room/living_room.blend`; Godot project: `game/project.godot`.
-
-The room uses owner-approved estimated dimensions: 6.6 × 5.4 × 2.9 m. Unseen walls, ceiling, and object backs are inferred from one photograph. The layout and object identities follow the reference; fine shapes and materials differ. This is a procedural approximation, not a measured scan.
+Version 0.2 adds acceleration and momentum-based prop interactions, a connected three-level hamster playground, aquariums below its stand, and the kitchen, rear entrance and right wall from the owner's additional photographs. Eight supplied family photographs appear in the room's frames.
 
 ## Play
 
-Run `builds/windows/Interior.exe`, or install `builds/android/Interior.apk` on Android. Both are self-contained. The APK is locally debug-signed for installation; it is not a Play Store release. Choose Low, Medium, or High in the menu.
+Run `builds/windows/Interior.exe`, or install `builds/android/Interior.apk`. Windows has an embedded PCK. The APK is locally debug-signed and includes ARMv7 and ARM64; it is an installable development build, not a Play Store release.
 
 | Action | Windows | Android |
 |---|---|---|
-| Move | WASD; Shift to move faster | Drag left side |
-| Look | Mouse | Drag right side |
+| Move / look | WASD / mouse | Left stick / right drag |
+| Sprint | Hold Shift | Hold Sprint |
+| Jump | Space | Jump |
+| Crouch | Hold C | Crouch / Stand |
 | Hold or drop | E | Hold / Drop |
-| Throw held object | Left click | Throw |
+| Throw | Left click | Throw |
 | Inspect TV | F | Inspect |
 | Notes | J or pause menu | Pause menu |
-| Pause or resume | Esc | Pause / Resume |
+| Pause / resume | Esc | Pause / Resume |
 
-Hold objects to discover three notes, then inspect the TV and solve its lock. Continue exploring and rearranging the room afterward. Restart restores the original room arrangement.
+Holding the clock, table plant and small cabinet photo reveals three notes. Inspect the TV and solve its lock, then keep exploring. Restart restores the room arrangement.
 
-The 48 movable assemblies include furniture, plants, photos, loose cushions, a toy, and a keyboard. Assemblies contain small parts such as petals and fan wires. Wall-mounted props detach when grabbed. The structural room shell stays fixed.
+Movement builds speed from rest, brakes on the ground and carries momentum through jumps. Crouching changes the collision capsule and checks overhead clearance before standing. Prop pushes account for mass, approach speed, rotation and contact position. Carrying and throwing use bounded forces; objects keep their room and furniture collisions. Wall-mounted original props detach when grabbed. Assemblies stay in their photographed positions until first contact or pickup, then simulate and sleep normally.
 
-Furnishings preserve their initial pose until grabbed, pushed, or touched by an active body. They then simulate normally, can sleep, and recover if they leave room bounds. Held objects retain room and furniture collisions; a bounded velocity servo moves them without teleporting. Throwing uses the same launch speed across masses.
+Three skinned hamsters wander, use the playground and travel through the external tubes between enclosure levels. Their animation library includes walking, running, sniffing, grooming, rearing, resting, eating and digging. Two lower-shelf aquariums contain swimming fish. Animals and attached playground parts move with the stand and pause with the game.
 
 ## Edit and build
 
-Open `room/living_room.blend` in Blender 5.2.1, or `game/project.godot` in Godot 4.7.2. The Godot project uses GDScript and the Compatibility renderer. Import the project before running it.
+Open `game/project.godot` in Godot 4.7.2. The game uses GDScript, GodotPhysics3D at 60 Hz and the Compatibility renderer. Run `tools/build.ps1 -GodotPath <Godot console executable>` to import, check completed test reports and export both platforms. Use `-TestsOnly` to skip exports. Godot export templates, Java 21 and an Android SDK are required. SDK paths and signing configuration belong in local Godot editor settings; credentials are excluded from Git.
 
-To regenerate the runtime asset from the final Blender source, run Blender in background mode with `--python tools/export_room.py`. Function and Form approval records are required by the exporter. Initial study and material scripts are historical production stages; they overwrite stage artifacts, so use the final `.blend` for further edits.
+The original furnished-room source remains `room/living_room.blend`. Its existing GLB is supplemented by editable runtime geometry in `room_surroundings.gd`, `hamster_enclosure.gd` and `aquarium.gd`. Re-exporting the original Blender room does not bake these additions into the .blend file. `tools/prepare_surfaces.py`, `prepare_reference_room.py` and `prepare_hamster.py` reproduce the new materials, photo derivatives and hamster rig. The photo preparation step needs the owner's local originals; prepared game assets are already included.
 
-Run `tools/build.ps1 -GodotPath <Godot console executable>` to import, verify, and export both builds. Use `-TestsOnly` to skip exports. The script checks completed JSON test reports, not just process exit codes. Godot export templates, Java 21, and an Android SDK are required. Configure SDK and debug signing in Godot editor settings outside the repository. Private keys and local credentials are ignored.
+Run the EXE with `--log-file <log path> -- --autoplay --benchmark --quality-high --render-size=1920x1080` for the 60-second rendered camera sweep after a two-second warmup. Sixteen props stay active during the sweep. Use `-- --capture-review "--capture-path=<absolute directory>" --render-size=1920x1080` for room and menu captures. `--mobile-test` exposes the touch interface on desktop.
 
-Run the EXE with `--log-file <log path> -- --autoplay --benchmark` for the bounded rendered stress test; add `--quality-low` or `--quality-high`. Capture the actual EXE with `-- --autoplay --capture-play "--capture-path=<absolute directory>"`.
+## Graphics and verification
 
-## Graphics and measurements
+Low uses 65% 3D render scale without antialiasing or dynamic shadows; Medium uses 85% and 2× antialiasing; High uses full scale and 4× antialiasing. Android starts on Low with a 60 FPS cap; desktop caps at 120 FPS. These are settings, not performance guarantees. Android requires GLES 3, API 24 or newer; the APK targets API 36.
 
-The runtime room has 73,784 triangles, shared meshes, compound collisions, 1K primary textures, 512-pixel textiles, and small portrait inserts. Static vertex lighting is baked from the same two fixture positions used by runtime lights. Movable furniture does not cast baked shadows into the room.
+`room/runtime/integration-results.json` records current automated checks. `docs/production-status.md` distinguishes current runtime evidence from historical reviews. The owner's photographs guide the layout, but dimensions remain estimates and unseen geometry is inferred. This is a modeled approximation rather than a measured scan. Physical Android phone performance remains unmeasured.
 
-Android starts on Low at a 60 FPS cap. Low uses 65% 3D render scale, no antialiasing, and no dynamic shadows. Medium uses 85% scale and 2× antialiasing; High uses full scale and 4× antialiasing. Desktop caps at 120 FPS and adds dynamic shadows on High. VSync and display refresh rate can cap visible FPS lower.
+## Asset sources
 
-`room/runtime/desktop-performance.json` contains the final exported EXE measurements on an NVIDIA RTX 4060 at 1280 × 720: a two-second warmup and a 20-second camera sweep with sixteen active furnishing bodies. This is a bounded test, not an exhaustive worst case or a guarantee on other hardware.
+The hamster is adapted from Asia Matusik's CC BY 4.0 model, with a new skin rig and animation library. Free CC0 wood and marble textures came from Poly Haven. Other new geometry and surface maps are authored locally. Family photographs are owner-supplied. Attribution and source details are in `game/licenses/ASSET_LICENSES.md` and the asset provenance files. Godot's full copyright notice is included in the game resources.
 
-All 104 integration assertions and the four-second settling check pass. The ARM APK was installed in an Android 16 emulator and tested for Play, movement, look, clue grabbing, throwing, Pause, Resume, and Low/High settings. The software graphics emulator failed shader compilation; hardware graphics passed. No physical low-tier Android phone has been measured.
-
-The APK includes ARMv7 and ARM64, minimum Android 7/API 24, target API 36, and requires GLES 3. Low quality reduces workload but cannot make unsupported hardware compatible. See [Godot's exported-project requirements](https://docs.godotengine.org/en/stable/about/system_requirements.html#exported-godot-project).
-
-## Sources and review records
-
-Meshes and custom materials were authored locally. Free CC0 wood and floor marble textures came from Poly Haven. Miniature portraits use the owner-supplied photo. See `room/asset-provenance.json` and `game/licenses/ASSET_LICENSES.md`. Godot's full bundled copyright notice is included in the game resources.
-
-`room/milestone-reviews.json` records human Function, Form, and Runtime approval only after an explicit owner response. The Build 3D Game Rooms validator assumes paid Meshy assets and a browser runtime; its raw output is preserved. Documented project checks adapt those assumptions to free procedural Blender assets and native Godot builds while retaining human review gates. No provider task, credit spend, or approval is fabricated.
+The previous downloadable [v0.1.0 release](https://github.com/lemonquake/interior/releases/tag/v0.1.0) and `docs/delivery.json` are historical; they do not contain the 0.2 changes.

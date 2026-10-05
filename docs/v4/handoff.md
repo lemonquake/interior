@@ -22,24 +22,31 @@ on this machine.
 Earlier owner rules still apply. Keep it tidy; don't copy the reference's mess. Send progress screenshots while working
 and list them in the handoff.
 
-## Status when this was written
+## Status: done (2026-10-05)
 
-| Step | State |
+The background workflow `wf_69dfb815-b8e` (one builder, then one checker, medium effort) finished. The detailed agent
+handoff is `work/v4/balcony/handoff.md`, with Build and Check sections; it is local only because `work/` is gitignored.
+
+| Step | Result |
 |---|---|
-| Plan and layout interpretation (below) | Done |
-| 1. Hinged door | **Started.** `game/scripts/hinged_door.gd` (77 lines, uncommitted) is a door leaf on an `AnimatableBody3D` that swings about its hinge. It is not yet wired into the room builder; the doorway is not cut. |
-| 2. Balcony, stairs, courtyard | Not started |
-| 3. `balcony_integration` test | Not started |
-| 4. Capture views and screenshots | Not started; nothing in `work/v4/balcony/screens/` yet |
-| 5. Windows EXE | Not built. `builds/windows/Interior.exe` is still the 0.3.0 build from the previous run. |
+| 1. Hinged door | `scripts/hinged_door.gd`. Hinge at (2.43, 0, 2.6335). It swings inward to -88° over 0.6 s and stops clear of the TV cabinet. E toggles it, or the Android Hold/Drop button, and the prompt reads "E • Open door". It works when aiming at the leaf or through the open doorway. The door yields to the player and never pushes them, and slows to 30% when it touches a loose prop. Restart closes it. "Rear wall east" is split around a real doorway. |
+| 2. Balcony, stairs, courtyard | Built by `scripts/balcony_builder.gd` and baked by `editor/bake_balcony.gd` into `scenes/balcony/balcony.tscn` (assets in `assets/baked/balcony/`, textures in `assets/balcony/`); `main.tscn` instances it. The structure is 28 material batches (36k triangles). Furniture is named nodes. The aquarium has 5 fish (rectangular-tank mode in `aquarium.gd`). There is one smooth ramp collider under the stairs, plus invisible bounds and a lid. |
+| Lighting | Outdoor meshes are on visual layer 2, and the Sun, SkyFill and GroundBounce lights only light layer 2. `scripts/balcony.gd` hides the balcony while the door is closed and the camera is indoors. With the door closed the room renders as before, including on Low. Sun shadows are off on Low and on Android below High. |
+| 3. Tests | The new `balcony_integration` (63 checks) walks the real player from the room through the door, along the balcony, down the stairs, around the courtyard and back. It also covers the door closing on the player or a prop, the touch path and Restart. It is in `tools/build.ps1`. These all pass: physics_integration, room_integration, tabletop_stability, movement_stress, hamster_stress, surroundings_integration, upgrade_integration and touch_integration. `settling` still fails but is not worse: start drift is 20.75 mm against a 34.8 mm baseline. |
+| Perf | look_preview at High, 1920x1080, RTX 4060 (median / p95): door closed 4.27 / 7.19 ms, door open 4.59 / 7.66 ms, on the balcony 2.51 / 5.50 ms. |
+| 4. Captures | `--capture-review --capture-views=balcony` renders six views that mirror photos 1-5, plus the courtyard looking up. `--no-balcony` turns the balcony off for A/B renders. |
+| 5. Windows EXE | Built: `builds/windows/Interior.exe`, SHA-256 `1193eef100b7b37ab3cc2e1f65a2dbcdba696340f609f38aec378621c59821fd`. Exported with the direct Godot command in "How to resume" step 4. The EXE's own capture run rendered all six balcony views with no errors or warnings in its log (`work/v4/balcony/screens/40-exe-smoke.jpg`). Android APK not rebuilt. |
 
-A background workflow (`wf_69dfb815-b8e`: one builder agent, then one checker agent) was still running when this was
-written. If it finishes, it commits on `polish-v0.3` and writes `work/v4/balcony/handoff.md`. **Check `git log f0b3d5f..`
-and that file first.** If neither exists, the run died at the usage cap, and only uncommitted files remain in the working
-tree.
+Commits: `70063b1`, `a594e3b`, `cd63853`, `6a8dbfc`, `76b5958` (builder); `6d8c519`, `4ffb22c`, `58a47a9` (checker).
 
-The many modified `game/assets/**/*.import` files predate this work (Godot re-import churn). Don't commit them unless a
-build needs them.
+### Known gaps
+
+- The stairs use one smooth ramp collider, so near the top the player and props ride up to 18 cm above the treads.
+- Room lights are masked off the outdoor layer, so no warm room light spills onto the threshold. Props carried outside
+  get ambient light only, not sun.
+- The game doorway is narrower than the real one, so the photo-2 view shows less of the shoe rack.
+- There is no outdoor audio and no animated foliage. The many `*.import` files are still modified and uncommitted.
+- `builds/windows/README.txt` still says 0.2. It is written by `tools/build.ps1`, which this export bypassed.
 
 ## Known geometry (metres, Y up, room floor y=0)
 
@@ -106,3 +113,6 @@ build needs them.
 | `work/v4/balcony/screens/10-photos-vs-game.png` | Owner photos against the game for all five shots (second pass) |
 | `work/v4/balcony/screens/09-courtyard-up.png` | Courtyard looking back up the stairs |
 | `work/v4/balcony/screens/11-compatibility-low.png` | Compatibility renderer on Low tier (Android path) |
+| `work/v4/balcony/screens/30-compare.png` | Checker's final pass: owner photos against the game for all five shots |
+| `work/v4/balcony/screens/25-final-courtyard-up.png` | Checker's final pass: courtyard looking back up the stairs |
+| `work/v4/balcony/screens/40-exe-smoke.jpg` | Six balcony views rendered by the exported Interior.exe |

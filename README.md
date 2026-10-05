@@ -14,11 +14,13 @@ Run `builds/windows/Interior.exe`, or install `builds/android/Interior.apk`. Win
 | Sprint | Hold Shift | Hold Sprint |
 | Jump | Space | Jump |
 | Crouch | Hold C | Crouch / Stand |
-| Hold or drop | E | Hold / Drop |
+| Hold or drop; open or close the door | E | Hold / Drop |
 | Throw | Left click | Throw |
 | Inspect TV | F | Inspect |
 | Notes | J or pause menu | Pause menu |
 | Pause / resume | Esc | Pause / Resume |
+
+The navy door opens onto the balcony from the owner's photographs: an aquarium beside the shoe rack, a railing with a frosted floral screen, and concrete stairs down to a small courtyard. Daylight there is lit separately, so the room looks the same while the door is closed.
 
 Holding the clock, table plant and small cabinet photo reveals three notes. Inspect the TV and solve its lock, then keep exploring. Restart restores the room arrangement.
 

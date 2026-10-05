@@ -6,6 +6,9 @@ extends Node3D
 ## - Downloaded models go on the outdoor layer; foliage gets alpha scissor; small plants fade out.
 ## - Android (Compatibility): half the rice and grass, shorter rice range, fewer fireflies, no stars
 ##   in the water.
+## - The ground (road, verges, dikes, banks, mud) casts no moon shadow: under the low moon the rutted road
+##   shadowed itself, darker in the sharp near shadow cascade than in the next, leaving a hard colour line
+##   across the road a few metres ahead (0.8). Trees, posts, the hut and props still cast shadows on it.
 ## - The hut lantern flickers. The scarecrow turns to face you whenever you are not looking at it.
 ## - The ground mist (0.8) is no longer made here: scripts/neighborhood.gd keeps one faint mist volume
 ##   around the camera everywhere outside the house.
@@ -40,6 +43,12 @@ func _ready() -> void:
 		_crow_yaw = _crow.rotation.y
 	if mobile:
 		_mobile_budget()
+	var ground := get_node_or_null("Ground")
+	if ground != null:
+		for node in ground.find_children("*", "MeshInstance3D", true, false):
+			var surface := String(node.name).get_slice(" - ", 1)
+			if surface in ["road", "verge", "dike", "bank", "mud", "puddle"]:
+				(node as MeshInstance3D).cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 
 func _mobile_budget() -> void:
 	for node in find_children("*", "MultiMeshInstance3D", true, false):

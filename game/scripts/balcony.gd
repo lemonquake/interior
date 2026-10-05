@@ -90,6 +90,9 @@ func _process(delta: float) -> void:
 		light.light_energy = InteriorNight.MOON_ENERGY * (1.0 if light.shadow_enabled else .8)
 		light.light_color = InteriorNight.MOON_COLOR
 		light.shadow_blur = 2.0
+		# 0.8: cross-fade between the shadow cascades, so no cascade edge ever shows as a line on the ground.
+		light.directional_shadow_blend_splits = true
+		light.directional_shadow_fade_start = .7
 		var fill := get_node_or_null("SkyFill") as DirectionalLight3D
 		if fill != null:
 			fill.light_energy = InteriorNight.SKY_FILL_ENERGY * (1.6 if mobile else 1.0)

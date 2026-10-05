@@ -16,7 +16,7 @@ func _run() -> void:
 	var main = load("res://main.tscn").instantiate()
 	root.add_child(main)
 	check(not main.control_lab, "Final room must load instead of the control lab")
-	check(main.room_manifest.actors.size() == 48, "Export must include all 48 object assemblies")
+	check(main.room_manifest.actors.size() == 45, "Export must include all 45 object assemblies (48 minus 3 decluttered)")
 	main._play()
 	for i in 3:
 		await physics_frame

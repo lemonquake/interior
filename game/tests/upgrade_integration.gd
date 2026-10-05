@@ -39,7 +39,7 @@ func _run() -> void:
 		var texture := load("res://assets/family/family_%d.jpg" % i) as Texture2D
 		check(texture != null and texture.get_width() >= 512,"Photo must have a usable imported texture: " + str(i))
 	var movable := get_nodes_in_group("movable")
-	check(get_nodes_in_group("original_room_props").size() == 48,"There must be exactly 48 original physical prop assemblies")
+	check(get_nodes_in_group("original_room_props").size() == InteriorRoomBuilder.load_manifest().actors.size(),"Every manifest actor (45 after decluttering) must be one original physical prop assembly")
 	check(get_nodes_in_group("aquariums").size() == 2,"Both aquariums must be below the linked habitats")
 	var aquariums := get_nodes_in_group("aquariums")
 	for aquarium in aquariums:
@@ -129,7 +129,7 @@ func _run() -> void:
 		current_scene = main
 		main._play()
 		await _frames(4)
-		check(get_nodes_in_group("original_room_props").size() == 48 and get_nodes_in_group("hamsters").size() == 3,"Restart must recreate exactly one room and three pets")
+		check(get_nodes_in_group("original_room_props").size() == InteriorRoomBuilder.load_manifest().actors.size() and get_nodes_in_group("hamsters").size() == 3,"Restart must recreate exactly one room and three pets")
 		check(_node_count(main) == baseline_nodes,"Restart must have stable node allocation")
 	main.queue_free()
 	paused = false

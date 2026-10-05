@@ -52,7 +52,7 @@ static func apply(room: Node3D, _visual: Node3D, manifest: Dictionary, lights: A
 			_cushion_seams(mesh)
 			stats.detail_meshes += 1
 	configure_lighting(room, lights)
-	_fixture_diffusers(room, manifest)
+	# Recessed downlight trims are built by InteriorLighting.
 	room.set_meta("room_visuals_stats", stats)
 	print("INTERIOR_VISUALS ", JSON.stringify(stats))
 	return stats
@@ -68,26 +68,72 @@ static func _first_mesh(node: Node) -> MeshInstance3D:
 
 static func _replace_surfaces(node: Node, stats: Dictionary) -> void:
 	# The authored live habitat owns its own materials and resident coat variants.
-	if node.is_in_group("hamster_habitats") or node.is_in_group("aquariums") or node.is_in_group("room_surroundings"):
+	if node.is_in_group("hamster_habitats") or node.is_in_group("aquariums") or node.is_in_group("room_surroundings") or node is InteriorLighting:
 		return
-	if node is MeshInstance3D:
+	if node is MeshInstance3D and (node as MeshInstance3D).material_override == null:
 		var mesh := node as MeshInstance3D
 		stats.meshes += 1
+		var architectural := _is_architecture(mesh)
 		for i in mesh.mesh.get_surface_count():
 			var original := mesh.get_active_material(i) as StandardMaterial3D
 			if original == null:
 				continue
 			var name := original.resource_name
-			if not _materials.has(name):
-				_materials[name] = _surface(original, name)
-			mesh.set_surface_override_material(i, _materials[name])
+			var cache_key := name + ("|arch" if architectural else "")
+			if not _materials.has(cache_key):
+				_materials[cache_key] = _surface(original, name, architectural)
+			mesh.set_surface_override_material(i, _materials[cache_key])
 			stats.surface_materials += 1
 			if name.begins_with("Owner photo insert"):
 				stats.family_photos += 1
 	for child in node.get_children():
 		_replace_surfaces(child, stats)
 
-static func _surface(source: StandardMaterial3D, name: String) -> StandardMaterial3D:
+static func _is_architecture(node: Node) -> bool:
+	var parent := node.get_parent()
+	while parent != null:
+		if parent is RigidBody3D:
+			return false
+		parent = parent.get_parent()
+	return true
+
+## Original glb material name -> shared library key (contract section 5).
+static func _library_key(name: String, architectural: bool) -> String:
+	match name:
+		"Brown woven upholstery": return "fabric_brown"
+		"Beige cushion": return "linen_beige"
+		"Chocolate leather": return "leather_brown"
+		"Gray crib fabric": return "canvas_gray"
+		"Beige patterned rug": return "rug_wool"
+		"Warm oak": return "oak_slat" if architectural else "oak"
+		"Dark stained table wood": return "walnut"
+		"Warm white paint": return "warm_plaster" if architectural else "white_satin"
+		"Table gold marble", "Cream gold marble": return "marble_gold"
+		"Cream floor tiles": return "marble_floor"
+		"Ivory plastic": return "plastic_white"
+		"Black plastic and steel": return "black_metal"
+		"Plant foliage": return "foliage"
+		"Red petals": return "petal_red"
+		"Yellow petals": return "petal_yellow"
+		"Purple petals": return "petal_purple"
+		"Pink soft toy": return "toy_pink"
+	return ""
+
+static func _surface(source: StandardMaterial3D, name: String, architectural := false) -> Material:
+	var key := _library_key(name, architectural)
+	if not key.is_empty():
+		var shared := InteriorMaterials.material(key)
+		if name == "Cream gold marble":
+			# The wall slab is honed: softer highlights than the polished table top.
+			var honed := shared.duplicate() as BaseMaterial3D
+			honed.resource_name = "M_marble_gold_honed"
+			honed.roughness = 0.5
+			honed.metallic_specular = 0.35
+			return honed
+		return shared
+	return _legacy_surface(source, name)
+
+static func _legacy_surface(source: StandardMaterial3D, name: String) -> StandardMaterial3D:
 	var mat := source.duplicate() as StandardMaterial3D
 	mat.resource_name = name + " / tactile room finish"
 	mat.texture_filter = BaseMaterial3D.TEXTURE_FILTER_LINEAR_WITH_MIPMAPS
@@ -208,55 +254,18 @@ static func _surface(source: StandardMaterial3D, name: String) -> StandardMateri
 
 static func _pale_furniture_finish(mesh: MeshInstance3D) -> void:
 	# Painted furniture uses satin enamel; the room walls retain matte plaster.
-	# Sharing the wall finish previously erased the light response of door bevels.
 	for i in mesh.mesh.get_surface_count():
-		var source := mesh.get_active_material(i) as StandardMaterial3D
-		if source == null or not source.resource_name.begins_with("Warm white paint"):
-			continue
-		if not _materials.has("Furniture satin enamel"):
-			var enamel := source.duplicate() as StandardMaterial3D
-			enamel.resource_name = "Furniture satin enamel"
-			enamel.roughness_texture = null
-			enamel.roughness = .47
-			enamel.normal_scale = .085
-			enamel.metallic_specular = .36
-			_materials["Furniture satin enamel"] = enamel
-		mesh.set_surface_override_material(i, _materials["Furniture satin enamel"])
+		var source := mesh.get_active_material(i)
+		if source != null and source.resource_name.begins_with("M_warm_plaster"):
+			mesh.set_surface_override_material(i, InteriorMaterials.material("white_satin"))
 
-static func configure_lighting(room: Node3D, lights: Array) -> void:
-	for child in room.get_children():
-		if child is WorldEnvironment:
-			var env := (child as WorldEnvironment).environment
-			env.ambient_light_color = Color(.78, .82, .89)
-			env.ambient_light_energy = .35
-			env.tonemap_mode = Environment.TONE_MAPPER_FILMIC
-			env.tonemap_exposure = .93
-			env.background_color = Color(.055, .065, .08)
-	for i in lights.size():
-		var light := lights[i] as OmniLight3D
-		light.light_color = Color(1.0, .92, .81) if i == 0 else Color(1.0, .94, .86)
-		light.light_energy = .40 if i == 0 else .19
-		light.omni_range = 7.2 if i == 0 else 5.0
-		light.omni_attenuation = .60
-		# Broad frosted fixtures have restrained specular output. This suppresses
-		# point-source glare while the diffuse term still shapes pale furnishings.
-		light.light_specular = .32 if i == 0 else .12
-		light.shadow_enabled = false
-		light.shadow_bias = .055
-		light.shadow_normal_bias = .9
-		light.shadow_blur = 3.0
-		light.shadow_opacity = .62
-		light.light_size = .54 if i == 0 else .32
-	# Keep both light origins at the actual fixtures. The cooler ambient fill
-	# supplies indirect light without adding a third light on Android.
+static func configure_lighting(_room: Node3D, _lights: Array) -> void:
+	# Lighting is owned by InteriorLighting (room_lighting.gd).
+	pass
 
-static func apply_quality(room: Node3D, index: int, mobile: bool) -> void:
-	var fixture := room.get_node_or_null("ceiling-center") as OmniLight3D
-	if fixture != null:
-		fixture.shadow_enabled = index >= 1 and not mobile
-	var secondary := room.get_node_or_null("ceiling-tv") as OmniLight3D
-	if secondary != null:
-		secondary.shadow_enabled = false
+static func apply_quality(_room: Node3D, _index: int, _mobile: bool) -> void:
+	# Quality tiers are applied by InteriorLighting.apply_quality().
+	pass
 
 static func _detail(parent: Node3D, name: String, mesh: Mesh, mat: Material) -> MeshInstance3D:
 	var node := MeshInstance3D.new()

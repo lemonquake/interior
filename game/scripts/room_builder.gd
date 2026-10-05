@@ -129,29 +129,10 @@ static func build(room: Node3D) -> Dictionary:
 		collision.shape = shape
 		shell.add_child(collision)
 		collision.position = _vector(item.center)
-	var world := WorldEnvironment.new()
-	world.name = "WorldEnvironment"
-	var env := Environment.new()
-	env.background_mode = Environment.BG_COLOR
-	env.background_color = Color(0.10,0.08,0.06)
-	env.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
-	env.ambient_light_color = Color(1.0,0.91,0.79)
-	env.ambient_light_energy = 0.75
-	env.tonemap_mode = Environment.TONE_MAPPER_FILMIC
-	world.environment = env
-	room.add_child(world)
-	var lights: Array[OmniLight3D] = []
-	for fixture in room_manifest.fixtures:
-		var light := OmniLight3D.new()
-		light.name = fixture.id
-		light.position = _vector(fixture.location)
-		light.light_color = Color(1.0,0.87,0.69)
-		light.light_energy = float(fixture.watts)/1200.0
-		light.omni_range = 6.5
-		light.shadow_enabled = false
-		light.add_to_group("room_lights", true)
-		room.add_child(light)
-		lights.append(light)
+	# Lighting rig (WorldEnvironment, downlights, LED strips, probes) owned by InteriorLighting.
+	# Built for desktop; the rig itself switches to its mobile subset at runtime.
+	InteriorLighting.create(room, {"lights": room_manifest.get("lights", [])}, false)
+	var lights: Array = []
 	RoomSurroundings.apply(room, visual, room_manifest)
 	RoomVisuals.apply(room, visual, room_manifest, lights)
 	print("INTERIOR_ROOM_READY ",JSON.stringify({"actors":room.get_tree().get_nodes_in_group("movable").size(),"original_actors":room.get_tree().get_nodes_in_group("original_room_props").size(),"expected_original":room_manifest.actors.size(),"base_triangles":room_manifest.geometryTriangles}))

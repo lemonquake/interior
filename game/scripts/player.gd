@@ -370,6 +370,14 @@ func update_target() -> void:
 		var door := (hit.collider as Node).get_parent()
 		if door != null and door.is_in_group("interior_doors"):
 			door_target = door as Node3D
+	if next == null and door_target == null:
+		# An open door: aiming through its doorway (within reach, nothing nearer) targets it too.
+		var from := camera.global_position
+		var to: Vector3 = hit.position if hit else from - camera.global_basis.z * REACH
+		for door in get_tree().get_nodes_in_group("interior_doors"):
+			if door.has_method("aims_through") and door.aims_through(from, to.lerp(from, -.05)):
+				door_target = door as Node3D
+				break
 	if next != target:
 		target = next
 		target_changed.emit(target)

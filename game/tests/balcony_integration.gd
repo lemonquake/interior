@@ -178,15 +178,89 @@ func _run() -> void:
 			leaked += 1
 	check(leaked == 0, "Every balcony mesh is on the outdoor layer (%d are not)" % leaked)
 
-	# 7. Close it again: blocks again.
+	# 7. Door safety: closing onto the player or a loose prop must not trap or launch them.
+	var safety := {}
+	for spot: Array in [["in the swing", Vector3(1.72, .05, 2.2)], ["on the threshold", Vector3(1.91, .05, 2.8)]]:
+		door.snap(true)
+		await _place(spot[1], PI)
+		door.close()
+		var top_speed := 0.0
+		for i in 70:
+			await physics_frame
+			top_speed = maxf(top_speed, player.velocity.length())
+		var p := player.global_position
+		var outside_side := p.z > 2.66
+		var free := await _walk_to(Vector3(1.91, 0, 3.45) if outside_side else Vector3(1.91, 0, 1.4), 240)
+		safety[spot[0]] = {"after_close": [snappedf(p.x, .01), snappedf(p.y, .01), snappedf(p.z, .01)], "top_speed": snappedf(top_speed, .01),
+			"door_open": door.is_open(), "door_moving": door.is_moving(), "walked_free": free}
+		check(not door.is_moving(), "Door %s settles (not stuck mid-swing) after closing onto the player" % spot[0])
+		check(free and top_speed < 8.0 and p.y > -.1 and p.y < .5, "Player %s is neither trapped nor launched by the closing door (%s)" % [spot[0], str(safety[spot[0]])])
+	# A loose room prop resting in the swing arc is nudged, not launched.
+	var prop: InteriorObject = null
+	for node in get_nodes_in_group("movable"):
+		if node is InteriorObject and not balcony.is_ancestor_of(node) and (node as InteriorObject).mass < 2.0 and (node as InteriorObject).grab_mode != "none":
+			prop = node
+			break
+	if prop != null:
+		door.snap(false)
+		await _place(Vector3(.6, .05, 1.0), PI)
+		prop.global_position = Vector3(1.75, .25, 2.2)
+		prop.linear_velocity = Vector3.ZERO
+		prop.angular_velocity = Vector3.ZERO
+		prop.reset_physics_interpolation()
+		prop.activate(true)
+		await _frames(40)
+		var prop_speed := 0.0
+		door.open()
+		for i in 50:
+			await physics_frame
+			prop_speed = maxf(prop_speed, prop.linear_velocity.length())
+		door.close()
+		for i in 50:
+			await physics_frame
+			prop_speed = maxf(prop_speed, prop.linear_velocity.length())
+		await _frames(60)
+		var q := prop.global_position
+		safety["prop"] = {"name": str(prop.name), "mass": prop.mass, "top_speed": snappedf(prop_speed, .01), "rest": [snappedf(q.x, .01), snappedf(q.y, .01), snappedf(q.z, .01)]}
+		check(prop_speed < 4.5 and q.y > -.05 and q.y < 1.0 and q.z < 2.62, "A prop in the swing arc is pushed, not launched or pushed through the door (%s)" % str(safety["prop"]))
+	results["door_safety"] = safety
+
+	# 8. Close it again: blocks again.
+	door.snap(true)
 	door.close()
-	await _frames(50)
+	var close_frames := 0
+	while close_frames < 240 and door.is_moving():
+		await physics_frame
+		close_frames += 1
+	results["close_frames_with_prop_near"] = close_frames
 	check(not door.is_open() and absf(leaf.rotation.y) < .01, "Door closes fully")
 	await _place(Vector3(1.91, .05, 1.9), PI)
 	player.touch_move = Vector2(0, -1)
 	await _frames(60)
 	player.touch_move = Vector2.ZERO
 	check(player.global_position.z < 2.45, "Closed again, the door blocks the player")
+
+	# 9. Touch path: the on-screen Hold/Drop button toggles the door like E.
+	await _place(Vector3(1.91, .05, 1.3), PI)
+	player.update_target()
+	main.touch.hold_pressed.emit()
+	await _frames(50)
+	check(door.is_open(), "Android Hold/Drop button opens the targeted door")
+	check(balcony.visible, "Balcony is shown while the door is open")
+	await _place(Vector3(1.85, .05, 1.25), PI)
+	player.camera.rotation.x = 0.0
+	player.update_target()
+	check(player.door_target == door, "Aiming through the open doorway targets the door")
+	main.touch.hold_pressed.emit()
+	await _frames(50)
+	check(not door.is_open() and not balcony.visible, "Hold/Drop closes it again and the balcony is hidden from inside")
+
+	# 10. Restart reloads with the door closed.
+	door.snap(true)
+	main._restart()
+	await _frames(10)
+	var reloaded := get_nodes_in_group("interior_doors")
+	check(reloaded.size() == 1 and reloaded[0] != door and not (reloaded[0] as InteriorHingedDoor).is_open(), "Restart reloads the door closed")
 	_finish()
 
 func _finish() -> void:

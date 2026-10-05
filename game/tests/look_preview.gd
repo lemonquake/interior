@@ -6,7 +6,7 @@ extends SceneTree
 
 const VIEWS := [
 	["room-wide", Vector3(.62, 1.58, 1.30), Vector3(-.20, 1.30, -2.35)],
-	["tv-wall", Vector3(-.45, 1.45, .55), Vector3(-.50, 1.25, -2.70)],
+	["tv-wall", Vector3(-.45, 1.72, 1.05), Vector3(-.50, 1.15, -2.70)],
 	["room-reverse", Vector3(.75, 1.58, -1.30), Vector3(-.30, 1.20, 2.70)],
 	["kitchen", Vector3(-2.3, 1.6, 1.70), Vector3(-5.15, 1.20, -.25)],
 	["right-wall", Vector3(-.25, 1.58, .35), Vector3(3.25, 1.42, .30)],
@@ -43,6 +43,9 @@ func _run() -> void:
 	main.player.playing = false
 	main.hud.hide()
 	main.menu.hide()
+	if main.get("touch") != null:
+		main.touch.set_enabled(false)
+		main.touch.visible = false
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	var camera: Camera3D = main.player.camera
 	var lighting := InteriorLighting.find_in(main.room)

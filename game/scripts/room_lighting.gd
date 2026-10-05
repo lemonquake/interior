@@ -25,9 +25,9 @@ const LAMP_K := 2500.0
 const DAYLIGHT_K := 6500.0
 const TV_K := 11000.0
 
-const DOWNLIGHT_ENERGY := 2.2
+const DOWNLIGHT_ENERGY := 3.0
 const DOWNLIGHT_RANGE := 5.5
-const DOWNLIGHT_ANGLE := 50.0
+const DOWNLIGHT_ANGLE := 58.0
 const STRIP_ENERGY := 1.4
 const STRIP_RANGE := 1.6
 
@@ -40,27 +40,27 @@ const AMBIENT_BOTTOM := Color(0.78, 0.66, 0.52)
 const DESKTOP_TIERS := [
 	{"msaa": Viewport.MSAA_DISABLED, "ssaa": Viewport.SCREEN_SPACE_AA_FXAA, "scale": 0.85,
 		"shadows": 2, "atlas": 2048, "soft": RenderingServer.SHADOW_QUALITY_SOFT_VERY_LOW,
-		"ssao": false, "ssil": false, "gi": false, "ssr": false, "probes": false, "ambient": 0.9},
+		"ssao": false, "ssil": false, "gi": false, "ssr": false, "probes": false, "ambient": 1.15},
 	{"msaa": Viewport.MSAA_2X, "ssaa": Viewport.SCREEN_SPACE_AA_DISABLED, "scale": 1.0,
 		"shadows": 4, "atlas": 4096, "soft": RenderingServer.SHADOW_QUALITY_SOFT_LOW,
-		"ssao": true, "ssil": false, "gi": false, "ssr": false, "probes": true, "ambient": 0.75,
+		"ssao": true, "ssil": false, "gi": false, "ssr": false, "probes": false, "ambient": 1.0,
 		"ssao_quality": RenderingServer.ENV_SSAO_QUALITY_LOW},
 	{"msaa": Viewport.MSAA_2X, "ssaa": Viewport.SCREEN_SPACE_AA_DISABLED, "scale": 1.0,
 		"shadows": 7, "atlas": 4096, "soft": RenderingServer.SHADOW_QUALITY_SOFT_LOW,
-		"ssao": true, "ssil": true, "gi": true, "ssr": false, "probes": true, "ambient": 0.45,
+		"ssao": true, "ssil": false, "gi": false, "ssr": false, "probes": false, "ambient": 1.0,
 		"ssao_quality": RenderingServer.ENV_SSAO_QUALITY_MEDIUM, "ssil_quality": RenderingServer.ENV_SSIL_QUALITY_LOW},
 	{"msaa": Viewport.MSAA_4X, "ssaa": Viewport.SCREEN_SPACE_AA_DISABLED, "scale": 1.0,
 		"shadows": 99, "atlas": 8192, "soft": RenderingServer.SHADOW_QUALITY_SOFT_HIGH,
-		"ssao": true, "ssil": true, "gi": true, "ssr": true, "probes": true, "ambient": 0.45,
+		"ssao": true, "ssil": false, "gi": false, "ssr": true, "probes": false, "ambient": 1.0,
 		"ssao_quality": RenderingServer.ENV_SSAO_QUALITY_HIGH, "ssil_quality": RenderingServer.ENV_SSIL_QUALITY_HIGH},
 ]
 const MOBILE_TIERS := [
 	{"msaa": Viewport.MSAA_DISABLED, "scale": 0.7, "shadows": 1, "atlas": 1024,
-		"soft": RenderingServer.SHADOW_QUALITY_HARD, "ambient": 1.0},
+		"soft": RenderingServer.SHADOW_QUALITY_HARD, "ambient": 0.38},
 	{"msaa": Viewport.MSAA_DISABLED, "scale": 0.78, "shadows": 2, "atlas": 2048,
-		"soft": RenderingServer.SHADOW_QUALITY_SOFT_VERY_LOW, "ambient": 1.0},
+		"soft": RenderingServer.SHADOW_QUALITY_SOFT_VERY_LOW, "ambient": 0.38},
 	{"msaa": Viewport.MSAA_2X, "scale": 0.85, "shadows": 2, "atlas": 2048,
-		"soft": RenderingServer.SHADOW_QUALITY_SOFT_VERY_LOW, "ambient": 1.0},
+		"soft": RenderingServer.SHADOW_QUALITY_SOFT_VERY_LOW, "ambient": 0.38},
 ]
 
 ## Room frame: floor y=0, ceiling 2.90, TV wall z=-2.8, kitchen x<-3.3 (window wall x=-5.65).
@@ -75,14 +75,14 @@ const DEFAULT_RIG := [
 	{"id": "down_right", "type": "spot", "position": [1.75, 2.885, -0.2], "shadow": true},
 	{"id": "down_kitchen", "type": "spot", "position": [-4.55, 2.885, -0.2], "shadow": true, "kelvin": 3000.0,
 		"angle_deg": 60.0},
-	{"id": "down_rear", "type": "spot", "position": [-0.45, 2.885, 1.95], "shadow": false},
-	{"id": "down_rear_right", "type": "spot", "position": [2.0, 2.885, 1.85], "shadow": false},
+	{"id": "down_rear", "type": "spot", "position": [-0.45, 2.885, 1.75], "shadow": false, "energy": 2.4},
+	{"id": "down_rear_right", "type": "spot", "position": [1.0, 2.885, 1.35], "shadow": false, "energy": 1.8, "angle_deg": 45.0},
 	# Kitchen window: cool-neutral daylight raking in from the far wall.
 	{"id": "window_daylight", "type": "spot", "position": [-5.45, 2.35, -0.1], "rotation_deg": [-35, -90, 0],
 		"energy": 2.0, "range": 6.0, "angle_deg": 70.0, "shadow": false, "kelvin": DAYLIGHT_K,
 		"mobile": true, "mobile_energy": 1.4, "fixture": false},
 	# Warm accent lamp glow in the rear-right corner.
-	{"id": "accent_lamp", "type": "omni", "position": [2.75, 1.45, 2.3], "energy": 0.8, "range": 3.0, "kelvin": LAMP_K},
+	{"id": "accent_lamp", "type": "omni", "position": [1.22, 1.40, 2.56], "energy": 0.35, "range": 2.6, "kelvin": LAMP_K, "lamp": true},
 	# LED strips: under the TV console front and under each floating shelf.
 	{"id": "strip_console", "type": "strip", "position": [-0.55, 0.11, -2.12], "length": 2.4, "energy": 1.2},
 	{"id": "strip_shelf_left_high", "type": "strip", "position": [-2.15, 2.21, -2.62], "length": 0.56},
@@ -151,7 +151,7 @@ func apply_quality(index: int) -> void:
 		environment.ssr_enabled = desktop and bool(t.get("ssr", false))
 		environment.sdfgi_enabled = desktop and bool(t.get("gi", false))
 		environment.tonemap_mode = Environment.TONE_MAPPER_AGX if desktop else Environment.TONE_MAPPER_FILMIC
-		environment.tonemap_exposure = 1.0 if desktop else 1.05
+		environment.tonemap_exposure = 1.08 if desktop else 0.82
 	var budget := int(t.shadows)
 	var mobile_count := 0
 	for light in _lights:
@@ -299,7 +299,9 @@ func _make_environment() -> Environment:
 	env.sky = sky
 	env.ambient_light_source = Environment.AMBIENT_SOURCE_SKY
 	env.ambient_light_sky_contribution = 1.0
-	env.reflected_light_source = Environment.REFLECTION_SOURCE_SKY
+	# Reflections come from the box-projected probes only; the flat ambient sky made
+	# glass and satin glow white at grazing angles.
+	env.reflected_light_source = Environment.REFLECTION_SOURCE_BG
 	env.tonemap_mode = Environment.TONE_MAPPER_AGX
 	env.tonemap_exposure = 1.0
 	env.adjustment_enabled = true
@@ -310,7 +312,7 @@ func _make_environment() -> Environment:
 	env.glow_intensity = 0.5
 	env.glow_strength = 1.0
 	env.glow_bloom = 0.015
-	env.glow_hdr_threshold = 1.2
+	env.glow_hdr_threshold = 1.5
 	env.glow_blend_mode = Environment.GLOW_BLEND_MODE_SCREEN
 	for level in 7:
 		env.set_glow_level(level, [0.0, 0.25, 0.8, 0.6, 0.3, 0.0, 0.0][level])
@@ -320,7 +322,7 @@ func _make_environment() -> Environment:
 	env.ssao_detail = 0.6
 	env.ssao_light_affect = 0.1
 	env.ssil_radius = 3.0
-	env.ssil_intensity = 0.7
+	env.ssil_intensity = 1.0
 	env.ssr_max_steps = 48
 	env.ssr_fade_in = 0.12
 	env.ssr_fade_out = 2.5
@@ -330,7 +332,7 @@ func _make_environment() -> Environment:
 	env.sdfgi_cascades = 3
 	env.sdfgi_min_cell_size = 0.1
 	env.sdfgi_y_scale = Environment.SDFGI_Y_SCALE_75_PERCENT
-	env.sdfgi_energy = 0.9
+	env.sdfgi_energy = 1.3
 	env.sdfgi_normal_bias = 1.1
 	env.sdfgi_probe_bias = 1.1
 	return env
@@ -383,7 +385,7 @@ func _build_point(id: String, kind: String, spec: Dictionary, order: int) -> voi
 	light.shadow_bias = 0.03
 	light.shadow_normal_bias = 0.8
 	light.shadow_blur = 1.2
-	light.light_specular = 0.6
+	light.light_specular = 0.4
 	light.position = Vector3(0, 0, -0.04) if default_down else Vector3.ZERO
 	root.add_child(light)
 	_tag(light, kind, spec, order)
@@ -394,6 +396,52 @@ func _build_point(id: String, kind: String, spec: Dictionary, order: int) -> voi
 		light.set_meta("mobile_range", float(spec.get("mobile_range", (light as SpotLight3D).spot_range)))
 	if default_down and bool(spec.get("fixture", true)):
 		_add_downlight_fixture(root, light.light_color)
+	if bool(spec.get("lamp", false)):
+		light.light_size = 0.18
+		light.light_specular = 0.25
+		_add_floor_lamp(root, light.light_color)
+
+func _add_floor_lamp(root: Node3D, color: Color) -> void:
+	# Slim black-metal floor lamp with a glowing linen drum shade; the light sits inside it.
+	var height := root.position.y
+	var parts := [
+		["Base", CylinderMesh.new(), Vector3(0, -height + .012, 0), Vector3(.15, .024, .15), "black_metal"],
+		["Pole", CylinderMesh.new(), Vector3(0, -height * .5 + .02, 0), Vector3(.012, height - .02, .012), "black_metal"],
+	]
+	for part: Array in parts:
+		var mesh := part[1] as CylinderMesh
+		mesh.top_radius = (part[3] as Vector3).x
+		mesh.bottom_radius = (part[3] as Vector3).x
+		mesh.height = (part[3] as Vector3).y
+		var node := MeshInstance3D.new()
+		node.name = part[0]
+		node.mesh = mesh
+		node.position = part[2]
+		node.material_override = InteriorMaterials.material(part[4])
+		root.add_child(node)
+	var shade := MeshInstance3D.new()
+	shade.name = "Shade"
+	var drum := CylinderMesh.new()
+	drum.top_radius = .15
+	drum.bottom_radius = .19
+	drum.height = .28
+	drum.cap_top = false
+	drum.cap_bottom = false
+	drum.radial_segments = 40
+	shade.mesh = drum
+	shade.position = Vector3(0, .03, 0)
+	var mat := StandardMaterial3D.new()
+	mat.resource_name = "Lamp linen shade"
+	mat.albedo_color = Color(.93, .88, .8)
+	mat.albedo_texture = load("res://assets/surfaces/linen_color.jpg")
+	mat.roughness = .95
+	mat.emission_enabled = true
+	mat.emission = color
+	mat.emission_energy_multiplier = 0.55
+	mat.cull_mode = BaseMaterial3D.CULL_DISABLED
+	shade.material_override = mat
+	shade.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+	root.add_child(shade)
 
 func _add_downlight_fixture(root: Node3D, color: Color) -> void:
 	# Recessed can: satin white trim ring with a glowing diffuser just inside it.
@@ -416,7 +464,7 @@ func _add_downlight_fixture(root: Node3D, color: Color) -> void:
 	disc.height = 0.004
 	disc.radial_segments = 32
 	lens.mesh = disc
-	lens.material_override = _emissive(color, 5.0)
+	lens.material_override = _emissive(color, 3.0)
 	lens.rotation_degrees = Vector3(90, 0, 0)
 	lens.position = Vector3(0, 0, -0.007)
 	for mesh: MeshInstance3D in [trim, lens]:
@@ -558,6 +606,7 @@ func _build_probes() -> void:
 		probe.enable_shadows = true
 		probe.update_mode = ReflectionProbe.UPDATE_ONCE
 		probe.blend_distance = 0.4
+		probe.intensity = 0.45
 		probe.ambient_mode = ReflectionProbe.AMBIENT_DISABLED
 		add_child(probe)
 

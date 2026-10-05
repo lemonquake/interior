@@ -362,17 +362,17 @@ func _build_kitchen() -> void:
 		_rod(Vector3(-4.902,.63,z+.20),Vector3(-4.902,.69,z+.20),.008,"steel")
 	for ix in 8:
 		for iz in 2:
-			_box("Counter edge checker tile",Vector3(-4.843,.905,-2.35+ix*.60+iz*.30),Vector3(.013,.17,.292),"navy" if (ix+iz)%2 == 0 else "tile white")
+			_box("Counter edge checker tile",Vector3(-4.843,.905,-2.35+ix*.60+iz*.30),Vector3(.013,.17,.292),"navy")
 	# Blue and cream backsplash, individually grouted and clearly above the worktop.
 	for row in 3:
 		for col in 16:
-			_box("Backsplash checker tile",Vector3(-5.633,1.075+row*.285,-2.39+col*.30),Vector3(.018,.278,.291),"navy" if (row+col)%3 == 0 else "tile white")
+			_box("Backsplash checker tile",Vector3(-5.633,1.075+row*.285,-2.39+col*.30),Vector3(.018,.278,.291),"navy" if row == 0 else "tile white")
 	_feature("Kitchen barred window with blue valance")
 	_box("Kitchen window recess",Vector3(-5.635,2.12,-.10),Vector3(.025,1.30,4.56),"dark recess")
-	var glassmat := _material("sunlit window",Color(.67,.71,.51),.7)
+	var glassmat := _material("sunlit window",Color(.86,.9,.96),.7)
 	glassmat.emission_enabled = true
-	glassmat.emission = Color(.45,.47,.32)
-	glassmat.emission_energy_multiplier = .22
+	glassmat.emission = Color(.82,.89,1.0)
+	glassmat.emission_energy_multiplier = 1.6
 	_box("Kitchen window daylight",Vector3(-5.606,2.12,-.10),Vector3(.018,1.20,4.43),"sunlit window")
 	for z in [-2.37,2.17]: _box("Window frame upright",Vector3(-5.56,2.12,z),Vector3(.085,1.34,.042),"black steel")
 	for y in [1.48,2.10,2.76]: _box("Window frame horizontal",Vector3(-5.558,y,-.1),Vector3(.088,.032,4.60),"black steel")

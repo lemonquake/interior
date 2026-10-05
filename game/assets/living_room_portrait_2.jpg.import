@@ -3,9 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://culk4wsfwm47l"
-path="res://.godot/imported/living_room_portrait_2.jpg-3531928eb411d7d329130866e534ff62.ctex"
+path.s3tc="res://.godot/imported/living_room_portrait_2.jpg-3531928eb411d7d329130866e534ff62.s3tc.ctex"
+path.etc2="res://.godot/imported/living_room_portrait_2.jpg-3531928eb411d7d329130866e534ff62.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "587075c342a0c9791ec5557b4ca0270f"
@@ -14,11 +16,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/living_room_portrait_2.jpg"
-dest_files=["res://.godot/imported/living_room_portrait_2.jpg-3531928eb411d7d329130866e534ff62.ctex"]
+dest_files=["res://.godot/imported/living_room_portrait_2.jpg-3531928eb411d7d329130866e534ff62.s3tc.ctex", "res://.godot/imported/living_room_portrait_2.jpg-3531928eb411d7d329130866e534ff62.etc2.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -40,4 +42,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

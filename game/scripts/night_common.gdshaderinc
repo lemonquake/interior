@@ -9,7 +9,7 @@ uniform vec3 zenith_color : source_color = vec3(0.004, 0.007, 0.02);
 uniform vec3 sky_color : source_color = vec3(0.012, 0.02, 0.045);
 uniform vec3 horizon_color : source_color = vec3(0.06, 0.075, 0.105);
 uniform vec3 halo_color : source_color = vec3(0.35, 0.42, 0.55);
-uniform float star_density = 0.11;
+uniform int star_count = 20;                // a handful of fixed stars (0.8: the starfield was far too busy)
 uniform float star_energy = 2.2;
 uniform float cloud_cover = 0.38;
 uniform float cloud_speed = 0.004;
@@ -64,22 +64,32 @@ float ridge(float x) {
 	return v;
 }
 
-// One layer of stars: a random point in each cell of a cube-projected grid.
-float stars(vec3 d, float scale, float density, float time_offset) {
-	vec3 p = d * scale;
-	vec3 cell = floor(p);
-	float h = hash13(cell);
-	if (h > density) {
-		return 0.0;
+// A handful of fixed stars (0.8): star i sits at a fixed direction (golden-angle azimuths, 20-78 degrees up,
+// pushed away from the moon) and twinkles slightly. px is the angular size of a pixel, so each star stays a
+// crisp point of one or two pixels at any resolution, with a faint glow around the brighter ones.
+float night_stars(vec3 d, float px) {
+	vec3 m = normalize(moon_direction);
+	float total = 0.0;
+	for (int i = 0; i < star_count; i++) {
+		float fi = float(i);
+		float h = hash11(fi * 1.37 + 0.5);
+		float az = fi * 2.39996 + (hash11(fi + 7.1) - 0.5) * 0.9;
+		float el = asin(mix(0.34, 0.98, hash11(fi * 3.1 + 2.0)));
+		vec3 s = vec3(cos(el) * sin(az), sin(el), cos(el) * cos(az));
+		if (dot(s, m) > 0.93) {
+			s = vec3(-s.x, s.y, -s.z);
+		}
+		float ang = length(d - s);
+		if (ang > px * 6.0) {
+			continue;
+		}
+		float brightness = mix(0.3, 1.0, pow(hash11(fi * 5.3 + 1.1), 2.0));
+		float twinkle = 0.86 + 0.14 * sin(TIME * (1.1 + h * 2.3) + h * 40.0) * sin(TIME * (0.37 + h * 0.6) + fi);
+		float core = exp(-pow(ang / (px * 0.85), 2.0));
+		float glow = exp(-pow(ang / (px * 2.6), 2.0)) * 0.12 * brightness;
+		total += (core + glow) * brightness * twinkle;
 	}
-	vec3 jitter = vec3(hash13(cell + 11.3), hash13(cell + 37.9), hash13(cell + 71.1));
-	vec3 star_pos = normalize(cell + 0.15 + jitter * 0.7);
-	float dist = length(normalize(d) - star_pos) * scale;
-	float size = mix(0.012, 0.045, pow(hash13(cell + 5.7), 6.0));
-	float core = smoothstep(size, 0.0, dist);
-	float twinkle = 0.65 + 0.35 * sin(TIME * (1.3 + h * 7.0) + h * 91.0 + time_offset);
-	float brightness = mix(0.25, 1.0, pow(hash13(cell + 2.1), 3.0));
-	return core * brightness * twinkle;
+	return total;
 }
 
 vec3 moon_disc(vec3 d, vec3 m, out float mask) {

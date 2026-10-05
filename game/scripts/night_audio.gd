@@ -8,6 +8,7 @@ extends Node3D
 ##   then a barn owl screeches; a tokay gecko calls "to-kay" from a house or the abandoned hut.
 ## - The wind comes and goes in gusts that sweep past you. Each gust also drives the global shader
 ##   value wind_gust, so the rice and the verge grass bow and the paddies ripple with what you hear.
+## - Dogs bark far off (70-160 m) at random, long intervals; sometimes another dog answers from elsewhere.
 ## - Inside the house the night is muffled (low-passed) and quiet; with the door open it leaks in.
 ## Recordings: assets/audio/night (Wikimedia Commons; see licenses/NIGHT_SOUNDS.md).
 
@@ -16,6 +17,7 @@ const STEPS_BUS := "Steps"
 const NATURE_BUS := "Night"
 const CRICKET_COUNT := 7
 const FROG_COUNT := 4
+const DOG_CLIPS := ["dog_bark_a", "dog_bark_b", "dog_bark_c", "dog_bark_d", "dog_bark_e", "dog_pack"]
 
 var player: InteriorPlayer
 var _ready_done := false
@@ -30,6 +32,11 @@ var _wind: AudioStreamPlayer
 var _gust: AudioStreamPlayer3D
 var _drone: AudioStreamPlayer
 var _knock: AudioStreamPlayer3D
+var _dog: AudioStreamPlayer3D
+var _dog_answer: AudioStreamPlayer3D
+var _dog_wait := 0.0
+var _answer_wait := -1.0
+var _last_dog := ""
 var _streams: Dictionary = {}
 var _knocks: Array[AudioStream] = []
 var _reverb: AudioEffectReverb
@@ -63,7 +70,7 @@ func setup(main: Node, character: InteriorPlayer) -> void:
 	var room_audio := main.get_node_or_null("RoomAudio")
 	if room_audio != null and room_audio.get("footsteps") is AudioStreamPlayer:
 		(room_audio.get("footsteps") as AudioStreamPlayer).bus = STEPS_BUS
-	for name: String in ["cricket_field", "cricket_gryllus", "frog_kaloula", "frog_chorus", "frog_chorus_b", "toad_bufo", "owl_tawny", "owl_barn_screech", "gecko_tokay"]:
+	for name: String in DOG_CLIPS + ["cricket_field", "cricket_gryllus", "frog_kaloula", "frog_chorus", "frog_chorus_b", "toad_bufo", "owl_tawny", "owl_barn_screech", "gecko_tokay"]:
 		var path := NIGHT + name + ".ogg"
 		if ResourceLoader.exists(path):
 			var stream := (load(path) as AudioStream).duplicate() as AudioStream
@@ -105,6 +112,16 @@ func setup(main: Node, character: InteriorPlayer) -> void:
 	for path in ["res://assets/audio/sfx/impactMetal_heavy_002.ogg", "res://assets/audio/sfx/impactMetal_light_001.ogg", "res://assets/audio/sfx/impactPlate_medium_000.ogg"]:
 		if ResourceLoader.exists(path):
 			_knocks.append(load(path))
+	# Far dogs: big unit size so they carry, dull and reverberant like a bark across the rooftops.
+	for i in 2:
+		var dog := _voice3d(15.0, 260.0, -2.0)
+		dog.attenuation_filter_cutoff_hz = 2400.0
+		dog.attenuation_filter_db = -24.0
+		if i == 0:
+			_dog = dog
+		else:
+			_dog_answer = dog
+	_dog_wait = rng.randf_range(25.0, 55.0)
 	_ready_done = true
 
 func _voice3d(unit: float, max_distance: float, volume: float) -> AudioStreamPlayer3D:
@@ -202,6 +219,7 @@ func _process(delta: float) -> void:
 		_frog_poll = 1.0
 		_update_frogs(cam)
 	_update_calls(delta, cam, outdoors)
+	_update_dogs(delta, cam)
 	_update_town(delta, cam, outdoors)
 
 func _update_buses(outdoors: bool) -> void:
@@ -295,6 +313,39 @@ func _update_calls(delta: float, cam: Vector3, outdoors: bool) -> void:
 		_toad.volume_db = _faded(_toad)
 		if _toad.stream != null:
 			_toad.play()
+
+## A dog somewhere far off barks now and then (every 40-110 s); about a third of the time another dog,
+## farther and in another direction, answers a few seconds later. Never the same clip twice in a row.
+func _update_dogs(delta: float, cam: Vector3) -> void:
+	if _answer_wait >= 0.0 and not _dog.playing:
+		_answer_wait -= delta
+		if _answer_wait < 0.0:
+			var away := Vector3(_dog.global_position.x - cam.x, 0, _dog.global_position.z - cam.z).normalized()
+			_bark(_dog_answer, away.rotated(Vector3.UP, rng.randf_range(1.4, 4.9)), 110.0, 170.0)
+	_dog_wait -= delta
+	if _dog_wait > 0.0 or _dog.playing or _dog_answer.playing:
+		return
+	_dog_wait = rng.randf_range(40.0, 110.0)
+	if _exposure < .05:
+		return
+	var angle := rng.randf() * TAU
+	_bark(_dog, Vector3(cos(angle), 0, sin(angle)), 70.0, 130.0)
+	_answer_wait = rng.randf_range(1.5, 5.0) if rng.randf() < .35 else -1.0
+
+func _bark(voice: AudioStreamPlayer3D, direction: Vector3, near: float, far: float) -> void:
+	var options: Array[String] = []
+	for name: String in DOG_CLIPS:
+		if name != _last_dog and _streams.has(name):
+			options.append(name)
+	if options.is_empty():
+		return
+	_last_dog = options[rng.randi_range(0, options.size() - 1)]
+	var cam := player.camera.global_position
+	voice.stream = _streams[_last_dog]
+	voice.global_position = Vector3(cam.x, -1.8, cam.z) + direction.normalized() * rng.randf_range(near, far)
+	voice.pitch_scale = rng.randf_range(.9, 1.08)
+	voice.volume_db = _faded(voice, rng.randf_range(-3.0, 0.0))
+	voice.play()
 
 func _call(name: String, at: Vector3, pitch: float, gain: float) -> void:
 	var stream: AudioStream = _streams.get(name)

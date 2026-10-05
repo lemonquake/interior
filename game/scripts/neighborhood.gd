@@ -7,13 +7,19 @@ extends Node3D
 ## - the night sky dome follows the camera and the camera's far plane opens up to it;
 ## - night (0.7): the room's WorldEnvironment gets a dark blue haze while the balcony shows. Outdoors
 ##   the ambient light turns moonlit blue and the colour grade cools; out on the dirt road the haze
-##   opens up (the fields stretch to the horizon), mist gathers over the paddies and, on desktop
-##   High and Ultra, volumetric fog scatters the moonlight. Everything is restored indoors, so the
-##   room renders exactly as before with the door shut.
+##   opens up (the fields stretch to the horizon). Everything is restored indoors, so the room renders
+##   exactly as before with the door shut.
+## - mist (0.8): a faint, slowly drifting ground mist outside the house (scripts/night_mist.gdshader, adapted
+##   from alghost's MIT fog shader) in a FogVolume that follows the camera, on desktop High and Ultra
+##   (volumetric fog; the Compatibility renderer on Android has none and keeps the plain depth haze). It lies
+##   in the streets, the courtyard and over the paddies alike and thins out below the balcony.
 ## The night sounds live in scripts/night_audio.gd.
 
 const OUTDOOR_LAYER := 2
 const FAR := 900.0
+const MIST_SHADER := preload("res://scripts/night_mist.gdshader")
+const MIST_SIZE := Vector3(180.0, 5.0, 180.0)
+const GROUND_Y := -2.9
 
 var _env: Environment
 var _saved_far := -1.0
@@ -23,6 +29,7 @@ var _saved: Dictionary = {}
 var _outdoors := false
 var _zone := -1.0
 var _mobile := false
+var _mist: FogVolume
 
 func _ready() -> void:
 	add_to_group("neighbourhood")
@@ -57,6 +64,8 @@ func _process(_delta: float) -> void:
 		return
 	if outdoors:
 		_update_zone(InteriorFields.zone_weight(camera.global_position))
+	if _mist != null and _mist.visible:
+		_mist.global_position = Vector3(snappedf(camera.global_position.x, 4.0), GROUND_Y + 1.6, snappedf(camera.global_position.z, 4.0))
 	var dome := get_node_or_null("Sky dome") as Node3D
 	if dome != null:
 		dome.global_position = camera.global_position
@@ -88,9 +97,9 @@ func _apply_fog(on: bool) -> void:
 	env.fog_light_color = InteriorNight.FOG_TOWN
 	env.fog_light_energy = 1.0
 	env.fog_sun_scatter = .04
-	env.fog_depth_begin = 4.0
-	env.fog_depth_end = 110.0
-	env.fog_depth_curve = 1.4
+	env.fog_depth_begin = 8.0
+	env.fog_depth_end = 150.0
+	env.fog_depth_curve = 1.7
 	env.fog_sky_affect = 0.0
 	env.fog_aerial_perspective = 0.0
 	env.fog_height = -2.2
@@ -132,8 +141,10 @@ func _apply_outdoors(on: bool) -> void:
 		env.glow_bloom = _saved.bloom
 		env.volumetric_fog_enabled = false
 		_apply_fog(_active)
+	_set_mist(on)
 
-## Blends the haze from the close town fog to the open fields (weight 0..1).
+## Blends the haze from the close town fog to the open fields (weight 0..1). Both are kept light: just
+## enough depth to the dark, never a grey wall.
 func _update_zone(weight: float) -> void:
 	if absf(weight - _zone) < .01:
 		return
@@ -142,20 +153,43 @@ func _update_zone(weight: float) -> void:
 	if env == null:
 		return
 	env.fog_light_color = InteriorNight.FOG_TOWN.lerp(InteriorNight.FOG_FIELDS, weight)
-	env.fog_depth_begin = lerpf(4.0, 14.0, weight)
-	env.fog_depth_end = lerpf(110.0, 300.0, weight)
-	env.fog_depth_curve = lerpf(1.4, 1.1, weight)
-	var volumetric := not _mobile and _tier >= 2 and weight > .2
-	env.volumetric_fog_enabled = volumetric
+	env.fog_depth_begin = lerpf(8.0, 24.0, weight)
+	env.fog_depth_end = lerpf(150.0, 340.0, weight)
+	env.fog_depth_curve = lerpf(1.7, 1.5, weight)
+	_set_mist(_outdoors)
+
+## The ground mist: desktop High / Ultra only, outdoors only. No global volumetric density, so palms,
+## roofs and poles stay dark against the sky; only the low layer in the FogVolume scatters the moon and
+## the street lamps.
+func _set_mist(on: bool) -> void:
+	var env := _environment()
+	var volumetric := on and not _mobile and _tier >= 2 and env != null
+	if env != null:
+		env.volumetric_fog_enabled = volumetric
 	if volumetric:
-		# No global density: only the low mist volume over the paddies (fields_builder.gd) shows, so
-		# palms and bamboo stay dark against the sky instead of glowing with scattered moonlight.
+		RenderingServer.environment_set_volumetric_fog_volume_size(128 if _tier >= 3 else 96, 96 if _tier >= 3 else 64)
 		env.volumetric_fog_density = 0.0
-		env.volumetric_fog_albedo = Color(.62, .68, .85)
+		env.volumetric_fog_albedo = Color(.5, .56, .72)
 		env.volumetric_fog_emission_energy = 0.0
-		env.volumetric_fog_anisotropy = .55
-		env.volumetric_fog_length = 90.0 if _tier >= 3 else 64.0
-		env.volumetric_fog_detail_spread = 1.6
-		env.volumetric_fog_ambient_inject = 0.0
+		env.volumetric_fog_anisotropy = .45
+		env.volumetric_fog_length = 96.0 if _tier >= 3 else 72.0
+		env.volumetric_fog_detail_spread = 1.4
+		env.volumetric_fog_ambient_inject = .2
 		env.volumetric_fog_sky_affect = 0.0
 		env.volumetric_fog_temporal_reprojection_enabled = true
+		env.volumetric_fog_temporal_reprojection_amount = .85
+		if _mist == null:
+			_mist = FogVolume.new()
+			_mist.name = "Ground mist"
+			_mist.shape = RenderingServer.FOG_VOLUME_SHAPE_BOX
+			_mist.size = MIST_SIZE
+			var material := ShaderMaterial.new()
+			material.shader = MIST_SHADER
+			material.set_shader_parameter("ground_y", GROUND_Y)
+			_mist.material = material
+			add_child(_mist)
+	if _mist != null:
+		_mist.visible = volumetric
+		if volumetric:
+			# A touch thicker over the open paddies than between the houses.
+			(_mist.material as ShaderMaterial).set_shader_parameter("base_density", lerpf(.0075, .008, maxf(_zone, 0.0)))

@@ -1,17 +1,54 @@
 shader_type spatial;
 // Full-moon night sky for the neighbourhood and the rice fields (0.7). Drawn on the camera-following
 // dome built by scripts/neighborhood_builder.gd: a deep blue gradient, a big full moon (NASA LRO colour
-// map, public domain) with limb darkening and a halo, small twinkling stars that fade near the moon
-// and the haze, thin moonlit clouds drifting past, and far mountain and tree-line silhouettes that melt
-// into the fog colour, so the land under the sky dissolves into the same blue haze as the geometry.
+// map, public domain) with limb darkening and a halo, about twenty fixed, slightly twinkling stars,
+// moonlit clouds drifting past, and far mountain and tree-line silhouettes that melt into the fog
+// colour, so the land under the sky dissolves into the same blue haze as the geometry.
+// Clouds (0.8): after "AAA Fake Volumetric Clouds" by Velvet Katana Studios (CC0, see
+// assets/fields/sky/clouds_velvetkatana_cc0.txt): a cloud deck of layered, domain-warped texture noise,
+// thick bodies shadowed, thin edges and the parts near the moon lit silver, the moon veiled behind them.
 // night_water.gdshader repeats sky_colour() so the paddies reflect exactly this sky.
 render_mode unshaded, cull_front, fog_disabled, shadows_disabled, depth_draw_opaque, skip_vertex_transform;
 
 #include "res://scripts/night_common.gdshaderinc"
 
 uniform float land_energy = 1.0;             // 0 hides the mountain / tree silhouettes
+uniform sampler2D cloud_noise : filter_linear_mipmap, repeat_enable;
+uniform float cloud_scale = 0.11;
+uniform float cloud_softness = 0.16;
+uniform vec2 cloud_direction = vec2(0.8, 0.35);
+uniform vec3 cloud_dark : source_color = vec3(0.022, 0.027, 0.04);
+uniform vec3 cloud_lit : source_color = vec3(0.12, 0.135, 0.175);
 
 varying vec3 world_dir;
+
+// Cloud deck: rgb colour, a coverage. Layers of the seamless noise (R big shapes, G detail, B warp)
+// drift slowly and evolve; coverage comes from cloud_cover.
+vec4 clouds(vec3 d, vec3 m, float up) {
+	vec2 plane = d.xz / (up + 0.12);
+	vec2 drift = normalize(cloud_direction) * TIME * cloud_speed;
+	vec2 uv = plane * cloud_scale + drift;
+	vec2 evolve = vec2(sin(TIME * 0.011), cos(TIME * 0.009)) * 0.05;
+	vec2 warp = (texture(cloud_noise, uv * 0.5 + evolve).bb - 0.5) * 0.07;
+	float base = texture(cloud_noise, uv + warp).r;
+	float second = texture(cloud_noise, uv * 0.41 + vec2(0.23, 0.37) - evolve).r;
+	float n = base * 0.6 + second * 0.4;
+	float threshold = 1.0 - cloud_cover;
+	float cover = smoothstep(threshold, threshold + cloud_softness, n);
+	// Fine detail only frays the thin edges a little; it never shows inside the body.
+	float detail = texture(cloud_noise, uv * 2.3 + warp + evolve).g;
+	cover *= mix(1.0, smoothstep(0.15, 0.85, detail), 0.45 * (1.0 - cover));
+	float thickness = smoothstep(threshold, threshold + cloud_softness * 3.0, n);
+	// Fewer, fainter clouds toward the horizon, where the deck would stretch into streaks.
+	cover *= smoothstep(0.04, 0.3, up);
+	// Moonlight: thin parts and anything near the moon glow silver; thick bodies stay dark.
+	float mc = max(dot(d, m), 0.0);
+	float scatter = pow(mc, 6.0) * 0.45 + pow(mc, 50.0) * 1.2 + pow(mc, 600.0) * 2.0;
+	vec3 col = mix(cloud_lit, cloud_dark, thickness * 0.75);
+	col += halo_color * scatter * mix(1.0, 0.35, thickness);
+	col = mix(horizon_color * 0.9, col, smoothstep(0.02, 0.35, up));
+	return vec4(col, cover * 0.92);
+}
 
 void vertex() {
 	world_dir = (MODEL_MATRIX * vec4(VERTEX, 0.0)).xyz;
@@ -26,23 +63,19 @@ void fragment() {
 	float moon_mask;
 	vec3 disc = moon_disc(d, m, moon_mask);
 	float up = d.y;
-	// Stars: fewer near the moon and in the haze, none below the horizon.
-	float moon_wash = 1.0 - smoothstep(0.75, 0.995, dot(d, m)) * 0.85;
-	float haze = smoothstep(0.02, 0.32, up);
-	float s = stars(d, 160.0, star_density, 0.0) + stars(d, 330.0, star_density * 0.9, 3.0) * 0.6;
-	c += vec3(0.85, 0.9, 1.0) * s * star_energy * haze * moon_wash;
-	// Thin clouds on a plane overhead, drifting; lit silver near the moon, dark grey elsewhere.
+	// A handful of fixed stars, dimmed by the moon's glare and the horizon haze.
+	float moon_wash = 1.0 - smoothstep(0.8, 0.995, dot(d, m)) * 0.9;
+	float haze = smoothstep(0.05, 0.3, up);
+	float px = max(length(fwidth(d)), 0.0004);
+	float star_light = night_stars(d, px) * star_energy * haze * moon_wash;
 	if (up > 0.0) {
-		vec2 plane = d.xz / (up + 0.18);
-		vec2 drift = vec2(TIME * cloud_speed, TIME * cloud_speed * 0.4);
-		float n = fbm(plane * 1.6 + drift) * 0.7 + fbm(plane * 4.1 - drift * 1.7) * 0.3;
-		float cover = smoothstep(1.0 - cloud_cover, 1.0 - cloud_cover + 0.32, n) * smoothstep(0.0, 0.18, up);
-		float lit = pow(max(dot(d, m), 0.0), 8.0);
-		vec3 cloud = mix(vec3(0.03, 0.04, 0.06), vec3(0.42, 0.47, 0.56), lit) + halo_color * 0.05;
-		c = mix(c, cloud, cover * 0.85);
-		// Clouds drift across the moon and veil it.
-		moon_mask *= 1.0 - cover * 0.75;
+		vec4 cl = clouds(d, m, up);
+		// Clouds hide the stars and the moon behind their thick parts; thin veils let a glow through.
+		star_light *= 1.0 - cl.a;
+		c = mix(c, cl.rgb, cl.a);
+		moon_mask *= 1.0 - cl.a * mix(0.55, 0.97, cl.a);
 	}
+	c += vec3(0.85, 0.9, 1.0) * star_light;
 	c = mix(c, disc, moon_mask);
 	// Far land: a mountain range and a ragged tree line, both melting into the horizon haze.
 	if (land_energy > 0.0) {

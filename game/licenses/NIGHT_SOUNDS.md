@@ -16,6 +16,16 @@ high-passed at 120 Hz, normalised; looping beds crossfaded) into `game/assets/au
 | cricket_field.ogg | [Field cricket unedited.ogg](https://commons.wikimedia.org/wiki/File:Field_cricket_unedited.ogg) | Thatcher | CC BY-SA 3.0 |
 | cricket_gryllus.ogg | [Cricket Gryllus bimaculatus Chirps.oga](https://commons.wikimedia.org/wiki/File:Cricket_Gryllus_bimaculatus_Chirps.oga) | Rickjpelleg | CC BY-SA 4.0 |
 
+Dog barks (0.8), cut by `tools/assets/fetch_dogs.py` (trimmed, mono, band-passed 220-3200 Hz so they sound far off,
+normalised) and played far from the player by `night_audio.gd`:
+
+| File | Original | Author | Licence |
+|---|---|---|---|
+| dog_bark_a.ogg, dog_bark_b.ogg | [Barking dog in Rome.ogg](https://commons.wikimedia.org/wiki/File:Barking_dog_in_Rome.ogg) | Nicholas Gemini | CC BY-SA 3.0 |
+| dog_bark_c.ogg | [Barking of a dog 2.ogg](https://commons.wikimedia.org/wiki/File:Barking_of_a_dog_2.ogg) | Amada44 | CC BY-SA 3.0 |
+| dog_bark_d.ogg, dog_bark_e.ogg | [Rottweiler Barking.oga](https://commons.wikimedia.org/wiki/File:Rottweiler_Barking.oga) | MichaeltheFox8621 | CC BY-SA 4.0 |
+| dog_pack.ogg | [Seis perros ladrando.wav](https://commons.wikimedia.org/wiki/File:Seis_perros_ladrando.wav) | Luis Alvaz | CC BY-SA 4.0 |
+
 Licences: https://creativecommons.org/licenses/by-sa/4.0/, https://creativecommons.org/licenses/by-sa/3.0/,
 https://creativecommons.org/licenses/by/4.0/, https://creativecommons.org/publicdomain/zero/1.0/.
 The wind, the low drone and the bamboo creak are synthesised at runtime.

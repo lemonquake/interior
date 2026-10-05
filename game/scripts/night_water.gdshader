@@ -62,8 +62,10 @@ float cell_kind(vec2 p) {
 void fragment() {
 	vec2 uv = world_pos.xz;
 	float gust = clamp(wind_gust, 0.0, 1.0);
-	vec2 t1 = TIME * time_scale * wave_direction * (1.0 + gust);
-	vec2 t2 = TIME * time_scale * wave_direction2 * (1.0 + gust * 0.6);
+	// Constant scroll speed. (0.7 scaled TIME itself by the gust, so every gust jumped the ripples by
+	// TIME * time_scale: after a few minutes of play the water raced. Gusts now only roughen the surface.)
+	vec2 t1 = TIME * time_scale * wave_direction;
+	vec2 t2 = TIME * time_scale * wave_direction2;
 	vec3 na = texture(ripple_a, uv * ripple_scale_a + t1).rgb * 2.0 - 1.0;
 	vec3 nb = texture(ripple_b, uv * ripple_scale_b + t2).rgb * 2.0 - 1.0;
 	float strength = ripple_strength * (1.0 + gust * wind_ripples);
@@ -79,7 +81,7 @@ void fragment() {
 	vec3 m = normalize(moon_direction);
 	vec3 sky = sky_colour(r, true);
 	if (reflect_stars) {
-		sky += vec3(0.85, 0.9, 1.0) * stars(r, 160.0, star_density, 0.0) * star_energy * 0.6 * smoothstep(0.03, 0.3, r.y);
+		sky += vec3(0.85, 0.9, 1.0) * night_stars(r, 0.0035) * star_energy * 0.6 * smoothstep(0.03, 0.3, r.y);
 	}
 	float cos_v = max(dot(n, v), 0.0);
 	float fres = 0.02 + 0.98 * pow(1.0 - cos_v, 5.0);

@@ -24,10 +24,12 @@ const SKY_PARAMS := {
 	"sky_color": Color(.012, .02, .045),
 	"horizon_color": Color(.075, .09, .125),
 	"halo_color": Color(.35, .42, .55),
-	"star_density": .11,
-	"star_energy": 2.2,
-	"cloud_cover": .38,
+	"star_count": 20,
+	"star_energy": 2.6,
+	"cloud_cover": .34,
+	"cloud_speed": .0015,
 }
+const CLOUD_NOISE := "res://assets/fields/sky/cloud_noise.png"
 
 static func sky_material() -> ShaderMaterial:
 	var material := ShaderMaterial.new()
@@ -42,6 +44,9 @@ static func configure_sky(material: ShaderMaterial) -> void:
 		material.set_shader_parameter(key, SKY_PARAMS[key])
 	if ResourceLoader.exists(MOON_TEXTURE):
 		material.set_shader_parameter("moon_texture", load(MOON_TEXTURE))
+	if material.shader == SKY_SHADER and ResourceLoader.exists(CLOUD_NOISE):
+		material.set_shader_parameter("cloud_noise", load(CLOUD_NOISE))
+		material.set_shader_parameter("cloud_scale", .22)
 
 static func moon_basis() -> Basis:
 	return Basis.looking_at(-MOON_DIRECTION.normalized(), Vector3.UP)

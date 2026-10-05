@@ -291,4 +291,19 @@ room on the emulator if one is available (physical-device performance stays unme
   (`git add <your files> && git commit -m "<component>: <summary>"`), ending the message with
   `Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>`. Never commit `work/`, `.local/`, `builds/`, `.godot/`.
 - Write `A:/3rd Harmonik/interior/work/v3/<component>/handoff.md`: what changed, files, how to run/verify, results,
-  known gaps, interface deviations.
+  known gaps, interface deviations, and a **Screenshots** section listing every image you saved (path + one-line
+  caption).
+
+## 11. Progress screenshots (owner request, 2026-10-05)
+
+The owner asked to receive screenshots as changes are made so they can follow along. Therefore:
+
+- Every component that changes anything visible (assets, materials, lighting, UI, pets, room integration) saves
+  real rendered screenshots of its work to `A:/3rd Harmonik/interior/work/v3/<component>/screens/` as it goes —
+  at minimum one early "first working version" shot and one final shot per deliverable. Physics saves frame
+  sequences or contact sheets of rolling/toppling/holding behaviour from a rendered sandbox run.
+- Use PNG or JPG, 1280×720 or 1920×1080, real renders only (Godot window captures or Blender renders). Name files
+  `NN-<what>.png` in the order produced (`01-coffee-table-first.png`, `02-coffee-table-bevels.png`, ...).
+- Before/after pairs are encouraged when replacing something that existed.
+- List them in the handoff's **Screenshots** section. The orchestrator forwards them to the owner while work is in
+  progress; do not send files to the owner yourself.

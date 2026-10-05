@@ -1,0 +1,170 @@
+{
+ "guitar_ibanez": {
+  "uid": "daeadd913644438aa3096bb357a02016",
+  "name": "ibanez jem guitar",
+  "user": "abazibiz",
+  "license": "CC Attribution",
+  "url": "https://sketchfab.com/3d-models/daeadd913644438aa3096bb357a02016"
+ },
+ "guitar_sg": {
+  "uid": "2007af7561fe46958d1f7e92dff8a40d",
+  "name": "Gibson SG Guitar",
+  "user": "Ryan_Nein",
+  "license": "CC Attribution",
+  "url": "https://sketchfab.com/3d-models/2007af7561fe46958d1f7e92dff8a40d"
+ },
+ "guitar_lespaul": {
+  "uid": "d75216a52ff14a56aa40b6fec844ecd2",
+  "name": "Guitar: Gibson Les Paul Standard",
+  "user": "JonasSchramme",
+  "license": "CC Attribution",
+  "url": "https://sketchfab.com/3d-models/d75216a52ff14a56aa40b6fec844ecd2"
+ },
+ "guitar_acoustic_a": {
+  "uid": "f8ccd75e8c2648ffbbc9e6208ed919c1",
+  "name": "Guitar",
+  "user": "Yarik16",
+  "license": "CC Attribution",
+  "url": "https://sketchfab.com/3d-models/f8ccd75e8c2648ffbbc9e6208ed919c1"
+ },
+ "guitar_acoustic_b": {
+  "uid": "b52fcec4b641493f8939c50c253c4ac3",
+  "name": "Acoustic Guitar",
+  "user": "afurokn",
+  "license": "CC Attribution",
+  "url": "https://sketchfab.com/3d-models/b52fcec4b641493f8939c50c253c4ac3"
+ },
+ "bass_precision": {
+  "uid": "79294354b1f5484cb8881feba4684af1",
+  "name": "Fender Precision bass 1953",
+  "user": "stefann22",
+  "license": "CC Attribution",
+  "url": "https://sketchfab.com/3d-models/79294354b1f5484cb8881feba4684af1"
+ },
+ "drum_kit": {
+  "uid": "99218427e7a2424ea8afc9b8c668a5c7",
+  "name": "Drum Kit",
+  "user": "Serg.Morgun",
+  "license": "CC Attribution",
+  "url": "https://sketchfab.com/3d-models/99218427e7a2424ea8afc9b8c668a5c7"
+ },
+ "synth_wood": {
+  "uid": "736c46af07c54a7fb0eb6f93a6398cdf",
+  "name": "Synthesizer",
+  "user": "pixelflygraphics",
+  "license": "CC Attribution",
+  "url": "https://sketchfab.com/3d-models/736c46af07c54a7fb0eb6f93a6398cdf"
+ },
+ "synth_b": {
+  "uid": "d08405ec155e429fa7f608e03552a4cc",
+  "name": "Synthesizer",
+  "user": "Vlad_Is_Love",
+  "license": "CC Attribution",
+  "url": "https://sketchfab.com/3d-models/d08405ec155e429fa7f608e03552a4cc"
+ },
+ "midi_controller": {
+  "uid": "1d5198102a4746c48f68fc30817479ba",
+  "name": "Midi Controller Keyboard",
+  "user": "kylermichaelson",
+  "license": "CC Attribution",
+  "url": "https://sketchfab.com/3d-models/1d5198102a4746c48f68fc30817479ba"
+ },
+ "amp_marshall": {
+  "uid": "cd52e1b5299a40968f44c209899b4597",
+  "name": "Marshall Guitar Amp",
+  "user": "dentro",
+  "license": "CC Attribution",
+  "url": "https://sketchfab.com/3d-models/cd52e1b5299a40968f44c209899b4597"
+ },
+ "amp_orange": {
+  "uid": "be36a541b49e4187966ba83a50a24138",
+  "name": "Guitar Amplifier",
+  "user": "thesidekick",
+  "license": "CC Attribution",
+  "url": "https://sketchfab.com/3d-models/be36a541b49e4187966ba83a50a24138"
+ },
+ "audio_interface": {
+  "uid": "ff1fa96845354c189d6e8df6e4264ae1",
+  "name": "Audio Interface",
+  "user": "vadim92.34",
+  "license": "CC Attribution",
+  "url": "https://sketchfab.com/3d-models/ff1fa96845354c189d6e8df6e4264ae1"
+ },
+ "studio_monitor_krk": {
+  "uid": "5c03f6b1082a4decb33ae7511209271a",
+  "name": "KRK Classic 5 Studio Monitor Speaker",
+  "user": "TheGiwi",
+  "license": "CC Attribution",
+  "url": "https://sketchfab.com/3d-models/5c03f6b1082a4decb33ae7511209271a"
+ },
+ "mic_boom_stand": {
+  "uid": "9bee76120cd8472b9f68db91d820f5ff",
+  "name": "Microphone Stand With Boom Arm (Legged)",
+  "user": "JMGameDev",
+  "license": "CC Attribution",
+  "url": "https://sketchfab.com/3d-models/9bee76120cd8472b9f68db91d820f5ff"
+ },
+ "headphones_sony": {
+  "uid": "05735b74d3524f00b648231138122a28",
+  "name": "Sony MDR-7506 Headphones",
+  "user": "AndreiVNK",
+  "license": "CC Attribution",
+  "url": "https://sketchfab.com/3d-models/05735b74d3524f00b648231138122a28"
+ },
+ "gaming_chair": {
+  "uid": "601afdea98f14c488ee0be0ffb4b92dd",
+  "name": "Gaming chair",
+  "user": "snjvsngh_negi",
+  "license": "CC Attribution",
+  "url": "https://sketchfab.com/3d-models/601afdea98f14c488ee0be0ffb4b92dd"
+ },
+ "guitar_stand": {
+  "uid": "f542226cabfd48a9b3e61bc0b285c3a1",
+  "name": "Wooden guitar stand / rack",
+  "user": "deepdown",
+  "license": "CC Attribution",
+  "url": "https://sketchfab.com/3d-models/f542226cabfd48a9b3e61bc0b285c3a1"
+ },
+ "monitor_curved_pc": {
+  "uid": "ad00f460c13743a8bd1f91c230c7142c",
+  "name": "Gaming PC with Curved Monitor",
+  "user": "sinnik",
+  "license": "CC Attribution",
+  "url": "https://sketchfab.com/3d-models/ad00f460c13743a8bd1f91c230c7142c"
+ },
+ "palm_coconut_a": {
+  "uid": "26e787f2ff2e4c0fb004c3b0210805a3",
+  "name": "Coconut Palm",
+  "user": "evolveduk",
+  "license": "CC Attribution",
+  "url": "https://sketchfab.com/3d-models/26e787f2ff2e4c0fb004c3b0210805a3"
+ },
+ "palm_coconut_b": {
+  "uid": "20f8a8d5054b4191afb7cf3270dbd586",
+  "name": "Palm Trees",
+  "user": "ElectroNick",
+  "license": "CC Attribution",
+  "url": "https://sketchfab.com/3d-models/20f8a8d5054b4191afb7cf3270dbd586"
+ },
+ "tree_mango": {
+  "uid": "4b186052228d43d8b3fbb63213677de8",
+  "name": "Mango Tree",
+  "user": "stealth86",
+  "license": "CC Attribution",
+  "url": "https://sketchfab.com/3d-models/4b186052228d43d8b3fbb63213677de8"
+ },
+ "banana_small": {
+  "uid": "7186ebfc24fc42c599f81713cd28d55e",
+  "name": "Banana Tree",
+  "user": "DJMiddi",
+  "license": "CC Attribution",
+  "url": "https://sketchfab.com/3d-models/7186ebfc24fc42c599f81713cd28d55e"
+ },
+ "banana_plant": {
+  "uid": "3b658ecad29f4d9a9606dbf8fea7c9bb",
+  "name": "Banana tree",
+  "user": "1.Quad",
+  "license": "CC Attribution",
+  "url": "https://sketchfab.com/3d-models/3b658ecad29f4d9a9606dbf8fea7c9bb"
+ }
+}

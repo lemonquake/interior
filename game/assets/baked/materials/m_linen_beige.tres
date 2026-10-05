@@ -1,0 +1,22 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/surfaces/linen_color.jpg" id="1_du8ox"]
+[ext_resource type="Texture2D" path="res://assets/surfaces/linen_normal.png" id="2_kc5o8"]
+[ext_resource type="Texture2D" path="res://assets/surfaces/linen_roughness.jpg" id="3_kn5sr"]
+
+[resource]
+resource_name = "M_linen_beige"
+albedo_color = Color(0.96, 0.9, 0.82, 1)
+albedo_texture = ExtResource("1_du8ox")
+metallic_specular = 0.25
+roughness_texture = ExtResource("3_kn5sr")
+normal_enabled = true
+normal_scale = 0.6
+normal_texture = ExtResource("2_kc5o8")
+rim_enabled = true
+rim = 0.25
+rim_tint = 0.6
+uv1_scale = Vector3(3.3333333, 3.3333333, 3.3333333)
+uv1_triplanar = true
+uv1_triplanar_sharpness = 6.0
+texture_filter = 5

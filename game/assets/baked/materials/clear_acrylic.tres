@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[resource]
+resource_name = "Clear acrylic"
+transparency = 4
+cull_mode = 2
+albedo_color = Color(0.86504203, 0.92119145, 0.9546871, 0.2)
+roughness = 0.1

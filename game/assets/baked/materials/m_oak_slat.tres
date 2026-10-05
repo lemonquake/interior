@@ -1,0 +1,19 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/materials/oak_slat_color.jpg" id="1_t1gb0"]
+[ext_resource type="Texture2D" path="res://assets/materials/oak_slat_normal.png" id="2_aei67"]
+[ext_resource type="Texture2D" path="res://assets/materials/oak_slat_roughness.jpg" id="3_7n4e3"]
+
+[resource]
+resource_name = "M_oak_slat"
+albedo_texture = ExtResource("1_t1gb0")
+metallic_specular = 0.45
+roughness = 0.928
+roughness_texture = ExtResource("3_7n4e3")
+normal_enabled = true
+normal_scale = 0.8
+normal_texture = ExtResource("2_aei67")
+uv1_scale = Vector3(0.8333333, 0.8333333, 0.8333333)
+uv1_triplanar = true
+uv1_triplanar_sharpness = 6.0
+texture_filter = 5

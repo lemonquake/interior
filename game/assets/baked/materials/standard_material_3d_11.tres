@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/baked/textures/noise_texture_2d.res" id="1_xbsao"]
+
+[resource]
+albedo_color = Color(0.72, 0.59, 0.4, 1)
+roughness = 0.8
+normal_enabled = true
+normal_scale = 0.22
+normal_texture = ExtResource("1_xbsao")
+uv1_scale = Vector3(3, 3, 1)

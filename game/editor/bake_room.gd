@@ -11,6 +11,7 @@ const RoomBuilder = preload("res://scripts/room_builder.gd")
 const PetSpawner = preload("res://scripts/pet_spawner.gd")
 const OUT_SCENE := "res://scenes/room/living_room.tscn"
 const BAKED_DIR := "res://assets/baked"
+const SETTLE_FRAMES := 120
 
 var _done: Dictionary = {}
 var _used_paths: Dictionary = {}
@@ -32,6 +33,7 @@ func _bake() -> void:
 		return
 	for i in 3:
 		await process_frame
+	await _settle(room)
 	_clear_directory(ProjectSettings.globalize_path(BAKED_DIR))
 	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(OUT_SCENE.get_base_dir()))
 	_convert_pets(room)
@@ -51,6 +53,54 @@ func _bake() -> void:
 	_stats["scene"] = OUT_SCENE
 	print("INTERIOR_BAKE ", JSON.stringify(_stats))
 	quit(0)
+
+## Authored poses can float a few millimetres above their supports. Let loose props
+## drop onto them so nothing jumps when first touched. Props that move far or tilt
+## (an unstable stack) keep their authored pose instead.
+func _settle(room: Node) -> void:
+	var bodies: Array[Node] = []
+	_collect(room, func(node: Node) -> bool: return node is InteriorObject and not node.anchored, bodies)
+	var start: Dictionary = {}
+	PhysicsServer3D.set_active(true)
+	for body: InteriorObject in bodies:
+		start[body] = body.global_transform
+		body.dormant = false
+		body.freeze = false
+		body.sleeping = false
+	var restless: Dictionary = {}
+	for i in SETTLE_FRAMES:
+		await physics_frame
+		if i >= SETTLE_FRAMES - 30:
+			for body: InteriorObject in bodies:
+				if body.linear_velocity.length() > 0.02 or body.angular_velocity.length() > 0.2:
+					restless[body] = true
+	var kept := 0
+	var reverted: Array[String] = []
+	var anchored: Array[String] = []
+	for body: InteriorObject in bodies:
+		var before: Transform3D = start[body]
+		var after := body.global_transform
+		var tilt := rad_to_deg(before.basis.get_rotation_quaternion().angle_to(after.basis.get_rotation_quaternion()))
+		body.linear_velocity = Vector3.ZERO
+		body.angular_velocity = Vector3.ZERO
+		if restless.has(body) or before.origin.distance_to(after.origin) > 0.05 or tilt > 15.0:
+			# Unstable authored arrangement: keep the authored pose (asleep). Heavy furniture
+			# is also held until grabbed, so a bump does not leave it rocking or toppling.
+			body.global_transform = before
+			reverted.append(String(body.name))
+			if body.mass >= 8.0:
+				body.anchored = true
+				body.freeze_mode = RigidBody3D.FREEZE_MODE_STATIC
+				body.freeze = true
+				anchored.append(String(body.name))
+		else:
+			kept += 1
+		body.start_asleep = true
+		body.home_transform = body.global_transform
+	PhysicsServer3D.set_active(false)
+	_stats["settled"] = kept
+	_stats["kept_authored_pose"] = reverted
+	_stats["anchored_unstable"] = anchored
 
 ## Animated pets are rebuilt at runtime by InteriorPetSpawner; keep a static preview.
 func _convert_pets(room: Node) -> void:

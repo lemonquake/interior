@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[resource]
+resource_name = "Clear acrylic / tactile room finish"
+transparency = 1
+cull_mode = 2
+albedo_color = Color(0.69, 0.8, 0.85, 0.13)
+metallic_specular = 0.56
+roughness = 0.12
+disable_receive_shadows = true

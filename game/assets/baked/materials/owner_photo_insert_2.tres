@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/living_room_portrait_2.jpg" id="1_8cas1"]
+
+[resource]
+resource_name = "Owner photo insert 2"
+cull_mode = 2
+albedo_texture = ExtResource("1_8cas1")
+roughness = 0.72
+metadata/_gltf_primary_texture_coord = 0

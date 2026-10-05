@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[resource]
+resource_name = "Red petals"
+cull_mode = 2
+albedo_color = Color(0.7735731, 0.12835404, 0.17184411, 1)
+roughness = 0.57

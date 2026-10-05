@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[resource]
+resource_name = "Dark stained table wood"
+cull_mode = 2
+albedo_color = Color(0.36556464, 0.22658293, 0.1428257, 1)
+roughness = 0.34

@@ -1,0 +1,21 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/surfaces/crib_canvas_color.jpg" id="1_8qf2y"]
+[ext_resource type="Texture2D" path="res://assets/surfaces/crib_canvas_normal.png" id="2_utava"]
+[ext_resource type="Texture2D" path="res://assets/surfaces/crib_canvas_roughness.jpg" id="3_visim"]
+
+[resource]
+resource_name = "M_canvas_gray"
+albedo_texture = ExtResource("1_8qf2y")
+metallic_specular = 0.25
+roughness_texture = ExtResource("3_visim")
+normal_enabled = true
+normal_scale = 0.6
+normal_texture = ExtResource("2_utava")
+rim_enabled = true
+rim = 0.25
+rim_tint = 0.6
+uv1_scale = Vector3(3.3333333, 3.3333333, 3.3333333)
+uv1_triplanar = true
+uv1_triplanar_sharpness = 6.0
+texture_filter = 5

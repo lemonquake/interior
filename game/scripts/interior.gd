@@ -54,6 +54,11 @@ func _ready() -> void:
 	if not control_lab and not _build_living_room():
 		control_lab = true
 	if control_lab:
+		# The control lab replaces the furnished room that main.tscn instances.
+		var baked_room := get_node_or_null("LivingRoom")
+		if baked_room != null:
+			remove_child(baked_room)
+			baked_room.free()
 		_build_control_test_room()
 	player = PlayerScript.new()
 	player.name = "Player"
@@ -67,7 +72,7 @@ func _ready() -> void:
 	room_audio.name = "RoomAudio"
 	add_child(room_audio)
 	room_audio.setup(self, player)
-	var initial_quality := 0 if mobile else 1
+	var initial_quality := 0 if mobile else 2
 	if "--quality-high" in OS.get_cmdline_user_args():
 		initial_quality = 2
 	elif "--quality-low" in OS.get_cmdline_user_args():

@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/materials/foliage_color.jpg" id="1_uyu60"]
+[ext_resource type="Texture2D" path="res://assets/materials/foliage_normal.png" id="2_rbqm4"]
+[ext_resource type="Texture2D" path="res://assets/materials/foliage_roughness.jpg" id="3_bf74p"]
+
+[resource]
+resource_name = "M_foliage"
+albedo_color = Color(0.85, 1, 0.82, 1)
+albedo_texture = ExtResource("1_uyu60")
+metallic_specular = 0.4
+roughness = 0.992
+roughness_texture = ExtResource("3_bf74p")
+normal_enabled = true
+normal_scale = 0.5
+normal_texture = ExtResource("2_rbqm4")
+texture_filter = 5

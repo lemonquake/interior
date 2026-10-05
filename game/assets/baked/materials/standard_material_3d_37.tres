@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/surfaces/leaf_color.jpg" id="1_lcgb6"]
+[ext_resource type="Texture2D" path="res://assets/surfaces/leaf_normal.png" id="2_ng666"]
+[ext_resource type="Texture2D" path="res://assets/surfaces/leaf_roughness.jpg" id="3_basdt"]
+
+[resource]
+cull_mode = 2
+albedo_texture = ExtResource("1_lcgb6")
+metallic_specular = 0.2
+roughness_texture = ExtResource("3_basdt")
+normal_enabled = true
+normal_scale = 0.58
+normal_texture = ExtResource("2_ng666")

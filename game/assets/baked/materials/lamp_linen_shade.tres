@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/surfaces/linen_color.jpg" id="1_f5r5x"]
+
+[resource]
+resource_name = "Lamp linen shade"
+cull_mode = 2
+albedo_color = Color(0.93, 0.88, 0.8, 1)
+albedo_texture = ExtResource("1_f5r5x")
+roughness = 0.95
+emission_enabled = true
+emission = Color(1, 0.814313, 0.47906804, 1)
+emission_energy_multiplier = 0.55

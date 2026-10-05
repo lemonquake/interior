@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[resource]
+resource_name = "M_toy_red"
+albedo_color = Color(0.72, 0.12, 0.09, 1)
+roughness = 0.5
+texture_filter = 5

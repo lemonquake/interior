@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[resource]
+resource_name = "Lighting emissive"
+albedo_color = Color(1, 0.91210234, 0.7585637, 1)
+roughness = 0.4
+emission_enabled = true
+emission = Color(1, 0.8535039, 0.5976062, 1)
+emission_energy_multiplier = 4.0

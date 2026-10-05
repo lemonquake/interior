@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/materials/quartz_color.jpg" id="1_5grd8"]
+[ext_resource type="Texture2D" path="res://assets/materials/quartz_roughness.jpg" id="2_rtwtb"]
+
+[resource]
+resource_name = "M_quartz_counter"
+albedo_texture = ExtResource("1_5grd8")
+roughness = 0.4
+roughness_texture = ExtResource("2_rtwtb")
+uv1_scale = Vector3(0.8333333, 0.8333333, 0.8333333)
+uv1_triplanar = true
+uv1_triplanar_sharpness = 6.0
+texture_filter = 5

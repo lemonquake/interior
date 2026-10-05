@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[resource]
+resource_name = "Reference room / dark recess"
+albedo_color = Color(0.032, 0.037, 0.039, 1)
+metallic_specular = 0.28
+roughness = 0.92
+texture_filter = 5

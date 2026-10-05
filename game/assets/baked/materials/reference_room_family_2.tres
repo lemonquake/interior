@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/family/family_2.jpg" id="1_5oo3n"]
+
+[resource]
+resource_name = "Reference room / family 2"
+albedo_texture = ExtResource("1_5oo3n")
+metallic_specular = 0.12
+roughness = 0.82
+texture_filter = 5

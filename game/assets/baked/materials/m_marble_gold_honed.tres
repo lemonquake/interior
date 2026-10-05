@@ -1,0 +1,17 @@
+[gd_resource type="ORMMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/materials/marble_gold_color.jpg" id="1_276e0"]
+[ext_resource type="Texture2D" path="res://assets/materials/marble_gold_normal.png" id="2_654o7"]
+[ext_resource type="Texture2D" path="res://assets/materials/marble_gold_orm.jpg" id="3_xjm1q"]
+
+[resource]
+resource_name = "M_marble_gold_honed"
+albedo_texture = ExtResource("1_276e0")
+orm_texture = ExtResource("3_xjm1q")
+normal_enabled = true
+normal_scale = 0.4
+normal_texture = ExtResource("2_654o7")
+uv1_scale = Vector3(0.625, 0.625, 0.625)
+uv1_triplanar = true
+uv1_triplanar_sharpness = 6.0
+texture_filter = 5

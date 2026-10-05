@@ -1,0 +1,19 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/materials/ceramic_color.jpg" id="1_5afau"]
+[ext_resource type="Texture2D" path="res://assets/materials/ceramic_normal.png" id="2_f783l"]
+[ext_resource type="Texture2D" path="res://assets/materials/ceramic_roughness.jpg" id="3_lefs4"]
+
+[resource]
+resource_name = "M_ceramic_sage"
+albedo_color = Color(0.62, 0.7, 0.6, 1)
+albedo_texture = ExtResource("1_5afau")
+roughness = 0.352
+roughness_texture = ExtResource("3_lefs4")
+normal_enabled = true
+normal_scale = 0.2
+normal_texture = ExtResource("2_f783l")
+uv1_scale = Vector3(3.3333333, 3.3333333, 3.3333333)
+uv1_triplanar = true
+uv1_triplanar_sharpness = 6.0
+texture_filter = 5

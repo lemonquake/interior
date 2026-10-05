@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[resource]
+resource_name = "Plant foliage"
+cull_mode = 2
+albedo_color = Color(0.26006746, 0.5168811, 0.17558163, 1)
+roughness = 0.69

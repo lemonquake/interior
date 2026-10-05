@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/reference_room/pale_slat_color.jpg" id="1_b6cii"]
+[ext_resource type="Texture2D" path="res://assets/reference_room/pale_slat_normal.png" id="2_38uub"]
+[ext_resource type="Texture2D" path="res://assets/reference_room/pale_slat_roughness.jpg" id="3_s7i1y"]
+
+[resource]
+resource_name = "Reference room / slat"
+albedo_texture = ExtResource("1_b6cii")
+metallic_specular = 0.28
+roughness_texture = ExtResource("3_s7i1y")
+normal_enabled = true
+normal_scale = 0.2
+normal_texture = ExtResource("2_38uub")
+uv1_triplanar = true
+texture_filter = 5

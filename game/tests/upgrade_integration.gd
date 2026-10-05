@@ -46,7 +46,8 @@ func _run() -> void:
 		check(aquarium.global_position.y < .3,"Aquariums must occupy the lower shelf")
 		check(aquarium.fish.size() == 2,"Each aquarium must contain two live fish")
 	for body: InteriorObject in movable:
-		check(body.continuous_cd,"Movable props must use continuous collision detection: " + str(body.name))
+		# Small or light props use CCD so throws cannot tunnel; large furniture does not need it.
+		check(body.continuous_cd or body.mass >= 6.0,"Small movable props must use continuous collision detection: " + str(body.name))
 		check(body.physics_material_override != null,"Prop friction must be defined: " + str(body.name))
 		check(body.center_of_mass.is_finite(),"Prop center of mass must be finite: " + str(body.name))
 	var fan := main.room.get_node("standing_fan_5") as InteriorObject

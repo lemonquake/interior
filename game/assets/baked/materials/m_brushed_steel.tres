@@ -1,0 +1,20 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/materials/brushed_color.jpg" id="1_0uov5"]
+[ext_resource type="Texture2D" path="res://assets/materials/brushed_normal.png" id="2_t58rb"]
+[ext_resource type="Texture2D" path="res://assets/materials/brushed_roughness.jpg" id="3_mw8gy"]
+
+[resource]
+resource_name = "M_brushed_steel"
+albedo_color = Color(0.74, 0.73, 0.71, 1)
+albedo_texture = ExtResource("1_0uov5")
+metallic = 1.0
+roughness = 0.512
+roughness_texture = ExtResource("3_mw8gy")
+normal_enabled = true
+normal_scale = 0.3
+normal_texture = ExtResource("2_t58rb")
+uv1_scale = Vector3(2.5, 2.5, 2.5)
+uv1_triplanar = true
+uv1_triplanar_sharpness = 6.0
+texture_filter = 5

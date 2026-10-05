@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[resource]
+resource_name = "Black plastic and steel"
+cull_mode = 2
+albedo_color = Color(0.13335153, 0.15170372, 0.16007765, 1)
+roughness = 0.26

@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/materials/orange_peel_color.jpg" id="1_4awvn"]
+[ext_resource type="Texture2D" path="res://assets/materials/orange_peel_normal.png" id="2_g8n4i"]
+[ext_resource type="Texture2D" path="res://assets/materials/orange_peel_roughness.jpg" id="3_bjw5u"]
+
+[resource]
+resource_name = "M_orange_peel"
+albedo_texture = ExtResource("1_4awvn")
+metallic_specular = 0.45
+roughness = 0.88
+roughness_texture = ExtResource("3_bjw5u")
+normal_enabled = true
+normal_scale = 0.6
+normal_texture = ExtResource("2_g8n4i")
+texture_filter = 5

@@ -1,0 +1,21 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/surfaces/rug_color.jpg" id="1_5lc6c"]
+[ext_resource type="Texture2D" path="res://assets/surfaces/rug_normal.png" id="2_3getx"]
+[ext_resource type="Texture2D" path="res://assets/surfaces/rug_roughness.jpg" id="3_u6st4"]
+
+[resource]
+resource_name = "M_rug_wool"
+albedo_texture = ExtResource("1_5lc6c")
+metallic_specular = 0.2
+roughness_texture = ExtResource("3_u6st4")
+normal_enabled = true
+normal_scale = 0.7
+normal_texture = ExtResource("2_3getx")
+rim_enabled = true
+rim = 0.25
+rim_tint = 0.6
+uv1_scale = Vector3(1.25, 1.25, 1.25)
+uv1_triplanar = true
+uv1_triplanar_sharpness = 6.0
+texture_filter = 5

@@ -1,0 +1,19 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/materials/marble_floor_color.jpg" id="1_3mf2s"]
+[ext_resource type="Texture2D" path="res://assets/materials/marble_floor_normal.png" id="2_h3dgo"]
+[ext_resource type="Texture2D" path="res://assets/materials/marble_floor_roughness.jpg" id="3_pdxqo"]
+
+[resource]
+resource_name = "M_marble_floor"
+albedo_color = Color(1, 0.98, 0.95, 1)
+albedo_texture = ExtResource("1_3mf2s")
+roughness = 0.48
+roughness_texture = ExtResource("3_pdxqo")
+normal_enabled = true
+normal_scale = 0.3
+normal_texture = ExtResource("2_h3dgo")
+uv1_scale = Vector3(0.5555556, 0.5555556, 0.5555556)
+uv1_triplanar = true
+uv1_triplanar_sharpness = 6.0
+texture_filter = 5

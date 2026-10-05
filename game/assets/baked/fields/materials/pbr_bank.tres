@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/leafy_grass/albedo.jpg" id="1_qhaqa"]
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/leafy_grass/normal.jpg" id="2_8j8nc"]
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/leafy_grass/roughness.jpg" id="3_tyh2i"]
+
+[resource]
+resource_name = "PBR / bank"
+albedo_color = Color(0.55, 0.62, 0.5, 1)
+albedo_texture = ExtResource("1_qhaqa")
+roughness_texture = ExtResource("3_tyh2i")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("2_8j8nc")
+uv1_scale = Vector3(0.3846154, 0.3846154, 0.3846154)
+texture_filter = 5

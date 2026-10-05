@@ -3,9 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b31ftqtodqn7x"
-path="res://.godot/imported/tree_small_02_tree_small_02_leaves_diff_1k.png-1edfb1eb98293bf4838417b9fcf29b25.ctex"
+path.s3tc="res://.godot/imported/tree_small_02_tree_small_02_leaves_diff_1k.png-1edfb1eb98293bf4838417b9fcf29b25.s3tc.ctex"
+path.etc2="res://.godot/imported/tree_small_02_tree_small_02_leaves_diff_1k.png-1edfb1eb98293bf4838417b9fcf29b25.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "ff0fbda661c01d048c757a3dfaafff7a"
@@ -14,11 +16,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/models/nature/tree_small_02_tree_small_02_leaves_diff_1k.png"
-dest_files=["res://.godot/imported/tree_small_02_tree_small_02_leaves_diff_1k.png-1edfb1eb98293bf4838417b9fcf29b25.ctex"]
+dest_files=["res://.godot/imported/tree_small_02_tree_small_02_leaves_diff_1k.png-1edfb1eb98293bf4838417b9fcf29b25.s3tc.ctex", "res://.godot/imported/tree_small_02_tree_small_02_leaves_diff_1k.png-1edfb1eb98293bf4838417b9fcf29b25.etc2.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -40,4 +42,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

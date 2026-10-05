@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/withered_grass/albedo.jpg" id="1_bor5m"]
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/withered_grass/normal.jpg" id="2_hwv4c"]
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/withered_grass/roughness.jpg" id="3_tgb1t"]
+
+[resource]
+resource_name = "PBR / verge"
+albedo_color = Color(0.62, 0.7, 0.55, 1)
+albedo_texture = ExtResource("1_bor5m")
+roughness_texture = ExtResource("3_tgb1t")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("2_hwv4c")
+uv1_scale = Vector3(0.41666666, 0.41666666, 0.41666666)
+texture_filter = 5

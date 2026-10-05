@@ -9,7 +9,7 @@ var footsteps: AudioStreamPlayer
 const STEP_SOUNDS := {
 	"wood": ["wood", 1.0, -9.0], "carpet": ["carpet", .95, -8.0], "tile": ["concrete", 1.2, -11.0],
 	"concrete": ["concrete", 1.0, -9.0], "asphalt": ["concrete", .86, -9.5], "grass": ["grass", 1.0, -8.0],
-	"metal": ["concrete", 1.3, -10.0],
+	"metal": ["concrete", 1.3, -10.0], "dirt": ["snow", .72, -10.5],
 }
 var _step_streams: Dictionary = {}
 var fan: AudioStreamPlayer3D
@@ -41,7 +41,7 @@ func setup(room: Node3D, character: InteriorPlayer) -> void:
 	footsteps = AudioStreamPlayer.new()
 	footsteps.max_polyphony = 3
 	add_child(footsteps)
-	for set_name in ["wood", "carpet", "concrete", "grass"]:
+	for set_name in ["wood", "carpet", "concrete", "grass", "snow"]:
 		var randomizer := AudioStreamRandomizer.new()
 		randomizer.playback_mode = AudioStreamRandomizer.PLAYBACK_RANDOM_NO_REPEATS
 		randomizer.random_pitch = 1.07

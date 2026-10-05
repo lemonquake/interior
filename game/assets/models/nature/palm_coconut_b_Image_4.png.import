@@ -3,9 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://6n1r32xd3mmw"
-path="res://.godot/imported/palm_coconut_b_Image_4.png-c6cf0907d82bbed3dff849d9516f3dd2.ctex"
+path.s3tc="res://.godot/imported/palm_coconut_b_Image_4.png-c6cf0907d82bbed3dff849d9516f3dd2.s3tc.ctex"
+path.etc2="res://.godot/imported/palm_coconut_b_Image_4.png-c6cf0907d82bbed3dff849d9516f3dd2.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "225f4108a9b31eca9952b826344095fd"
@@ -14,11 +16,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/models/nature/palm_coconut_b_Image_4.png"
-dest_files=["res://.godot/imported/palm_coconut_b_Image_4.png-c6cf0907d82bbed3dff849d9516f3dd2.ctex"]
+dest_files=["res://.godot/imported/palm_coconut_b_Image_4.png-c6cf0907d82bbed3dff849d9516f3dd2.s3tc.ctex", "res://.godot/imported/palm_coconut_b_Image_4.png-c6cf0907d82bbed3dff849d9516f3dd2.etc2.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -40,4 +42,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

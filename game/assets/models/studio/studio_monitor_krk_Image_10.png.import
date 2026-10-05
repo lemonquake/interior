@@ -3,9 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://do01pexxi10ke"
-path="res://.godot/imported/studio_monitor_krk_Image_10.png-d31358a1417b9f7b2559b970e91580cc.ctex"
+path.s3tc="res://.godot/imported/studio_monitor_krk_Image_10.png-d31358a1417b9f7b2559b970e91580cc.s3tc.ctex"
+path.etc2="res://.godot/imported/studio_monitor_krk_Image_10.png-d31358a1417b9f7b2559b970e91580cc.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "f1e33181508c07663b3a63368e4963db"
@@ -14,11 +16,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/models/studio/studio_monitor_krk_Image_10.png"
-dest_files=["res://.godot/imported/studio_monitor_krk_Image_10.png-d31358a1417b9f7b2559b970e91580cc.ctex"]
+dest_files=["res://.godot/imported/studio_monitor_krk_Image_10.png-d31358a1417b9f7b2559b970e91580cc.s3tc.ctex", "res://.godot/imported/studio_monitor_krk_Image_10.png-d31358a1417b9f7b2559b970e91580cc.etc2.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -40,4 +42,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

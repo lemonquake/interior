@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" format=3]
+
+[ext_resource type="Shader" path="res://scripts/firefly.gdshader" id="1_m5syi"]
+
+[resource]
+resource_name = "Fields / firefly"
+render_priority = 0
+shader = ExtResource("1_m5syi")
+shader_parameter/glow_color = Color(0.72, 1, 0.32, 1)
+shader_parameter/energy = 7.0

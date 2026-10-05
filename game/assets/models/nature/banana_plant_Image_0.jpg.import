@@ -3,9 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://badem8wyf50ho"
-path="res://.godot/imported/banana_plant_Image_0.jpg-fd492cf6c50309ea3fff265759cf61e4.ctex"
+path.s3tc="res://.godot/imported/banana_plant_Image_0.jpg-fd492cf6c50309ea3fff265759cf61e4.s3tc.ctex"
+path.etc2="res://.godot/imported/banana_plant_Image_0.jpg-fd492cf6c50309ea3fff265759cf61e4.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "742509d94f973513dbf90904b72cb74b"
@@ -14,11 +16,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/models/nature/banana_plant_Image_0.jpg"
-dest_files=["res://.godot/imported/banana_plant_Image_0.jpg-fd492cf6c50309ea3fff265759cf61e4.ctex"]
+dest_files=["res://.godot/imported/banana_plant_Image_0.jpg-fd492cf6c50309ea3fff265759cf61e4.s3tc.ctex", "res://.godot/imported/banana_plant_Image_0.jpg-fd492cf6c50309ea3fff265759cf61e4.etc2.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -40,4 +42,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

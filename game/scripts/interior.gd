@@ -11,6 +11,7 @@ const RoomVisuals = preload("res://scripts/room_visuals.gd")
 const EnclosureScript = preload("res://scripts/hamster_enclosure.gd")
 const AquariumScript = preload("res://scripts/aquarium.gd")
 const RoomSurroundings = preload("res://scripts/room_surroundings.gd")
+const NightAudioScript = preload("res://scripts/night_audio.gd")
 var player: InteriorPlayer
 var touch: InteriorTouchControls
 var ui: CanvasLayer
@@ -60,7 +61,7 @@ func _ready() -> void:
 		control_lab = true
 	if control_lab:
 		# The control lab replaces the furnished room that main.tscn instances.
-		for baked_name in ["LivingRoom", "Balcony"]:
+		for baked_name in ["LivingRoom", "Balcony", "Fields"]:
 			var baked_room := get_node_or_null(baked_name)
 			if baked_room != null:
 				remove_child(baked_room)
@@ -68,6 +69,8 @@ func _ready() -> void:
 		_build_control_test_room()
 	if not control_lab:
 		_setup_living_props()
+		# Night (0.7): the kitchen window shows the night; the room keeps its own lamps.
+		InteriorNight.apply_room(room)
 	player = PlayerScript.new()
 	player.name = "Player"
 	add_child(player)
@@ -80,6 +83,10 @@ func _ready() -> void:
 	room_audio.name = "RoomAudio"
 	add_child(room_audio)
 	room_audio.setup(self, player)
+	var night_audio := NightAudioScript.new()
+	night_audio.name = "NightAudio"
+	add_child(night_audio)
+	night_audio.setup(self, player)
 	var initial_quality := 0 if mobile else 2
 	if "--quality-high" in OS.get_cmdline_user_args():
 		initial_quality = 2

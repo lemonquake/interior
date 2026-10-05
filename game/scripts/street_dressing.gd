@@ -89,9 +89,7 @@ func _vehicles() -> void:
 	for spec: Array in [
 			["street/tricycle_a", Vector3(19.85, GROUND, 11.0), 180.0, Vector3(0, 0, 1.5)],
 			["street/tricycle_b", Vector3(22.15, GROUND, 27.5), 0.0, Vector3(0, 0, 1.5)],
-			["street/trisikad", Vector3(19.8, GROUND, 13.6), 175.0, Vector3(0, 0, 1.2)],
 			["street/tricycle_a", Vector3(3.5, GROUND, 16.85), 90.0, Vector3(1.5, 0, 0)],
-			["street/trisikad", Vector3(-6.0, GROUND, 19.2), -92.0, Vector3(1.5, 0, 0)],
 			["street/tricycle_b", Vector3(-17.85, GROUND, 31.0), 3.0, Vector3(0, 0, 1.5)],
 			["street/jeepney", Vector3(4.0, GROUND, 47.85), 88.0, Vector3(2.0, 0, 0)],
 			["street/tricycle_a", Vector3(13.5, GROUND, 50.15), -86.0, Vector3(1.5, 0, 0)]]:
@@ -182,7 +180,12 @@ func _barricades() -> void:
 			var mid := Vector3(e, GROUND, centre) if along_x else Vector3(centre, GROUND, e)
 			var across := Vector3.BACK if along_x else Vector3.RIGHT
 			var count := 4
+			# Street B's north end is the way out to the rice fields (0.7): the middle sawhorses
+			# were dragged aside.
+			var way_out := not along_x and is_equal_approx(centre, 21.0) and e > area.get_center().y
 			for k in count:
+				if way_out and (k == 1 or k == 2):
+					continue
 				var t := (float(k) + .5) / count - .5
 				var p := mid + across * t * (w - .3)
 				var y := GROUND + (.12 if absf(t * w) > w * .5 - 1.0 else 0.0)

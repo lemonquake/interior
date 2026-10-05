@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/dark_wooden_planks/albedo.jpg" id="1_rgy26"]
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/dark_wooden_planks/normal.jpg" id="2_s5w1y"]
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/dark_wooden_planks/roughness.jpg" id="3_gqdtf"]
+
+[resource]
+resource_name = "PBR / planks"
+albedo_color = Color(0.7, 0.64, 0.58, 1)
+albedo_texture = ExtResource("1_rgy26")
+roughness_texture = ExtResource("3_gqdtf")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("2_s5w1y")
+uv1_scale = Vector3(0.625, 0.625, 0.625)
+texture_filter = 5

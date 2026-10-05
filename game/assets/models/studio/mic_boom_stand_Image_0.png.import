@@ -3,9 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://hvdg2hhto4dv"
-path="res://.godot/imported/mic_boom_stand_Image_0.png-efdf2cd530c6827a56dbf566431607bf.ctex"
+path.s3tc="res://.godot/imported/mic_boom_stand_Image_0.png-efdf2cd530c6827a56dbf566431607bf.s3tc.ctex"
+path.etc2="res://.godot/imported/mic_boom_stand_Image_0.png-efdf2cd530c6827a56dbf566431607bf.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "499e2a356e7786f5010e547f06b81ca9"
@@ -14,11 +16,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/models/studio/mic_boom_stand_Image_0.png"
-dest_files=["res://.godot/imported/mic_boom_stand_Image_0.png-efdf2cd530c6827a56dbf566431607bf.ctex"]
+dest_files=["res://.godot/imported/mic_boom_stand_Image_0.png-efdf2cd530c6827a56dbf566431607bf.s3tc.ctex", "res://.godot/imported/mic_boom_stand_Image_0.png-efdf2cd530c6827a56dbf566431607bf.etc2.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -40,4 +42,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

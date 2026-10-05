@@ -467,13 +467,13 @@ func _build_gate() -> void:
 		_batches = previous[0]
 		_shell = previous[1]
 
-## Sun at about 3 pm: 40 degrees up, behind the stair view and out over the street (-X, +Z), so the
-## houses across the streets are lit from the front and the view down the stair is not into the sun.
-const SUN_DIRECTION := Vector3(-.627, .643, .440)
+## Night (0.7): the full moon hangs about 20 degrees up over the rooftops across street A (-X, +Z);
+## see InteriorNight.MOON_DIRECTION. The view down the stair is not into it.
+const MOON_DIRECTION := InteriorNight.MOON_DIRECTION
 
 func _build_neighbourhood() -> void:
-	# Streets, houses, trees, poles and the sky dome: scripts/neighborhood_builder.gd.
-	InteriorNeighborhoodBuilder.build(self, _root, SUN_DIRECTION.normalized())
+	# Streets, houses, trees, poles and the night sky dome: scripts/neighborhood_builder.gd.
+	InteriorNeighborhoodBuilder.build(self, _root, MOON_DIRECTION.normalized())
 
 func _wire(a: Vector3, b: Vector3, sag: float) -> void:
 	var pts: Array = []
@@ -711,35 +711,79 @@ func _plank_stack() -> void:
 # ---------------------------------------------------------------- lights
 
 func _build_lights() -> void:
-	# Daylight that only reaches the outdoor layer: the room never sees it, even on Low
-	# where nothing casts shadows.
-	var sun := DirectionalLight3D.new()
-	sun.name = "Sun"
-	sun.light_color = Color(1.0, .93, .82)
-	sun.light_energy = 1.6
-	sun.light_cull_mask = OUTDOOR_LAYER
-	sun.basis = Basis.looking_at(-SUN_DIRECTION.normalized(), Vector3.UP)
-	sun.shadow_enabled = true
-	sun.directional_shadow_mode = DirectionalLight3D.SHADOW_PARALLEL_2_SPLITS
-	sun.directional_shadow_max_distance = 30.0
-	sun.shadow_bias = .04
-	sun.shadow_normal_bias = 1.2
-	_root.add_child(sun)
+	# Moonlight that only reaches the outdoor layer: the room never sees it, even on Low where
+	# nothing casts shadows. Night (0.7): a cool full moon, a faint blue sky fill and no ground bounce.
+	var moon := DirectionalLight3D.new()
+	moon.name = "Moon"
+	moon.light_color = InteriorNight.MOON_COLOR
+	moon.light_energy = InteriorNight.MOON_ENERGY
+	moon.light_cull_mask = OUTDOOR_LAYER
+	moon.basis = InteriorNight.moon_basis()
+	moon.shadow_enabled = true
+	moon.directional_shadow_mode = DirectionalLight3D.SHADOW_PARALLEL_2_SPLITS
+	moon.directional_shadow_max_distance = 30.0
+	moon.shadow_bias = .04
+	moon.shadow_normal_bias = 1.2
+	moon.light_volumetric_fog_energy = 1.6
+	_root.add_child(moon)
 	var fill := DirectionalLight3D.new()
 	fill.name = "SkyFill"
-	fill.light_color = Color(.78, .86, 1.0)
-	fill.light_energy = .55
+	fill.light_color = InteriorNight.SKY_FILL_COLOR
+	fill.light_energy = InteriorNight.SKY_FILL_ENERGY
 	fill.light_cull_mask = OUTDOOR_LAYER
 	fill.rotation_degrees = Vector3(-70, 200, 0)
 	fill.shadow_enabled = false
-	fill.light_specular = .2
+	fill.light_specular = .1
+	fill.light_volumetric_fog_energy = 0.0
 	_root.add_child(fill)
-	var bounce := DirectionalLight3D.new()
-	bounce.name = "GroundBounce"
-	bounce.light_color = Color(.95, .90, .82)
-	bounce.light_energy = .3
-	bounce.light_cull_mask = OUTDOOR_LAYER
-	bounce.rotation_degrees = Vector3(35, 120, 0)
-	bounce.shadow_enabled = false
-	bounce.light_specular = 0.0
-	_root.add_child(bounce)
+	# Practical lights: a warm bulb under the balcony ceiling and a cold security lamp over the courtyard.
+	var porch := OmniLight3D.new()
+	porch.name = "PorchLight"
+	porch.light_color = Color(1.0, .74, .45)
+	porch.light_energy = 1.1
+	porch.omni_range = 5.5
+	porch.omni_attenuation = 1.3
+	porch.light_cull_mask = OUTDOOR_LAYER
+	porch.shadow_enabled = false
+	_root.add_child(porch)
+	porch.position = Vector3(3.6, CEIL - .2, 3.75)
+	_lamp_glow("Porch bulb", porch.position + Vector3.UP * .06, Color(1.0, .78, .5), .05)
+	_rod(Vector3(3.6, CEIL, 3.75), porch.position + Vector3.UP * .1, .006, "black metal", 4)
+	var security := SpotLight3D.new()
+	security.name = "CourtyardLight"
+	security.light_color = Color(.82, .9, 1.0)
+	security.light_energy = 3.2
+	security.spot_range = 11.0
+	security.spot_angle = 62.0
+	security.spot_attenuation = 1.2
+	security.light_cull_mask = OUTDOOR_LAYER
+	security.shadow_enabled = false
+	security.set_meta("flicker", true)
+	_root.add_child(security)
+	security.position = Vector3(11.0, GROUND + 2.55, Z_WALL + .14)
+	security.basis = Basis.looking_at(Vector3(.25, -1.0, .75).normalized(), Vector3.UP)
+	_box("Security lamp housing", Vector3(11.0, GROUND + 2.62, Z_WALL + .08), Vector3(.26, .14, .16), "black metal")
+	_lamp_glow("Security lamp", Vector3(11.0, GROUND + 2.54, Z_WALL + .14), Color(.85, .92, 1.0), .07)
+
+## A small unshaded glowing bulb (blooms on High) for a practical light.
+func _lamp_glow(label: String, at: Vector3, color: Color, radius: float) -> void:
+	var bulb := MeshInstance3D.new()
+	bulb.name = label
+	var sphere := SphereMesh.new()
+	sphere.radius = radius
+	sphere.height = radius * 2.0
+	sphere.radial_segments = 12
+	sphere.rings = 6
+	bulb.mesh = sphere
+	var glow := StandardMaterial3D.new()
+	glow.resource_name = "Balcony / " + label
+	glow.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+	glow.albedo_color = color
+	glow.emission_enabled = true
+	glow.emission = color
+	glow.emission_energy_multiplier = 5.0
+	bulb.material_override = glow
+	bulb.layers = OUTDOOR_LAYER
+	bulb.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+	_root.add_child(bulb)
+	bulb.position = at

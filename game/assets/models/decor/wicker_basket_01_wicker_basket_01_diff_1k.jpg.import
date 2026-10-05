@@ -3,9 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cmbp50rprcdys"
-path="res://.godot/imported/wicker_basket_01_wicker_basket_01_diff_1k.jpg-e8b980cf13e2e73937dfb18cc7b1bf6c.ctex"
+path.s3tc="res://.godot/imported/wicker_basket_01_wicker_basket_01_diff_1k.jpg-e8b980cf13e2e73937dfb18cc7b1bf6c.s3tc.ctex"
+path.etc2="res://.godot/imported/wicker_basket_01_wicker_basket_01_diff_1k.jpg-e8b980cf13e2e73937dfb18cc7b1bf6c.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "73ce8df4d6d6c3993a3b1174aa97e9c8"
@@ -14,11 +16,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/models/decor/wicker_basket_01_wicker_basket_01_diff_1k.jpg"
-dest_files=["res://.godot/imported/wicker_basket_01_wicker_basket_01_diff_1k.jpg-e8b980cf13e2e73937dfb18cc7b1bf6c.ctex"]
+dest_files=["res://.godot/imported/wicker_basket_01_wicker_basket_01_diff_1k.jpg-e8b980cf13e2e73937dfb18cc7b1bf6c.s3tc.ctex", "res://.godot/imported/wicker_basket_01_wicker_basket_01_diff_1k.jpg-e8b980cf13e2e73937dfb18cc7b1bf6c.etc2.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -40,4 +42,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

@@ -3,9 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ceg5hhi5xqaj4"
-path="res://.godot/imported/potted_plant_02_potted_plant_02_leaves_diff_1k.png-65df614b64c8808516d1dd49d866b420.ctex"
+path.s3tc="res://.godot/imported/potted_plant_02_potted_plant_02_leaves_diff_1k.png-65df614b64c8808516d1dd49d866b420.s3tc.ctex"
+path.etc2="res://.godot/imported/potted_plant_02_potted_plant_02_leaves_diff_1k.png-65df614b64c8808516d1dd49d866b420.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "6f711d5b7a009b3ec2330cafe4e822e9"
@@ -14,11 +16,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/models/decor/potted_plant_02_potted_plant_02_leaves_diff_1k.png"
-dest_files=["res://.godot/imported/potted_plant_02_potted_plant_02_leaves_diff_1k.png-65df614b64c8808516d1dd49d866b420.ctex"]
+dest_files=["res://.godot/imported/potted_plant_02_potted_plant_02_leaves_diff_1k.png-65df614b64c8808516d1dd49d866b420.s3tc.ctex", "res://.godot/imported/potted_plant_02_potted_plant_02_leaves_diff_1k.png-65df614b64c8808516d1dd49d866b420.etc2.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -40,4 +42,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

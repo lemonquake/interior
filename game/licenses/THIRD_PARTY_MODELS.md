@@ -36,7 +36,6 @@ licence (https://creativecommons.org/licenses/by/4.0/) and note that it was modi
 | banana_plant | Banana tree | 1.Quad | https://sketchfab.com/3d-models/3b658ecad29f4d9a9606dbf8fea7c9bb |
 | tricycle_a | Lowpoly Traysikel/Tricycle | wawa | https://sketchfab.com/3d-models/08cb15a0c57748f793e0ead5e5095722 |
 | tricycle_b | Lowpoly Traysikel/Tricycle (recoloured variant) | wawa | https://sketchfab.com/3d-models/08cb15a0c57748f793e0ead5e5095722 |
-| trisikad | Rickshaw | mdtanvirulhaq | https://sketchfab.com/3d-models/8ffe8bae79d645aaaf83e46ce7791e49 |
 | tuktuk | [HW-XYZ_school] detailed draft of tuk-tuk | iraida | https://sketchfab.com/3d-models/916b76665fb9458cac7473bd446cdd98 |
 | jeepney | Jeepney | Maclin Macalindong | https://sketchfab.com/3d-models/0b8bcde5df19458da9fa5606989b1e7d |
 | food_cart_a | 煎饼车/Gerobak Lumpia | billionlioe | https://sketchfab.com/3d-models/bca4551289cb456dbf2de4ed91e4acfc |

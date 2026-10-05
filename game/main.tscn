@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene load_steps=6 format=3]
 
 [ext_resource type="Script" path="res://scripts/interior.gd" id="1"]
 [ext_resource type="PackedScene" path="res://scenes/room/living_room.tscn" id="2"]
 [ext_resource type="PackedScene" path="res://scenes/balcony/balcony.tscn" id="3"]
 [ext_resource type="PackedScene" path="res://scenes/studio/studio.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://scenes/fields/fields.tscn" id="5"]
 
 [node name="Interior" type="Node3D"]
 script = ExtResource("1")
@@ -13,3 +14,5 @@ script = ExtResource("1")
 [node name="Balcony" parent="." instance=ExtResource("3")]
 
 [node name="Studio" parent="." instance=ExtResource("4")]
+
+[node name="Fields" parent="." instance=ExtResource("5")]

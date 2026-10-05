@@ -37,7 +37,7 @@ func _bake() -> void:
 		await process_frame
 	await _settle(room)
 	# The balcony scene keeps its own resources under assets/baked/balcony.
-	_clear_directory(ProjectSettings.globalize_path(BAKED_DIR), ["balcony"])
+	_clear_directory(ProjectSettings.globalize_path(BAKED_DIR), ["balcony", "studio", "fields"])
 	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(OUT_SCENE.get_base_dir()))
 	_convert_pets(room)
 	_flatten(room, room)

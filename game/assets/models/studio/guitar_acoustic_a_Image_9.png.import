@@ -3,9 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dm3hfdpkypi8u"
-path="res://.godot/imported/guitar_acoustic_a_Image_9.png-7cae2931d7afa975ad134464d1e8aa57.ctex"
+path.s3tc="res://.godot/imported/guitar_acoustic_a_Image_9.png-7cae2931d7afa975ad134464d1e8aa57.s3tc.ctex"
+path.etc2="res://.godot/imported/guitar_acoustic_a_Image_9.png-7cae2931d7afa975ad134464d1e8aa57.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "ab3d038ec7764702c4d974d002c2f03d"
@@ -14,11 +16,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/models/studio/guitar_acoustic_a_Image_9.png"
-dest_files=["res://.godot/imported/guitar_acoustic_a_Image_9.png-7cae2931d7afa975ad134464d1e8aa57.ctex"]
+dest_files=["res://.godot/imported/guitar_acoustic_a_Image_9.png-7cae2931d7afa975ad134464d1e8aa57.s3tc.ctex", "res://.godot/imported/guitar_acoustic_a_Image_9.png-7cae2931d7afa975ad134464d1e8aa57.etc2.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -40,4 +42,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

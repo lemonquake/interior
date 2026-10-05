@@ -1,0 +1,23 @@
+[gd_resource type="ShaderMaterial" format=3]
+
+[ext_resource type="Shader" path="res://scripts/night_sky.gdshader" id="1_ptnoi"]
+[ext_resource type="Texture2D" path="res://assets/fields/sky/moon_color.jpg" id="2_mnf0l"]
+
+[resource]
+resource_name = "Night sky"
+render_priority = 0
+shader = ExtResource("1_ptnoi")
+shader_parameter/moon_texture = ExtResource("2_mnf0l")
+shader_parameter/moon_direction = Vector3(-0.539, 0.342, 0.77)
+shader_parameter/moon_radius = 0.028
+shader_parameter/moon_energy = 5.5
+shader_parameter/moon_tint = null
+shader_parameter/zenith_color = Color(0.004, 0.007, 0.02, 1)
+shader_parameter/sky_color = Color(0.012, 0.02, 0.045, 1)
+shader_parameter/horizon_color = Color(0.06, 0.075, 0.105, 1)
+shader_parameter/halo_color = Color(0.35, 0.42, 0.55, 1)
+shader_parameter/star_density = 0.11
+shader_parameter/star_energy = 2.2
+shader_parameter/cloud_cover = 0.38
+shader_parameter/cloud_speed = null
+shader_parameter/land_energy = null

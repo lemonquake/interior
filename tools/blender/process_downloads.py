@@ -69,7 +69,6 @@ ASSETS = {
     'tricycle_a': dict(src=ob('tricycle_a'), group='street', size=2.4, lit=True),
     # Same mesh as tricycle_a with a blue sidecar and a lighter roof, for variety.
     'tricycle_b': dict(src=ob('tricycle_a'), group='street', size=2.4, lit=True, tint={'09___Default': (.03, .16, .5, 1), '02___Default': (.62, .1, .08, 1)}),
-        'trisikad': dict(src=ob('trisikad'), group='street', size=2.4, other=60000, yaw=-90),
     'tuktuk': dict(src=ob('tuktuk'), group='street', size=2.6, other=60000, yaw=90),
     'jeepney': dict(src=ob('jeepney'), group='street', size=6.8),
     'food_cart_a': dict(src=ob('food_cart_a'), group='street', size=2.3, yaw=-90),
@@ -95,6 +94,22 @@ ASSETS = {
     'wicker_basket_01': dict(src=ph('wicker_basket_01'), group='decor', size=None, other=12000),
     'brass_vase_01': dict(src=ph('brass_vase_01'), group='decor', size=None, other=12000),
     'fancy_picture_frame_01': dict(src=ph('fancy_picture_frame_01'), group='decor', size=None),
+    # 0.7 fields: the moonlit dirt road through the rice paddies (tools/assets/fetch_fields.py).
+    'bahay_kubo': dict(src=ob('bahay_kubo_a'), group='fields', size=6.0),
+    'bamboo_clump': dict(src=ob('bamboo'), group='fields', size=8.5, tree=True),
+    'cattails': dict(src=ob('cattails'), group='fields', size=1.7, tree=True),
+    'reeds': dict(src=ob('reeds_pack'), group='fields', size=5.5, tree=True),
+    'scarecrow': dict(src=ob('scarecrow'), group='fields', size=1.95),
+    'fallen_trunk': dict(src=ph('dead_tree_trunk'), group='fields', size=None, other=12000),
+    'dead_trunk_b': dict(src=ph('dead_tree_trunk_02'), group='fields', size=None, other=12000),
+    'tree_stump': dict(src=ph('tree_stump_01'), group='fields', size=None, other=8000),
+    'root_cluster': dict(src=ph('root_cluster_01'), group='fields', size=None, other=10000),
+    'rock_moss_set': dict(src=ph('rock_moss_set_01'), group='fields', size=None, other=10000),
+    'boulder': dict(src=ph('boulder_01'), group='fields', size=None, other=6000),
+    'power_pole': dict(src=ph('modular_electricity_poles'), group='fields', size=None, keep=['preset_02_'], other=9000),
+    'lantern': dict(src=ph('wooden_lantern_01'), group='fields', size=None, other=6000),
+    'bucket': dict(src=ph('wooden_bucket_02'), group='fields', size=None, other=4000),
+    'fern': dict(src=ph('fern_02'), group='fields', size=None, tree=True, leaves=8000, other=4000),
 }
 
 def tris(obj):

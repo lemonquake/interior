@@ -10,11 +10,11 @@ extends RefCounted
 ## Frame: ground y = -2.9 (the courtyard level). Our house occupies x -7..13, z -4..8.
 
 const NeighborhoodScript = preload("res://scripts/neighborhood.gd")
-const SKY_SHADER = preload("res://scripts/sky_dome.gdshader")
 const GROUND := -2.9
 const STOREY := 2.95
 ## Streets: [axis, centre, from, to, width]. "x" streets run along X at z = centre.
-const STREETS := [["x", 18.0, -70.0, 80.0, 6.0], ["z", 21.0, -40.0, 90.0, 6.0], ["x", 49.0, -70.0, 80.0, 6.0], ["z", -19.0, -40.0, 90.0, 6.0]]
+## Street B's asphalt ends where the dirt road into the rice fields begins (0.7, fields_builder.gd).
+const STREETS := [["x", 18.0, -70.0, 80.0, 6.0], ["z", 21.0, -40.0, 54.5, 6.0], ["x", 49.0, -70.0, 80.0, 6.0], ["z", -19.0, -40.0, 66.0, 6.0]]
 ## Lot rows: [axis the row runs along, row line (front of lots), from, to, facing (+1/-1 along the other axis), depth, max storeys]
 const ROWS := [
 	["x", 15.0, -16.0, 18.0, 1, 7.0, 2],    # near row: backs toward our balcony, fronts on street A
@@ -134,6 +134,21 @@ func _materials() -> void:
 		curtain.albedo_color = spec[1]
 		curtain.roughness = .9
 		b._materials[spec[0]] = curtain
+	# Night: behind one kind of curtain a lamp is still on. Someone is home, keeping quiet.
+	var lit := b._materials["n curtain a"] as StandardMaterial3D
+	lit.emission_enabled = true
+	lit.emission = Color(1.0, .62, .3)
+	lit.emission_energy_multiplier = .55
+	for spec: Array in [["n lamp lens on", Color(1.0, .64, .3), 6.0], ["n lamp lens off", Color(.1, .1, .09), 0.0]]:
+		var lens := StandardMaterial3D.new()
+		lens.resource_name = "Neighbourhood / " + spec[0]
+		lens.albedo_color = spec[1]
+		lens.roughness = .3
+		if spec[2] > 0.0:
+			lens.emission_enabled = true
+			lens.emission = spec[1]
+			lens.emission_energy_multiplier = spec[2]
+		b._materials[spec[0]] = lens
 	for spec: Array in [["n frame white", Color(.9, .9, .88), .5], ["n frame dark", Color(.12, .12, .13), .45], ["n frame brown", Color(.32, .2, .12), .55],
 			["n grille", Color(.08, .08, .08), .5], ["n tank blue", Color(.15, .35, .7), .5], ["n tank black", Color(.06, .06, .07), .6],
 			["n wire", Color(.03, .03, .03), .7], ["n pole", Color(.62, .61, .58), .9], ["n gate green", Color(.13, .3, .2), .45],
@@ -143,10 +158,13 @@ func _materials() -> void:
 # ---------------------------------------------------------------- ground and streets
 
 func _ground() -> void:
-	b._feature("Neighbourhood: streets, ~50 houses, trees, poles and a misty 3 pm sky")
+	b._feature("Neighbourhood: streets, ~50 houses, trees, poles and a full-moon night sky")
 	# Grass base, then concrete yards drawn per lot. The courtyard keeps its own floor above this.
-	b._box("Ground", Vector3(10, GROUND - .06, 20), Vector3(260, .1, 260), "n grass")
-	solid("Ground", Vector3(10, GROUND - .26, 20), Vector3(260, .5, 260))
+	# North of z 66 (z 80 west of street B's lots) the paddy water of the rice fields takes over.
+	b._box("Ground", Vector3(10, GROUND - .06, -22), Vector3(260, .1, 176), "n grass")
+	solid("Ground", Vector3(10, GROUND - .26, -22), Vector3(260, .5, 176))
+	b._box("Ground north-west", Vector3(-67, GROUND - .06, 73), Vector3(106, .1, 14), "n grass")
+	solid("Ground north-west", Vector3(-67, GROUND - .26, 73), Vector3(106, .5, 14))
 
 func _streets() -> void:
 	for street: Array in STREETS:
@@ -536,6 +554,8 @@ func _hero_trees() -> void:
 		var angle := deg_to_rad(rng.randf_range(-100.0, 190.0))
 		var radius := rng.randf_range(75.0, 150.0)
 		var at := Vector3(6.0 + sin(angle) * radius, GROUND, 14.0 + cos(angle) * radius)
+		if at.z > 62.0:
+			continue  # the rice fields plant their own palms
 		var kind: String = ["jacaranda_tree", "island_tree_01", "palm_coconut_b", "palm_coconut_a", "island_tree_02"][rng.randi_range(0, 4)]
 		var scale := rng.randf_range(.55, .8) if kind == "jacaranda_tree" else (rng.randf_range(1.6, 2.4) if kind.begins_with("island") else rng.randf_range(1.0, 1.4))
 		_want(at, kind, scale, 10.0)
@@ -562,9 +582,45 @@ func _poles() -> void:
 				for k in 3:
 					var off := arm_dir * (-.6 + k * .6)
 					_wire(p + Vector3.UP * 8.6 + off, q + Vector3.UP * 8.6 + off, .5)
+	# Street lamps on arms. Most are dead; one by the gate stutters; the last one lights the road out.
+	for spec: Array in [[Vector3(11.4, GROUND, 15.6), Vector3.BACK, "flicker"], [Vector3(24.0, GROUND, 15.6), Vector3.BACK, "off"],
+			[Vector3(18.4, GROUND, 30.0), Vector3.RIGHT, "off"], [Vector3(18.4, GROUND, 44.0), Vector3.RIGHT, "on"],
+			[Vector3(0.0, GROUND, 15.6), Vector3.BACK, "off"]]:
+		_street_lamp(spec[0], spec[1], 6.6, spec[2])
+	b._rod(Vector3(24.55, GROUND, 53.2), Vector3(24.55, GROUND + 7.2, 53.2), .1, "n pole", 8, .07)
+	solid("Lamp post", Vector3(24.55, GROUND + 1.5, 53.2), Vector3(.24, 3.0, .24))
+	_street_lamp(Vector3(24.55, GROUND, 53.2), Vector3.LEFT, 6.9, "on")
 	# The courtyard's own service drops from street A's pole.
 	_wire(Vector3(11.4, GROUND + 8.0, 15.6), Vector3(6.0, 3.1, 2.92), .6)
 	_wire(Vector3(11.4, GROUND + 8.3, 15.6), Vector3(12.6, 1.0, 5.4), .4)
+
+## A sodium lamp on a steel arm from a pole at `base`, reaching `toward` the street.
+func _street_lamp(base: Vector3, toward: Vector3, height: float, state: String) -> void:
+	var root_point := base + Vector3.UP * height
+	var tip := root_point + toward * 1.7 + Vector3.UP * .35
+	b._rod(root_point, tip, .035, "n frame dark", 6)
+	b._rod(root_point + Vector3.DOWN * .6, root_point + toward * .9 + Vector3.UP * .1, .02, "n frame dark", 5)
+	var head := tip + toward * .25
+	var size := Vector3(.55, .13, .26) if absf(toward.x) > .5 else Vector3(.26, .13, .55)
+	b._box("Lamp head", head, size, "n frame dark")
+	b._box("Lamp lens", head + Vector3.DOWN * .07, size * Vector3(.86, .1, .8), "n lamp lens off" if state == "off" else "n lamp lens on")
+	if state == "off":
+		return
+	var light := OmniLight3D.new()
+	light.name = "Street lamp"
+	light.light_color = Color(1.0, .6, .26)
+	light.light_energy = 2.6 if state == "on" else 2.2
+	light.omni_range = 14.0
+	light.omni_attenuation = 1.25
+	light.light_cull_mask = 2
+	light.shadow_enabled = false
+	light.distance_fade_enabled = true
+	light.distance_fade_begin = 70.0
+	light.distance_fade_length = 20.0
+	if state == "flicker":
+		light.set_meta("flicker", true)
+	root.add_child(light, true)
+	light.position = head + Vector3.DOWN * .3
 
 func _wire(a: Vector3, c: Vector3, sag: float) -> void:
 	var pts: Array = []
@@ -575,7 +631,7 @@ func _wire(a: Vector3, c: Vector3, sag: float) -> void:
 
 # ---------------------------------------------------------------- sky
 
-func _sky(sun_direction: Vector3) -> void:
+func _sky(_moon_direction: Vector3) -> void:
 	var dome := MeshInstance3D.new()
 	dome.name = "Sky dome"
 	var sphere := SphereMesh.new()
@@ -588,14 +644,8 @@ func _sky(sun_direction: Vector3) -> void:
 	dome.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 	dome.layers = 2
 	dome.extra_cull_margin = 16384.0
-	var material := ShaderMaterial.new()
-	material.shader = SKY_SHADER
-	material.set_shader_parameter("sky_texture", load("res://assets/outdoor/sky/misty_afternoon_sky.png"))
-	material.set_shader_parameter("sun_direction", sun_direction)
-	# The HDRI's own (painted-out) sun sat at u = 0.4701; turn the panorama so its glow sits under ours.
-	var sun_azimuth := atan2(sun_direction.x, -sun_direction.z)
-	material.set_shader_parameter("yaw", (0.4701 - .5) * TAU - sun_azimuth)
-	dome.material_override = material
+	# Night (0.7): full moon, stars, drifting clouds and far hills (scripts/night_sky.gdshader).
+	dome.material_override = InteriorNight.sky_material()
 	root.add_child(dome)
 
 
@@ -678,4 +728,6 @@ func _play_bounds() -> void:
 	block.call("Bound edge west", x0 - 1.0, x0, z0, z1, GROUND + h)
 	block.call("Bound edge east", x1, x1 + 1.0, z0, z1, GROUND + h)
 	block.call("Bound edge south", x0, x1, z0 - 1.0, z0, GROUND + h)
-	block.call("Bound edge north", x0, x1, z1, z1 + 1.0, GROUND + h)
+	# Street B stays open to the north: the dirt road into the fields (its walls: fields_builder.gd).
+	block.call("Bound edge north", x0, 17.56, z1, z1 + 1.0, GROUND + h)
+	block.call("Bound edge north east", 24.44, x1, z1, z1 + 1.0, GROUND + h)

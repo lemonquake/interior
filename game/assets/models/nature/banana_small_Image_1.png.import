@@ -3,9 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dkfjfbxck76ns"
-path="res://.godot/imported/banana_small_Image_1.png-4dfb9eff9b73fbd9d336660c6ae4e5af.ctex"
+path.s3tc="res://.godot/imported/banana_small_Image_1.png-4dfb9eff9b73fbd9d336660c6ae4e5af.s3tc.ctex"
+path.etc2="res://.godot/imported/banana_small_Image_1.png-4dfb9eff9b73fbd9d336660c6ae4e5af.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "7b42807e26b6f1b3f716d5edfb675a4e"
@@ -14,11 +16,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/models/nature/banana_small_Image_1.png"
-dest_files=["res://.godot/imported/banana_small_Image_1.png-4dfb9eff9b73fbd9d336660c6ae4e5af.ctex"]
+dest_files=["res://.godot/imported/banana_small_Image_1.png-4dfb9eff9b73fbd9d336660c6ae4e5af.s3tc.ctex", "res://.godot/imported/banana_small_Image_1.png-4dfb9eff9b73fbd9d336660c6ae4e5af.etc2.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -40,4 +42,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

@@ -2,15 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dekfq2bucdxrq"
+uid="uid://dm2bmsigqyavm"
 path.s3tc="res://.godot/imported/jacaranda_tree_jacaranda_tree_leaves_arm_1k.jpg-baefc4549a9333b35392acda36c7c5cd.s3tc.ctex"
 path.etc2="res://.godot/imported/jacaranda_tree_jacaranda_tree_leaves_arm_1k.jpg-baefc4549a9333b35392acda36c7c5cd.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "f94ade38ac023aafa0e5264409999198"
 }
 
 [deps]

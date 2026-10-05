@@ -2,7 +2,7 @@ class_name InteriorSurfaces
 extends RefCounted
 ## What the player is standing on, for footstep sounds. A collider (or its CollisionShape3D) may carry
 ## a "surface" meta; otherwise the answer comes from the room / balcony / street layout.
-## Keys: wood, carpet, tile, concrete, asphalt, grass, metal.
+## Keys: wood, carpet, tile, concrete, asphalt, grass, metal, dirt (the fields road, 0.7).
 
 const ROOM_FLOOR_TOP := 1.0
 static var _rugs: Array[Rect2] = []

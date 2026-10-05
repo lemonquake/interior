@@ -1,0 +1,47 @@
+[gd_resource type="ShaderMaterial" format=3]
+
+[ext_resource type="Shader" path="res://scripts/night_water.gdshader" id="1_r41u5"]
+[ext_resource type="Texture2D" path="res://assets/fields/sky/moon_color.jpg" id="2_3dqvt"]
+[ext_resource type="Texture2D" path="res://assets/baked/fields/textures/noise_texture_2d.res" id="3_doyk8"]
+[ext_resource type="Texture2D" path="res://assets/baked/fields/textures/noise_texture_2d_2.res" id="4_v7nuu"]
+
+[resource]
+resource_name = "Fields / paddy water"
+render_priority = 0
+shader = ExtResource("1_r41u5")
+shader_parameter/moon_texture = ExtResource("2_3dqvt")
+shader_parameter/moon_direction = Vector3(-0.539, 0.342, 0.77)
+shader_parameter/moon_radius = 0.028
+shader_parameter/moon_energy = 5.5
+shader_parameter/moon_tint = Color(1, 0.97, 0.9, 1)
+shader_parameter/zenith_color = Color(0.004, 0.007, 0.02, 1)
+shader_parameter/sky_color = Color(0.012, 0.02, 0.045, 1)
+shader_parameter/horizon_color = Color(0.075, 0.09, 0.125, 1)
+shader_parameter/halo_color = Color(0.35, 0.42, 0.55, 1)
+shader_parameter/star_density = 0.11
+shader_parameter/star_energy = 2.2
+shader_parameter/cloud_cover = 0.38
+shader_parameter/cloud_speed = 0.004
+shader_parameter/ripple_a = ExtResource("3_doyk8")
+shader_parameter/ripple_b = ExtResource("4_v7nuu")
+shader_parameter/wave_direction = Vector2(0.9, 0.35)
+shader_parameter/wave_direction2 = Vector2(-0.3, 0.8)
+shader_parameter/time_scale = 0.018
+shader_parameter/ripple_scale_a = 0.11
+shader_parameter/ripple_scale_b = 0.29
+shader_parameter/ripple_strength = 0.32
+shader_parameter/wind_ripples = 0.6
+shader_parameter/water_color = Color(0.006, 0.009, 0.012, 1)
+shader_parameter/reflection_energy = 1.0
+shader_parameter/glitter_energy = 4.0
+shader_parameter/sparkle_energy = 16.0
+shader_parameter/reflect_stars = true
+shader_parameter/grid_origin = Vector2(-150, 60)
+shader_parameter/cell_w = 28.0
+shader_parameter/cell_h = 22.0
+shader_parameter/rice_far_begin = 32.0
+shader_parameter/rice_far_end = 60.0
+shader_parameter/rice_young = Color(0.16, 0.24, 0.11, 1)
+shader_parameter/rice_ripe = Color(0.32, 0.29, 0.14, 1)
+shader_parameter/pond = Vector4(28.010315, 225.55228, 15, 12.5)
+shader_parameter/paddies = true

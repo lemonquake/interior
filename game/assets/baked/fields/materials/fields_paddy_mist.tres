@@ -1,0 +1,19 @@
+[gd_resource type="FogMaterial" format=3]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_3o5ln"]
+seed = 5
+frequency = 0.09
+fractal_octaves = 3
+
+[sub_resource type="NoiseTexture3D" id="NoiseTexture3D_v03fx"]
+height = 16
+noise = SubResource("FastNoiseLite_3o5ln")
+seamless = true
+
+[resource]
+resource_name = "Fields / paddy mist"
+density = 0.05
+albedo = Color(0.74, 0.8, 0.95, 1)
+height_falloff = 1.6
+edge_fade = 0.3
+density_texture = SubResource("NoiseTexture3D_v03fx")

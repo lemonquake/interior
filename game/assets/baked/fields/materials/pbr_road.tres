@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/muddy_tracks/albedo.jpg" id="1_fq2gr"]
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/muddy_tracks/normal.jpg" id="2_nrmte"]
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/muddy_tracks/roughness.jpg" id="3_fcvp3"]
+
+[resource]
+resource_name = "PBR / road"
+albedo_color = Color(0.78, 0.74, 0.68, 1)
+albedo_texture = ExtResource("1_fq2gr")
+roughness = 0.85
+roughness_texture = ExtResource("3_fcvp3")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("2_nrmte")
+uv1_scale = Vector3(0.3125, 0.3125, 0.3125)
+texture_filter = 5

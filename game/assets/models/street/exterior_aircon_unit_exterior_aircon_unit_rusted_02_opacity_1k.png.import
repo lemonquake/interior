@@ -3,9 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bb71kbsqol7c0"
-path="res://.godot/imported/exterior_aircon_unit_exterior_aircon_unit_rusted_02_opacity_1k.png-24c35fdb43335d3e27806d0330e86d82.ctex"
+path.s3tc="res://.godot/imported/exterior_aircon_unit_exterior_aircon_unit_rusted_02_opacity_1k.png-24c35fdb43335d3e27806d0330e86d82.s3tc.ctex"
+path.etc2="res://.godot/imported/exterior_aircon_unit_exterior_aircon_unit_rusted_02_opacity_1k.png-24c35fdb43335d3e27806d0330e86d82.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "dfdb6e69d0751d12e9921dc2d9ff3810"
@@ -14,11 +16,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/models/street/exterior_aircon_unit_exterior_aircon_unit_rusted_02_opacity_1k.png"
-dest_files=["res://.godot/imported/exterior_aircon_unit_exterior_aircon_unit_rusted_02_opacity_1k.png-24c35fdb43335d3e27806d0330e86d82.ctex"]
+dest_files=["res://.godot/imported/exterior_aircon_unit_exterior_aircon_unit_rusted_02_opacity_1k.png-24c35fdb43335d3e27806d0330e86d82.s3tc.ctex", "res://.godot/imported/exterior_aircon_unit_exterior_aircon_unit_rusted_02_opacity_1k.png-24c35fdb43335d3e27806d0330e86d82.etc2.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -40,4 +42,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

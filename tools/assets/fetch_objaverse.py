@@ -37,7 +37,6 @@ MODELS = {
     "banana_plant": "3b658ecad29f4d9a9606dbf8fea7c9bb",
     # Davao street scene: Philippine tricycles, food carts, jeepney, drum.
     "tricycle_a": "08cb15a0c57748f793e0ead5e5095722",
-    "trisikad": "8ffe8bae79d645aaaf83e46ce7791e49",
     "tuktuk": "916b76665fb9458cac7473bd446cdd98",
     "jeepney": "0b8bcde5df19458da9fa5606989b1e7d",
     "food_cart_a": "bca4551289cb456dbf2de4ed91e4acfc",

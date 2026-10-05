@@ -107,7 +107,7 @@ func _spinning_contact_regression() -> void:
 			var engine_surface_speed := contact_speed.dot(toward)
 			var before := direct.linear_velocity
 			var before_spin := direct.angular_velocity
-			player._push_contacts(approach)
+			player._push_contacts(approach, 1.0 / 60.0)
 			var velocity_change := direct.linear_velocity - before
 			if spin > 0.0:
 				check(engine_surface_speed > approach.dot(toward) + 2.0, "Engine must confirm that the spinning surface is moving away faster than the player")

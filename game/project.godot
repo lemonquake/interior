@@ -30,6 +30,11 @@ environment/defaults/default_clear_color=Color(0.085, 0.07, 0.06, 1)
 common/physics_ticks_per_second=60
 common/physics_interpolation=true
 3d/physics_engine="Jolt Physics"
+3d/default_linear_damp=0.04
+3d/default_angular_damp=0.04
+jolt_physics_3d/limits/max_angular_velocity=125.0
+jolt_physics_3d/simulation/position_steps=3
+jolt_physics_3d/simulation/penetration_slop=0.005
 
 [audio]
 driver/enable_input=false

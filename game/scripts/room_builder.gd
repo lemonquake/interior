@@ -7,6 +7,7 @@ extends RefCounted
 
 const ObjectScript = preload("res://scripts/physics_object.gd")
 const PropColliders = preload("res://scripts/prop_colliders.gd")
+const PropPhysics = preload("res://scripts/prop_physics.gd")
 const RoomVisuals = preload("res://scripts/room_visuals.gd")
 const EnclosureScript = preload("res://scripts/hamster_enclosure.gd")
 const AquariumScript = preload("res://scripts/aquarium.gd")
@@ -53,6 +54,11 @@ static func build(room: Node3D) -> Dictionary:
 		if str(actor.assetId) == "photo_frame" and original.origin.y < 1.5:
 			body.anchored = false
 		body.set_meta("asset_id",str(actor.assetId))
+		body.prop_id = str(actor.nodeName)
+		body.physics_material = PropPhysics.material_for(str(actor.assetId), str(actor.label))
+		# Heavy furniture is dragged at the grab point rather than carried.
+		body.grab_mode = "drag" if body.mass >= 15.0 else "carry"
+		body.start_asleep = true
 		body.clue_digit = actor.get("clueDigit", "")
 		body.clue_text = actor.get("clueText", "")
 		room.add_child(body)
@@ -91,10 +97,8 @@ static func build(room: Node3D) -> Dictionary:
 			body.position.x = -2.76
 			body.position.y = .15
 		body.home_transform = body.global_transform
-		# Preserve the photographed arrangement until first touch or impact.
-		# Active objects then use normal rigid-body physics and wake neighbours.
-		body.dormant = true
-		body.freeze = true
+		# Start asleep (not frozen) at the photographed pose; Jolt wakes bodies on
+		# contact. Wall-anchored frames/shelves freeze in InteriorObject until grabbed.
 		body.sleeping = true
 		if actor.get("console",false):
 			body.add_to_group("mystery_console", true)
@@ -104,8 +108,8 @@ static func build(room: Node3D) -> Dictionary:
 	AquariumScript.attach_to(small_bowl, .66)
 	small_bowl.position = Vector3(-2.36,.15,-1.11)
 	small_bowl.home_transform = small_bowl.global_transform
-	small_bowl.freeze = true
-	small_bowl.dormant = true
+	small_bowl.physics_material = "glass"
+	small_bowl.start_asleep = true
 	small_bowl.sleeping = true
 	var shell := StaticBody3D.new()
 	shell.name = "RoomStructure"

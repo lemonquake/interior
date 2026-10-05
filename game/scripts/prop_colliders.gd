@@ -23,6 +23,11 @@ static func shapes_for(actor: Dictionary) -> Array:
 			return [_box(Vector3(0,.028,0),Vector3(.48,.056,.48))]
 		"fish_bowl":
 			return [{"kind":"sphere","center":[0,.15,0],"radius":.182}]
+		"potted_plant":
+			# Round pots tip over and roll on their side.
+			return [_cylinder(Vector3(0,.08,0), .095, .16)]
+		"red_flowers", "purple_flowers", "yellow_flowers":
+			return [_cylinder(Vector3(0,.085,0), .085, .17)]
 		"tissue_box":
 			return [_box(Vector3(0,.05,0),Vector3(.24,.10,.15))]
 	return actor.colliders

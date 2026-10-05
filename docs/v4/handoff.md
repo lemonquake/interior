@@ -98,4 +98,6 @@ build needs them.
 
 ## Screenshots sent to the owner
 
-None yet in this run.
+| File | What it shows |
+|---|---|
+| `work/v4/balcony/screens/01-door-open.png` | The navy door opened inward on its hinge; the doorway is still dark, with no balcony yet |

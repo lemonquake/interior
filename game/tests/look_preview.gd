@@ -1,6 +1,7 @@
 extends SceneTree
 ## RENDERED look review (do not run with --headless).
 ##   godot --path game --script res://tests/look_preview.gd -- --render-size=1920x1080 --quality=2 --out=<dir> [--tag=high] [--perf-seconds=10]
+##   add --door-open to open the entry door (balcony visible), --perf-outdoor to orbit on the balcony instead
 ##   godot --rendering-method gl_compatibility --path game --script res://tests/look_preview.gd -- --mobile-test --render-size=1920x1080 --quality=0 --out=<dir> --tag=compat
 ## Saves <out>/<tag>-<view>.png and prints one INTERIOR_LOOK_PREVIEW {json} marker.
 
@@ -48,6 +49,11 @@ func _run() -> void:
 		main.touch.visible = false
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	var camera: Camera3D = main.player.camera
+	var door_open := OS.get_cmdline_user_args().has("--door-open")
+	var outdoor := OS.get_cmdline_user_args().has("--perf-outdoor")
+	if door_open or outdoor:
+		for door in main.get_tree().get_nodes_in_group("interior_doors"):
+			door.snap(true)
 	var lighting := InteriorLighting.find_in(main.room)
 	var saved: Array[String] = []
 	for index in VIEWS.size():
@@ -62,7 +68,7 @@ func _run() -> void:
 		if root.get_texture().get_image().save_png(path) == OK:
 			saved.append(path)
 	var report := {"quality": quality, "tag": tag, "renderer": RenderingServer.get_current_rendering_method(),
-		"adapter": RenderingServer.get_video_adapter_name(), "window": str(root.size), "saved": saved.size(),
+		"adapter": RenderingServer.get_video_adapter_name(), "door_open": door_open, "outdoor": outdoor, "window": str(root.size), "saved": saved.size(),
 		"lighting": lighting.stats() if lighting != null else {}}
 	if perf_seconds > 0.0:
 		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
@@ -73,8 +79,13 @@ func _run() -> void:
 		while Time.get_ticks_usec() - started < int(perf_seconds * 1e6):
 			var t := float(Time.get_ticks_usec() - started) / 1e6
 			# Slow orbit around the living room covering every wall.
-			camera.global_position = Vector3(.2 + sin(t * .5) * .6, 1.58, .4 + cos(t * .5) * .6)
-			camera.look_at(Vector3(.2 + sin(t * .5 + PI) * 3.0, 1.2, .4 + cos(t * .5 + PI) * 2.4))
+			if outdoor:
+				# Pace the balcony looking all round: aquarium wall, room through the door, stair, yard.
+				camera.global_position = Vector3(3.0 + sin(t * .3) * 1.6, 1.55, 3.7)
+				camera.look_at(camera.global_position + Vector3(sin(t * .5), -.25, cos(t * .5)))
+			else:
+				camera.global_position = Vector3(.2 + sin(t * .5) * .6, 1.58, .4 + cos(t * .5) * .6)
+				camera.look_at(Vector3(.2 + sin(t * .5 + PI) * 3.0, 1.2, .4 + cos(t * .5 + PI) * 2.4))
 			await process_frame
 			var now := Time.get_ticks_usec()
 			samples.append(float(now - last) / 1000.0)

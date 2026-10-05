@@ -55,10 +55,10 @@ Converted with `tools/blender/process_downloads.py`. Credits: `game/licenses/THI
 
 | File | Size | SHA-256 |
 |---|---|---|
-| `builds/windows/Interior.exe` (0.7.0, release, embedded PCK) | 636 MB | `d9fb342edbb8f8439ec3f4a76658ed48e97a988dca1382f3dbcce840a7a65ec1` |
-| `builds/android/Interior.apk` (0.7.0, code 7, debug-signed) | 584 MB | `71df4daae2f5e0ea1e99d110c609b732f766c3d3ccb1ffb0f98c7ec92801c73a` |
+| `builds/windows/Interior.exe` (0.7.0, release, embedded PCK) | 636 MB | `f7272d89d570ae9189b160adecffb7d96470b9bddc4551c48a043b079b0e2c47` |
+| `builds/android/Interior.apk` (0.7.0, code 7, debug-signed) | 584 MB | `e121780c69122cd1abeb672ad3bd7b3151e51401a8dc653002e86026bb21f927` |
 
-The EXE's own `--capture-review --capture-views=balcony` run rendered all six views with no errors (`work/v7/exe-smoke/`).
+The EXE's own `--capture-review --capture-views=balcony` run rendered all six views with no errors (`work/v7/exe-smoke2/`).
 The APK has not been installed on a phone this run. `builds/` is gitignored.
 
 ## Known gaps
@@ -69,7 +69,8 @@ The APK has not been installed on a phone this run. `builds/` is gitignored.
 - Distant palms and bamboo still read a little pale in the haze; the giant tree at the end is a scaled Poly Haven island tree,
   not a true balete.
 - The fields bake must run WITHOUT `--headless`: the headless dummy renderer drops MultiMesh instance data, so the rice
-  would save empty. `editor/bake_fields.gd` opens a small window for about half a minute.
+  would save empty. `editor/bake_fields.gd` opens a small window for about half a minute. `fields.gd` skips its runtime
+  setup (mist, Android budget) when there is no current scene, so bakes stay clean.
 - The tuktuk model (Indian signage) is still in `assets/models/street/` but unused, as in 0.6.
 
 ## Screenshots sent to the owner

@@ -22,6 +22,9 @@ var _shown := true
 
 func _ready() -> void:
 	add_to_group("fields")
+	# editor/bake_fields.gd runs without a current scene: bake only what the builder made.
+	if get_tree().current_scene == null:
+		return
 	mobile = RenderingServer.get_current_rendering_method() == "gl_compatibility"
 	for node in find_children("*", "Node3D", true, false):
 		if node.has_meta("keep_instance"):

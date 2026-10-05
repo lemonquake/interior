@@ -55,6 +55,9 @@ func _run() -> void:
 	metrics["travel_m"] = travel
 	metrics["stop_time_s"] = stop_time
 	metrics["sleep_time_s"] = sleep_time
+	metrics["final_v"] = ball.linear_velocity.length()
+	metrics["final_w"] = ball.angular_velocity
+	metrics["final_y"] = ball.global_position.y
 	metrics["max_slip_ratio_while_rolling"] = max_slip_late
 	check(travel > 2.0, "Ball must travel more than 2 m")
 	check(stop_time >= 4.0 and stop_time <= 20.0, "Ball must come to rest within 4-20 s via rolling resistance")

@@ -47,6 +47,8 @@ var _support_normal := Vector3.UP
 var _previous_velocity := Vector3.ZERO
 var _impact_clock := 0.0
 var _last_impact := -1.0
+var _still_time := 0.0
+var _sleep_countdown := 0
 
 func _ready() -> void:
 	collision_layer = PropPhysics.LAYER_OBJECTS
@@ -93,6 +95,9 @@ func _finish_setup() -> void:
 		sleeping = true
 	elif start_asleep and not held:
 		sleeping = true
+		# Jolt commits shape / mass changes on the next step and wakes the body;
+		# put it back to sleep once that has happened.
+		_sleep_countdown = 2
 
 func _shape_count() -> int:
 	var count := 0
@@ -196,8 +201,13 @@ func _integrate_forces(state: PhysicsDirectBodyState3D) -> void:
 	# only while touching a support. No angular damping does this job.
 	# Below the sleep threshold leave the body alone: writing velocities would
 	# keep Jolt from putting it to sleep.
-	var resting := state.linear_velocity.length_squared() < 0.0001 and (state.angular_velocity * _round_radius).length_squared() < 0.0001
-	if _supported and _round_radius > 0.0 and not resting:
+	var resting := state.linear_velocity.length_squared() < 1e-8 and (state.angular_velocity * _round_radius).length_squared() < 1e-8
+	if _supported and _round_radius > 0.0 and not resting and _support_normal.dot(up) > 0.995 			and state.linear_velocity.length_squared() < 0.0004 and (state.angular_velocity * _round_radius).length_squared() < 0.0004:
+		# Rolling resistance stops a slow roll on level ground (it would hold a
+		# real ball on a slope this gentle too); then Jolt can put it to sleep.
+		state.linear_velocity = up * state.linear_velocity.dot(up)
+		state.angular_velocity = Vector3.ZERO
+	elif _supported and _round_radius > 0.0 and not resting:
 		var normal_force := mass * gravity_length * clampf(_support_normal.dot(up), 0.0, 1.0)
 		var omega := state.angular_velocity
 		var spin := _support_normal * omega.dot(_support_normal)
@@ -216,6 +226,17 @@ func _integrate_forces(state: PhysicsDirectBodyState3D) -> void:
 			if spin_change.length_squared() >= spin.length_squared():
 				spin_change = -spin
 			state.angular_velocity += spin_change
+	# Supported and nearly still for half a second: rest (rolling resistance and
+	# static friction would hold it); explicit so writes above never keep it awake.
+	if _supported and not held and state.linear_velocity.length_squared() < 0.0004 and state.angular_velocity.length_squared() < 0.0025:
+		_still_time += dt
+		if _still_time > 0.5:
+			state.linear_velocity = Vector3.ZERO
+			state.angular_velocity = Vector3.ZERO
+			state.sleeping = true
+			_still_time = 0.0
+	else:
+		_still_time = 0.0
 	# Safety net only; real throws stay well below these.
 	if state.linear_velocity.length_squared() > MAX_LINEAR_SPEED * MAX_LINEAR_SPEED:
 		state.linear_velocity = state.linear_velocity.limit_length(MAX_LINEAR_SPEED)
@@ -223,6 +244,12 @@ func _integrate_forces(state: PhysicsDirectBodyState3D) -> void:
 		state.angular_velocity = state.angular_velocity.limit_length(MAX_ANGULAR_SPEED)
 
 func _physics_process(_delta: float) -> void:
+	if _sleep_countdown > 0:
+		_sleep_countdown -= 1
+		if _sleep_countdown == 0 and not held and not freeze:
+			linear_velocity = Vector3.ZERO
+			angular_velocity = Vector3.ZERO
+			sleeping = true
 	var position_now := global_position
 	if not position_now.is_finite() or position_now.y < -4.0 or absf(position_now.x) > 40.0 or absf(position_now.z) > 40.0:
 		recover()

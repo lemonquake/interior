@@ -59,6 +59,7 @@ var _hand_point := Vector3.ZERO
 var _hand_velocity := Vector3.ZERO
 var _obstructed_time := 0.0
 var _rotating := false
+var _teleport_frames := 0
 var _look_pitch := 0.0
 var _previous_damp := Vector2.ZERO
 var _capsule: CapsuleShape3D
@@ -320,8 +321,20 @@ func _update_camera(delta: float, sprinting: bool) -> void:
 	# Physics queries this tick use the exact (non-interpolated) eye.
 	_sync_camera(global_position)
 
+func _end_teleport() -> void:
+	_teleport_frames -= 1
+	if _teleport_frames <= 0 and _collision != null:
+		_teleport_frames = 0
+		_collision.disabled = false
+
 func reset_motion(spawn_position: Vector3, restore_stance := true) -> void:
 	release_object()
+	# Jolt moves the kinematic character to a teleport target as a sweep; with
+	# the capsule briefly disabled nothing on the way gets launched.
+	if _collision != null and is_inside_tree():
+		_collision.disabled = true
+		_teleport_frames += 1
+		get_tree().create_timer(0.04, true, true).timeout.connect(_end_teleport)
 	global_position = spawn_position
 	velocity = Vector3.ZERO
 	touch_move = Vector2.ZERO

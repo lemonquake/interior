@@ -243,10 +243,12 @@ func _run() -> void:
 	# Comparable straight-line collisions test mass and approach momentum.
 	var push_metrics: Array[float] = []
 	for test_mass in [2.0, 40.0]:
+		# Move the player away first: the previous push leaves the capsule where
+		# this prop spawns, and props are no longer frozen at spawn (v0.3).
+		player.reset_motion(Vector3(0.16, 0.01, 1.0))
 		var body := _prop(Vector3(0, 0.36, -2), test_mass, Vector3(0.7, 0.7, 0.7))
 		body.freeze = true
 		body.dormant = true
-		player.reset_motion(Vector3(0.16, 0.01, 1.0))
 		await _frames(6)
 		player.touch_move = Vector2(0, -1)
 		player.touch_sprinting = true

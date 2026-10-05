@@ -2,7 +2,7 @@
 
 [resource]
 resource_name = "Balcony / glass dark"
-albedo_color = Color(0.15, 0.19, 0.22, 1)
-metallic = 0.2
+albedo_color = Color(0.3, 0.35, 0.4, 1)
+metallic = 0.15
 metallic_specular = 0.9
-roughness = 0.1
+roughness = 0.22

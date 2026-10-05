@@ -107,8 +107,8 @@ func _prepare_balcony_materials() -> void:
 	_flat("tarp orange", Color(.86, .37, .14), .8)
 	_flat("tarp blue", Color(.16, .42, .78), .8)
 	_flat("bottle blue", Color(.22, .52, .92), .25)
-	var glass := _flat("glass dark", Color(.15, .19, .22), .1)
-	glass.metallic = .2
+	var glass := _flat("glass dark", Color(.30, .35, .40), .22)
+	glass.metallic = .15
 	glass.metallic_specular = .9
 	var cover := _flat("plastic cover", Color(.92, .94, .96, .45), .2)
 	cover.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA

@@ -15,6 +15,7 @@ const VIEWS := [
 	["outdoor-2-railing-out", "outdoor", Vector3(4.5, 1.6, 4.35), Vector3(5.5, -.5, 22.0), false, true, 72.0],
 	["outdoor-3-toward-stairs", "outdoor", Vector3(2.7, 1.55, 3.6), Vector3(8.6, -1.0, 3.4), false, true, 62.0],
 	["outdoor-4-courtyard-gate", "outdoor", Vector3(11.0, -1.3, 4.0), Vector3(24.0, 1.0, 0.0), false, true, 72.0],
+	["outdoor-6-overhead", "outdoor", Vector3(8.0, 75.0, 24.0), Vector3(8.0, -2.9, 20.0), false, true, 70.0],
 	["outdoor-5-courtyard-sky", "outdoor", Vector3(10.5, -1.3, 3.4), Vector3(12.0, 3.0, 20.0), false, true, 72.0],
 ]
 

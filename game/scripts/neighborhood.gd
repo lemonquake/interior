@@ -70,8 +70,8 @@ func _apply_fog(on: bool) -> void:
 	env.fog_light_color = Color(.70, .73, .76)
 	env.fog_light_energy = 1.0
 	env.fog_sun_scatter = .1
-	env.fog_depth_begin = 12.0
-	env.fog_depth_end = 190.0
-	env.fog_depth_curve = .78
+	env.fog_depth_begin = 8.0
+	env.fog_depth_end = 150.0
+	env.fog_depth_curve = .7
 	env.fog_sky_affect = 0.0
 	env.fog_aerial_perspective = 0.0

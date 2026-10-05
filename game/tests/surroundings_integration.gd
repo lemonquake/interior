@@ -84,9 +84,9 @@ func _run() -> void:
 	check(not _hit(world,Vector3(-4.4,2.5,0),Vector3(-4.4,3.5,0)).is_empty(),"Kitchen has a solid ceiling")
 	check(not _hit(world,Vector3(1.91,1.2,2.0),Vector3(1.91,1.2,3.2)).is_empty(),"Rear entry door at screen-left is a closed solid boundary")
 	check(not _hit(world,Vector3(2.6,1.2,-.2),Vector3(3.8,1.2,-.2)).is_empty(),"Right gallery wall has collision")
-	check(_hit(world,Vector3(-2.5,1.6,2.2),Vector3(-2.5,1.6,3.3)).is_empty(),"Studio niche at screen-right has a real opening")
-	check(not _hit(world,Vector3(-2.5,1,3.45),Vector3(-2.5,-.5,3.45)).is_empty(),"Reflected studio opening retains its supporting floor")
-	check(not _hit(world,Vector3(-2.5,1.3,3.45),Vector3(-2.5,1.3,4.1)).is_empty(),"Reflected studio retains a solid rear boundary")
+	check(not _hit(world,Vector3(-2.75,1.6,2.2),Vector3(-2.75,1.6,3.3)).is_empty(),"Studio doorway at screen-right is closed by its glass sliding door")
+	check(not _hit(world,Vector3(-2.5,1,3.45),Vector3(-2.5,-.5,3.45)).is_empty(),"Studio has a supporting floor beyond the doorway")
+	check(not _hit(world,Vector3(-2.0,2.5,3.45),Vector3(-2.0,2.5,7.8)).is_empty(),"Studio has a solid rear wall")
 	check(not _hit(world,Vector3(-2.5,2.5,3.45),Vector3(-2.5,3.5,3.45)).is_empty(),"Reflected studio retains its solid ceiling")
 	# Use the actual accelerating player, collider and floor contact to enter.
 	main.player.global_position = Vector3(-2.90,.08,1.93)

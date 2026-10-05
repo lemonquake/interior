@@ -6,7 +6,7 @@
 
 [resource]
 resource_name = "PBR / rug"
-albedo_color = Color(0.3, 0.3, 0.33, 1)
+albedo_color = Color(0.16, 0.14, 0.16, 1)
 albedo_texture = ExtResource("1_qmbxs")
 roughness_texture = ExtResource("3_kquye")
 roughness_texture_channel = 1

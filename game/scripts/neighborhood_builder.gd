@@ -40,6 +40,14 @@ var models: Node3D
 var rng := RandomNumberGenerator.new()
 var _houses := 0
 var _trees := 0
+## Placement guards (XZ rectangles). No tree crown may overlap a house (roof overhang included) or
+## our own house; no trunk may stand on a road, sidewalk, wall or pole. Trees are queued while the
+## lots are laid out and planted last, each moved to a nearby clear spot or dropped.
+var _no_canopy: Array[Rect2] = []
+var _no_trunk: Array[Rect2] = []
+var _crowns: Array[Rect2] = []
+var _wanted: Array = []
+var _dropped := 0
 
 static func build(builder: InteriorBalconyBuilder, parent: Node3D, sun_direction: Vector3) -> Dictionary:
 	var n := InteriorNeighborhoodBuilder.new()
@@ -61,10 +69,11 @@ static func build(builder: InteriorBalconyBuilder, parent: Node3D, sun_direction
 	n._our_house_shell()
 	n._hero_trees()
 	n._poles()
+	n._plant()
 	builder._commit(n.root, "Neighbourhood - ")
 	builder._batches = saved
 	n._sky(sun_direction)
-	var stats := {"houses": n._houses, "trees": n._trees}
+	var stats := {"houses": n._houses, "trees": n._trees, "trees_dropped": n._dropped}
 	n.root.set_meta("neighbourhood_stats", stats)
 	return stats
 
@@ -129,6 +138,7 @@ func _streets() -> void:
 		var road := Vector3(mid, GROUND + .005, centre) if along_x else Vector3(centre, GROUND + .006, mid)
 		var road_size := Vector3(length, .02, w - 2.0) if along_x else Vector3(w - 2.0, .02, length)
 		b._box("Road", road, road_size, "n asphalt")
+		_no_trunk.append(Rect2(street[2], centre - w * .5, length, w) if along_x else Rect2(centre - w * .5, street[2], w, length))
 		for side in [-1.0, 1.0]:
 			var offset: float = side * (w * .5 - .5)
 			var walk := Vector3(mid, GROUND + .06, centre + offset) if along_x else Vector3(centre + offset, GROUND + .061, mid)
@@ -169,8 +179,10 @@ func _lot(along_x: bool, line: float, start: float, frontage: float, facing: int
 	var at := func(u: float, v: float, y: float) -> Vector3: return origin + u_axis * u + v_axis * v + Vector3.UP * y
 	# House frame: local +Z is the front (toward the street), Y up, X = Y x Z.
 	var basis := Basis(Vector3.UP.cross(front_dir), Vector3.UP, front_dir)
-	# Yard and walls.
-	b._box("Yard", at.call(frontage * .5, depth * .5, .015), _sized(basis, Vector3(frontage - .1, .03, depth - .1)), "n yard")
+	var vacant := rng.randf() < .3
+	# Yard and walls (a vacant lot keeps its grass and gets a stand of trees instead of a house).
+	if not vacant:
+		b._box("Yard", at.call(frontage * .5, depth * .5, .015), _sized(basis, Vector3(frontage - .1, .03, depth - .1)), "n yard")
 	var wall_key: String = ["n block", "n plaster 0", "n plaster 6", "n concrete"][rng.randi_range(0, 3)]
 	var wall_h := rng.randf_range(1.4, 2.0)
 	var gate_w := rng.randf_range(2.4, 3.2)
@@ -181,6 +193,11 @@ func _lot(along_x: bool, line: float, start: float, frontage: float, facing: int
 	_gate(at.call(gate_u, front_v, 0), at.call(gate_u + gate_w, front_v, 0), wall_h - .1)
 	_wall_segment(at.call(frontage - .1, front_v, 0), at.call(frontage - .1, depth - .1, 0), wall_h + .2, "n block")
 	_wall_segment(at.call(.1, depth - .1, 0), at.call(frontage - .1, depth - .1, 0), wall_h + .2, "n block")
+	if vacant:
+		for i in rng.randi_range(3, 5):
+			var kind: String = ["island_tree_01", "island_tree_02", "tree_small_02", "palm_coconut_a", "banana_plant", "searsia_lucida"][rng.randi_range(0, 5)]
+			_want(at.call(rng.randf_range(1.5, frontage - 1.5), rng.randf_range(1.5, depth - 1.5), 0), kind, rng.randf_range(.9, 1.4), 1.5)
+		return
 	# House footprint.
 	var side := rng.randf_range(.8, 1.6)
 	var house_w := frontage - side * 2.0
@@ -191,10 +208,17 @@ func _lot(along_x: bool, line: float, start: float, frontage: float, facing: int
 	var storeys := rng.randi_range(1, max_storeys)
 	var centre: Vector3 = at.call(side + house_w * .5, setback + house_d * .5, 0)
 	_house(centre, basis, house_w, house_d, storeys)
-	# Yard planting and furniture.
-	if rng.randf() < .55:
-		var spot: Vector3 = at.call(rng.randf_range(.9, frontage - .9), rng.randf_range(.9, setback - .5), 0)
-		_tree(spot, ["banana_small", "banana_plant", "island_tree_02", "tree_small_02", "searsia_lucida", "shrub_02"][rng.randi_range(0, 5)], rng.randf_range(.8, 1.2))
+	# The house and its roof overhang / front balcony keep tree crowns out.
+	var a: Vector3 = centre + basis * Vector3(-house_w * .5 - .55, 0, -house_d * .5 - .55)
+	var c: Vector3 = centre + basis * Vector3(house_w * .5 + .55, 0, house_d * .5 + 1.3)
+	_no_canopy.append(Rect2(minf(a.x, c.x), minf(a.z, c.z), absf(c.x - a.x), absf(c.z - a.z)))
+	# Yard planting: small plants out front, a real tree in the back yard when it fits.
+	if rng.randf() < .5:
+		_want(at.call(rng.randf_range(.9, frontage - .9), rng.randf_range(.9, setback - .5), 0), ["banana_small", "banana_plant", "searsia_lucida"][rng.randi_range(0, 2)], rng.randf_range(.7, 1.0), .6)
+	var back := depth - setback - house_d
+	if back > 1.5 or rng.randf() < .6:
+		var kind: String = ["island_tree_02", "tree_small_02", "palm_coconut_a", "island_tree_01", "banana_plant"][rng.randi_range(0, 4)]
+		_want(at.call(rng.randf_range(1.0, frontage - 1.0), setback + house_d + maxf(back * .5, .5), 0), kind, rng.randf_range(.9, 1.3), 1.5)
 	if rng.randf() < .3:
 		var chair: Vector3 = at.call(side + house_w * rng.randf_range(.2, .8), setback - .8, 0)
 		_model("street/plastic_monobloc_chair_01", chair, rad_to_deg(atan2(front_dir.x, front_dir.z)) + rng.randf_range(-30, 30), 1.0, 45.0)
@@ -211,6 +235,7 @@ func _wall_segment(a: Vector3, c: Vector3, height: float, key: String) -> void:
 	var dir := (c - a).normalized()
 	var size := Vector3(length, height, .18) if absf(dir.x) > .5 else Vector3(.18, height, length)
 	b._box("Fence wall", mid, size, key)
+	_no_trunk.append(Rect2(mid.x - size.x * .5, mid.z - size.z * .5, size.x, size.z).grow(.15))
 	b._box("Fence cap", mid + Vector3.UP * (height * .5 + .03), size * Vector3(1, 0, 1) + Vector3(.06 if absf(dir.x) < .5 else 0, .06, .06 if absf(dir.x) > .5 else 0), "n concrete")
 
 func _gate(a: Vector3, c: Vector3, height: float) -> void:
@@ -397,6 +422,8 @@ func _flat_roof(to_world: Callable, basis: Basis, w: float, d: float, top: float
 
 ## Exterior of the new studio wing (indoors on layer 1) as seen from the courtyard and stair.
 func _our_house_shell() -> void:
+	# Living room, kitchen, studio wing, balcony, stair and courtyard.
+	_no_canopy.append(Rect2(-7.5, -4.5, 21.0, 13.0))
 	b._box("Studio wing exterior", Vector3(-3.45, (GROUND + 3.25) * .5, 5.27), Vector3(4.95, 3.25 - GROUND, 4.66), "n plaster 4")
 	b._box("Studio wing roof", Vector3(-3.45, 3.32, 5.27), Vector3(5.2, .14, 4.9), "n concrete")
 	for x in [-4.8, -2.2]:
@@ -407,11 +434,57 @@ func _model(path: String, at: Vector3, yaw: float, scale: float, fade := 0.0) ->
 	node.set_meta("fade", fade)
 	return node
 
-func _tree(at: Vector3, kind: String, scale := 1.0) -> void:
-	_trees += 1
-	var fade := 90.0 if kind.begins_with("banana") or kind.begins_with("shrub") or kind == "searsia_lucida" else 0.0
-	var node := _model("nature/" + kind, at, rng.randf_range(0, 360), scale, fade)
-	node.set_meta("tree", true)
+## Queues a tree; _plant() places it at `at` or within `search` metres of it, if anywhere fits.
+func _want(at: Vector3, kind: String, scale: float, search: float) -> void:
+	_wanted.append([at, kind, scale, search])
+
+func _plant() -> void:
+	for want: Array in _wanted:
+		var base: Vector3 = want[0]
+		var kind: String = want[1]
+		var scale: float = want[2]
+		var search: float = want[3]
+		var fade := 90.0 if kind.begins_with("banana") or kind.begins_with("shrub") or kind == "searsia_lucida" else 0.0
+		var planted := false
+		for attempt in 16:
+			var spot := base if attempt == 0 else base + Vector3(rng.randf_range(-search, search), 0, rng.randf_range(-search, search))
+			if _hits_point(_no_trunk, spot, .5):
+				continue
+			var node := _model("nature/" + kind, spot, rng.randf_range(0, 360), scale, fade)
+			var box := InteriorModelKit.bounds_in(node, models)
+			var crown := Rect2(box.position.x, box.position.z, box.size.x, box.size.z)
+			crown = crown.grow(-minf(crown.size.x, crown.size.y) * .1)
+			if _hits_rect(_no_canopy, crown) or _crowded(crown):
+				node.free()
+				continue
+			node.set_meta("tree", true)
+			_crowns.append(crown)
+			_trees += 1
+			planted = true
+			break
+		if not planted:
+			_dropped += 1
+
+func _hits_point(rects: Array[Rect2], p: Vector3, margin: float) -> bool:
+	for r in rects:
+		if r.grow(margin).has_point(Vector2(p.x, p.z)):
+			return true
+	return false
+
+func _hits_rect(rects: Array[Rect2], crown: Rect2) -> bool:
+	for r in rects:
+		if r.intersects(crown):
+			return true
+	return false
+
+## Two crowns may touch, but not grow through each other.
+func _crowded(crown: Rect2) -> bool:
+	for other in _crowns:
+		if other.intersects(crown):
+			var shared := other.intersection(crown).get_area()
+			if shared > .45 * minf(other.get_area(), crown.get_area()):
+				return true
+	return false
 
 func _hero_trees() -> void:
 	# Big trees composed for the balcony and courtyard views; they rise above the roofs.
@@ -426,23 +499,12 @@ func _hero_trees() -> void:
 			["island_tree_01", Vector3(26.5, GROUND, -2.0), 1.4], ["jacaranda_tree", Vector3(5.0, GROUND, 58.0), .6],
 			["palm_coconut_a", Vector3(-30.0, GROUND, 40.0), 1.3], ["island_tree_02", Vector3(20.0, GROUND, 4.0), 1.3],
 			["banana_plant", Vector3(13.6, GROUND, 6.4), 1.0], ["banana_small", Vector3(8.6, GROUND, 7.8), 1.1],
-			["palm_coconut_b", Vector3(55.0, GROUND, 55.0), 1.1], ["island_tree_02", Vector3(-45.0, GROUND, 25.0), 2.2]]:
-		_trees += 1
-		var node := _model("nature/" + str(spec[0]), spec[1], rng.randf_range(0, 360), spec[2])
-		node.set_meta("tree", true)
-	# Street trees on the sidewalks, every ~14 m with gaps.
-	var street_kinds := ["palm_coconut_a", "island_tree_02", "tree_small_02", "palm_coconut_b", "island_tree_01"]
-	for street: Array in STREETS:
-		var along_x: bool = street[0] == "x"
-		var t: float = street[2] + 6.0
-		while t < street[3] - 6.0:
-			var side := 1.0 if rng.randf() < .5 else -1.0
-			var offset: float = street[1] + side * (float(street[4]) * .5 - .5)
-			var at := Vector3(t, GROUND + .12, offset) if along_x else Vector3(offset, GROUND + .12, t)
-			if rng.randf() < .55 and at.distance_to(Vector3(8, GROUND, 4)) > 9.0:
-				var kind: String = street_kinds[rng.randi_range(0, street_kinds.size() - 1)]
-				_tree(at, kind, rng.randf_range(1.0, 1.6) if kind.begins_with("island") or kind.begins_with("tree") else rng.randf_range(.8, 1.15))
-			t += rng.randf_range(11.0, 17.0)
+			["palm_coconut_b", Vector3(55.0, GROUND, 55.0), 1.1],
+			# A palm and banana grove on the open lane outside the courtyard gate.
+			["palm_coconut_a", Vector3(16.6, GROUND, 3.8), 1.2], ["banana_plant", Vector3(15.2, GROUND, 6.6), 1.0],
+			["tree_small_02", Vector3(16.9, GROUND, 6.8), 1.25], ["palm_coconut_b", Vector3(16.2, GROUND, 1.8), .8],
+			["banana_small", Vector3(14.6, GROUND, 2.6), 1.0], ["island_tree_02", Vector3(-45.0, GROUND, 25.0), 2.2]]:
+		_want(spec[1], spec[0], spec[2], 7.0)
 	# A far ring of tree crowns that melts into the haze beyond the last streets.
 	for i in 30:
 		var angle := deg_to_rad(rng.randf_range(-100.0, 190.0))
@@ -450,7 +512,7 @@ func _hero_trees() -> void:
 		var at := Vector3(6.0 + sin(angle) * radius, GROUND, 14.0 + cos(angle) * radius)
 		var kind: String = ["jacaranda_tree", "island_tree_01", "palm_coconut_b", "palm_coconut_a", "island_tree_02"][rng.randi_range(0, 4)]
 		var scale := rng.randf_range(.55, .8) if kind == "jacaranda_tree" else (rng.randf_range(1.6, 2.4) if kind.begins_with("island") else rng.randf_range(1.0, 1.4))
-		_tree(at, kind, scale)
+		_want(at, kind, scale, 10.0)
 
 func _poles() -> void:
 	# Concrete utility poles along street A (cross arms along Z) and street B (along X), with sagging wires.
@@ -465,6 +527,7 @@ func _poles() -> void:
 		for i in line.size():
 			var p: Vector3 = line[i]
 			b._rod(p, p + Vector3.UP * 9.0, .14, "n pole", 10, .1)
+			_no_trunk.append(Rect2(p.x - 1.0, p.z - 1.0, 2.0, 2.0))
 			b._box("Pole cross arm", p + Vector3.UP * 8.5, Vector3(.1, .1, .1) + arm_dir * 1.5, "n pole")
 			b._box("Pole transformer", p + Vector3.UP * 7.4 + Vector3(.3, 0, .3), Vector3(.45, .7, .45), "n frame dark")
 			if i + 1 < line.size():
@@ -496,6 +559,7 @@ func _sky(sun_direction: Vector3) -> void:
 	dome.mesh = sphere
 	dome.scale = Vector3.ONE * 450.0
 	dome.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+	dome.layers = 2
 	dome.extra_cull_margin = 16384.0
 	var material := ShaderMaterial.new()
 	material.shader = SKY_SHADER

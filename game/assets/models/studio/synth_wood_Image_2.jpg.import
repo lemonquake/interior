@@ -3,9 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dhac8dtbagp2y"
-path="res://.godot/imported/synth_wood_Image_2.jpg-715451edf7cefb2cdd7471311fe8c2d7.ctex"
+path.s3tc="res://.godot/imported/synth_wood_Image_2.jpg-715451edf7cefb2cdd7471311fe8c2d7.s3tc.ctex"
+path.etc2="res://.godot/imported/synth_wood_Image_2.jpg-715451edf7cefb2cdd7471311fe8c2d7.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "965ed3d5b474b16e05139daf91661a48"
@@ -14,11 +16,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/models/studio/synth_wood_Image_2.jpg"
-dest_files=["res://.godot/imported/synth_wood_Image_2.jpg-715451edf7cefb2cdd7471311fe8c2d7.ctex"]
+dest_files=["res://.godot/imported/synth_wood_Image_2.jpg-715451edf7cefb2cdd7471311fe8c2d7.s3tc.ctex", "res://.godot/imported/synth_wood_Image_2.jpg-715451edf7cefb2cdd7471311fe8c2d7.etc2.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -40,4 +42,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

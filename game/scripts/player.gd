@@ -4,11 +4,23 @@ extends CharacterBody3D
 signal grabbed(body: InteriorObject)
 signal target_changed(body: InteriorObject)
 signal console_requested
+## Emitted at each heel strike (the low point of the head bob): surface key from InteriorSurfaces,
+## strength 0..1 (walk ~0.6, run 1.0, crouch ~0.3).
+signal stepped(surface: String, strength: float)
+signal landed(surface: String, fall_speed: float)
 
 # Distances are metres, velocities m/s, masses kg and impulses N s.
-const WALK_SPEED := 3.2
-const RUN_SPEED := 5.6
-const CROUCH_SPEED := 1.45
+const WALK_SPEED := 2.45
+const RUN_SPEED := 4.7
+const CROUCH_SPEED := 1.2
+## Metres travelled per footstep: an adult stride, about 2.3 steps/s walking and 3 steps/s running.
+const WALK_STEP := 1.05
+const RUN_STEP := 1.55
+const CROUCH_STEP := .7
+## Head bob: vertical drop at each heel strike, side-to-side sway over a left/right pair, roll.
+const BOB_HEIGHT := .034
+const BOB_SWAY := .022
+const BOB_ROLL := .011
 const GROUND_ACCELERATION := 10.5
 const SPRINT_ACCELERATION := 13.5
 const GROUND_BRAKING := 12.0
@@ -69,8 +81,14 @@ var _collision: CollisionShape3D
 var _standing_shape: CapsuleShape3D
 var _coyote_left := 0.0
 var _jump_buffer := 0.0
-var _bob_phase := 0.0
+var _bob_phase := 0.0   # 0..1 through the current step; 0 = heel strike
+var _step_count := 0
+var _bob_weight := 0.0
+var _sway := 0.0
 var _eye_offset := 0.0
+var _air_speed := 0.0
+## The desired planar velocity this tick (input direction x speed), before collisions.
+var wish_velocity := Vector3.ZERO
 var _spawn_position := Vector3(0, 0.15, 2.0)
 
 func _ready() -> void:
@@ -131,10 +149,11 @@ func _view_basis() -> Basis:
 func _sync_camera(origin: Vector3) -> void:
 	if camera == null:
 		return
+	var eye := _eye_y + _eye_offset
 	if origin.is_equal_approx(global_position):
-		camera.position = Vector3(0.0, _eye_y, 0.0)
+		camera.position = Vector3(_sway, eye, 0.0)
 	else:
-		camera.global_position = origin + Vector3.UP * _eye_y
+		camera.global_position = origin + global_basis.x * _sway + Vector3.UP * eye
 
 func _process(_delta: float) -> void:
 	if playing:
@@ -181,8 +200,34 @@ func _unhandled_input(event: InputEvent) -> void:
 		throw_object()
 	if event.is_action_pressed("jump"):
 		request_jump()
+	if event.is_action_pressed("channel"):
+		change_channel(1)
+	if event is InputEventMouseButton and event.pressed and not is_instance_valid(held) and _interactor_with("change_channel") != null:
+		if event.button_index == MOUSE_BUTTON_WHEEL_UP:
+			change_channel(1)
+		elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
+			change_channel(-1)
 	if event.is_action_pressed("inspect"):
 		inspect_object()
+
+## The interactor (TV, gate...) of the targeted prop, if it has `method`.
+func _interactor_with(method: String) -> Object:
+	if target == null or not target.has_meta("interactor"):
+		return null
+	var interactor: Object = target.get_meta("interactor")
+	return interactor if is_instance_valid(interactor) and interactor.has_method(method) else null
+
+func change_channel(step: int) -> void:
+	var tv := _interactor_with("change_channel")
+	if tv != null:
+		tv.call("change_channel", step)
+
+## Touch "Throw": throws a held prop, or changes the channel of a TV under the crosshair.
+func touch_throw() -> void:
+	if not is_instance_valid(held) and _interactor_with("change_channel") != null:
+		change_channel(1)
+		return
+	throw_object()
 
 func request_jump() -> void:
 	if playing:
@@ -214,6 +259,7 @@ func _physics_process(delta: float) -> void:
 	direction.y = 0.0
 	var sprinting := (Input.is_action_pressed("run") or touch_sprinting) and not crouching
 	var speed := CROUCH_SPEED if crouching else (RUN_SPEED if sprinting else WALK_SPEED)
+	wish_velocity = direction.normalized() * speed * axis.length() if axis.length_squared() > 0.001 else Vector3.ZERO
 	var planar := Vector3(velocity.x, 0.0, velocity.z)
 	var acceleration := SPRINT_ACCELERATION if sprinting else GROUND_ACCELERATION
 	if grounded:
@@ -242,7 +288,13 @@ func _physics_process(delta: float) -> void:
 		var intent := direction.normalized() * speed * axis.length()
 		if intent.length_squared() > Vector3(approach_velocity.x, 0, approach_velocity.z).length_squared():
 			approach_velocity = Vector3(intent.x, approach_velocity.y, intent.z)
+	var falling_speed := velocity.y
 	move_and_slide()
+	if is_on_floor() and not grounded and falling_speed < -1.2:
+		landed.emit(InteriorSurfaces.under(self), falling_speed)
+		# A landing plants a foot: restart the stride from a heel strike.
+		_bob_phase = 0.0
+		_eye_offset -= clampf(-falling_speed * .012, 0.0, .07)
 	_push_contacts(approach_velocity, delta)
 	_update_camera(delta, sprinting)
 	if charging_throw:
@@ -312,13 +364,34 @@ func _push_contacts(approach_velocity: Vector3, delta: float) -> void:
 
 func _update_camera(delta: float, sprinting: bool) -> void:
 	var planar_speed := Vector2(velocity.x, velocity.z).length()
-	var target_bob := 0.0
-	if is_on_floor() and planar_speed > 0.2:
-		_bob_phase += planar_speed * delta * 5.0
-		target_bob = sin(_bob_phase * 2.0) * (0.007 if crouching else 0.012) * minf(planar_speed / WALK_SPEED, 1.2)
-	_eye_offset = lerpf(_eye_offset, target_bob, 1.0 - exp(-12.0 * delta))
+	var grounded := is_on_floor()
+	var moving := grounded and planar_speed > 0.25
+	# The bob fades in and out with speed instead of snapping when walking starts or stops.
+	var target_weight := clampf(planar_speed / WALK_SPEED, 0.0, 1.35) if moving else 0.0
+	_bob_weight = lerpf(_bob_weight, target_weight, 1.0 - exp(-(6.0 if moving else 4.0) * delta))
+	if moving:
+		var stride := CROUCH_STEP if crouching else (RUN_STEP if planar_speed > (WALK_SPEED + RUN_SPEED) * .5 else WALK_STEP)
+		_bob_phase += planar_speed * delta / stride
+		if _bob_phase >= 1.0:
+			_bob_phase = fmod(_bob_phase, 1.0)
+			_step_count += 1
+			var strength := 0.3 if crouching else clampf(planar_speed / RUN_SPEED, 0.45, 1.0)
+			stepped.emit(InteriorSurfaces.under(self), strength)
+	elif _bob_weight < .05:
+		# Standing still: settle back to mid-stride so the next step starts cleanly.
+		_bob_phase = lerpf(_bob_phase, 0.5 if _bob_phase > 0.25 else 0.0, 1.0 - exp(-3.0 * delta))
+	var bob_scale := (0.45 if crouching else 1.0) * _bob_weight
+	# Lowest at the heel strike (phase 0), highest at mid-stance (phase 0.5).
+	var bob := -cos(_bob_phase * TAU) * BOB_HEIGHT * .5 - BOB_HEIGHT * .5
+	# Weight shifts over the planted foot: one full sway per left/right pair of steps.
+	var side := 1.0 if _step_count % 2 == 0 else -1.0
+	var sway := sin(_bob_phase * PI) * side * BOB_SWAY
+	_sway = sway * bob_scale
+	_eye_offset = lerpf(_eye_offset, bob * bob_scale, 1.0 - exp(-18.0 * delta))
 	var eye_height := CROUCH_EYE if crouching else STANDING_EYE
-	_eye_y = lerpf(_eye_y, eye_height + _eye_offset, 1.0 - exp(-13.0 * delta))
+	_eye_y = lerpf(_eye_y, eye_height, 1.0 - exp(-13.0 * delta))
+	if camera != null:
+		camera.rotation.z = -sway * bob_scale / BOB_SWAY * BOB_ROLL
 	var desired_fov := _base_fov + (4.0 if sprinting and planar_speed > WALK_SPEED else 0.0)
 	camera.fov = lerpf(camera.fov, desired_fov, 1.0 - exp(-5.0 * delta))
 	# Physics queries this tick use the exact (non-interpolated) eye.
@@ -346,6 +419,8 @@ func reset_motion(spawn_position: Vector3, restore_stance := true) -> void:
 	_jump_buffer = 0.0
 	_coyote_left = 0.0
 	_bob_phase = 0.0
+	_bob_weight = 0.0
+	_sway = 0.0
 	_eye_offset = 0.0
 	if restore_stance and _capsule != null:
 		crouching = false
@@ -387,6 +462,11 @@ func toggle_hold() -> void:
 		release_object()
 		return
 	update_target()
+	if target != null and target.has_meta("interactor"):
+		var interactor: Object = target.get_meta("interactor")
+		if is_instance_valid(interactor) and interactor.has_method("interact"):
+			interactor.call("interact")
+		return
 	if target == null and door_target != null:
 		door_target.call("toggle")
 		return

@@ -53,7 +53,8 @@ func _run() -> void:
 	var outdoor := OS.get_cmdline_user_args().has("--perf-outdoor")
 	if door_open or outdoor:
 		for door in main.get_tree().get_nodes_in_group("interior_doors"):
-			door.snap(true)
+			if door.has_method("snap"):
+				door.snap(true)
 	var lighting := InteriorLighting.find_in(main.room)
 	var saved: Array[String] = []
 	for index in VIEWS.size():

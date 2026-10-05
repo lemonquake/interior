@@ -2,7 +2,7 @@
 
 By Aljay Leodones. A first-person physics mystery in a recreation of the owner's family room.
 
-Version 0.3 relights and declutters the room, rebuilds prop physics on Jolt (rolling, toppling, physical holding and charged throws) and makes the room an editable scene. Version 0.2 added acceleration and momentum-based prop interactions, a connected three-level hamster playground, aquariums below its stand, and the kitchen, rear entrance and right wall from the owner's additional photographs. Eight supplied family photographs appear in the room's frames.
+Version 0.6 opens the courtyard gate onto a walkable, fog-bound ghost town: empty streets in Davao City with parked Philippine tricycles, an abandoned jeepney, empty street-food carts and the rusted, bent sign of Malasugue Street. The TV now turns on to a "News Order - Davao City" emergency broadcast behind a CRT filter, every other channel is static, and the digital clock shows times that make no sense. Walking uses an adult stride with a head bob locked to the footsteps, which sound different on wood, carpet, tile, concrete, asphalt and grass. Version 0.3 relights and declutters the room, rebuilds prop physics on Jolt (rolling, toppling, physical holding and charged throws) and makes the room an editable scene. Version 0.2 added acceleration and momentum-based prop interactions, a connected three-level hamster playground, aquariums below its stand, and the kitchen, rear entrance and right wall from the owner's additional photographs. Eight supplied family photographs appear in the room's frames.
 
 ## Play
 
@@ -14,13 +14,15 @@ Run `builds/windows/Interior.exe`, or install `builds/android/Interior.apk`. Win
 | Sprint | Hold Shift | Hold Sprint |
 | Jump | Space | Jump |
 | Crouch | Hold C | Crouch / Stand |
-| Hold or drop; open or close the door | E | Hold / Drop |
+| Hold or drop; open or close a door; unlock the gate; TV on / off | E | Hold / Drop |
+| Push the unlocked gate open | Walk into it | Walk into it |
+| Change TV channel (aiming at the TV) | Q or mouse wheel | Throw |
 | Throw | Left click | Throw |
 | Inspect TV | F | Inspect |
 | Notes | J or pause menu | Pause menu |
 | Pause / resume | Esc | Pause / Resume |
 
-The navy door opens onto the balcony from the owner's photographs: an aquarium beside the shoe rack, a railing with a frosted floral screen, and concrete stairs down to a small courtyard. Daylight there is lit separately, so the room looks the same while the door is closed.
+The navy door opens onto the balcony from the owner's photographs: an aquarium beside the shoe rack, a railing with a frosted floral screen, and concrete stairs down to a small courtyard. Daylight there is lit separately, so the room looks the same while the door is closed. At the foot of the stair, E unlocks the white courtyard gate, but it only opens when you push it. Beyond it, the lane, Malasugue Street and the streets around the block can be walked. Police barricades close the streets at the edge of the play area.
 
 Holding the clock, table plant and small cabinet photo reveals three notes. Inspect the TV and solve its lock, then keep exploring. Restart restores the room arrangement.
 

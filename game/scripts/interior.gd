@@ -66,6 +66,8 @@ func _ready() -> void:
 				remove_child(baked_room)
 				baked_room.free()
 		_build_control_test_room()
+	if not control_lab:
+		_setup_living_props()
 	player = PlayerScript.new()
 	player.name = "Player"
 	add_child(player)
@@ -97,7 +99,7 @@ func _ready() -> void:
 func _setup_inputs() -> void:
 	var actions := {"forward": KEY_W, "back": KEY_S, "left": KEY_A,
 		"right": KEY_D, "hold": KEY_E, "run": KEY_SHIFT, "jump": KEY_SPACE,
-		"crouch": KEY_C, "pause": KEY_ESCAPE, "journal": KEY_J, "inspect": KEY_F}
+		"crouch": KEY_C, "pause": KEY_ESCAPE, "journal": KEY_J, "inspect": KEY_F, "channel": KEY_Q}
 	for action in actions:
 		if not InputMap.has_action(action):
 			InputMap.add_action(action)
@@ -157,6 +159,17 @@ func _build_living_room() -> bool:
 		if light is OmniLight3D and room.is_ancestor_of(light):
 			_room_lights.append(light)
 	return true
+
+## The TV turns on instead of being carried, and the digital clock shows nonsense times.
+func _setup_living_props() -> void:
+	for body in get_tree().get_nodes_in_group("movable"):
+		var object := body as InteriorObject
+		if object == null or (room != null and not room.is_ancestor_of(object)):
+			continue
+		if object.prop_id.begins_with("television"):
+			InteriorTelevision.attach(object)
+		elif object.prop_id.begins_with("digital_clock"):
+			InteriorGlitchClock.attach(object)
 
 func _build_control_test_room() -> void:
 	# A separate control lab. The photographed room cannot be exported before Form approval.
@@ -273,7 +286,7 @@ func _build_ui() -> void:
 	touch.theme = theme
 	ui.add_child(touch)
 	touch.hold_pressed.connect(player.toggle_hold)
-	touch.throw_pressed.connect(player.throw_object)
+	touch.throw_pressed.connect(player.touch_throw)
 	touch.inspect_pressed.connect(player.inspect_object)
 	touch.pause_pressed.connect(func(): _show_menu("pause"))
 	var center := CenterContainer.new()
@@ -347,7 +360,7 @@ func _show_menu(kind: String) -> void:
 	quality_select.custom_minimum_size.y = 49
 	quality_select.item_selected.connect(_apply_quality)
 	menu_content.add_child(quality_select)
-	menu_content.add_child(_label("Drag left to move • drag right to look\nSprint • Jump • Crouch • Hold / Drop • Throw\nInspect to open the TV screen" if mobile else "WASD move • Shift sprint • Space jump • C crouch\nMouse look • E hold / drop • Left click throw\nF inspect • J notes • Esc pause", 18))
+	menu_content.add_child(_label("Drag left to move • drag right to look\nSprint • Jump • Crouch • Hold / Drop • Throw\nInspect to open the TV screen" if mobile else "WASD move • Shift sprint • Space jump • C crouch\nMouse look • E hold / drop / use • Left click throw\nF inspect • Q TV channel • J notes • Esc pause", 18))
 	if not mobile:
 		_button("Quit", func(): get_tree().quit())
 
@@ -393,6 +406,9 @@ func _on_grabbed(body: InteriorObject) -> void:
 
 func _on_target_changed(body: InteriorObject) -> void:
 	prompt.text = (("Hold / Drop • " if mobile else "E • Hold ") + body.display_name) if body != null else ""
+	if body != null and body.has_meta("interactor") and is_instance_valid(body.get_meta("interactor")):
+		var text := str((body.get_meta("interactor") as Object).call("prompt_text"))
+		prompt.text = ("Hold / Drop • " + text.replace("Q • Change channel", "Throw • Channel")) if mobile else ("E • " + text)
 	if body == null and player != null and is_instance_valid(player.door_target):
 		prompt.text = ("Hold / Drop • " if mobile else "E • ") + str(player.door_target.call("prompt_text"))
 	if body != null and body.is_in_group("mystery_console"):
@@ -588,6 +604,6 @@ func _process(delta: float) -> void:
 ## The navy balcony door (the studio's glass slider shares the "interior_doors" group).
 func entry_door() -> InteriorHingedDoor:
 	for door in get_tree().get_nodes_in_group("interior_doors"):
-		if not door is InteriorSlidingDoor:
+		if door is InteriorHingedDoor and not door is InteriorSlidingDoor:
 			return door as InteriorHingedDoor
 	return null

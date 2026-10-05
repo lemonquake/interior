@@ -166,5 +166,68 @@
   "user": "1.Quad",
   "license": "CC Attribution",
   "url": "https://sketchfab.com/3d-models/3b658ecad29f4d9a9606dbf8fea7c9bb"
+ },
+ "tricycle_a": {
+  "uid": "08cb15a0c57748f793e0ead5e5095722",
+  "name": "Lowpoly Traysikel/Tricycle",
+  "user": "wawa",
+  "license": "CC Attribution",
+  "url": "https://sketchfab.com/3d-models/08cb15a0c57748f793e0ead5e5095722"
+ },
+ "tricycle_b": {
+  "uid": "08cb15a0c57748f793e0ead5e5095722",
+  "name": "Lowpoly Traysikel/Tricycle (recoloured variant)",
+  "user": "wawa",
+  "license": "CC Attribution",
+  "url": "https://sketchfab.com/3d-models/08cb15a0c57748f793e0ead5e5095722"
+ },
+ "trisikad": {
+  "uid": "8ffe8bae79d645aaaf83e46ce7791e49",
+  "name": "Rickshaw",
+  "user": "mdtanvirulhaq",
+  "license": "CC Attribution",
+  "url": "https://sketchfab.com/3d-models/8ffe8bae79d645aaaf83e46ce7791e49"
+ },
+ "tuktuk": {
+  "uid": "916b76665fb9458cac7473bd446cdd98",
+  "name": "[HW-XYZ_school] detailed draft of tuk-tuk",
+  "user": "iraida",
+  "license": "CC Attribution",
+  "url": "https://sketchfab.com/3d-models/916b76665fb9458cac7473bd446cdd98"
+ },
+ "jeepney": {
+  "uid": "0b8bcde5df19458da9fa5606989b1e7d",
+  "name": "Jeepney",
+  "user": "Maclin Macalindong",
+  "license": "CC Attribution",
+  "url": "https://sketchfab.com/3d-models/0b8bcde5df19458da9fa5606989b1e7d"
+ },
+ "food_cart_a": {
+  "uid": "bca4551289cb456dbf2de4ed91e4acfc",
+  "name": "煎饼车/Gerobak Lumpia",
+  "user": "billionlioe",
+  "license": "CC Attribution",
+  "url": "https://sketchfab.com/3d-models/bca4551289cb456dbf2de4ed91e4acfc"
+ },
+ "food_cart_b": {
+  "uid": "e3959a95156746ac88af0d312c841918",
+  "name": "Fair wooden food cart",
+  "user": "David Glynch",
+  "license": "CC Attribution",
+  "url": "https://sketchfab.com/3d-models/e3959a95156746ac88af0d312c841918"
+ },
+ "food_stall_c": {
+  "uid": "41e6a9883c4b4ac8bc476e167c949ff1",
+  "name": "Street stall",
+  "user": "Víctor Hernández",
+  "license": "CC Attribution",
+  "url": "https://sketchfab.com/3d-models/41e6a9883c4b4ac8bc476e167c949ff1"
+ },
+ "oil_drum": {
+  "uid": "19dd57bd8ce143098a2d0c9f0ad19d3e",
+  "name": "Oil Drum",
+  "user": "staticcc",
+  "license": "CC Attribution",
+  "url": "https://sketchfab.com/3d-models/19dd57bd8ce143098a2d0c9f0ad19d3e"
  }
 }

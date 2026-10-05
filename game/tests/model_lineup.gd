@@ -7,14 +7,23 @@ extends SceneTree
 func _initialize() -> void:
 	var group := "studio"
 	var out := "user://lineup"
+	var only: PackedStringArray = []
+	var spacing_arg := 0.0
+	var columns_arg := 0
 	for argument in OS.get_cmdline_user_args():
+		if argument.begins_with("--only="):
+			only = argument.get_slice("=", 1).split(",")
+		elif argument.begins_with("--columns="):
+			columns_arg = int(argument.get_slice("=", 1))
+		elif argument.begins_with("--spacing="):
+			spacing_arg = float(argument.get_slice("=", 1))
 		if argument.begins_with("--group="):
 			group = argument.get_slice("=", 1)
 		elif argument.begins_with("--out="):
 			out = argument.get_slice("=", 1)
-	_run.call_deferred(group, out)
+	_run.call_deferred(group, out, only, spacing_arg, columns_arg)
 
-func _run(group: String, out: String) -> void:
+func _run(group: String, out: String, only: PackedStringArray = [], spacing_arg := 0.0, columns_arg := 0) -> void:
 	DirAccess.make_dir_recursive_absolute(out)
 	root.size = Vector2i(1800, 1000)
 	var world := Node3D.new()
@@ -32,10 +41,12 @@ func _run(group: String, out: String) -> void:
 	world.add_child(sun)
 	var files: Array[String] = []
 	for file in DirAccess.get_files_at("res://assets/models/" + group):
-		if file.ends_with(".glb"):
+		if file.ends_with(".glb") and (only.is_empty() or only.has(file.get_basename())):
 			files.append(file)
-	var columns := 6
+	var columns := 6 if columns_arg <= 0 else columns_arg
 	var spacing := 2.2 if group != "nature" else 14.0
+	if spacing_arg > 0.0:
+		spacing = spacing_arg
 	var labels: Array[Label3D] = []
 	for i in files.size():
 		var at := Vector3((i % columns) * spacing, 0, -(i / columns) * spacing)

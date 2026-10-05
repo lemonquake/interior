@@ -401,24 +401,71 @@ func _build_courtyard() -> void:
 	_plate([Vector3(9.1, .30, YARD_Z), Vector3(10.6, .30, YARD_Z), Vector3(10.6, .75, YARD_Z + 1.3), Vector3(9.1, .75, YARD_Z + 1.3)], "tarp orange")
 	_plate([Vector3(9.15, -.55, YARD_Z - .02), Vector3(10.55, -.55, YARD_Z - .02), Vector3(10.55, .30, YARD_Z - .02), Vector3(9.15, .30, YARD_Z - .02)], "tarp orange")
 	_plate([Vector3(10.6, .30, YARD_Z), Vector3(11.3, .30, YARD_Z), Vector3(11.3, .7, YARD_Z + 1.0), Vector3(10.6, .7, YARD_Z + 1.0)], "tarp blue")
-	# White decorative steel grille gate across the courtyard end.
+	# White decorative steel grille gate across the courtyard end: two leaves on the end posts that
+	# meet at the middle (scripts/push_gate.gd). The posts stay part of the static structure.
 	var fy0 := GROUND
 	var fy1 := GROUND + 2.05
-	for z in [Z_WALL + .06, 4.1, YARD_Z - .02]:
-		_box("Gate post", Vector3(FENCE_X, (fy0 + fy1) * .5, z), Vector3(.07, fy1 - fy0, .07), "white steel")
-	for y in [fy0 + .08, fy0 + 1.0, fy1 - .04]:
-		_rod(Vector3(FENCE_X, y, Z_WALL + .06), Vector3(FENCE_X, y, YARD_Z - .02), .018, "white steel", 6)
-	var d := .28
-	for row in [[fy0 + .08, fy0 + 1.0], [fy0 + 1.0, fy1 - .04]]:
-		var z := Z_WALL + .06
-		while z < YARD_Z - .03:
-			var z1 := minf(z + d, YARD_Z - .02)
-			var y0: float = row[0]
-			var y1: float = row[1]
-			_rod(Vector3(FENCE_X, y0, z), Vector3(FENCE_X, y1, z1), .008, "white steel", 4)
-			_rod(Vector3(FENCE_X, y0, z1), Vector3(FENCE_X, y1, z), .008, "white steel", 4)
-			_ring(Vector3(FENCE_X, (y0 + y1) * .5, (z + z1) * .5), .06, "white steel", Basis(Vector3.UP, PI * .5), .006, 10)
-			z += d
+	for z in [Z_WALL + .06, YARD_Z - .02]:
+		_box("Gate post", Vector3(FENCE_X, (fy0 + fy1) * .5, z), Vector3(.08, fy1 - fy0 + .05, .08), "white steel")
+		_collider("Gate post", Vector3(FENCE_X, (fy0 + fy1) * .5, z), Vector3(.1, fy1 - fy0, .1))
+	_build_gate()
+
+const GATE_MID := 4.1
+const PushGateScript = preload("res://scripts/push_gate.gd")
+
+func _build_gate() -> void:
+	var gate := Node3D.new()
+	gate.name = "CourtyardGate"
+	gate.set_script(PushGateScript)
+	_root.add_child(gate)
+	var h := 2.05
+	for spec: Array in [["GateLeafNorth", Z_WALL + .06, 1.0], ["GateLeafSouth", YARD_Z - .02, -1.0]]:
+		var hinge_z: float = spec[1]
+		var width := absf(GATE_MID - hinge_z) - .05
+		var leaf := AnimatableBody3D.new()
+		leaf.name = spec[0]
+		leaf.collision_layer = 2
+		leaf.collision_mask = 0
+		leaf.sync_to_physics = false
+		gate.add_child(leaf)
+		leaf.position = Vector3(FENCE_X, GROUND, hinge_z)
+		leaf.rotation.y = 0.0 if spec[2] > 0.0 else PI
+		leaf.set_meta("open_sign", spec[2])
+		leaf.set_meta("width", width)
+		leaf.set_meta("surface", "metal")
+		_saved.push_back([_batches, _shell])
+		_batches = {}
+		_shell = leaf
+		# Leaf-local frame: hinge at the origin, the leaf runs along +Z, X is its thickness.
+		var z0 := .05
+		var z1 := width
+		for z in [z0, z1]:
+			_box("Gate stile", Vector3(0, h * .5 + .02, z), Vector3(.045, h - .04, .045), "white steel")
+		for y in [.08, 1.0, h - .04]:
+			_rod(Vector3(0, y, z0), Vector3(0, y, z1), .018, "white steel", 6)
+		var d := (z1 - z0) / 4.0
+		for row in [[.08, 1.0], [1.0, h - .04]]:
+			for k in 4:
+				var za := z0 + k * d
+				var zb := za + d
+				var y0: float = row[0]
+				var y1: float = row[1]
+				_rod(Vector3(0, y0, za), Vector3(0, y1, zb), .008, "white steel", 4)
+				_rod(Vector3(0, y0, zb), Vector3(0, y1, za), .008, "white steel", 4)
+				_ring(Vector3(0, (y0 + y1) * .5, (za + zb) * .5), .06, "white steel", Basis(Vector3.UP, PI * .5), .006, 10)
+		# Hinge knuckles.
+		for y in [.25, h - .25]:
+			_rod(Vector3(0, y - .06, .0), Vector3(0, y + .06, .0), .022, "black metal", 8)
+		if spec[2] > 0.0:
+			# Latch bolt and a rusty padlock hanging open on the free end of the north leaf.
+			_box("Gate latch", Vector3(-.04, 1.05, z1 - .02), Vector3(.03, .05, .16), "black metal")
+			_box("Padlock body", Vector3(-.07, .93, z1 - .03), Vector3(.03, .07, .055), "roof rust")
+			_ring(Vector3(-.07, .985, z1 - .03), .022, "steel", Basis(Vector3.UP, PI * .5), .004, 10)
+		_collider("Gate leaf", Vector3(0, h * .5 + .02, (z0 + z1) * .5), Vector3(.07, h, z1 - z0 + .04))
+		_commit(leaf, "")
+		var previous: Array = _saved.pop_back()
+		_batches = previous[0]
+		_shell = previous[1]
 
 ## Sun at about 3 pm: 40 degrees up, behind the stair view and out over the street (-X, +Z), so the
 ## houses across the streets are lit from the front and the view down the stair is not into the sun.
@@ -446,7 +493,6 @@ func _build_bounds() -> void:
 	_collider("Stair open side bound", Vector3((X_END + YARD_X) * .5, (GROUND + lid_y) * .5, STAIR_Z + .06), Vector3(YARD_X - X_END + .1, lid_y - GROUND, .12))
 	_collider("Low wall bound", Vector3(YARD_X - .05, (GROUND + lid_y) * .5, (STAIR_Z + YARD_Z) * .5), Vector3(.14, lid_y - GROUND, YARD_Z - STAIR_Z + .1))
 	_collider("Neighbour wall bound", Vector3((YARD_X + FENCE_X) * .5, (GROUND + lid_y) * .5, YARD_Z + .07), Vector3(FENCE_X - YARD_X + .2, lid_y - GROUND, .14))
-	_collider("Gate bound", Vector3(FENCE_X + .02, (GROUND + lid_y) * .5, (Z_WALL + YARD_Z) * .5), Vector3(.12, lid_y - GROUND, YARD_Z - Z_WALL + .2))
 	_collider("Open sky lid", Vector3((X_END + FENCE_X) * .5, lid_y + .1, (Z_WALL + YARD_Z) * .5), Vector3(FENCE_X - X_END + .3, .2, YARD_Z - Z_WALL + .3))
 	_shell = saved
 

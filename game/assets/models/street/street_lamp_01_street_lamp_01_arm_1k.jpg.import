@@ -3,9 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://daiwor7vw4qb1"
-path="res://.godot/imported/street_lamp_01_street_lamp_01_arm_1k.jpg-1e3dd7cc3d16c92c219abe01637d4e0c.ctex"
+path.s3tc="res://.godot/imported/street_lamp_01_street_lamp_01_arm_1k.jpg-1e3dd7cc3d16c92c219abe01637d4e0c.s3tc.ctex"
+path.etc2="res://.godot/imported/street_lamp_01_street_lamp_01_arm_1k.jpg-1e3dd7cc3d16c92c219abe01637d4e0c.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "f5e1b97a768fc332595990847a1bbfbe"
@@ -14,11 +16,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/models/street/street_lamp_01_street_lamp_01_arm_1k.jpg"
-dest_files=["res://.godot/imported/street_lamp_01_street_lamp_01_arm_1k.jpg-1e3dd7cc3d16c92c219abe01637d4e0c.ctex"]
+dest_files=["res://.godot/imported/street_lamp_01_street_lamp_01_arm_1k.jpg-1e3dd7cc3d16c92c219abe01637d4e0c.s3tc.ctex", "res://.godot/imported/street_lamp_01_street_lamp_01_arm_1k.jpg-1e3dd7cc3d16c92c219abe01637d4e0c.etc2.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -40,4 +42,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

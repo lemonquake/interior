@@ -3,9 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cb7q8w7ar6ic3"
-path="res://.godot/imported/side_table_01_side_table_01_diff_1k.jpg-8d9a17ae274a9da8c740f14b6033c5d8.ctex"
+path.s3tc="res://.godot/imported/side_table_01_side_table_01_diff_1k.jpg-8d9a17ae274a9da8c740f14b6033c5d8.s3tc.ctex"
+path.etc2="res://.godot/imported/side_table_01_side_table_01_diff_1k.jpg-8d9a17ae274a9da8c740f14b6033c5d8.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "c2b97b4658674cd58a0ef538bfd633f0"
@@ -14,11 +16,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/models/decor/side_table_01_side_table_01_diff_1k.jpg"
-dest_files=["res://.godot/imported/side_table_01_side_table_01_diff_1k.jpg-8d9a17ae274a9da8c740f14b6033c5d8.ctex"]
+dest_files=["res://.godot/imported/side_table_01_side_table_01_diff_1k.jpg-8d9a17ae274a9da8c740f14b6033c5d8.s3tc.ctex", "res://.godot/imported/side_table_01_side_table_01_diff_1k.jpg-8d9a17ae274a9da8c740f14b6033c5d8.etc2.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -40,4 +42,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

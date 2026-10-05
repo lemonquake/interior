@@ -10,7 +10,7 @@ island and the survivors enlarged so the canopy keeps its volume; bark is decima
 Godot generates distance LODs on import.
 """
 import bpy, bmesh, os, sys, math, random
-from mathutils import Vector
+from mathutils import Vector, Matrix
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 PH = os.path.join(ROOT, '.local', 'downloads', 'polyhaven', 'models')
@@ -65,6 +65,17 @@ ASSETS = {
     'street_lamp_01': dict(src=ph('street_lamp_01'), group='street', size=None, other=10000),
     'plastic_monobloc_chair_01': dict(src=ph('plastic_monobloc_chair_01'), group='street', size=None),
     'security_light': dict(src=ph('security_light'), group='street', size=None),
+    # Davao street scene (Sketchfab CC-BY). yaw turns the model so its front faces glTF +Z.
+    'tricycle_a': dict(src=ob('tricycle_a'), group='street', size=2.4, lit=True),
+    # Same mesh as tricycle_a with a blue sidecar and a lighter roof, for variety.
+    'tricycle_b': dict(src=ob('tricycle_a'), group='street', size=2.4, lit=True, tint={'09___Default': (.03, .16, .5, 1), '02___Default': (.62, .1, .08, 1)}),
+        'trisikad': dict(src=ob('trisikad'), group='street', size=2.4, other=60000, yaw=-90),
+    'tuktuk': dict(src=ob('tuktuk'), group='street', size=2.6, other=60000, yaw=90),
+    'jeepney': dict(src=ob('jeepney'), group='street', size=6.8),
+    'food_cart_a': dict(src=ob('food_cart_a'), group='street', size=2.3, yaw=-90),
+    'food_cart_b': dict(src=ob('food_cart_b'), group='street', size=2.2),
+    'food_stall_c': dict(src=ob('food_stall_c'), group='street', size=2.6, other=60000, yaw=-90),
+    'oil_drum': dict(src=ob('oil_drum'), group='street', size=.89),
     # Interior decor (Poly Haven CC0).
     'potted_plant_01': dict(src=ph('potted_plant_01'), group='decor', size=None, leaves=30000, other=30000),
     'potted_plant_02': dict(src=ph('potted_plant_02'), group='decor', size=None, other=40000),
@@ -162,10 +173,32 @@ def split_by_leaf(obj):
     leaf = [o for o in bpy.context.selected_objects if o != obj][0]
     return leaf, obj
 
+def make_lit(tint=None):
+    """Unlit emission-only materials (flat colour) become Principled so they react to light.
+    tint maps material name -> RGBA base colour override."""
+    for mat in bpy.data.materials:
+        if not mat.use_nodes:
+            continue
+        nodes = mat.node_tree.nodes
+        emission = next((n for n in nodes if n.type == 'EMISSION'), None)
+        if emission is None or any(n.type == 'BSDF_PRINCIPLED' for n in nodes):
+            continue
+        color = tuple((tint or {}).get(mat.name, emission.inputs['Color'].default_value))
+        for n in list(nodes):
+            if n.type != 'OUTPUT_MATERIAL':
+                nodes.remove(n)
+        out = next(n for n in nodes if n.type == 'OUTPUT_MATERIAL')
+        bsdf = nodes.new('ShaderNodeBsdfPrincipled')
+        bsdf.inputs['Base Color'].default_value = color
+        bsdf.inputs['Roughness'].default_value = .65
+        mat.node_tree.links.new(bsdf.outputs['BSDF'], out.inputs['Surface'])
+
 def process(name, cfg):
     bpy.ops.wm.read_factory_settings(use_empty=True)
     bpy.ops.import_scene.gltf(filepath=cfg['src'])
     meshes = [o for o in bpy.context.scene.objects if o.type == 'MESH']
+    if cfg.get('lit'):
+        make_lit(cfg.get('tint'))
     if 'keep' in cfg:
         for o in meshes:
             if o.name.split('.')[0] not in cfg['keep'] and not any(o.name.startswith(k) for k in cfg['keep']):
@@ -202,6 +235,13 @@ def process(name, cfg):
             bpy.ops.object.join()
         obj = bpy.context.view_layer.objects.active
         obj.name = name
+    # Optional yaw (degrees, about Blender Z) so the model's front ends up on glTF +Z.
+    if cfg.get('yaw'):
+        rot = Matrix.Rotation(math.radians(cfg['yaw']), 4, 'Z')
+        for v in obj.data.vertices:
+            v.co = rot @ v.co
+        obj.data.update()
+        bpy.context.view_layer.update()
     # Scale to the requested real-world size and pivot on the bottom centre.
     corners = [obj.matrix_world @ Vector(c) for c in obj.bound_box]
     lo = Vector([min(c[i] for c in corners) for i in range(3)])

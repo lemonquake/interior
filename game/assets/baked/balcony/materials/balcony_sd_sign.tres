@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/outdoor/street/sign_malasugue.png" id="1_62jrc"]
+
+[resource]
+resource_name = "Balcony / sd sign"
+albedo_texture = ExtResource("1_62jrc")
+metallic = 0.25
+roughness = 0.55
+texture_filter = 5

@@ -54,7 +54,7 @@ func _run() -> void:
 	for door in get_nodes_in_group("interior_doors"):
 		if door is InteriorSlidingDoor:
 			studio_door = door
-		else:
+		elif door is InteriorHingedDoor:
 			entry = door
 	for view: Array in VIEWS:
 		if which != "all" and view[1] != which:

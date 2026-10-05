@@ -48,6 +48,12 @@ var _no_trunk: Array[Rect2] = []
 var _crowns: Array[Rect2] = []
 var _wanted: Array = []
 var _dropped := 0
+## Walkable streets (run 6): everything solid at street level gets a collider in this body.
+var solids: StaticBody3D
+var _solid_count := 0
+## The player may walk the street loop, the lane outside the courtyard gate and the back alley.
+## Police barricades close the streets where they cross this rectangle.
+const PLAY_AREA := Rect2(-24.0, -18.0, 50.0, 73.0)
 
 static func build(builder: InteriorBalconyBuilder, parent: Node3D, sun_direction: Vector3) -> Dictionary:
 	var n := InteriorNeighborhoodBuilder.new()
@@ -60,6 +66,13 @@ static func build(builder: InteriorBalconyBuilder, parent: Node3D, sun_direction
 	n.models.name = "Models"
 	n.root.add_child(n.models)
 	n.rng.seed = 20261005
+	n.solids = StaticBody3D.new()
+	n.solids.name = "NeighbourhoodColliders"
+	n.solids.collision_layer = 2
+	n.solids.collision_mask = 5
+	n.solids.physics_material_override = PhysicsMaterial.new()
+	n.solids.physics_material_override.friction = .8
+	n.root.add_child(n.solids)
 	var saved: Dictionary = builder._batches
 	builder._batches = {}
 	n._materials()
@@ -69,11 +82,17 @@ static func build(builder: InteriorBalconyBuilder, parent: Node3D, sun_direction
 	n._our_house_shell()
 	n._hero_trees()
 	n._poles()
+	# Street life and the ghost-town dressing take their spots before the trees are planted.
+	var street_rng_state := n.rng.state
+	n.rng.seed = 6006
+	InteriorStreetDressing.build(n)
+	n.rng.state = street_rng_state
+	n._play_bounds()
 	n._plant()
 	builder._commit(n.root, "Neighbourhood - ")
 	builder._batches = saved
 	n._sky(sun_direction)
-	var stats := {"houses": n._houses, "trees": n._trees, "trees_dropped": n._dropped}
+	var stats := {"houses": n._houses, "trees": n._trees, "trees_dropped": n._dropped, "colliders": n._solid_count}
 	n.root.set_meta("neighbourhood_stats", stats)
 	return stats
 
@@ -127,6 +146,7 @@ func _ground() -> void:
 	b._feature("Neighbourhood: streets, ~50 houses, trees, poles and a misty 3 pm sky")
 	# Grass base, then concrete yards drawn per lot. The courtyard keeps its own floor above this.
 	b._box("Ground", Vector3(10, GROUND - .06, 20), Vector3(260, .1, 260), "n grass")
+	solid("Ground", Vector3(10, GROUND - .26, 20), Vector3(260, .5, 260))
 
 func _streets() -> void:
 	for street: Array in STREETS:
@@ -144,6 +164,7 @@ func _streets() -> void:
 			var walk := Vector3(mid, GROUND + .06, centre + offset) if along_x else Vector3(centre + offset, GROUND + .061, mid)
 			var walk_size := Vector3(length, .12, 1.0) if along_x else Vector3(1.0, .12, length)
 			b._box("Sidewalk", walk, walk_size, "n pavement")
+			_curb_collider(walk, walk_size, along_x)
 			# A painted centre line, dashed.
 		var dash := -length * .5
 		while dash < length * .5:
@@ -235,6 +256,7 @@ func _wall_segment(a: Vector3, c: Vector3, height: float, key: String) -> void:
 	var dir := (c - a).normalized()
 	var size := Vector3(length, height, .18) if absf(dir.x) > .5 else Vector3(.18, height, length)
 	b._box("Fence wall", mid, size, key)
+	solid("Fence wall", mid, size + Vector3(0, .1, 0))
 	_no_trunk.append(Rect2(mid.x - size.x * .5, mid.z - size.z * .5, size.x, size.z).grow(.15))
 	b._box("Fence cap", mid + Vector3.UP * (height * .5 + .03), size * Vector3(1, 0, 1) + Vector3(.06 if absf(dir.x) < .5 else 0, .06, .06 if absf(dir.x) > .5 else 0), "n concrete")
 
@@ -250,6 +272,8 @@ func _gate(a: Vector3, c: Vector3, height: float) -> void:
 		b._box("Gate rail", (a + c) * .5 + Vector3.UP * y, (Vector3(length, .05, .05) if absf(dir.x) > .5 else Vector3(.05, .05, length)), key)
 	for p in [a, c]:
 		b._box("Gate post", p + Vector3.UP * (height + .2) * .5, Vector3(.24, height + .2, .24), "n concrete")
+	# The neighbours' gates are shut.
+	solid("Lot gate", (a + c) * .5 + Vector3.UP * height * .5, (Vector3(length, height, .2) if absf(dir.x) > .5 else Vector3(.2, height, length)))
 
 ## A house centred at `centre` (ground level) whose front faces basis.z * -1... built in the lot basis:
 ## local x = along the street, local z = toward the street (front), y up.
@@ -266,6 +290,7 @@ func _house(centre: Vector3, basis: Basis, w: float, d: float, storeys: int) -> 
 	var to_world := func(local: Vector3) -> Vector3: return centre + basis * local
 	# Plinth and storey bodies (a slightly wider band marks each floor slab).
 	b._box("House plinth", to_world.call(Vector3(0, .15, 0)), _sized(basis, Vector3(w + .1, .3, d + .1)), "n concrete")
+	solid("House", to_world.call(Vector3(0, (height + .3) * .5, 0)), _sized(basis, Vector3(w + .1, height + .3, d + .1)))
 	for s in storeys:
 		var key := lower if s == 0 else wall
 		if style == 4 and s == storeys - 1 and storeys > 1:
@@ -458,6 +483,7 @@ func _plant() -> void:
 				node.free()
 				continue
 			node.set_meta("tree", true)
+			_trunk_collider(spot, kind, scale)
 			_crowns.append(crown)
 			_trees += 1
 			planted = true
@@ -527,6 +553,7 @@ func _poles() -> void:
 		for i in line.size():
 			var p: Vector3 = line[i]
 			b._rod(p, p + Vector3.UP * 9.0, .14, "n pole", 10, .1)
+			solid("Utility pole", p + Vector3.UP * 1.5, Vector3(.3, 3.0, .3))
 			_no_trunk.append(Rect2(p.x - 1.0, p.z - 1.0, 2.0, 2.0))
 			b._box("Pole cross arm", p + Vector3.UP * 8.5, Vector3(.1, .1, .1) + arm_dir * 1.5, "n pole")
 			b._box("Pole transformer", p + Vector3.UP * 7.4 + Vector3(.3, 0, .3), Vector3(.45, .7, .45), "n frame dark")
@@ -570,3 +597,85 @@ func _sky(sun_direction: Vector3) -> void:
 	material.set_shader_parameter("yaw", (0.4701 - .5) * TAU - sun_azimuth)
 	dome.material_override = material
 	root.add_child(dome)
+
+
+# ---------------------------------------------------------------- collision (walkable streets)
+
+func solid(label: String, center: Vector3, size: Vector3) -> CollisionShape3D:
+	var shape := BoxShape3D.new()
+	shape.size = size
+	shape.margin = .004
+	var collision := CollisionShape3D.new()
+	collision.name = label.validate_node_name()
+	collision.shape = shape
+	solids.add_child(collision, true)
+	collision.position = center
+	_solid_count += 1
+	return collision
+
+## Sidewalks are 12 cm kerbs; a bevelled prism lets the capsule walk up them.
+func _curb_collider(center: Vector3, size: Vector3, along_x: bool) -> void:
+	if not _near_play_area(center, size):
+		return
+	var bevel := .16
+	var top := size.y * .5
+	var half := (size.z if along_x else size.x) * .5
+	var length := (size.x if along_x else size.z) * .5
+	var profile := [Vector2(-half - bevel, -top - .02), Vector2(-half, top), Vector2(half, top), Vector2(half + bevel, -top - .02)]
+	var points := PackedVector3Array()
+	for end in [-length, length]:
+		for q: Vector2 in profile:
+			points.append(Vector3(end, q.y, q.x) if along_x else Vector3(q.x, q.y, end))
+	var shape := ConvexPolygonShape3D.new()
+	shape.points = points
+	var collision := CollisionShape3D.new()
+	collision.name = "Kerb"
+	collision.shape = shape
+	collision.set_meta("surface", "concrete")
+	solids.add_child(collision, true)
+	collision.position = center
+	_solid_count += 1
+
+func _near_play_area(center: Vector3, size: Vector3) -> bool:
+	return PLAY_AREA.grow(4.0).intersects(Rect2(center.x - size.x * .5, center.z - size.z * .5, size.x, size.z))
+
+func _trunk_collider(spot: Vector3, kind: String, scale: float) -> void:
+	if not PLAY_AREA.grow(2.0).has_point(Vector2(spot.x, spot.z)):
+		return
+	var radius := .2
+	if kind.begins_with("island") or kind == "jacaranda_tree":
+		radius = .32
+	elif kind.begins_with("banana"):
+		radius = .14
+	elif kind == "searsia_lucida":
+		radius = .35
+	var shape := CylinderShape3D.new()
+	shape.radius = radius * clampf(scale, .8, 1.6)
+	shape.height = 3.0
+	var collision := CollisionShape3D.new()
+	collision.name = "Tree trunk"
+	collision.shape = shape
+	solids.add_child(collision, true)
+	collision.position = spot + Vector3.UP * 1.5
+	_solid_count += 1
+
+## Our own house and the empty grass behind it are not part of the walk: solid blocks at street
+## level (they stop below the room floor, y < -0.05) plus the outer edge of the play area.
+func _play_bounds() -> void:
+	var top := -.05
+	var low := GROUND - .5
+	var block := func(label: String, x0: float, x1: float, z0: float, z1: float, y1: float) -> void:
+		solid(label, Vector3((x0 + x1) * .5, (low + y1) * .5, (z0 + z1) * .5), Vector3(x1 - x0, y1 - low, z1 - z0))
+	block.call("Bound south fields", PLAY_AREA.position.x, 18.0, PLAY_AREA.position.y, 1.0, top)
+	block.call("Bound house west", PLAY_AREA.position.x, 5.55, 1.0, 5.45, top)
+	block.call("Bound house south", 5.55, 12.66, 1.0, 2.86, top)
+	block.call("Bound neighbour yard", PLAY_AREA.position.x, 12.66, 5.44, 8.6, top)
+	var x0 := PLAY_AREA.position.x
+	var x1 := PLAY_AREA.end.x
+	var z0 := PLAY_AREA.position.y
+	var z1 := PLAY_AREA.end.y
+	var h := 12.0
+	block.call("Bound edge west", x0 - 1.0, x0, z0, z1, GROUND + h)
+	block.call("Bound edge east", x1, x1 + 1.0, z0, z1, GROUND + h)
+	block.call("Bound edge south", x0, x1, z0 - 1.0, z0, GROUND + h)
+	block.call("Bound edge north", x0, x1, z1, z1 + 1.0, GROUND + h)

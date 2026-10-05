@@ -31,11 +31,12 @@ func sun() -> DirectionalLight3D:
 func _update_visibility() -> void:
 	var camera := get_viewport().get_camera_3d() if is_inside_tree() else null
 	# x > 0.8 excludes the studio alcove, which also lies beyond z 2.62.
-	var outside := camera != null and camera.global_position.z > 2.62 and camera.global_position.x > .8
+	# Below the room floor means the stair foot, the courtyard or the street.
+	var outside := camera != null and ((camera.global_position.z > 2.62 and camera.global_position.x > .8) or camera.global_position.y < -.4)
 	var door_open := false
 	for door in get_tree().get_nodes_in_group("interior_doors"):
-		if door is InteriorSlidingDoor:
-			continue  # the studio door stays indoors
+		if not door is InteriorHingedDoor or door is InteriorSlidingDoor:
+			continue  # the studio slider and the courtyard gate don't reveal the balcony
 		if door.is_open() or door.is_moving():
 			door_open = true
 	var show := outside or door_open
@@ -59,5 +60,12 @@ func _process(delta: float) -> void:
 		# Low never casts dynamic shadows; Android keeps the sun shadow for High only.
 		light.shadow_enabled = tier >= (2 if mobile else 1)
 		# Without shadows the sun also reaches under the roof slab; soften it there.
-		light.light_energy = 1.6 if light.shadow_enabled else 1.0
+		# Overcast ghost-town afternoon (run 6): a weak, cool sun behind the haze.
+		light.light_energy = .85 if light.shadow_enabled else .6
+		light.light_color = Color(.86, .88, .9)
+		light.shadow_blur = 2.5
+		var fill := get_node_or_null("SkyFill") as DirectionalLight3D
+		if fill != null:
+			fill.light_energy = .75
+			fill.light_color = Color(.72, .76, .8)
 		light.directional_shadow_mode = DirectionalLight3D.SHADOW_PARALLEL_2_SPLITS if tier < 3 else DirectionalLight3D.SHADOW_PARALLEL_4_SPLITS

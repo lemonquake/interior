@@ -4,16 +4,20 @@ extends Node3D
 ## Reusable positional voices and deterministic authored sounds.
 var player: InteriorPlayer
 var voices: Array[AudioStreamPlayer3D] = []
-var footsteps: AudioStreamPlayer3D
+var footsteps: AudioStreamPlayer
+## Surface key -> [sample set, base pitch, volume dB]. Samples: Kenney Impact Sounds (CC0).
+const STEP_SOUNDS := {
+	"wood": ["wood", 1.0, -9.0], "carpet": ["carpet", .95, -8.0], "tile": ["concrete", 1.2, -11.0],
+	"concrete": ["concrete", 1.0, -9.0], "asphalt": ["concrete", .86, -9.5], "grass": ["grass", 1.0, -8.0],
+	"metal": ["concrete", 1.3, -10.0],
+}
+var _step_streams: Dictionary = {}
 var fan: AudioStreamPlayer3D
 var _soft: AudioStreamWAV
 var _hard: AudioStreamWAV
 var _ceramic: AudioStreamWAV
 var _speeds: Dictionary = {}
 var _cooldowns: Dictionary = {}
-var _distance := 0.0
-var _was_grounded := false
-var _fall_speed := 0.0
 var _voice := 0
 var _elapsed := 0.0
 
@@ -34,11 +38,21 @@ func setup(room: Node3D, character: InteriorPlayer) -> void:
 		voice.unit_size = 2.0
 		add_child(voice)
 		voices.append(voice)
-	footsteps = AudioStreamPlayer3D.new()
-	footsteps.stream = _sound(0.12, 100.0, 0.0, 19)
-	footsteps.volume_db = -22.0
-	footsteps.max_distance = 4.0
+	footsteps = AudioStreamPlayer.new()
+	footsteps.max_polyphony = 3
 	add_child(footsteps)
+	for set_name in ["wood", "carpet", "concrete", "grass"]:
+		var randomizer := AudioStreamRandomizer.new()
+		randomizer.playback_mode = AudioStreamRandomizer.PLAYBACK_RANDOM_NO_REPEATS
+		randomizer.random_pitch = 1.07
+		randomizer.random_volume_offset_db = 1.5
+		for i in 5:
+			var path := "res://assets/audio/footsteps/footstep_%s_%03d.ogg" % [set_name, i]
+			if ResourceLoader.exists(path):
+				randomizer.add_stream(-1, load(path))
+		_step_streams[set_name] = randomizer
+	player.stepped.connect(_on_step)
+	player.landed.connect(_on_landed)
 	for body in get_tree().get_nodes_in_group("movable"):
 		_speeds[body.get_instance_id()] = 0.0
 		body.body_entered.connect(_impact.bind(body))
@@ -100,25 +114,27 @@ func _physics_process(delta: float) -> void:
 	_elapsed += delta
 	for body in get_tree().get_nodes_in_group("movable"):
 		_speeds[body.get_instance_id()] = body.linear_velocity.length()
-	if not is_instance_valid(player) or not player.playing:
+
+## Heel strikes come from the player's head bob, so the sound lands on the low point of each step.
+func _on_step(surface: String, strength: float) -> void:
+	_play_step(surface, linear_to_db(clampf(strength, .2, 1.0)) * .6)
+
+func _on_landed(surface: String, fall_speed: float) -> void:
+	_play_step(surface, clampf(-fall_speed * .8 - 2.0, 0.0, 5.0))
+	if fall_speed < -4.0:
+		_play_at(player.global_position, _soft, clampf(-30.0 - fall_speed, -26.0, -14.0), 0.8)
+
+func _play_step(surface: String, gain_db: float) -> void:
+	if footsteps == null or not player.playing:
 		return
-	var grounded := player.is_on_floor()
-	var speed := Vector2(player.velocity.x, player.velocity.z).length()
-	footsteps.global_position = player.global_position + Vector3.UP * 0.1
-	if grounded and speed > 0.5:
-		_distance += speed * delta
-		var stride := 0.95 if speed > 3.5 else 0.70
-		if _distance >= stride:
-			_distance = fmod(_distance, stride)
-			footsteps.pitch_scale = 1.0 + sin(_elapsed * 5.3) * 0.05
-			footsteps.volume_db = -28.0 if player.camera.position.y < 1.3 else -22.0
-			footsteps.play()
-	else:
-		_distance = minf(_distance, 0.25)
-	if grounded and not _was_grounded and _fall_speed < -2.0:
-		_play_at(player.global_position, _soft, clampf(-28.0 - _fall_speed, -25.0, -14.0), 0.85)
-	_was_grounded = grounded
-	_fall_speed = player.velocity.y
+	var spec: Array = STEP_SOUNDS.get(surface, STEP_SOUNDS["wood"])
+	var stream: AudioStream = _step_streams.get(spec[0])
+	if stream == null:
+		return
+	footsteps.stream = stream
+	footsteps.pitch_scale = float(spec[1])
+	footsteps.volume_db = float(spec[2]) + gain_db
+	footsteps.play()
 
 func _impact(other: Node, body: InteriorObject) -> void:
 	if get_tree().paused or not is_instance_valid(body) or body.freeze or body.held:

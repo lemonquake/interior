@@ -34,6 +34,15 @@ licence (https://creativecommons.org/licenses/by/4.0/) and note that it was modi
 | palm_coconut_b | Palm Trees | ElectroNick | https://sketchfab.com/3d-models/20f8a8d5054b4191afb7cf3270dbd586 |
 | banana_small | Banana Tree | DJMiddi | https://sketchfab.com/3d-models/7186ebfc24fc42c599f81713cd28d55e |
 | banana_plant | Banana tree | 1.Quad | https://sketchfab.com/3d-models/3b658ecad29f4d9a9606dbf8fea7c9bb |
+| tricycle_a | Lowpoly Traysikel/Tricycle | wawa | https://sketchfab.com/3d-models/08cb15a0c57748f793e0ead5e5095722 |
+| tricycle_b | Lowpoly Traysikel/Tricycle (recoloured variant) | wawa | https://sketchfab.com/3d-models/08cb15a0c57748f793e0ead5e5095722 |
+| trisikad | Rickshaw | mdtanvirulhaq | https://sketchfab.com/3d-models/8ffe8bae79d645aaaf83e46ce7791e49 |
+| tuktuk | [HW-XYZ_school] detailed draft of tuk-tuk | iraida | https://sketchfab.com/3d-models/916b76665fb9458cac7473bd446cdd98 |
+| jeepney | Jeepney | Maclin Macalindong | https://sketchfab.com/3d-models/0b8bcde5df19458da9fa5606989b1e7d |
+| food_cart_a | 煎饼车/Gerobak Lumpia | billionlioe | https://sketchfab.com/3d-models/bca4551289cb456dbf2de4ed91e4acfc |
+| food_cart_b | Fair wooden food cart | David Glynch | https://sketchfab.com/3d-models/e3959a95156746ac88af0d312c841918 |
+| food_stall_c | Street stall | Víctor Hernández | https://sketchfab.com/3d-models/41e6a9883c4b4ac8bc476e167c949ff1 |
+| oil_drum | Oil Drum | staticcc | https://sketchfab.com/3d-models/19dd57bd8ce143098a2d0c9f0ad19d3e |
 
 ## Poly Haven assets (CC0 1.0, public domain)
 

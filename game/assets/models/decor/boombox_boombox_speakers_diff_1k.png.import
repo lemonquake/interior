@@ -3,9 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c17b1phl2k1ol"
-path="res://.godot/imported/boombox_boombox_speakers_diff_1k.png-26db0f83a601f41c6f2b3f7ee17c0b50.ctex"
+path.s3tc="res://.godot/imported/boombox_boombox_speakers_diff_1k.png-26db0f83a601f41c6f2b3f7ee17c0b50.s3tc.ctex"
+path.etc2="res://.godot/imported/boombox_boombox_speakers_diff_1k.png-26db0f83a601f41c6f2b3f7ee17c0b50.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "ecf066a7eb43bf9a0e9d3188bf1775bf"
@@ -14,11 +16,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/models/decor/boombox_boombox_speakers_diff_1k.png"
-dest_files=["res://.godot/imported/boombox_boombox_speakers_diff_1k.png-26db0f83a601f41c6f2b3f7ee17c0b50.ctex"]
+dest_files=["res://.godot/imported/boombox_boombox_speakers_diff_1k.png-26db0f83a601f41c6f2b3f7ee17c0b50.s3tc.ctex", "res://.godot/imported/boombox_boombox_speakers_diff_1k.png-26db0f83a601f41c6f2b3f7ee17c0b50.etc2.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -40,4 +42,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

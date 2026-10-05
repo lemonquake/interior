@@ -53,7 +53,7 @@ func _run() -> void:
 	player = main.player
 	var balcony := main.get_node_or_null("Balcony") as Node3D
 	check(balcony != null, "main.tscn instances the baked balcony scene")
-	var doors := get_nodes_in_group("interior_doors").filter(func(d: Node) -> bool: return not d is InteriorSlidingDoor)
+	var doors := get_nodes_in_group("interior_doors").filter(func(d: Node) -> bool: return d is InteriorHingedDoor and not d is InteriorSlidingDoor)
 	check(doors.size() == 1, "Exactly one hinged entry door (plus the studio's glass slider)")
 	if balcony == null or doors.is_empty():
 		_finish()
@@ -145,6 +145,9 @@ func _run() -> void:
 			await _frames(300)
 			var q := bottle.global_position
 			var inside := q.x > 5.5 and q.x < 12.6 and q.z > 2.9 and q.z < 5.3 and q.y > -2.95 and q.y < 2.9
+			if item[0] == "gate":
+				# The gate opens onto the street now: a prop thrown over it lands in the lane.
+				inside = q.x > 5.5 and q.x < 26.0 and q.z > -18.0 and q.z < 55.0 and q.y > -2.95
 			results["bottle_" + str(item[0]).replace(" ", "_")] = [q.x, q.y, q.z]
 			check(inside, "Prop thrown toward the %s stays inside the stair/yard bounds (%s)" % [item[0], str(q)])
 
@@ -259,7 +262,7 @@ func _run() -> void:
 	door.snap(true)
 	main._restart()
 	await _frames(10)
-	var reloaded := get_nodes_in_group("interior_doors").filter(func(d: Node) -> bool: return not d is InteriorSlidingDoor)
+	var reloaded := get_nodes_in_group("interior_doors").filter(func(d: Node) -> bool: return d is InteriorHingedDoor and not d is InteriorSlidingDoor)
 	check(reloaded.size() == 1 and reloaded[0] != door and not (reloaded[0] as InteriorHingedDoor).is_open(), "Restart reloads the door closed")
 	_finish()
 

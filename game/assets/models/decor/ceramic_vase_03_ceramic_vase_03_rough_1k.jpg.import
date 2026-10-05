@@ -3,9 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dgkglnxyjscen"
-path="res://.godot/imported/ceramic_vase_03_ceramic_vase_03_rough_1k.jpg-1883d0be771558edb06a243e6e346d8d.ctex"
+path.s3tc="res://.godot/imported/ceramic_vase_03_ceramic_vase_03_rough_1k.jpg-1883d0be771558edb06a243e6e346d8d.s3tc.ctex"
+path.etc2="res://.godot/imported/ceramic_vase_03_ceramic_vase_03_rough_1k.jpg-1883d0be771558edb06a243e6e346d8d.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "d921250b6dd00ff09ce997bd1218cdba"
@@ -14,11 +16,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/models/decor/ceramic_vase_03_ceramic_vase_03_rough_1k.jpg"
-dest_files=["res://.godot/imported/ceramic_vase_03_ceramic_vase_03_rough_1k.jpg-1883d0be771558edb06a243e6e346d8d.ctex"]
+dest_files=["res://.godot/imported/ceramic_vase_03_ceramic_vase_03_rough_1k.jpg-1883d0be771558edb06a243e6e346d8d.s3tc.ctex", "res://.godot/imported/ceramic_vase_03_ceramic_vase_03_rough_1k.jpg-1883d0be771558edb06a243e6e346d8d.etc2.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -40,4 +42,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

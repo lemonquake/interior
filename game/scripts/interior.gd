@@ -330,7 +330,7 @@ func _show_menu(kind: String) -> void:
 		_button("Notes", func(): _show_menu("journal"))
 		_button("Restart", _restart)
 	var quality_select := OptionButton.new()
-	for label in ["Graphics: Low", "Graphics: Medium", "Graphics: High"]:
+	for label in ["Graphics: Low", "Graphics: Medium", "Graphics: High"] + ([] if mobile else ["Graphics: Ultra"]):
 		quality_select.add_item(label)
 	quality_select.selected = quality
 	quality_select.custom_minimum_size.y = 49
@@ -355,15 +355,20 @@ func _restart() -> void:
 	get_tree().reload_current_scene()
 
 func _apply_quality(index: int) -> void:
-	quality = index
+	# Tiers: 0 Low, 1 Medium, 2 High (desktop default), 3 Ultra (desktop only).
+	quality = clampi(index, 0, 2 if mobile else 3)
 	Engine.max_fps = 60 if mobile else 120
-	get_viewport().msaa_3d = [Viewport.MSAA_DISABLED,Viewport.MSAA_2X,Viewport.MSAA_4X][index]
-	get_viewport().scaling_3d_scale = [0.65,0.85,1.0][index] if mobile else [0.75,1.0,1.0][index]
-	get_viewport().screen_space_aa = Viewport.SCREEN_SPACE_AA_DISABLED
+	var lighting := InteriorLighting.find_in(room) if room != null else null
+	if lighting != null:
+		lighting.mobile = mobile
+		lighting.apply_quality(quality)
+	else:
+		get_viewport().msaa_3d = [Viewport.MSAA_DISABLED,Viewport.MSAA_2X,Viewport.MSAA_4X,Viewport.MSAA_4X][quality]
+		get_viewport().scaling_3d_scale = [0.65,0.85,1.0][quality] if mobile else [0.75,1.0,1.0,1.0][quality]
+		get_viewport().screen_space_aa = Viewport.SCREEN_SPACE_AA_DISABLED
 	for light in _room_lights:
-		light.shadow_enabled = index == 2 and not mobile
-	RoomVisuals.apply_quality(self, index, mobile)
-	# Compatibility plus no dynamic shadows avoids costly phone-specific effects.
+		light.shadow_enabled = quality >= 2 and not mobile
+	RoomVisuals.apply_quality(self, quality, mobile)
 
 func _on_grabbed(body: InteriorObject) -> void:
 	if body.clue_digit.is_empty() or body.discovered:

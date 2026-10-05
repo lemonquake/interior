@@ -28,8 +28,8 @@ func _run() -> void:
 	var stats: Dictionary = main.room.get_meta("reference_room_stats")
 	check(stats.triangles_removed > 0,"Previous closed side shell is removed")
 	check(stats.static_batches <= 48,"Material batches stay within Android budget")
-	check(stats.family_photos >= 10,"Family photo gallery and fridge use actual supplied images")
-	check(stats.dynamic_props == 6,"Six kitchen objects have independent rigid bodies")
+	check(stats.family_photos >= 5,"Family photo gallery uses actual supplied images (decluttered to five frames)")
+	check(stats.dynamic_props == 11,"Eleven styled props (cups, bowl, oranges, bottles, balls) have independent rigid bodies")
 	check(stats.colliders >= 30,"New room surfaces and large furniture have collisions")
 	var backwards := 0
 	var inspected := 0

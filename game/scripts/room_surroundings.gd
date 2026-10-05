@@ -4,6 +4,8 @@ extends Node3D
 ## dimensions and collision geometry use metres in the existing room space.
 
 const ObjectScript = preload("res://scripts/physics_object.gd")
+const TOY_BALL := Vector3(-1.05, .112, 1.05)
+const TOY_TENNIS := Vector3(-.62, .036, 1.28)
 const REPLACED_COLLIDERS := ["Left wall", "Right wall", "Rear wall", "Ceiling"]
 var _batches: Dictionary = {}
 var _materials: Dictionary = {}
@@ -20,6 +22,15 @@ static func apply(room: Node3D, visual: Node3D, _manifest: Dictionary) -> Dictio
 	room.add_child(builder)
 	builder.add_to_group("room_surroundings")
 	builder._strip_old_shell(visual)
+	# Declutter: remove the imported meshes of actors dropped from the manifest.
+	for node_name in _manifest.get("declutter", []):
+		var node := visual.find_child(str(node_name), true, false)
+		if node == null:
+			node = visual.find_child(str(node_name).replace(" ", "_"), true, false)
+		if node != null:
+			node.get_parent().remove_child(node)
+			node.free()
+			builder._stats.features.append("Removed clutter: " + str(node_name))
 	builder._build()
 	room.set_meta("reference_room_stats", builder._stats)
 	print("INTERIOR_REFERENCE_ROOM ", JSON.stringify(builder._stats))
@@ -138,6 +149,7 @@ func _build_rear_mirrored() -> void:
 
 func _prepare_materials() -> void:
 	_material("plaster", Color(.88,.87,.81), .91, "surfaces/plaster")
+	_material("floor", Color.WHITE, .4)
 	_material("slat", Color.WHITE, .66, "reference_room/pale_slat")
 	_material("navy", Color.WHITE, .44, "reference_room/navy_enamel")
 	_material("blue ceiling", Color.WHITE, .73, "reference_room/blue_ceiling")
@@ -164,17 +176,17 @@ func _prepare_materials() -> void:
 	_material("white key",Color(.89,.87,.76),.44)
 	_material("brown rug",Color(.31,.24,.18),.99,"surfaces/rug")
 	_material("label paper",Color(.83,.82,.71),.89)
-	for name: String in ["steel","brass","black steel"]:
-		_materials[name].metallic = .65 if name != "black steel" else .34
-	_materials["mirror"].metallic = .7
-	_materials["glass"].transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
-	_materials["glass"].cull_mode = BaseMaterial3D.CULL_DISABLED
-	_materials["leaf curtain"].cull_mode = BaseMaterial3D.CULL_DISABLED
-	_materials["leaf curtain"].uv1_triplanar = false
-	_materials["leaf curtain"].uv1_scale = Vector3(1,2.3,1)
+	_material("ceramic", Color.WHITE, .2)
+	_material("bottle glass", Color.WHITE, .1)
+	# Shared library finishes (contract section 5) replace the flat reference colours.
+	for pair: Array in [["plaster","warm_plaster"],["navy","navy_enamel"],["blue ceiling","ceiling_white"],
+			["ivory","white_satin"],["tile white","quartz_counter"],["floor","marble_floor"],["steel","brushed_steel"],
+			["black steel","black_metal"],["oak","oak"],["darkwood","walnut"],["brass","brass"],["glass","glass_clear"],
+			["mirror","mirror"],["curtain blue","linen_white"],["leaf curtain","sheer_curtain"],["foam red","walnut"],
+			["ceramic","ceramic_white"],["bottle glass","glass_frosted"],["blue plastic","black_metal"],["cream basket","grout"]]:
+		_materials[pair[0]] = InteriorMaterials.material(pair[1])
 	_materials["blue cloth"].albedo_color = Color(.28,.43,.55)
 	_materials["pink cloth"].albedo_color = Color(.75,.48,.56)
-	_materials["curtain blue"].albedo_color = Color(.31,.45,.57)
 	var magnets := _material("alphabet magnets",Color.WHITE,.6)
 	magnets.albedo_texture = load("res://assets/reference_room/fridge_magnets.png")
 	magnets.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA_SCISSOR
@@ -302,7 +314,7 @@ func _frame(center: Vector3, width: float, height: float, photo: int, facing: Ba
 
 func _build_shell() -> void:
 	_feature("Walkable left kitchen extension")
-	_box("Kitchen floor",Vector3(-4.5,-.1,0),Vector3(2.4,.20,5.6),"tile white",true)
+	_box("Kitchen floor",Vector3(-4.5,-.1,0),Vector3(2.4,.20,5.6),"floor",true)
 	_box("Kitchen far wall",Vector3(-5.75,1.45,0),Vector3(.2,2.9,5.6),"plaster",true)
 	_box("Kitchen front wall",Vector3(-4.5,1.45,-2.8),Vector3(2.5,2.9,.2),"plaster",true)
 	_box("Kitchen rear wall",Vector3(-4.5,1.45,2.8),Vector3(2.5,2.9,.2),"plaster",true)
@@ -318,27 +330,16 @@ func _build_shell() -> void:
 	_box("Right wall storage",Vector3(3.4,1.45,2.08),Vector3(.2,2.9,1.24),"dark recess",true)
 	_box("Right doorway header",Vector3(3.4,2.64,.90),Vector3(.2,.52,1.16),"dark recess",true)
 	# A shallow real instrument alcove and a closet keep every opening enclosed.
-	_box("Studio floor",Vector3(-2.26,-.1,3.26),Vector3(2.12,.2,1.15),"tile white",true)
+	_box("Studio floor",Vector3(-2.26,-.1,3.26),Vector3(2.12,.2,1.15),"floor",true)
 	_box("Studio rear wall",Vector3(-2.26,1.45,3.91),Vector3(2.12,2.9,.18),"dark recess",true)
 	for x in [-1.18,-3.4]: _box("Studio side",Vector3(x,1.45,3.3),Vector3(.15,2.9,1.2),"plaster",true)
-	_box("Closet floor",Vector3(3.79,-.1,.90),Vector3(.98,.2,1.16),"tile white",true)
+	_box("Closet floor",Vector3(3.79,-.1,.90),Vector3(.98,.2,1.16),"floor",true)
 	_box("Closet rear",Vector3(4.32,1.45,.90),Vector3(.15,2.9,1.16),"plaster",true)
 	for z in [.27,1.53]: _box("Closet side",Vector3(3.85,1.45,z),Vector3(1.1,2.9,.14),"plaster",true)
-	# Blue painted fibreboard ceiling, with shallow joints and an off-white patch.
+	# Smooth warm-white plastered ceiling (the blue panel grid is gone).
 	_box("Room ceiling",Vector3(-1.15,3.01,0),Vector3(9.1,.22,5.6),"blue ceiling",true)
 	_box("Studio ceiling",Vector3(-2.25,3.0,3.31),Vector3(2.2,.2,1.26),"blue ceiling",true)
 	_box("Closet ceiling",Vector3(3.83,3.0,.90),Vector3(1.10,.2,1.3),"blue ceiling",true)
-	for x in range(-5,4):
-		_box("Ceiling panel joint",Vector3(x,2.893,0),Vector3(.010,.009,5.4),"dark recess")
-	for z in [-1.8,-.6,.6,1.8]:
-		_box("Ceiling panel joint",Vector3(-1.15,2.893,z),Vector3(9.1,.009,.009),"dark recess")
-	_box("Ceiling pale repair panel",Vector3(-3.83,2.881,.54),Vector3(.91,.014,1.16),"ivory")
-	# Fine dark grout makes the extension meet the existing tiled floor.
-	for x in range(5):
-		_box("Kitchen floor grout",Vector3(-5.62+x*.6,.006,0),Vector3(.004,.002,5.4),"cream basket")
-	for z in range(10):
-		_box("Kitchen floor grout",Vector3(-4.47,.006,-2.7+z*.6),Vector3(2.32,.002,.004),"cream basket")
-
 func _build_kitchen() -> void:
 	_feature("Navy louvered kitchen cabinets and tiled L counter")
 	# Lower cabinetry follows the far-left wall and turns behind the refrigerator.
@@ -389,15 +390,6 @@ func _build_kitchen() -> void:
 	_rod(Vector3(-5.24,.917,0),Vector3(-5.24,.919,0),.027,"dark recess",16)
 	_tube([Vector3(-5.47,.99,.34),Vector3(-5.47,1.22,.34),Vector3(-5.42,1.28,.28),Vector3(-5.29,1.28,.24),Vector3(-5.22,1.21,.21)],.022,"black steel",10)
 	_rod(Vector3(-5.47,1.03,.39),Vector3(-5.36,1.09,.39),.014,"black steel")
-	# The blue drawer/drying rack is open at the top, with individually slotted plates.
-	_box("Blue dish rack drawers",Vector3(-5.19,1.16,1.60),Vector3(.51,.37,.69),"blue plastic",true)
-	for y in [1.045,1.17,1.29]:
-		_box("Dish rack drawer groove",Vector3(-4.927,y,1.60),Vector3(.012,.009,.64),"dark recess")
-		_box("Dish rack drawer handle",Vector3(-4.914,y+.038,1.60),Vector3(.024,.015,.17),"blue plastic")
-	for side in [-1,1]: _box("Drying rack tall side",Vector3(-5.18,1.47,1.60+side*.33),Vector3(.52,.26,.025),"blue plastic")
-	for i in 8:
-		var z := 1.35+i*.065
-		_rod(Vector3(-5.18,1.46,z-.009),Vector3(-5.18,1.46,z+.009),.16,"ivory" if i%3 else "black steel",24)
 	# Glass-front dish cupboard at the right of the sink.
 	_box("Counter cupboard body",Vector3(-5.29,1.43,-1.17),Vector3(.56,.94,.73),"ivory",true)
 	_box("Counter cupboard dark recess",Vector3(-4.992,1.60,-1.17),Vector3(.022,.53,.64),"dark recess")
@@ -407,43 +399,20 @@ func _build_kitchen() -> void:
 	for y in [1.08,1.20]:
 		_box("Cupboard drawer",Vector3(-4.976,y,-1.17),Vector3(.03,.10,.66),"ivory")
 		_box("Cupboard drawer pull",Vector3(-4.941,y,-1.17),Vector3(.025,.015,.15),"steel")
-	for i in 5:
-		_lathe(Vector3(-4.979,1.335,-1.43+i*.12),[Vector2(.04,0),Vector2(.037,.115),Vector2(.03,.117)],"ivory",12)
-	# Pot, kettle and rice cooker are shaped with curved profiles.
-	_lathe(Vector3(-5.25,1.91,-1.33),[Vector2(.10,0),Vector2(.14,.08),Vector2(.13,.18),Vector2(.06,.21)],"steel")
-	_lathe(Vector3(-5.27,1.91,-.94),[Vector2(.075,0),Vector2(.11,.035),Vector2(.10,.21),Vector2(.066,.25)],"steel")
-	_tube([Vector3(-5.25,1.96,-.85),Vector3(-5.14,1.98,-.81),Vector3(-5.12,2.10,-.85),Vector3(-5.23,2.14,-.87)],.014,"black steel")
 	_box("Cooker stove",Vector3(-4.46,1.00,-2.25),Vector3(.60,.075,.47),"blue plastic",true)
 	_rod(Vector3(-4.46,1.041,-2.25),Vector3(-4.46,1.055,-2.25),.20,"black steel",24)
 	_lathe(Vector3(-4.46,1.06,-2.25),[Vector2(.11,0),Vector2(.14,.015),Vector2(.24,.14),Vector2(.245,.15),Vector2(.225,.145),Vector2(.125,.035)],"black steel",28)
 	_rod(Vector3(-4.26,1.16,-2.25),Vector3(-4.02,1.20,-2.25),.019,"black steel",10)
-	_lathe(Vector3(-5.06,.975,-2.15),[Vector2(.12,0),Vector2(.145,.06),Vector2(.135,.25),Vector2(.03,.28)],"ivory")
-	for i in 4:
-		_counter_bottle(Vector3(-5.39,.978,.58+i*.15),i%3)
-	for i in 5:
-		_rod(Vector3(-5.39,1.04,.65),Vector3(-5.4+sin(i)*.06,1.29,.66+cos(i)*.05),.006,"steel",6)
 	# Fridge near the enclosure, with full family snapshots and magnetic letters.
-	_feature("Dark refrigerator with family snapshots and alphabet magnets")
+	_feature("Dark refrigerator with clean doors")
 	_box("Refrigerator",Vector3(-3.89,.96,-2.18),Vector3(.66,1.91,.70),"black steel",true)
 	_box("Fridge freezer door",Vector3(-3.89,1.56,-1.816),Vector3(.64,.65,.035),"black steel")
 	_box("Fridge lower door",Vector3(-3.89,.65,-1.815),Vector3(.64,1.13,.04),"black steel")
 	for y in [1.21,1.30]: _box("Fridge silver handle",Vector3(-4.05,y,-1.776),Vector3(.25,.020,.022),"steel")
-	_frame(Vector3(-4.01,1.62,-1.784),.18,.25,4,Basis.IDENTITY)
-	_frame(Vector3(-3.76,1.66,-1.784),.19,.24,0,Basis.IDENTITY)
-	_quad([Vector3(-4.18,.13,-1.786),Vector3(-3.61,.13,-1.786),Vector3(-3.61,1.12,-1.786),Vector3(-4.18,1.12,-1.786)],Vector3.BACK,"alphabet magnets")
+	# Styled, reachable rigid bodies: three cups, a wooden bowl of oranges, two bottles.
 	for i in 3:
-		_lathe(Vector3(-4.07+i*.17,1.92,-2.16),[Vector2(.048,0),Vector2(.048,.18),Vector2(.031,.20)],"green plastic" if i == 0 else "ivory",12)
-	# Small open household rack and pastel drawer tower.
-	_rack(Vector3(-3.75,0,-.99),Vector3(.53,1.07,.40),"ivory",3)
-	for i in 3: _box("Pastel utility drawer",Vector3(-3.75,.19+i*.30,-.99),Vector3(.47,.24,.36),"pink plastic" if i%2 == 0 else "ivory",true)
-	for i in 2:
-		_flower_mat(Vector3(-4.55,.013,.37+i*.79),.33)
-	# Six actual rigid-body objects are reachable from the kitchen floor.
-	for i in 3:
-		_loose_kitchen_prop("Kitchen cup %d"%(i+1),Vector3(-5.06,1.025,.64+i*.17),.20,Vector3(.08,.09,.08),"ivory",true)
-	_loose_kitchen_prop("Kitchen soap bottle",Vector3(-5.02,1.07,.37),.34,Vector3(.065,.18,.065),"green plastic",false)
-	_loose_kitchen_prop("Kitchen small storage tub",Vector3(-5.07,1.05,2.13),.40,Vector3(.23,.15,.18),"pink plastic",false)
-	_loose_kitchen_prop("Kitchen sponge",Vector3(-5.04,1.001,-.48),.06,Vector3(.10,.037,.066),"cream basket",false)
+		_loose_kitchen_prop("Kitchen cup %d"%(i+1),Vector3(-5.10,1.0135,.60+i*.15),.20,Vector3(.08,.09,.08),"ceramic",true)
+	_build_toys()
 
 func _counter_bottle(p: Vector3, variant: int) -> void:
 	var key: String = ["green plastic","ivory","pink plastic"][variant]
@@ -518,31 +487,13 @@ func _build_rear() -> void:
 	_sphere(Vector3(-1.50,1.015,2.582),Vector3(.069,.069,.055),"brass")
 	_box("Door latch plate",Vector3(-1.50,1.015,2.61),Vector3(.070,.135,.012),"steel")
 	_box("Door latch bolt",Vector3(-1.44,1.38,2.607),Vector3(.15,.041,.02),"steel")
-	# Blue circular bag, hanging by its red strap, is a distinctive reference cue.
-	_rod(Vector3(-1.96,1.62,2.557),Vector3(-1.96,1.62,2.49),.32,"blue plastic",28)
-	_tube([Vector3(-2.09,1.84,2.535),Vector3(-1.95,2.17,2.552),Vector3(-1.84,1.85,2.535)],.014,"red enamel")
-	_frame(Vector3(-1.96,1.64,2.476),.23,.15,7,Basis(Vector3.UP,PI))
 	_box("Entry light switch",Vector3(-1.21,1.37,2.632),Vector3(.076,.12,.025),"ivory")
 	_box("Entry switch rocker",Vector3(-1.21,1.38,2.613),Vector3(.045,.065,.012),"ivory")
-	_feature("Tall mirror routers and visible cable runs")
+	_feature("Tall mirror beside the entrance")
 	_box("Rear tall mirror surround",Vector3(-.93,1.27,2.628),Vector3(.40,2.01,.045),"steel")
 	_box("Rear tall mirror inset",Vector3(-.93,1.27,2.598),Vector3(.342,1.945,.008),"mirror")
 	# Simulated mirror has subtle inset framing, with no fake room-photo plane.
 	for x in [-1.10,-.76]: _box("Mirror bevel edge",Vector3(x,1.27,2.584),Vector3(.009,1.94,.008),"ivory")
-	for i in 3:
-		var p := Vector3(-.37+i*.29,2.22-(i%2)*.28,2.585)
-		_box("Wall mounted router",p,Vector3(.25,.15,.077),"ivory")
-		for j in 12: _box("Router ventilation slit",p+Vector3(-.102+j*.018,0,-.041),Vector3(.006,.085,.006),"dark recess")
-		for j in 3: _sphere(p+Vector3(-.063+j*.03,-.049,-.045),Vector3(.008,.008,.004),"green plastic",8)
-		for x in [-.10,.10]: _rod(p+Vector3(x,.08,0),p+Vector3(x,.25,0),.004,"ivory",6)
-	for i in 8:
-		var x := -.58+i*.105
-		var pts: Array = []
-		for j in 25:
-			var t := float(j)/24
-			pts.append(Vector3(x+sin(t*TAU+i)*.07,2.34-t*(1.70 if i%3 == 0 else .74),2.54-sin(t*PI)*.035))
-		_tube(pts,.0033,"blue plastic" if i%3 else "black steel",5)
-	_tube([Vector3(.25,1.62,2.51),Vector3(.63,1.51,2.48),Vector3(1.1,1.26,2.49),Vector3(1.48,1.16,2.91)],.005,"black steel",6)
 	_feature("Open studio niche with guitars keyboard and acoustic panels")
 	for row in 6:
 		for col in 7:
@@ -561,14 +512,6 @@ func _build_rear() -> void:
 		if i%7 not in [2,6]: _box("Studio piano black key",kp+keyboard_basis*Vector3(.065,-.50+i*.037,-.083),Vector3(.13,.018,.020),"dark recess",false,keyboard_basis)
 	_box("Studio amp cabinet",Vector3(2.98,.34,3.47),Vector3(.44,.63,.35),"black steel",true)
 	for i in 15: _box("Amplifier grille",Vector3(2.98,.35,3.279+i*.0001),Vector3(.38,.017,.009),"steel",false,Basis(Vector3.FORWARD,i*.16))
-	_box("Studio cardboard carton",Vector3(1.47,.38,3.24),Vector3(.31,.76,.31),"cream basket",true)
-	for z in [3.10,3.38]: _box("Carton taped seam",Vector3(1.47,.762,z),Vector3(.15,.006,.012),"label paper")
-	# Two soft hanging bags to the right of the opening.
-	for i in 2:
-		var p := Vector3(3.19,1.55+i*.39,2.58)
-		_sphere(p,Vector3(.28,.43,.15),"black steel")
-		_tube([p+Vector3(-.08,.16,0),p+Vector3(0,.39,.01),p+Vector3(.08,.16,0)],.015,"black steel")
-
 func _guitar(center: Vector3, acoustic: bool) -> void:
 	var key := "oak" if acoustic else "red enamel"
 	var scale := 1.0 if acoustic else .74
@@ -611,20 +554,17 @@ func _build_right() -> void:
 			_box("Right wall pale slat",Vector3(3.275,1.45,z),Vector3(.042,2.9,.036),"slat")
 		else: _box("Right wall slat above doorway",Vector3(3.275,2.65,z),Vector3(.042,.50,.036),"slat")
 	var facing := Basis(Vector3.UP,-PI*.5)
-	for item: Array in [[-2.15,2.18,.31,.41,4],[-1.63,2.09,.29,.39,3],[-1.04,2.15,.35,.46,6],[-.49,2.08,.29,.39,2],[-1.95,1.54,.42,.31,0],[-.97,1.52,.36,.39,5],[-.41,1.49,.31,.39,7],[-1.1,2.67,.30,.22,1]]:
+	# A calm, aligned gallery of five family photos (was eight scattered frames).
+	for item: Array in [[-2.05,1.72,.36,.46,4],[-1.55,1.72,.36,.46,3],[-1.05,1.72,.36,.46,6],[-.55,1.72,.36,.46,2],[-1.30,2.30,.60,.40,0]]:
 		_frame(Vector3(3.239,item[1],item[0]),item[2],item[3],item[4],facing)
-	_feature("Leaf-pattern curtain doorway and shallow closet")
+	_feature("Sheer linen curtain doorway and shallow closet")
 	for z in [.34,1.46]: _box("Curtain doorway frame",Vector3(3.245,1.18,z),Vector3(.085,2.36,.062),"darkwood")
 	_box("Curtain doorway lintel",Vector3(3.245,2.37,.90),Vector3(.085,.060,1.20),"darkwood")
 	_curtain(Vector3(3.237,.07,.375),.51,2.23,"leaf curtain",true)
 	_curtain(Vector3(3.237,.07,.932),.49,2.23,"leaf curtain",true)
-	_rod(Vector3(3.215,2.30,.91),Vector3(3.215,1.40,.91),.011,"black steel")
-	_sphere(Vector3(3.204,1.44,.91),Vector3(.026,.14,.11),"pink plastic")
-	_sphere(Vector3(3.203,1.33,.91),Vector3(.051,.052,.052),"cream basket")
 	_box("Closet shelf",Vector3(3.90,1.89,.90),Vector3(.53,.028,.95),"ivory",true)
 	_box("Closet back storage",Vector3(4.12,.42,.89),Vector3(.22,.83,.73),"ivory",true)
-	_flower_mat(Vector3(2.91,.013,.90),.33)
-	_feature("Tall cupboard household shelf and laundry baskets")
+	_feature("Tall white storage cupboard")
 	# Tall white display cupboard with inset doors and translucent shelves.
 	_box("Tall storage cabinet",Vector3(3.06,1.02,2.12),Vector3(.44,2.03,.67),"ivory",true)
 	_box("Tall cupboard glass opening",Vector3(2.824,1.59,2.12),Vector3(.020,.66,.58),"dark recess")
@@ -634,20 +574,6 @@ func _build_right() -> void:
 		for z in [1.862,2.378]: _box("Cupboard molded door edge",Vector3(2.798,y,z),Vector3(.016,.34,.014),"ivory")
 		for yp in [-.163,.163]: _box("Cupboard molded door edge",Vector3(2.798,y+yp,2.12),Vector3(.016,.014,.52),"ivory")
 		_box("Cupboard door handle",Vector3(2.770,y,1.93),Vector3(.028,.072,.014),"steel")
-	for i in 4: _box("Storage tins in glass cabinet",Vector3(2.824,1.42+i*.12,2.12),Vector3(.029,.075,.38),"pink plastic" if i%2 else "ivory")
-	_rack(Vector3(3.07,1.33,1.70),Vector3(.20,.79,.36),"ivory",4)
-	for i in 6: _counter_bottle(Vector3(2.997,1.54+(i/3)*.19,1.60+(i%3)*.07),i%3)
-	_basket(Vector3(2.65,0,1.94),Vector3(.42,.60,.41),"cream basket")
-	_basket(Vector3(3.03,0,1.55),Vector3(.32,.52,.33),"ivory")
-	for i in 6:
-		var p := Vector3(2.66+sin(i*2.4)*.12,.59+(i%2)*.021,1.95+cos(i*2.4)*.11)
-		_sphere(p,Vector3(.24,.105,.18),"blue cloth" if i%2 else "pink cloth")
-	# Woven shopping bag and soft folded bags on top of the cabinet.
-	_box("Blue woven shopping bag",Vector3(3.05,2.20,2.12),Vector3(.31,.34,.38),"blue plastic")
-	for i in 9: _box("Bag woven horizontal strips",Vector3(2.884,2.07+i*.033,2.12),Vector3(.009,.012,.37),"black steel")
-	for i in 9: _box("Bag woven vertical strips",Vector3(2.880,2.20,1.95+i*.041),Vector3(.011,.31,.012),"black steel")
-	for z in [2.03,2.20]: _tube([Vector3(2.95,2.36,z),Vector3(2.96,2.55,z),Vector3(3.13,2.55,z),Vector3(3.14,2.36,z)],.009,"black steel")
-	_sphere(Vector3(3.05,2.31,2.54),Vector3(.30,.23,.29),"green plastic")
 
 func _curtain(origin: Vector3, width: float, height: float, key: String, along_z: bool) -> void:
 	for i in 72:
@@ -692,3 +618,101 @@ func _flower_mat(p: Vector3, radius: float) -> void:
 		var a := TAU*i/6
 		_sphere(p+Vector3(cos(a)*radius*.48,0,sin(a)*radius*.48),Vector3(radius*.88,.014,radius*.88),"brown rug")
 	_sphere(p+Vector3(0,.008,0),Vector3(radius*.53,.012,radius*.53),"cream basket")
+
+## Lathe profile (radius, height) as an ArrayMesh for small rigid props.
+func _lathe_mesh(profile: Array, sides := 24) -> ArrayMesh:
+	var tool := SurfaceTool.new()
+	tool.begin(Mesh.PRIMITIVE_TRIANGLES)
+	for i in sides:
+		var a0 := TAU * i / sides
+		var a1 := TAU * (i + 1) / sides
+		for j in profile.size() - 1:
+			var p0: Vector2 = profile[j]
+			var p1: Vector2 = profile[j + 1]
+			var quad := [Vector3(cos(a0) * p0.x, p0.y, sin(a0) * p0.x), Vector3(cos(a1) * p0.x, p0.y, sin(a1) * p0.x),
+				Vector3(cos(a1) * p1.x, p1.y, sin(a1) * p1.x), Vector3(cos(a0) * p1.x, p1.y, sin(a0) * p1.x)]
+			for k in [0, 2, 1, 0, 3, 2]:
+				var v: Vector3 = quad[k]
+				tool.set_uv(Vector2(float(i + (1 if k in [1, 2] else 0)) / sides, v.y * 4.0))
+				tool.add_vertex(v)
+	tool.generate_normals()
+	tool.generate_tangents()
+	return tool.commit()
+
+## A small rigid prop (InteriorObject) with explicit physics hints for the physics builder.
+func _toy_body(label: String, p: Vector3, mass: float, mesh: Mesh, key: String, shapes: Array, material_hint: String, rolls: bool) -> InteriorObject:
+	var body := ObjectScript.new() as InteriorObject
+	body.name = label.validate_node_name()
+	body.display_name = label
+	body.mass = mass
+	body.position = p
+	body.set_meta("reference_room_prop", true)
+	body.set_meta("styled_prop", true)
+	body.set("physics_material", material_hint)
+	body.set("rolls", rolls)
+	body.add_to_group("room_surroundings", true)
+	_room.add_child(body)
+	var visual := MeshInstance3D.new()
+	visual.name = "Visual"
+	visual.mesh = mesh
+	visual.material_override = InteriorMaterials.material(key)
+	body.add_child(visual)
+	for item: Array in shapes:
+		var collision := CollisionShape3D.new()
+		collision.shape = item[0]
+		(item[0] as Shape3D).margin = .001
+		collision.transform = item[1]
+		body.add_child(collision)
+	body.home_transform = body.global_transform
+	body.dormant = true
+	body.freeze = true
+	body.sleeping = true
+	_stats.dynamic_props += 1
+	return body
+
+func _sphere_toy(label: String, p: Vector3, radius: float, mass: float, key: String, hint: String) -> void:
+	var mesh := SphereMesh.new()
+	mesh.radius = radius
+	mesh.height = radius * 2
+	mesh.radial_segments = 32
+	mesh.rings = 16
+	var shape := SphereShape3D.new()
+	shape.radius = radius
+	_toy_body(label, p, mass, mesh, key, [[shape, Transform3D.IDENTITY]], hint, true)
+
+func _build_toys() -> void:
+	_feature("Styled physics toys: balls on the rug, bowl of oranges, bottles")
+	# Two balls resting on the rug, inviting play.
+	_sphere_toy("Rubber ball", TOY_BALL, .11, .35, "toy_red", "rubber")
+	_sphere_toy("Tennis ball", TOY_TENNIS, .0335, .058, "tennis_felt", "rubber")
+	# Turned wooden bowl on the kitchen counter with three oranges.
+	var top := .969
+	var bowl_profile := [Vector2(0, 0), Vector2(.065, 0), Vector2(.10, .025), Vector2(.13, .07), Vector2(.122, .072),
+		Vector2(.094, .03), Vector2(.06, .012), Vector2(0, .012)]
+	var shapes: Array = []
+	var base := CylinderShape3D.new()
+	base.radius = .07
+	base.height = .012
+	shapes.append([base, Transform3D(Basis.IDENTITY, Vector3(0, .006, 0))])
+	for i in 8:
+		var wall := BoxShape3D.new()
+		wall.size = Vector3(.012, .07, .1)
+		var a := TAU * i / 8
+		var wall_basis := Basis(Vector3.UP, -a) * Basis(Vector3.BACK, .5)
+		shapes.append([wall, Transform3D(wall_basis, Vector3(cos(a) * .105, .04, sin(a) * .105))])
+	var bowl_pos := Vector3(-5.18, top, 1.55)
+	_toy_body("Wooden fruit bowl", bowl_pos, .45, _lathe_mesh(bowl_profile, 32), "walnut", shapes, "wood", false)
+	for i in 3:
+		var a := TAU * i / 3 + .4
+		_sphere_toy("Orange %d" % (i + 1), bowl_pos + Vector3(cos(a) * .045, .053, sin(a) * .045), .04, .15, "orange_peel", "fruit")
+	# Frosted glass oil bottle and a sage ceramic vase beside the cupboard.
+	var bottle_profile := [Vector2(0, 0), Vector2(.034, 0), Vector2(.036, .006), Vector2(.036, .17), Vector2(.03, .2),
+		Vector2(.014, .23), Vector2(.013, .27), Vector2(0, .27)]
+	var vase_profile := [Vector2(0, 0), Vector2(.04, 0), Vector2(.05, .05), Vector2(.048, .14), Vector2(.03, .2), Vector2(.032, .22), Vector2(0, .22)]
+	for i in 2:
+		var cylinder := CylinderShape3D.new()
+		cylinder.radius = .036 if i == 0 else .05
+		cylinder.height = .27 if i == 0 else .22
+		_toy_body("Glass bottle" if i == 0 else "Ceramic vase", Vector3(-5.40, top, -.62 + i * .14), .5 if i == 0 else .7,
+			_lathe_mesh(bottle_profile if i == 0 else vase_profile, 24), "glass_frosted" if i == 0 else "ceramic_sage",
+			[[cylinder, Transform3D(Basis.IDENTITY, Vector3(0, cylinder.height * .5, 0))]], "glass" if i == 0 else "ceramic", false)

@@ -1762,48 +1762,6 @@
       ]
     },
     {
-      "nodeName": "storage_bin_36",
-      "assetId": "storage_bin",
-      "label": "Storage bin",
-      "mass": 0.5,
-      "anchored": false,
-      "colliders": [
-        {
-          "center": [
-            0.0,
-            0.10499999672174454,
-            0.004749998450279236
-          ],
-          "size": [
-            0.3799999952316284,
-            0.20999999344348907,
-            0.31949999928474426
-          ]
-        }
-      ]
-    },
-    {
-      "nodeName": "storage_bin_37",
-      "assetId": "storage_bin",
-      "label": "Storage bin",
-      "mass": 0.5,
-      "anchored": false,
-      "colliders": [
-        {
-          "center": [
-            0.0,
-            0.10499999672174454,
-            0.004749998450279236
-          ],
-          "size": [
-            0.3799999952316284,
-            0.20999999344348907,
-            0.31949999928474426
-          ]
-        }
-      ]
-    },
-    {
       "nodeName": "potted_plant_38",
       "assetId": "potted_plant",
       "label": "Potted plant",
@@ -2056,27 +2014,6 @@
       ]
     },
     {
-      "nodeName": "Pink toy 1 baby_crib_9",
-      "assetId": "loose_component",
-      "label": "Pink toy",
-      "mass": 0.15,
-      "anchored": false,
-      "colliders": [
-        {
-          "center": [
-            0.0,
-            0.0,
-            -0.0
-          ],
-          "size": [
-            0.2200000286102295,
-            0.11599993705749512,
-            0.12999996542930603
-          ]
-        }
-      ]
-    },
-    {
       "nodeName": "Black storage rack",
       "assetId": "loose_component",
       "label": "Black storage rack",
@@ -2300,5 +2237,10 @@
     "staticCastersOnly": true,
     "receiverVertices": 7250,
     "dynamicLights": "Same fixture positions; restrained additive fill"
-  }
+  },
+  "declutter": [
+    "storage_bin_36",
+    "storage_bin_37",
+    "Pink toy 1 baby_crib_9"
+  ]
 }

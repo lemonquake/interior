@@ -1,0 +1,104 @@
+{
+ "apple": {
+  "coverage_m": 0.15,
+  "size": 512,
+  "files": {
+   "color": "apple_color.jpg",
+   "normal": "apple_normal.png",
+   "roughness": "apple_roughness.jpg"
+  },
+  "note": ""
+ },
+ "clock_face": {
+  "coverage_m": null,
+  "size": [
+   512,
+   256
+  ],
+  "files": {
+   "color": "clock_face.png"
+  },
+  "note": "unique 0-1 UV; 2:1 aspect; also used as emission"
+ },
+ "fabric_micro": {
+  "coverage_m": 0.06,
+  "size": 512,
+  "files": {
+   "color": "fabric_micro_color.jpg",
+   "normal": "fabric_micro_normal.png",
+   "roughness": "fabric_micro_roughness.jpg"
+  },
+  "note": "plain-weave modulator (multiply with albedo)"
+ },
+ "marble_gold": {
+  "coverage_m": 1.6,
+  "size": 1024,
+  "files": {
+   "color": "marble_gold_color.jpg",
+   "normal": "marble_gold_normal.png",
+   "orm": "marble_gold_orm.jpg"
+  },
+  "note": "cream marble with gilded veins; ORM (metallic in gold veins)"
+ },
+ "oak": {
+  "coverage_m": 1.0,
+  "size": 1024,
+  "files": {
+   "color": "oak_color.jpg",
+   "normal": "oak_normal.png",
+   "roughness": "oak_roughness.jpg"
+  },
+  "note": "grain along U"
+ },
+ "orange_peel": {
+  "coverage_m": 0.1,
+  "size": 512,
+  "files": {
+   "color": "orange_peel_color.jpg",
+   "normal": "orange_peel_normal.png",
+   "roughness": "orange_peel_roughness.jpg"
+  },
+  "note": ""
+ },
+ "paper": {
+  "coverage_m": 0.3,
+  "size": 512,
+  "files": {
+   "color": "paper_color.jpg",
+   "normal": "paper_normal.png",
+   "roughness": "paper_roughness.jpg"
+  },
+  "note": "paper fibre modulator"
+ },
+ "screen": {
+  "coverage_m": null,
+  "size": [
+   1024,
+   576
+  ],
+  "files": {
+   "color": "screen.jpg"
+  },
+  "note": "unique 0-1 UV; 16:9"
+ },
+ "soil": {
+  "coverage_m": 0.2,
+  "size": 512,
+  "files": {
+   "color": "soil_color.jpg",
+   "normal": "soil_normal.png",
+   "roughness": "soil_roughness.jpg"
+  },
+  "note": ""
+ },
+ "walnut": {
+  "coverage_m": 1.0,
+  "size": 1024,
+  "files": {
+   "color": "walnut_color.jpg",
+   "normal": "walnut_normal.png",
+   "roughness": "walnut_roughness.jpg"
+  },
+  "note": "grain along U"
+ }
+}

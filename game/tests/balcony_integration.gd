@@ -53,8 +53,8 @@ func _run() -> void:
 	player = main.player
 	var balcony := main.get_node_or_null("Balcony") as Node3D
 	check(balcony != null, "main.tscn instances the baked balcony scene")
-	var doors := get_nodes_in_group("interior_doors")
-	check(doors.size() == 1, "Exactly one hinged entry door")
+	var doors := get_nodes_in_group("interior_doors").filter(func(d: Node) -> bool: return not d is InteriorSlidingDoor)
+	check(doors.size() == 1, "Exactly one hinged entry door (plus the studio's glass slider)")
 	if balcony == null or doors.is_empty():
 		_finish()
 		return
@@ -259,7 +259,7 @@ func _run() -> void:
 	door.snap(true)
 	main._restart()
 	await _frames(10)
-	var reloaded := get_nodes_in_group("interior_doors")
+	var reloaded := get_nodes_in_group("interior_doors").filter(func(d: Node) -> bool: return not d is InteriorSlidingDoor)
 	check(reloaded.size() == 1 and reloaded[0] != door and not (reloaded[0] as InteriorHingedDoor).is_open(), "Restart reloads the door closed")
 	_finish()
 

@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/concrete_floor_02/albedo.jpg" id="1_7a3t0"]
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/concrete_floor_02/normal.jpg" id="2_nfpnb"]
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/concrete_floor_02/roughness.jpg" id="3_1vykl"]
+
+[resource]
+resource_name = "PBR / n yard"
+albedo_color = Color(0.92, 0.91, 0.88, 1)
+albedo_texture = ExtResource("1_7a3t0")
+roughness_texture = ExtResource("3_1vykl")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("2_nfpnb")
+uv1_scale = Vector3(0.33333334, 0.33333334, 0.33333334)
+texture_filter = 5

@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/painted_metal_shutter/albedo.jpg" id="1_vluej"]
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/painted_metal_shutter/normal.jpg" id="2_64bev"]
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/painted_metal_shutter/roughness.jpg" id="3_fhtrp"]
+
+[resource]
+resource_name = "PBR / n shutter"
+albedo_texture = ExtResource("1_vluej")
+roughness_texture = ExtResource("3_fhtrp")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("2_64bev")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+texture_filter = 5

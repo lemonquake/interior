@@ -34,6 +34,8 @@ func _update_visibility() -> void:
 	var outside := camera != null and camera.global_position.z > 2.62 and camera.global_position.x > .8
 	var door_open := false
 	for door in get_tree().get_nodes_in_group("interior_doors"):
+		if door is InteriorSlidingDoor:
+			continue  # the studio door stays indoors
 		if door.is_open() or door.is_moving():
 			door_open = true
 	var show := outside or door_open

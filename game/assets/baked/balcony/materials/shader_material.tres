@@ -1,0 +1,16 @@
+[gd_resource type="ShaderMaterial" format=3]
+
+[ext_resource type="Shader" path="res://scripts/sky_dome.gdshader" id="1_8j2pu"]
+[ext_resource type="Texture2D" path="res://assets/outdoor/sky/misty_afternoon_sky.png" id="2_vt3sp"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_8j2pu")
+shader_parameter/sky_texture = ExtResource("2_vt3sp")
+shader_parameter/yaw = 1.9948315143982713
+shader_parameter/exposure = null
+shader_parameter/sun_direction = Vector3(-0.62694424, 0.64294285, 0.43996087)
+shader_parameter/sun_color = null
+shader_parameter/horizon_color = null
+shader_parameter/horizon_energy = null
+shader_parameter/horizon_band = null

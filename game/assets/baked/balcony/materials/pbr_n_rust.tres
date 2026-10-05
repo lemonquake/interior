@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/rusty_metal_02/albedo.jpg" id="1_iq2ua"]
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/rusty_metal_02/normal.jpg" id="2_a0cj3"]
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/rusty_metal_02/roughness.jpg" id="3_wswdv"]
+
+[resource]
+resource_name = "PBR / n rust"
+albedo_texture = ExtResource("1_iq2ua")
+roughness_texture = ExtResource("3_wswdv")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("2_a0cj3")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+texture_filter = 5

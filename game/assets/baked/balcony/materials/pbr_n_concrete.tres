@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/concrete_wall_008/albedo.jpg" id="1_3w3c1"]
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/concrete_wall_008/normal.jpg" id="2_bqhtc"]
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/concrete_wall_008/roughness.jpg" id="3_bdu5y"]
+
+[resource]
+resource_name = "PBR / n concrete"
+albedo_texture = ExtResource("1_3w3c1")
+roughness_texture = ExtResource("3_bdu5y")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("2_bqhtc")
+uv1_scale = Vector3(0.33333334, 0.33333334, 0.33333334)
+texture_filter = 5

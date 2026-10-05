@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/grey_roof_tiles/albedo.jpg" id="1_j2mb8"]
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/grey_roof_tiles/normal.jpg" id="2_spsmf"]
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/grey_roof_tiles/roughness.jpg" id="3_uanpi"]
+
+[resource]
+resource_name = "PBR / n roof grey"
+cull_mode = 2
+albedo_texture = ExtResource("1_j2mb8")
+roughness_texture = ExtResource("3_uanpi")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("2_spsmf")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+texture_filter = 5

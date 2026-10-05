@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/fabric_pattern_07/albedo.jpg" id="1_qmbxs"]
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/fabric_pattern_07/normal.jpg" id="2_h35md"]
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/fabric_pattern_07/roughness.jpg" id="3_kquye"]
+
+[resource]
+resource_name = "PBR / rug"
+albedo_color = Color(0.3, 0.3, 0.33, 1)
+albedo_texture = ExtResource("1_qmbxs")
+roughness_texture = ExtResource("3_kquye")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_scale = 0.6
+normal_texture = ExtResource("2_h35md")
+uv1_scale = Vector3(0.8333333, 0.8333333, 0.8333333)
+texture_filter = 5

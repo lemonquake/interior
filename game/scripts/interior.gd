@@ -513,10 +513,9 @@ const BALCONY_VIEWS := [
 ]
 
 func _capture_balcony_views(directory: String) -> void:
-	var doors := get_tree().get_nodes_in_group("interior_doors")
-	if doors.is_empty():
+	var door := entry_door()
+	if door == null:
 		return
-	var door := doors[0] as InteriorHingedDoor
 	var fov := player.camera.fov
 	for view in BALCONY_VIEWS:
 		# Outdoor views use a narrower, phone-like field of view to match the photos.
@@ -585,3 +584,10 @@ func _process(delta: float) -> void:
 		var report := {"scene":"control-lab" if control_lab else "living-room", "scenario":"camera sweep and sixteen active bodies with three animated hamsters" if not control_lab else "stationary control lab", "warmup_seconds":2,"sample_seconds":60,"frames":frame_samples.size(),"renderer":RenderingServer.get_video_adapter_name(),"logical_viewport":str(get_viewport().get_visible_rect().size),"window_pixels":str(get_window().size),"render_scale":get_viewport().scaling_3d_scale,"quality":quality,"median_frame_ms":frame_samples[frame_samples.size()/2],"p95_frame_ms":frame_samples[int(frame_samples.size()*.95)],"p99_frame_ms":frame_samples[int(frame_samples.size()*.99)],"max_frame_ms":frame_samples[-1],"frames_above_16_67ms":slow_frames,"mobile_controls":mobile,"objects":get_tree().get_nodes_in_group("movable").size()}
 		print("INTERIOR_BENCHMARK ",JSON.stringify(report))
 		get_tree().quit()
+
+## The navy balcony door (the studio's glass slider shares the "interior_doors" group).
+func entry_door() -> InteriorHingedDoor:
+	for door in get_tree().get_nodes_in_group("interior_doors"):
+		if not door is InteriorSlidingDoor:
+			return door as InteriorHingedDoor
+	return null

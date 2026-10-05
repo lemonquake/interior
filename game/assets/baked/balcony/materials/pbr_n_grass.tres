@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/sparse_grass/albedo.jpg" id="1_m36ia"]
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/sparse_grass/normal.jpg" id="2_0kmew"]
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/sparse_grass/roughness.jpg" id="3_xkeg7"]
+
+[resource]
+resource_name = "PBR / n grass"
+albedo_color = Color(0.82, 0.86, 0.78, 1)
+albedo_texture = ExtResource("1_m36ia")
+roughness_texture = ExtResource("3_xkeg7")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("2_0kmew")
+uv1_scale = Vector3(0.33333334, 0.33333334, 0.33333334)
+texture_filter = 5

@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/corrugated_iron_02/albedo.jpg" id="1_ddlvg"]
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/corrugated_iron_02/normal.jpg" id="2_ahime"]
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/corrugated_iron_02/roughness.jpg" id="3_blnq6"]
+
+[resource]
+resource_name = "PBR / n roof 3"
+cull_mode = 2
+albedo_color = Color(0.55, 0.55, 0.56, 1)
+albedo_texture = ExtResource("1_ddlvg")
+metallic = 0.35
+roughness_texture = ExtResource("3_blnq6")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("2_ahime")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+texture_filter = 5

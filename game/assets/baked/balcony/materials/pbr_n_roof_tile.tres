@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/clay_roof_tiles_02/albedo.jpg" id="1_axwpa"]
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/clay_roof_tiles_02/normal.jpg" id="2_nl1yu"]
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/clay_roof_tiles_02/roughness.jpg" id="3_p6a6n"]
+
+[resource]
+resource_name = "PBR / n roof tile"
+cull_mode = 2
+albedo_texture = ExtResource("1_axwpa")
+roughness_texture = ExtResource("3_p6a6n")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("2_nl1yu")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+texture_filter = 5

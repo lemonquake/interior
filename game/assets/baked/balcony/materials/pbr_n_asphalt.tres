@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/asphalt_02/albedo.jpg" id="1_tak0b"]
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/asphalt_02/normal.jpg" id="2_fgfsf"]
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/asphalt_02/roughness.jpg" id="3_81qq0"]
+
+[resource]
+resource_name = "PBR / n asphalt"
+albedo_color = Color(0.85, 0.85, 0.85, 1)
+albedo_texture = ExtResource("1_tak0b")
+roughness_texture = ExtResource("3_81qq0")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("2_fgfsf")
+uv1_scale = Vector3(0.25, 0.25, 0.25)
+texture_filter = 5

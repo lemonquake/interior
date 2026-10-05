@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/blue_painted_planks/albedo.jpg" id="1_7f0xi"]
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/blue_painted_planks/normal.jpg" id="2_iht6x"]
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/blue_painted_planks/roughness.jpg" id="3_n64br"]
+
+[resource]
+resource_name = "PBR / n planks"
+albedo_texture = ExtResource("1_7f0xi")
+roughness_texture = ExtResource("3_n64br")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("2_iht6x")
+uv1_scale = Vector3(0.625, 0.625, 0.625)
+texture_filter = 5

@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[resource]
+resource_name = "Balcony / n wire"
+albedo_color = Color(0.03, 0.03, 0.03, 1)
+roughness = 0.7

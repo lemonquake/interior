@@ -388,16 +388,13 @@ func _build_shell() -> void:
 	_box("Right wall gallery",Vector3(3.4,1.45,-1.18),Vector3(.2,2.9,3.04),"dark recess",true)
 	_box("Right wall storage",Vector3(3.4,1.45,2.08),Vector3(.2,2.9,1.24),"dark recess",true)
 	_box("Right doorway header",Vector3(3.4,2.64,.90),Vector3(.2,.52,1.16),"dark recess",true)
-	# A shallow real instrument alcove and a closet keep every opening enclosed.
-	_box("Studio floor",Vector3(-2.26,-.1,3.26),Vector3(2.12,.2,1.15),"floor",true)
-	_box("Studio rear wall",Vector3(-2.26,1.45,3.91),Vector3(2.12,2.9,.18),"dark recess",true)
-	for x in [-1.18,-3.4]: _box("Studio side",Vector3(x,1.45,3.3),Vector3(.15,2.9,1.2),"plaster",true)
+	# The studio doorway (x -3.25..-1.24) opens into scenes/studio/studio.tscn (studio_builder.gd),
+	# which owns its floor, walls, ceiling and glass sliding door. A closet keeps the right opening enclosed.
 	_box("Closet floor",Vector3(3.79,-.1,.90),Vector3(.98,.2,1.16),"floor",true)
 	_box("Closet rear",Vector3(4.32,1.45,.90),Vector3(.15,2.9,1.16),"plaster",true)
 	for z in [.27,1.53]: _box("Closet side",Vector3(3.85,1.45,z),Vector3(1.1,2.9,.14),"plaster",true)
 	# Smooth warm-white plastered ceiling (the blue panel grid is gone).
 	_box("Room ceiling",Vector3(-1.15,3.01,0),Vector3(9.1,.22,5.6),"blue ceiling",true)
-	_box("Studio ceiling",Vector3(-2.25,3.0,3.31),Vector3(2.2,.2,1.26),"blue ceiling",true)
 	_box("Closet ceiling",Vector3(3.83,3.0,.90),Vector3(1.10,.2,1.3),"blue ceiling",true)
 func _build_kitchen() -> void:
 	_feature("Navy louvered kitchen cabinets and tiled L counter")
@@ -561,58 +558,6 @@ func _build_rear() -> void:
 	_box("Rear tall mirror inset",Vector3(-.93,1.27,2.598),Vector3(.342,1.945,.008),"mirror")
 	# Simulated mirror has subtle inset framing, with no fake room-photo plane.
 	for x in [-1.10,-.76]: _box("Mirror bevel edge",Vector3(x,1.27,2.584),Vector3(.009,1.94,.008),"ivory")
-	_feature("Open studio niche with guitars keyboard and acoustic panels")
-	for row in 6:
-		for col in 7:
-			var p := Vector3(1.38+col*.286,.84+row*.285,3.80)
-			_box("Studio acoustic tile",p,Vector3(.269,.267,.073),"foam red" if row > 3 else "black steel")
-			for ridge in 4: _box("Acoustic foam ridge",p+Vector3(-.093+ridge*.060,0,-.044),Vector3(.035,.26,.025),"foam red" if row > 3 else "dark recess")
-	_guitar(Vector3(2.79,1.29,3.66),true)
-	_guitar(Vector3(2.14,1.42,3.66),false)
-	_guitar(Vector3(1.59,1.37,3.66),false)
-	# Keyboard leans into the opening with separate ivory keys and black accidentals.
-	var keyboard_basis := Basis(Vector3.BACK,-.14)*Basis(Vector3.RIGHT,.20)
-	var kp := Vector3(2.00,.68,3.26)
-	_box("Studio keyboard body",kp,Vector3(.35,1.12,.095),"black steel",true,keyboard_basis)
-	for i in 28:
-		_box("Studio piano white key",kp+keyboard_basis*Vector3(-.008,-.52+i*.037,-.062),Vector3(.27,.034,.024),"white key",false,keyboard_basis)
-		if i%7 not in [2,6]: _box("Studio piano black key",kp+keyboard_basis*Vector3(.065,-.50+i*.037,-.083),Vector3(.13,.018,.020),"dark recess",false,keyboard_basis)
-	_box("Studio amp cabinet",Vector3(2.98,.34,3.47),Vector3(.44,.63,.35),"black steel",true)
-	for i in 15: _box("Amplifier grille",Vector3(2.98,.35,3.279+i*.0001),Vector3(.38,.017,.009),"steel",false,Basis(Vector3.FORWARD,i*.16))
-func _guitar(center: Vector3, acoustic: bool) -> void:
-	var key := "oak" if acoustic else "red enamel"
-	var scale := 1.0 if acoustic else .74
-	var outline: Array[Vector2] = []
-	# A continuous waisted silhouette, not a stack of spheres.
-	for i in 40:
-		var angle := TAU*i/40
-		var y := sin(angle)*.31
-		var width := .155*(1-.38*exp(-pow(y/.09,2)))
-		outline.append(Vector2(cos(angle)*width,y)*scale)
-	var tool := _builder(key)
-	for i in outline.size():
-		var a: Vector2 = outline[i]
-		var b: Vector2 = outline[(i+1)%outline.size()]
-		for layer in [-1,1]:
-			var normal := Vector3(0,0,layer)
-			var points := [center+Vector3(0,0,layer*.049),center+Vector3(a.x,a.y,layer*.049),center+Vector3(b.x,b.y,layer*.049)]
-			for j in ([0,2,1] if layer == 1 else [0,1,2]):
-				tool.set_normal(normal)
-				tool.set_uv(Vector2(points[j].x,points[j].y))
-				tool.add_vertex(points[j])
-			_stats.triangles_added += 1
-		_quad([center+Vector3(a.x,a.y,-.049),center+Vector3(b.x,b.y,-.049),center+Vector3(b.x,b.y,.049),center+Vector3(a.x,a.y,.049)],Vector3(a.x,a.y,0).normalized(),key)
-	_box("Guitar neck",center+Vector3(0,.53,0),Vector3(.052,.65,.045),"darkwood")
-	_box("Guitar headstock",center+Vector3(0,.90,0),Vector3(.079,.16,.043),key)
-	if acoustic: _rod(center+Vector3(0,.08,-.052),center+Vector3(0,.08,-.055),.057,"dark recess",20)
-	else: _box("Guitar pickguard",center+Vector3(.025,.028,-.054),Vector3(.087,.13,.007),"ivory")
-	_box("Guitar bridge",center+Vector3(0,-.15,-.057),Vector3(.13,.024,.012),"darkwood")
-	for i in 6:
-		var x := -.018+i*.007
-		_rod(center+Vector3(x,-.16,-.066),center+Vector3(x,.94,-.031),.0008,"steel",4)
-		_sphere(center+Vector3(-.053 if i%2 else .053,.85+(i/2)*.032,0),Vector3(.025,.014,.023),"steel",8)
-	for i in 13: _rod(center+Vector3(-.026,.23+i*.043,-.028),center+Vector3(.026,.23+i*.043,-.028),.0015,"steel",4)
-
 func _build_right() -> void:
 	_feature("Right slatted wall and family-photo gallery")
 	for i in 89:

@@ -143,6 +143,11 @@ func _collect(node: Node, predicate: Callable, into: Array[Node]) -> void:
 ## keeps its groups when saved.
 func _flatten(node: Node, room: Node) -> void:
 	for child in node.get_children():
+		if child.has_meta("keep_instance"):
+			# Downloaded GLB models stay linked instances (InteriorModelKit.place).
+			child.owner = room
+			_stats.nodes += 1
+			continue
 		child.scene_file_path = ""
 		child.owner = room
 		for group in child.get_groups():
@@ -169,7 +174,8 @@ func _externalize_node(node: Node) -> void:
 			if material != null:
 				mesh_instance.set_surface_override_material(i, _externalize(material))
 	for child in node.get_children():
-		_externalize_node(child)
+		if not child.has_meta("keep_instance"):
+			_externalize_node(child)
 
 func _is_clean(path: String) -> bool:
 	return path.begins_with("res://") and not "::" in path and not path.begins_with("res://.godot")

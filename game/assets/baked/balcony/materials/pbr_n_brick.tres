@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/brick_wall_02/albedo.jpg" id="1_r3ftq"]
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/brick_wall_02/normal.jpg" id="2_e42ir"]
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/brick_wall_02/roughness.jpg" id="3_bvcjg"]
+
+[resource]
+resource_name = "PBR / n brick"
+albedo_texture = ExtResource("1_r3ftq")
+roughness_texture = ExtResource("3_bvcjg")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("2_e42ir")
+uv1_scale = Vector3(0.45454544, 0.45454544, 0.45454544)
+texture_filter = 5

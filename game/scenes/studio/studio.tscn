@@ -1,0 +1,959 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/studio.gd" id="1_u72xi"]
+[ext_resource type="Material" path="res://assets/baked/studio/materials/pbr_floor.tres" id="2_vu3fa"]
+[ext_resource type="ArrayMesh" path="res://assets/baked/studio/meshes/array_mesh.res" id="3_ih5i6"]
+[ext_resource type="Material" path="res://assets/baked/studio/materials/balcony_ceiling.tres" id="4_l7uqq"]
+[ext_resource type="ArrayMesh" path="res://assets/baked/studio/meshes/array_mesh_2.res" id="5_8kwcr"]
+[ext_resource type="Material" path="res://assets/baked/studio/materials/balcony_wall.tres" id="6_bcft8"]
+[ext_resource type="ArrayMesh" path="res://assets/baked/studio/meshes/array_mesh_3.res" id="7_confl"]
+[ext_resource type="Material" path="res://assets/baked/studio/materials/balcony_aluminium.tres" id="8_7o4y7"]
+[ext_resource type="ArrayMesh" path="res://assets/baked/studio/meshes/array_mesh_4.res" id="9_aqwxb"]
+[ext_resource type="Material" path="res://assets/baked/studio/materials/balcony_black_metal.tres" id="10_xkgqu"]
+[ext_resource type="ArrayMesh" path="res://assets/baked/studio/meshes/array_mesh_5.res" id="11_0hd76"]
+[ext_resource type="Material" path="res://assets/baked/studio/materials/pbr_rug.tres" id="12_ixvyu"]
+[ext_resource type="ArrayMesh" path="res://assets/baked/studio/meshes/array_mesh_6.res" id="13_837a4"]
+[ext_resource type="Material" path="res://assets/baked/studio/materials/studio_foam_grey.tres" id="14_pkjbt"]
+[ext_resource type="ArrayMesh" path="res://assets/baked/studio/meshes/array_mesh_7.res" id="15_hjyo7"]
+[ext_resource type="Material" path="res://assets/baked/studio/materials/studio_foam.tres" id="16_andh4"]
+[ext_resource type="ArrayMesh" path="res://assets/baked/studio/meshes/array_mesh_8.res" id="17_yaiyq"]
+[ext_resource type="Material" path="res://assets/baked/studio/materials/studio_led_purple.tres" id="18_jf33d"]
+[ext_resource type="ArrayMesh" path="res://assets/baked/studio/meshes/array_mesh_9.res" id="19_npuok"]
+[ext_resource type="Material" path="res://assets/baked/studio/materials/studio_led_blue.tres" id="20_6h3mb"]
+[ext_resource type="ArrayMesh" path="res://assets/baked/studio/meshes/array_mesh_10.res" id="21_0ax1x"]
+[ext_resource type="Material" path="res://assets/baked/studio/materials/studio_glass.tres" id="22_l8nlg"]
+[ext_resource type="ArrayMesh" path="res://assets/baked/studio/meshes/array_mesh_11.res" id="23_kqig1"]
+[ext_resource type="Material" path="res://assets/baked/studio/materials/studio_glass_etch.tres" id="24_uwwm1"]
+[ext_resource type="ArrayMesh" path="res://assets/baked/studio/meshes/array_mesh_12.res" id="25_a1xry"]
+[ext_resource type="Script" path="res://scripts/sliding_door.gd" id="26_8ykt5"]
+[ext_resource type="ArrayMesh" path="res://assets/baked/studio/meshes/array_mesh_13.res" id="27_k7msh"]
+[ext_resource type="ArrayMesh" path="res://assets/baked/studio/meshes/array_mesh_14.res" id="28_iwpk7"]
+[ext_resource type="ArrayMesh" path="res://assets/baked/studio/meshes/array_mesh_15.res" id="29_d7sa6"]
+[ext_resource type="ArrayMesh" path="res://assets/baked/studio/meshes/array_mesh_16.res" id="30_x0alh"]
+[ext_resource type="PackedScene" path="res://assets/models/decor/sofa_02.glb" id="31_axssx"]
+[ext_resource type="PackedScene" path="res://assets/models/decor/potted_plant_01.glb" id="32_4epxc"]
+[ext_resource type="Material" path="res://assets/baked/studio/materials/balcony_walnut.tres" id="33_0437l"]
+[ext_resource type="ArrayMesh" path="res://assets/baked/studio/meshes/array_mesh_17.res" id="34_obx3u"]
+[ext_resource type="ArrayMesh" path="res://assets/baked/studio/meshes/array_mesh_18.res" id="35_qhr4s"]
+[ext_resource type="PackedScene" path="res://assets/models/decor/book_encyclopedia_set_01.glb" id="36_l28pm"]
+[ext_resource type="PackedScene" path="res://assets/models/decor/boombox.glb" id="37_xdivx"]
+[ext_resource type="PackedScene" path="res://assets/models/decor/alarm_clock_01.glb" id="38_kwpmh"]
+[ext_resource type="PackedScene" path="res://assets/models/decor/brass_vase_01.glb" id="39_8dplw"]
+[ext_resource type="PackedScene" path="res://assets/models/decor/potted_plant_04.glb" id="40_m0ekn"]
+[ext_resource type="PackedScene" path="res://assets/models/decor/cassette_player.glb" id="41_usiyo"]
+[ext_resource type="PackedScene" path="res://assets/models/decor/modern_ceiling_lamp_01.glb" id="42_2w0ii"]
+[ext_resource type="PackedScene" path="res://assets/models/studio/guitar_acoustic_a.glb" id="43_jc51u"]
+[ext_resource type="ArrayMesh" path="res://assets/baked/studio/meshes/array_mesh_19.res" id="44_1882y"]
+[ext_resource type="Material" path="res://assets/baked/studio/materials/balcony_rubber.tres" id="45_b43os"]
+[ext_resource type="ArrayMesh" path="res://assets/baked/studio/meshes/array_mesh_20.res" id="46_8nmnj"]
+[ext_resource type="PackedScene" path="res://assets/models/studio/guitar_ibanez.glb" id="47_b3mqr"]
+[ext_resource type="ArrayMesh" path="res://assets/baked/studio/meshes/array_mesh_21.res" id="48_xx5ak"]
+[ext_resource type="ArrayMesh" path="res://assets/baked/studio/meshes/array_mesh_22.res" id="49_7mvl2"]
+[ext_resource type="PackedScene" path="res://assets/models/studio/guitar_sg.glb" id="50_dtrkn"]
+[ext_resource type="ArrayMesh" path="res://assets/baked/studio/meshes/array_mesh_23.res" id="51_qlq21"]
+[ext_resource type="ArrayMesh" path="res://assets/baked/studio/meshes/array_mesh_24.res" id="52_86ct3"]
+[ext_resource type="PackedScene" path="res://assets/models/studio/guitar_lespaul.glb" id="53_8bme6"]
+[ext_resource type="ArrayMesh" path="res://assets/baked/studio/meshes/array_mesh_25.res" id="54_duocl"]
+[ext_resource type="ArrayMesh" path="res://assets/baked/studio/meshes/array_mesh_26.res" id="55_j34bc"]
+[ext_resource type="PackedScene" path="res://assets/models/studio/guitar_acoustic_b.glb" id="56_5yr3s"]
+[ext_resource type="ArrayMesh" path="res://assets/baked/studio/meshes/array_mesh_27.res" id="57_llprr"]
+[ext_resource type="ArrayMesh" path="res://assets/baked/studio/meshes/array_mesh_28.res" id="58_2f68c"]
+[ext_resource type="PackedScene" path="res://assets/models/studio/amp_marshall.glb" id="59_eibim"]
+[ext_resource type="PackedScene" path="res://assets/models/studio/amp_orange.glb" id="60_7yf0y"]
+[ext_resource type="PackedScene" path="res://assets/models/studio/bass_precision.glb" id="61_xi2am"]
+[ext_resource type="PackedScene" path="res://assets/models/studio/drum_kit.glb" id="62_36jcp"]
+[ext_resource type="ArrayMesh" path="res://assets/baked/studio/meshes/array_mesh_29.res" id="63_bd0py"]
+[ext_resource type="ArrayMesh" path="res://assets/baked/studio/meshes/array_mesh_30.res" id="64_fn0n0"]
+[ext_resource type="PackedScene" path="res://assets/models/studio/synth_b.glb" id="65_3p82g"]
+[ext_resource type="PackedScene" path="res://assets/models/studio/synth_wood.glb" id="66_evmqq"]
+[ext_resource type="PackedScene" path="res://assets/models/studio/mic_boom_stand.glb" id="67_5ywp4"]
+[ext_resource type="PackedScene" path="res://assets/models/studio/gaming_desk.glb" id="68_w6vmb"]
+[ext_resource type="PackedScene" path="res://assets/models/studio/gaming_monitor.glb" id="69_7sscw"]
+[ext_resource type="PackedScene" path="res://assets/models/studio/gaming_pc.glb" id="70_jchau"]
+[ext_resource type="PackedScene" path="res://assets/models/studio/gaming_keyboard.glb" id="71_rmmbo"]
+[ext_resource type="PackedScene" path="res://assets/models/studio/gaming_mouse.glb" id="72_e32sv"]
+[ext_resource type="PackedScene" path="res://assets/models/studio/midi_controller.glb" id="73_8pyse"]
+[ext_resource type="PackedScene" path="res://assets/models/studio/audio_interface.glb" id="74_faqv8"]
+[ext_resource type="PackedScene" path="res://assets/models/studio/gaming_chair.glb" id="75_uomyi"]
+[ext_resource type="ArrayMesh" path="res://assets/baked/studio/meshes/array_mesh_31.res" id="76_txa3m"]
+[ext_resource type="PackedScene" path="res://assets/models/studio/studio_monitor_krk.glb" id="77_j21x5"]
+[ext_resource type="ArrayMesh" path="res://assets/baked/studio/meshes/array_mesh_32.res" id="78_3png1"]
+[ext_resource type="ArrayMesh" path="res://assets/baked/studio/meshes/array_mesh_33.res" id="79_rpgrr"]
+[ext_resource type="PackedScene" path="res://assets/models/studio/headphones_sony.glb" id="80_lymxx"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0wa31"]
+friction = 0.75
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tqjk4"]
+margin = 0.002
+size = Vector3(4.8, 0.2, 4.8)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nq2ev"]
+margin = 0.002
+size = Vector3(4.8, 0.2, 4.8)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n5ftp"]
+margin = 0.002
+size = Vector3(0.2, 2.9, 4.6)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bhars"]
+margin = 0.002
+size = Vector3(0.2, 2.9, 4.6)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ntxbx"]
+margin = 0.002
+size = Vector3(4.8, 2.9, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4820b"]
+margin = 0.002
+size = Vector3(1.03, 2.36, 0.04)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e60c4"]
+margin = 0.002
+size = Vector3(1.03, 2.36, 0.045)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ukgni"]
+friction = 0.75
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2cwo5"]
+margin = 0.002
+size = Vector3(1.807167, 0.70948887, 0.8177514)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_xstvb"]
+friction = 0.75
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kpuw6"]
+margin = 0.002
+size = Vector3(0.8097733, 1.3533852, 0.8014283)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ajwlx"]
+friction = 0.75
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6diyc"]
+margin = 0.002
+size = Vector3(0.24, 0.45, 1.2)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_djvvf"]
+friction = 0.75
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_jasui"]
+friction = 0.75
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_rp1wr"]
+friction = 0.75
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_hsvug"]
+friction = 0.75
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5n6u0"]
+friction = 0.75
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gjjnv"]
+friction = 0.75
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ernrg"]
+friction = 0.75
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_hwuhl"]
+friction = 0.75
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_exhii"]
+friction = 0.75
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_3syoh"]
+friction = 0.75
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_8ol8c"]
+friction = 0.75
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_rroq8"]
+friction = 0.75
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_iwlim"]
+friction = 0.75
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ri7i8"]
+friction = 0.75
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_047gc"]
+friction = 0.75
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ulqsw"]
+friction = 0.75
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_t3bwr"]
+friction = 0.75
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_6hlxf"]
+friction = 0.75
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fk6dx"]
+margin = 0.002
+size = Vector3(0.22747326, 0.4026445, 0.40999985)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_x2emf"]
+friction = 0.75
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xjggd"]
+margin = 0.002
+size = Vector3(0.22716427, 0.3723337, 0.42000008)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gr03m"]
+friction = 0.75
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_snpp6"]
+margin = 0.002
+size = Vector3(0.6983774, 1.3036082, 0.7039709)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_8p3jh"]
+friction = 0.75
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vb6yx"]
+margin = 0.002
+size = Vector3(1.45, 1.3012449, 1.2616694)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_hyrod"]
+friction = 0.75
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1vrw7"]
+margin = 0.002
+size = Vector3(0.5, 1.1, 1)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_rynj6"]
+friction = 0.75
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_s06dn"]
+friction = 0.75
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_iqtfs"]
+friction = 0.75
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0gean"]
+margin = 0.002
+size = Vector3(0.61583537, 1.6281163, 1.0990913)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_hu725"]
+friction = 0.75
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cgl2v"]
+margin = 0.002
+size = Vector3(1.8000001, 1.0802166, 1.009922)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2svj3"]
+friction = 0.75
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_bpm8k"]
+friction = 0.75
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_umato"]
+friction = 0.75
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gdxn0"]
+margin = 0.002
+size = Vector3(0.2199421, 0.46007627, 0.5100069)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ep16u"]
+friction = 0.75
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_o7nl0"]
+friction = 0.75
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_105jn"]
+friction = 0.75
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_hvt7t"]
+friction = 0.75
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4n4s0"]
+friction = 0.75
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xue6k"]
+margin = 0.002
+size = Vector3(0.56720245, 1.3000001, 0.5670546)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_i8k6q"]
+friction = 0.75
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8kdbl"]
+margin = 0.002
+size = Vector3(0.28, 1.2, 0.28)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_jmmks"]
+friction = 0.75
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5cw3q"]
+friction = 0.75
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_356cn"]
+margin = 0.002
+size = Vector3(0.28, 1.2, 0.28)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_a1fni"]
+friction = 0.75
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_i1ogj"]
+friction = 0.75
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_yx5vw"]
+friction = 0.75
+
+[node name="Studio" type="Node3D" unique_id=35928059]
+script = ExtResource("1_u72xi")
+metadata/studio_stats = {
+"colliders": 20,
+"dynamic_props": 0,
+"features": ["Studio room 4.4 x 4.4 m behind a glass sliding door", "Black wedge acoustic foam on every wall and the ceiling", "Purple LED cove around the ceiling and a HARMONIK neon over the desk", "Glass sliding door (E to slide)", "Producer couch, plants, wall shelves and a pendant lamp", "Guitar wall: Ibanez, Gibson SG, Les Paul and two acoustics on hangers", "Marshall and Orange combo amps under the guitars, Fender P-bass on its stand", "Drum kit in the back corner, facing the room", "Two-tier keyboard station: 61-key synth below, analogue synth above", "Gaming / production desk: two curved monitors, RGB tower, keyboard, mouse, MIDI controller, KRK monitors"],
+"models": 33,
+"props": ["Couch", "Tall plant", "Wall shelves", "Encyclopedia books", "Boombox", "Alarm clock", "Brass vase", "Shelf plant", "Cassette player", "Pendant lamp", "Guitar acoustic_a", "Hanger acoustic_a", "Guitar ibanez", "Hanger ibanez", "Guitar sg", "Hanger sg", "Guitar lespaul", "Hanger lespaul", "Guitar acoustic_b", "Hanger acoustic_b", "Marshall amp", "Orange amp", "Bass on stand", "Drum kit", "Keyboard X-stand", "Synth 61-key", "Analogue synth", "Mic boom stand", "Gaming desk", "Monitor right", "Monitor left", "Gaming PC", "Keyboard", "Mouse", "MIDI controller", "Audio interface", "Gaming chair", "Speaker stand right", "KRK monitor right", "Speaker stand left", "KRK monitor left", "Headphone stand", "Headphones"],
+"static_batches": 12,
+"triangles_added": 5526
+}
+
+[node name="StudioStructure" type="StaticBody3D" parent="." unique_id=2096014175]
+collision_layer = 2
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_0wa31")
+
+[node name="Studio floor" type="CollisionShape3D" parent="StudioStructure" unique_id=1305347239]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.45, -0.1, 5.1)
+shape = SubResource("BoxShape3D_tqjk4")
+
+[node name="Studio ceiling" type="CollisionShape3D" parent="StudioStructure" unique_id=1220496860]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.45, 3, 5.1)
+shape = SubResource("BoxShape3D_nq2ev")
+
+[node name="Studio wall west" type="CollisionShape3D" parent="StudioStructure" unique_id=453925729]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.75, 1.45, 5.2)
+shape = SubResource("BoxShape3D_n5ftp")
+
+[node name="Studio wall east" type="CollisionShape3D" parent="StudioStructure" unique_id=1632444399]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.15, 1.45, 5.2)
+shape = SubResource("BoxShape3D_bhars")
+
+[node name="Studio wall back" type="CollisionShape3D" parent="StudioStructure" unique_id=673661538]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.45, 1.45, 7.4)
+shape = SubResource("BoxShape3D_ntxbx")
+
+[node name="Fixed glass panel" type="CollisionShape3D" parent="StudioStructure" unique_id=952255975]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.755, 1.2, 2.76)
+shape = SubResource("BoxShape3D_4820b")
+
+[node name="Studio detail - floor" type="MeshInstance3D" parent="." unique_id=37346031]
+material_override = ExtResource("2_vu3fa")
+mesh = ExtResource("3_ih5i6")
+
+[node name="Studio detail - ceiling" type="MeshInstance3D" parent="." unique_id=1264248660]
+material_override = ExtResource("4_l7uqq")
+mesh = ExtResource("5_8kwcr")
+
+[node name="Studio detail - wall" type="MeshInstance3D" parent="." unique_id=916826480]
+material_override = ExtResource("6_bcft8")
+mesh = ExtResource("7_confl")
+
+[node name="Studio detail - aluminium" type="MeshInstance3D" parent="." unique_id=1055659901]
+material_override = ExtResource("8_7o4y7")
+mesh = ExtResource("9_aqwxb")
+
+[node name="Studio detail - black metal" type="MeshInstance3D" parent="." unique_id=113644414]
+material_override = ExtResource("10_xkgqu")
+mesh = ExtResource("11_0hd76")
+
+[node name="Studio detail - rug" type="MeshInstance3D" parent="." unique_id=1028938074]
+material_override = ExtResource("12_ixvyu")
+mesh = ExtResource("13_837a4")
+
+[node name="Studio detail - foam grey" type="MeshInstance3D" parent="." unique_id=1634778028]
+material_override = ExtResource("14_pkjbt")
+mesh = ExtResource("15_hjyo7")
+
+[node name="Studio detail - foam" type="MeshInstance3D" parent="." unique_id=695028252]
+material_override = ExtResource("16_andh4")
+mesh = ExtResource("17_yaiyq")
+
+[node name="Studio detail - led purple" type="MeshInstance3D" parent="." unique_id=2049898532]
+material_override = ExtResource("18_jf33d")
+mesh = ExtResource("19_npuok")
+
+[node name="Studio detail - led blue" type="MeshInstance3D" parent="." unique_id=1919245159]
+material_override = ExtResource("20_6h3mb")
+mesh = ExtResource("21_0ax1x")
+
+[node name="Studio detail - glass" type="MeshInstance3D" parent="." unique_id=1121143031]
+material_override = ExtResource("22_l8nlg")
+mesh = ExtResource("23_kqig1")
+
+[node name="Studio detail - glass etch" type="MeshInstance3D" parent="." unique_id=1063396048]
+material_override = ExtResource("24_uwwm1")
+mesh = ExtResource("25_a1xry")
+
+[node name="StudioDoor" type="Node3D" parent="." unique_id=1645003107 groups=["interior_doors"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.23, 0, 2.84)
+script = ExtResource("26_8ykt5")
+slide_distance = 0.98
+swing_seconds = 0.8
+label = "studio door"
+
+[node name="DoorLeaf" type="AnimatableBody3D" parent="StudioDoor" unique_id=302511631]
+collision_layer = 2
+collision_mask = 5
+
+[node name="LeafCollider" type="CollisionShape3D" parent="StudioDoor/DoorLeaf" unique_id=391104874]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.515, 1.2, 0)
+shape = SubResource("BoxShape3D_e60c4")
+
+[node name="Door leaf - aluminium" type="MeshInstance3D" parent="StudioDoor/DoorLeaf" unique_id=1765445014]
+material_override = ExtResource("8_7o4y7")
+mesh = ExtResource("27_k7msh")
+
+[node name="Door leaf - glass" type="MeshInstance3D" parent="StudioDoor/DoorLeaf" unique_id=1094328639]
+material_override = ExtResource("22_l8nlg")
+mesh = ExtResource("28_iwpk7")
+
+[node name="Door leaf - glass etch" type="MeshInstance3D" parent="StudioDoor/DoorLeaf" unique_id=2064218582]
+material_override = ExtResource("24_uwwm1")
+mesh = ExtResource("29_d7sa6")
+
+[node name="Door leaf - black metal" type="MeshInstance3D" parent="StudioDoor/DoorLeaf" unique_id=1281153123]
+material_override = ExtResource("10_xkgqu")
+mesh = ExtResource("30_x0alh")
+
+[node name="Couch" type="StaticBody3D" parent="." unique_id=987729944]
+collision_layer = 2
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_ukgni")
+
+[node name="sofa_02" type="Node3D" parent="Couch" unique_id=1988719662 instance=ExtResource("31_axssx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.62, 0, 3.37)
+metadata/keep_instance = true
+
+[node name="sofa_02 collider" type="CollisionShape3D" parent="Couch" unique_id=1350448089]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.62, 0.35474443, 3.37)
+shape = SubResource("BoxShape3D_2cwo5")
+
+[node name="Tall plant" type="StaticBody3D" parent="." unique_id=979647903]
+collision_layer = 2
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_xstvb")
+
+[node name="potted_plant_01" type="Node3D" parent="Tall plant" unique_id=748591368 instance=ExtResource("32_4epxc")]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, -1.62, 0, 3.3)
+metadata/keep_instance = true
+
+[node name="potted_plant_01 collider" type="CollisionShape3D" parent="Tall plant" unique_id=2092942211]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6199999, 0.6766926, 3.3)
+shape = SubResource("BoxShape3D_kpuw6")
+
+[node name="Wall shelves" type="StaticBody3D" parent="." unique_id=905736825]
+collision_layer = 2
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_ajwlx")
+
+[node name="Shelves" type="CollisionShape3D" parent="Wall shelves" unique_id=1558854487]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.43, 1.75, 4.55)
+shape = SubResource("BoxShape3D_6diyc")
+
+[node name="walnut" type="MeshInstance3D" parent="Wall shelves" unique_id=902082032]
+material_override = ExtResource("33_0437l")
+mesh = ExtResource("34_obx3u")
+
+[node name="black metal" type="MeshInstance3D" parent="Wall shelves" unique_id=1695009560]
+material_override = ExtResource("10_xkgqu")
+mesh = ExtResource("35_qhr4s")
+
+[node name="Encyclopedia books" type="StaticBody3D" parent="." unique_id=1474133030]
+collision_layer = 2
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_djvvf")
+
+[node name="book_encyclopedia_set_01" type="Node3D" parent="Encyclopedia books" unique_id=1598663879 instance=ExtResource("36_l28pm")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.43, 1.565, 4.85)
+metadata/keep_instance = true
+
+[node name="Boombox" type="StaticBody3D" parent="." unique_id=2085150522]
+collision_layer = 2
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_jasui")
+
+[node name="boombox" type="Node3D" parent="Boombox" unique_id=2016831574 instance=ExtResource("37_xdivx")]
+transform = Transform3D(-2.4041263e-08, 0, -0.55, 0, 0.55, 0, 0.55, 0, -2.4041263e-08, -1.44, 1.965, 4.55)
+metadata/keep_instance = true
+
+[node name="Alarm clock" type="StaticBody3D" parent="." unique_id=1509404739]
+collision_layer = 2
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_rp1wr")
+
+[node name="alarm_clock_01" type="Node3D" parent="Alarm clock" unique_id=212175469 instance=ExtResource("38_kwpmh")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.42, 1.565, 4.3)
+metadata/keep_instance = true
+
+[node name="Brass vase" type="StaticBody3D" parent="." unique_id=1593447557]
+collision_layer = 2
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_hsvug")
+
+[node name="brass_vase_01" type="Node3D" parent="Brass vase" unique_id=1483814718 instance=ExtResource("39_8dplw")]
+transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, -1.42, 1.965, 5.05)
+metadata/keep_instance = true
+
+[node name="Shelf plant" type="StaticBody3D" parent="." unique_id=1053892626]
+collision_layer = 2
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_5n6u0")
+
+[node name="potted_plant_04" type="Node3D" parent="Shelf plant" unique_id=795659439 instance=ExtResource("40_m0ekn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.43, 1.565, 4.05)
+metadata/keep_instance = true
+
+[node name="Cassette player" type="StaticBody3D" parent="." unique_id=1140256833]
+collision_layer = 2
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_gjjnv")
+
+[node name="cassette_player" type="Node3D" parent="Cassette player" unique_id=1256122159 instance=ExtResource("41_usiyo")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.42, 1.965, 4.15)
+metadata/keep_instance = true
+
+[node name="Pendant lamp" type="StaticBody3D" parent="." unique_id=1183447239]
+collision_layer = 2
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_ernrg")
+
+[node name="modern_ceiling_lamp_01" type="Node3D" parent="Pendant lamp" unique_id=1784754784 instance=ExtResource("42_2w0ii")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.55, 1.9484487, 4.75)
+metadata/keep_instance = true
+
+[node name="Guitar acoustic_a" type="StaticBody3D" parent="." unique_id=859174293]
+collision_layer = 2
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_hwuhl")
+
+[node name="guitar_acoustic_a" type="Node3D" parent="Guitar acoustic_a" unique_id=1536106836 instance=ExtResource("43_jc51u")]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, -5.585, 1.42, 3.78)
+metadata/keep_instance = true
+
+[node name="Hanger acoustic_a" type="StaticBody3D" parent="." unique_id=982426802]
+collision_layer = 2
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_exhii")
+
+[node name="black metal" type="MeshInstance3D" parent="Hanger acoustic_a" unique_id=1522430191]
+material_override = ExtResource("10_xkgqu")
+mesh = ExtResource("44_1882y")
+
+[node name="rubber" type="MeshInstance3D" parent="Hanger acoustic_a" unique_id=1361615120]
+material_override = ExtResource("45_b43os")
+mesh = ExtResource("46_8nmnj")
+
+[node name="Guitar ibanez" type="StaticBody3D" parent="." unique_id=2031431905]
+collision_layer = 2
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_3syoh")
+
+[node name="guitar_ibanez" type="Node3D" parent="Guitar ibanez" unique_id=1444769370 instance=ExtResource("47_b3mqr")]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -5.585, 1.42, 4.2)
+metadata/keep_instance = true
+
+[node name="Hanger ibanez" type="StaticBody3D" parent="." unique_id=1194134832]
+collision_layer = 2
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_8ol8c")
+
+[node name="black metal" type="MeshInstance3D" parent="Hanger ibanez" unique_id=671064082]
+material_override = ExtResource("10_xkgqu")
+mesh = ExtResource("48_xx5ak")
+
+[node name="rubber" type="MeshInstance3D" parent="Hanger ibanez" unique_id=623256053]
+material_override = ExtResource("45_b43os")
+mesh = ExtResource("49_7mvl2")
+
+[node name="Guitar sg" type="StaticBody3D" parent="." unique_id=1415022548]
+collision_layer = 2
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_rroq8")
+
+[node name="guitar_sg" type="Node3D" parent="Guitar sg" unique_id=421272540 instance=ExtResource("50_dtrkn")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5.5458574, 0.92499995, 4.6)
+metadata/keep_instance = true
+
+[node name="Hanger sg" type="StaticBody3D" parent="." unique_id=222066895]
+collision_layer = 2
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_iwlim")
+
+[node name="black metal" type="MeshInstance3D" parent="Hanger sg" unique_id=1781618486]
+material_override = ExtResource("10_xkgqu")
+mesh = ExtResource("51_qlq21")
+
+[node name="rubber" type="MeshInstance3D" parent="Hanger sg" unique_id=479738491]
+material_override = ExtResource("45_b43os")
+mesh = ExtResource("52_86ct3")
+
+[node name="Guitar lespaul" type="StaticBody3D" parent="." unique_id=1298258883]
+collision_layer = 2
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_ri7i8")
+
+[node name="guitar_lespaul" type="Node3D" parent="Guitar lespaul" unique_id=1277868497 instance=ExtResource("53_8bme6")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -5.5486374, 1.42, 4.820984)
+metadata/keep_instance = true
+
+[node name="Hanger lespaul" type="StaticBody3D" parent="." unique_id=2032801921]
+collision_layer = 2
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_047gc")
+
+[node name="black metal" type="MeshInstance3D" parent="Hanger lespaul" unique_id=27158451]
+material_override = ExtResource("10_xkgqu")
+mesh = ExtResource("54_duocl")
+
+[node name="rubber" type="MeshInstance3D" parent="Hanger lespaul" unique_id=1425033781]
+material_override = ExtResource("45_b43os")
+mesh = ExtResource("55_j34bc")
+
+[node name="Guitar acoustic_b" type="StaticBody3D" parent="." unique_id=410179719]
+collision_layer = 2
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_ulqsw")
+
+[node name="guitar_acoustic_b" type="Node3D" parent="Guitar acoustic_b" unique_id=1690545079 instance=ExtResource("56_5yr3s")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5.480419, 0.90999997, 5.42)
+metadata/keep_instance = true
+
+[node name="Hanger acoustic_b" type="StaticBody3D" parent="." unique_id=1364597374]
+collision_layer = 2
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_t3bwr")
+
+[node name="black metal" type="MeshInstance3D" parent="Hanger acoustic_b" unique_id=1610767835]
+material_override = ExtResource("10_xkgqu")
+mesh = ExtResource("57_llprr")
+
+[node name="rubber" type="MeshInstance3D" parent="Hanger acoustic_b" unique_id=576752312]
+material_override = ExtResource("45_b43os")
+mesh = ExtResource("58_2f68c")
+
+[node name="Marshall amp" type="StaticBody3D" parent="." unique_id=1958743596]
+collision_layer = 2
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_6hlxf")
+
+[node name="amp_marshall" type="Node3D" parent="Marshall amp" unique_id=1243751352 instance=ExtResource("59_eibim")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5.46, 0, 4.15)
+metadata/keep_instance = true
+
+[node name="amp_marshall collider" type="CollisionShape3D" parent="Marshall amp" unique_id=272846125]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.46, 0.20132224, 4.15)
+shape = SubResource("BoxShape3D_fk6dx")
+
+[node name="Orange amp" type="StaticBody3D" parent="." unique_id=1890751760]
+collision_layer = 2
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_x2emf")
+
+[node name="amp_orange" type="Node3D" parent="Orange amp" unique_id=1707881608 instance=ExtResource("60_7yf0y")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5.46, 0, 4.95)
+metadata/keep_instance = true
+
+[node name="amp_orange collider" type="CollisionShape3D" parent="Orange amp" unique_id=413653569]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.46, 0.18616685, 4.95)
+shape = SubResource("BoxShape3D_xjggd")
+
+[node name="Bass on stand" type="StaticBody3D" parent="." unique_id=1227854172]
+collision_layer = 2
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_gr03m")
+
+[node name="bass_precision" type="Node3D" parent="Bass on stand" unique_id=254071697 instance=ExtResource("61_xi2am")]
+transform = Transform3D(-0.9396926, 0, -0.34202015, 0, 1, 0, 0.34202015, 0, -0.9396926, -3.95, 0, 5.35)
+metadata/keep_instance = true
+
+[node name="bass_precision collider" type="CollisionShape3D" parent="Bass on stand" unique_id=1838269771]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9499998, 0.6518041, 5.35)
+shape = SubResource("BoxShape3D_snpp6")
+
+[node name="Drum kit" type="StaticBody3D" parent="." unique_id=1489966205]
+collision_layer = 2
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_8p3jh")
+
+[node name="drum_kit" type="Node3D" parent="Drum kit" unique_id=234840527 instance=ExtResource("62_36jcp")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -4.73, 0, 6.4)
+metadata/keep_instance = true
+
+[node name="drum_kit collider" type="CollisionShape3D" parent="Drum kit" unique_id=966221948]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.73, 0.6506224, 6.4)
+shape = SubResource("BoxShape3D_vb6yx")
+
+[node name="Keyboard X-stand" type="StaticBody3D" parent="." unique_id=1505869550]
+collision_layer = 2
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_hyrod")
+
+[node name="Keyboard stand" type="CollisionShape3D" parent="Keyboard X-stand" unique_id=73393357]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.68, 0.55, 4.55)
+shape = SubResource("BoxShape3D_1vrw7")
+
+[node name="black metal" type="MeshInstance3D" parent="Keyboard X-stand" unique_id=547414226]
+material_override = ExtResource("10_xkgqu")
+mesh = ExtResource("63_bd0py")
+
+[node name="rubber" type="MeshInstance3D" parent="Keyboard X-stand" unique_id=244961874]
+material_override = ExtResource("45_b43os")
+mesh = ExtResource("64_fn0n0")
+
+[node name="Synth 61-key" type="StaticBody3D" parent="." unique_id=1562923195]
+collision_layer = 2
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_rynj6")
+
+[node name="synth_b" type="Node3D" parent="Synth 61-key" unique_id=73387664 instance=ExtResource("65_3p82g")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.68, 0.815, 4.55)
+metadata/keep_instance = true
+
+[node name="Analogue synth" type="StaticBody3D" parent="." unique_id=226237705]
+collision_layer = 2
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_s06dn")
+
+[node name="synth_wood" type="Node3D" parent="Analogue synth" unique_id=866749177 instance=ExtResource("66_evmqq")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.62, 1.135, 4.55)
+metadata/keep_instance = true
+
+[node name="Mic boom stand" type="StaticBody3D" parent="." unique_id=1357242311]
+collision_layer = 2
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_iqtfs")
+
+[node name="mic_boom_stand" type="Node3D" parent="Mic boom stand" unique_id=1931994777 instance=ExtResource("67_5ywp4")]
+transform = Transform3D(0.49999997, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.49999997, -2.5, 0, 4.3)
+metadata/keep_instance = true
+
+[node name="mic_boom_stand collider" type="CollisionShape3D" parent="Mic boom stand" unique_id=1390220287]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0.8140581, 4.3)
+shape = SubResource("BoxShape3D_0gean")
+
+[node name="Gaming desk" type="StaticBody3D" parent="." unique_id=1870169105]
+collision_layer = 2
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_hu725")
+
+[node name="gaming_desk" type="Node3D" parent="Gaming desk" unique_id=1356855718 instance=ExtResource("68_w6vmb")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -2.6, 0, 6.745)
+metadata/keep_instance = true
+metadata/studio_desk = true
+
+[node name="gaming_desk collider" type="CollisionShape3D" parent="Gaming desk" unique_id=1533198698]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6, 0.5401083, 6.745)
+shape = SubResource("BoxShape3D_cgl2v")
+
+[node name="Monitor right" type="StaticBody3D" parent="." unique_id=577339984]
+collision_layer = 2
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_2svj3")
+
+[node name="gaming_monitor" type="Node3D" parent="Monitor right" unique_id=646728137 instance=ExtResource("69_7sscw")]
+transform = Transform3D(-0.7534221, 0, 0.20187892, 0, 0.78, 0, -0.20187892, 0, -0.7534221, -3.02, 0.692, 6.9449997)
+metadata/keep_instance = true
+metadata/studio_screen = "game"
+
+[node name="Monitor left" type="StaticBody3D" parent="." unique_id=807942261]
+collision_layer = 2
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_bpm8k")
+
+[node name="gaming_monitor" type="Node3D" parent="Monitor left" unique_id=2095080789 instance=ExtResource("69_7sscw")]
+transform = Transform3D(-0.7534221, 0, -0.20187888, 0, 0.78, 0, 0.20187888, 0, -0.7534221, -2.1799998, 0.692, 6.9449997)
+metadata/keep_instance = true
+metadata/studio_screen = "daw"
+
+[node name="Gaming PC" type="StaticBody3D" parent="." unique_id=1263642838]
+collision_layer = 2
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_umato")
+
+[node name="gaming_pc" type="Node3D" parent="Gaming PC" unique_id=1395574008 instance=ExtResource("70_jchau")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -3.2199998, 0, 6.865)
+metadata/keep_instance = true
+
+[node name="gaming_pc collider" type="CollisionShape3D" parent="Gaming PC" unique_id=513652302]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2199998, 0.23003814, 6.865)
+shape = SubResource("BoxShape3D_gdxn0")
+
+[node name="Keyboard" type="StaticBody3D" parent="." unique_id=498859101]
+collision_layer = 2
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_ep16u")
+
+[node name="gaming_keyboard" type="Node3D" parent="Keyboard" unique_id=1454355290 instance=ExtResource("71_rmmbo")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -2.8, 0.692, 6.4449997)
+metadata/keep_instance = true
+
+[node name="Mouse" type="StaticBody3D" parent="." unique_id=1560160089]
+collision_layer = 2
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_o7nl0")
+
+[node name="gaming_mouse" type="Node3D" parent="Mouse" unique_id=172832555 instance=ExtResource("72_e32sv")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -3.1799998, 0.692, 6.4449997)
+metadata/keep_instance = true
+
+[node name="MIDI controller" type="StaticBody3D" parent="." unique_id=2011437610]
+collision_layer = 2
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_105jn")
+
+[node name="midi_controller" type="Node3D" parent="MIDI controller" unique_id=310366579 instance=ExtResource("73_8pyse")]
+transform = Transform3D(-0.82, 0, -7.168668e-08, 0, 0.82, 0, 7.168668e-08, 0, -0.82, -2.1, 0.692, 6.4449997)
+metadata/keep_instance = true
+
+[node name="Audio interface" type="StaticBody3D" parent="." unique_id=1520458870]
+collision_layer = 2
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_hvt7t")
+
+[node name="audio_interface" type="Node3D" parent="Audio interface" unique_id=1983760072 instance=ExtResource("74_faqv8")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.7799999, 0.692, 6.6949997)
+metadata/keep_instance = true
+
+[node name="Gaming chair" type="StaticBody3D" parent="." unique_id=297366145]
+collision_layer = 2
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_4n4s0")
+
+[node name="gaming_chair" type="Node3D" parent="Gaming chair" unique_id=813216803 instance=ExtResource("75_uomyi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6499999, 0, 5.795)
+metadata/keep_instance = true
+
+[node name="gaming_chair collider" type="CollisionShape3D" parent="Gaming chair" unique_id=92721479]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6499999, 0.65000004, 5.795)
+shape = SubResource("BoxShape3D_xue6k")
+
+[node name="Speaker stand right" type="StaticBody3D" parent="." unique_id=1960216654]
+collision_layer = 2
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_i8k6q")
+
+[node name="Speaker stand" type="CollisionShape3D" parent="Speaker stand right" unique_id=510166036]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6499999, 0.6, 6.895)
+shape = SubResource("BoxShape3D_8kdbl")
+
+[node name="black metal" type="MeshInstance3D" parent="Speaker stand right" unique_id=726960827]
+material_override = ExtResource("10_xkgqu")
+mesh = ExtResource("76_txa3m")
+
+[node name="KRK monitor right" type="StaticBody3D" parent="." unique_id=1380844862]
+collision_layer = 2
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_jmmks")
+
+[node name="studio_monitor_krk" type="Node3D" parent="KRK monitor right" unique_id=2135897748 instance=ExtResource("77_j21x5")]
+transform = Transform3D(-0.9396926, 0, 0.3420202, 0, 1, 0, -0.3420202, 0, -0.9396926, -3.6499999, 0.97, 6.895)
+metadata/keep_instance = true
+
+[node name="Speaker stand left" type="StaticBody3D" parent="." unique_id=997141853]
+collision_layer = 2
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_5cw3q")
+
+[node name="Speaker stand" type="CollisionShape3D" parent="Speaker stand left" unique_id=84023528]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.55, 0.6, 6.895)
+shape = SubResource("BoxShape3D_356cn")
+
+[node name="black metal" type="MeshInstance3D" parent="Speaker stand left" unique_id=1116332028]
+material_override = ExtResource("10_xkgqu")
+mesh = ExtResource("78_3png1")
+
+[node name="KRK monitor left" type="StaticBody3D" parent="." unique_id=357013628]
+collision_layer = 2
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_a1fni")
+
+[node name="studio_monitor_krk" type="Node3D" parent="KRK monitor left" unique_id=756240585 instance=ExtResource("77_j21x5")]
+transform = Transform3D(-0.9396926, 0, -0.34202015, 0, 1, 0, 0.34202015, 0, -0.9396926, -1.55, 0.97, 6.895)
+metadata/keep_instance = true
+
+[node name="Headphone stand" type="StaticBody3D" parent="." unique_id=1758557080]
+collision_layer = 2
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_i1ogj")
+
+[node name="black metal" type="MeshInstance3D" parent="Headphone stand" unique_id=1622270282]
+material_override = ExtResource("10_xkgqu")
+mesh = ExtResource("79_rpgrr")
+
+[node name="Headphones" type="StaticBody3D" parent="." unique_id=366830848]
+collision_layer = 2
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_yx5vw")
+
+[node name="headphones_sony" type="Node3D" parent="Headphones" unique_id=369305729 instance=ExtResource("80_lymxx")]
+transform = Transform3D(-4.152582e-08, 0, 0.95, 0, 0.95, 0, -0.95, 0, -4.152582e-08, -3.4199998, 0.692, 6.365)
+metadata/keep_instance = true
+
+[node name="Desk spot" type="SpotLight3D" parent="." unique_id=620746541]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -2.6, 2.85, 6)
+light_color = Color(1, 0.694903, 0.431048, 1)
+light_energy = 1.6
+spot_range = 4.5
+spot_attenuation = 0.8
+spot_angle = 55.0
+metadata/studio_shadow = true
+
+[node name="Drum spot" type="SpotLight3D" parent="." unique_id=1409209140]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -4.75, 2.85, 6)
+light_color = Color(1, 0.694903, 0.431048, 1)
+light_energy = 1.3
+spot_range = 4.5
+spot_attenuation = 0.8
+spot_angle = 55.0
+metadata/studio_shadow = true
+
+[node name="Room fill" type="OmniLight3D" parent="." unique_id=1583503856]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.55, 2, 4.75)
+light_color = Color(1, 0.78, 0.58, 1)
+light_energy = 0.5
+light_specular = 0.4
+omni_range = 4.5
+omni_attenuation = 1.2
+
+[node name="LED glow purple" type="OmniLight3D" parent="." unique_id=1939181637]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4, 2.65, 6.9)
+light_color = Color(0.62, 0.25, 1, 1)
+light_energy = 1.2
+light_specular = 0.4
+omni_range = 3.2
+omni_attenuation = 1.2
+
+[node name="LED glow blue" type="OmniLight3D" parent="." unique_id=1651253266]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3, 2.65, 4.2)
+light_color = Color(0.25, 0.45, 1, 1)
+light_energy = 0.7
+light_specular = 0.4
+omni_range = 3.0
+omni_attenuation = 1.2
+
+[node name="Monitor glow" type="OmniLight3D" parent="." unique_id=878960339]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6, 1.05, 6.5)
+light_color = Color(0.55, 0.7, 1, 1)
+light_energy = 0.35
+light_specular = 0.4
+omni_range = 1.8
+omni_attenuation = 1.2
+
+[node name="Neon HARMONIK" type="Label3D" parent="." unique_id=2050368254]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -2.6, 2.25, 7.23)
+pixel_size = 0.003
+double_sided = false
+modulate = Color(3.2, 0.9, 2.2, 1)
+text = "HARMONIK"
+font_size = 96
+outline_size = 0
+
+[node name="Neon 3RD" type="Label3D" parent="." unique_id=1140256261]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -2.6, 2.52, 7.23)
+pixel_size = 0.0035
+modulate = Color(0.7, 1.6, 3.4, 1)
+text = "3RD"
+font_size = 64
+outline_size = 0

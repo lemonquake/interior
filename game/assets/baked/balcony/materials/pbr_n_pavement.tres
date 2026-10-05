@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/concrete_pavement/albedo.jpg" id="1_st2m2"]
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/concrete_pavement/normal.jpg" id="2_5s47i"]
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/concrete_pavement/roughness.jpg" id="3_4eglp"]
+
+[resource]
+resource_name = "PBR / n pavement"
+albedo_texture = ExtResource("1_st2m2")
+roughness_texture = ExtResource("3_4eglp")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("2_5s47i")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+texture_filter = 5

@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/white_plaster_02/albedo.jpg" id="1_ldleb"]
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/white_plaster_02/normal.jpg" id="2_ehqvv"]
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/white_plaster_02/roughness.jpg" id="3_ie60j"]
+
+[resource]
+resource_name = "PBR / n plaster 4"
+albedo_color = Color(0.94, 0.9, 0.7, 1)
+albedo_texture = ExtResource("1_ldleb")
+roughness_texture = ExtResource("3_ie60j")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("2_ehqvv")
+uv1_scale = Vector3(0.4, 0.4, 0.4)
+texture_filter = 5

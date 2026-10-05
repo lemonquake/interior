@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/beige_wall_001/albedo.jpg" id="1_odjin"]
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/beige_wall_001/normal.jpg" id="2_xms71"]
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/beige_wall_001/roughness.jpg" id="3_gj0js"]
+
+[resource]
+resource_name = "PBR / n plaster 2"
+albedo_color = Color(0.97, 0.84, 0.74, 1)
+albedo_texture = ExtResource("1_odjin")
+roughness_texture = ExtResource("3_gj0js")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("2_xms71")
+uv1_scale = Vector3(0.4, 0.4, 0.4)
+texture_filter = 5

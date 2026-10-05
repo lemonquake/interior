@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/rusty_corrugated_iron/albedo.jpg" id="1_mpx1b"]
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/rusty_corrugated_iron/normal.jpg" id="2_rdbhb"]
+[ext_resource type="Texture2D" path="res://assets/outdoor/textures/rusty_corrugated_iron/roughness.jpg" id="3_8n0wd"]
+
+[resource]
+resource_name = "PBR / n roof rust"
+cull_mode = 2
+albedo_texture = ExtResource("1_mpx1b")
+roughness_texture = ExtResource("3_8n0wd")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("2_rdbhb")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+texture_filter = 5

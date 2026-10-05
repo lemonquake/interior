@@ -33,6 +33,8 @@ const YARD_Z := 5.3
 
 var _root: Node3D
 var _saved: Array = []
+## Visual layer of committed batches (the studio builder reuses these helpers indoors on layer 1).
+var visual_layer := OUTDOOR_LAYER
 
 ## Builds everything beneath `root` (a Node3D, ideally inside the tree). Returns stats.
 static func build(root: Node3D) -> Dictionary:
@@ -157,6 +159,27 @@ func _image(key: String, path: String, roughness: float) -> StandardMaterial3D:
 	_materials[key] = mat
 	return mat
 
+## Poly Haven PBR set from res://assets/outdoor/textures/<id>/ (albedo, GL normal, roughness).
+## Builder UVs are in metres, so `tile` is the texture's real-world size.
+func _pbr(key: String, id: String, tile: float, tint := Color(1, 1, 1), roughness := 1.0, normal := 1.0) -> StandardMaterial3D:
+	var dir := "res://assets/outdoor/textures/" + id + "/"
+	var mat := StandardMaterial3D.new()
+	mat.resource_name = "PBR / " + key
+	mat.albedo_texture = load(dir + "albedo.jpg")
+	mat.albedo_color = tint
+	if ResourceLoader.exists(dir + "normal.jpg"):
+		mat.normal_enabled = true
+		mat.normal_texture = load(dir + "normal.jpg")
+		mat.normal_scale = normal
+	if ResourceLoader.exists(dir + "roughness.jpg"):
+		mat.roughness_texture = load(dir + "roughness.jpg")
+		mat.roughness_texture_channel = BaseMaterial3D.TEXTURE_CHANNEL_GREEN
+	mat.roughness = roughness
+	mat.uv1_scale = Vector3.ONE / tile
+	mat.texture_filter = BaseMaterial3D.TEXTURE_FILTER_LINEAR_WITH_MIPMAPS_ANISOTROPIC
+	_materials[key] = mat
+	return mat
+
 # ---------------------------------------------------------------- batching helpers
 
 func _static_body(label: String, at: Vector3, yaw := 0.0) -> StaticBody3D:
@@ -195,7 +218,7 @@ func _commit(parent: Node3D, prefix: String) -> void:
 		mesh.name = prefix + key
 		mesh.mesh = tool.commit()
 		mesh.material_override = _materials[key]
-		mesh.layers = OUTDOOR_LAYER
+		mesh.layers = visual_layer
 		parent.add_child(mesh)
 		if parent == _root:
 			_stats.static_batches += 1
@@ -397,53 +420,13 @@ func _build_courtyard() -> void:
 			_ring(Vector3(FENCE_X, (y0 + y1) * .5, (z + z1) * .5), .06, "white steel", Basis(Vector3.UP, PI * .5), .006, 10)
 			z += d
 
+## Sun at about 3 pm: 40 degrees up, behind the stair view and out over the street (-X, +Z), so the
+## houses across the streets are lit from the front and the view down the stair is not into the sun.
+const SUN_DIRECTION := Vector3(-.627, .643, .440)
+
 func _build_neighbourhood() -> void:
-	_feature("Backdrop: corrugated roofs, neighbour walls, trees, utility pole, wires and sky")
-	# Ground plane well below the room so looking down is never empty.
-	_box("Neighbourhood ground", Vector3(8, GROUND - .32, 8), Vector3(40, .04, 40), "concrete dark")
-	# Neighbour houses beyond the gate and the block wall.
-	for item: Array in [[Vector3(15.5, -1.2, 4.0), Vector3(4.0, 3.4, 5.0), "neighbour beige"], [Vector3(10.5, -1.6, 8.5), Vector3(7.0, 2.6, 4.0), "neighbour green"],
-			[Vector3(3.0, -1.0, 8.0), Vector3(5.0, 3.8, 3.5), "block"], [Vector3(18.0, -.5, 10.0), Vector3(4.0, 4.8, 5.0), "neighbour green"],
-			[Vector3(6.0, .0, 13.0), Vector3(8.0, 5.8, 4.0), "neighbour beige"], [Vector3(17.0, -1.0, -1.5), Vector3(5.0, 3.8, 4.0), "plaster"]]:
-		_box("Neighbour house", item[0], item[1], item[2])
-	# Corrugated metal roofs over those houses.
-	_corrugated(Vector3(15.5, .65, 4.0), Vector2(4.4, 5.4), .18, "roof metal")
-	_corrugated(Vector3(10.5, -.15, 8.5), Vector2(7.4, 4.4), .15, "roof rust")
-	_corrugated(Vector3(3.0, .95, 8.0), Vector2(5.4, 3.9), .2, "roof metal")
-	_corrugated(Vector3(18.0, 2.0, 10.0), Vector2(4.4, 5.4), .12, "roof rust")
-	_corrugated(Vector3(13.6, -.7, 6.8), Vector2(2.2, 2.8), .25, "roof metal")
-	# A few trees.
-	for item: Array in [[Vector3(14.2, GROUND, 8.5), 6.5], [Vector3(16.5, GROUND, 13.5), 7.5], [Vector3(9.5, GROUND, 12.2), 5.5],
-			[Vector3(20.5, GROUND, 6.0), 6.0], [Vector3(1.5, GROUND, 12.5), 7.0]]:
-		_tree(item[0], item[1])
-	# Concrete utility pole with a cross arm and sagging overhead wires.
-	var pole := Vector3(11.4, GROUND, 6.6)
-	_rod(pole, pole + Vector3(0, 9.6, 0), .13, "concrete", 10, .09)
-	_box("Pole cross arm", pole + Vector3(0, 9.0, 0), Vector3(1.4, .1, .1), "concrete")
-	for i in 3:
-		var from := pole + Vector3(-.6 + i * .6, 9.08, 0)
-		_wire(from, Vector3(-2.0, 5.5 + i * .3, 14.0), .7)
-		_wire(from, Vector3(24.0, 6.5 + i * .3, 3.0), .9)
-		_wire(from, Vector3(9.0 + i * .4, 4.2, YARD_Z + 1.2), .3)
-	_wire(pole + Vector3(0, 8.0, 0), Vector3(6.0, 3.1, Z_WALL + .02), .5)
-	_build_sky()
-
-func _corrugated(center: Vector3, size: Vector2, pitch: float, key: String) -> void:
-	var basis := Basis(Vector3.RIGHT, pitch)
-	_box("Metal roof sheet", center, Vector3(size.x, .02, size.y), key, false, basis)
-	var x := -size.x * .5 + .06
-	while x < size.x * .5:
-		_rod(center + basis * Vector3(x, .012, -size.y * .5), center + basis * Vector3(x, .012, size.y * .5), .014, key, 4)
-		x += .14
-
-func _tree(base: Vector3, height: float) -> void:
-	_rod(base, base + Vector3(0, height * .55, 0), .14, "bark", 7, .09)
-	var random := RandomNumberGenerator.new()
-	random.seed = int(base.x * 100 + base.z * 7)
-	for i in 5:
-		var offset := Vector3(random.randf_range(-1, 1), random.randf_range(.5, 1.0), random.randf_range(-1, 1)) * height * .2
-		var size := Vector3.ONE * height * random.randf_range(.32, .45)
-		_sphere(base + Vector3(0, height * .62, 0) + offset, size, "foliage dark" if i % 2 else "foliage", 9)
+	# Streets, houses, trees, poles and the sky dome: scripts/neighborhood_builder.gd.
+	InteriorNeighborhoodBuilder.build(self, _root, SUN_DIRECTION.normalized())
 
 func _wire(a: Vector3, b: Vector3, sag: float) -> void:
 	var pts: Array = []
@@ -451,35 +434,6 @@ func _wire(a: Vector3, b: Vector3, sag: float) -> void:
 		var t := float(i) / 8
 		pts.append(a.lerp(b, t) + Vector3.DOWN * sag * 4.0 * t * (1 - t))
 	_tube(pts, .007, "rubber", 4)
-
-func _build_sky() -> void:
-	# Unshaded gradient dome: purely visual, never lit, no shadows.
-	var tool := SurfaceTool.new()
-	tool.begin(Mesh.PRIMITIVE_TRIANGLES)
-	var center := Vector3(7, GROUND - 1.0, 5)
-	var radius := 27.0
-	var rings := [[-.05, Color(.80, .84, .86)], [.12, Color(.84, .89, .94)], [.35, Color(.70, .81, .93)], [.7, Color(.52, .68, .90)], [1.0, Color(.42, .60, .88)]]
-	var sides := 24
-	for r in rings.size() - 1:
-		var a0: float = rings[r][0] * PI * .5
-		var a1: float = rings[r + 1][0] * PI * .5
-		for i in sides:
-			var t0 := TAU * i / sides
-			var t1 := TAU * (i + 1) / sides
-			var quad := [[t0, a0, rings[r][1]], [t1, a0, rings[r][1]], [t1, a1, rings[r + 1][1]], [t0, a1, rings[r + 1][1]]]
-			for k in [0, 1, 2, 0, 2, 3]:
-				var item: Array = quad[k]
-				var p := center + Vector3(cos(item[0]) * cos(item[1]), sin(item[1]) * .55, sin(item[0]) * cos(item[1])) * radius
-				tool.set_color(item[2])
-				tool.set_normal(Vector3.UP)
-				tool.add_vertex(p)
-	var mesh := MeshInstance3D.new()
-	mesh.name = "Sky backdrop"
-	mesh.mesh = tool.commit()
-	mesh.material_override = _materials["sky"]
-	mesh.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
-	mesh.layers = OUTDOOR_LAYER
-	_root.add_child(mesh)
 
 ## Invisible walls above every railing and around the yard, plus a lid, so neither the
 ## player nor a thrown prop can leave the playable space.
@@ -718,7 +672,7 @@ func _build_lights() -> void:
 	sun.light_color = Color(1.0, .93, .82)
 	sun.light_energy = 1.6
 	sun.light_cull_mask = OUTDOOR_LAYER
-	sun.rotation_degrees = Vector3(-52, 28, 0)
+	sun.basis = Basis.looking_at(-SUN_DIRECTION.normalized(), Vector3.UP)
 	sun.shadow_enabled = true
 	sun.directional_shadow_mode = DirectionalLight3D.SHADOW_PARALLEL_2_SPLITS
 	sun.directional_shadow_max_distance = 30.0

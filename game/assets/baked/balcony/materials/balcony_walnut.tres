@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/materials/walnut_color.jpg" id="1_ielsy"]
+[ext_resource type="Texture2D" path="res://assets/materials/walnut_normal.png" id="2_0101w"]
+[ext_resource type="Texture2D" path="res://assets/materials/walnut_roughness.jpg" id="3_k6bxf"]
+
+[resource]
+resource_name = "Balcony / walnut"
+albedo_texture = ExtResource("1_ielsy")
+metallic_specular = 0.45
+roughness = 0.8
+roughness_texture = ExtResource("3_k6bxf")
+normal_enabled = true
+normal_scale = 0.35
+normal_texture = ExtResource("2_0101w")
+uv1_triplanar = true
+uv1_triplanar_sharpness = 6.0
+texture_filter = 5

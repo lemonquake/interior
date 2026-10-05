@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/balcony/sign_worthwhile.png" id="1_i6fwa"]
+
+[resource]
+resource_name = "Balcony / sign worthwhile"
+albedo_texture = ExtResource("1_i6fwa")
+roughness = 0.6
+texture_filter = 5

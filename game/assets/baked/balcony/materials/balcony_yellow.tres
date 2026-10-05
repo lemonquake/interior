@@ -1,0 +1,19 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/surfaces/plaster_color.jpg" id="1_tfy08"]
+[ext_resource type="Texture2D" path="res://assets/surfaces/plaster_normal.png" id="2_65of3"]
+[ext_resource type="Texture2D" path="res://assets/surfaces/plaster_roughness.jpg" id="3_subnx"]
+
+[resource]
+resource_name = "Balcony / yellow"
+albedo_color = Color(0.93, 0.75, 0.36, 1)
+albedo_texture = ExtResource("1_tfy08")
+metallic_specular = 0.3
+roughness_texture = ExtResource("3_subnx")
+normal_enabled = true
+normal_scale = 0.18
+normal_texture = ExtResource("2_65of3")
+uv1_scale = Vector3(0.625, 0.625, 0.625)
+uv1_triplanar = true
+uv1_triplanar_sharpness = 6.0
+texture_filter = 5

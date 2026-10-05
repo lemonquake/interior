@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[resource]
+resource_name = "Balcony / petal yellow"
+albedo_color = Color(0.95, 0.7, 0.1, 1)
+roughness = 0.7

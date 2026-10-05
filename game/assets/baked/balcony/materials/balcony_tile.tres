@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/materials/tile_white_color.jpg" id="1_31f02"]
+[ext_resource type="Texture2D" path="res://assets/materials/tile_white_normal.png" id="2_g4tg6"]
+[ext_resource type="Texture2D" path="res://assets/materials/tile_white_roughness.jpg" id="3_qbtky"]
+
+[resource]
+resource_name = "Balcony / tile"
+albedo_texture = ExtResource("1_31f02")
+roughness = 0.352
+roughness_texture = ExtResource("3_qbtky")
+normal_enabled = true
+normal_scale = 0.5
+normal_texture = ExtResource("2_g4tg6")
+uv1_scale = Vector3(1.6666666, 1.6666666, 1.6666666)
+uv1_triplanar = true
+uv1_triplanar_sharpness = 6.0
+texture_filter = 5

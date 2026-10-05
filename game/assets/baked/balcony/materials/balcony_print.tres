@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/art/art_1.jpg" id="1_ce8ku"]
+
+[resource]
+resource_name = "Balcony / print"
+albedo_texture = ExtResource("1_ce8ku")
+roughness = 0.7
+texture_filter = 5

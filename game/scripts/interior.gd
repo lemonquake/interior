@@ -55,10 +55,11 @@ func _ready() -> void:
 		control_lab = true
 	if control_lab:
 		# The control lab replaces the furnished room that main.tscn instances.
-		var baked_room := get_node_or_null("LivingRoom")
-		if baked_room != null:
-			remove_child(baked_room)
-			baked_room.free()
+		for baked_name in ["LivingRoom", "Balcony"]:
+			var baked_room := get_node_or_null(baked_name)
+			if baked_room != null:
+				remove_child(baked_room)
+				baked_room.free()
 		_build_control_test_room()
 	player = PlayerScript.new()
 	player.name = "Player"

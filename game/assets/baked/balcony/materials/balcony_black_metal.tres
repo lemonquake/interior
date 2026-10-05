@@ -1,0 +1,20 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/materials/brushed_color.jpg" id="1_xyquf"]
+[ext_resource type="Texture2D" path="res://assets/materials/brushed_normal.png" id="2_4shm5"]
+[ext_resource type="Texture2D" path="res://assets/materials/brushed_roughness.jpg" id="3_b7lpm"]
+
+[resource]
+resource_name = "Balcony / black metal"
+albedo_color = Color(0.11, 0.105, 0.1, 1)
+albedo_texture = ExtResource("1_xyquf")
+metallic = 0.75
+roughness = 0.672
+roughness_texture = ExtResource("3_b7lpm")
+normal_enabled = true
+normal_scale = 0.25
+normal_texture = ExtResource("2_4shm5")
+uv1_scale = Vector3(2.5, 2.5, 2.5)
+uv1_triplanar = true
+uv1_triplanar_sharpness = 6.0
+texture_filter = 5

@@ -119,6 +119,8 @@ func _convert_pets(room: Node) -> void:
 			spawner.name = "AquariumSpawner"
 			spawner.kind = "aquarium"
 			spawner.aquarium_scale = (habitat as InteriorAquarium).bowl_scale
+			spawner.tank_size = (habitat as InteriorAquarium).tank_size
+			spawner.visual_layers = int(body.get_meta("visual_layers", 1))
 		var runtime_only: Array[Node] = []
 		_collect(habitat, func(node: Node) -> bool: return node is InteriorHamster, runtime_only)
 		for node in runtime_only:

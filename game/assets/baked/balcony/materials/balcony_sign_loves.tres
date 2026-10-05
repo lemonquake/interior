@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/balcony/sign_loves.png" id="1_h7jxu"]
+
+[resource]
+resource_name = "Balcony / sign loves"
+albedo_texture = ExtResource("1_h7jxu")
+roughness = 0.6
+texture_filter = 5

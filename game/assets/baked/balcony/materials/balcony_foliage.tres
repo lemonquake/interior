@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/materials/foliage_color.jpg" id="1_oekdh"]
+[ext_resource type="Texture2D" path="res://assets/materials/foliage_normal.png" id="2_x1q6b"]
+[ext_resource type="Texture2D" path="res://assets/materials/foliage_roughness.jpg" id="3_gftal"]
+
+[resource]
+resource_name = "Balcony / foliage"
+albedo_color = Color(0.85, 1, 0.82, 1)
+albedo_texture = ExtResource("1_oekdh")
+metallic_specular = 0.4
+roughness = 0.992
+roughness_texture = ExtResource("3_gftal")
+normal_enabled = true
+normal_scale = 0.5
+normal_texture = ExtResource("2_x1q6b")
+texture_filter = 5

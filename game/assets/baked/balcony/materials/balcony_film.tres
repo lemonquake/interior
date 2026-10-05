@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/balcony/floral_film.png" id="1_m150p"]
+
+[resource]
+resource_name = "Balcony / film"
+albedo_texture = ExtResource("1_m150p")
+roughness = 0.8
+emission_enabled = true
+emission_energy_multiplier = 0.35
+emission_texture = ExtResource("1_m150p")
+uv1_scale = Vector3(1.6666666, 1.6666666, 1.6666666)
+uv1_triplanar = true
+texture_filter = 5

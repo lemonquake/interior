@@ -1,0 +1,19 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/surfaces/plaster_color.jpg" id="1_y6elu"]
+[ext_resource type="Texture2D" path="res://assets/surfaces/plaster_normal.png" id="2_gxe8q"]
+[ext_resource type="Texture2D" path="res://assets/surfaces/plaster_roughness.jpg" id="3_aop7g"]
+
+[resource]
+resource_name = "Balcony / concrete"
+albedo_color = Color(0.66, 0.65, 0.62, 1)
+albedo_texture = ExtResource("1_y6elu")
+metallic_specular = 0.3
+roughness_texture = ExtResource("3_aop7g")
+normal_enabled = true
+normal_scale = 0.18
+normal_texture = ExtResource("2_gxe8q")
+uv1_scale = Vector3(0.625, 0.625, 0.625)
+uv1_triplanar = true
+uv1_triplanar_sharpness = 6.0
+texture_filter = 5

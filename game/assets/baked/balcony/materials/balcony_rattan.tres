@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/materials/rattan_color.jpg" id="1_xjc3k"]
+[ext_resource type="Texture2D" path="res://assets/materials/rattan_normal.png" id="2_t55e4"]
+[ext_resource type="Texture2D" path="res://assets/materials/rattan_roughness.jpg" id="3_g0l7y"]
+
+[resource]
+resource_name = "Balcony / rattan"
+albedo_texture = ExtResource("1_xjc3k")
+metallic_specular = 0.35
+roughness_texture = ExtResource("3_g0l7y")
+normal_enabled = true
+normal_scale = 0.8
+normal_texture = ExtResource("2_t55e4")
+uv1_scale = Vector3(4, 4, 4)
+uv1_triplanar = true
+uv1_triplanar_sharpness = 6.0
+texture_filter = 5

@@ -1,0 +1,19 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/materials/oak_color.jpg" id="1_nnl2r"]
+[ext_resource type="Texture2D" path="res://assets/materials/oak_normal.png" id="2_uwvgm"]
+[ext_resource type="Texture2D" path="res://assets/materials/oak_roughness.jpg" id="3_o588t"]
+
+[resource]
+resource_name = "Balcony / oak"
+albedo_color = Color(1, 0.96, 0.9, 1)
+albedo_texture = ExtResource("1_nnl2r")
+metallic_specular = 0.4
+roughness = 0.992
+roughness_texture = ExtResource("3_o588t")
+normal_enabled = true
+normal_scale = 0.35
+normal_texture = ExtResource("2_uwvgm")
+uv1_triplanar = true
+uv1_triplanar_sharpness = 6.0
+texture_filter = 5

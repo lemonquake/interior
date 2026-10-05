@@ -13,6 +13,8 @@ const OUT_SCENE := "res://scenes/room/living_room.tscn"
 const BAKED_DIR := "res://assets/baked"
 const SETTLE_FRAMES := 120
 
+## Folder for externalized resources; bake_balcony.gd reuses this script with its own.
+var baked_dir := BAKED_DIR
 var _done: Dictionary = {}
 var _used_paths: Dictionary = {}
 var _stats := {"nodes": 0, "meshes": 0, "materials": 0, "textures": 0, "shaders": 0, "shapes": 0, "pet_spawners": 0}
@@ -34,7 +36,8 @@ func _bake() -> void:
 	for i in 3:
 		await process_frame
 	await _settle(room)
-	_clear_directory(ProjectSettings.globalize_path(BAKED_DIR))
+	# The balcony scene keeps its own resources under assets/baked/balcony.
+	_clear_directory(ProjectSettings.globalize_path(BAKED_DIR), ["balcony"])
 	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(OUT_SCENE.get_base_dir()))
 	_convert_pets(room)
 	_flatten(room, room)
@@ -227,19 +230,21 @@ func _unique_path(folder: String, base_name: String, extension: String) -> Strin
 	clean = clean.trim_prefix("_").trim_suffix("_")
 	if clean.is_empty():
 		clean = "resource"
-	var path := "%s/%s/%s.%s" % [BAKED_DIR, folder, clean, extension]
+	var path := "%s/%s/%s.%s" % [baked_dir, folder, clean, extension]
 	var index := 2
 	while _used_paths.has(path):
-		path = "%s/%s/%s_%d.%s" % [BAKED_DIR, folder, clean, index, extension]
+		path = "%s/%s/%s_%d.%s" % [baked_dir, folder, clean, index, extension]
 		index += 1
 	_used_paths[path] = true
 	return path
 
-func _clear_directory(absolute: String) -> void:
+func _clear_directory(absolute: String, keep: Array = []) -> void:
 	var directory := DirAccess.open(absolute)
 	if directory == null:
 		return
 	for sub in directory.get_directories():
+		if sub in keep:
+			continue
 		_clear_directory(absolute.path_join(sub))
 		DirAccess.remove_absolute(absolute.path_join(sub))
 	for file in directory.get_files():

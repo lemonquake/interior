@@ -387,6 +387,8 @@ func _on_grabbed(body: InteriorObject) -> void:
 
 func _on_target_changed(body: InteriorObject) -> void:
 	prompt.text = (("Hold / Drop • " if mobile else "E • Hold ") + body.display_name) if body != null else ""
+	if body == null and player != null and is_instance_valid(player.door_target):
+		prompt.text = ("Hold / Drop • " if mobile else "E • ") + str(player.door_target.call("prompt_text"))
 	if body != null and body.is_in_group("mystery_console"):
 		prompt.text += "     Inspect" if mobile else "     F • Inspect"
 
@@ -446,13 +448,21 @@ func _capture_review() -> void:
 		if argument.begins_with("--capture-path="):
 			directory = argument.trim_prefix("--capture-path=")
 	DirAccess.make_dir_recursive_absolute(directory)
+	var only_balcony := "--capture-views=balcony" in OS.get_cmdline_user_args()
 	await get_tree().create_timer(2.0).timeout
-	await _save_review_image(directory, "home")
+	if not only_balcony:
+		await _save_review_image(directory, "home")
 	_play()
 	await get_tree().create_timer(1.0).timeout
-	await _save_review_image(directory, "play")
+	if not only_balcony:
+		await _save_review_image(directory, "play")
 	player.playing = false
 	hud.hide()
+	await _capture_balcony_views(directory)
+	if only_balcony:
+		print("INTERIOR_REVIEW_CAPTURE ",directory)
+		get_tree().quit()
+		return
 	var views := [
 		["room-wide", Vector3(.62,1.58,1.30), Vector3(-.20,1.30,-2.35)],
 		["sofa-surfaces", Vector3(.10,1.55,.20), Vector3(-2.05,.65,.40)],
@@ -485,6 +495,31 @@ func _capture_review() -> void:
 	await _save_review_image(directory, "notes")
 	print("INTERIOR_REVIEW_CAPTURE ",directory)
 	get_tree().quit()
+
+## Views matching the owner's door / balcony / stair photos (work/v4/reference/1..5).
+const BALCONY_VIEWS := [
+	["balcony-1-door-closed", Vector3(1.75,1.58,.95), Vector3(1.85,1.25,2.7), false],
+	["balcony-2-door-open", Vector3(1.75,1.58,.95), Vector3(1.85,1.25,2.7), true],
+	["balcony-3-aquarium-wall", Vector3(3.55,1.55,3.75), Vector3(.95,1.0,3.62), true],
+	["balcony-4-toward-stairs", Vector3(1.55,1.55,3.55), Vector3(6.5,.55,3.45), true],
+	["balcony-5-stairs-down", Vector3(5.25,1.5,3.3), Vector3(8.6,-1.9,3.55), true],
+	["balcony-6-courtyard-up", Vector3(12.0,-1.35,4.35), Vector3(7.2,-.4,3.4), true],
+]
+
+func _capture_balcony_views(directory: String) -> void:
+	var doors := get_tree().get_nodes_in_group("interior_doors")
+	if doors.is_empty():
+		return
+	var door := doors[0] as InteriorHingedDoor
+	for view in BALCONY_VIEWS:
+		if view[3] != door.is_open():
+			door.toggle()
+			await get_tree().create_timer(door.swing_seconds + .25).timeout
+		player.camera.global_position = view[1]
+		player.camera.look_at(view[2])
+		await get_tree().create_timer(.35).timeout
+		await _save_review_image(directory, view[0])
+	door.snap(false)
 
 func _save_review_image(directory: String, label: String) -> void:
 	await RenderingServer.frame_post_draw

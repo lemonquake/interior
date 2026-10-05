@@ -4,6 +4,11 @@ extends Node3D
 ## dimensions and collision geometry use metres in the existing room space.
 
 const ObjectScript = preload("res://scripts/physics_object.gd")
+const DoorScript = preload("res://scripts/hinged_door.gd")
+## Hinge of the (mirrored) navy entry door: the leaf spans x 1.39..2.43 and its
+## inner face sits at z 2.6335. It swings inward (toward -Z), away from the cabinet.
+const ENTRY_HINGE := Vector3(2.43, 0, 2.6335)
+const DOOR_PREFIX := "door|"
 const TOY_BALL := Vector3(-1.05, .112, 1.05)
 const TOY_TENNIS := Vector3(-.62, .036, 1.28)
 const REPLACED_COLLIDERS := ["Left wall", "Right wall", "Rear wall", "Ceiling"]
@@ -11,7 +16,8 @@ var _batches: Dictionary = {}
 var _materials: Dictionary = {}
 var _shell: StaticBody3D
 var _room: Node3D
-var _stats := {"triangles_removed":0, "triangles_added":0, "static_batches":0, "colliders":0, "dynamic_props":0, "family_photos":0, "features":[], "kitchen_bounds":[-5.65,-3.3,-2.7,2.7], "kitchen_entrance":[-3.3,0,1.95]}
+var _door_prefix := ""
+var _stats := {"triangles_removed":0, "triangles_added":0, "static_batches":0, "colliders":0, "dynamic_props":0, "family_photos":0, "features":[], "kitchen_bounds":[-5.65,-3.3,-2.7,2.7], "kitchen_entrance":[-3.3,0,1.95], "door_triangles":0}
 
 static func apply(room: Node3D, visual: Node3D, _manifest: Dictionary) -> Dictionary:
 	if room.has_meta("reference_room_stats"):
@@ -95,8 +101,27 @@ func _build() -> void:
 	_build_kitchen()
 	_build_rear_mirrored()
 	_build_right()
+	var door_leaf := _build_entry_door()
 	for key: String in _batches:
 		var tool := _batches[key] as SurfaceTool
+		if key.begins_with(DOOR_PREFIX):
+			# The entry door leaf is its own hinged body, not part of the static batches.
+			var material_key := key.trim_prefix(DOOR_PREFIX)
+			var leaf_mesh := tool.commit()
+			var triangles := leaf_mesh.surface_get_array_len(0) / 3
+			_stats.triangles_added -= triangles
+			_stats.door_triangles += triangles
+			tool.clear()
+			tool.begin(Mesh.PRIMITIVE_TRIANGLES)
+			tool.append_from(leaf_mesh, 0, Transform3D(Basis.IDENTITY, -ENTRY_HINGE))
+			tool.index()
+			tool.generate_tangents()
+			var leaf := MeshInstance3D.new()
+			leaf.name = "Door leaf - " + material_key
+			leaf.mesh = tool.commit()
+			leaf.material_override = _materials[material_key]
+			door_leaf.add_child(leaf)
+			continue
 		tool.index()
 		tool.generate_tangents()
 		var mesh := MeshInstance3D.new()
@@ -106,6 +131,32 @@ func _build() -> void:
 		add_child(mesh)
 		_stats.static_batches += 1
 	_batches.clear()
+
+## Hinged navy entry door: pivot node at the hinge, AnimatableBody3D leaf beneath it.
+func _build_entry_door() -> AnimatableBody3D:
+	_feature("Hinged navy entry door to the balcony")
+	var door := DoorScript.new() as InteriorHingedDoor
+	door.name = "EntryDoor"
+	door.position = ENTRY_HINGE
+	add_child(door)
+	var leaf := AnimatableBody3D.new()
+	leaf.name = "DoorLeaf"
+	leaf.collision_layer = 2
+	leaf.collision_mask = 5
+	leaf.sync_to_physics = true
+	leaf.physics_material_override = PhysicsMaterial.new()
+	leaf.physics_material_override.friction = .6
+	door.add_child(leaf)
+	var collision := CollisionShape3D.new()
+	collision.name = "LeafCollider"
+	var shape := BoxShape3D.new()
+	# Slab plus the inner raised panels (z 2.597..2.689), hinge edge at local x=0.
+	shape.size = Vector3(1.04, 2.28, .092)
+	shape.margin = .002
+	collision.shape = shape
+	collision.position = Vector3(-.52, 1.14, .0095)
+	leaf.add_child(collision)
+	return leaf
 
 func _build_rear_mirrored() -> void:
 	# Looking toward +Z reverses screen-left and world-X. Keep the owner's
@@ -221,7 +272,8 @@ func _material(key: String, color: Color, roughness: float, texture := "") -> St
 func _feature(label: String) -> void:
 	_stats.features.append(label)
 
-func _builder(key: String) -> SurfaceTool:
+func _builder(base_key: String) -> SurfaceTool:
+	var key := _door_prefix + base_key
 	if not _batches.has(key):
 		var tool := SurfaceTool.new()
 		tool.begin(Mesh.PRIMITIVE_TRIANGLES)
@@ -323,7 +375,14 @@ func _build_shell() -> void:
 	_box("Kitchen opening lintel",Vector3(-3.36,2.67,0),Vector3(.20,.46,5.4),"blue ceiling",true)
 	for z in [-2.58,2.58]:
 		_box("Kitchen doorway post",Vector3(-3.36,1.24,z),Vector3(.18,2.48,.20),"blue ceiling",true)
-	_box("Rear wall east",Vector3(2.0,1.45,2.8),Vector3(2.6,2.9,.2),"dark recess",true)
+	# The east rear wall now has a real doorway (x 1.39..2.43, up to y 2.32) to the balcony.
+	_box("Rear wall east near",Vector3(1.045,1.45,2.8),Vector3(.69,2.9,.2),"dark recess",true)
+	_box("Rear wall east far",Vector3(2.865,1.45,2.8),Vector3(.87,2.9,.2),"dark recess",true)
+	_box("Rear doorway header",Vector3(1.91,2.61,2.8),Vector3(1.04,.58,.2),"dark recess",true)
+	_box("Rear doorway threshold",Vector3(1.91,-.098,2.82),Vector3(1.04,.204,.26),"floor",true)
+	# Navy painted reveal lining the wall thickness, like the balcony-side frame.
+	for x in [1.40,2.42]: _box("Rear doorway reveal",Vector3(x,1.16,2.8),Vector3(.02,2.32,.2),"navy")
+	_box("Rear doorway reveal head",Vector3(1.91,2.31,2.8),Vector3(1.0,.02,.2),"navy")
 	_box("Rear wall center",Vector3(-.27,1.45,2.8),Vector3(1.94,2.9,.2),"dark recess",true)
 	_box("Rear wall studio header",Vector3(-2.25,2.65,2.8),Vector3(2.1,.5,.2),"plaster",true)
 	_box("Right wall gallery",Vector3(3.4,1.45,-1.18),Vector3(.2,2.9,3.04),"dark recess",true)
@@ -473,9 +532,13 @@ func _build_rear() -> void:
 		var x := -3.29+i*.059
 		if x < -2.43 or x > -1.38:
 			_box("Rear wall pale slat",Vector3(x,1.45,2.677),Vector3(.034,2.9,.041),"slat")
+	# Everything on the door leaf goes to separate batches that become the hinged body.
+	_door_prefix = DOOR_PREFIX
 	_box("Navy entry door",Vector3(-1.91,1.14,2.661),Vector3(1.04,2.28,.055),"navy")
+	_door_prefix = ""
 	for x in [-2.46,-1.36]: _box("Door timber jamb",Vector3(x,1.18,2.637),Vector3(.055,2.36,.07),"slat")
 	_box("Door timber lintel",Vector3(-1.91,2.355,2.637),Vector3(1.16,.065,.07),"slat")
+	_door_prefix = DOOR_PREFIX
 	for row in 3:
 		for col in 2:
 			var p := Vector3(-2.155+col*.49,.42+row*.69,2.623)
@@ -487,6 +550,10 @@ func _build_rear() -> void:
 	_sphere(Vector3(-1.50,1.015,2.582),Vector3(.069,.069,.055),"brass")
 	_box("Door latch plate",Vector3(-1.50,1.015,2.61),Vector3(.070,.135,.012),"steel")
 	_box("Door latch bolt",Vector3(-1.44,1.38,2.607),Vector3(.15,.041,.02),"steel")
+	# Balcony-side knob and rose on the plain outer face.
+	_sphere(Vector3(-1.50,1.015,2.716),Vector3(.069,.069,.055),"brass")
+	_box("Door outer rose",Vector3(-1.50,1.015,2.692),Vector3(.060,.11,.008),"steel")
+	_door_prefix = ""
 	_box("Entry light switch",Vector3(-1.21,1.37,2.632),Vector3(.076,.12,.025),"ivory")
 	_box("Entry switch rocker",Vector3(-1.21,1.38,2.613),Vector3(.045,.065,.012),"ivory")
 	_feature("Tall mirror beside the entrance")

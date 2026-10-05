@@ -36,6 +36,8 @@ const OBSTRUCT_TIME := 0.3
 var camera: Camera3D
 var held: InteriorObject
 var target: InteriorObject
+## Hinged door under the crosshair (InteriorHingedDoor) when no prop is targeted.
+var door_target: Node3D
 var touch_move := Vector2.ZERO
 var touch_sprinting := false
 var touch_crouching := false
@@ -196,7 +198,8 @@ func _physics_process(delta: float) -> void:
 		return
 	if not is_finite(delta) or delta <= 0.0:
 		return
-	if not global_position.is_finite() or not velocity.is_finite() or global_position.y < -3.0:
+	# The courtyard below the balcony is at y=-2.9; only a real fall out of the world resets.
+	if not global_position.is_finite() or not velocity.is_finite() or global_position.y < -6.0:
 		reset_motion(_spawn_position)
 		return
 	var grounded := is_on_floor()
@@ -362,6 +365,11 @@ func ray_hit(distance: float, mask: int, exclude: Array[RID] = []) -> Dictionary
 func update_target() -> void:
 	var hit := ray_hit(REACH, 6)
 	var next := hit.get("collider") as InteriorObject
+	door_target = null
+	if next == null and hit and hit.collider is Node:
+		var door := (hit.collider as Node).get_parent()
+		if door != null and door.is_in_group("interior_doors"):
+			door_target = door as Node3D
 	if next != target:
 		target = next
 		target_changed.emit(target)
@@ -371,6 +379,9 @@ func toggle_hold() -> void:
 		release_object()
 		return
 	update_target()
+	if target == null and door_target != null:
+		door_target.call("toggle")
+		return
 	if target == null:
 		var hit := ray_hit(REACH, 6)
 		if hit and hit.collider.is_in_group("mystery_console"):

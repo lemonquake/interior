@@ -20,12 +20,12 @@ func _run() -> void:
 	var main = load("res://main.tscn").instantiate()
 	root.add_child(main)
 	check(not main.control_lab,"Actual furnished room loads")
-	check(main.has_meta("reference_room_stats"),"Reference surroundings module is integrated")
-	if not main.has_meta("reference_room_stats"):
+	check(main.room.has_meta("reference_room_stats"),"Reference surroundings module is integrated")
+	if not main.room.has_meta("reference_room_stats"):
 		print("INTERIOR_SURROUNDINGS_INTEGRATION ",JSON.stringify({"passed":false,"checks":checks,"failures":failures}))
 		quit(1)
 		return
-	var stats: Dictionary = main.get_meta("reference_room_stats")
+	var stats: Dictionary = main.room.get_meta("reference_room_stats")
 	check(stats.triangles_removed > 0,"Previous closed side shell is removed")
 	check(stats.static_batches <= 48,"Material batches stay within Android budget")
 	check(stats.family_photos >= 10,"Family photo gallery and fridge use actual supplied images")
@@ -38,7 +38,7 @@ func _run() -> void:
 	var fridge_vertices := 0
 	var window_bar_vertices := 0
 	var right_cabinet_vertices := 0
-	for detail in main.get_node("ReferenceRoomSurroundings").get_children():
+	for detail in main.room.get_node("ReferenceRoomSurroundings").get_children():
 		if not detail is MeshInstance3D: continue
 		for surface in detail.mesh.get_surface_count():
 			var arrays: Array = detail.mesh.surface_get_arrays(surface)
@@ -98,7 +98,7 @@ func _run() -> void:
 	check(main.player.position.x < -3.8,"Player can walk through left opening into kitchen")
 	for i in 30: await physics_frame
 	check(main.player.position.y > -.08 and main.player.position.y < .08,"Player remains on kitchen floor")
-	var cup := main.get_node_or_null("Kitchen cup 1") as InteriorObject
+	var cup := main.room.get_node_or_null("Kitchen cup 1") as InteriorObject
 	check(cup != null,"Reachable cup is a real physics object")
 	if cup != null:
 		cup.activate(true)
@@ -107,7 +107,7 @@ func _run() -> void:
 		check(cup.position.is_finite() and cup.position.y > -.1,"Kitchen cup collides and stays above floor after an impulse")
 	# Idempotence protects restart or repeated visual setup from duplicates.
 	var before := get_nodes_in_group("movable").size()
-	InteriorRoomSurroundings.apply(main,main.get_node("LivingRoomVisual"),main.room_manifest)
+	InteriorRoomSurroundings.apply(main.room,main.room.get_node("LivingRoomVisual"),main.room_manifest)
 	check(get_nodes_in_group("movable").size() == before,"Repeated surroundings setup does not duplicate props")
 	print("INTERIOR_SURROUNDINGS_INTEGRATION ",JSON.stringify({"passed":failures.is_empty(),"checks":checks,"failures":failures,"stats":stats,"actual_rendered_triangles":inspected,"visible_geometry_vertices":{"kitchen_cabinets":kitchen_cabinet_vertices,"right_slats":right_slat_vertices,"fridge":fridge_vertices,"window_bars":window_bar_vertices,"right_cabinet":right_cabinet_vertices},"kitchen_player_position":[main.player.position.x,main.player.position.y,main.player.position.z]}))
 	quit(0 if failures.is_empty() else 1)

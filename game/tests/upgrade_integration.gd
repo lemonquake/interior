@@ -32,7 +32,7 @@ func _run() -> void:
 	main._play()
 	await _frames(4)
 	check(not main.control_lab,"The production room must cold-load")
-	var stats: Dictionary = main.get_meta("room_visuals_stats",{})
+	var stats: Dictionary = main.room.get_meta("room_visuals_stats",{})
 	check(int(stats.get("family_photos",0)) == 8,"All eight family photos must appear on actual frame surfaces")
 	check(int(stats.get("detail_meshes",0)) >= 20,"Attached room object detail must load")
 	for i in 8:
@@ -49,7 +49,7 @@ func _run() -> void:
 		check(body.continuous_cd,"Movable props must use continuous collision detection: " + str(body.name))
 		check(body.physics_material_override != null,"Prop friction must be defined: " + str(body.name))
 		check(body.center_of_mass.is_finite(),"Prop center of mass must be finite: " + str(body.name))
-	var fan := main.get_node("standing_fan_5") as InteriorObject
+	var fan := main.room.get_node("standing_fan_5") as InteriorObject
 	check(fan != null,"The standing fan must be present")
 	if fan != null:
 		var shapes := 0
@@ -57,7 +57,7 @@ func _run() -> void:
 			if child is CollisionShape3D:
 				shapes += 1
 		check(shapes == 3,"Fan collisions must follow base, pole and guard")
-	var frame := main.get_node("photo_frame_19") as InteriorObject
+	var frame := main.room.get_node("photo_frame_19") as InteriorObject
 	check(not frame.anchored,"A table photo frame must be movable by contact")
 	main.player.target = frame
 	main.player.grab_object(frame)
@@ -67,7 +67,7 @@ func _run() -> void:
 	main._process(1.0/60.0)
 	check(main.prompt.text.contains("Hold") and not main.prompt.text.contains("Throw"),"Dropping without changing target must refresh the hold action")
 	frame.recover()
-	var enclosure := main.get_node("pet_enclosure_11") as InteriorObject
+	var enclosure := main.room.get_node("pet_enclosure_11") as InteriorObject
 	var habitat := enclosure.get_node_or_null("HamsterPlayground")
 	check(habitat != null,"Rebuilt hamster playground must replace the old enclosure")
 	var pets := get_nodes_in_group("hamsters")

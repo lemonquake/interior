@@ -55,7 +55,7 @@ func _run() -> void:
 	for i in 4:
 		await physics_frame
 	for label in NAMES:
-		bodies.append(main.get_node(NodePath(label)) as InteriorObject)
+		bodies.append(main.room.get_node(NodePath(label)) as InteriorObject)
 	check(not main.control_lab and bodies.size() == 4, "Regression must use the actual marble table, tray, plant and tissue box")
 	# The previous settling test only observed frozen props. Wake this complete
 	# stack and let its contact with the table naturally wake the table too.

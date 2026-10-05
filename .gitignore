@@ -7,3 +7,6 @@ __pycache__/
 *.keystore
 game/.godot-export-credentials
 work/
+
+# Claude Code worktrees
+.claude/worktrees/

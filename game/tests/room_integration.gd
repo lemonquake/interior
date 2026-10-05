@@ -50,7 +50,7 @@ func _run() -> void:
 	for actor in main.room_manifest.actors:
 		if not actor.has("clueDigit"):
 			continue
-		var body := main.get_node(NodePath(actor.nodeName)) as InteriorObject
+		var body := main.room.get_node(NodePath(actor.nodeName)) as InteriorObject
 		body.recover()
 		body.freeze = true
 		var stand := Vector3.ZERO

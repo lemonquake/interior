@@ -1,6 +1,8 @@
 extends Node3D
 
 const PlayerScript = preload("res://scripts/player.gd")
+const RoomBuilder = preload("res://scripts/room_builder.gd")
+const BAKED_ROOM := "res://scenes/room/living_room.tscn"
 const ObjectScript = preload("res://scripts/physics_object.gd")
 const TouchScript = preload("res://scripts/mobile_controls.gd")
 const RoomAudioScript = preload("res://scripts/room_audio.gd")
@@ -33,6 +35,7 @@ var _last_frame_usec := 0
 var control_lab := false
 var room_manifest: Dictionary = {}
 var _room_lights: Array[OmniLight3D] = []
+var room: Node3D
 var _benchmark_impulse_timer := 0.0
 
 func _ready() -> void:
@@ -123,129 +126,25 @@ func _vector(values: Array) -> Vector3:
 	return Vector3(float(values[0]), float(values[1]), float(values[2]))
 
 func _build_living_room() -> bool:
-	if not ResourceLoader.exists("res://assets/living_room.glb"):
+	room_manifest = RoomBuilder.load_manifest()
+	if room_manifest.is_empty():
 		return false
-	var file := FileAccess.open("res://assets/room_manifest.json",FileAccess.READ)
-	if file == null:
-		return false
-	room_manifest = JSON.parse_string(file.get_as_text())
-	var packed: PackedScene = load("res://assets/living_room.glb")
-	var visual := packed.instantiate() as Node3D
-	visual.name = "LivingRoomVisual"
-	add_child(visual)
-	for actor in room_manifest.actors:
-		var mesh_node := visual.find_child(actor.nodeName, true, false) as Node3D
-		if mesh_node == null:
-			mesh_node = visual.find_child(str(actor.nodeName).replace(" ","_"),true,false) as Node3D
-		if mesh_node == null:
-			push_error("Missing room actor: " + str(actor.nodeName))
-			continue
-		var original := mesh_node.global_transform
-		var asset_scale := original.basis.get_scale()
-		original.basis = original.basis.orthonormalized()
-		var body := ObjectScript.new() as InteriorObject
-		body.name = actor.nodeName
-		body.mass = float(actor.mass)
-		body.display_name = actor.label
-		body.anchored = bool(actor.anchored)
-		if str(actor.assetId) == "photo_frame" and original.origin.y < 1.5:
-			body.anchored = false
-		body.set_meta("asset_id",str(actor.assetId))
-		body.clue_digit = actor.get("clueDigit", "")
-		body.clue_text = actor.get("clueText", "")
-		add_child(body)
-		body.add_to_group("original_room_props")
-		body.global_transform = original
-		mesh_node.reparent(body, true)
-		mesh_node.transform = Transform3D(Basis.from_scale(asset_scale),Vector3.ZERO)
-		for box in PropColliders.shapes_for(actor):
-			var collision := CollisionShape3D.new()
-			var shape: Shape3D
-			if box.get("kind", "box") == "cylinder":
-				var cylinder := CylinderShape3D.new()
-				cylinder.height = float(box.height) * asset_scale.y
-				cylinder.radius = float(box.radius) * asset_scale.x
-				shape = cylinder
-				collision.quaternion = Quaternion(Vector3.UP,_vector(box.axis).normalized())
-			elif box.get("kind", "box") == "sphere":
-				var sphere := SphereShape3D.new()
-				sphere.radius = float(box.radius) * asset_scale.x
-				shape = sphere
-			else:
-				var rectangle := BoxShape3D.new()
-				rectangle.size = (_vector(box.size) * asset_scale).max(Vector3.ONE * 0.008)
-				shape = rectangle
-			shape.margin = 0.002
-			collision.shape = shape
-			body.add_child(collision)
-			collision.position = _vector(box.center) * asset_scale
-		if str(actor.assetId) == "pet_enclosure":
-			EnclosureScript.attach_to(body)
-			# The rebuilt wider trays need clearance from the left room wall.
-			body.position.x = -2.60
-		if str(actor.assetId) == "fish_bowl":
-			# The aquarium shelf sits below the linked habitats, as in the reference.
-			AquariumScript.attach_to(body)
-			body.position.x = -2.76
-			body.position.y = .15
-		body.home_transform = body.global_transform
-		# Preserve the photographed arrangement until first touch or impact.
-		# Active objects then use normal rigid-body physics and wake neighbours.
-		body.dormant = true
-		body.freeze = true
-		body.sleeping = true
-		if actor.get("console",false):
-			body.add_to_group("mystery_console")
-	var small_bowl := ObjectScript.new() as InteriorObject
-	small_bowl.name = "SmallAquarium"
-	add_child(small_bowl)
-	AquariumScript.attach_to(small_bowl, .66)
-	small_bowl.position = Vector3(-2.36,.15,-1.11)
-	small_bowl.home_transform = small_bowl.global_transform
-	small_bowl.freeze = true
-	small_bowl.dormant = true
-	small_bowl.sleeping = true
-	var shell := StaticBody3D.new()
-	shell.name = "RoomStructure"
-	shell.collision_layer = 2
-	shell.collision_mask = 5
-	shell.physics_material_override = PhysicsMaterial.new()
-	shell.physics_material_override.friction = .65
-	shell.physics_material_override.bounce = 0.0
-	add_child(shell)
-	for item in room_manifest.staticColliders:
-		if str(item.id) in RoomSurroundings.REPLACED_COLLIDERS:
-			continue
-		var collision := CollisionShape3D.new()
-		var shape := BoxShape3D.new()
-		shape.size = _vector(item.size)
-		shape.margin = 0.002
-		collision.shape = shape
-		shell.add_child(collision)
-		collision.position = _vector(item.center)
-	var world := WorldEnvironment.new()
-	var env := Environment.new()
-	env.background_mode = Environment.BG_COLOR
-	env.background_color = Color(0.10,0.08,0.06)
-	env.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
-	env.ambient_light_color = Color(1.0,0.91,0.79)
-	env.ambient_light_energy = 0.75
-	env.tonemap_mode = Environment.TONE_MAPPER_FILMIC
-	world.environment = env
-	add_child(world)
-	for fixture in room_manifest.fixtures:
-		var light := OmniLight3D.new()
-		light.name = fixture.id
-		light.position = _vector(fixture.location)
-		light.light_color = Color(1.0,0.87,0.69)
-		light.light_energy = float(fixture.watts)/1200.0
-		light.omni_range = 6.5
-		light.shadow_enabled = false
-		add_child(light)
-		_room_lights.append(light)
-	RoomSurroundings.apply(self, visual, room_manifest)
-	RoomVisuals.apply(self, visual, room_manifest, _room_lights)
-	print("INTERIOR_ROOM_READY ",JSON.stringify({"actors":get_tree().get_nodes_in_group("movable").size(),"original_actors":get_tree().get_nodes_in_group("original_room_props").size(),"expected_original":room_manifest.actors.size(),"base_triangles":room_manifest.geometryTriangles}))
+	# main.tscn normally contains the baked, editable room scene. Without it, load the
+	# baked scene from disk, or assemble the room procedurally as a fallback.
+	room = get_node_or_null("LivingRoom") as Node3D
+	if room == null and ResourceLoader.exists(BAKED_ROOM):
+		room = (load(BAKED_ROOM) as PackedScene).instantiate() as Node3D
+		add_child(room)
+	if room == null:
+		room = Node3D.new()
+		room.name = "LivingRoom"
+		add_child(room)
+		if RoomBuilder.build(room).is_empty():
+			return false
+	_room_lights.clear()
+	for light in get_tree().get_nodes_in_group("room_lights"):
+		if light is OmniLight3D and room.is_ancestor_of(light):
+			_room_lights.append(light)
 	return true
 
 func _build_control_test_room() -> void:
@@ -558,7 +457,7 @@ func _capture_review() -> void:
 		player.camera.look_at(view[2])
 		await get_tree().create_timer(.3).timeout
 		await _save_review_image(directory, view[0])
-	var enclosure := get_node_or_null("pet_enclosure_11") as Node3D
+	var enclosure := find_child("pet_enclosure_11", true, false) as Node3D
 	if enclosure != null:
 		player.camera.global_position = enclosure.to_global(Vector3(.10,1.20,1.18))
 		player.camera.look_at(enclosure.to_global(Vector3(0,1.06,0)))

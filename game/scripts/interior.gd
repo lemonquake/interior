@@ -51,6 +51,11 @@ func _ready() -> void:
 	mobile = OS.has_feature("android") or "--mobile-test" in OS.get_cmdline_user_args()
 	benchmarking = "--benchmark" in OS.get_cmdline_user_args()
 	control_lab = control_lab or "--control-lab" in OS.get_cmdline_user_args()
+	if "--no-balcony" in OS.get_cmdline_user_args() and has_node("Balcony"):
+		# Debug switch: proves the closed-door room renders the same without the balcony.
+		var balcony := get_node("Balcony")
+		remove_child(balcony)
+		balcony.free()
 	if not control_lab and not _build_living_room():
 		control_lab = true
 	if control_lab:
@@ -499,12 +504,12 @@ func _capture_review() -> void:
 
 ## Views matching the owner's door / balcony / stair photos (work/v4/reference/1..5).
 const BALCONY_VIEWS := [
-	["balcony-1-door-closed", Vector3(1.75,1.58,.95), Vector3(1.85,1.25,2.7), false],
-	["balcony-2-door-open", Vector3(2.15,1.55,1.0), Vector3(1.55,1.15,3.6), true],
-	["balcony-3-aquarium-wall", Vector3(4.2,1.55,3.85), Vector3(.95,1.05,3.75), true],
-	["balcony-4-toward-stairs", Vector3(1.6,1.55,3.5), Vector3(6.8,-.3,3.4), true],
-	["balcony-5-stairs-down", Vector3(5.25,1.5,3.3), Vector3(8.6,-1.9,3.55), true],
-	["balcony-6-courtyard-up", Vector3(12.0,-1.35,4.35), Vector3(7.2,-.4,3.4), true],
+	["balcony-1-door-closed", Vector3(1.75,1.58,.95), Vector3(1.85,1.25,2.7), false, 75.0],
+	["balcony-2-door-open", Vector3(2.15,1.55,1.0), Vector3(1.55,1.15,3.6), true, 75.0],
+	["balcony-3-aquarium-wall", Vector3(3.45,1.5,4.05), Vector3(.95,1.2,3.72), true, 62.0],
+	["balcony-4-toward-stairs", Vector3(4.0,1.6,3.75), Vector3(8.6,-1.5,3.35), true, 62.0],
+	["balcony-5-stairs-down", Vector3(5.25,1.5,3.3), Vector3(8.6,-1.9,3.55), true, 62.0],
+	["balcony-6-courtyard-up", Vector3(12.0,-1.35,4.35), Vector3(7.2,-.4,3.4), true, 62.0],
 ]
 
 func _capture_balcony_views(directory: String) -> void:
@@ -512,7 +517,10 @@ func _capture_balcony_views(directory: String) -> void:
 	if doors.is_empty():
 		return
 	var door := doors[0] as InteriorHingedDoor
+	var fov := player.camera.fov
 	for view in BALCONY_VIEWS:
+		# Outdoor views use a narrower, phone-like field of view to match the photos.
+		player.camera.fov = view[4]
 		if view[3] != door.is_open():
 			door.toggle()
 			await get_tree().create_timer(door.swing_seconds + .25).timeout
@@ -520,6 +528,7 @@ func _capture_balcony_views(directory: String) -> void:
 		player.camera.look_at(view[2])
 		await get_tree().create_timer(.35).timeout
 		await _save_review_image(directory, view[0])
+	player.camera.fov = fov
 	door.snap(false)
 
 func _save_review_image(directory: String, label: String) -> void:

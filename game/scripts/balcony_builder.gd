@@ -258,22 +258,23 @@ func _build_house_wall() -> void:
 	# White plaster facade around the door (covers the room wall's outer face).
 	_box("House facade near", Vector3((X0 + 1.31) * .5, CEIL * .5, z), Vector3(1.31 - X0, CEIL, .024), "plaster")
 	_box("House facade over door", Vector3(1.91, (2.40 + CEIL) * .5, z), Vector3(1.2, CEIL - 2.40, .024), "plaster")
-	_box("House facade far", Vector3((2.51 + 3.45) * .5, CEIL * .5, z), Vector3(3.45 - 2.51, CEIL, .024), "plaster")
+	_box("House facade far", Vector3((2.51 + 3.8) * .5, CEIL * .5, z), Vector3(3.8 - 2.51, CEIL, .024), "plaster")
 	# Navy painted exterior casing around the doorway.
 	for x in [1.35, 2.47]:
 		_box("Exterior door casing", Vector3(x, 1.20, Z_WALL + .02), Vector3(.08, 2.40, .04), "navy")
 	_box("Exterior door head casing", Vector3(1.91, 2.36, Z_WALL + .02), Vector3(1.20, .08, .04), "navy")
 	# Beyond the corner the outer wall is painted yellow, as in the stair photos.
-	_box("Yellow house wall", Vector3((3.45 + FENCE_X) * .5, (GROUND + CEIL + .2) * .5, Z_WALL - .1), Vector3(FENCE_X - 3.45, CEIL + .2 - GROUND, .2), "yellow", false)
+	_box("Yellow house wall", Vector3((3.8 + FENCE_X) * .5, (GROUND + CEIL + .2) * .5, Z_WALL - .1), Vector3(FENCE_X - 3.8, CEIL + .2 - GROUND, .2), "yellow", false)
+	_box("Ground floor wall under the facade", Vector3((3.3 + 3.8) * .5, (GROUND - .2) * .5, Z_WALL - .1), Vector3(.5, -GROUND - .2, .2), "yellow", false)
 	_box("Grey wall base", Vector3((X_END + FENCE_X) * .5, GROUND + .2, Z_WALL + .008), Vector3(FENCE_X - X_END, .4, .02), "concrete dark")
 	_collider("House outer wall", Vector3((3.3 + FENCE_X) * .5, (GROUND + CEIL + .2) * .5, Z_WALL - .1), Vector3(FENCE_X - 3.3, CEIL + .2 - GROUND, .2))
 	# Corner trim between the white and yellow paint.
-	_box("Paint corner trim", Vector3(3.45, CEIL * .5, z + .004), Vector3(.03, CEIL, .03), "plaster")
+	_box("Paint corner trim", Vector3(3.8, CEIL * .5, z + .004), Vector3(.03, CEIL, .03), "plaster")
 	# Maroon-framed louvre window on the yellow wall (balcony level).
 	_window(Vector3(4.55, 1.55, Z_WALL), 1.05, 1.10)
 	# Orange PVC conduit and a small switch box along the stair.
 	_tube([Vector3(5.82, 2.70, Z_WALL + .03), Vector3(5.82, .95, Z_WALL + .03), Vector3(5.82, GROUND + .25, Z_WALL + .03)], .012, "orange pvc", 8)
-	_tube([Vector3(3.6, 2.66, Z_WALL + .03), Vector3(5.82, 2.66, Z_WALL + .03)], .012, "orange pvc", 8)
+	_tube([Vector3(3.95, 2.66, Z_WALL + .03), Vector3(5.82, 2.66, Z_WALL + .03)], .012, "orange pvc", 8)
 	_box("Switch box", Vector3(5.82, .95, Z_WALL + .04), Vector3(.09, .13, .045), "plastic white")
 	_box("Switch rocker", Vector3(5.82, .97, Z_WALL + .066), Vector3(.03, .05, .01), "plastic black")
 
@@ -572,7 +573,7 @@ func _aquarium() -> void:
 	_root.add_child(body)
 	body.position = bench + Vector3(0, .42, 0)
 	body.rotation.y = PI * .5
-	InteriorAquarium.attach_to(body, 1.0, Vector3(.82, .40, .36))
+	InteriorAquarium.attach_to(body, 1.0, Vector3(.88, .44, .38))
 	for node in body.find_children("*", "GeometryInstance3D", true, false):
 		(node as GeometryInstance3D).layers = PROP_LAYERS
 	body.home_transform = body.global_transform

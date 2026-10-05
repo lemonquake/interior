@@ -26,7 +26,22 @@ func _mask_room_lights() -> void:
 func sun() -> DirectionalLight3D:
 	return get_node_or_null("Sun") as DirectionalLight3D
 
+## The balcony can only be seen through the open doorway or from outside: hide it (and
+## its shadowed sun) otherwise, so the closed room costs exactly what it did before.
+func _update_visibility() -> void:
+	var camera := get_viewport().get_camera_3d() if is_inside_tree() else null
+	# x > 0.8 excludes the studio alcove, which also lies beyond z 2.62.
+	var outside := camera != null and camera.global_position.z > 2.62 and camera.global_position.x > .8
+	var door_open := false
+	for door in get_tree().get_nodes_in_group("interior_doors"):
+		if door.is_open() or door.is_moving():
+			door_open = true
+	var show := outside or door_open
+	if visible != show:
+		visible = show
+
 func _process(delta: float) -> void:
+	_update_visibility()
 	_poll -= delta
 	if _poll > 0.0:
 		return
@@ -41,4 +56,6 @@ func _process(delta: float) -> void:
 	if light != null:
 		# Low never casts dynamic shadows; Android keeps the sun shadow for High only.
 		light.shadow_enabled = tier >= (2 if mobile else 1)
+		# Without shadows the sun also reaches under the roof slab; soften it there.
+		light.light_energy = 1.6 if light.shadow_enabled else 1.0
 		light.directional_shadow_mode = DirectionalLight3D.SHADOW_PARALLEL_2_SPLITS if tier < 3 else DirectionalLight3D.SHADOW_PARALLEL_4_SPLITS

@@ -101,3 +101,8 @@ build needs them.
 | File | What it shows |
 |---|---|
 | `work/v4/balcony/screens/01-door-open.png` | The navy door opened inward on its hinge; the doorway is still dark, with no balcony yet |
+| `work/v4/balcony/screens/02-blockout-sheet.png` | First pass, six views: door closed and open, aquarium wall, toward the stairs, down the stairs, courtyard looking up |
+| `work/v4/balcony/screens/03-blockout-stairs-down.png` | First pass: looking down the stairs to the courtyard |
+| `work/v4/balcony/screens/10-photos-vs-game.png` | Owner photos against the game for all five shots (second pass) |
+| `work/v4/balcony/screens/09-courtyard-up.png` | Courtyard looking back up the stairs |
+| `work/v4/balcony/screens/11-compatibility-low.png` | Compatibility renderer on Low tier (Android path) |

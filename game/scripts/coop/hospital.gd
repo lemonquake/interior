@@ -946,6 +946,7 @@ func debug_settle(m, upto: Array) -> void:
 	if "hosp_lucky_dead" in upto:
 		f.lucky_out = true
 		_lucky_at = -1.0
+		if lucky != null: lucky.debug_kill()
 		_doc_state = "hide2"
 	elif not ("hosp_story" in upto) and "hosp_berido_talk" in upto and not ("hosp_records" in upto):
 		_put_doc(m, Vector3(13.0, F2, 31.0))

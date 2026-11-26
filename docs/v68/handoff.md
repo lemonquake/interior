@@ -51,3 +51,46 @@ as Heavy-arm), scripts in tools/blender/human.
   laboratory.", "That's everything. Stand back. I don't know what's still alive behind it.", "It's over... The roof. The ladder
   is up on the catwalk. Go, signal them."; boss name "Doctor Lucky, the Morboid".
 - Names above heads: "Doctor Berido" only (the people outside have none).
+
+## Checks
+
+- tests/hospital_check.gd: 47/47 (work/v68/logs/hospital_check.log): the board after the bridge loads the hospital
+  (~15 s of steps headless), Teves and the students gone, the talk, every seal and what it put away, the four blocked ways
+  (rays), Berido found and out through the hole, the ladder climbed for real into the duct (crouched), the crawl and the
+  drop, the bookcase and the hidden stair walked, five items, the door, 12+ laboratory infected killed, the story, Doctor
+  Lucky (seen: emerge, fight, wind, leap, land, swipe, wall), the flare: WON.
+- Suite rows added (tools/run_mission_suite.py): coop_jumps_hospital, hospital. coop_jumps.gd: the walk now expects
+  bridge -> hospital (18) -> WON (19); hospital jumps check the seals and the doctor. The full suite was NOT re-run this time
+  (usage cap): run `python -I tools/run_mission_suite.py` first thing next session.
+- Not measured: the perf sweep (tests/coop_perf_sweep.gd) has no hospital rows yet; no phone-mode numbers for the hospital.
+  Build cost: the hospital builds in ~125 ms behind the board (150 lamps).
+
+## Fixes found by the test
+
+- player.gd: a ladder's climb over the top finishes once started (`_carry`), even when its step-off lies outside the
+  ladder's volume (the duct); the player is put in a crouch where a standing body does not fit.
+- The partition hole: Berido crawls out through it (kinematic, crawl clip) instead of sticking at its mouth.
+
+## Builds and publish (2026-11-26)
+
+- Windows: builds/windows/Interior.exe + Interior.pck via tools/export_windows.py, Sleep-0.68.0-windows.zip (1,643 MB);
+  EXE start-up: menu frame at 18.5 s, exit 0.
+- Android: builds/android/Interior.apk (851,352,986 bytes), `--export-debug "Android"`.
+- Publish: publish.py stage (notes tools/release/notes/0.68.0.md), upload, activate, apk (log work/v68/logs/publish.log).
+  Website unchanged (it reads versions from the server).
+- Git: everything since 0.8 (never committed before) plus 0.68 in commit ae7af07 on main, pushed to origin/main.
+- Not in the EXE: one debug-only fix after the export (a jump past Doctor Lucky now kills him; hospital.gd `debug_settle`).
+
+## Screenshots sent
+
+| When | File |
+|---|---|
+| The 12 hospital infected, the 7 living people (Blender) | work/v68/zombies_sheet.jpg, work/v68/people_sheet.jpg |
+| Doctor Lucky model and clips (Blender) | work/v68/lucky_model.jpg, work/v68/lucky_clips.jpg |
+| The hospital in the game, 18 views | work/v68/hospital_sheet.jpg (work/v68/screens/) |
+
+## Not done / open
+
+- Blender MCP was not available in this session (Blender 5.2 command line instead).
+- The full mission suite and the perf sweep were not re-run (see Checks).
+- The doctors outside have no voice lines; the dialogue is text only.

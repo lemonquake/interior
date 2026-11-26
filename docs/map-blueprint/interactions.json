@@ -1,0 +1,5421 @@
+[
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "label": "door"
+    },
+    "groups": [
+      "interior_doors"
+    ],
+    "id": "N-f9c52706b3be",
+    "local_position": [
+      2.43,
+      0.0,
+      2.6335
+    ],
+    "name": "EntryDoor",
+    "path": "LivingRoom/ReferenceRoomSurroundings/EntryDoor",
+    "position": [
+      2.43,
+      0.0,
+      2.6335
+    ],
+    "script": "res://scripts/hinged_door.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I001"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "groups": [
+      "usables"
+    ],
+    "id": "N-9691d997a52a",
+    "local_position": [
+      3.25,
+      0.0,
+      0.9
+    ],
+    "name": "LockedClosetDoor",
+    "path": "LivingRoom/LockedClosetDoor",
+    "position": [
+      3.25,
+      0.0,
+      0.9
+    ],
+    "script": "res://scripts/locked_room_door.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I002"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "locked": true
+    },
+    "groups": [
+      "interior_doors"
+    ],
+    "id": "N-7b231b8eadf8",
+    "local_position": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "name": "CourtyardGate",
+    "path": "Balcony/CourtyardGate",
+    "position": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "script": "res://scripts/push_gate.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I003"
+  },
+  {
+    "basis_columns": [
+      [
+        0.191,
+        0.0,
+        0.9816
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        -0.9816,
+        0.0,
+        0.191
+      ]
+    ],
+    "gameplay": {
+      "kind": "door"
+    },
+    "groups": [
+      "warren_locked",
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-66621a3ea843",
+    "local_position": [
+      -105.7929,
+      -1.1,
+      -7.9154
+    ],
+    "metadata": {
+      "lines": [
+        "Tao po? ...Nobody.",
+        "Padlocked. From the outside.",
+        "Something moved in there. Or I imagined it.",
+        "It smells like something died behind this door.",
+        "Locked. A wet rag is stuffed under it.",
+        "Someone sprayed a number on it. A census mark... or a warning.",
+        "I can hear dripping inside.",
+        "Locked. Good."
+      ]
+    },
+    "name": "Warren locked door 00",
+    "path": "Balcony/Neighbourhood/Canal settlement/Canal warren/Warren locked door 00",
+    "position": [
+      -105.7929,
+      -1.1,
+      -7.9154
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I004"
+  },
+  {
+    "basis_columns": [
+      [
+        0.196,
+        0.0,
+        0.9806
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        -0.9806,
+        0.0,
+        0.196
+      ]
+    ],
+    "gameplay": {
+      "kind": "door"
+    },
+    "groups": [
+      "warren_locked",
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-ff6ec3556b00",
+    "local_position": [
+      -104.8046,
+      -1.1,
+      -2.9965
+    ],
+    "metadata": {
+      "lines": [
+        "Tao po? ...Nobody.",
+        "Padlocked. From the outside.",
+        "Something moved in there. Or I imagined it.",
+        "It smells like something died behind this door.",
+        "Locked. A wet rag is stuffed under it.",
+        "Someone sprayed a number on it. A census mark... or a warning.",
+        "I can hear dripping inside.",
+        "Locked. Good."
+      ]
+    },
+    "name": "Warren locked door 01",
+    "path": "Balcony/Neighbourhood/Canal settlement/Canal warren/Warren locked door 01",
+    "position": [
+      -104.8046,
+      -1.1,
+      -2.9965
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I005"
+  },
+  {
+    "basis_columns": [
+      [
+        0.1814,
+        0.0,
+        0.9834
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        -0.9834,
+        0.0,
+        0.1814
+      ]
+    ],
+    "gameplay": {
+      "kind": "door"
+    },
+    "groups": [
+      "warren_locked",
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-2d66b32ea45b",
+    "local_position": [
+      -104.1166,
+      -1.1,
+      0.6406
+    ],
+    "metadata": {
+      "lines": [
+        "Tao po? ...Nobody.",
+        "Padlocked. From the outside.",
+        "Something moved in there. Or I imagined it.",
+        "It smells like something died behind this door.",
+        "Locked. A wet rag is stuffed under it.",
+        "Someone sprayed a number on it. A census mark... or a warning.",
+        "I can hear dripping inside.",
+        "Locked. Good."
+      ]
+    },
+    "name": "Warren locked door 02",
+    "path": "Balcony/Neighbourhood/Canal settlement/Canal warren/Warren locked door 02",
+    "position": [
+      -104.1166,
+      -1.1,
+      0.6406
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I006"
+  },
+  {
+    "basis_columns": [
+      [
+        0.1539,
+        0.0,
+        0.9881
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        -0.9881,
+        0.0,
+        0.1539
+      ]
+    ],
+    "gameplay": {
+      "kind": "door"
+    },
+    "groups": [
+      "warren_locked",
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-4c75f3edc3bd",
+    "local_position": [
+      -103.7463,
+      -1.1,
+      2.7608
+    ],
+    "metadata": {
+      "lines": [
+        "Tao po? ...Nobody.",
+        "Padlocked. From the outside.",
+        "Something moved in there. Or I imagined it.",
+        "It smells like something died behind this door.",
+        "Locked. A wet rag is stuffed under it.",
+        "Someone sprayed a number on it. A census mark... or a warning.",
+        "I can hear dripping inside.",
+        "Locked. Good."
+      ]
+    },
+    "name": "Warren locked door 03",
+    "path": "Balcony/Neighbourhood/Canal settlement/Canal warren/Warren locked door 03",
+    "position": [
+      -103.7463,
+      -1.1,
+      2.7608
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I007"
+  },
+  {
+    "basis_columns": [
+      [
+        -0.1938,
+        0.0,
+        -0.981
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.981,
+        0.0,
+        -0.1938
+      ]
+    ],
+    "gameplay": {
+      "kind": "door"
+    },
+    "groups": [
+      "warren_locked",
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-f0ae1dda3362",
+    "local_position": [
+      -110.8872,
+      -1.1,
+      -9.4302
+    ],
+    "metadata": {
+      "lines": [
+        "Tao po? ...Nobody.",
+        "Padlocked. From the outside.",
+        "Something moved in there. Or I imagined it.",
+        "It smells like something died behind this door.",
+        "Locked. A wet rag is stuffed under it.",
+        "Someone sprayed a number on it. A census mark... or a warning.",
+        "I can hear dripping inside.",
+        "Locked. Good."
+      ]
+    },
+    "name": "Warren locked door 04",
+    "path": "Balcony/Neighbourhood/Canal settlement/Canal warren/Warren locked door 04",
+    "position": [
+      -110.8872,
+      -1.1,
+      -9.4302
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I008"
+  },
+  {
+    "basis_columns": [
+      [
+        -0.1921,
+        0.0,
+        -0.9814
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.9814,
+        0.0,
+        -0.1921
+      ]
+    ],
+    "gameplay": {
+      "kind": "door"
+    },
+    "groups": [
+      "warren_locked",
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-dffe180ec0bf",
+    "local_position": [
+      -109.5358,
+      -1.1,
+      -2.6451
+    ],
+    "metadata": {
+      "lines": [
+        "Tao po? ...Nobody.",
+        "Padlocked. From the outside.",
+        "Something moved in there. Or I imagined it.",
+        "It smells like something died behind this door.",
+        "Locked. A wet rag is stuffed under it.",
+        "Someone sprayed a number on it. A census mark... or a warning.",
+        "I can hear dripping inside.",
+        "Locked. Good."
+      ]
+    },
+    "name": "Warren locked door 05",
+    "path": "Balcony/Neighbourhood/Canal settlement/Canal warren/Warren locked door 05",
+    "position": [
+      -109.5358,
+      -1.1,
+      -2.6451
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I009"
+  },
+  {
+    "basis_columns": [
+      [
+        -0.1189,
+        0.0,
+        -0.9929
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.9929,
+        0.0,
+        -0.1189
+      ]
+    ],
+    "gameplay": {
+      "kind": "door"
+    },
+    "groups": [
+      "warren_locked",
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-7eaa22b38e90",
+    "local_position": [
+      -107.8443,
+      -1.1,
+      7.6724
+    ],
+    "metadata": {
+      "lines": [
+        "Tao po? ...Nobody.",
+        "Padlocked. From the outside.",
+        "Something moved in there. Or I imagined it.",
+        "It smells like something died behind this door.",
+        "Locked. A wet rag is stuffed under it.",
+        "Someone sprayed a number on it. A census mark... or a warning.",
+        "I can hear dripping inside.",
+        "Locked. Good."
+      ]
+    },
+    "name": "Warren locked door 06",
+    "path": "Balcony/Neighbourhood/Canal settlement/Canal warren/Warren locked door 06",
+    "position": [
+      -107.8443,
+      -1.1,
+      7.6724
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I010"
+  },
+  {
+    "basis_columns": [
+      [
+        -0.0851,
+        0.0,
+        -0.9964
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.9964,
+        0.0,
+        -0.0851
+      ]
+    ],
+    "gameplay": {
+      "kind": "door"
+    },
+    "groups": [
+      "warren_locked",
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-801b626fb67b",
+    "local_position": [
+      -107.5128,
+      -1.1,
+      10.8614
+    ],
+    "metadata": {
+      "lines": [
+        "Tao po? ...Nobody.",
+        "Padlocked. From the outside.",
+        "Something moved in there. Or I imagined it.",
+        "It smells like something died behind this door.",
+        "Locked. A wet rag is stuffed under it.",
+        "Someone sprayed a number on it. A census mark... or a warning.",
+        "I can hear dripping inside.",
+        "Locked. Good."
+      ]
+    },
+    "name": "Warren locked door 07",
+    "path": "Balcony/Neighbourhood/Canal settlement/Canal warren/Warren locked door 07",
+    "position": [
+      -107.5128,
+      -1.1,
+      10.8614
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I011"
+  },
+  {
+    "basis_columns": [
+      [
+        0.0406,
+        0.0,
+        -0.9992
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.9992,
+        0.0,
+        0.0406
+      ]
+    ],
+    "gameplay": {
+      "kind": "door"
+    },
+    "groups": [
+      "warren_locked",
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-e5c09f568bee",
+    "local_position": [
+      -107.2658,
+      -1.1,
+      24.6745
+    ],
+    "metadata": {
+      "lines": [
+        "Tao po? ...Nobody.",
+        "Padlocked. From the outside.",
+        "Something moved in there. Or I imagined it.",
+        "It smells like something died behind this door.",
+        "Locked. A wet rag is stuffed under it.",
+        "Someone sprayed a number on it. A census mark... or a warning.",
+        "I can hear dripping inside.",
+        "Locked. Good."
+      ]
+    },
+    "name": "Warren locked door 08",
+    "path": "Balcony/Neighbourhood/Canal settlement/Canal warren/Warren locked door 08",
+    "position": [
+      -107.2658,
+      -1.1,
+      24.6745
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I012"
+  },
+  {
+    "basis_columns": [
+      [
+        0.0646,
+        0.0,
+        -0.9979
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.9979,
+        0.0,
+        0.0646
+      ]
+    ],
+    "gameplay": {
+      "kind": "door"
+    },
+    "groups": [
+      "warren_locked",
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-6ae4ad22ecfd",
+    "local_position": [
+      -107.8677,
+      -1.1,
+      34.9592
+    ],
+    "metadata": {
+      "lines": [
+        "Tao po? ...Nobody.",
+        "Padlocked. From the outside.",
+        "Something moved in there. Or I imagined it.",
+        "It smells like something died behind this door.",
+        "Locked. A wet rag is stuffed under it.",
+        "Someone sprayed a number on it. A census mark... or a warning.",
+        "I can hear dripping inside.",
+        "Locked. Good."
+      ]
+    },
+    "name": "Warren locked door 09",
+    "path": "Balcony/Neighbourhood/Canal settlement/Canal warren/Warren locked door 09",
+    "position": [
+      -107.8677,
+      -1.1,
+      34.9592
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I013"
+  },
+  {
+    "basis_columns": [
+      [
+        0.0373,
+        0.0,
+        -0.9993
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.9993,
+        0.0,
+        0.0373
+      ]
+    ],
+    "gameplay": {
+      "kind": "door"
+    },
+    "groups": [
+      "warren_locked",
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-e1b3e6c57365",
+    "local_position": [
+      -108.4821,
+      -1.1,
+      46.0604
+    ],
+    "metadata": {
+      "lines": [
+        "Tao po? ...Nobody.",
+        "Padlocked. From the outside.",
+        "Something moved in there. Or I imagined it.",
+        "It smells like something died behind this door.",
+        "Locked. A wet rag is stuffed under it.",
+        "Someone sprayed a number on it. A census mark... or a warning.",
+        "I can hear dripping inside.",
+        "Locked. Good."
+      ]
+    },
+    "name": "Warren locked door 10",
+    "path": "Balcony/Neighbourhood/Canal settlement/Canal warren/Warren locked door 10",
+    "position": [
+      -108.4821,
+      -1.1,
+      46.0604
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I014"
+  },
+  {
+    "basis_columns": [
+      [
+        0.0262,
+        0.0,
+        -0.9997
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.9997,
+        0.0,
+        0.0262
+      ]
+    ],
+    "gameplay": {
+      "kind": "door"
+    },
+    "groups": [
+      "warren_locked",
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-76a84d5c483a",
+    "local_position": [
+      -108.673,
+      -1.1,
+      52.1783
+    ],
+    "metadata": {
+      "lines": [
+        "Tao po? ...Nobody.",
+        "Padlocked. From the outside.",
+        "Something moved in there. Or I imagined it.",
+        "It smells like something died behind this door.",
+        "Locked. A wet rag is stuffed under it.",
+        "Someone sprayed a number on it. A census mark... or a warning.",
+        "I can hear dripping inside.",
+        "Locked. Good."
+      ]
+    },
+    "name": "Warren locked door 11",
+    "path": "Balcony/Neighbourhood/Canal settlement/Canal warren/Warren locked door 11",
+    "position": [
+      -108.673,
+      -1.1,
+      52.1783
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I015"
+  },
+  {
+    "basis_columns": [
+      [
+        0.9846,
+        0.0,
+        -0.1749
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.1749,
+        0.0,
+        0.9846
+      ]
+    ],
+    "gameplay": {
+      "label": "door"
+    },
+    "groups": [
+      "usables",
+      "warren_doors"
+    ],
+    "id": "N-a92ca296229c",
+    "local_position": [
+      -107.7133,
+      -2.04,
+      1.0
+    ],
+    "name": "Warren door 00",
+    "path": "Balcony/Neighbourhood/Canal settlement/Canal warren/Warren door 00",
+    "position": [
+      -107.7133,
+      -2.04,
+      1.0
+    ],
+    "script": "res://scripts/warren_door.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I016"
+  },
+  {
+    "basis_columns": [
+      [
+        0.9907,
+        0.0,
+        -0.1358
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.1358,
+        0.0,
+        0.9907
+      ]
+    ],
+    "gameplay": {
+      "label": "door"
+    },
+    "groups": [
+      "usables",
+      "warren_doors"
+    ],
+    "id": "N-47aca9a35cdc",
+    "local_position": [
+      -106.9202,
+      -2.04,
+      6.0
+    ],
+    "name": "Warren door 01",
+    "path": "Balcony/Neighbourhood/Canal settlement/Canal warren/Warren door 01",
+    "position": [
+      -106.9202,
+      -2.04,
+      6.0
+    ],
+    "script": "res://scripts/warren_door.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I017"
+  },
+  {
+    "basis_columns": [
+      [
+        0.9999,
+        0.0,
+        -0.0127
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0127,
+        0.0,
+        0.9999
+      ]
+    ],
+    "gameplay": {
+      "label": "door"
+    },
+    "groups": [
+      "usables",
+      "warren_doors"
+    ],
+    "id": "N-991c6a2d4201",
+    "local_position": [
+      -106.0225,
+      -2.04,
+      18.0
+    ],
+    "name": "Warren door 02",
+    "path": "Balcony/Neighbourhood/Canal settlement/Canal warren/Warren door 02",
+    "position": [
+      -106.0225,
+      -2.04,
+      18.0
+    ],
+    "script": "res://scripts/warren_door.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I018"
+  },
+  {
+    "basis_columns": [
+      [
+        0.9996,
+        0.0,
+        0.0288
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        -0.0288,
+        0.0,
+        0.9996
+      ]
+    ],
+    "gameplay": {
+      "label": "door"
+    },
+    "groups": [
+      "usables",
+      "warren_doors"
+    ],
+    "id": "N-90ce72e82f60",
+    "local_position": [
+      -106.0684,
+      -2.04,
+      23.0
+    ],
+    "name": "Warren door 03",
+    "path": "Balcony/Neighbourhood/Canal settlement/Canal warren/Warren door 03",
+    "position": [
+      -106.0684,
+      -2.04,
+      23.0
+    ],
+    "script": "res://scripts/warren_door.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I019"
+  },
+  {
+    "basis_columns": [
+      [
+        0.9983,
+        0.0,
+        0.0578
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        -0.0578,
+        0.0,
+        0.9983
+      ]
+    ],
+    "gameplay": {
+      "label": "door"
+    },
+    "groups": [
+      "usables",
+      "warren_doors"
+    ],
+    "id": "N-cad5bb28313a",
+    "local_position": [
+      -107.0433,
+      -2.04,
+      40.0
+    ],
+    "name": "Warren door 04",
+    "path": "Balcony/Neighbourhood/Canal settlement/Canal warren/Warren door 04",
+    "position": [
+      -107.0433,
+      -2.04,
+      40.0
+    ],
+    "script": "res://scripts/warren_door.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I020"
+  },
+  {
+    "basis_columns": [
+      [
+        0.9991,
+        0.0,
+        0.0431
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        -0.0431,
+        0.0,
+        0.9991
+      ]
+    ],
+    "gameplay": {
+      "label": "door"
+    },
+    "groups": [
+      "usables",
+      "warren_doors"
+    ],
+    "id": "N-390208e6b3d9",
+    "local_position": [
+      -107.2972,
+      -2.04,
+      45.0
+    ],
+    "name": "Warren door 05",
+    "path": "Balcony/Neighbourhood/Canal settlement/Canal warren/Warren door 05",
+    "position": [
+      -107.2972,
+      -2.04,
+      45.0
+    ],
+    "script": "res://scripts/warren_door.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I021"
+  },
+  {
+    "basis_columns": [
+      [
+        -0.1573,
+        0.0,
+        -0.9876
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.9876,
+        0.0,
+        -0.1573
+      ]
+    ],
+    "gameplay": {
+      "kind": "radio"
+    },
+    "groups": [
+      "usables",
+      "warren_usables"
+    ],
+    "id": "N-2f4bf0d35c9a",
+    "local_position": [
+      -109.2463,
+      -1.67,
+      4.7
+    ],
+    "name": "Warren radio",
+    "path": "Balcony/Neighbourhood/Canal settlement/Canal warren/Warren radio",
+    "position": [
+      -109.2463,
+      -1.67,
+      4.7
+    ],
+    "script": "res://scripts/warren_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I022"
+  },
+  {
+    "basis_columns": [
+      [
+        0.9876,
+        0.0,
+        -0.1573
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.1573,
+        0.0,
+        0.9876
+      ]
+    ],
+    "gameplay": {
+      "kind": "switch"
+    },
+    "groups": [
+      "usables",
+      "warren_usables"
+    ],
+    "id": "N-ddb6fdc56c03",
+    "local_position": [
+      -108.7908,
+      -0.75,
+      1.07
+    ],
+    "name": "Warren switch",
+    "path": "Balcony/Neighbourhood/Canal settlement/Canal warren/Warren switch",
+    "position": [
+      -108.7908,
+      -0.75,
+      1.07
+    ],
+    "script": "res://scripts/warren_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I023"
+  },
+  {
+    "basis_columns": [
+      [
+        0.0097,
+        0.0,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0097
+      ]
+    ],
+    "gameplay": {
+      "kind": "door"
+    },
+    "groups": [
+      "warren_locked",
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-ce4bb798b611",
+    "local_position": [
+      -111.1854,
+      -1.1,
+      18.8005
+    ],
+    "metadata": {
+      "lines": [
+        "Tao po? ...Nobody.",
+        "Padlocked. From the outside.",
+        "Something moved in there. Or I imagined it.",
+        "It smells like something died behind this door.",
+        "Locked. A wet rag is stuffed under it.",
+        "Someone sprayed a number on it. A census mark... or a warning.",
+        "I can hear dripping inside.",
+        "Locked. Good."
+      ]
+    },
+    "name": "Warren locked door 12",
+    "path": "Balcony/Neighbourhood/Canal settlement/Canal warren/Warren locked door 12",
+    "position": [
+      -111.1854,
+      -1.1,
+      18.8005
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I024"
+  },
+  {
+    "basis_columns": [
+      [
+        0.0508,
+        0.0,
+        -0.9987
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.9987,
+        0.0,
+        0.0508
+      ]
+    ],
+    "gameplay": {
+      "kind": "door"
+    },
+    "groups": [
+      "warren_locked",
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-d5ece850d7ea",
+    "local_position": [
+      -108.4497,
+      -0.74,
+      42.5025
+    ],
+    "metadata": {
+      "lines": [
+        "Pabili po! ...No one.",
+        "Closed. The padlock's rusted shut.",
+        "Pabili po? ...Something knocked back. No. Just the wind."
+      ]
+    },
+    "name": "Store window",
+    "path": "Balcony/Neighbourhood/Canal settlement/Canal warren/Store window",
+    "position": [
+      -108.4497,
+      -0.74,
+      42.5025
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I025"
+  },
+  {
+    "basis_columns": [
+      [
+        0.0636,
+        0.0,
+        -0.998
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.998,
+        0.0,
+        0.0636
+      ]
+    ],
+    "gameplay": {
+      "kind": "pump"
+    },
+    "groups": [
+      "usables",
+      "warren_usables"
+    ],
+    "id": "N-27cb53f6c916",
+    "local_position": [
+      -109.4068,
+      -2.02,
+      31.0
+    ],
+    "name": "Warren pump",
+    "path": "Balcony/Neighbourhood/Canal settlement/Canal warren/Warren pump",
+    "position": [
+      -109.4068,
+      -2.02,
+      31.0
+    ],
+    "script": "res://scripts/warren_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I026"
+  },
+  {
+    "basis_columns": [
+      [
+        0.1212,
+        0.0,
+        0.9926
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        -0.9926,
+        0.0,
+        0.1212
+      ]
+    ],
+    "gameplay": {
+      "label": "tin sheet"
+    },
+    "groups": [
+      "usables",
+      "warren_doors"
+    ],
+    "id": "N-b720d5194ecc",
+    "local_position": [
+      -93.9459,
+      -2.08,
+      8.48
+    ],
+    "name": "Warren door 06",
+    "path": "Balcony/Neighbourhood/Canal settlement/Canal warren/Warren door 06",
+    "position": [
+      -93.9459,
+      -2.08,
+      8.48
+    ],
+    "script": "res://scripts/warren_door.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I027"
+  },
+  {
+    "basis_columns": [
+      [
+        -0.1086,
+        0.0,
+        0.9941
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        -0.9941,
+        0.0,
+        -0.1086
+      ]
+    ],
+    "gameplay": {
+      "label": "tin sheet"
+    },
+    "groups": [
+      "usables",
+      "warren_doors"
+    ],
+    "id": "N-bbc8240b2b32",
+    "local_position": [
+      -93.3912,
+      -2.08,
+      55.18
+    ],
+    "name": "Warren door 07",
+    "path": "Balcony/Neighbourhood/Canal settlement/Canal warren/Warren door 07",
+    "position": [
+      -93.3912,
+      -2.08,
+      55.18
+    ],
+    "script": "res://scripts/warren_door.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I028"
+  },
+  {
+    "basis_columns": [
+      [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0
+      ]
+    ],
+    "gameplay": {
+      "label": "the front door"
+    },
+    "groups": [
+      "usables",
+      "nichols_doors"
+    ],
+    "id": "N-b73164d43a6d",
+    "local_position": [
+      -12.93,
+      -1.7,
+      -81.55
+    ],
+    "name": "Nichols Front door",
+    "path": "Balcony/Neighbourhood/Nichols property/Nichols Front door",
+    "position": [
+      -12.93,
+      -1.7,
+      -81.55
+    ],
+    "script": "res://scripts/nichols_door.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I029"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "label": "the front door"
+    },
+    "groups": [
+      "usables",
+      "nichols_doors"
+    ],
+    "id": "N-5d5350c54f06",
+    "local_position": [
+      -11.07,
+      -1.7,
+      -81.55
+    ],
+    "name": "@Node3D@628",
+    "path": "Balcony/Neighbourhood/Nichols property/@Node3D@628",
+    "position": [
+      -11.07,
+      -1.7,
+      -81.55
+    ],
+    "script": "res://scripts/nichols_door.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I030"
+  },
+  {
+    "basis_columns": [
+      [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0
+      ]
+    ],
+    "gameplay": {
+      "label": "parlour door"
+    },
+    "groups": [
+      "usables",
+      "nichols_doors"
+    ],
+    "id": "N-39276180d04e",
+    "local_position": [
+      -19.5,
+      -1.7,
+      -93.0
+    ],
+    "name": "Nichols Parlour door",
+    "path": "Balcony/Neighbourhood/Nichols property/Nichols Parlour door",
+    "position": [
+      -19.5,
+      -1.7,
+      -93.0
+    ],
+    "script": "res://scripts/nichols_door.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I031"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "label": "dining door"
+    },
+    "groups": [
+      "usables",
+      "nichols_doors"
+    ],
+    "id": "N-14aca3de465c",
+    "local_position": [
+      -4.5,
+      -1.7,
+      -93.0
+    ],
+    "name": "Nichols Dining door",
+    "path": "Balcony/Neighbourhood/Nichols property/Nichols Dining door",
+    "position": [
+      -4.5,
+      -1.7,
+      -93.0
+    ],
+    "script": "res://scripts/nichols_door.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I032"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "label": "kitchen door"
+    },
+    "groups": [
+      "usables",
+      "nichols_doors"
+    ],
+    "id": "N-1d115eddd7b8",
+    "local_position": [
+      -3.0,
+      -1.7,
+      -95.4
+    ],
+    "name": "Nichols Kitchen door",
+    "path": "Balcony/Neighbourhood/Nichols property/Nichols Kitchen door",
+    "position": [
+      -3.0,
+      -1.7,
+      -95.4
+    ],
+    "script": "res://scripts/nichols_door.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I033"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "label": "pantry door"
+    },
+    "groups": [
+      "usables",
+      "nichols_locked"
+    ],
+    "id": "N-8074386330ec",
+    "local_position": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "name": "Nichols Pantry door",
+    "path": "Balcony/Neighbourhood/Nichols property/Nichols Pantry door",
+    "position": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "script": "res://scripts/nichols_locked.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I034"
+  },
+  {
+    "basis_columns": [
+      [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0
+      ]
+    ],
+    "gameplay": {
+      "label": "library door"
+    },
+    "groups": [
+      "usables",
+      "nichols_doors"
+    ],
+    "id": "N-79073d976ae5",
+    "local_position": [
+      -21.0,
+      -1.7,
+      -95.4
+    ],
+    "name": "Nichols Library door",
+    "path": "Balcony/Neighbourhood/Nichols property/Nichols Library door",
+    "position": [
+      -21.0,
+      -1.7,
+      -95.4
+    ],
+    "script": "res://scripts/nichols_door.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I035"
+  },
+  {
+    "basis_columns": [
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "gameplay": {
+      "label": "pantry side door"
+    },
+    "groups": [
+      "usables",
+      "nichols_doors"
+    ],
+    "id": "N-e6477c61517c",
+    "local_position": [
+      -8.0,
+      -1.7,
+      -99.05
+    ],
+    "name": "Nichols Pantry side door",
+    "path": "Balcony/Neighbourhood/Nichols property/Nichols Pantry side door",
+    "position": [
+      -8.0,
+      -1.7,
+      -99.05
+    ],
+    "script": "res://scripts/nichols_door.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I036"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "label": "bedroom door"
+    },
+    "groups": [
+      "usables",
+      "nichols_doors"
+    ],
+    "id": "N-7e5068883e5c",
+    "local_position": [
+      -20.0,
+      2.7,
+      -84.4
+    ],
+    "name": "Nichols Bedroom door",
+    "path": "Balcony/Neighbourhood/Nichols property/Nichols Bedroom door",
+    "position": [
+      -20.0,
+      2.7,
+      -84.4
+    ],
+    "script": "res://scripts/nichols_door.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I037"
+  },
+  {
+    "basis_columns": [
+      [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0
+      ]
+    ],
+    "gameplay": {
+      "label": "nursery door"
+    },
+    "groups": [
+      "usables",
+      "nichols_doors"
+    ],
+    "id": "N-1c8ce96ed14c",
+    "local_position": [
+      -4.0,
+      2.7,
+      -84.4
+    ],
+    "name": "Nichols Nursery door",
+    "path": "Balcony/Neighbourhood/Nichols property/Nichols Nursery door",
+    "position": [
+      -4.0,
+      2.7,
+      -84.4
+    ],
+    "script": "res://scripts/nichols_door.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I038"
+  },
+  {
+    "basis_columns": [
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "gameplay": {
+      "label": "the iron door"
+    },
+    "groups": [
+      "usables",
+      "nichols_locked"
+    ],
+    "id": "N-126bd8115868",
+    "local_position": [
+      0.21,
+      -4.24,
+      -98.8
+    ],
+    "name": "Nichols iron door",
+    "path": "Balcony/Neighbourhood/Nichols property/Nichols basement/Nichols iron door",
+    "position": [
+      0.21,
+      -4.24,
+      -98.8
+    ],
+    "script": "res://scripts/nichols_locked.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I039"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "label": "cellar door"
+    },
+    "groups": [
+      "usables",
+      "nichols_doors"
+    ],
+    "id": "N-858a0aec0042",
+    "local_position": [
+      -9.65,
+      -1.7,
+      -91.4
+    ],
+    "name": "Nichols Cellar door",
+    "path": "Balcony/Neighbourhood/Nichols property/Nichols Cellar door",
+    "position": [
+      -9.65,
+      -1.7,
+      -91.4
+    ],
+    "script": "res://scripts/nichols_door.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I040"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "locked": true
+    },
+    "groups": [
+      "interior_doors"
+    ],
+    "id": "N-cbc4698ece47",
+    "local_position": [
+      -10.3089,
+      -2.9,
+      14.75
+    ],
+    "name": "House gate 00",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/House gate 00",
+    "position": [
+      -10.3089,
+      -2.9,
+      14.75
+    ],
+    "script": "res://scripts/push_gate.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I041"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "locked": true
+    },
+    "groups": [
+      "interior_doors"
+    ],
+    "id": "N-97a740d2a25e",
+    "local_position": [
+      -0.4922,
+      -2.9,
+      14.75
+    ],
+    "name": "House gate 01",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/House gate 01",
+    "position": [
+      -0.4922,
+      -2.9,
+      14.75
+    ],
+    "script": "res://scripts/push_gate.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I042"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "locked": true
+    },
+    "groups": [
+      "interior_doors"
+    ],
+    "id": "N-bd63c597bb3b",
+    "local_position": [
+      12.9588,
+      -2.9,
+      14.75
+    ],
+    "name": "House gate 02",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/House gate 02",
+    "position": [
+      12.9588,
+      -2.9,
+      14.75
+    ],
+    "script": "res://scripts/push_gate.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I043"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "locked": true
+    },
+    "groups": [
+      "interior_doors"
+    ],
+    "id": "N-590c01057c77",
+    "local_position": [
+      -11.1228,
+      -2.9,
+      21.25
+    ],
+    "name": "House gate 03",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/House gate 03",
+    "position": [
+      -11.1228,
+      -2.9,
+      21.25
+    ],
+    "script": "res://scripts/push_gate.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I044"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "locked": true
+    },
+    "groups": [
+      "interior_doors"
+    ],
+    "id": "N-63aadc93011c",
+    "local_position": [
+      1.1157,
+      -2.9,
+      21.25
+    ],
+    "name": "House gate 04",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/House gate 04",
+    "position": [
+      1.1157,
+      -2.9,
+      21.25
+    ],
+    "script": "res://scripts/push_gate.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I045"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "locked": true
+    },
+    "groups": [
+      "interior_doors"
+    ],
+    "id": "N-b32d43380519",
+    "local_position": [
+      13.9612,
+      -2.9,
+      21.25
+    ],
+    "name": "House gate 05",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/House gate 05",
+    "position": [
+      13.9612,
+      -2.9,
+      21.25
+    ],
+    "script": "res://scripts/push_gate.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I046"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "locked": true
+    },
+    "groups": [
+      "interior_doors"
+    ],
+    "id": "N-da4f333ec4fb",
+    "local_position": [
+      -12.519,
+      -2.9,
+      45.75
+    ],
+    "name": "House gate 06",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/House gate 06",
+    "position": [
+      -12.519,
+      -2.9,
+      45.75
+    ],
+    "script": "res://scripts/push_gate.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I047"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "locked": true
+    },
+    "groups": [
+      "interior_doors"
+    ],
+    "id": "N-001e5b465103",
+    "local_position": [
+      -2.989,
+      -2.9,
+      45.75
+    ],
+    "name": "House gate 07",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/House gate 07",
+    "position": [
+      -2.989,
+      -2.9,
+      45.75
+    ],
+    "script": "res://scripts/push_gate.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I048"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "locked": true
+    },
+    "groups": [
+      "interior_doors"
+    ],
+    "id": "N-a9dc04dbb305",
+    "local_position": [
+      13.8242,
+      -2.9,
+      45.75
+    ],
+    "name": "House gate 08",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/House gate 08",
+    "position": [
+      13.8242,
+      -2.9,
+      45.75
+    ],
+    "script": "res://scripts/push_gate.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I049"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "locked": true
+    },
+    "groups": [
+      "interior_doors"
+    ],
+    "id": "N-a1241bab174c",
+    "local_position": [
+      -13.8656,
+      -2.9,
+      52.25
+    ],
+    "name": "House gate 09",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/House gate 09",
+    "position": [
+      -13.8656,
+      -2.9,
+      52.25
+    ],
+    "script": "res://scripts/push_gate.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I050"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "locked": true
+    },
+    "groups": [
+      "interior_doors"
+    ],
+    "id": "N-33b9b6fc1266",
+    "local_position": [
+      -1.5391,
+      -2.9,
+      52.25
+    ],
+    "name": "House gate 10",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/House gate 10",
+    "position": [
+      -1.5391,
+      -2.9,
+      52.25
+    ],
+    "script": "res://scripts/push_gate.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I051"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "locked": true
+    },
+    "groups": [
+      "interior_doors"
+    ],
+    "id": "N-1aceaccc56ab",
+    "local_position": [
+      8.7591,
+      -2.9,
+      52.25
+    ],
+    "name": "House gate 11",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/House gate 11",
+    "position": [
+      8.7591,
+      -2.9,
+      52.25
+    ],
+    "script": "res://scripts/push_gate.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I052"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "locked": true
+    },
+    "groups": [
+      "interior_doors"
+    ],
+    "id": "N-1895eda921d4",
+    "local_position": [
+      14.2584,
+      -2.9,
+      52.25
+    ],
+    "name": "House gate 12",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/House gate 12",
+    "position": [
+      14.2584,
+      -2.9,
+      52.25
+    ],
+    "script": "res://scripts/push_gate.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I053"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "locked": true
+    },
+    "groups": [
+      "interior_doors"
+    ],
+    "id": "N-cfb79d66f9d0",
+    "local_position": [
+      24.25,
+      -2.9,
+      26.8317
+    ],
+    "name": "House gate 13",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/House gate 13",
+    "position": [
+      24.25,
+      -2.9,
+      26.8317
+    ],
+    "script": "res://scripts/push_gate.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I054"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "locked": true
+    },
+    "groups": [
+      "interior_doors"
+    ],
+    "id": "N-02b1fc69038b",
+    "local_position": [
+      24.25,
+      -2.9,
+      33.6637
+    ],
+    "name": "House gate 14",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/House gate 14",
+    "position": [
+      24.25,
+      -2.9,
+      33.6637
+    ],
+    "script": "res://scripts/push_gate.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I055"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "locked": true
+    },
+    "groups": [
+      "interior_doors"
+    ],
+    "id": "N-c3db6107a8c9",
+    "local_position": [
+      24.25,
+      -2.9,
+      -27.1799
+    ],
+    "name": "House gate 15",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/House gate 15",
+    "position": [
+      24.25,
+      -2.9,
+      -27.1799
+    ],
+    "script": "res://scripts/push_gate.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I056"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "locked": true
+    },
+    "groups": [
+      "interior_doors"
+    ],
+    "id": "N-2c2a038734f2",
+    "local_position": [
+      24.25,
+      -2.9,
+      -15.5374
+    ],
+    "name": "House gate 16",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/House gate 16",
+    "position": [
+      24.25,
+      -2.9,
+      -15.5374
+    ],
+    "script": "res://scripts/push_gate.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I057"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "locked": true
+    },
+    "groups": [
+      "interior_doors"
+    ],
+    "id": "N-e3e182b3c151",
+    "local_position": [
+      24.25,
+      -2.9,
+      -4.6313
+    ],
+    "name": "House gate 17",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/House gate 17",
+    "position": [
+      24.25,
+      -2.9,
+      -4.6313
+    ],
+    "script": "res://scripts/push_gate.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I058"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "locked": true
+    },
+    "groups": [
+      "interior_doors"
+    ],
+    "id": "N-b57aac0f2f76",
+    "local_position": [
+      24.25,
+      -2.9,
+      7.705
+    ],
+    "name": "House gate 18",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/House gate 18",
+    "position": [
+      24.25,
+      -2.9,
+      7.705
+    ],
+    "script": "res://scripts/push_gate.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I059"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "locked": true
+    },
+    "groups": [
+      "interior_doors"
+    ],
+    "id": "N-2549e79392b5",
+    "local_position": [
+      46.25,
+      -2.9,
+      25.2465
+    ],
+    "name": "House gate 19",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/House gate 19",
+    "position": [
+      46.25,
+      -2.9,
+      25.2465
+    ],
+    "script": "res://scripts/push_gate.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I060"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "locked": true
+    },
+    "groups": [
+      "interior_doors"
+    ],
+    "id": "N-34eb0374525a",
+    "local_position": [
+      46.25,
+      -2.9,
+      40.1855
+    ],
+    "name": "House gate 20",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/House gate 20",
+    "position": [
+      46.25,
+      -2.9,
+      40.1855
+    ],
+    "script": "res://scripts/push_gate.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I061"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "locked": true
+    },
+    "groups": [
+      "interior_doors"
+    ],
+    "id": "N-8c1a90c22d4e",
+    "local_position": [
+      46.25,
+      -2.9,
+      -28.0866
+    ],
+    "name": "House gate 21",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/House gate 21",
+    "position": [
+      46.25,
+      -2.9,
+      -28.0866
+    ],
+    "script": "res://scripts/push_gate.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I062"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "locked": true
+    },
+    "groups": [
+      "interior_doors"
+    ],
+    "id": "N-c3502f03034f",
+    "local_position": [
+      46.25,
+      -2.9,
+      -17.1541
+    ],
+    "name": "House gate 22",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/House gate 22",
+    "position": [
+      46.25,
+      -2.9,
+      -17.1541
+    ],
+    "script": "res://scripts/push_gate.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I063"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "locked": true
+    },
+    "groups": [
+      "interior_doors"
+    ],
+    "id": "N-e330fff491ee",
+    "local_position": [
+      46.25,
+      -2.9,
+      -6.9753
+    ],
+    "name": "House gate 23",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/House gate 23",
+    "position": [
+      46.25,
+      -2.9,
+      -6.9753
+    ],
+    "script": "res://scripts/push_gate.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I064"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "locked": true
+    },
+    "groups": [
+      "interior_doors"
+    ],
+    "id": "N-580c6b1a91f7",
+    "local_position": [
+      46.25,
+      -2.9,
+      1.2424
+    ],
+    "name": "House gate 24",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/House gate 24",
+    "position": [
+      46.25,
+      -2.9,
+      1.2424
+    ],
+    "script": "res://scripts/push_gate.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I065"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "locked": true
+    },
+    "groups": [
+      "interior_doors"
+    ],
+    "id": "N-6203a88e7252",
+    "local_position": [
+      46.25,
+      -2.9,
+      11.7937
+    ],
+    "name": "House gate 25",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/House gate 25",
+    "position": [
+      46.25,
+      -2.9,
+      11.7937
+    ],
+    "script": "res://scripts/push_gate.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I066"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "locked": true
+    },
+    "groups": [
+      "interior_doors"
+    ],
+    "id": "N-7a6b8009447e",
+    "local_position": [
+      17.75,
+      -2.9,
+      -3.5762
+    ],
+    "name": "House gate 26",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/House gate 26",
+    "position": [
+      17.75,
+      -2.9,
+      -3.5762
+    ],
+    "script": "res://scripts/push_gate.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I067"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "locked": true
+    },
+    "groups": [
+      "interior_doors"
+    ],
+    "id": "N-ba9e6801735a",
+    "local_position": [
+      -22.25,
+      -2.9,
+      -26.1331
+    ],
+    "name": "House gate 27",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/House gate 27",
+    "position": [
+      -22.25,
+      -2.9,
+      -26.1331
+    ],
+    "script": "res://scripts/push_gate.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I068"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "locked": true
+    },
+    "groups": [
+      "interior_doors"
+    ],
+    "id": "N-3e4cb7a6fe15",
+    "local_position": [
+      -22.25,
+      -2.9,
+      -12.0964
+    ],
+    "name": "House gate 28",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/House gate 28",
+    "position": [
+      -22.25,
+      -2.9,
+      -12.0964
+    ],
+    "script": "res://scripts/push_gate.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I069"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "locked": true
+    },
+    "groups": [
+      "interior_doors"
+    ],
+    "id": "N-92bde396ab48",
+    "local_position": [
+      -22.25,
+      -2.9,
+      -5.0358
+    ],
+    "name": "House gate 29",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/House gate 29",
+    "position": [
+      -22.25,
+      -2.9,
+      -5.0358
+    ],
+    "script": "res://scripts/push_gate.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I070"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "locked": true
+    },
+    "groups": [
+      "interior_doors"
+    ],
+    "id": "N-bb53feb877ac",
+    "local_position": [
+      -22.25,
+      -2.9,
+      4.07
+    ],
+    "name": "House gate 30",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/House gate 30",
+    "position": [
+      -22.25,
+      -2.9,
+      4.07
+    ],
+    "script": "res://scripts/push_gate.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I071"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "locked": true
+    },
+    "groups": [
+      "interior_doors"
+    ],
+    "id": "N-976f2b04d358",
+    "local_position": [
+      -22.25,
+      -2.9,
+      26.9194
+    ],
+    "name": "House gate 31",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/House gate 31",
+    "position": [
+      -22.25,
+      -2.9,
+      26.9194
+    ],
+    "script": "res://scripts/push_gate.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I072"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "locked": true
+    },
+    "groups": [
+      "interior_doors"
+    ],
+    "id": "N-942129feb69c",
+    "local_position": [
+      -22.25,
+      -2.9,
+      34.5815
+    ],
+    "name": "House gate 32",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/House gate 32",
+    "position": [
+      -22.25,
+      -2.9,
+      34.5815
+    ],
+    "script": "res://scripts/push_gate.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I073"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "locked": true
+    },
+    "groups": [
+      "interior_doors"
+    ],
+    "id": "N-cd6d2f533020",
+    "local_position": [
+      -22.25,
+      -2.9,
+      43.4218
+    ],
+    "name": "House gate 33",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/House gate 33",
+    "position": [
+      -22.25,
+      -2.9,
+      43.4218
+    ],
+    "script": "res://scripts/push_gate.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I074"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "locked": true
+    },
+    "groups": [
+      "interior_doors"
+    ],
+    "id": "N-cdb4ac7647e7",
+    "local_position": [
+      -22.25,
+      -2.9,
+      53.9118
+    ],
+    "name": "House gate 34",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/House gate 34",
+    "position": [
+      -22.25,
+      -2.9,
+      53.9118
+    ],
+    "script": "res://scripts/push_gate.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I075"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "locked": true
+    },
+    "groups": [
+      "interior_doors"
+    ],
+    "id": "N-af43e0ddea31",
+    "local_position": [
+      -22.25,
+      -2.9,
+      63.0419
+    ],
+    "name": "House gate 35",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/House gate 35",
+    "position": [
+      -22.25,
+      -2.9,
+      63.0419
+    ],
+    "script": "res://scripts/push_gate.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I076"
+  },
+  {
+    "basis_columns": [
+      [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0
+      ]
+    ],
+    "gameplay": {
+      "kind": "door"
+    },
+    "groups": [
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-94a46294b4a8",
+    "local_position": [
+      14.7581,
+      -1.71,
+      55.0692
+    ],
+    "name": "Locked house door 00",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/Locked house door 00",
+    "position": [
+      14.7581,
+      -1.71,
+      55.0692
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I077"
+  },
+  {
+    "basis_columns": [
+      [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0
+      ]
+    ],
+    "gameplay": {
+      "kind": "bell"
+    },
+    "groups": [
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-ce497d63500e",
+    "local_position": [
+      14.0581,
+      -1.46,
+      55.0692
+    ],
+    "name": "Old doorbell 0",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/Old doorbell 0",
+    "position": [
+      14.0581,
+      -1.46,
+      55.0692
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I078"
+  },
+  {
+    "basis_columns": [
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "gameplay": {
+      "kind": "door"
+    },
+    "groups": [
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-24db2cd20fab",
+    "local_position": [
+      43.8905,
+      -1.71,
+      -18.9443
+    ],
+    "name": "Locked house door 01",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/Locked house door 01",
+    "position": [
+      43.8905,
+      -1.71,
+      -18.9443
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I079"
+  },
+  {
+    "basis_columns": [
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "gameplay": {
+      "kind": "mailbox"
+    },
+    "groups": [
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-8c5a54d32df3",
+    "local_position": [
+      43.8905,
+      -1.96,
+      -19.6443
+    ],
+    "name": "Rusted mailbox 1",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/Rusted mailbox 1",
+    "position": [
+      43.8905,
+      -1.96,
+      -19.6443
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I080"
+  },
+  {
+    "basis_columns": [
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "gameplay": {
+      "kind": "door"
+    },
+    "groups": [
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-b3c4be67acb3",
+    "local_position": [
+      -24.2277,
+      -1.71,
+      7.1043
+    ],
+    "name": "Locked house door 02",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/Locked house door 02",
+    "position": [
+      -24.2277,
+      -1.71,
+      7.1043
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I081"
+  },
+  {
+    "basis_columns": [
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "gameplay": {
+      "kind": "bell"
+    },
+    "groups": [
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-6ae7b3d17141",
+    "local_position": [
+      -24.2277,
+      -1.46,
+      6.4043
+    ],
+    "name": "Old doorbell 2",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/Old doorbell 2",
+    "position": [
+      -24.2277,
+      -1.46,
+      6.4043
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I082"
+  },
+  {
+    "basis_columns": [
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "gameplay": {
+      "kind": "door"
+    },
+    "groups": [
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-95ef40a32a4f",
+    "local_position": [
+      -24.7103,
+      -1.71,
+      33.7641
+    ],
+    "name": "Locked house door 03",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/Locked house door 03",
+    "position": [
+      -24.7103,
+      -1.71,
+      33.7641
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I083"
+  },
+  {
+    "basis_columns": [
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "gameplay": {
+      "kind": "mailbox"
+    },
+    "groups": [
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-b0062bd32c53",
+    "local_position": [
+      -24.7104,
+      -1.96,
+      33.0641
+    ],
+    "name": "Rusted mailbox 3",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/Rusted mailbox 3",
+    "position": [
+      -24.7104,
+      -1.96,
+      33.0641
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I084"
+  },
+  {
+    "basis_columns": [
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "gameplay": {
+      "kind": "door"
+    },
+    "groups": [
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-826ead7b8d5c",
+    "local_position": [
+      -24.2042,
+      -1.71,
+      42.6456
+    ],
+    "name": "Locked house door 04",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/Locked house door 04",
+    "position": [
+      -24.2042,
+      -1.71,
+      42.6456
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I085"
+  },
+  {
+    "basis_columns": [
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "gameplay": {
+      "kind": "bell"
+    },
+    "groups": [
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-e60a440252b1",
+    "local_position": [
+      -24.2042,
+      -1.46,
+      41.9456
+    ],
+    "name": "Old doorbell 4",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/Old doorbell 4",
+    "position": [
+      -24.2042,
+      -1.46,
+      41.9456
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I086"
+  },
+  {
+    "basis_columns": [
+      [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0
+      ]
+    ],
+    "gameplay": {
+      "kind": "door"
+    },
+    "groups": [
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-eb7ffd7a5c40",
+    "local_position": [
+      -3.9287,
+      -1.71,
+      55.1428
+    ],
+    "name": "Locked house door 05",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/Locked house door 05",
+    "position": [
+      -3.9287,
+      -1.71,
+      55.1428
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I087"
+  },
+  {
+    "basis_columns": [
+      [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0
+      ]
+    ],
+    "gameplay": {
+      "kind": "mailbox"
+    },
+    "groups": [
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-df408c323031",
+    "local_position": [
+      -4.6287,
+      -1.96,
+      55.1428
+    ],
+    "name": "Rusted mailbox 5",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/Rusted mailbox 5",
+    "position": [
+      -4.6287,
+      -1.96,
+      55.1428
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I088"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "kind": "door"
+    },
+    "groups": [
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-fc150cb8dbcd",
+    "local_position": [
+      -0.6914,
+      -1.71,
+      12.3065
+    ],
+    "name": "Locked house door 06",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/Locked house door 06",
+    "position": [
+      -0.6914,
+      -1.71,
+      12.3065
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I089"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "kind": "bell"
+    },
+    "groups": [
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-fc7828f46063",
+    "local_position": [
+      0.0086,
+      -1.46,
+      12.3065
+    ],
+    "name": "Old doorbell 6",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/Old doorbell 6",
+    "position": [
+      0.0086,
+      -1.46,
+      12.3065
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I090"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "kind": "door"
+    },
+    "groups": [
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-3f4994e44443",
+    "local_position": [
+      11.3297,
+      -1.71,
+      12.4484
+    ],
+    "name": "Locked house door 07",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/Locked house door 07",
+    "position": [
+      11.3297,
+      -1.71,
+      12.4484
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I091"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "kind": "mailbox"
+    },
+    "groups": [
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-0065fa05be88",
+    "local_position": [
+      12.0297,
+      -1.96,
+      12.4484
+    ],
+    "name": "Rusted mailbox 7",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/Rusted mailbox 7",
+    "position": [
+      12.0297,
+      -1.96,
+      12.4484
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I092"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "kind": "door"
+    },
+    "groups": [
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-a941ac249411",
+    "local_position": [
+      -9.7021,
+      -1.71,
+      43.8923
+    ],
+    "name": "Locked house door 08",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/Locked house door 08",
+    "position": [
+      -9.7021,
+      -1.71,
+      43.8923
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I093"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "kind": "bell"
+    },
+    "groups": [
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-8dd03cfc20ec",
+    "local_position": [
+      -9.0021,
+      -1.46,
+      43.8923
+    ],
+    "name": "Old doorbell 8",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/Old doorbell 8",
+    "position": [
+      -9.0021,
+      -1.46,
+      43.8923
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I094"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "kind": "door"
+    },
+    "groups": [
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-73bb80689f45",
+    "local_position": [
+      -1.2575,
+      -1.71,
+      43.3118
+    ],
+    "name": "Locked house door 09",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/Locked house door 09",
+    "position": [
+      -1.2575,
+      -1.71,
+      43.3118
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I095"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "kind": "mailbox"
+    },
+    "groups": [
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-afc7ec81c440",
+    "local_position": [
+      -0.5575,
+      -1.96,
+      43.3118
+    ],
+    "name": "Rusted mailbox 9",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/Rusted mailbox 9",
+    "position": [
+      -0.5575,
+      -1.96,
+      43.3118
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I096"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "kind": "door"
+    },
+    "groups": [
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-7454afd70505",
+    "local_position": [
+      12.5054,
+      -1.71,
+      43.9119
+    ],
+    "name": "Locked house door 10",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/Locked house door 10",
+    "position": [
+      12.5054,
+      -1.71,
+      43.9119
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I097"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "kind": "bell"
+    },
+    "groups": [
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-13d9881e5009",
+    "local_position": [
+      13.2054,
+      -1.46,
+      43.9119
+    ],
+    "name": "Old doorbell 10",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/Old doorbell 10",
+    "position": [
+      13.2054,
+      -1.46,
+      43.9119
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I098"
+  },
+  {
+    "basis_columns": [
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        -1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "gameplay": {
+      "kind": "door"
+    },
+    "groups": [
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-f55acbf899e0",
+    "local_position": [
+      26.352,
+      -1.71,
+      9.0037
+    ],
+    "name": "Locked house door 11",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/Locked house door 11",
+    "position": [
+      26.352,
+      -1.71,
+      9.0037
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I099"
+  },
+  {
+    "basis_columns": [
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        -1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "gameplay": {
+      "kind": "mailbox"
+    },
+    "groups": [
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-0da47332a199",
+    "local_position": [
+      26.3519,
+      -1.96,
+      9.7037
+    ],
+    "name": "Rusted mailbox 11",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/Rusted mailbox 11",
+    "position": [
+      26.3519,
+      -1.96,
+      9.7037
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I100"
+  },
+  {
+    "basis_columns": [
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "gameplay": {
+      "kind": "door"
+    },
+    "groups": [
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-c872d6cbce73",
+    "local_position": [
+      43.6974,
+      -1.71,
+      23.9787
+    ],
+    "name": "Locked house door 12",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/Locked house door 12",
+    "position": [
+      43.6974,
+      -1.71,
+      23.9787
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I101"
+  },
+  {
+    "basis_columns": [
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "gameplay": {
+      "kind": "bell"
+    },
+    "groups": [
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-de5c2eaa6ea6",
+    "local_position": [
+      43.6974,
+      -1.46,
+      23.2787
+    ],
+    "name": "Old doorbell 12",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/Old doorbell 12",
+    "position": [
+      43.6974,
+      -1.46,
+      23.2787
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I102"
+  },
+  {
+    "basis_columns": [
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "gameplay": {
+      "kind": "door"
+    },
+    "groups": [
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-404bdbfe2e50",
+    "local_position": [
+      44.2724,
+      -1.71,
+      -10.0764
+    ],
+    "name": "Locked house door 13",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/Locked house door 13",
+    "position": [
+      44.2724,
+      -1.71,
+      -10.0764
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I103"
+  },
+  {
+    "basis_columns": [
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "gameplay": {
+      "kind": "mailbox"
+    },
+    "groups": [
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-aa3837be1844",
+    "local_position": [
+      44.2724,
+      -1.96,
+      -10.7764
+    ],
+    "name": "Rusted mailbox 13",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/Rusted mailbox 13",
+    "position": [
+      44.2724,
+      -1.96,
+      -10.7764
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I104"
+  },
+  {
+    "basis_columns": [
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "gameplay": {
+      "kind": "door"
+    },
+    "groups": [
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-9cb08b577375",
+    "local_position": [
+      44.3276,
+      -1.71,
+      9.6625
+    ],
+    "name": "Locked house door 14",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/Locked house door 14",
+    "position": [
+      44.3276,
+      -1.71,
+      9.6625
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I105"
+  },
+  {
+    "basis_columns": [
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "gameplay": {
+      "kind": "bell"
+    },
+    "groups": [
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-83abb1244b04",
+    "local_position": [
+      44.3276,
+      -1.46,
+      8.9625
+    ],
+    "name": "Old doorbell 14",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/Old doorbell 14",
+    "position": [
+      44.3276,
+      -1.46,
+      8.9625
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I106"
+  },
+  {
+    "basis_columns": [
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "gameplay": {
+      "kind": "door"
+    },
+    "groups": [
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-a16e6a01342d",
+    "local_position": [
+      -24.3433,
+      -1.71,
+      -24.4562
+    ],
+    "name": "Locked house door 15",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/Locked house door 15",
+    "position": [
+      -24.3433,
+      -1.71,
+      -24.4562
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I107"
+  },
+  {
+    "basis_columns": [
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "gameplay": {
+      "kind": "mailbox"
+    },
+    "groups": [
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-3a596c7064c8",
+    "local_position": [
+      -24.3433,
+      -1.96,
+      -25.1562
+    ],
+    "name": "Rusted mailbox 15",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/Rusted mailbox 15",
+    "position": [
+      -24.3433,
+      -1.96,
+      -25.1562
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I108"
+  },
+  {
+    "basis_columns": [
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "gameplay": {
+      "kind": "door"
+    },
+    "groups": [
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-ffabbcca7a36",
+    "local_position": [
+      -24.8695,
+      -1.71,
+      -15.9525
+    ],
+    "name": "Locked house door 16",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/Locked house door 16",
+    "position": [
+      -24.8695,
+      -1.71,
+      -15.9525
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I109"
+  },
+  {
+    "basis_columns": [
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "gameplay": {
+      "kind": "bell"
+    },
+    "groups": [
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-8cf1d8497a5e",
+    "local_position": [
+      -24.8695,
+      -1.46,
+      -16.6525
+    ],
+    "name": "Old doorbell 16",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/Old doorbell 16",
+    "position": [
+      -24.8695,
+      -1.46,
+      -16.6525
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I110"
+  },
+  {
+    "basis_columns": [
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "gameplay": {
+      "kind": "door"
+    },
+    "groups": [
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-f0b9dea55d57",
+    "local_position": [
+      -24.4949,
+      -1.71,
+      -6.9031
+    ],
+    "name": "Locked house door 17",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/Locked house door 17",
+    "position": [
+      -24.4949,
+      -1.71,
+      -6.9031
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I111"
+  },
+  {
+    "basis_columns": [
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "gameplay": {
+      "kind": "mailbox"
+    },
+    "groups": [
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-14b1ad3ce4b5",
+    "local_position": [
+      -24.4949,
+      -1.96,
+      -7.6031
+    ],
+    "name": "Rusted mailbox 17",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/Rusted mailbox 17",
+    "position": [
+      -24.4949,
+      -1.96,
+      -7.6031
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I112"
+  },
+  {
+    "basis_columns": [
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "gameplay": {
+      "kind": "door"
+    },
+    "groups": [
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-d7ceb90d946b",
+    "local_position": [
+      -24.3886,
+      -1.71,
+      24.2274
+    ],
+    "name": "Locked house door 18",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/Locked house door 18",
+    "position": [
+      -24.3886,
+      -1.71,
+      24.2274
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I113"
+  },
+  {
+    "basis_columns": [
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "gameplay": {
+      "kind": "bell"
+    },
+    "groups": [
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-fc9df56b0d5b",
+    "local_position": [
+      -24.3886,
+      -1.46,
+      23.5274
+    ],
+    "name": "Old doorbell 18",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/Old doorbell 18",
+    "position": [
+      -24.3886,
+      -1.46,
+      23.5274
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I114"
+  },
+  {
+    "basis_columns": [
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "gameplay": {
+      "kind": "door"
+    },
+    "groups": [
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-a824154383ae",
+    "local_position": [
+      -24.905,
+      -1.71,
+      55.0397
+    ],
+    "name": "Locked house door 19",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/Locked house door 19",
+    "position": [
+      -24.905,
+      -1.71,
+      55.0397
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I115"
+  },
+  {
+    "basis_columns": [
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "gameplay": {
+      "kind": "mailbox"
+    },
+    "groups": [
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-b80414937665",
+    "local_position": [
+      -24.9051,
+      -1.96,
+      54.3397
+    ],
+    "name": "Rusted mailbox 19",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/Rusted mailbox 19",
+    "position": [
+      -24.9051,
+      -1.96,
+      54.3397
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I116"
+  },
+  {
+    "basis_columns": [
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        -1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "gameplay": {
+      "kind": "door"
+    },
+    "groups": [
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-d7032a3b64b8",
+    "local_position": [
+      27.1225,
+      -1.71,
+      -12.6486
+    ],
+    "name": "Locked house door 20",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/Locked house door 20",
+    "position": [
+      27.1225,
+      -1.71,
+      -12.6486
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I117"
+  },
+  {
+    "basis_columns": [
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        -1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "gameplay": {
+      "kind": "bell"
+    },
+    "groups": [
+      "usables",
+      "neighborhood_usables"
+    ],
+    "id": "N-d65736d25c56",
+    "local_position": [
+      27.1225,
+      -1.46,
+      -11.9486
+    ],
+    "name": "Old doorbell 20",
+    "path": "Balcony/Neighbourhood/Neighborhood interactions/Old doorbell 20",
+    "position": [
+      27.1225,
+      -1.46,
+      -11.9486
+    ],
+    "script": "res://scripts/neighborhood_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I118"
+  },
+  {
+    "basis_columns": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "gameplay": {
+      "label": "studio door"
+    },
+    "groups": [
+      "interior_doors"
+    ],
+    "id": "N-2977ce2c29d7",
+    "local_position": [
+      -3.23,
+      0.0,
+      2.84
+    ],
+    "name": "StudioDoor",
+    "path": "Studio/StudioDoor",
+    "position": [
+      -3.23,
+      0.0,
+      2.84
+    ],
+    "script": "res://scripts/sliding_door.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I119"
+  },
+  {
+    "basis_columns": [
+      [
+        -0.9979,
+        0.0,
+        0.0651
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        -0.0651,
+        0.0,
+        -0.9979
+      ]
+    ],
+    "gameplay": {
+      "kind": "drawer"
+    },
+    "groups": [
+      "usables"
+    ],
+    "id": "N-191bd0371919",
+    "local_position": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "name": "DrawerUse",
+    "path": "Fields/HutHouse/Dresser/TopDrawer/DrawerUse",
+    "position": [
+      34.2263,
+      -2.048,
+      148.851
+    ],
+    "script": "res://scripts/hut_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I120"
+  },
+  {
+    "basis_columns": [
+      [
+        -0.9979,
+        0.0,
+        0.0651
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        -0.0651,
+        0.0,
+        -0.9979
+      ]
+    ],
+    "gameplay": {
+      "kind": "gun"
+    },
+    "groups": [
+      "usables"
+    ],
+    "id": "N-dd604bb48bda",
+    "local_position": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "name": "GunUse",
+    "path": "Fields/HutHouse/Dresser/TopDrawer/GunUse",
+    "position": [
+      34.2263,
+      -2.048,
+      148.851
+    ],
+    "script": "res://scripts/hut_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I121"
+  },
+  {
+    "basis_columns": [
+      [
+        -0.9979,
+        0.0,
+        0.0651
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        -0.0651,
+        0.0,
+        -0.9979
+      ]
+    ],
+    "gameplay": {
+      "kind": "flashlight"
+    },
+    "groups": [
+      "usables"
+    ],
+    "id": "N-dc8af15fb953",
+    "local_position": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "name": "FlashlightUse",
+    "path": "Fields/HutHouse/Dresser/TopDrawer/FlashlightUse",
+    "position": [
+      34.2263,
+      -2.048,
+      148.851
+    ],
+    "script": "res://scripts/hut_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I122"
+  },
+  {
+    "basis_columns": [
+      [
+        -0.8445,
+        0.0,
+        0.5355
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        -0.5355,
+        0.0,
+        -0.8445
+      ]
+    ],
+    "gameplay": {
+      "kind": "key"
+    },
+    "groups": [
+      "usables"
+    ],
+    "id": "N-bd9f3aa639f3",
+    "local_position": [
+      -1.414,
+      1.264,
+      -0.5
+    ],
+    "name": "Key",
+    "path": "Fields/HutHouse/Key",
+    "position": [
+      34.399,
+      -1.786,
+      149.0401
+    ],
+    "script": "res://scripts/hut_usable.gd",
+    "type": "Node3D",
+    "visible": true,
+    "reference_id": "I123"
+  }
+]

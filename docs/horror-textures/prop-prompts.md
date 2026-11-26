@@ -1,0 +1,29 @@
+# Prop texture prompts
+
+## discarded_paper
+
+Use case: photorealistic-natural. Asset type: seamless square tileable game material albedo texture, 1024x1024. Primary request: A rain soaked discarded newsprint and food wrapper paper surface. Warm off-white grey pulp, fibrous thin paper, irregular fold creases, pale grey faded narrow newspaper column fragments with no readable words, soft brown moisture tide marks, muddy fingertip sized irregular smudges, slightly torn layered paper edges. One continuous flat paper surface, no photographic objects, no graphic symbols, no readable text. Orthographic macro surface scan filling the square edge to edge, flat neutral diffuse lighting, no cast shadows, no perspective, no objects or scenery, no logos, no watermark, no vignette. Repeating edge continuity on both axes. Physically grounded abandoned tropical neighborhood horror game: damp age, restrained colors and detailed wear that reads under a flashlight. Surface map for modeled props.
+
+## tarnished_metal
+
+Use case: photorealistic-natural. Asset type: seamless square tileable game material albedo texture, 1024x1024. Primary request: Weathered neutral grey zinc steel surface for discarded food cans, pails and bent scraps. Scratched dull silvery grey metal, small irregular islands of dark red brown oxidation, grime in scratches, pale water spots, cloudy rubbed zinc areas, subtle horizontal scuffs. Around 75 percent grey metal and 25 percent weathering; avoid deep orange rust everywhere. No bolts, seams, holes or geometric forms. Orthographic macro surface scan filling the square edge to edge, flat neutral diffuse lighting, no cast shadows, no perspective, no objects or scenery, no logos, no watermark, no vignette. Repeating edge continuity on both axes. Physically grounded abandoned tropical neighborhood horror game: damp age, restrained colors and detailed wear that reads under a flashlight. Surface map for modeled props.
+
+## stained_fabric
+
+Use case: photorealistic-natural. Asset type: seamless square tileable game material albedo texture, 1024x1024. Primary request: Age worn greige cotton canvas fabric surface used for abandoned sacks, mattress ticking and covered bundles. Visible fine woven warp and weft, worn fuzzy patches, dusty brown stains, a few irregular damp grey green mold speckles and faded creases, subtle lighter abrasion. Continuous textile with no sewing seams, no patterned symbols, no blood. Low contrast medium-light grey beige base for in-game color tint. Orthographic macro surface scan filling the square edge to edge, flat neutral diffuse lighting, no cast shadows, no perspective, no objects or scenery, no logos, no watermark, no vignette. Repeating edge continuity on both axes. Physically grounded abandoned tropical neighborhood horror game: damp age, restrained colors and detailed wear that reads under a flashlight. Surface map for modeled props.
+
+
+Generated with the built-in imagegen tool on 2026-10-26. The originals are copied into `game/assets/horror_textures/props/` for project use.
+
+## refuse_plastic_black
+
+Use case: photorealistic-natural. Asset type: seamless square tileable game material albedo texture, 1024x1024. Primary request: A crumpled black polyethylene rubbish sack surface. Charcoal black plastic with broad irregular creases and tight wrinkled folds, dusty grey scuff streaks, greasy smudges and tiny specks of dried mud. Keep albedo folds broad subtle mid-dark charcoal values so the game lighting supplies specular highlights. No holes and no contents. Orthographic macro surface scan filling the entire square edge to edge, perfectly flat neutral diffuse lighting, no cast shadows, no perspective, no objects or scenery, no labels, no lettering, no watermark, no vignette. Seamlessly repeating left/right and top/bottom. Physically grounded abandoned tropical neighborhood horror game: damp age, restrained colors, detailed wear clearly visible under flashlight. This is a surface map used on modeled props, not a picture of a prop.
+
+## weathered_plastic
+
+Use case: photorealistic-natural. Asset type: seamless square tileable game material albedo texture, 1024x1024. Primary request: Neutral warm light grey worn molded polypropylene surface. Fine plastic grain, faint curved abrasion scratches, uneven faded patches, ingrained tan mud and dark grime flecks. Light grey base suitable for tinting into blue, red and green plastic pails and basins. Moderate age and dirt, recognizable plastic, not concrete or metal. No large cracks. Orthographic macro surface scan filling the entire square edge to edge, perfectly flat neutral diffuse lighting, no cast shadows, no perspective, no objects or scenery, no labels, no lettering, no watermark, no vignette. Seamlessly repeating left/right and top/bottom. Physically grounded abandoned tropical neighborhood horror game: damp age, restrained colors, detailed wear clearly visible under flashlight. This is a surface map used on modeled props, not a picture of a prop.
+
+## waterlogged_cardboard
+
+Use case: photorealistic-natural. Asset type: seamless square tileable game material albedo texture, 1024x1024. Primary request: Water damaged brown corrugated cardboard packaging surface. Soft tan ochre kraft paper fibers, compression creases, frayed scratches revealing fine corrugation, dark damp tide marks and rubbed muddy edges distributed irregularly throughout surface. Empty unprinted packaging, no logos, no writing, no tape bands. Orthographic macro surface scan filling the entire square edge to edge, perfectly flat neutral diffuse lighting, no cast shadows, no perspective, no objects or scenery, no labels, no lettering, no watermark, no vignette. Seamlessly repeating left/right and top/bottom. Physically grounded abandoned tropical neighborhood horror game: damp age, restrained colors, detailed wear clearly visible under flashlight. This is a surface map used on modeled props, not a picture of a prop.
+

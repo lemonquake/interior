@@ -15,7 +15,7 @@ func _ready() -> void:
 	if Engine.is_editor_hint():
 		return
 	# The parent is still adding its children; rebuild once it is ready.
-	_attach.call_deferred()
+	InteriorLoadClock.later(_attach)
 
 func _attach() -> void:
 	var body := get_parent() as RigidBody3D

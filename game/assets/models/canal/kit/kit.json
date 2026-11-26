@@ -1,0 +1,1299 @@
+{
+ "houses": [
+  {
+   "row": "river",
+   "width": 3.8,
+   "depth": 5.47,
+   "storeys": 2,
+   "seed": 4000,
+   "file": "house_00.glb",
+   "colliders": [
+    {
+     "center": [
+      2.08,
+      -2.375,
+      1.78
+     ],
+     "size": [
+      0.12,
+      4.35,
+      0.12
+     ]
+    },
+    {
+     "center": [
+      2.08,
+      -2.375,
+      -0.0
+     ],
+     "size": [
+      0.12,
+      4.35,
+      0.12
+     ]
+    },
+    {
+     "center": [
+      2.08,
+      -2.375,
+      -1.78
+     ],
+     "size": [
+      0.12,
+      4.35,
+      0.12
+     ]
+    },
+    {
+     "center": [
+      1.1,
+      1.189,
+      -0.0
+     ],
+     "size": [
+      2.2,
+      3.018,
+      3.8
+     ]
+    },
+    {
+     "center": [
+      -2.735,
+      1.349,
+      -0.0
+     ],
+     "size": [
+      5.47,
+      2.698,
+      3.8
+     ]
+    }
+   ],
+   "doors": [
+    {
+     "kind": "planks",
+     "s": 2.3016847148887383
+    }
+   ],
+   "triangles": 5582
+  },
+  {
+   "row": "river",
+   "width": 3.4,
+   "depth": 5.26,
+   "storeys": 2,
+   "seed": 4001,
+   "file": "house_01.glb",
+   "colliders": [
+    {
+     "center": [
+      -2.63,
+      1.259,
+      -0.0
+     ],
+     "size": [
+      5.26,
+      2.518,
+      3.4
+     ]
+    }
+   ],
+   "doors": [
+    {
+     "kind": "open",
+     "s": 1.8777041763028197
+    }
+   ],
+   "triangles": 4024
+  },
+  {
+   "row": "river",
+   "width": 5.0,
+   "depth": 5.37,
+   "storeys": 3,
+   "seed": 4002,
+   "file": "house_02.glb",
+   "colliders": [
+    {
+     "center": [
+      2.08,
+      -2.375,
+      2.38
+     ],
+     "size": [
+      0.12,
+      4.35,
+      0.12
+     ]
+    },
+    {
+     "center": [
+      2.08,
+      -2.375,
+      0.793
+     ],
+     "size": [
+      0.12,
+      4.35,
+      0.12
+     ]
+    },
+    {
+     "center": [
+      2.08,
+      -2.375,
+      -0.793
+     ],
+     "size": [
+      0.12,
+      4.35,
+      0.12
+     ]
+    },
+    {
+     "center": [
+      2.08,
+      -2.375,
+      -2.38
+     ],
+     "size": [
+      0.12,
+      4.35,
+      0.12
+     ]
+    },
+    {
+     "center": [
+      1.1,
+      1.206,
+      -0.0
+     ],
+     "size": [
+      2.2,
+      3.053,
+      5.0
+     ]
+    },
+    {
+     "center": [
+      -2.685,
+      1.366,
+      -0.0
+     ],
+     "size": [
+      5.37,
+      2.733,
+      5.0
+     ]
+    }
+   ],
+   "doors": [
+    {
+     "kind": "planks",
+     "s": 2.4372340197314415
+    }
+   ],
+   "triangles": 9464
+  },
+  {
+   "row": "river",
+   "width": 5.0,
+   "depth": 5.74,
+   "storeys": 4,
+   "seed": 4003,
+   "file": "house_03.glb",
+   "colliders": [
+    {
+     "center": [
+      -2.87,
+      1.249,
+      -0.0
+     ],
+     "size": [
+      5.74,
+      2.499,
+      5.0
+     ]
+    }
+   ],
+   "doors": [
+    {
+     "kind": "planks",
+     "s": 3.9588639688062264
+    }
+   ],
+   "triangles": 10722
+  },
+  {
+   "row": "river",
+   "width": 5.6,
+   "depth": 5.63,
+   "storeys": 3,
+   "seed": 4004,
+   "file": "house_04.glb",
+   "colliders": [
+    {
+     "center": [
+      -2.815,
+      1.314,
+      -0.0
+     ],
+     "size": [
+      5.63,
+      2.629,
+      5.6
+     ]
+    }
+   ],
+   "doors": [
+    {
+     "kind": "open",
+     "s": 1.8572880655530668
+    }
+   ],
+   "triangles": 8602
+  },
+  {
+   "row": "river",
+   "width": 4.6,
+   "depth": 6.13,
+   "storeys": 2,
+   "seed": 4005,
+   "file": "house_05.glb",
+   "colliders": [
+    {
+     "center": [
+      -3.065,
+      1.328,
+      -0.0
+     ],
+     "size": [
+      6.13,
+      2.656,
+      4.6
+     ]
+    }
+   ],
+   "doors": [
+    {
+     "kind": "planks",
+     "s": 2.9838448835408933
+    }
+   ],
+   "triangles": 5712
+  },
+  {
+   "row": "river",
+   "width": 5.6,
+   "depth": 5.79,
+   "storeys": 3,
+   "seed": 4006,
+   "file": "house_06.glb",
+   "colliders": [
+    {
+     "center": [
+      -2.895,
+      1.344,
+      -0.0
+     ],
+     "size": [
+      5.79,
+      2.688,
+      5.6
+     ]
+    }
+   ],
+   "doors": [
+    {
+     "kind": "open",
+     "s": 2.7225061776985093
+    }
+   ],
+   "triangles": 8170
+  },
+  {
+   "row": "river",
+   "width": 5.6,
+   "depth": 6.3,
+   "storeys": 2,
+   "seed": 4007,
+   "file": "house_07.glb",
+   "colliders": [
+    {
+     "center": [
+      -3.15,
+      1.293,
+      -0.0
+     ],
+     "size": [
+      6.3,
+      2.587,
+      5.6
+     ]
+    }
+   ],
+   "doors": [
+    {
+     "kind": "planks",
+     "s": 3.763301768393248
+    }
+   ],
+   "triangles": 6724
+  },
+  {
+   "row": "river",
+   "width": 3.8,
+   "depth": 5.85,
+   "storeys": 3,
+   "seed": 4008,
+   "file": "house_08.glb",
+   "colliders": [
+    {
+     "center": [
+      -2.925,
+      1.245,
+      -0.0
+     ],
+     "size": [
+      5.85,
+      2.49,
+      3.8
+     ]
+    }
+   ],
+   "doors": [
+    {
+     "kind": "boarded",
+     "s": 1.8692556229971375
+    }
+   ],
+   "triangles": 6196
+  },
+  {
+   "row": "river",
+   "width": 3.8,
+   "depth": 6.16,
+   "storeys": 4,
+   "seed": 4009,
+   "file": "house_09.glb",
+   "colliders": [
+    {
+     "center": [
+      -3.08,
+      1.4,
+      -0.0
+     ],
+     "size": [
+      6.16,
+      2.8,
+      3.8
+     ]
+    }
+   ],
+   "doors": [
+    {
+     "kind": "open",
+     "s": 0.9054384582608488
+    }
+   ],
+   "triangles": 8106
+  },
+  {
+   "row": "river",
+   "width": 5.0,
+   "depth": 5.43,
+   "storeys": 3,
+   "seed": 4010,
+   "file": "house_10.glb",
+   "colliders": [
+    {
+     "center": [
+      -2.715,
+      1.278,
+      -0.0
+     ],
+     "size": [
+      5.43,
+      2.555,
+      5.0
+     ]
+    }
+   ],
+   "doors": [
+    {
+     "kind": "planks",
+     "s": 2.8318347848298933
+    }
+   ],
+   "triangles": 8378
+  },
+  {
+   "row": "river",
+   "width": 3.4,
+   "depth": 6.17,
+   "storeys": 2,
+   "seed": 4011,
+   "file": "house_11.glb",
+   "colliders": [
+    {
+     "center": [
+      -3.085,
+      1.358,
+      -0.0
+     ],
+     "size": [
+      6.17,
+      2.717,
+      3.4
+     ]
+    }
+   ],
+   "doors": [
+    {
+     "kind": "planks",
+     "s": 2.4919823101368186
+    }
+   ],
+   "triangles": 4194
+  },
+  {
+   "row": "river",
+   "width": 4.6,
+   "depth": 5.68,
+   "storeys": 3,
+   "seed": 4012,
+   "file": "house_12.glb",
+   "colliders": [
+    {
+     "center": [
+      2.08,
+      -2.375,
+      2.18
+     ],
+     "size": [
+      0.12,
+      4.35,
+      0.12
+     ]
+    },
+    {
+     "center": [
+      2.08,
+      -2.375,
+      0.727
+     ],
+     "size": [
+      0.12,
+      4.35,
+      0.12
+     ]
+    },
+    {
+     "center": [
+      2.08,
+      -2.375,
+      -0.727
+     ],
+     "size": [
+      0.12,
+      4.35,
+      0.12
+     ]
+    },
+    {
+     "center": [
+      2.08,
+      -2.375,
+      -2.18
+     ],
+     "size": [
+      0.12,
+      4.35,
+      0.12
+     ]
+    },
+    {
+     "center": [
+      1.1,
+      1.118,
+      -0.0
+     ],
+     "size": [
+      2.2,
+      2.875,
+      4.6
+     ]
+    },
+    {
+     "center": [
+      -2.84,
+      1.278,
+      -0.0
+     ],
+     "size": [
+      5.68,
+      2.555,
+      4.6
+     ]
+    }
+   ],
+   "doors": [
+    {
+     "kind": "metal",
+     "s": 3.598463302307726
+    }
+   ],
+   "triangles": 6308
+  },
+  {
+   "row": "river",
+   "width": 5.0,
+   "depth": 6.26,
+   "storeys": 3,
+   "seed": 4013,
+   "file": "house_13.glb",
+   "colliders": [
+    {
+     "center": [
+      -3.13,
+      1.304,
+      -0.0
+     ],
+     "size": [
+      6.26,
+      2.607,
+      5.0
+     ]
+    }
+   ],
+   "doors": [
+    {
+     "kind": "planks",
+     "s": 1.1282529563654171
+    }
+   ],
+   "triangles": 7348
+  },
+  {
+   "row": "river",
+   "width": 3.8,
+   "depth": 6.06,
+   "storeys": 3,
+   "seed": 4014,
+   "file": "house_14.glb",
+   "colliders": [
+    {
+     "center": [
+      2.08,
+      -2.375,
+      1.78
+     ],
+     "size": [
+      0.12,
+      4.35,
+      0.12
+     ]
+    },
+    {
+     "center": [
+      2.08,
+      -2.375,
+      -0.0
+     ],
+     "size": [
+      0.12,
+      4.35,
+      0.12
+     ]
+    },
+    {
+     "center": [
+      2.08,
+      -2.375,
+      -1.78
+     ],
+     "size": [
+      0.12,
+      4.35,
+      0.12
+     ]
+    },
+    {
+     "center": [
+      1.1,
+      1.231,
+      -0.0
+     ],
+     "size": [
+      2.2,
+      3.101,
+      3.8
+     ]
+    },
+    {
+     "center": [
+      -3.03,
+      1.391,
+      -0.0
+     ],
+     "size": [
+      6.06,
+      2.781,
+      3.8
+     ]
+    }
+   ],
+   "doors": [
+    {
+     "kind": "metal",
+     "s": 1.0331024587469186
+    }
+   ],
+   "triangles": 8108
+  },
+  {
+   "row": "river",
+   "width": 4.6,
+   "depth": 6.22,
+   "storeys": 3,
+   "seed": 4015,
+   "file": "house_15.glb",
+   "colliders": [
+    {
+     "center": [
+      2.08,
+      -2.375,
+      2.18
+     ],
+     "size": [
+      0.12,
+      4.35,
+      0.12
+     ]
+    },
+    {
+     "center": [
+      2.08,
+      -2.375,
+      0.727
+     ],
+     "size": [
+      0.12,
+      4.35,
+      0.12
+     ]
+    },
+    {
+     "center": [
+      2.08,
+      -2.375,
+      -0.727
+     ],
+     "size": [
+      0.12,
+      4.35,
+      0.12
+     ]
+    },
+    {
+     "center": [
+      2.08,
+      -2.375,
+      -2.18
+     ],
+     "size": [
+      0.12,
+      4.35,
+      0.12
+     ]
+    },
+    {
+     "center": [
+      1.1,
+      1.068,
+      -0.0
+     ],
+     "size": [
+      2.2,
+      2.776,
+      4.6
+     ]
+    },
+    {
+     "center": [
+      -3.11,
+      1.228,
+      -0.0
+     ],
+     "size": [
+      6.22,
+      2.456,
+      4.6
+     ]
+    }
+   ],
+   "doors": [
+    {
+     "kind": "open",
+     "s": 0.9263746332101938
+    }
+   ],
+   "triangles": 5952
+  },
+  {
+   "row": "river",
+   "width": 5.6,
+   "depth": 5.22,
+   "storeys": 2,
+   "seed": 4016,
+   "file": "house_16.glb",
+   "colliders": [
+    {
+     "center": [
+      -2.61,
+      1.264,
+      -0.0
+     ],
+     "size": [
+      5.22,
+      2.528,
+      5.6
+     ]
+    }
+   ],
+   "doors": [
+    {
+     "kind": "open",
+     "s": 1.2344577887237695
+    }
+   ],
+   "triangles": 3292
+  },
+  {
+   "row": "river",
+   "width": 3.8,
+   "depth": 5.55,
+   "storeys": 2,
+   "seed": 4017,
+   "file": "house_17.glb",
+   "colliders": [
+    {
+     "center": [
+      -2.775,
+      1.297,
+      -0.0
+     ],
+     "size": [
+      5.55,
+      2.594,
+      3.8
+     ]
+    }
+   ],
+   "doors": [
+    {
+     "kind": "boarded",
+     "s": 1.7094397543622273
+    }
+   ],
+   "triangles": 4880
+  },
+  {
+   "row": "back",
+   "width": 3.2,
+   "depth": 4.57,
+   "storeys": 1,
+   "seed": 5000,
+   "file": "house_18.glb",
+   "colliders": [
+    {
+     "center": [
+      -2.285,
+      1.305,
+      -0.0
+     ],
+     "size": [
+      4.57,
+      2.609,
+      3.2
+     ]
+    }
+   ],
+   "doors": [
+    {
+     "kind": "metal",
+     "s": 1.745157147215513,
+     "side": "+x"
+    }
+   ],
+   "triangles": 780
+  },
+  {
+   "row": "back",
+   "width": 3.2,
+   "depth": 4.08,
+   "storeys": 2,
+   "seed": 5001,
+   "file": "house_19.glb",
+   "colliders": [
+    {
+     "center": [
+      -2.04,
+      1.299,
+      -0.0
+     ],
+     "size": [
+      4.08,
+      2.598,
+      3.2
+     ]
+    }
+   ],
+   "doors": [
+    {
+     "kind": "planks",
+     "s": 1.5424436386257305,
+     "side": "+x"
+    }
+   ],
+   "triangles": 1936
+  },
+  {
+   "row": "back",
+   "width": 3.6,
+   "depth": 4.02,
+   "storeys": 3,
+   "seed": 5002,
+   "file": "house_20.glb",
+   "colliders": [
+    {
+     "center": [
+      -2.01,
+      1.377,
+      -0.0
+     ],
+     "size": [
+      4.02,
+      2.754,
+      3.6
+     ]
+    }
+   ],
+   "doors": [
+    {
+     "kind": "metal",
+     "s": 1.4186374746324764,
+     "side": "+x"
+    }
+   ],
+   "triangles": 6562
+  },
+  {
+   "row": "back",
+   "width": 3.2,
+   "depth": 4.64,
+   "storeys": 3,
+   "seed": 5003,
+   "file": "house_21.glb",
+   "colliders": [
+    {
+     "center": [
+      -2.32,
+      1.296,
+      -0.0
+     ],
+     "size": [
+      4.64,
+      2.592,
+      3.2
+     ]
+    }
+   ],
+   "doors": [
+    {
+     "kind": "open",
+     "s": 1.672145741005604,
+     "side": "+x"
+    }
+   ],
+   "triangles": 3372
+  },
+  {
+   "row": "back",
+   "width": 4.6,
+   "depth": 4.69,
+   "storeys": 2,
+   "seed": 5004,
+   "file": "house_22.glb",
+   "colliders": [
+    {
+     "center": [
+      -2.345,
+      1.284,
+      -0.0
+     ],
+     "size": [
+      4.69,
+      2.567,
+      4.6
+     ]
+    }
+   ],
+   "doors": [
+    {
+     "kind": "boarded",
+     "s": 1.0580888109593256,
+     "side": "+x"
+    }
+   ],
+   "triangles": 2498
+  },
+  {
+   "row": "back",
+   "width": 4.0,
+   "depth": 4.41,
+   "storeys": 2,
+   "seed": 5005,
+   "file": "house_23.glb",
+   "colliders": [
+    {
+     "center": [
+      -2.205,
+      1.263,
+      -0.0
+     ],
+     "size": [
+      4.41,
+      2.525,
+      4.0
+     ]
+    }
+   ],
+   "doors": [
+    {
+     "kind": "planks",
+     "s": 2.522275655318641,
+     "side": "+x"
+    }
+   ],
+   "triangles": 2730
+  },
+  {
+   "row": "back",
+   "width": 4.0,
+   "depth": 4.05,
+   "storeys": 2,
+   "seed": 5006,
+   "file": "house_24.glb",
+   "colliders": [
+    {
+     "center": [
+      -2.025,
+      1.337,
+      -0.0
+     ],
+     "size": [
+      4.05,
+      2.675,
+      4.0
+     ]
+    }
+   ],
+   "doors": [
+    {
+     "kind": "boarded",
+     "s": 2.1814640459483905,
+     "side": "+x"
+    }
+   ],
+   "triangles": 2698
+  },
+  {
+   "row": "back",
+   "width": 4.6,
+   "depth": 4.91,
+   "storeys": 3,
+   "seed": 5007,
+   "file": "house_25.glb",
+   "colliders": [
+    {
+     "center": [
+      -2.455,
+      1.397,
+      -0.0
+     ],
+     "size": [
+      4.91,
+      2.794,
+      4.6
+     ]
+    }
+   ],
+   "doors": [
+    {
+     "kind": "open",
+     "s": 3.7971845586470057,
+     "side": "+x"
+    }
+   ],
+   "triangles": 5490
+  },
+  {
+   "row": "back",
+   "width": 4.0,
+   "depth": 4.81,
+   "storeys": 2,
+   "seed": 5008,
+   "file": "house_26.glb",
+   "colliders": [
+    {
+     "center": [
+      -2.405,
+      1.352,
+      -0.0
+     ],
+     "size": [
+      4.81,
+      2.704,
+      4.0
+     ]
+    }
+   ],
+   "doors": [
+    {
+     "kind": "boarded",
+     "s": 2.100830845061629,
+     "side": "+x"
+    }
+   ],
+   "triangles": 2986
+  },
+  {
+   "row": "back",
+   "width": 4.6,
+   "depth": 4.42,
+   "storeys": 1,
+   "seed": 5009,
+   "file": "house_27.glb",
+   "colliders": [
+    {
+     "center": [
+      -2.21,
+      1.35,
+      -0.0
+     ],
+     "size": [
+      4.42,
+      2.699,
+      4.6
+     ]
+    }
+   ],
+   "doors": [
+    {
+     "kind": "planks",
+     "s": 1.1230895620886032,
+     "side": "+x"
+    }
+   ],
+   "triangles": 1108
+  },
+  {
+   "row": "back",
+   "width": 4.0,
+   "depth": 5.15,
+   "storeys": 2,
+   "seed": 5010,
+   "file": "house_28.glb",
+   "colliders": [
+    {
+     "center": [
+      -2.575,
+      1.303,
+      -0.0
+     ],
+     "size": [
+      5.15,
+      2.607,
+      4.0
+     ]
+    }
+   ],
+   "doors": [
+    {
+     "kind": "metal",
+     "s": 2.8724103880647416,
+     "side": "+x"
+    }
+   ],
+   "triangles": 3050
+  },
+  {
+   "row": "back",
+   "width": 3.2,
+   "depth": 4.36,
+   "storeys": 2,
+   "seed": 5011,
+   "file": "house_29.glb",
+   "colliders": [
+    {
+     "center": [
+      -2.18,
+      1.321,
+      -0.0
+     ],
+     "size": [
+      4.36,
+      2.641,
+      3.2
+     ]
+    }
+   ],
+   "doors": [
+    {
+     "kind": "planks",
+     "s": 0.9225106076503097,
+     "side": "+x"
+    }
+   ],
+   "triangles": 2472
+  },
+  {
+   "row": "back",
+   "width": 4.6,
+   "depth": 4.78,
+   "storeys": 1,
+   "seed": 5012,
+   "file": "house_30.glb",
+   "colliders": [
+    {
+     "center": [
+      -2.39,
+      1.286,
+      -0.0
+     ],
+     "size": [
+      4.78,
+      2.573,
+      4.6
+     ]
+    }
+   ],
+   "doors": [
+    {
+     "kind": "boarded",
+     "s": 2.4716326812869234,
+     "side": "+x"
+    }
+   ],
+   "triangles": 1088
+  },
+  {
+   "row": "back",
+   "width": 3.6,
+   "depth": 4.58,
+   "storeys": 1,
+   "seed": 5013,
+   "file": "house_31.glb",
+   "colliders": [
+    {
+     "center": [
+      -2.29,
+      1.325,
+      -0.0
+     ],
+     "size": [
+      4.58,
+      2.649,
+      3.6
+     ]
+    }
+   ],
+   "doors": [
+    {
+     "kind": "open",
+     "s": 1.5741914997037534,
+     "side": "+x"
+    }
+   ],
+   "triangles": 1226
+  }
+ ],
+ "props": [
+  {
+   "name": "heap_large_a",
+   "file": "heap_large_a.glb",
+   "triangles": 18092
+  },
+  {
+   "name": "heap_large_b",
+   "file": "heap_large_b.glb",
+   "triangles": 19868
+  },
+  {
+   "name": "heap_medium_a",
+   "file": "heap_medium_a.glb",
+   "triangles": 10320
+  },
+  {
+   "name": "heap_medium_b",
+   "file": "heap_medium_b.glb",
+   "triangles": 8452
+  },
+  {
+   "name": "heap_small_a",
+   "file": "heap_small_a.glb",
+   "triangles": 2600
+  },
+  {
+   "name": "heap_small_b",
+   "file": "heap_small_b.glb",
+   "triangles": 4176
+  },
+  {
+   "name": "litter_a",
+   "file": "litter_a.glb",
+   "triangles": 5100
+  },
+  {
+   "name": "litter_b",
+   "file": "litter_b.glb",
+   "triangles": 5636
+  },
+  {
+   "name": "floating_a",
+   "file": "floating_a.glb",
+   "triangles": 868
+  },
+  {
+   "name": "floating_b",
+   "file": "floating_b.glb",
+   "triangles": 420
+  },
+  {
+   "name": "floating_c",
+   "file": "floating_c.glb",
+   "triangles": 1420
+  },
+  {
+   "name": "rubble_a",
+   "file": "rubble_a.glb",
+   "triangles": 360
+  },
+  {
+   "name": "rubble_b",
+   "file": "rubble_b.glb",
+   "triangles": 612
+  },
+  {
+   "name": "mattress",
+   "file": "mattress.glb",
+   "triangles": 72
+  },
+  {
+   "name": "cabinet",
+   "file": "cabinet.glb",
+   "triangles": 84
+  }
+ ]
+}

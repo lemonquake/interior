@@ -134,11 +134,12 @@ func _materials() -> void:
 		curtain.albedo_color = spec[1]
 		curtain.roughness = .9
 		b._materials[spec[0]] = curtain
-	# Night: behind one kind of curtain a lamp is still on. Someone is home, keeping quiet.
-	var lit := b._materials["n curtain a"] as StandardMaterial3D
-	lit.emission_enabled = true
-	lit.emission = Color(1.0, .62, .3)
-	lit.emission_energy_multiplier = .55
+	# The neighboring houses have no power or illuminated windows.
+	for key in ["n curtain a", "n curtain b", "n curtain c", "n glass"]:
+		var dark := b._materials[key] as StandardMaterial3D
+		dark.emission_enabled = false
+		dark.albedo_color = Color(.045, .052, .055)
+		dark.roughness = .88
 	for spec: Array in [["n lamp lens on", Color(1.0, .64, .3), 6.0], ["n lamp lens off", Color(.1, .1, .09), 0.0]]:
 		var lens := StandardMaterial3D.new()
 		lens.resource_name = "Neighbourhood / " + spec[0]

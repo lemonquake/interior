@@ -1,0 +1,24 @@
+{
+  "asset": "Rough Plaster Broken",
+  "author": "Rob Tuytel",
+  "source": "https://polyhaven.com/a/rough_plaster_broken",
+  "license": "CC0-1.0",
+  "retrieved": "2026-10-07",
+  "maps": [
+    {
+      "file": "albedo.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rough_plaster_broken/rough_plaster_broken_diff_1k.jpg",
+      "sha256": "ef13cbf8529f8b4b6a5b9628111a96f262f30c68d265964277b1976336885db1"
+    },
+    {
+      "file": "normal.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rough_plaster_broken/rough_plaster_broken_nor_gl_1k.jpg",
+      "sha256": "f0534b35c0304a0c7f969095a014bea616bcb4b4eb0646a669e9062692ae16f6"
+    },
+    {
+      "file": "roughness.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rough_plaster_broken/rough_plaster_broken_rough_1k.jpg",
+      "sha256": "8f7e33101489424eb2979b3367d0f22ff2dbc804d054f19102d324731ae8239c"
+    }
+  ]
+}

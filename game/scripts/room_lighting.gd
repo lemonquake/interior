@@ -2,6 +2,9 @@ class_name InteriorLighting
 extends Node3D
 ## Room lighting rig (contract section 6): WorldEnvironment, warm recessed downlights,
 ## LED strips, a lamp accent, kitchen daylight, reflection probes and TV glow.
+## 0.39: the environment's ambient, exposure and grade are the shared night grade (InteriorNight.apply_grade), set
+## on every apply_quality(); the warm "sky" built below is no longer used for ambient light. The kitchen daylight is
+## turned to dim moonlight by InteriorNight.apply_room().
 ##
 ## Built once by InteriorRoomBuilder (and saved by editor/bake_room.gd). Everything the
 ## runtime needs is stored on the nodes themselves (metadata + persistent groups), so
@@ -38,29 +41,29 @@ const AMBIENT_BOTTOM := Color(0.78, 0.66, 0.52)
 
 ## shadows = how many lights flagged "shadow" may cast one (in rig order).
 const DESKTOP_TIERS := [
+	# 0.26: Low casts no shadows at all and renders at 70 %; the lens pass (scripts/bodycam.gd) hides the softness.
+	{"msaa": Viewport.MSAA_DISABLED, "ssaa": Viewport.SCREEN_SPACE_AA_DISABLED, "scale": 0.7,
+		"shadows": 0, "atlas": 1024, "soft": RenderingServer.SHADOW_QUALITY_HARD,
+		"ssao": false, "ssil": false, "gi": false, "ssr": false, "probes": false, "ambient": 1.15},
 	{"msaa": Viewport.MSAA_DISABLED, "ssaa": Viewport.SCREEN_SPACE_AA_FXAA, "scale": 0.85,
 		"shadows": 2, "atlas": 2048, "soft": RenderingServer.SHADOW_QUALITY_SOFT_VERY_LOW,
-		"ssao": false, "ssil": false, "gi": false, "ssr": false, "probes": false, "ambient": 1.15},
-	{"msaa": Viewport.MSAA_2X, "ssaa": Viewport.SCREEN_SPACE_AA_DISABLED, "scale": 1.0,
+		"ssao": false, "ssil": false, "gi": false, "ssr": false, "probes": false, "ambient": 1.08},
+	{"msaa": Viewport.MSAA_DISABLED, "ssaa": Viewport.SCREEN_SPACE_AA_FXAA, "scale": 1.0,
 		"shadows": 4, "atlas": 4096, "soft": RenderingServer.SHADOW_QUALITY_SOFT_LOW,
 		"ssao": true, "ssil": false, "gi": false, "ssr": false, "probes": false, "ambient": 1.0,
-		"ssao_quality": RenderingServer.ENV_SSAO_QUALITY_LOW},
-	{"msaa": Viewport.MSAA_2X, "ssaa": Viewport.SCREEN_SPACE_AA_DISABLED, "scale": 1.0,
-		"shadows": 7, "atlas": 4096, "soft": RenderingServer.SHADOW_QUALITY_SOFT_LOW,
-		"ssao": true, "ssil": false, "gi": false, "ssr": false, "probes": false, "ambient": 1.0,
-		"ssao_quality": RenderingServer.ENV_SSAO_QUALITY_MEDIUM, "ssil_quality": RenderingServer.ENV_SSIL_QUALITY_LOW},
+		"ssao_quality": RenderingServer.ENV_SSAO_QUALITY_LOW, "ssil_quality": RenderingServer.ENV_SSIL_QUALITY_LOW},
 	{"msaa": Viewport.MSAA_4X, "ssaa": Viewport.SCREEN_SPACE_AA_DISABLED, "scale": 1.0,
 		"shadows": 99, "atlas": 8192, "soft": RenderingServer.SHADOW_QUALITY_SOFT_HIGH,
 		"ssao": true, "ssil": false, "gi": false, "ssr": true, "probes": false, "ambient": 1.0,
 		"ssao_quality": RenderingServer.ENV_SSAO_QUALITY_HIGH, "ssil_quality": RenderingServer.ENV_SSIL_QUALITY_HIGH},
 ]
 const MOBILE_TIERS := [
-	{"msaa": Viewport.MSAA_DISABLED, "scale": 0.7, "shadows": 1, "atlas": 1024,
-		"soft": RenderingServer.SHADOW_QUALITY_HARD, "ambient": 0.38},
+	{"msaa": Viewport.MSAA_DISABLED, "scale": 0.7, "shadows": 0, "atlas": 1024,
+		"soft": RenderingServer.SHADOW_QUALITY_HARD, "ambient": 1.0},
 	{"msaa": Viewport.MSAA_DISABLED, "scale": 0.78, "shadows": 2, "atlas": 2048,
-		"soft": RenderingServer.SHADOW_QUALITY_SOFT_VERY_LOW, "ambient": 0.38},
+		"soft": RenderingServer.SHADOW_QUALITY_SOFT_VERY_LOW, "ambient": 1.0},
 	{"msaa": Viewport.MSAA_2X, "scale": 0.85, "shadows": 2, "atlas": 2048,
-		"soft": RenderingServer.SHADOW_QUALITY_SOFT_VERY_LOW, "ambient": 0.38},
+		"soft": RenderingServer.SHADOW_QUALITY_SOFT_VERY_LOW, "ambient": 1.0},
 ]
 
 ## Room frame: floor y=0, ceiling 2.90, TV wall z=-2.8, kitchen x<-3.3 (window wall x=-5.65).
@@ -81,8 +84,6 @@ const DEFAULT_RIG := [
 	{"id": "window_daylight", "type": "spot", "position": [-5.45, 2.35, -0.1], "rotation_deg": [-35, -90, 0],
 		"energy": 2.0, "range": 6.0, "angle_deg": 70.0, "shadow": false, "kelvin": DAYLIGHT_K,
 		"mobile": true, "mobile_energy": 1.4, "fixture": false},
-	# Warm accent lamp glow in the rear-right corner.
-	{"id": "accent_lamp", "type": "omni", "position": [1.22, 1.40, 2.56], "energy": 0.35, "range": 2.6, "kelvin": LAMP_K, "lamp": true},
 	# LED strips: under the TV console front and under each floating shelf.
 	{"id": "strip_console", "type": "strip", "position": [-0.55, 0.11, -2.12], "length": 2.4, "energy": 1.2},
 	{"id": "strip_shelf_left_high", "type": "strip", "position": [-2.15, 2.21, -2.62], "length": 0.56},
@@ -144,14 +145,15 @@ func apply_quality(index: int) -> void:
 	var t := _tier()
 	var desktop := not (_compat or mobile)
 	if environment != null:
-		environment.ambient_light_energy = float(t.ambient)
+		# 0.39: the room shares the night grade with the street (scripts/night.gd); "ambient" only scales it.
+		var zone := float(environment.get_meta("night_zone", 0.0))
+		InteriorNight.apply_grade(environment, not desktop, float(t.ambient), zone)
 		environment.glow_enabled = true
 		environment.ssao_enabled = desktop and bool(t.get("ssao", false))
 		environment.ssil_enabled = desktop and bool(t.get("ssil", false))
 		environment.ssr_enabled = desktop and bool(t.get("ssr", false))
 		environment.sdfgi_enabled = desktop and bool(t.get("gi", false))
 		environment.tonemap_mode = Environment.TONE_MAPPER_AGX if desktop else Environment.TONE_MAPPER_FILMIC
-		environment.tonemap_exposure = 1.08 if desktop else 0.82
 	var budget := int(t.shadows)
 	var mobile_count := 0
 	for light in _lights:
@@ -335,6 +337,7 @@ func _make_environment() -> Environment:
 	env.sdfgi_energy = 1.3
 	env.sdfgi_normal_bias = 1.1
 	env.sdfgi_probe_bias = 1.1
+	InteriorNight.apply_grade(env, false)
 	return env
 
 func _vec(value: Variant, fallback := Vector3.ZERO) -> Vector3:

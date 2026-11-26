@@ -29,3 +29,26 @@ normalised) and played far from the player by `night_audio.gd`:
 Licences: https://creativecommons.org/licenses/by-sa/4.0/, https://creativecommons.org/licenses/by-sa/3.0/,
 https://creativecommons.org/licenses/by/4.0/, https://creativecommons.org/publicdomain/zero/1.0/.
 The wind, the low drone and the bamboo creak are synthesised at runtime.
+
+## 0.10: the hut sequence
+
+Cut or made by `tools/assets/fetch_hut_sfx.py` into `game/assets/audio/sfx/`:
+
+| File | Source | Author | Licence |
+|---|---|---|---|
+| siren_wail.ogg | [Civil-defense-siren-waver.ogg](https://commons.wikimedia.org/wiki/File:Civil-defense-siren-waver.ogg) (48 s cut, looped) | Techtonic | Public domain |
+| drawer_open.ogg | [Open drawer (Gravity Sound).wav](https://commons.wikimedia.org/wiki/File:Open_drawer_%28Gravity_Sound%29.wav) | Gravity Sound | CC BY 4.0 |
+| lock_turn.ogg, key_pickup.ogg, gun_pickup.ogg, ammo_pickup.ogg | synthesised in the script | this project | - |
+
+## 0.11: the Glock
+
+Neighborhood interactions: the whispered breath ("psst"), resonant wood knocks and worn doorbell are original procedural PCM sounds synthesized by `scripts/neighborhood_encounters.gd`. Rusty hinge stick/slip audio is synthesized by `scripts/push_gate.gd` and shared by the gates. Latches, mailbox rattles and distant footsteps reuse the project's existing credited/synthesized effects. No new third-party audio was added.
+
+Cut or made by `tools/assets/fetch_hut_sfx.py` into `game/assets/audio/sfx/` (played by `game/scripts/gun.gd`):
+
+| File | Source | Author | Licence |
+|---|---|---|---|
+| gun_shot.ogg | [9 mm gunshot-mike-koenig-123.wav](https://commons.wikimedia.org/wiki/File:9_mm_gunshot-mike-koenig-123.wav) (trimmed, high-passed) | Dantedun (recording by Mike Koenig) | CC BY-SA 4.0 |
+| gun_rack.ogg | [Gun Cocking Slow-Mike Koenig-1019236976.wav](https://commons.wikimedia.org/wiki/File:Gun_Cocking_Slow-Mike_Koenig-1019236976.wav) | Dantedun (recording by Mike Koenig) | CC BY-SA 4.0 |
+| gun_tail.ogg | the far echo, made from gun_shot.ogg in the script | this project (derived from the above) | CC BY-SA 4.0 |
+| gun_dry.ogg, gun_mag_out.ogg, gun_mag_in.ogg, gun_ricochet.ogg, hit_wood.ogg, hit_stone.ogg, hit_metal.ogg, hit_dirt.ogg, hit_glass.ogg, hit_water.ogg | synthesised in the script (Commons has no free magazine recordings) | this project | - |

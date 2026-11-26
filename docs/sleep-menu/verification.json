@@ -1,0 +1,9 @@
+{
+	"checks": 26,
+	"distant_peak_db": -19.8210762571175,
+	"failures": [],
+	"passed": true,
+	"psst_peak_db": -13.2679425252373,
+	"walking_peak_db": -9.39237241223927,
+	"walking_steps": 5
+}

@@ -133,7 +133,7 @@ func _run() -> void:
 		main._play()
 		await _frames(4)
 		check(get_nodes_in_group("original_room_props").size() == InteriorRoomBuilder.load_manifest().actors.size() and get_nodes_in_group("hamsters").size() == 3,"Restart must recreate exactly one room and three pets")
-		check(_node_count(main) == baseline_nodes,"Restart must have stable node allocation")
+		check(_node_count(main) == baseline_nodes,"Restart must have stable node allocation (%d, first %d)" % [_node_count(main), baseline_nodes])
 	main.queue_free()
 	paused = false
 	await _frames(3)

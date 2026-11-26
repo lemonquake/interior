@@ -9,7 +9,8 @@ extends Node3D
 ## - The ground (road, verges, dikes, banks, mud) casts no moon shadow: under the low moon the rutted road
 ##   shadowed itself, darker in the sharp near shadow cascade than in the next, leaving a hard colour line
 ##   across the road a few metres ahead (0.8). Trees, posts, the hut and props still cast shadows on it.
-## - The hut lantern flickers. The scarecrow turns to face you whenever you are not looking at it.
+## - The hut lantern flickers. The scarecrow turns to face you whenever you are not looking at it (not while the
+##   stranger digs under it, 0.11).
 ## - The ground mist (0.8) is no longer made here: scripts/neighborhood.gd keeps one faint mist volume
 ##   around the camera everywhere outside the house.
 
@@ -22,8 +23,11 @@ var _crow: Node3D
 var _crow_yaw := 0.0
 var _flicker := 0.0
 var _shown := true
+## 0.11: held still while the stranger digs under it and hands the box over (stranger.gd).
+var crow_frozen := false
 
 func _ready() -> void:
+	InteriorLoadClock.mark("fields: children ready")
 	add_to_group("fields")
 	# editor/bake_fields.gd runs without a current scene: bake only what the builder made.
 	if get_tree().current_scene == null:
@@ -87,7 +91,7 @@ func _process(delta: float) -> void:
 	_scarecrow(camera)
 
 func _scarecrow(camera: Camera3D) -> void:
-	if _crow == null:
+	if _crow == null or crow_frozen:
 		return
 	var to_crow := _crow.global_position - camera.global_position
 	var distance := to_crow.length()

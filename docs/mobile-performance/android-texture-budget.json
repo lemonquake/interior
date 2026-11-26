@@ -1,0 +1,6167 @@
+{
+	"customized": 1027,
+	"textures": [
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/survivors/jonna_z_jonna_hair.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/survivors/jonna_z_jonna_hair_nrm.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/characters/survivors/jonna_z_jonna.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/survivors/jonna_z_jonna_gear.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/survivors/pilcst_bea_z_pilcst_bea_hair.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/survivors/pilcst_bea_z_pilcst_bea_hair_nrm.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/characters/survivors/pilcst_bea_z_pilcst_bea.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/survivors/pilcst_bea_z_pilcst_bea_gear.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/survivors/pilcst_jerome_z_pilcst_jerome_hair.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/survivors/pilcst_jerome_z_pilcst_jerome_hair_nrm.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/characters/survivors/pilcst_jerome_z_pilcst_jerome.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/survivors/pilcst_jerome_z_pilcst_jerome_gear.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/survivors/pilcst_paolo_z_pilcst_paolo_hair.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/survivors/pilcst_paolo_z_pilcst_paolo_hair_nrm.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/characters/survivors/pilcst_paolo_z_pilcst_paolo.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/survivors/pilcst_paolo_z_pilcst_paolo_gear.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/survivors/pilcst_teves_z_pilcst_teves_hair.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/survivors/pilcst_teves_z_pilcst_teves_hair_nrm.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/characters/survivors/pilcst_teves_z_pilcst_teves.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/survivors/pilcst_teves_z_pilcst_teves_gear.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/survivors/pilcst_trisha_z_pilcst_trisha_hair.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/survivors/pilcst_trisha_z_pilcst_trisha_hair_nrm.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/characters/survivors/pilcst_trisha_z_pilcst_trisha.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/survivors/pilcst_trisha_z_pilcst_trisha_gear.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/survivors/school_guard_z_school_guard_hair.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/survivors/school_guard_z_school_guard_hair_nrm.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/characters/survivors/school_guard_z_school_guard.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/survivors/school_guard_z_school_guard_gear.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/characters/zombies/heavyarm_heavyarm_albedo.jpg",
+			"source_size": "(2048.0, 2048.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/characters/zombies/heavyarm_heavyarm_normal.png",
+			"source_size": "(2048.0, 2048.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/characters/zombies/z_janitor_s1_z_janitor_s1.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_janitor_s1_z_janitor_s1_gear.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_janitor_s1_z_janitor_s1_hair.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_janitor_s1_z_janitor_s1_hair_nrm.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/characters/zombies/z_janitor_s2_z_janitor_s2.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_janitor_s2_z_janitor_s2_gear.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_janitor_s2_z_janitor_s2_hair.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_janitor_s2_z_janitor_s2_hair_nrm.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/characters/zombies/z_pilcst_f1_z_pilcst_f1.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_pilcst_f1_z_pilcst_f1_gear.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_pilcst_f1_z_pilcst_f1_hair.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_pilcst_f1_z_pilcst_f1_hair_nrm.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/characters/zombies/z_pilcst_f2_z_pilcst_f2.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_pilcst_f2_z_pilcst_f2_gear.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_pilcst_f2_z_pilcst_f2_hair.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_pilcst_f2_z_pilcst_f2_hair_nrm.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/characters/zombies/z_pilcst_f3_z_pilcst_f3.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_pilcst_f3_z_pilcst_f3_gear.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_pilcst_f3_z_pilcst_f3_hair.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_pilcst_f3_z_pilcst_f3_hair_nrm.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/characters/zombies/z_pilcst_f4_z_pilcst_f4.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_pilcst_f4_z_pilcst_f4_gear.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_pilcst_f4_z_pilcst_f4_hair.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_pilcst_f4_z_pilcst_f4_hair_nrm.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/characters/zombies/z_pilcst_f5_z_pilcst_f5.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_pilcst_f5_z_pilcst_f5_gear.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_pilcst_f5_z_pilcst_f5_hair.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_pilcst_f5_z_pilcst_f5_hair_nrm.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/characters/zombies/z_pilcst_m1_z_pilcst_m1.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_pilcst_m1_z_pilcst_m1_gear.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_pilcst_m1_z_pilcst_m1_hair.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_pilcst_m1_z_pilcst_m1_hair_nrm.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/characters/zombies/z_pilcst_m2_z_pilcst_m2.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_pilcst_m2_z_pilcst_m2_gear.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_pilcst_m2_z_pilcst_m2_hair.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_pilcst_m2_z_pilcst_m2_hair_nrm.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/characters/zombies/z_pilcst_m3_z_pilcst_m3.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_pilcst_m3_z_pilcst_m3_gear.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_pilcst_m3_z_pilcst_m3_hair.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_pilcst_m3_z_pilcst_m3_hair_nrm.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/characters/zombies/z_pilcst_m4_z_pilcst_m4.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_pilcst_m4_z_pilcst_m4_gear.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_pilcst_m4_z_pilcst_m4_hair.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_pilcst_m4_z_pilcst_m4_hair_nrm.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/characters/zombies/z_pilcst_m5_z_pilcst_m5.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_pilcst_m5_z_pilcst_m5_gear.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_pilcst_m5_z_pilcst_m5_hair.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_pilcst_m5_z_pilcst_m5_hair_nrm.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/characters/zombies/z_teacher_f1_z_teacher_f1.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_teacher_f1_z_teacher_f1_gear.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_teacher_f1_z_teacher_f1_hair.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_teacher_f1_z_teacher_f1_hair_nrm.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/characters/zombies/z_teacher_f2_z_teacher_f2.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_teacher_f2_z_teacher_f2_hair.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_teacher_f2_z_teacher_f2_hair_nrm.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/characters/zombies/z_teacher_f3_z_teacher_f3.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_teacher_f3_z_teacher_f3_gear.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_teacher_f3_z_teacher_f3_hair.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_teacher_f3_z_teacher_f3_hair_nrm.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/characters/zombies/z_teacher_m1_z_teacher_m1.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_teacher_m1_z_teacher_m1_gear.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_teacher_m1_z_teacher_m1_hair.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_teacher_m1_z_teacher_m1_hair_nrm.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/characters/zombies/z_teacher_m2_z_teacher_m2.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_teacher_m2_z_teacher_m2_hair.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_teacher_m2_z_teacher_m2_hair_nrm.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/characters/zombies/z_teacher_m3_z_teacher_m3.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_teacher_m3_z_teacher_m3_hair.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/characters/zombies/z_teacher_m3_z_teacher_m3_hair_nrm.jpg",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(2048.0, 2048.0)",
+			"bytes": 2796216,
+			"path": "res://assets/coop/goods/atlas.png",
+			"source_size": "(4096.0, 4096.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/coop/goods/crack.png",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(128.0, 128.0)",
+			"bytes": 21872,
+			"path": "res://assets/coop/goods/hole.png",
+			"source_size": "(128.0, 128.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/coop/heavyarm/anino.png",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/coop/heavyarm/anino_rim.png",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(256.0, 256.0)",
+			"bytes": 43704,
+			"path": "res://assets/coop/heavyarm/beam_dust.png",
+			"source_size": "(256.0, 256.0)"
+		},
+		{
+			"android_size": "(512.0, 256.0)",
+			"bytes": 174800,
+			"path": "res://assets/coop/heavyarm/glare.png",
+			"source_size": "(512.0, 256.0)"
+		},
+		{
+			"android_size": "(256.0, 256.0)",
+			"bytes": 43704,
+			"path": "res://assets/coop/heavyarm/menu_pool.png",
+			"source_size": "(256.0, 256.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/coop/heavyarm/torch_cookie.png",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(256.0, 1024.0)",
+			"bytes": 349584,
+			"path": "res://assets/coop/heavyarm/torch_lane.png",
+			"source_size": "(256.0, 1024.0)"
+		},
+		{
+			"android_size": "(256.0, 320.0)",
+			"bytes": 54640,
+			"path": "res://assets/coop/label_0.png",
+			"source_size": "(256.0, 320.0)"
+		},
+		{
+			"android_size": "(256.0, 320.0)",
+			"bytes": 54640,
+			"path": "res://assets/coop/label_1.png",
+			"source_size": "(256.0, 320.0)"
+		},
+		{
+			"android_size": "(256.0, 320.0)",
+			"bytes": 54640,
+			"path": "res://assets/coop/label_2.png",
+			"source_size": "(256.0, 320.0)"
+		},
+		{
+			"android_size": "(256.0, 320.0)",
+			"bytes": 54640,
+			"path": "res://assets/coop/label_3.png",
+			"source_size": "(256.0, 320.0)"
+		},
+		{
+			"android_size": "(256.0, 320.0)",
+			"bytes": 54640,
+			"path": "res://assets/coop/label_4.png",
+			"source_size": "(256.0, 320.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/fields/sky/cloud_noise.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 1398128,
+			"path": "res://assets/grenade/explosion_albedo.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/grenade/explosion_emit.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(256.0, 256.0)",
+			"bytes": 43704,
+			"path": "res://assets/grenade/frag_grenade_grenade_body.png",
+			"source_size": "(256.0, 256.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 1398128,
+			"path": "res://assets/grenade/smoke_albedo.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 1398128,
+			"path": "res://assets/horror_textures/liquid/drag_smear.png",
+			"source_size": "(1254.0, 1254.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 1398128,
+			"path": "res://assets/horror_textures/liquid/pool.png",
+			"source_size": "(1254.0, 1254.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 1398128,
+			"path": "res://assets/horror_textures/liquid/splatter.png",
+			"source_size": "(1254.0, 1254.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/horror_textures/props/discarded_paper.png",
+			"source_size": "(1254.0, 1254.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/horror_textures/props/refuse_plastic_black.png",
+			"source_size": "(1254.0, 1254.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/horror_textures/props/stained_fabric.png",
+			"source_size": "(1254.0, 1254.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/horror_textures/props/tarnished_metal.png",
+			"source_size": "(1254.0, 1254.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/horror_textures/props/waterlogged_cardboard.png",
+			"source_size": "(1254.0, 1254.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/horror_textures/props/weathered_plastic.png",
+			"source_size": "(1254.0, 1254.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/canal/trashbag/textures/trashbag_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/canal/trashbag/textures/trashbag_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/canal/trashbag/textures/trashbag_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/canal/wooden_crate_01/textures/wooden_crate_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/canal/wooden_crate_01/textures/wooden_crate_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/canal/wooden_crate_01/textures/wooden_crate_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/alarm_clock_01_alarm_clock_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/alarm_clock_01_alarm_clock_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/decor/alarm_clock_01_alarm_clock_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/alarm_clock_01_alarm_clock_01_diff_1k_3.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/book_encyclopedia_set_01_book_encyclopedia_set_01_cover_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/book_encyclopedia_set_01_book_encyclopedia_set_01_cover_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/decor/book_encyclopedia_set_01_book_encyclopedia_set_01_cover_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/book_encyclopedia_set_01_book_encyclopedia_set_01_paper_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/book_encyclopedia_set_01_book_encyclopedia_set_01_paper_roughness_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/decor/book_encyclopedia_set_01_book_encyclopedia_set_01_paper_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/boombox_boombox_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/boombox_boombox_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/decor/boombox_boombox_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/boombox_boombox_speakers_diff_1k.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/boombox_boombox_speakers_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/brass_vase_01_brass_vase_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/brass_vase_01_brass_vase_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/decor/brass_vase_01_brass_vase_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/cassette_player_cassette_player_body_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/cassette_player_cassette_player_body_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/decor/cassette_player_cassette_player_body_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/cassette_player_cassette_player_body_diff_1k_3.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/cassette_player_cassette_player_tape_orangeblue_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/cassette_player_cassette_player_tape_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/decor/cassette_player_cassette_player_tape_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/ceramic_vase_01_ceramic_vase_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/ceramic_vase_01_ceramic_vase_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/decor/ceramic_vase_01_ceramic_vase_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/ceramic_vase_03_ceramic_vase_03_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/ceramic_vase_03_ceramic_vase_03_rough_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/decor/ceramic_vase_03_ceramic_vase_03_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/desk_lamp_arm_01_desk_lamp_arm_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/desk_lamp_arm_01_desk_lamp_arm_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/decor/desk_lamp_arm_01_desk_lamp_arm_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/fancy_picture_frame_01_fancy_picture_frame_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/fancy_picture_frame_01_fancy_picture_frame_01_rough_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/decor/fancy_picture_frame_01_fancy_picture_frame_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/fancy_picture_frame_01_fancy_picture_frame_01_canvas_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/fancy_picture_frame_01_fancy_picture_frame_01_canvas_rough_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/decor/fancy_picture_frame_01_fancy_picture_frame_01_canvas_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/modern_ceiling_lamp_01_modern_ceiling_lamp_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/modern_ceiling_lamp_01_modern_ceiling_lamp_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/decor/modern_ceiling_lamp_01_modern_ceiling_lamp_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/potted_plant_01_potted_plant_01_pot_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/potted_plant_01_potted_plant_01_pot_rough_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/decor/potted_plant_01_potted_plant_01_pot_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/potted_plant_01_potted_plant_01_leaves_diff_1k.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/potted_plant_01_potted_plant_01_leaves_rough_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/decor/potted_plant_01_potted_plant_01_leaves_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/potted_plant_02_potted_plant_02_pot_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/potted_plant_02_potted_plant_02_pot_rough_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/decor/potted_plant_02_potted_plant_02_pot_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/potted_plant_02_potted_plant_02_leaves_diff_1k.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/potted_plant_02_potted_plant_02_leaves_rough_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/decor/potted_plant_02_potted_plant_02_leaves_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/potted_plant_04_potted_plant_04_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/potted_plant_04_potted_plant_04_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/decor/potted_plant_04_potted_plant_04_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/side_table_01_side_table_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/side_table_01_side_table_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/decor/side_table_01_side_table_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/sofa_02_sofa_02_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/sofa_02_sofa_02_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/decor/sofa_02_sofa_02_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/steel_frame_shelves_01_steel_frame_shelves_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/steel_frame_shelves_01_steel_frame_shelves_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/decor/steel_frame_shelves_01_steel_frame_shelves_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/throw_pillows_01_throw_pillows_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/throw_pillows_01_throw_pillows_01_rough_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/decor/throw_pillows_01_throw_pillows_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/wicker_basket_01_wicker_basket_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/decor/wicker_basket_01_wicker_basket_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/decor/wicker_basket_01_wicker_basket_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/fields/bamboo_clump_Image_0.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/fields/bamboo_clump_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/fields/bamboo_clump_Image_2.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/fields/bamboo_clump_Image_3.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/fields/bamboo_clump_Image_4.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/fields/bamboo_clump_Image_5.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/fields/boulder_boulder_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/fields/boulder_boulder_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/fields/boulder_boulder_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/fields/bucket_wooden_bucket_02_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/fields/bucket_wooden_bucket_02_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/fields/bucket_wooden_bucket_02_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/fields/dead_trunk_b_dead_tree_trunk_02_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/fields/dead_trunk_b_dead_tree_trunk_02_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/fields/dead_trunk_b_dead_tree_trunk_02_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/fields/fallen_trunk_dead_tree_trunk_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/fields/fallen_trunk_dead_tree_trunk_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/fields/fallen_trunk_dead_tree_trunk_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/fields/fern_fern_02_diff_1k.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/fields/fern_fern_02_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/fields/fern_fern_02_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/fields/lantern_wooden_lantern_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/fields/lantern_wooden_lantern_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/fields/lantern_wooden_lantern_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/fields/lantern_wooden_lantern_01_glass_diff_1k.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/fields/lantern_wooden_lantern_01_glass_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/fields/lantern_wooden_lantern_01_glass_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/fields/power_pole_modular_electricity_poles_pieces_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/fields/power_pole_modular_electricity_poles_pieces_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/fields/power_pole_modular_electricity_poles_pieces_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/fields/power_pole_modular_electricity_poles_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/fields/power_pole_modular_electricity_poles_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/fields/power_pole_modular_electricity_poles_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/fields/reeds_Image_0.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/fields/reeds_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/fields/reeds_Image_2.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/fields/reeds_Image_3.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/fields/rock_moss_set_rock_moss_set_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/fields/rock_moss_set_rock_moss_set_01_rough_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/fields/rock_moss_set_rock_moss_set_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/fields/root_cluster_root_cluster_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/fields/root_cluster_root_cluster_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/fields/root_cluster_root_cluster_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/fields/tree_stump_tree_stump_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/fields/tree_stump_tree_stump_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/fields/tree_stump_tree_stump_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/guns/auger_a3_Image_8.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/auger_a3_Image_9.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/auger_a3_Image_10.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/auger_a3_Image_0.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/auger_a3_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/auger_a3_Image_2.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/auger_a3_Image_11.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/auger_a3_Image_12.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/auger_a3_Image_13.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/guns/auger_a3_Image_3.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/guns/auger_a3_Image_4.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/auger_a3_Image_5.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/auger_a3_Image_6.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/auger_a3_Image_7.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/bastion_s17_Image_0.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/bastion_s17_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/bastion_s17_Image_2.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/beretta_hi91_Image_0.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/beretta_hi91_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/guns/beretta_hi91_Image_2.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/beretta_hi91_Image_3.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/beretta_hi91_Image_4.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/beretta_hi91_Image_5.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/beretta_hi91_Image_6.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/guns/beretta_hi91_Image_7.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/beretta_hi91_Image_8.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/corsair_m4_Image_0.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/corsair_m4_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/corsair_m4_Image_2.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/corsair_m4_Image_3.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/guns/corsair_m4_Image_4.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/corsair_m4_Image_5.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/drakon_svd_Image_0.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/drakon_svd_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/drakon_svd_Image_2.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/eruption_ad15_Image_0.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/eruption_ad15_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/eruption_ad15_Image_2.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/eruption_ad15_Image_3.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/eruption_ad15_Image_4.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/eruption_ad15_Image_5.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/eruption_ad15_Image_6.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/eruption_ad15_Image_7.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/eruption_ad15_Image_8.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/garrison_m1_Image_3.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/garrison_m1_Image_4.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/garrison_m1_Image_5.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/gausser_db_Image_0.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/gausser_db_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/gausser_db_Image_2.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/guns/gtk44_Image_0.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/gtk44_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/gtk44_Image_2.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/guns/hornet_mp9_Image_0.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/hornet_mp9_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/hornet_mp9_Image_2.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/ironside_m37_Image_0.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/ironside_m37_Image_1_3.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/ironside_m37_Image_2.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/guns/ironside_m37_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/kestrel_k74_Image_0.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/kestrel_k74_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/kestrel_k74_Image_2.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/longreach_m40_Image_0.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/longreach_m40_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/longreach_m40_Image_2.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/longreach_m40_Image_3.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/longreach_m40_Image_4.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/longreach_m40_Image_5.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/guns/magnum_vex_Image_0.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/magnum_vex_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/magnum_vex_Image_2.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/sauer_p9_Image_0.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/sauer_p9_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/sauer_p9_Image_2.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/sentry_sk45_Image_0.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/sentry_sk45_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/sentry_sk45_Image_2.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/spartan_s12_Image_3.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/spartan_s12_Image_4.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/spartan_s12_Image_5.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/spartan_s12_Image_9.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/spartan_s12_Image_10.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/spartan_s12_Image_11.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/spartan_s12_Image_6.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/spartan_s12_Image_7.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/spartan_s12_Image_8.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/spartan_s12_Image_0.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/spartan_s12_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/spartan_s12_Image_2.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/talon_p90_Image_0.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/talon_p90_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/talon_p90_Image_2.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/tempest_a14_Image_0.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/tempest_a14_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/tempest_a14_Image_2.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/tempest_a14_Image_3.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/tempest_a14_Image_4.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/tempest_a14_Image_5.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/tempest_a14_Image_6.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/tempest_a14_Image_7.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/tempest_a14_Image_8.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/viper_v9_Image_0.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/viper_v9_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/viper_v9_Image_2.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/guns/viper_v9_Image_3.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nature/banana_plant_Image_0.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nature/banana_plant_Image_0_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nature/banana_small_Image_0.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nature/banana_small_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/nature/banana_small_Image_2.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nature/island_tree_01_island_tree_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nature/island_tree_01_island_tree_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/nature/island_tree_01_island_tree_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nature/island_tree_01_island_tree_01_leaves_diff_1k.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nature/island_tree_01_island_tree_01_leaves_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/nature/island_tree_01_island_tree_01_leaves_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nature/island_tree_01_island_tree_01_branches_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nature/island_tree_01_island_tree_01_branches_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/nature/island_tree_01_island_tree_01_branches_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nature/island_tree_02_island_tree_02_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nature/island_tree_02_island_tree_02_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/nature/island_tree_02_island_tree_02_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nature/island_tree_02_island_tree_02_leaves_diff_1k.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nature/island_tree_02_island_tree_02_leaves_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/nature/island_tree_02_island_tree_02_leaves_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nature/island_tree_02_island_tree_02_branches_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nature/island_tree_02_island_tree_02_branches_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/nature/island_tree_02_island_tree_02_branches_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nature/jacaranda_tree_jacaranda_tree_branches_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nature/jacaranda_tree_jacaranda_tree_branches_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/nature/jacaranda_tree_jacaranda_tree_branches_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nature/jacaranda_tree_jacaranda_tree_trunk_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nature/jacaranda_tree_jacaranda_tree_trunk_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/nature/jacaranda_tree_jacaranda_tree_trunk_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nature/jacaranda_tree_jacaranda_tree_leaves_diff_1k.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nature/jacaranda_tree_jacaranda_tree_leaves_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/nature/jacaranda_tree_jacaranda_tree_leaves_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nature/palm_coconut_a_Image_0.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nature/palm_coconut_a_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/nature/palm_coconut_a_Image_2.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nature/palm_coconut_a_Image_3.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nature/palm_coconut_a_Image_4.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/nature/palm_coconut_a_Image_5.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/nature/palm_coconut_a_Image_6.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/nature/palm_coconut_a_Image_7.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nature/palm_coconut_a_Image_8.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nature/palm_coconut_a_Image_9.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/nature/palm_coconut_a_Image_10.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nature/palm_coconut_b_Image_0.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/nature/palm_coconut_b_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/nature/palm_coconut_b_Image_2.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/nature/palm_coconut_b_Image_3.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nature/palm_coconut_b_Image_4.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/nature/palm_coconut_b_Image_7.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/nature/palm_coconut_b_Image_8.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nature/searsia_lucida_searsia_lucida_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nature/searsia_lucida_searsia_lucida_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/nature/searsia_lucida_searsia_lucida_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nature/searsia_lucida_searsia_lucida_diff_1k_3.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nature/shrub_02_shrub_02_diff_1k.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nature/shrub_02_shrub_02_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/nature/shrub_02_shrub_02_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nature/tree_mango_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nature/tree_mango_Image_2.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nature/tree_mango_Image_3.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nature/tree_small_02_tree_small_02_branch_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nature/tree_small_02_tree_small_02_branch_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/nature/tree_small_02_tree_small_02_branch_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nature/tree_small_02_tree_small_02_leaves_diff_1k.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nature/tree_small_02_tree_small_02_leaves_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/nature/tree_small_02_tree_small_02_leaves_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nature/tree_small_02_tree_small_02_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nature/tree_small_02_tree_small_02_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/nature/tree_small_02_tree_small_02_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_antique_ceramic_vase_01_antique_ceramic_vase_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_antique_ceramic_vase_01_antique_ceramic_vase_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_antique_ceramic_vase_01_antique_ceramic_vase_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_armchair_01_Armchair_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_armchair_01_Armchair_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_armchair_01_Armchair_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_bark_debris_01_bark_debris_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_bark_debris_01_bark_debris_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_bark_debris_01_bark_debris_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_barrel_01_Barrel_01_explosive_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_barrel_01_Barrel_01_explosive_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_barrel_01_Barrel_01_explosive_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_barrel_03_barrel_03_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_barrel_03_barrel_03_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_barrel_03_barrel_03_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_barrel_stove_barrel_stove_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_barrel_stove_barrel_stove_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_barrel_stove_barrel_stove_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_brass_candleholders_brass_candleholders_03_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_brass_candleholders_brass_candleholders_03_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_brass_candleholders_brass_candleholders_03_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_brass_candleholders_brass_candleholders_flame_diff_1k_4.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_brass_candleholders_brass_candleholders_flame_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_brass_candleholders_brass_candleholders_02_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_brass_candleholders_brass_candleholders_02_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_brass_candleholders_brass_candleholders_02_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_brass_candleholders_brass_candleholders_candles_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_brass_candleholders_brass_candleholders_candles_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_brass_candleholders_brass_candleholders_candles_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_brass_candleholders_brass_candleholders_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_brass_candleholders_brass_candleholders_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_brass_candleholders_brass_candleholders_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_brass_vase_03_brass_vase_03_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_brass_vase_03_brass_vase_03_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_brass_vase_03_brass_vase_03_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_candelabra_Image_3.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/nichols/nh_candelabra_Image_4.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_candelabra_Image_5.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/nichols/nh_candelabra_Image_8.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/nichols/nh_candelabra_Image_9.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_candelabra_Image_0.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_candelabra_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_candelabra_Image_2.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/nichols/nh_candelabra_Image_6.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/nichols/nh_candelabra_Image_7.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_ceramic_vase_02_ceramic_vase_02_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_ceramic_vase_02_ceramic_vase_02_rough_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_ceramic_vase_02_ceramic_vase_02_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_ceramic_vase_04_ceramic_vase_04_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_ceramic_vase_04_ceramic_vase_04_rough_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_ceramic_vase_04_ceramic_vase_04_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_chandelier_01_Chandelier_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_chandelier_01_Chandelier_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_chandelier_01_Chandelier_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_chandelier_02_Chandelier_02_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_chandelier_02_Chandelier_02_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_chandelier_02_Chandelier_02_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_chess_set_chess_set_pieces_white_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_chess_set_chess_set_pieces_white_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_chess_set_chess_set_pieces_white_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_chess_set_chess_set_board_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_chess_set_chess_set_board_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_chess_set_chess_set_board_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_chess_set_chess_set_pieces_black_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_chess_set_chess_set_pieces_black_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_chess_set_chess_set_pieces_black_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_classicconsole_01_ClassicConsole_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_classicconsole_01_ClassicConsole_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_classicconsole_01_ClassicConsole_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_classicnightstand_01_ClassicNightstand_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_classicnightstand_01_ClassicNightstand_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_classicnightstand_01_ClassicNightstand_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_coffeetable_01_CoffeeTable_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_coffeetable_01_CoffeeTable_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_coffeetable_01_CoffeeTable_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_concrete_cat_statue_concrete_cat_statue_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_concrete_cat_statue_concrete_cat_statue_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_concrete_cat_statue_concrete_cat_statue_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/nichols/nh_crow_Image_0.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_crow_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_crow_Image_2.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_crow_b_Image_0.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_crow_b_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_crow_b_Image_2.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_dead_quiver_trunk_dead_quiver_trunk_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_dead_quiver_trunk_dead_quiver_trunk_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_dead_quiver_trunk_dead_quiver_trunk_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_dead_tree_a_Image_0.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_dead_tree_a_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_dead_tree_a_Image_2.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/nichols/nh_dead_tree_a_Image_6.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_dead_tree_a_Image_7.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_dead_tree_a_Image_8.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_dead_tree_c_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_dead_tree_c_Image_0.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/nichols/nh_dead_tree_e_Image_0.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/nichols/nh_dead_tree_e_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_dead_tree_e_Image_2.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_dead_tree_e_Image_3.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_dining_chair_02_dining_chair_02_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_dining_chair_02_dining_chair_02_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_dining_chair_02_dining_chair_02_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_dining_table_dining_table_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_dining_table_dining_table_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_dining_table_dining_table_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_dry_branches_medium_01_dry_branches_medium_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_dry_branches_medium_01_dry_branches_medium_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_dry_branches_medium_01_dry_branches_medium_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_dusty_piano_Image_6.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_dusty_piano_Image_7.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_dusty_piano_Image_8.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_dusty_piano_Image_3.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_dusty_piano_Image_4.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_dusty_piano_Image_5.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_dusty_piano_Image_0.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/nichols/nh_dusty_piano_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_dusty_piano_Image_2.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_fancy_picture_frame_02_fancy_picture_frame_02_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_fancy_picture_frame_02_fancy_picture_frame_02_rough_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_fancy_picture_frame_02_fancy_picture_frame_02_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_fancy_picture_frame_02_fancy_picture_frame_02_canvas_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_fancy_picture_frame_02_fancy_picture_frame_02_canvas_rough_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_fancy_picture_frame_02_fancy_picture_frame_02_canvas_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_gothicbed_01_GothicBed_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_gothicbed_01_GothicBed_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_gothicbed_01_GothicBed_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_gothiccabinet_01_GothicCabinet_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_gothiccabinet_01_GothicCabinet_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_gothiccabinet_01_GothicCabinet_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_gothiccommode_01_GothicCommode_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_gothiccommode_01_GothicCommode_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_gothiccommode_01_GothicCommode_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_gothic_coffee_table_gothic_coffee_table_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_gothic_coffee_table_gothic_coffee_table_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_gothic_coffee_table_gothic_coffee_table_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_gothic_statue_gothic_statue_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_gothic_statue_gothic_statue_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_gothic_statue_gothic_statue_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_greenchair_01_GreenChair_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_greenchair_01_GreenChair_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_greenchair_01_GreenChair_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_hanging_picture_frame_01_hanging_picture_frame_01_diff_1k.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_hanging_picture_frame_01_hanging_picture_frame_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_hanging_picture_frame_01_hanging_picture_frame_01_artwork_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_hanging_picture_frame_01_hanging_picture_frame_01_artwork_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_hanging_picture_frame_01_hanging_picture_frame_01_artwork_roughness_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_hanging_picture_frame_01_hanging_picture_frame_01_diff_1k_6.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_hanging_picture_frame_01_hanging_picture_frame_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_hanging_picture_frame_02_hanging_picture_frame_02_artwork_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_hanging_picture_frame_02_hanging_picture_frame_02_artwork_roughness_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_hanging_picture_frame_02_hanging_picture_frame_02_artwork_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_hanging_picture_frame_02_hanging_picture_frame_02_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_hanging_picture_frame_02_hanging_picture_frame_02_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_hanging_picture_frame_02_hanging_picture_frame_02_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_hanging_picture_frame_02_hanging_picture_frame_02_diff_1k_6.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_hanging_picture_frame_03_hanging_picture_frame_03_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_hanging_picture_frame_03_hanging_picture_frame_03_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_hanging_picture_frame_03_hanging_picture_frame_03_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_hanging_picture_frame_03_hanging_picture_frame_03_artwork_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_hanging_picture_frame_03_hanging_picture_frame_03_artwork_rough_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_hanging_picture_frame_03_hanging_picture_frame_03_artwork_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_hanging_picture_frame_03_hanging_picture_frame_03_rough_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_horse_statue_01_horse_statue_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_horse_statue_01_horse_statue_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_horse_statue_01_horse_statue_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_lantern_01_Lantern_01_brass_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_lantern_01_Lantern_01_brass_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_lantern_01_Lantern_01_brass_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_lantern_01_Lantern_01_brass_diff_1k_3.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_large_iron_gate_large_iron_gate_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_large_iron_gate_large_iron_gate_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_large_iron_gate_large_iron_gate_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_lion_head_lion_head_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_lion_head_lion_head_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_lion_head_lion_head_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_mantel_clock_01_mantel_clock_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_mantel_clock_01_mantel_clock_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_mantel_clock_01_mantel_clock_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_mantel_clock_01_mantel_clock_01_diff_1k_3.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_marble_bust_01_marble_bust_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_marble_bust_01_marble_bust_01_rough_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_marble_bust_01_marble_bust_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_metal_office_desk_metal_office_desk_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_metal_office_desk_metal_office_desk_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_metal_office_desk_metal_office_desk_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_metal_tool_chest_metal_tool_chest_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_metal_tool_chest_metal_tool_chest_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_metal_tool_chest_metal_tool_chest_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_old_bed_frame_old_bed_frame_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_old_bed_frame_old_bed_frame_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_old_bed_frame_old_bed_frame_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_ornate_mirror_01_ornate_mirror_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_ornate_mirror_01_ornate_mirror_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_ornate_mirror_01_ornate_mirror_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_ottoman_01_Ottoman_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_ottoman_01_Ottoman_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_ottoman_01_Ottoman_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_painted_wooden_shelves_painted_wooden_shelves_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_painted_wooden_shelves_painted_wooden_shelves_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_painted_wooden_shelves_painted_wooden_shelves_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_pine_roots_pine_roots_a_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_pine_roots_pine_roots_a_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_pine_roots_pine_roots_a_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_pine_roots_pine_roots_b_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_pine_roots_pine_roots_b_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_pine_roots_pine_roots_b_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_0.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_2.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_3.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_4.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_5.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_6.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_7.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_8.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_9.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_10.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_11.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_12.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_13.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_14.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_15.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_16.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_17.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_18.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_19.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_20.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_21.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_22.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_23.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_24.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_25.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_26.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_27.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_28.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_29.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_30.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_31.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_32.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_33.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_34.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_35.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_36.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_37.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_38.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_39.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_40.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_41.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_42.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_43.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_44.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_45.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_46.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_47.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_48.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_49.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_50.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_51.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_52.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_53.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_54.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_55.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_56.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_57.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_porcelain_doll_Image_58.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_rockingchair_01_Rockingchair_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_rockingchair_01_Rockingchair_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_rockingchair_01_Rockingchair_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_rocking_horse_Image_0.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/nichols/nh_rocking_horse_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_rocking_horse_Image_2.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_root_cluster_02_root_cluster_02_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_root_cluster_02_root_cluster_02_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_root_cluster_02_root_cluster_02_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_round_wooden_table_01_round_wooden_table_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_round_wooden_table_01_round_wooden_table_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_round_wooden_table_01_round_wooden_table_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_sofa_01_Sofa_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_sofa_01_Sofa_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_sofa_01_Sofa_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_spinning_wheel_01_spinning_wheel_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_spinning_wheel_01_spinning_wheel_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_spinning_wheel_01_spinning_wheel_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_standing_picture_frame_01_standing_picture_frame_01_diff_1k.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_standing_picture_frame_01_standing_picture_frame_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_standing_picture_frame_01_standing_picture_frame_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_standing_picture_frame_01_standing_picture_frame_01_artwork_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_standing_picture_frame_01_standing_picture_frame_01_artwork_rough_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_standing_picture_frame_01_standing_picture_frame_01_artwork_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_standing_picture_frame_01_standing_picture_frame_01_diff_1k_6.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_steel_frame_shelves_02_steel_frame_shelves_02_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_steel_frame_shelves_02_steel_frame_shelves_02_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_steel_frame_shelves_02_steel_frame_shelves_02_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_tea_set_01_tea_set_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_tea_set_01_tea_set_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_tea_set_01_tea_set_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_treasure_chest_treasure_chest_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_treasure_chest_treasure_chest_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_treasure_chest_treasure_chest_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_tree_stump_02_tree_stump_02_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_tree_stump_02_tree_stump_02_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_tree_stump_02_tree_stump_02_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_vintage_cabinet_01_vintage_cabinet_01_a_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_vintage_cabinet_01_vintage_cabinet_01_a_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_vintage_cabinet_01_vintage_cabinet_01_a_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_vintage_cabinet_01_vintage_cabinet_01_b_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_vintage_cabinet_01_vintage_cabinet_01_b_rough_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_vintage_cabinet_01_vintage_cabinet_01_b_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_vintage_cabinet_01_vintage_cabinet_01_a_rough_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_vintage_crutches_01_vintage_crutches_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_vintage_crutches_01_vintage_crutches_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_vintage_crutches_01_vintage_crutches_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_vintage_day_bed_vintage_day_bed_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_vintage_day_bed_vintage_day_bed_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_vintage_day_bed_vintage_day_bed_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_vintage_grandfather_clock_01_vintage_grandfather_clock_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_vintage_grandfather_clock_01_vintage_grandfather_clock_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_vintage_grandfather_clock_01_vintage_grandfather_clock_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_vintage_grandfather_clock_01_vintage_grandfather_clock_01_diff_1k_3.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_vintage_oil_lamp_vintage_oil_lamp_glass_diff_1k.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_vintage_oil_lamp_vintage_oil_lamp_glass_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_vintage_oil_lamp_vintage_oil_lamp_glass_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_vintage_oil_lamp_vintage_oil_lamp_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_vintage_oil_lamp_vintage_oil_lamp_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_vintage_oil_lamp_vintage_oil_lamp_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_vintage_oil_lamp_vintage_oil_lamp_flame_diff_1k_7.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_vintage_oil_lamp_vintage_oil_lamp_flame_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_vintage_suitcase_vintage_suitcase_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_vintage_suitcase_vintage_suitcase_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_vintage_suitcase_vintage_suitcase_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_vintage_suitcase_vintage_suitcase_02_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_vintage_suitcase_vintage_suitcase_02_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_vintage_suitcase_vintage_suitcase_02_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_vintage_wooden_drawer_01_vintage_wooden_drawer_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_vintage_wooden_drawer_01_vintage_wooden_drawer_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_vintage_wooden_drawer_01_vintage_wooden_drawer_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_wheelchair_01_wheelchair_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_wheelchair_01_wheelchair_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_wheelchair_01_wheelchair_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_wine_barrel_01_wine_barrel_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_wine_barrel_01_wine_barrel_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_wine_barrel_01_wine_barrel_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_wine_bottles_01_wine_bottles_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_wine_bottles_01_wine_bottles_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_wine_bottles_01_wine_bottles_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_wine_bottles_01_wine_bottles_01_diff_1k_3.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_wine_bottles_01_wine_bottles_01_label_ftero_vinea_01_diff_1k.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_wine_bottles_01_wine_bottles_01_label_ftero_vinea_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_wine_bottles_01_wine_bottles_01_paper_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_wine_bottles_01_wine_bottles_01_label_clearwater_crystals_01_diff_1k.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_wine_bottles_01_wine_bottles_01_label_clearwater_crystals_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_wine_bottles_01_wine_bottles_01_label_intertwine_01_diff_1k.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_wine_bottles_01_wine_bottles_01_label_intertwine_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_wine_bottles_01_wine_bottles_01_label_ftero_vinea_02_diff_1k.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_wine_bottles_01_wine_bottles_01_label_ftero_vinea_02_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_woodenchair_01_WoodenChair_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_woodenchair_01_WoodenChair_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_woodenchair_01_WoodenChair_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_wooden_bookshelf_worn_wooden_bookshelf_worn_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_wooden_bookshelf_worn_wooden_bookshelf_worn_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_wooden_bookshelf_worn_wooden_bookshelf_worn_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_wooden_candlestick_wooden_candlestick_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_wooden_candlestick_wooden_candlestick_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_wooden_candlestick_wooden_candlestick_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_wooden_crate_01_wooden_crate_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_wooden_crate_01_wooden_crate_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_wooden_crate_01_wooden_crate_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_wooden_crate_02_wooden_crate_02_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_wooden_crate_02_wooden_crate_02_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_wooden_crate_02_wooden_crate_02_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_wooden_display_shelves_01_wooden_display_shelves_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_wooden_display_shelves_01_wooden_display_shelves_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_wooden_display_shelves_01_wooden_display_shelves_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_wooden_ladder_wooden_ladder_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_wooden_ladder_wooden_ladder_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_wooden_ladder_wooden_ladder_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_worn_metal_rack_worn_metal_rack_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_worn_metal_rack_worn_metal_rack_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/nichols/nh_worn_metal_rack_worn_metal_rack_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/story/ammo_box_ammo_box_label.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/story/ammo_box_label.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/street/exterior_aircon_unit_exterior_aircon_unit_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/street/exterior_aircon_unit_exterior_aircon_unit_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/street/exterior_aircon_unit_exterior_aircon_unit_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/street/exterior_aircon_unit_exterior_aircon_unit_01_opacity_1k.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/street/exterior_aircon_unit_exterior_aircon_unit_02_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/street/exterior_aircon_unit_exterior_aircon_unit_02_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/street/exterior_aircon_unit_exterior_aircon_unit_rusted_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/street/exterior_aircon_unit_exterior_aircon_unit_rusted_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/street/exterior_aircon_unit_exterior_aircon_unit_rusted_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/street/exterior_aircon_unit_exterior_aircon_unit_rusted_02_opacity_1k.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/street/exterior_aircon_unit_exterior_aircon_unit_rusted_02_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/street/exterior_aircon_unit_exterior_aircon_unit_rusted_02_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/street/food_cart_a_Image_3.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/street/food_cart_a_Image_4.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/street/food_cart_a_Image_5.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/street/food_cart_a_Image_7.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/street/food_cart_a_Image_8.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/street/food_cart_a_Image_9.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/street/food_cart_a_Image_10.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/street/food_cart_a_Image_11.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 256.0)",
+			"bytes": 87400,
+			"path": "res://assets/models/street/food_cart_b_Image_0.jpg",
+			"source_size": "(1024.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 256.0)",
+			"bytes": 87400,
+			"path": "res://assets/models/street/food_cart_b_Image_1.png",
+			"source_size": "(1024.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/street/food_stall_c_Image_0.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/street/food_stall_c_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/street/jeepney_Image_0.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/street/jeepney_Image_4.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/street/oil_drum_Image_0.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/street/oil_drum_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/street/oil_drum_Image_2.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/street/plastic_monobloc_chair_01_plastic_monobloc_chair_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/street/plastic_monobloc_chair_01_plastic_monobloc_chair_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/street/plastic_monobloc_chair_01_plastic_monobloc_chair_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/street/power_box_01_power_box_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/street/power_box_01_power_box_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/street/power_box_01_power_box_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/street/security_light_security_light_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/street/security_light_security_light_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/street/security_light_security_light_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/street/security_light_security_light_diff_1k_3.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/street/street_lamp_01_street_lamp_01_diff_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/street/street_lamp_01_street_lamp_01_arm_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/street/street_lamp_01_street_lamp_01_nor_gl_1k.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/street/street_lamp_01_street_lamp_01_diff_1k_3.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/amp_marshall_Image_0.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/amp_marshall_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/studio/amp_marshall_Image_2.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/amp_orange_Image_0.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/amp_orange_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/studio/amp_orange_Image_2.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/audio_interface_Image_0.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/audio_interface_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/drum_kit_Image_0.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/drum_kit_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/studio/drum_kit_Image_2.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/drum_kit_Image_3.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/drum_kit_Image_4.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/studio/drum_kit_Image_5.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/drum_kit_Image_6.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/drum_kit_Image_7.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/studio/drum_kit_Image_8.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/drum_kit_Image_9.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/drum_kit_Image_10.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/studio/drum_kit_Image_11.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/drum_kit_Image_12.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/drum_kit_Image_13.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/studio/drum_kit_Image_14.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/gaming_chair_Image_0.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/gaming_chair_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/studio/gaming_chair_Image_2.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/studio/guitar_acoustic_a_Image_0.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/guitar_acoustic_a_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/guitar_acoustic_a_Image_2.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/guitar_acoustic_a_Image_3.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/studio/guitar_acoustic_a_Image_4.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/guitar_acoustic_a_Image_5.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/studio/guitar_acoustic_a_Image_6.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/guitar_acoustic_a_Image_7.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/guitar_acoustic_a_Image_8.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/guitar_acoustic_a_Image_9.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/guitar_acoustic_a_Image_10.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/guitar_acoustic_a_Image_11.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/guitar_acoustic_a_Image_12.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/guitar_acoustic_a_Image_13.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/guitar_acoustic_a_Image_14.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/guitar_acoustic_a_Image_15.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/guitar_acoustic_a_Image_16.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/guitar_acoustic_a_Image_17.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/guitar_acoustic_a_Image_18.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/guitar_acoustic_a_Image_19.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/guitar_acoustic_b_Image_0.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/guitar_acoustic_b_Image_1.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/guitar_ibanez_Image_0.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/guitar_ibanez_Image_2-Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/studio/guitar_ibanez_Image_3.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/studio/guitar_ibanez_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/guitar_lespaul_Image_0.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/guitar_lespaul_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/studio/guitar_lespaul_Image_2.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/guitar_sg_Image_0.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/guitar_sg_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/studio/guitar_sg_Image_2.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/guitar_stand_Image_0.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/guitar_stand_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/studio/guitar_stand_Image_2.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/headphones_sony_Image_0.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/headphones_sony_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/studio/headphones_sony_Image_2.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/studio/headphones_sony_Image_3.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/studio/headphones_sony_Image_4.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/studio/headphones_sony_Image_5.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/mic_boom_stand_Image_0.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/mic_boom_stand_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/studio/mic_boom_stand_Image_2.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 256.0)",
+			"bytes": 87400,
+			"path": "res://assets/models/studio/midi_controller_Image_0.png",
+			"source_size": "(1024.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 256.0)",
+			"bytes": 87400,
+			"path": "res://assets/models/studio/midi_controller_Image_1.png",
+			"source_size": "(1024.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/studio/studio_monitor_krk_Image_0.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/studio/studio_monitor_krk_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/studio/studio_monitor_krk_Image_2.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/studio_monitor_krk_Image_3.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/studio_monitor_krk_Image_4.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/studio/studio_monitor_krk_Image_5.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/studio_monitor_krk_Image_6.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/studio/studio_monitor_krk_Image_7.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/studio/studio_monitor_krk_Image_8.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/studio/studio_monitor_krk_Image_12.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/studio/studio_monitor_krk_Image_14.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/studio/studio_monitor_krk_Image_9.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/studio_monitor_krk_Image_10.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/studio/studio_monitor_krk_Image_11.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/studio/studio_monitor_krk_Image_13.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/studio_monitor_krk_Image_15.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/studio_monitor_krk_Image_16.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/studio/studio_monitor_krk_Image_17.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/synth_wood_Image_0.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/synth_wood_Image_1.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/models/studio/synth_wood_Image_2.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/models/studio/synth_wood_Image_3.jpg",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(1024.0, 384.0)",
+			"bytes": 524368,
+			"path": "res://assets/nichols/blood/drag_a_albedo.png",
+			"source_size": "(1024.0, 384.0)"
+		},
+		{
+			"android_size": "(1024.0, 384.0)",
+			"bytes": 262184,
+			"path": "res://assets/nichols/blood/drag_a_normal.png",
+			"source_size": "(1024.0, 384.0)"
+		},
+		{
+			"android_size": "(1024.0, 384.0)",
+			"bytes": 524368,
+			"path": "res://assets/nichols/blood/drag_a_orm.png",
+			"source_size": "(1024.0, 384.0)"
+		},
+		{
+			"android_size": "(1024.0, 384.0)",
+			"bytes": 524368,
+			"path": "res://assets/nichols/blood/drag_b_albedo.png",
+			"source_size": "(1024.0, 384.0)"
+		},
+		{
+			"android_size": "(1024.0, 384.0)",
+			"bytes": 262184,
+			"path": "res://assets/nichols/blood/drag_b_normal.png",
+			"source_size": "(1024.0, 384.0)"
+		},
+		{
+			"android_size": "(1024.0, 384.0)",
+			"bytes": 524368,
+			"path": "res://assets/nichols/blood/drag_b_orm.png",
+			"source_size": "(1024.0, 384.0)"
+		},
+		{
+			"android_size": "(1024.0, 384.0)",
+			"bytes": 524368,
+			"path": "res://assets/nichols/blood/drag_c_albedo.png",
+			"source_size": "(1024.0, 384.0)"
+		},
+		{
+			"android_size": "(1024.0, 384.0)",
+			"bytes": 262184,
+			"path": "res://assets/nichols/blood/drag_c_normal.png",
+			"source_size": "(1024.0, 384.0)"
+		},
+		{
+			"android_size": "(1024.0, 384.0)",
+			"bytes": 524368,
+			"path": "res://assets/nichols/blood/drag_c_orm.png",
+			"source_size": "(1024.0, 384.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/nichols/blood/drops_albedo.png",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/nichols/blood/drops_normal.png",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/nichols/blood/drops_orm.png",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/nichols/blood/pool_albedo.png",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/nichols/blood/pool_normal.png",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/nichols/blood/pool_orm.png",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(1024.0, 256.0)",
+			"bytes": 349584,
+			"path": "res://assets/nichols/blood/scrape_albedo.png",
+			"source_size": "(1024.0, 256.0)"
+		},
+		{
+			"android_size": "(1024.0, 256.0)",
+			"bytes": 174792,
+			"path": "res://assets/nichols/blood/scrape_normal.png",
+			"source_size": "(1024.0, 256.0)"
+		},
+		{
+			"android_size": "(1024.0, 256.0)",
+			"bytes": 349584,
+			"path": "res://assets/nichols/blood/scrape_orm.png",
+			"source_size": "(1024.0, 256.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/nichols/wallpaper_masks.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(1024.0, 512.0)",
+			"bytes": 349544,
+			"path": "res://assets/outdoor/sky/misty_afternoon_sky.png",
+			"source_size": "(4096.0, 2048.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/outdoor/textures/damaged_concrete_floor/albedo.jpg",
+			"source_size": "(2048.0, 2048.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/outdoor/textures/damaged_concrete_floor/normal.jpg",
+			"source_size": "(2048.0, 2048.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/outdoor/textures/damaged_concrete_floor/roughness.jpg",
+			"source_size": "(2048.0, 2048.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/outdoor/textures/dark_paneled_wood/albedo.jpg",
+			"source_size": "(2048.0, 2048.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/outdoor/textures/dark_paneled_wood/normal.jpg",
+			"source_size": "(2048.0, 2048.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/outdoor/textures/dark_paneled_wood/roughness.jpg",
+			"source_size": "(2048.0, 2048.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/outdoor/textures/decrepit_wallpaper/albedo.jpg",
+			"source_size": "(2048.0, 2048.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/outdoor/textures/decrepit_wallpaper/normal.jpg",
+			"source_size": "(2048.0, 2048.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/outdoor/textures/decrepit_wallpaper/roughness.jpg",
+			"source_size": "(2048.0, 2048.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/outdoor/textures/dirty_concrete/albedo.jpg",
+			"source_size": "(2048.0, 2048.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/outdoor/textures/dirty_concrete/normal.jpg",
+			"source_size": "(2048.0, 2048.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/outdoor/textures/dirty_concrete/roughness.jpg",
+			"source_size": "(2048.0, 2048.0)"
+		},
+		{
+			"android_size": "(676.0, 1024.0)",
+			"bytes": 462488,
+			"path": "res://assets/outdoor/textures/floral_jacquard/albedo.jpg",
+			"source_size": "(1024.0, 1553.0)"
+		},
+		{
+			"android_size": "(676.0, 1024.0)",
+			"bytes": 462488,
+			"path": "res://assets/outdoor/textures/floral_jacquard/normal.jpg",
+			"source_size": "(1024.0, 1553.0)"
+		},
+		{
+			"android_size": "(676.0, 1024.0)",
+			"bytes": 462488,
+			"path": "res://assets/outdoor/textures/floral_jacquard/roughness.jpg",
+			"source_size": "(1024.0, 1553.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/outdoor/textures/old_stone_wall/albedo.jpg",
+			"source_size": "(2048.0, 2048.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/outdoor/textures/old_stone_wall/normal.jpg",
+			"source_size": "(2048.0, 2048.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/outdoor/textures/old_stone_wall/roughness.jpg",
+			"source_size": "(2048.0, 2048.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/outdoor/textures/old_wood_floor/albedo.jpg",
+			"source_size": "(2048.0, 2048.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/outdoor/textures/old_wood_floor/normal.jpg",
+			"source_size": "(2048.0, 2048.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/outdoor/textures/old_wood_floor/roughness.jpg",
+			"source_size": "(2048.0, 2048.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/outdoor/textures/roof_slates_02/albedo.jpg",
+			"source_size": "(2048.0, 2048.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/outdoor/textures/roof_slates_02/normal.jpg",
+			"source_size": "(2048.0, 2048.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/outdoor/textures/roof_slates_02/roughness.jpg",
+			"source_size": "(2048.0, 2048.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/outdoor/textures/rustic_stone_wall_02/albedo.jpg",
+			"source_size": "(2048.0, 2048.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/outdoor/textures/rustic_stone_wall_02/normal.jpg",
+			"source_size": "(2048.0, 2048.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/outdoor/textures/rustic_stone_wall_02/roughness.jpg",
+			"source_size": "(2048.0, 2048.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/outdoor/textures/weathered_plank_siding/albedo.jpg",
+			"source_size": "(2048.0, 2048.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/outdoor/textures/weathered_plank_siding/normal.jpg",
+			"source_size": "(2048.0, 2048.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/outdoor/textures/weathered_plank_siding/roughness.jpg",
+			"source_size": "(2048.0, 2048.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/outdoor/textures/worn_mossy_plasterwall/albedo.jpg",
+			"source_size": "(2048.0, 2048.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/outdoor/textures/worn_mossy_plasterwall/normal.jpg",
+			"source_size": "(2048.0, 2048.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/outdoor/textures/worn_mossy_plasterwall/roughness.jpg",
+			"source_size": "(2048.0, 2048.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/school/board.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/school/ceiling.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/school/checker.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/school/classroom.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/school/corridor.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/school/cream.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(1024.0, 1024.0)",
+			"bytes": 699064,
+			"path": "res://assets/school/green.png",
+			"source_size": "(1024.0, 1024.0)"
+		},
+		{
+			"android_size": "(256.0, 256.0)",
+			"bytes": 43704,
+			"path": "res://assets/school/paper.png",
+			"source_size": "(256.0, 256.0)"
+		},
+		{
+			"android_size": "(64.0, 64.0)",
+			"bytes": 5488,
+			"path": "res://assets/zombies/blood/droplet.png",
+			"source_size": "(64.0, 64.0)"
+		},
+		{
+			"android_size": "(256.0, 256.0)",
+			"bytes": 87408,
+			"path": "res://assets/zombies/blood/drops_a_albedo.png",
+			"source_size": "(256.0, 256.0)"
+		},
+		{
+			"android_size": "(256.0, 256.0)",
+			"bytes": 43704,
+			"path": "res://assets/zombies/blood/drops_a_normal.png",
+			"source_size": "(256.0, 256.0)"
+		},
+		{
+			"android_size": "(256.0, 256.0)",
+			"bytes": 87408,
+			"path": "res://assets/zombies/blood/drops_b_albedo.png",
+			"source_size": "(256.0, 256.0)"
+		},
+		{
+			"android_size": "(256.0, 256.0)",
+			"bytes": 43704,
+			"path": "res://assets/zombies/blood/drops_b_normal.png",
+			"source_size": "(256.0, 256.0)"
+		},
+		{
+			"android_size": "(64.0, 64.0)",
+			"bytes": 5488,
+			"path": "res://assets/zombies/blood/mist.png",
+			"source_size": "(64.0, 64.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/zombies/blood/pool_a_albedo.png",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/zombies/blood/pool_a_normal.png",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/zombies/blood/pool_b_albedo.png",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/zombies/blood/pool_b_normal.png",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/zombies/blood/splat_a_albedo.png",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/zombies/blood/splat_a_normal.png",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/zombies/blood/splat_b_albedo.png",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/zombies/blood/splat_b_normal.png",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/zombies/blood/splat_c_albedo.png",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/zombies/blood/splat_c_normal.png",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/zombies/blood/splat_d_albedo.png",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/zombies/blood/splat_d_normal.png",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 349552,
+			"path": "res://assets/zombies/blood/splat_e_albedo.png",
+			"source_size": "(512.0, 512.0)"
+		},
+		{
+			"android_size": "(512.0, 512.0)",
+			"bytes": 174776,
+			"path": "res://assets/zombies/blood/splat_e_normal.png",
+			"source_size": "(512.0, 512.0)"
+		}
+	]
+}

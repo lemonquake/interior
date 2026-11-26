@@ -1,0 +1,51 @@
+{
+  "generator": "OpenAI built-in imagegen",
+  "created_date": "2026-10-26",
+  "sources": [
+    {
+      "path": "game/assets/horror_textures/liquid/drag_smear.png",
+      "bytes": 792136,
+      "sha256": "3b2a0930d7de30f8e9234eefe7353e0732e94c8ffaae6c8ce9ced8245b30637b"
+    },
+    {
+      "path": "game/assets/horror_textures/liquid/pool.png",
+      "bytes": 1524698,
+      "sha256": "0f28309183bf72a96d4a514a63e9e09f300b2ce764ec7f5d5b600bdfbdda5f4b"
+    },
+    {
+      "path": "game/assets/horror_textures/liquid/splatter.png",
+      "bytes": 1834455,
+      "sha256": "1004d0bd9aa324e667089d7aaa0cc73a16ddedf5c7c30ed741f828190b48bd58"
+    },
+    {
+      "path": "game/assets/horror_textures/props/discarded_paper.png",
+      "bytes": 3884706,
+      "sha256": "d7cb36e0549dee91a6ba1faa3835c9539320f8b8a8e7ed1272ec632b8c6b9967"
+    },
+    {
+      "path": "game/assets/horror_textures/props/refuse_plastic_black.png",
+      "bytes": 3044010,
+      "sha256": "ed76bf0032cf867a9e789e6b9f4f08503601ac3176b35a0d7f0f34165d61b303"
+    },
+    {
+      "path": "game/assets/horror_textures/props/stained_fabric.png",
+      "bytes": 4537286,
+      "sha256": "dc0f1015e3520b9611ad68561abc6dbb4674b98880c34c5432ec4b99fef3aa29"
+    },
+    {
+      "path": "game/assets/horror_textures/props/tarnished_metal.png",
+      "bytes": 4189736,
+      "sha256": "2f9e64261ab2f3511f3b8a15fdd4f6a63b4d418cb5725a15f29c7a3a63a0aa8d"
+    },
+    {
+      "path": "game/assets/horror_textures/props/waterlogged_cardboard.png",
+      "bytes": 3675220,
+      "sha256": "9ed7924e2914f682c048523648098579a1c386ab16a574eee9553e9ea2a02752"
+    },
+    {
+      "path": "game/assets/horror_textures/props/weathered_plastic.png",
+      "bytes": 3810672,
+      "sha256": "d2be108436e2548300bec287cd16a4407c701eca9d80457a29903b578f7a418e"
+    }
+  ]
+}

@@ -1,51 +1,70 @@
-; Interior by Aljay Leodones
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
 config_version=5
 
 [application]
-config/name="Interior"
-run/main_scene="res://main.tscn"
+
+config/name="Sleep"
+config/description="Sleep by Aljay Leodones"
+config/version="0.68.0"
+run/main_scene="res://boot.tscn"
 config/features=PackedStringArray("4.7", "Forward Plus")
-config/description="A first-person physics mystery in a reconstructed living room."
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/show_image=false
 config/icon="res://assets/icon.svg"
 
+[autoload]
+
+GameSettings="*res://scripts/settings.gd"
+
 [display]
+
 window/size/viewport_width=1280
 window/size/viewport_height=720
 window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="canvas_items"
-window/handheld/orientation=0
+window/stretch/aspect.mobile="expand"
 
-[rendering]
-renderer/rendering_method="forward_plus"
-renderer/rendering_method.mobile="gl_compatibility"
-textures/default_filters/use_nearest_mipmap_filter=false
-textures/vram_compression/import_etc2_astc=true
-lights_and_shadows/directional_shadow/size=1024
-limits/opengl/max_lights_per_object.mobile=2
-limits/opengl/max_renderable_lights.mobile=2
-environment/defaults/default_clear_color=Color(0.085, 0.07, 0.06, 1)
+[editor_plugins]
 
-[physics]
-common/physics_ticks_per_second=60
-common/physics_interpolation=true
-3d/physics_engine="Jolt Physics"
-3d/default_linear_damp=0.04
-3d/default_angular_damp=0.04
-jolt_physics_3d/limits/max_angular_velocity=125.0
-jolt_physics_3d/simulation/position_steps=3
-jolt_physics_3d/simulation/penetration_slop=0.005
+enabled=PackedStringArray("res://addons/mobile_texture_budget/plugin.cfg")
 
-[audio]
-driver/enable_input=false
+[gui]
 
-[input_devices]
-pointing/emulate_mouse_from_touch=true
+theme/custom_font="res://assets/fonts/sleep_text.tres"
 
 [layer_names]
+
 3d_physics/layer_1="Player"
 3d_physics/layer_2="Room"
 3d_physics/layer_3="Objects"
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+jolt_physics_3d/simulation/position_steps=3
+jolt_physics_3d/simulation/penetration_slop=0.005
+jolt_physics_3d/limits/max_angular_velocity=125.0
+3d/default_linear_damp=0.04
+3d/default_angular_damp=0.04
+common/physics_interpolation=true
+
+[rendering]
+
+renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
+lights_and_shadows/directional_shadow/size=1024
+limits/cluster_builder/max_clustered_elements=2048.0
+environment/defaults/default_clear_color=Color(0.085, 0.07, 0.06, 1)
+limits/opengl/max_lights_per_object.mobile=2
+limits/opengl/max_renderable_lights.mobile=2
 
 [shader_globals]
 

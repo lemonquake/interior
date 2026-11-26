@@ -1,0 +1,120 @@
+{
+	"adapter": "NVIDIA GeForce RTX 4060",
+	"boot_ms": 73433,
+	"inventory": {
+		"bodies": 260,
+		"meshes": 3846,
+		"nodes": 9977.0
+	},
+	"mobile": true,
+	"physical_phone": false,
+	"renderer": "gl_compatibility",
+	"scale": 0.699999988079071,
+	"viewport": "(1280, 720)",
+	"views": [
+		{
+			"active_bodies": 0.0,
+			"frames": 321,
+			"mean_draws": 1323.0,
+			"mean_physics_ms": 2.7323800623053,
+			"mean_primitives": 345406.803738318,
+			"mean_process_ms": 42.3770996884739,
+			"median_ms": 8.947,
+			"p95_ms": 13.814,
+			"p99_ms": 20.831,
+			"video_memory_mb": 2924.50756549835,
+			"view": "room"
+		},
+		{
+			"active_bodies": 0.0,
+			"frames": 1,
+			"mean_draws": 1564.0,
+			"mean_physics_ms": 4.673,
+			"mean_primitives": 4311710.0,
+			"mean_process_ms": 12241.099,
+			"median_ms": 6109.075,
+			"p95_ms": 6109.075,
+			"p99_ms": 6109.075,
+			"video_memory_mb": 3181.66268253326,
+			"view": "street"
+		},
+		{
+			"active_bodies": 0.0,
+			"frames": 6,
+			"mean_draws": 1436.83333333333,
+			"mean_physics_ms": 4.203,
+			"mean_primitives": 5818295.16666667,
+			"mean_process_ms": 194.973,
+			"median_ms": 18.264,
+			"p95_ms": 8090.963,
+			"p99_ms": 8090.963,
+			"video_memory_mb": 3181.85245609283,
+			"view": "town"
+		},
+		{
+			"active_bodies": 0.0,
+			"frames": 79,
+			"mean_draws": 761.012658227848,
+			"mean_physics_ms": 6.42059493670886,
+			"mean_primitives": 3184729.07594937,
+			"mean_process_ms": 1109.58118987342,
+			"median_ms": 13.781,
+			"p95_ms": 30.805,
+			"p99_ms": 1445.332,
+			"video_memory_mb": 3182.10245609283,
+			"view": "canal"
+		},
+		{
+			"active_bodies": 0.0,
+			"frames": 41,
+			"mean_draws": 701.0,
+			"mean_physics_ms": 4.01729268292683,
+			"mean_primitives": 1989828.0,
+			"mean_process_ms": 1817.44992682927,
+			"median_ms": 15.611,
+			"p95_ms": 461.855,
+			"p99_ms": 964.439,
+			"video_memory_mb": 3183.82511234283,
+			"view": "warren"
+		},
+		{
+			"active_bodies": 0.0,
+			"frames": 265,
+			"mean_draws": 932.0,
+			"mean_physics_ms": 4.61531698113209,
+			"mean_primitives": 2402441.0,
+			"mean_process_ms": 39.9395433962262,
+			"median_ms": 10.836,
+			"p95_ms": 17.398,
+			"p99_ms": 19.535,
+			"video_memory_mb": 3183.83257389069,
+			"view": "fields"
+		},
+		{
+			"active_bodies": 0.0,
+			"frames": 134,
+			"mean_draws": 931.238805970149,
+			"mean_physics_ms": 7.64835074626868,
+			"mean_primitives": 2668980.1641791,
+			"mean_process_ms": 1062.09237313433,
+			"median_ms": 16.35,
+			"p95_ms": 30.794,
+			"p99_ms": 147.214,
+			"video_memory_mb": 3183.83244037628,
+			"view": "nichols"
+		},
+		{
+			"active_bodies": 0.0,
+			"frames": 282,
+			"mean_draws": 416.0,
+			"mean_physics_ms": 4.31287588652481,
+			"mean_primitives": 1753663.0,
+			"mean_process_ms": 26.6207730496455,
+			"median_ms": 10.025,
+			"p95_ms": 17.822,
+			"p99_ms": 22.068,
+			"video_memory_mb": 3183.83257389069,
+			"view": "basement"
+		}
+	]
+}

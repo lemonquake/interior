@@ -1,0 +1,62 @@
+{
+	"audio_variants_loaded": true,
+	"quality": "High",
+	"renderer": "forward_plus",
+	"resolution": "1600x900",
+	"views": [
+		{
+			"draw_calls": 772.0,
+			"fps": 59.9743010120163,
+			"primitives": 3869446.0,
+			"view": "01-canal-overview"
+		},
+		{
+			"draw_calls": 708.0,
+			"fps": 60.0186357864117,
+			"primitives": 3766689.0,
+			"view": "02-east-boardwalk"
+		},
+		{
+			"draw_calls": 476.0,
+			"fps": 59.9786775801203,
+			"primitives": 3067839.0,
+			"view": "03-wooden-crossing"
+		},
+		{
+			"draw_calls": 804.0,
+			"fps": 60.0104118064484,
+			"primitives": 4409946.0,
+			"view": "04-back-lane"
+		},
+		{
+			"draw_calls": 6263.0,
+			"fps": 60.0010800194404,
+			"primitives": 9633057.0,
+			"view": "05-water-and-houses"
+		},
+		{
+			"draw_calls": 658.0,
+			"fps": 59.971993079232,
+			"primitives": 3276836.0,
+			"view": "06-street-entrance"
+		},
+		{
+			"draw_calls": 85.0,
+			"fps": 59.9575500545614,
+			"primitives": 847202.0,
+			"view": "07-water-court"
+		},
+		{
+			"draw_calls": 1235.0,
+			"fps": 60.0079510535146,
+			"primitives": 6080337.0,
+			"view": "08-shack-detail"
+		},
+		{
+			"draw_calls": 1240.0,
+			"fps": 60.0849300486237,
+			"primitives": 6256182.0,
+			"view": "09-hanging-bulb"
+		}
+	]
+}

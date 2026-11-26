@@ -12,14 +12,14 @@ $gamePath = Join-Path $projectRoot 'game'
 & $GodotPath --headless --path $gamePath --editor --import --quit
 if ($LASTEXITCODE -ne 0) { throw 'Godot import failed' }
 $testReports = @{}
-foreach ($test in @('physics_integration','room_integration','settling','tabletop_stability','movement_stress','hamster_stress','surroundings_integration','upgrade_integration','touch_integration','balcony_integration')) {
+foreach ($test in @('physics_integration','room_integration','settling','tabletop_stability','movement_stress','hamster_stress','surroundings_integration','upgrade_integration','touch_integration','balcony_integration','mobile_budget_integration')) {
     $stepBudget = if ($test -like '*stress' -or $test -eq 'tabletop_stability') { 16000 } elseif ($test -eq 'balcony_integration') { 6000 } else { 1200 }
     $testArguments = @('--headless','--fixed-fps','60','--path',$gamePath,'--script',"res://tests/$test.gd",'--quit-after',"$stepBudget")
-    if ($test -eq 'touch_integration') { $testArguments += @('--','--mobile-test') }
+    if ($test -in @('touch_integration','mobile_budget_integration')) { $testArguments += @('--','--mobile-test') }
     $testOutput = & $GodotPath @testArguments 2>&1
     $testOutput | ForEach-Object { Write-Host $_ }
     if ($LASTEXITCODE -ne 0) { throw "$test failed" }
-    $marker = @{physics_integration='INTERIOR_INTEGRATION ';room_integration='INTERIOR_ROOM_INTEGRATION ';settling='INTERIOR_SETTLING ';tabletop_stability='INTERIOR_TABLETOP_STABILITY ';movement_stress='INTERIOR_MOVEMENT_STRESS ';hamster_stress='INTERIOR_HAMSTER_STRESS ';surroundings_integration='INTERIOR_SURROUNDINGS_INTEGRATION ';upgrade_integration='INTERIOR_UPGRADE_INTEGRATION ';touch_integration='INTERIOR_TOUCH_INTEGRATION ';balcony_integration='INTERIOR_BALCONY_INTEGRATION '}[$test]
+    $marker = @{physics_integration='INTERIOR_INTEGRATION ';room_integration='INTERIOR_ROOM_INTEGRATION ';settling='INTERIOR_SETTLING ';tabletop_stability='INTERIOR_TABLETOP_STABILITY ';movement_stress='INTERIOR_MOVEMENT_STRESS ';hamster_stress='INTERIOR_HAMSTER_STRESS ';surroundings_integration='INTERIOR_SURROUNDINGS_INTEGRATION ';upgrade_integration='INTERIOR_UPGRADE_INTEGRATION ';touch_integration='INTERIOR_TOUCH_INTEGRATION ';balcony_integration='INTERIOR_BALCONY_INTEGRATION ';mobile_budget_integration='INTERIOR_MOBILE_BUDGET '}[$test]
     $reportLine = $testOutput | Where-Object { "$_".StartsWith($marker) } | Select-Object -Last 1
     if (-not $reportLine) { throw "$test did not complete; inspect Godot diagnostics" }
     $report = "$reportLine".Substring($marker.Length) | ConvertFrom-Json
@@ -38,7 +38,7 @@ if ($LASTEXITCODE -ne 0) { throw 'Android export failed' }
 $windowsPath = Join-Path $projectRoot 'builds\windows'
 Copy-Item -LiteralPath (Join-Path $gamePath 'licenses\ASSET_LICENSES.md'),(Join-Path $gamePath 'licenses\GODOT_COPYRIGHT.txt') -Destination $windowsPath -Force
 @'
-Interior 0.2 by Aljay Leodones
+Sleep 0.26 by Aljay Leodones
 
 Run Interior.exe. WASD moves, mouse looks, Shift sprints, Space jumps, C crouches.
 E holds/drops; left click throws; F inspects; J opens notes; Esc pauses.

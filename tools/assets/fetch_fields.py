@@ -39,6 +39,7 @@ OBJAVERSE = {
     'carabao': 'a36a1abfa5ff4fb8b6131e821d94dff2',           # "Carabao" by salarchana55
     'rice_field': '7a077bd3c27c41f0a831c6a11b005c8b',        # "Rice Field" by jessica.novita
     'wooden_bridge': 'fad4dce3ee1541e38b5186a0bc163549',     # "Simple Wooden Bridge" by Memorie
+    'glock_g17_rigged': '0c7e4441d9a1432f9abb61911c95a8a2',  # "[ FREE ] Rigged Semi-Auto Pistol G17" by nixo_design (0.10, tools/blender/process_glock.py)
 }
 # NASA SVS CGI Moon Kit (LRO colour mosaic), public domain.
 MOON = 'https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/lroc_color_poles_1k.jpg'

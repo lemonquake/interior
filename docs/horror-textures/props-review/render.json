@@ -1,0 +1,127 @@
+{
+	"lighting": "Original night lighting plus camera-local warm review fill; no source lighting changes",
+	"quality": "High",
+	"renderer": "forward_plus",
+	"resolution": "1280x720",
+	"views": [
+		{
+			"draw_calls": 1416.0,
+			"eye": [
+				19.8500003814697,
+				-1.54999995231628,
+				44.7000007629395
+			],
+			"fill_energy": 0.65,
+			"fov": 62.0,
+			"name": "01-menu-bags-crate",
+			"path": "A:/3rd Harmonik/interior/game/../docs/horror-textures/props-review/01-menu-bags-crate.png",
+			"target": [
+				18.6200008392334,
+				-2.61999988555908,
+				46.1500015258789
+			]
+		},
+		{
+			"draw_calls": 1830.0,
+			"eye": [
+				20.5499992370605,
+				-1.95000004768372,
+				44.0
+			],
+			"fill_energy": 0.55,
+			"fov": 65.0,
+			"name": "02-slipper-wrappers-cans",
+			"path": "A:/3rd Harmonik/interior/game/../docs/horror-textures/props-review/02-slipper-wrappers-cans.png",
+			"target": [
+				19.7999992370605,
+				-2.8199999332428,
+				45.1500015258789
+			]
+		},
+		{
+			"draw_calls": 2623.0,
+			"eye": [
+				-52.241813659668,
+				-0.881194829940796,
+				-4.63511657714844
+			],
+			"fill_energy": 1.1,
+			"fov": 65.0,
+			"name": "03-canal-cardboard-refuse",
+			"path": "A:/3rd Harmonik/interior/game/../docs/horror-textures/props-review/03-canal-cardboard-refuse.png",
+			"target": [
+				-51.8791809082031,
+				-2.03119492530823,
+				-2.9351167678833
+			]
+		},
+		{
+			"draw_calls": 1180.0,
+			"eye": [
+				-48.8347511291504,
+				-0.950845301151276,
+				30.9310340881348
+			],
+			"fill_energy": 1.1,
+			"fov": 65.0,
+			"name": "04-canal-bag-heap",
+			"path": "A:/3rd Harmonik/interior/game/../docs/horror-textures/props-review/04-canal-bag-heap.png",
+			"target": [
+				-48.8214111328125,
+				-1.95084524154663,
+				32.4310340881348
+			]
+		},
+		{
+			"draw_calls": 8084.0,
+			"eye": [
+				-51.339542388916,
+				-1.15410232543945,
+				2.88125061988831
+			],
+			"fill_energy": 0.8,
+			"fov": 62.0,
+			"name": "05-canal-pail",
+			"path": "A:/3rd Harmonik/interior/game/../docs/horror-textures/props-review/05-canal-pail.png",
+			"target": [
+				-49.7029495239258,
+				-1.90410232543945,
+				3.88125061988831
+			]
+		},
+		{
+			"draw_calls": 420.0,
+			"eye": [
+				-109.026741027832,
+				-1.16000008583069,
+				29.7579879760742
+			],
+			"fill_energy": 0.75,
+			"fov": 60.0,
+			"name": "06-warren-dented-pot",
+			"path": "A:/3rd Harmonik/interior/game/../docs/horror-textures/props-review/06-warren-dented-pot.png",
+			"target": [
+				-109.975120544434,
+				-1.86000001430511,
+				30.5
+			]
+		},
+		{
+			"draw_calls": 1796.0,
+			"eye": [
+				-48.8473281860352,
+				-1.46337413787842,
+				30.3822326660156
+			],
+			"fill_energy": 0.85,
+			"fov": 62.0,
+			"name": "07-canal-stained-fabric",
+			"path": "A:/3rd Harmonik/interior/game/../docs/horror-textures/props-review/07-canal-stained-fabric.png",
+			"target": [
+				-49.1857604980469,
+				-1.96337413787842,
+				32.1822319030762
+			]
+		}
+	]
+}

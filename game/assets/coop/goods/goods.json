@@ -1,0 +1,744 @@
+{
+ "grid": 8,
+ "goods": {
+  "coke_can": {
+   "cell": 0,
+   "shape": "can",
+   "size": [
+    0.033,
+    0.122
+   ],
+   "swatches": [
+    "silver"
+   ],
+   "material": "metal",
+   "repeats": 2
+  },
+  "coke_zero_can": {
+   "cell": 1,
+   "shape": "can",
+   "size": [
+    0.033,
+    0.122
+   ],
+   "swatches": [
+    "silver"
+   ],
+   "material": "metal",
+   "repeats": 2
+  },
+  "pepsi_can": {
+   "cell": 2,
+   "shape": "can",
+   "size": [
+    0.033,
+    0.122
+   ],
+   "swatches": [
+    "silver"
+   ],
+   "material": "metal",
+   "repeats": 2
+  },
+  "sprite_can": {
+   "cell": 3,
+   "shape": "can",
+   "size": [
+    0.033,
+    0.122
+   ],
+   "swatches": [
+    "silver"
+   ],
+   "material": "metal",
+   "repeats": 2
+  },
+  "mtn_dew_can": {
+   "cell": 4,
+   "shape": "can",
+   "size": [
+    0.033,
+    0.122
+   ],
+   "swatches": [
+    "silver"
+   ],
+   "material": "metal",
+   "repeats": 2
+  },
+  "sevenup_can": {
+   "cell": 5,
+   "shape": "can",
+   "size": [
+    0.033,
+    0.122
+   ],
+   "swatches": [
+    "silver"
+   ],
+   "material": "metal",
+   "repeats": 2
+  },
+  "royal_can": {
+   "cell": 6,
+   "shape": "can",
+   "size": [
+    0.033,
+    0.122
+   ],
+   "swatches": [
+    "silver"
+   ],
+   "material": "metal",
+   "repeats": 2
+  },
+  "redbull_can": {
+   "cell": 7,
+   "shape": "can",
+   "size": [
+    0.027,
+    0.135
+   ],
+   "swatches": [
+    "silver"
+   ],
+   "material": "metal",
+   "repeats": 2
+  },
+  "monster_can": {
+   "cell": 8,
+   "shape": "can",
+   "size": [
+    0.033,
+    0.168
+   ],
+   "swatches": [
+    "black"
+   ],
+   "material": "metal",
+   "repeats": 2
+  },
+  "sanmig_can": {
+   "cell": 9,
+   "shape": "can",
+   "size": [
+    0.033,
+    0.122
+   ],
+   "swatches": [
+    "gold"
+   ],
+   "material": "metal",
+   "repeats": 2
+  },
+  "redhorse_can": {
+   "cell": 10,
+   "shape": "can",
+   "size": [
+    0.033,
+    0.122
+   ],
+   "swatches": [
+    "silver"
+   ],
+   "material": "metal",
+   "repeats": 2
+  },
+  "heineken_can": {
+   "cell": 11,
+   "shape": "can",
+   "size": [
+    0.033,
+    0.122
+   ],
+   "swatches": [
+    "silver"
+   ],
+   "material": "metal",
+   "repeats": 2
+  },
+  "coke_bottle": {
+   "cell": 12,
+   "shape": "bottle",
+   "size": [
+    0.046,
+    0.33
+   ],
+   "swatches": [
+    "red",
+    "cola"
+   ],
+   "material": "plastic",
+   "repeats": 1
+  },
+  "sprite_bottle": {
+   "cell": 13,
+   "shape": "bottle",
+   "size": [
+    0.046,
+    0.33
+   ],
+   "swatches": [
+    "green",
+    "lime"
+   ],
+   "material": "plastic",
+   "repeats": 1
+  },
+  "pepsi_bottle": {
+   "cell": 14,
+   "shape": "bottle",
+   "size": [
+    0.046,
+    0.33
+   ],
+   "swatches": [
+    "blue",
+    "cola"
+   ],
+   "material": "plastic",
+   "repeats": 1
+  },
+  "gatorade_bottle": {
+   "cell": 15,
+   "shape": "bottle",
+   "size": [
+    0.036,
+    0.21
+   ],
+   "swatches": [
+    "orange",
+    "bluedrink"
+   ],
+   "material": "plastic",
+   "repeats": 1
+  },
+  "pocari_bottle": {
+   "cell": 16,
+   "shape": "bottle",
+   "size": [
+    0.033,
+    0.2
+   ],
+   "swatches": [
+    "blue",
+    "water"
+   ],
+   "material": "plastic",
+   "repeats": 1
+  },
+  "c2_bottle": {
+   "cell": 17,
+   "shape": "bottle",
+   "size": [
+    0.033,
+    0.2
+   ],
+   "swatches": [
+    "green",
+    "tea"
+   ],
+   "material": "plastic",
+   "repeats": 1
+  },
+  "wilkins_bottle": {
+   "cell": 18,
+   "shape": "bottle",
+   "size": [
+    0.033,
+    0.22
+   ],
+   "swatches": [
+    "blue",
+    "water"
+   ],
+   "material": "plastic",
+   "repeats": 1
+  },
+  "minute_maid_bottle": {
+   "cell": 19,
+   "shape": "bottle",
+   "size": [
+    0.034,
+    0.21
+   ],
+   "swatches": [
+    "orange",
+    "juice"
+   ],
+   "material": "plastic",
+   "repeats": 1
+  },
+  "cobra_bottle": {
+   "cell": 20,
+   "shape": "bottle",
+   "size": [
+    0.03,
+    0.18
+   ],
+   "swatches": [
+    "black",
+    "juice"
+   ],
+   "material": "plastic",
+   "repeats": 1
+  },
+  "pringles_original": {
+   "cell": 21,
+   "shape": "tube",
+   "size": [
+    0.038,
+    0.23
+   ],
+   "swatches": [
+    "silver",
+    "red"
+   ],
+   "material": "paper",
+   "repeats": 1
+  },
+  "pringles_sour_cream": {
+   "cell": 22,
+   "shape": "tube",
+   "size": [
+    0.038,
+    0.23
+   ],
+   "swatches": [
+    "silver",
+    "green"
+   ],
+   "material": "paper",
+   "repeats": 1
+  },
+  "pringles_cheese": {
+   "cell": 23,
+   "shape": "tube",
+   "size": [
+    0.038,
+    0.23
+   ],
+   "swatches": [
+    "silver",
+    "orange"
+   ],
+   "material": "paper",
+   "repeats": 1
+  },
+  "lays_classic": {
+   "cell": 24,
+   "shape": "bag",
+   "size": [
+    0.2,
+    0.28,
+    0.07
+   ],
+   "swatches": [],
+   "material": "plastic",
+   "repeats": 1
+  },
+  "doritos_nacho": {
+   "cell": 25,
+   "shape": "bag",
+   "size": [
+    0.2,
+    0.28,
+    0.07
+   ],
+   "swatches": [],
+   "material": "plastic",
+   "repeats": 1
+  },
+  "cheetos": {
+   "cell": 26,
+   "shape": "bag",
+   "size": [
+    0.2,
+    0.28,
+    0.07
+   ],
+   "swatches": [],
+   "material": "plastic",
+   "repeats": 1
+  },
+  "piattos": {
+   "cell": 27,
+   "shape": "bag",
+   "size": [
+    0.18,
+    0.25,
+    0.06
+   ],
+   "swatches": [],
+   "material": "plastic",
+   "repeats": 1
+  },
+  "nova": {
+   "cell": 28,
+   "shape": "bag",
+   "size": [
+    0.18,
+    0.25,
+    0.06
+   ],
+   "swatches": [],
+   "material": "plastic",
+   "repeats": 1
+  },
+  "oishi_prawn": {
+   "cell": 29,
+   "shape": "bag",
+   "size": [
+    0.18,
+    0.26,
+    0.06
+   ],
+   "swatches": [],
+   "material": "plastic",
+   "repeats": 1
+  },
+  "ruffles": {
+   "cell": 30,
+   "shape": "bag",
+   "size": [
+    0.2,
+    0.28,
+    0.07
+   ],
+   "swatches": [],
+   "material": "plastic",
+   "repeats": 1
+  },
+  "lucky_me_canton": {
+   "cell": 31,
+   "shape": "bag",
+   "size": [
+    0.13,
+    0.16,
+    0.025
+   ],
+   "swatches": [],
+   "material": "plastic",
+   "repeats": 1
+  },
+  "mms_peanut": {
+   "cell": 32,
+   "shape": "bag",
+   "size": [
+    0.11,
+    0.15,
+    0.03
+   ],
+   "swatches": [],
+   "material": "plastic",
+   "repeats": 1
+  },
+  "spam": {
+   "cell": 33,
+   "shape": "box",
+   "size": [
+    0.098,
+    0.058,
+    0.052
+   ],
+   "swatches": [],
+   "material": "metal",
+   "repeats": 1
+  },
+  "century_tuna": {
+   "cell": 34,
+   "shape": "can",
+   "size": [
+    0.042,
+    0.06
+   ],
+   "swatches": [
+    "silver"
+   ],
+   "material": "metal",
+   "repeats": 2
+  },
+  "argentina_corned_beef": {
+   "cell": 35,
+   "shape": "can",
+   "size": [
+    0.04,
+    0.085
+   ],
+   "swatches": [
+    "silver"
+   ],
+   "material": "metal",
+   "repeats": 2
+  },
+  "555_sardines": {
+   "cell": 36,
+   "shape": "can",
+   "size": [
+    0.037,
+    0.1
+   ],
+   "swatches": [
+    "silver"
+   ],
+   "material": "metal",
+   "repeats": 2
+  },
+  "ligo_sardines": {
+   "cell": 37,
+   "shape": "can",
+   "size": [
+    0.037,
+    0.1
+   ],
+   "swatches": [
+    "silver"
+   ],
+   "material": "metal",
+   "repeats": 2
+  },
+  "libbys_vienna": {
+   "cell": 38,
+   "shape": "can",
+   "size": [
+    0.033,
+    0.06
+   ],
+   "swatches": [
+    "silver"
+   ],
+   "material": "metal",
+   "repeats": 2
+  },
+  "del_monte_fruit": {
+   "cell": 39,
+   "shape": "can",
+   "size": [
+    0.042,
+    0.115
+   ],
+   "swatches": [
+    "silver"
+   ],
+   "material": "metal",
+   "repeats": 2
+  },
+  "campbells_tomato": {
+   "cell": 40,
+   "shape": "can",
+   "size": [
+    0.034,
+    0.1
+   ],
+   "swatches": [
+    "silver"
+   ],
+   "material": "metal",
+   "repeats": 2
+  },
+  "cup_noodles": {
+   "cell": 41,
+   "shape": "cup",
+   "size": [
+    0.047,
+    0.036,
+    0.105
+   ],
+   "swatches": [
+    "white"
+   ],
+   "material": "paper",
+   "repeats": 2
+  },
+  "cup_noodles_seafood": {
+   "cell": 42,
+   "shape": "cup",
+   "size": [
+    0.047,
+    0.036,
+    0.105
+   ],
+   "swatches": [
+    "white"
+   ],
+   "material": "paper",
+   "repeats": 2
+  },
+  "oreo": {
+   "cell": 43,
+   "shape": "box",
+   "size": [
+    0.2,
+    0.065,
+    0.05
+   ],
+   "swatches": [],
+   "material": "paper",
+   "repeats": 1
+  },
+  "corn_flakes": {
+   "cell": 44,
+   "shape": "box",
+   "size": [
+    0.19,
+    0.28,
+    0.07
+   ],
+   "swatches": [],
+   "material": "paper",
+   "repeats": 1
+  },
+  "milo_tin": {
+   "cell": 45,
+   "shape": "can",
+   "size": [
+    0.062,
+    0.15
+   ],
+   "swatches": [
+    "green"
+   ],
+   "material": "metal",
+   "repeats": 1
+  },
+  "nescafe_3in1": {
+   "cell": 46,
+   "shape": "box",
+   "size": [
+    0.15,
+    0.19,
+    0.08
+   ],
+   "swatches": [],
+   "material": "paper",
+   "repeats": 1
+  },
+  "tide_powder": {
+   "cell": 47,
+   "shape": "box",
+   "size": [
+    0.18,
+    0.24,
+    0.07
+   ],
+   "swatches": [],
+   "material": "paper",
+   "repeats": 1
+  },
+  "colgate": {
+   "cell": 48,
+   "shape": "box",
+   "size": [
+    0.2,
+    0.045,
+    0.045
+   ],
+   "swatches": [],
+   "material": "paper",
+   "repeats": 1
+  },
+  "safeguard": {
+   "cell": 49,
+   "shape": "box",
+   "size": [
+    0.1,
+    0.065,
+    0.04
+   ],
+   "swatches": [],
+   "material": "paper",
+   "repeats": 1
+  },
+  "kitkat": {
+   "cell": 50,
+   "shape": "box",
+   "size": [
+    0.15,
+    0.045,
+    0.015
+   ],
+   "swatches": [],
+   "material": "paper",
+   "repeats": 1
+  },
+  "snickers": {
+   "cell": 51,
+   "shape": "box",
+   "size": [
+    0.15,
+    0.04,
+    0.02
+   ],
+   "swatches": [],
+   "material": "paper",
+   "repeats": 1
+  },
+  "hersheys": {
+   "cell": 52,
+   "shape": "box",
+   "size": [
+    0.15,
+    0.06,
+    0.01
+   ],
+   "swatches": [],
+   "material": "paper",
+   "repeats": 1
+  },
+  "marlboro": {
+   "cell": 53,
+   "shape": "box",
+   "size": [
+    0.056,
+    0.088,
+    0.022
+   ],
+   "swatches": [],
+   "material": "paper",
+   "repeats": 1
+  },
+  "coke_case": {
+   "cell": 54,
+   "shape": "box",
+   "size": [
+    0.4,
+    0.25,
+    0.27
+   ],
+   "swatches": [],
+   "material": "paper",
+   "repeats": 1
+  },
+  "skyflakes": {
+   "cell": 55,
+   "shape": "box",
+   "size": [
+    0.22,
+    0.07,
+    0.055
+   ],
+   "swatches": [],
+   "material": "paper",
+   "repeats": 1
+  }
+ },
+ "swatches": {
+  "silver": 0,
+  "gold": 1,
+  "white": 2,
+  "red": 3,
+  "green": 4,
+  "blue": 5,
+  "black": 6,
+  "orange": 7,
+  "cola": 8,
+  "lime": 9,
+  "water": 10,
+  "tea": 11,
+  "juice": 12,
+  "bluedrink": 13,
+  "cardboard": 14,
+  "grey": 15
+ },
+ "swatch_cell": 56
+}

@@ -1,0 +1,45 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://cc2spbfqynn03"
+path.s3tc="res://.godot/imported/alex_z_alex.jpg-b279a43ff03a32283f59e5337e2fd008.s3tc.ctex"
+path.etc2="res://.godot/imported/alex_z_alex.jpg-b279a43ff03a32283f59e5337e2fd008.etc2.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "23c52b803e523a7922b6cab6d3ab260f"
+}
+
+[deps]
+
+source_file="res://assets/characters/survivors/alex_z_alex.jpg"
+dest_files=["res://.godot/imported/alex_z_alex.jpg-b279a43ff03a32283f59e5337e2fd008.s3tc.ctex", "res://.godot/imported/alex_z_alex.jpg-b279a43ff03a32283f59e5337e2fd008.etc2.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

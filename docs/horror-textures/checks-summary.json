@@ -1,0 +1,46 @@
+{
+  "engine": "Godot 4.7.2 stable",
+  "export_performed": true,
+  "baseline": {
+    "script": "tools/build.ps1 -TestsOnly",
+    "log": "baseline.log",
+    "completed": false,
+    "passed_checks": [
+      {
+        "name": "physics_integration",
+        "checks": 25
+      },
+      {
+        "name": "room_integration",
+        "checks": 271
+      }
+    ],
+    "failed_check": "settling",
+    "limitation": "Observed initial and wake-all prop drift. No causal baseline comparison performed; gameplay was not modified to resolve this unrelated physics check."
+  },
+  "scoped_checks": [
+    {
+      "name": "touch_integration",
+      "checks": 29,
+      "passed": true,
+      "log": "touch_integration.log"
+    },
+    {
+      "name": "canal_integration",
+      "checks": 57,
+      "passed": true,
+      "log": "canal_integration.log"
+    },
+    {
+      "name": "warren_integration",
+      "checks": 87,
+      "passed": true,
+      "log": "warren_integration.log"
+    }
+  ],
+  "notes": [
+    "A remaining-check loop was cancelled while tabletop_stability was starting, per parent scope direction; tabletop_stability.log is incomplete evidence and does not represent a result.",
+    "Only import and relevant material-update regression checks were completed after the baseline script stopped."
+  ],
+  "build_verification": "builds.json"
+}

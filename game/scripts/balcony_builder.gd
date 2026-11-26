@@ -210,13 +210,25 @@ func _end_prop() -> void:
 	_shell = previous[1]
 
 func _commit(parent: Node3D, prefix: String) -> void:
+	var _t := Time.get_ticks_usec()
+	_commit__timed(parent, prefix)
+	InteriorLoadClock.tally("builder commit (index, tangents)", _t)
+
+func _commit__timed(parent: Node3D, prefix: String) -> void:
+	# 0.30: a district's batches are read from InteriorBuildCache when it has them (indexing and tangents are slow).
+	var kept := prefix in InteriorBuildCache.PREFIXES
 	for key: String in _batches:
 		var tool := _batches[key] as SurfaceTool
-		tool.index()
-		tool.generate_tangents()
+		var built: Mesh = InteriorBuildCache.mesh(prefix + key) if kept else null
+		if built == null:
+			tool.index()
+			tool.generate_tangents()
+			built = tool.commit()
+			if kept:
+				InteriorBuildCache.store(prefix + key, built)
 		var mesh := MeshInstance3D.new()
 		mesh.name = prefix + key
-		mesh.mesh = tool.commit()
+		mesh.mesh = built
 		mesh.material_override = _materials[key]
 		mesh.layers = visual_layer
 		parent.add_child(mesh)

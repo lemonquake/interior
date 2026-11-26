@@ -9,7 +9,7 @@ var footsteps: AudioStreamPlayer
 const STEP_SOUNDS := {
 	"wood": ["wood", 1.0, -9.0], "carpet": ["carpet", .95, -8.0], "tile": ["concrete", 1.2, -11.0],
 	"concrete": ["concrete", 1.0, -9.0], "asphalt": ["concrete", .86, -9.5], "grass": ["grass", 1.0, -8.0],
-	"metal": ["concrete", 1.3, -10.0], "dirt": ["snow", .72, -10.5],
+	"metal": ["metal", .94, -10.0], "dirt": ["dirt", .86, -10.5],
 }
 var _step_streams: Dictionary = {}
 var fan: AudioStreamPlayer3D
@@ -36,12 +36,18 @@ func setup(room: Node3D, character: InteriorPlayer) -> void:
 		var voice := AudioStreamPlayer3D.new()
 		voice.max_distance = 12.0
 		voice.unit_size = 2.0
+		# NightAudio creates this bus after RoomAudio.setup(); impacts then share the
+		# same restrained indoor reflections and outdoor tails as the player's steps.
+		voice.bus = "Steps"
+		voice.attenuation_filter_cutoff_hz = 5500.0
+		voice.attenuation_filter_db = -12.0
 		add_child(voice)
 		voices.append(voice)
 	footsteps = AudioStreamPlayer.new()
+	footsteps.name = "Player footsteps"
 	footsteps.max_polyphony = 3
 	add_child(footsteps)
-	for set_name in ["wood", "carpet", "concrete", "grass", "snow"]:
+	for set_name in ["wood", "carpet", "concrete", "grass", "snow", "metal", "dirt"]:
 		var randomizer := AudioStreamRandomizer.new()
 		randomizer.playback_mode = AudioStreamRandomizer.PLAYBACK_RANDOM_NO_REPEATS
 		randomizer.random_pitch = 1.07
@@ -117,7 +123,7 @@ func _physics_process(delta: float) -> void:
 
 ## Heel strikes come from the player's head bob, so the sound lands on the low point of each step.
 func _on_step(surface: String, strength: float) -> void:
-	_play_step(surface, linear_to_db(clampf(strength, .2, 1.0)) * .6)
+	_play_step(surface, linear_to_db(clampf(strength, .05, 1.0)) * .6)
 
 func _on_landed(surface: String, fall_speed: float) -> void:
 	_play_step(surface, clampf(-fall_speed * .8 - 2.0, 0.0, 5.0))
@@ -131,9 +137,12 @@ func _play_step(surface: String, gain_db: float) -> void:
 	var stream: AudioStream = _step_streams.get(spec[0])
 	if stream == null:
 		return
-	footsteps.stream = stream
+	# Keep the randomizer playback alive between strikes on the same surface;
+	# assigning it every step cuts off the preceding voice and resets its history.
+	if footsteps.stream != stream:
+		footsteps.stream = stream
 	footsteps.pitch_scale = float(spec[1])
-	footsteps.volume_db = float(spec[2]) + gain_db
+	footsteps.volume_db = float(spec[2]) + gain_db + 3.0
 	footsteps.play()
 
 func _impact(other: Node, body: InteriorObject) -> void:

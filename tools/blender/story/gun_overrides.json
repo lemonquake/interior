@@ -1,0 +1,34 @@
+{
+ "hornet_mp9": {
+  "muzzle_high": false
+ },
+ "sauer_p9": {
+  "muzzle_high": false,
+  "up_positive": true,
+  "cut_below": -0.03
+ },
+ "tempest_a14": {
+  "axes": [
+   1,
+   2
+  ]
+ },
+ "garrison_m1": {
+  "cull": true
+ },
+ "talon_p90": {
+  "up_positive": true,
+  "sight_z": 0.082
+ },
+ "eruption_ad15": {
+  "drop_materials": [
+   "Bullet"
+  ]
+ },
+ "bastion_s17": {
+  "sight_z": 0.178
+ },
+ "corsair_m4": {
+  "sight_z": 0.052
+ }
+}

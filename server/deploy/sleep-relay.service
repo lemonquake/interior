@@ -1,0 +1,19 @@
+[Unit]
+Description=Sleep co-op relay (friends reach the host's game through this server)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=sleep
+Group=sleep
+ExecStart=/usr/bin/python3 -I /opt/sleep/relay/sleep_relay.py --public-ip 15.235.246.87 --status 127.0.0.1:8480
+Restart=always
+RestartSec=3
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+MemoryMax=300M
+
+[Install]
+WantedBy=multi-user.target

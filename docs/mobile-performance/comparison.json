@@ -1,0 +1,87 @@
+{
+  "source": "Windows editor runtime, Compatibility, 1280x720, Low, uncapped; desktop GPU",
+  "physical_phone_measured": false,
+  "adapter": "NVIDIA GeForce RTX 4060",
+  "views": [
+    {
+      "view": "room",
+      "before_ms": 8.371,
+      "after_ms": 7.004,
+      "median_frame_time_reduction_percent": 16.3,
+      "before_draw_calls": 1323.0,
+      "after_draw_calls": 741.0,
+      "before_primitives": 345406.868263473,
+      "after_primitives": 166936.921119593
+    },
+    {
+      "view": "street",
+      "before_ms": 12.948,
+      "after_ms": 8.905,
+      "median_frame_time_reduction_percent": 31.2,
+      "before_draw_calls": 851.0,
+      "after_draw_calls": 511.0,
+      "before_primitives": 3141987.0,
+      "after_primitives": 2192757.0
+    },
+    {
+      "view": "town",
+      "before_ms": 17.563,
+      "after_ms": 10.347,
+      "median_frame_time_reduction_percent": 41.1,
+      "before_draw_calls": 1323.0,
+      "after_draw_calls": 700.0,
+      "before_primitives": 4889840.0,
+      "after_primitives": 2996866.0
+    },
+    {
+      "view": "canal",
+      "before_ms": 11.96,
+      "after_ms": 8.898,
+      "median_frame_time_reduction_percent": 25.6,
+      "before_draw_calls": 762.0,
+      "after_draw_calls": 626.0,
+      "before_primitives": 3184733.0,
+      "after_primitives": 2715272.0
+    },
+    {
+      "view": "warren",
+      "before_ms": 12.588,
+      "after_ms": 7.979,
+      "median_frame_time_reduction_percent": 36.6,
+      "before_draw_calls": 701.0,
+      "after_draw_calls": 410.0,
+      "before_primitives": 1989832.0,
+      "after_primitives": 1403752.0
+    },
+    {
+      "view": "fields",
+      "before_ms": 10.513,
+      "after_ms": 5.938,
+      "median_frame_time_reduction_percent": 43.5,
+      "before_draw_calls": 931.0,
+      "after_draw_calls": 452.133479212254,
+      "before_primitives": 2402435.0,
+      "after_primitives": 1071115.80087527
+    },
+    {
+      "view": "nichols",
+      "before_ms": 14.02,
+      "after_ms": 11.106,
+      "median_frame_time_reduction_percent": 20.8,
+      "before_draw_calls": 924.0,
+      "after_draw_calls": 775.0,
+      "before_primitives": 2648505.0,
+      "after_primitives": 1841195.0
+    }
+  ],
+  "reported_graphics_memory_mb": {
+    "before": 3179.76955509186,
+    "after": 1389.200050354,
+    "reduction_percent": 56.3
+  },
+  "scene_setup_ms": {
+    "before": 37886,
+    "after": 19120
+  },
+  "limits": "Short steady samples after >=90 warmup frames; does not establish phone FPS, thermal stability, or startup guarantees. Separate cold traversal preserved. Final Android export uses additional texture downsizing."
+}

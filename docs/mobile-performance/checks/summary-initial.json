@@ -1,0 +1,232 @@
+[
+  {
+    "test": "balcony_integration",
+    "passed": true,
+    "exitCode": 0,
+    "completed": true,
+    "seconds": 47.6,
+    "reports": [
+      "INTERIOR_BALCONY_INTEGRATION {\"checks\":63,\"failures\":[],\"passed\":true,\"results\":{\"balcony_fish\":5,\"blocked_z\":2.35499954223633,\"bottle_after_throw\":[2.32141637802124,0.0508487671613693,2.90872716903687],\"bottle_gate\":[9.84961223602295,-2.84916615486145,3.89227318763733],\"bottle_neighbour_wall\":[10.3187627792358,-2.84909081459045,4.2936635017395],\"bottle_stair_side\":[10.2761974334717,-2.84947180747986,2.945960521698],\"bottle_straight_up\":[11.3222646713257,-2.84916353225708,3.33246731758118],\"close_frames_with_prop_near\":67,\"door_safety\":{\"in the swing\":{\"after_close\":[1.72,0.01,2.2],\"door_moving\":false,\"door_open\":true,\"top_speed\":0.0,\"walked_free\":true},\"on the threshold\":{\"after_close\":[1.91,0.01,2.8],\"door_moving\":false,\"door_open\":true,\"top_speed\":0.0,\"walked_free\":true},\"prop\":{\"mass\":0.5,\"name\":\"woven_tray_14\",\"rest\":[2.29,0.0,1.74],\"top_speed\":1.02}},\"lowest_y\":-2.89314770698547,\"open_angle_deg\":-88.0000070022825,\"open_leaf_aabb\":[\"(2.338283, 0.0, 1.592811)\",\"(2.466522, 2.28, 2.635388)\"],\"prompt\":\"E • Open door     Hold E • pull\",\"room_lights_masked\":17,\"route\":{\"aquarium wall\":[1.66,0.01,3.58],\"back to stair foot\":[10.11,-2.89,3.38],\"back up\":[5.18,0.01,3.38],\"balcony\":[1.9,0.01,3.4],\"courtyard\":[11.59,-2.89,4.3],\"doorway\":[1.91,0.01,3.45],\"room\":[1.91,0.01,1.6],\"stair foot\":[10.12,-2.89,3.38],\"stair top\":[5.19,0.01,3.38]}}}"
+    ],
+    "errors": []
+  },
+  {
+    "test": "basement_integration",
+    "passed": true,
+    "exitCode": 0,
+    "completed": true,
+    "seconds": 22.2,
+    "reports": [
+      "BASEMENT { \"bulbs\": 8, \"lights\": 7, \"decals\": 128, \"props\": 47, \"ground_cut\": 1, \"meshes_cut\": 1, \"bundle_floor_gap\": 0.97999997138977 }"
+    ],
+    "errors": []
+  },
+  {
+    "test": "canal_integration",
+    "passed": true,
+    "exitCode": 0,
+    "completed": true,
+    "seconds": 60.4,
+    "reports": [
+      "CANAL_INTEGRATION {\"checks\":57,\"failures\":[],\"passed\":true}"
+    ],
+    "errors": []
+  },
+  {
+    "test": "fields_integration",
+    "passed": true,
+    "exitCode": 0,
+    "completed": true,
+    "seconds": 38.0,
+    "reports": [
+      "INTERIOR_FIELDS_INTEGRATION {\"checks\":25,\"failures\":[],\"passed\":true,\"results\":{\"door_pulled_t\":0.77,\"gate_pulled_rad\":1.43,\"jetty_out_m\":8.4,\"road_lowest_y\":-2.86,\"road_reached\":[546,553],\"road_surfaces\":[\"dirt\"]}}"
+    ],
+    "errors": []
+  },
+  {
+    "test": "gun_integration",
+    "passed": true,
+    "exitCode": 0,
+    "completed": true,
+    "seconds": 21.7,
+    "reports": [
+      "GUN_INTEGRATION {\"checks\":41,\"failures\":[],\"mobile\":false,\"results\":{\"errors\":[],\"holes_after_50_more\":40,\"prop_moved_m\":0.05}}"
+    ],
+    "errors": []
+  },
+  {
+    "test": "hamster_stress",
+    "passed": true,
+    "exitCode": 0,
+    "completed": true,
+    "seconds": 3.5,
+    "reports": [
+      "INTERIOR_HAMSTER_STRESS {\"animations\":[\"walk\",\"dig\",\"run\",\"idle_sniff\",\"eat\",\"idle_rear\",\"idle_rest\",\"idle_groom\"],\"checks\":480146,\"colliders\":176,\"connector_count\":2,\"cpu_stress_ms\":962.242,\"failures\":[],\"max_blocked_seconds\":1.28333333333333,\"max_route_vertices\":48,\"max_speed_mps\":0.19,\"min_resident_separation_m\":0.119313232600689,\"passed\":true,\"residents\":3,\"simulation_hz\":60,\"skinned_vertex_deformation\":{\"0:dig\":{\"max_displacement_m\":0.00635885472875088,\"mean_displacement_m\":0.000278674852430854,\"vertex_samples\":1689},\"0:eat\":{\"max_displacement_m\":0.00250977932009846,\"mean_displacement_m\":0.00068664738379488,\"vertex_samples\":1689},\"0:idle_groom\":{\"max_displacement_m\":0.00645457520149648,\"mean_displacement_m\":0.00166760217034321,\"vertex_samples\":1689},\"0:idle_rear\":{\"max_displacement_m\":0.0622172340750694,\"mean_displacement_m\":0.0302290795880557,\"vertex_samples\":1689},\"0:idle_rest\":{\"max_displacement_m\":0.00133141810656525,\"mean_displacement_m\":0.000629618491138294,\"vertex_samples\":1689},\"0:idle_sniff\":{\"max_displacement_m\":0.0133818633854389,\"mean_displacement_m\":0.00338748777318475,\"vertex_samples\":1689},\"0:run\":{\"max_displacement_m\":0.0203770575113595,\"mean_displacement_m\":0.00400529637352558,\"vertex_samples\":1689},\"0:walk\":{\"max_displacement_m\":0.0139612089842558,\"mean_displacement_m\":0.00329852423813027,\"vertex_samples\":1689},\"1:dig\":{\"max_displacement_m\":0.00635885472875088,\"mean_displacement_m\":0.000278674852430854,\"vertex_samples\":1689},\"1:eat\":{\"max_displacement_m\":0.00250977932009846,\"mean_displacement_m\":0.00068664738379488,\"vertex_samples\":1689},\"1:idle_groom\":{\"max_displacement_m\":0.00645457520149648,\"mean_displacement_m\":0.00166760217034321,\"vertex_samples\":1689},\"1:idle_rear\":{\"max_displacement_m\":0.0622172340750694,\"mean_displacement_m\":0.0302290795880557,\"vertex_samples\":1689},\"1:idle_rest\":{\"max_displacement_m\":0.00133141810656525,\"mean_displacement_m\":0.000629618491138294,\"vertex_samples\":1689},\"1:idle_sniff\":{\"max_displacement_m\":0.0133818633854389,\"mean_displacement_m\":0.00338748777318475,\"vertex_samples\":1689},\"1:run\":{\"max_displacement_m\":0.0203770575113595,\"mean_displacement_m\":0.00400529637352558,\"vertex_samples\":1689},\"1:walk\":{\"max_displacement_m\":0.0139612089842558,\"mean_displacement_m\":0.00329852423813027,\"vertex_samples\":1689},\"2:dig\":{\"max_displacement_m\":0.00635885472875088,\"mean_displacement_m\":0.000278674852430854,\"vertex_samples\":1689},\"2:eat\":{\"max_displacement_m\":0.00250977932009846,\"mean_displacement_m\":0.00068664738379488,\"vertex_samples\":1689},\"2:idle_groom\":{\"max_displacement_m\":0.00645457520149648,\"mean_displacement_m\":0.00166760217034321,\"vertex_samples\":1689},\"2:idle_rear\":{\"max_displacement_m\":0.0622172340750694,\"mean_displacement_m\":0.0302290795880557,\"vertex_samples\":1689},\"2:idle_rest\":{\"max_displacement_m\":0.00133141810656525,\"mean_displacement_m\":0.000629618491138294,\"vertex_samples\":1689},\"2:idle_sniff\":{\"max_displacement_m\":0.0133818633854389,\"mean_displacement_m\":0.00338748777318475,\"vertex_samples\":1689},\"2:run\":{\"max_displacement_m\":0.0203770575113595,\"mean_displacement_m\":0.00400529637352558,\"vertex_samples\":1689},\"2:walk\":{\"max_displacement_m\":0.0139612089842558,\"mean_displacement_m\":0.00329852423813027,\"vertex_samples\":1689}},\"snapshots\":[{\"blocked_seconds\":0.0,\"clip\":\"walk\",\"elapsed\":166.666666666691,\"level\":0,\"position\":[0.0530001632869244,0.649999976158142,-0.170000001788139],\"resident\":0,\"state\":\"wander\",\"transfer\":false,\"visited\":{\"bridge\":1,\"food\":1,\"hide\":2,\"idle\":7,\"idle_groom\":2,\"idle_rear\":2,\"idle_rest\":2,\"idle_sniff\":1,\"sand\":1,\"tunnel\":3,\"water\":1,\"wheel\":1},\"visited_levels\":{\"0\":true,\"1\":true,\"2\":true}},{\"blocked_seconds\":0.0,\"clip\":\"walk\",\"elapsed\":166.666666666691,\"level\":1,\"position\":[-0.311608284711838,1.05948221683502,-0.0199999995529652],\"resident\":1,\"state\":\"wander\",\"transfer\":true,\"visited\":{\"bridge\":1,\"food\":1,\"hide\":1,\"idle\":9,\"idle_groom\":2,\"idle_rear\":3,\"idle_rest\":2,\"idle_sniff\":2,\"sand\":1,\"tunnel\":3,\"water\":3,\"wheel\":1},\"visited_levels\":{\"0\":true,\"1\":true,\"2\":true}},{\"blocked_seconds\":0.0,\"clip\":\"idle_groom\",\"elapsed\":166.666666666691,\"level\":1,\"position\":[0.0,1.04999995231628,-0.170000001788139],\"resident\":2,\"state\":\"idle\",\"transfer\":false,\"visited\":{\"bridge\":1,\"food\":1,\"hide\":1,\"idle\":7,\"idle_groom\":2,\"idle_rear\":1,\"idle_rest\":2,\"idle_sniff\":2,\"sand\":1,\"tunnel\":2,\"water\":2,\"wheel\":2},\"visited_levels\":{\"0\":true,\"1\":true,\"2\":true}}],\"steps\":10000}"
+    ],
+    "errors": []
+  },
+  {
+    "test": "horror_props_integration",
+    "passed": true,
+    "exitCode": 0,
+    "completed": true,
+    "seconds": 18.1,
+    "reports": [
+      "INTERIOR_HORROR_PROPS {\"canal_materials\":18,\"checks\":504,\"failures\":[],\"families\":{\"bag\":28,\"cardboard\":12,\"fabric\":44,\"metal\":142,\"paper\":44,\"plastic\":220},\"passed\":true,\"street_batches\":3}"
+    ],
+    "errors": []
+  },
+  {
+    "test": "mobile_budget_integration",
+    "passed": true,
+    "exitCode": 0,
+    "completed": true,
+    "seconds": 20.0,
+    "reports": [
+      "INTERIOR_MOBILE_BUDGET {\"budget\":{\"geometry\":3987,\"lod_threshold\":4.0,\"materials\":1009,\"range_culled\":3557,\"tier\":0},\"checks\":3053,\"failures\":[],\"passed\":true}"
+    ],
+    "errors": []
+  },
+  {
+    "test": "movement_stress",
+    "passed": true,
+    "exitCode": 0,
+    "completed": true,
+    "seconds": 6.1,
+    "reports": [
+      "INTERIOR_MOVEMENT_STRESS {\"checks\":260111,\"failures\":[],\"fixed_delta_seconds\":0.0166666666666667,\"fixed_steps\":10000,\"metrics\":{\"airborne_horizontal_speed_m_s\":4.5,\"first_walk_speed_m_s\":0.349999994039536,\"heavy_push_peak_m_s\":0.796672344207764,\"jump_apex_m\":0.78733366727829,\"light_push_peak_m_s\":3.33692860603333,\"max_player_speed_m_s\":6.55320167541504,\"max_prop_speed_m_s\":6.00855016708374,\"max_prop_spin_rad_s\":8.71606254577637,\"offset_center_of_mass_contacts\":{\"approaching_added_speed_m_s\":1.08333337306976,\"approaching_surface_speed_m_s\":-6.38054180145264,\"separating_added_speed_m_s\":0.0,\"separating_surface_speed_m_s\":6.38054180145264},\"sprint_speed_m_s\":4.69999980926514,\"stress_nodes\":18,\"two_frame_braking_speed_m_s\":4.30000019073486,\"walk_speed_m_s\":2.45000004768372},\"passed\":true,\"seed\":20261005,\"simulated_seconds\":166.666666666667}"
+    ],
+    "errors": []
+  },
+  {
+    "test": "nichols_integration",
+    "passed": true,
+    "exitCode": 0,
+    "completed": true,
+    "seconds": 34.0,
+    "reports": [
+      "COUNTS { \"colliders\": 392, \"doors\": 10, \"models\": 156, \"probes\": 19, \"trees\": 16, \"webs\": 37, \"grass\": 16217, \"triangles\": 44348, \"beams\": 15 }"
+    ],
+    "errors": []
+  },
+  {
+    "test": "physics_integration",
+    "passed": true,
+    "exitCode": 0,
+    "completed": true,
+    "seconds": 19.9,
+    "reports": [
+      "INTERIOR_INTEGRATION {\"checks\":25,\"failures\":[],\"passed\":true,\"scene\":\"control lab\"}"
+    ],
+    "errors": []
+  },
+  {
+    "test": "room_integration",
+    "passed": true,
+    "exitCode": 0,
+    "completed": true,
+    "seconds": 21.3,
+    "reports": [
+      "INTERIOR_ROOM_INTEGRATION {\"anchored\":19,\"checks\":271,\"clues\":3,\"failures\":[],\"objects\":234,\"passed\":true}"
+    ],
+    "errors": []
+  },
+  {
+    "test": "settling",
+    "passed": false,
+    "exitCode": 1,
+    "completed": true,
+    "seconds": 14.4,
+    "reports": [
+      "INTERIOR_SETTLING {\"bodies\":212,\"passed\":false,\"start_state\":{\"awake_after_3s\":[\"Plastic pail3\",\"Empty bottle12\",\"Empty bottle15\",\"Nichols old_bed_frame\",\"Nichols antique_doll\"],\"offenders\":[{\"drift_mm\":5.4,\"object\":\"monitor_7\"},{\"drift_mm\":5.4,\"object\":\"computer_tower_8\"},{\"drift_mm\":4.0,\"object\":\"potted_plant_38\"},{\"drift_mm\":8.2,\"object\":\"potted_plant_39\"},{\"drift_mm\":7.2,\"object\":\"Loose cushion 1 fabric_sofa_0\"},{\"drift_mm\":7.2,\"object\":\"Loose cushion 2 fabric_sofa_0\"},{\"drift_mm\":7.1,\"object\":\"Loose cushion 1 leather_sofa_1\"},{\"drift_mm\":7.2,\"object\":\"Loose cushion 2 leather_sofa_1\"},{\"drift_mm\":19.4,\"object\":\"Black storage rack\"},{\"drift_mm\":34.4,\"object\":\"Empty bottle\"},{\"drift_mm\":34.7,\"object\":\"Wooden crate\"},{\"drift_mm\":67.6,\"object\":\"Empty bottle2\"},{\"drift_mm\":32.9,\"object\":\"Empty bottle3\"},{\"drift_mm\":30.6,\"object\":\"Empty bottle4\"},{\"drift_mm\":67.4,\"object\":\"Empty bottle5\"},{\"drift_mm\":38.8,\"object\":\"Plastic pail\"},{\"drift_mm\":40.6,\"object\":\"Plastic pail2\"},{\"drift_mm\":8374.6,\"object\":\"Plastic pail3\"},{\"drift_mm\":36.2,\"object\":\"Plastic pail4\"},{\"drift_mm\":99.1,\"object\":\"Wooden crate2\"},{\"drift_mm\":38.1,\"object\":\"Wooden crate3\"},{\"drift_mm\":78.3,\"object\":\"Plastic pail5\"},{\"drift_mm\":33.0,\"object\":\"Wooden crate4\"},{\"drift_mm\":67.8,\"object\":\"Empty bottle6\"},{\"drift_mm\":39.7,\"object\":\"Wooden crate5\"},{\"drift_mm\":31.3,\"object\":\"Empty bottle7\"},{\"drift_mm\":33.2,\"object\":\"Empty bottle8\"},{\"drift_mm\":37.3,\"object\":\"Plastic pail6\"},{\"drift_mm\":35.3,\"object\":\"Wooden crate6\"},{\"drift_mm\":36.0,\"object\":\"Plastic pail\"},{\"drift_mm\":27.3,\"object\":\"Plastic basin\"},{\"drift_mm\":33.0,\"object\":\"Wooden crate\"},{\"drift_mm\":37.9,\"object\":\"Plastic pail2\"},{\"drift_mm\":35.3,\"object\":\"Plastic pail3\"},{\"drift_mm\":27.3,\"object\":\"Plastic basin2\"},{\"drift_mm\":27.3,\"object\":\"Wooden crate2\"},{\"drift_mm\":27.3,\"object\":\"Plastic pail4\"},{\"drift_mm\":27.3,\"object\":\"Plastic pail5\"},{\"drift_mm\":27.3,\"object\":\"Plastic basin3\"},{\"drift_mm\":27.3,\"object\":\"Wooden crate3\"},{\"drift_mm\":12.3,\"object\":\"Empty bottle\"},{\"drift_mm\":12.4,\"object\":\"Empty bottle2\"},{\"drift_mm\":12.3,\"object\":\"Empty bottle3\"},{\"drift_mm\":12.3,\"object\":\"Empty bottle4\"},{\"drift_mm\":7.3,\"object\":\"Empty bottle5\"},{\"drift_mm\":7.3,\"object\":\"Empty bottle6\"},{\"drift_mm\":7.3,\"object\":\"Empty bottle7\"},{\"drift_mm\":7.3,\"object\":\"Empty bottle8\"},{\"drift_mm\":12.3,\"object\":\"Empty bottle9\"},{\"drift_mm\":7.3,\"object\":\"Empty bottle10\"},{\"drift_mm\":12.3,\"object\":\"Empty bottle11\"},{\"drift_mm\":12.7,\"object\":\"Empty bottle12\"},{\"drift_mm\":18.8,\"object\":\"Empty bottle13\"},{\"drift_mm\":20.3,\"object\":\"Empty bottle14\"},{\"drift_mm\":7.3,\"object\":\"Empty bottle15\"},{\"drift_mm\":12.3,\"object\":\"Empty bottle16\"},{\"drift_mm\":17.3,\"object\":\"Dented pot\"},{\"drift_mm\":7.3,\"object\":\"Dented pot2\"},{\"drift_mm\":7.3,\"object\":\"Plastic basin4\"},{\"drift_mm\":7.3,\"object\":\"Plastic pail6\"},{\"drift_mm\":17.3,\"object\":\"Wooden crate4\"},{\"drift_mm\":8.2,\"object\":\"Nichols antique_ceramic_vase_01\"},{\"drift_mm\":13.8,\"object\":\"Nichols sheet_sofa\"},{\"drift_mm\":9.3,\"object\":\"Nichols sheet_armchair\"},{\"drift_mm\":21.2,\"object\":\"Nichols gothic_coffee_table\"},{\"drift_mm\":57.3,\"object\":\"Nichols mantel_clock_01\"},{\"drift_mm\":57.3,\"object\":\"Nichols candelabra\"},{\"drift_mm\":21.2,\"object\":\"Nichols candelabra2\"},{\"drift_mm\":23.0,\"object\":\"Nichols dining_chair_08\"},{\"drift_mm\":10.3,\"object\":\"Nichols tea_set_01\"},{\"drift_mm\":3.3,\"object\":\"Nichols chess_set\"},{\"drift_mm\":9.3,\"object\":\"Nichols sheet_armchair2\"},{\"drift_mm\":9.3,\"object\":\"Nichols sheet_table\"},{\"drift_mm\":3.3,\"object\":\"Nichols lantern_01\"},{\"drift_mm\":8.3,\"object\":\"Nichols vintage_oil_lamp\"},{\"drift_mm\":21.2,\"object\":\"Nichols dining_chair_09\"},{\"drift_mm\":51.4,\"object\":\"Nichols sheet_tall\"},{\"drift_mm\":57.3,\"object\":\"Nichols standing_picture_frame_01\"},{\"drift_mm\":57.3,\"object\":\"Nichols wooden_candlestick\"},{\"drift_mm\":102.3,\"object\":\"Nichols antique_doll\"},{\"drift_mm\":9.8,\"object\":\"Nichols porcelain_doll2\"},{\"drift_mm\":67.9,\"object\":\"Nichols vintage_crutches_01\"},{\"drift_mm\":28.2,\"object\":\"Nichols ceramic_vase_02\"},{\"drift_mm\":8.2,\"object\":\"Nichols ceramic_vase_04\"},{\"drift_mm\":5.2,\"object\":\"Nichols brass_candleholders\"},{\"drift_mm\":8.2,\"object\":\"Nichols horse_statue_01\"},{\"drift_mm\":15.5,\"object\":\"Nichols old_tyre\"},{\"drift_mm\":5.8,\"object\":\"Nichols cardboard_box_03\"},{\"drift_mm\":7.7,\"object\":\"Nichols wooden_crate_04\"},{\"drift_mm\":7.3,\"object\":\"Nichols can_rusted\"},{\"drift_mm\":13.5,\"object\":\"Nichols can_rusted2\"},{\"drift_mm\":9.3,\"object\":\"Nichols handsaw_wood\"},{\"drift_mm\":8.7,\"object\":\"Nichols rusted_hacksaw\"},{\"drift_mm\":20.4,\"object\":\"Nichols machete\"},{\"drift_mm\":9.0,\"object\":\"Nichols pipe_wrench\"},{\"drift_mm\":54.7,\"object\":\"Nichols bolt_cutters_01\"},{\"drift_mm\":132.1,\"object\":\"Nichols sledgehammer_01\"},{\"drift_mm\":23.7,\"object\":\"Nichols crowbar_01\"},{\"drift_mm\":11.0,\"object\":\"Nichols medical_box\"},{\"drift_mm\":9.8,\"object\":\"Nichols lantern_02\"},{\"drift_mm\":3.4,\"object\":\"Nichols brass_pan_01\"}],\"passed\":false,\"worst_drift_mm\":8374.56},\"wake_all\":{\"latest_sleep_s\":99.0,\"offenders\":[{\"asleep_at_s\":0.85,\"drift_mm\":48.6,\"object\":\"monitor_7\"},{\"asleep_at_s\":0.566666666666667,\"drift_mm\":45.2,\"object\":\"computer_tower_8\"},{\"asleep_at_s\":0.483333333333333,\"drift_mm\":8.3,\"object\":\"photo_frame_34\"},{\"asleep_at_s\":0.483333333333333,\"drift_mm\":6.1,\"object\":\"photo_frame_35\"},{\"asleep_at_s\":99.0,\"drift_mm\":52.9,\"object\":\"potted_plant_38\"},{\"asleep_at_s\":99.0,\"drift_mm\":48.4,\"object\":\"potted_plant_39\"},{\"asleep_at_s\":2.45,\"drift_mm\":233.6,\"object\":\"Loose cushion 1 fabric_sofa_0\"},{\"asleep_at_s\":2.45,\"drift_mm\":227.9,\"object\":\"Loose cushion 2 fabric_sofa_0\"},{\"asleep_at_s\":99.0,\"drift_mm\":222.4,\"object\":\"Loose cushion 1 leather_sofa_1\"},{\"asleep_at_s\":99.0,\"drift_mm\":222.5,\"object\":\"Loose cushion 2 leather_sofa_1\"},{\"asleep_at_s\":99.0,\"drift_mm\":43.8,\"object\":\"Black storage rack\"},{\"asleep_at_s\":99.0,\"drift_mm\":1296.1,\"object\":\"Plastic pail3\"},{\"asleep_at_s\":99.0,\"drift_mm\":3.3,\"object\":\"Empty bottle12\"},{\"asleep_at_s\":1.35,\"drift_mm\":5.0,\"object\":\"Nichols vintage_crutches_01\"},{\"asleep_at_s\":0.483333333333333,\"drift_mm\":21.0,\"object\":\"Nichols machete\"}],\"passed\":false,\"within_3mm\":197,\"worst_drift_mm\":1296.1}}"
+    ],
+    "errors": []
+  },
+  {
+    "test": "siege_integration",
+    "passed": false,
+    "exitCode": 0,
+    "completed": true,
+    "seconds": 27.0,
+    "reports": [
+      "INTERIOR_SIEGE_INTEGRATION {\"checks\":35,\"failures\":[],\"passed\":true,\"results\":{\"hole_crouching_z\":57.07,\"hole_standing_z\":54.45,\"horror\":{\"arrows\":10,\"belongings\":65,\"bodies\":8,\"crows\":5,\"decals\":149,\"door_marks\":3,\"flags\":166,\"trails\":9,\"wall_splatter\":30},\"passage_x\":-27.93,\"regions_crouching\":{\"canal\":8381,\"fields\":91,\"inside\":3075,\"nichols\":12222},\"regions_standing\":{\"canal\":8154,\"fields\":0,\"inside\":3069,\"nichols\":0},\"secret_end\":[19.38,-19.71],\"siege\":{\"barbs\":1362,\"braces\":43,\"bulbs\":4,\"colliders\":98,\"lot_fence_spans\":6,\"pallets\":31,\"posts\":94,\"sheets\":597,\"skipped_for_houses\":0,\"triangles\":91992,\"upper_sheets\":266}}}"
+    ],
+    "errors": [
+      "ERROR: 2 RID allocations of type 'P11JoltShape3D' were leaked at exit.",
+      "ERROR: 1 RID allocations of type 'N16RendererViewport8ViewportE' were leaked at exit.",
+      "ERROR: 17 RID allocations of type 'PN13RendererDummy14TextureStorage12DummyTextureE' were leaked at exit.",
+      "ERROR: 1 RID allocations of type 'N17RendererSceneCull8ScenarioE' were leaked at exit.",
+      "ERROR: 3 RID allocations of type 'PN18TextServerAdvanced12FontAdvancedE' were leaked at exit.",
+      "ERROR: 1 resources still in use at exit (run with --verbose for details)."
+    ]
+  },
+  {
+    "test": "stranger_integration",
+    "passed": true,
+    "exitCode": 0,
+    "completed": true,
+    "seconds": 26.6,
+    "reports": [
+      "INTERIOR_STRANGER_INTEGRATION {\"checks\":42,\"failures\":[],\"passed\":true,\"results\":{\"cutscene_frames\":14,\"cutscene_head_influence\":1.0,\"cutscene_walk_speed\":1.45,\"reached_z\":149.7,\"road_off_centre_m\":0.01,\"route_hits\":[]}}"
+    ],
+    "errors": []
+  },
+  {
+    "test": "surroundings_integration",
+    "passed": false,
+    "exitCode": 1,
+    "completed": true,
+    "seconds": 23.9,
+    "reports": [
+      "INTERIOR_SURROUNDINGS_INTEGRATION {\"actual_rendered_triangles\":7282,\"checks\":29,\"failures\":[\"Final rendered triangles match construction count (7282 actual, 8434 expected)\"],\"kitchen_player_position\":[-4.59996557235718,0.00402149325236678,1.92999994754791],\"passed\":false,\"stats\":{\"colliders\":40,\"door_triangles\":864,\"dynamic_props\":11,\"family_photos\":5,\"features\":[\"Removed clutter: storage_bin_36\",\"Removed clutter: storage_bin_37\",\"Removed clutter: Pink toy 1 baby_crib_9\",\"Walkable left kitchen extension\",\"Navy louvered kitchen cabinets and tiled L counter\",\"Kitchen barred window with blue valance\",\"Sink dish rack cookware and everyday counter items\",\"Dark refrigerator with clean doors\",\"Styled physics toys: balls on the rug, bowl of oranges, bottles\",\"Rear navy paneled entrance and vertical pale slats\",\"Tall mirror beside the entrance\",\"Right slatted wall and family-photo gallery\",\"Sheer linen curtain doorway and shallow closet\",\"Tall white storage cupboard\",\"Hinged navy entry door to the balcony\"],\"kitchen_bounds\":[-5.65,-3.3,-2.7,2.7],\"kitchen_entrance\":[-3.3,0,1.95],\"static_batches\":22,\"triangles_added\":8434,\"triangles_removed\":6126},\"visible_geometry_vertices\":{\"fridge\":222,\"kitchen_cabinets\":3744,\"right_cabinet\":576,\"right_slats\":3258,\"window_bars\":1152}}"
+    ],
+    "errors": [
+      "ERROR: Final rendered triangles match construction count (7282 actual, 8434 expected)"
+    ]
+  },
+  {
+    "test": "tabletop_stability",
+    "passed": true,
+    "exitCode": 0,
+    "completed": true,
+    "seconds": 16.1,
+    "reports": [
+      "INTERIOR_TABLETOP_STABILITY {\"checks\":6310,\"failures\":[],\"fixed_delta_seconds\":0.0166666666666667,\"passed\":true,\"phases\":[{\"bodies\":[{\"frozen\":false,\"late_drift_m\":0.0000117875715659466,\"late_max_speed_m_s\":0.00019305017485749,\"late_max_spin_rad_s\":0.000384340266464278,\"name\":\"marble_table_2\",\"position\":\"(-0.650008, 0.000037, 0.149953)\",\"sleeping\":false},{\"frozen\":false,\"late_drift_m\":0.0000719434247002937,\"late_max_speed_m_s\":0.0040502455085516,\"late_max_spin_rad_s\":0.0160457324236631,\"name\":\"woven_tray_14\",\"position\":\"(-0.650167, 0.83497, 0.139767)\",\"sleeping\":false},{\"frozen\":false,\"late_drift_m\":0.000288477254798636,\"late_max_speed_m_s\":0.0109451403841376,\"late_max_spin_rad_s\":0.000149043611600064,\"name\":\"potted_plant_15\",\"position\":\"(-0.531134, 0.890886, 0.13823)\",\"sleeping\":false},{\"frozen\":false,\"late_drift_m\":0.000253474776400253,\"late_max_speed_m_s\":0.0121765015646815,\"late_max_spin_rad_s\":0.0482472851872444,\"name\":\"tissue_box_16\",\"position\":\"(-0.810876, 0.8904, 0.209277)\",\"sleeping\":false}],\"phase\":\"wake_stack\",\"simulated_seconds\":8.0},{\"bodies\":[{\"frozen\":false,\"late_drift_m\":0.00000790683225204702,\"late_max_speed_m_s\":0.000125507431221195,\"late_max_spin_rad_s\":0.000096016054158099,\"name\":\"marble_table_2\",\"position\":\"(-0.650072, 0.000062, 0.149961)\",\"sleeping\":false},{\"frozen\":false,\"late_drift_m\":0.0000431003936682828,\"late_max_speed_m_s\":0.00429149344563484,\"late_max_spin_rad_s\":0.0220807883888483,\"name\":\"woven_tray_14\",\"position\":\"(-0.647883, 0.833166, 0.128119)\",\"sleeping\":true},{\"frozen\":false,\"late_drift_m\":0.00032860750798136,\"late_max_speed_m_s\":0.0105115054175258,\"late_max_spin_rad_s\":0.000120975520985667,\"name\":\"potted_plant_15\",\"position\":\"(-0.50051, 0.887804, 0.127719)\",\"sleeping\":false},{\"frozen\":false,\"late_drift_m\":0.000198538560653105,\"late_max_speed_m_s\":0.0107626272365451,\"late_max_spin_rad_s\":0.0131886107847095,\"name\":\"tissue_box_16\",\"position\":\"(-0.755975, 0.889901, 0.227775)\",\"sleeping\":false}],\"phase\":\"grab_drop_woven_tray_14\",\"simulated_seconds\":6.0},{\"bodies\":[{\"frozen\":false,\"late_drift_m\":0.0000121747498269542,\"late_max_speed_m_s\":0.000167595237144269,\"late_max_spin_rad_s\":0.00014847464626655,\"name\":\"marble_table_2\",\"position\":\"(-0.650169, 0.000068, 0.149964)\",\"sleeping\":false},{\"frozen\":false,\"late_drift_m\":0.000151181826367974,\"late_max_speed_m_s\":0.00910572148859501,\"late_max_spin_rad_s\":0.0434132665395737,\"name\":\"woven_tray_14\",\"position\":\"(-0.646193, 0.833479, 0.127767)\",\"sleeping\":false},{\"frozen\":false,\"late_drift_m\":0.000279493367997929,\"late_max_speed_m_s\":0.0128083685413003,\"late_max_spin_rad_s\":0.000218670829781331,\"name\":\"potted_plant_15\",\"position\":\"(-0.490795, 0.888329, 0.114665)\",\"sleeping\":false},{\"frozen\":false,\"late_drift_m\":0.000251460558502004,\"late_max_speed_m_s\":0.0130066042765975,\"late_max_spin_rad_s\":0.0497109033167362,\"name\":\"tissue_box_16\",\"position\":\"(-0.755382, 0.889968, 0.22722)\",\"sleeping\":false}],\"phase\":\"grab_drop_potted_plant_15\",\"simulated_seconds\":6.0},{\"bodies\":[{\"frozen\":false,\"late_drift_m\":0.00000762993295211345,\"late_max_speed_m_s\":0.000152416454511695,\"late_max_spin_rad_s\":0.000158819006173871,\"name\":\"marble_table_2\",\"position\":\"(-0.650166, 0.000074, 0.149977)\",\"sleeping\":false},{\"frozen\":false,\"late_drift_m\":0.0000797515967860818,\"late_max_speed_m_s\":0.00409855041652918,\"late_max_spin_rad_s\":0.0209067780524492,\"name\":\"woven_tray_14\",\"position\":\"(-0.647192, 0.834087, 0.12634)\",\"sleeping\":false},{\"frozen\":false,\"late_drift_m\":0.000381194899091497,\"late_max_speed_m_s\":0.0171990711241961,\"late_max_spin_rad_s\":0.000236874344409443,\"name\":\"potted_plant_15\",\"position\":\"(-0.491927, 0.889356, 0.115077)\",\"sleeping\":false},{\"frozen\":false,\"late_drift_m\":0.000305934110656381,\"late_max_speed_m_s\":0.00970735494047403,\"late_max_spin_rad_s\":0.0345745272934437,\"name\":\"tissue_box_16\",\"position\":\"(-0.755186, 0.889376, 0.221738)\",\"sleeping\":false}],\"phase\":\"grab_drop_tissue_box_16\",\"simulated_seconds\":6.0}],\"simulated_seconds\":27.5}"
+    ],
+    "errors": []
+  },
+  {
+    "test": "touch_integration",
+    "passed": true,
+    "exitCode": 0,
+    "completed": true,
+    "seconds": 32.7,
+    "reports": [
+      "INTERIOR_TOUCH_INTEGRATION {\"checks\":33,\"failures\":[],\"passed\":true,\"results\":{\"actual_scene_restarts\":2,\"buttons\":10,\"first_sprint_speed_m_s\":0.449999988079071,\"later_sprint_speed_m_s\":2.25,\"mobile_mode\":true,\"viewport\":\"(1280.0, 720.0)\"}}"
+    ],
+    "errors": []
+  },
+  {
+    "test": "upgrade_integration",
+    "passed": true,
+    "exitCode": 0,
+    "completed": true,
+    "seconds": 57.8,
+    "reports": [
+      "INTERIOR_UPGRADE_INTEGRATION {\"checks\":839,\"failures\":[],\"passed\":true,\"results\":{\"cold_scene_nodes\":9580,\"hamsters\":3,\"movable_props\":260,\"visuals\":{\"detail_meshes\":27,\"family_photos\":8,\"meshes\":44,\"surface_materials\":108}}}"
+    ],
+    "errors": []
+  },
+  {
+    "test": "warren_integration",
+    "passed": true,
+    "exitCode": 0,
+    "completed": true,
+    "seconds": 35.8,
+    "reports": [
+      "WARREN_COUNTS { \"houses\": 31, \"doors\": 8, \"locked\": 14, \"props\": 39, \"lights\": 4, \"usables\": 17, \"planks\": 343, \"decals\": 72, \"junk\": 85, \"textured_prop_materials\": 3 }",
+      "WARREN_RESULT {\"chairs\":26,\"checks\":87,\"counts\":{\"decals\":72,\"doors\":8,\"houses\":31,\"junk\":85,\"lights\":4,\"locked\":14,\"planks\":343,\"props\":39,\"textured_prop_materials\":3,\"usables\":17},\"failures\":[],\"route\":[{\"at\":\"(-84.23775, -2.081208, 7.999787)\",\"leg\":\"up the far-bank slope on the litter trail\",\"reached\":true},{\"at\":\"(-92.60612, -2.09997, 7.999279)\",\"leg\":\"far bank to the fence\",\"reached\":true},{\"at\":\"(-96.24333, -2.083549, 7.999639)\",\"leg\":\"through the fence\",\"reached\":true},{\"at\":\"(-103.5388, -2.046, 7.99988)\",\"leg\":\"down the alley\",\"reached\":true},{\"at\":\"(-104.0256, -2.046, 6.401681)\",\"leg\":\"east tunnel z6.1\",\"reached\":true},{\"at\":\"(-104.2753, -2.046, 4.540034)\",\"leg\":\"east tunnel z4.2\",\"reached\":true},{\"at\":\"(-104.5732, -2.046, 2.644123)\",\"leg\":\"east tunnel z2.4\",\"reached\":true},{\"at\":\"(-104.8923, -2.046, 0.793111)\",\"leg\":\"east tunnel z0.5\",\"reached\":true},{\"at\":\"(-105.5924, -2.045672, -2.917587)\",\"leg\":\"crouching under the cave-in\",\"reached\":true},{\"at\":\"(-105.9997, -2.045672, -4.880399)\",\"leg\":\"east tunnel south z-5.2\",\"reached\":true},{\"at\":\"(-106.3769, -2.046, -6.845346)\",\"leg\":\"east tunnel south z-7.1\",\"reached\":true},{\"at\":\"(-106.7919, -2.046, -8.764265)\",\"leg\":\"east tunnel south z-9.1\",\"reached\":true},{\"at\":\"(-107.1397, -2.046, -10.73454)\",\"leg\":\"east tunnel south z-11.0\",\"reached\":true},{\"at\":\"(-110.2433, -2.046, -11.00776)\",\"leg\":\"across the plank bridge\",\"reached\":true},{\"at\":\"(-110.1464, -2.046, -9.016384)\",\"leg\":\"west tunnel z-8.7\",\"reached\":true},{\"at\":\"(-109.6747, -2.046, -6.73719)\",\"leg\":\"west tunnel z-6.5\",\"reached\":true},{\"at\":\"(-109.2236, -2.046, -4.495466)\",\"leg\":\"west tunnel z-4.2\",\"reached\":true},{\"at\":\"(-108.7813, -2.046, -2.252019)\",\"leg\":\"west tunnel z-2.0\",\"reached\":true},{\"at\":\"(-108.3492, -2.046, 0.034997)\",\"leg\":\"west tunnel z0.3\",\"reached\":true},{\"at\":\"(-107.5219, -2.046, 5.03569)\",\"leg\":\"through the family room\",\"reached\":true},{\"at\":\"(-107.3259, -2.046, 6.415503)\",\"leg\":\"out of the family room\",\"reached\":true},{\"at\":\"(-107.0338, -2.046, 8.557863)\",\"leg\":\"west tunnel z8.8\",\"reached\":true},{\"at\":\"(-106.8496, -2.046, 10.67314)\",\"leg\":\"west tunnel z10.9\",\"reached\":true},{\"at\":\"(-106.6883, -2.046, 12.79034)\",\"leg\":\"west tunnel z13.1\",\"reached\":true},{\"at\":\"(-106.5248, -2.046001, 14.89194)\",\"leg\":\"west tunnel z15.2\",\"reached\":true},{\"at\":\"(-106.4977, -2.046, 17.01492)\",\"leg\":\"west tunnel z17.3\",\"reached\":true},{\"at\":\"(-106.509, -2.046, 22.00188)\",\"leg\":\"through the altar room\",\"reached\":true},{\"at\":\"(-106.5429, -2.046, 23.43599)\",\"leg\":\"out of the altar room\",\"reached\":true},{\"at\":\"(-106.6288, -2.046, 25.63929)\",\"leg\":\"west tunnel z25.9\",\"reached\":true},{\"at\":\"(-106.7266, -2.046, 27.86402)\",\"leg\":\"west tunnel z28.2\",\"reached\":true},{\"at\":\"(-106.87, -2.046, 30.10519)\",\"leg\":\"west tunnel z30.4\",\"reached\":true},{\"at\":\"(-107.0143, -2.046, 32.34636)\",\"leg\":\"west tunnel z32.6\",\"reached\":true},{\"at\":\"(-107.1595, -2.046, 34.54658)\",\"leg\":\"west tunnel z34.8\",\"reached\":true},{\"at\":\"(-107.3058, -2.046, 36.78754)\",\"leg\":\"west tunnel z37.1\",\"reached\":true},{\"at\":\"(-107.4453, -2.046, 39.02892)\",\"leg\":\"west tunnel z39.3\",\"reached\":true},{\"at\":\"(-107.7109, -2.046, 44.0088)\",\"leg\":\"through the store room\",\"reached\":true},{\"at\":\"(-107.7736, -2.046, 45.40111)\",\"leg\":\"out of the store room\",\"reached\":true},{\"at\":\"(-107.8622, -2.046, 47.72683)\",\"leg\":\"west tunnel north z48.0\",\"reached\":true},{\"at\":\"(-107.9342, -2.046, 50.01238)\",\"leg\":\"west tunnel north z50.3\",\"reached\":true},{\"at\":\"(-107.9796, -2.046, 52.31044)\",\"leg\":\"west tunnel north z52.6\",\"reached\":true},{\"at\":\"(-104.9791, -2.046, 52.61128)\",\"leg\":\"across the second bridge\",\"reached\":true},{\"at\":\"(-104.7127, -2.046, 54.41787)\",\"leg\":\"to the exit alley\",\"reached\":true},{\"at\":\"(-95.12283, -2.10826, 54.70325)\",\"leg\":\"up the exit alley\",\"reached\":true},{\"at\":\"(-90.09798, -2.131684, 54.70035)\",\"leg\":\"out to the far bank\",\"reached\":true}]}"
+    ],
+    "errors": []
+  }
+]

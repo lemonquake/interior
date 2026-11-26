@@ -1,0 +1,187 @@
+{
+	"checks": 57,
+	"counts": {
+		"bulbs": 8,
+		"colliders": 725,
+		"decals": 164,
+		"far_houses": 5,
+		"houses": 30,
+		"kit_pieces": 298,
+		"lane_houses": 14,
+		"models": 186,
+		"planks": 351,
+		"river_houses": 11,
+		"rubbish": 152,
+		"storeys": 72,
+		"textured_prop_materials": 18,
+		"triangles": 134358,
+		"wires": 194
+	},
+	"failures": [],
+	"passed": true,
+	"routes": [
+		{
+			"actual": "(20.73941, -2.906, 4.4)",
+			"leg": "town street",
+			"reached": true,
+			"target": "(21.0, 0.0, 4.4)"
+		},
+		{
+			"actual": "(22.27743, -2.906, 18.12382)",
+			"leg": "town corner past the cart",
+			"reached": true,
+			"target": "(22.3, 0.0, 18.4)"
+		},
+		{
+			"actual": "(-18.70522, -2.826967, 18.34864)",
+			"leg": "street A between the cart and the stall",
+			"reached": true,
+			"target": "(-19.0, 0.0, 18.4)"
+		},
+		{
+			"actual": "(-32.72358, -2.906, 18.3939)",
+			"leg": "old barricade gap",
+			"reached": true,
+			"target": "(-33.0, 0.0, 18.4)"
+		},
+		{
+			"actual": "(-49.72913, -2.088794, 18.03733)",
+			"leg": "entry ramp to the lane",
+			"reached": true,
+			"target": "(-50.00309, 0.0, 18.0)"
+		},
+		{
+			"actual": "(-49.68623, -2.094852, 21.94173)",
+			"leg": "lane",
+			"reached": true,
+			"target": "(-49.65284, 0.0, 22.2)"
+		},
+		{
+			"actual": "(-54.58341, -2.428536, 22.2104)",
+			"leg": "trench stair head",
+			"reached": true,
+			"target": "(-54.85284, 0.0, 22.2)"
+		},
+		{
+			"actual": "(-59.0539, -4.332569, 22.20065)",
+			"leg": "down the stair to the catwalk",
+			"reached": true,
+			"target": "(-59.35284, 0.0, 22.2)"
+		},
+		{
+			"actual": "(-62.77328, -4.395985, -8.736453)",
+			"leg": "catwalk south",
+			"reached": true,
+			"target": "(-62.80163, 0.0, -9.0)"
+		},
+		{
+			"actual": "(-74.3199, -5.443726, -9.003461)",
+			"leg": "plank footbridge",
+			"reached": true,
+			"target": "(-74.60162, 0.0, -9.0)"
+		},
+		{
+			"actual": "(-70.78422, -5.456244, 29.7345)",
+			"leg": "far-bank path",
+			"reached": true,
+			"target": "(-70.75722, 0.0, 30.0)"
+		},
+		{
+			"actual": "(-72.13738, -2.124636, 56.30101)",
+			"leg": "path climbing to the bridge",
+			"reached": true,
+			"target": "(-72.15128, 0.0, 56.6)"
+		},
+		{
+			"actual": "(-81.76801, -2.094858, 56.60394)",
+			"leg": "far bank top",
+			"reached": true,
+			"target": "(-82.05128, 0.0, 56.6)"
+		},
+		{
+			"actual": "(-82.45651, -2.097329, 59.9338)",
+			"leg": "bridge west approach",
+			"reached": true,
+			"target": "(-82.47814, 0.0, 60.2)"
+		},
+		{
+			"actual": "(-56.27137, -2.085182, 60.20182)",
+			"leg": "across the road bridge",
+			"reached": true,
+			"target": "(-55.97814, 0.0, 60.2)"
+		},
+		{
+			"actual": "(-55.56321, -2.0955, 56.77665)",
+			"leg": "off the bridge",
+			"reached": true,
+			"target": "(-55.53983, 0.0, 56.5)"
+		},
+		{
+			"actual": "(-59.47704, -2.096, 56.58113)",
+			"leg": "stair landing",
+			"reached": true,
+			"target": "(-59.75129, 0.0, 56.6)"
+		},
+		{
+			"actual": "(-59.58921, -4.396, 49.29491)",
+			"leg": "down the catwalk stair",
+			"reached": true,
+			"target": "(-59.57568, 0.0, 49.0)"
+		},
+		{
+			"actual": "(-58.96632, -4.396, 30.27771)",
+			"leg": "catwalk north",
+			"reached": true,
+			"target": "(-58.95722, 0.0, 30.0)"
+		},
+		{
+			"actual": "(-59.33903, -4.396, 22.48816)",
+			"leg": "catwalk to the stair foot",
+			"reached": true,
+			"target": "(-59.35284, 0.0, 22.2)"
+		},
+		{
+			"actual": "(-59.00397, -4.311891, 22.04013)",
+			"leg": "onto the stair",
+			"reached": true,
+			"target": "(-58.75284, 0.0, 22.2)"
+		},
+		{
+			"actual": "(-55.12122, -2.658132, 22.1912)",
+			"leg": "up the trench stair",
+			"reached": true,
+			"target": "(-54.85284, 0.0, 22.2)"
+		},
+		{
+			"actual": "(-49.93214, -2.090766, 22.19962)",
+			"leg": "back in the lane",
+			"reached": true,
+			"target": "(-49.65284, 0.0, 22.2)"
+		},
+		{
+			"actual": "(-49.96938, -2.088413, 18.26484)",
+			"leg": "lane south",
+			"reached": true,
+			"target": "(-50.00309, 0.0, 18.0)"
+		},
+		{
+			"actual": "(-33.26269, -2.839731, 18.39472)",
+			"leg": "out through the ramp",
+			"reached": true,
+			"target": "(-33.0, 0.0, 18.4)"
+		},
+		{
+			"actual": "(-19.1118, -2.78371, 18.14154)",
+			"leg": "back on street A",
+			"reached": true,
+			"target": "(-19.0, 0.0, 18.4)"
+		}
+	],
+	"steps": {
+		"asphalt": 38,
+		"concrete": 39,
+		"dirt": 143,
+		"grass": 4,
+		"wood": 111
+	}
+}

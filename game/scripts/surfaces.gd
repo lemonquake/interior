@@ -34,6 +34,81 @@ static func under(body: Node3D) -> String:
 			return "wood"
 	return at(body.global_position, body.get_tree())
 
+## 0.33: is this shape one of the world's unseen walls? The road and path edges in the fields, the "Bound" blocks
+## round the play area, the guards over a rail or a gap: they keep feet where the ground is, and nothing else
+## should take them for a wall (a round, a sound, a hand looking for a ledge). Told by the shape's name.
+static var _unseen := {}
+
+static func unseen(collider: Object, shape_index: int) -> bool:
+	if not collider is CollisionObject3D:
+		return false
+	var key := Vector2i(collider.get_instance_id() & 0x7fffffff, shape_index)
+	if _unseen.has(key):
+		return _unseen[key]
+	var node := _shape_node(collider, shape_index)
+	var answer := false
+	if node != null and (node.has_meta("unseen") or collider.has_meta("unseen")):
+		answer = true
+	elif node != null:
+		var low := String(node.name).to_lower().rstrip("0123456789@ ")
+		answer = low.begins_with("bound ") or low == "boundary" or low.ends_with(" bound") or low.begins_with("road edge") 			or low == "road end" or low.ends_with(" edge") or low.begins_with("edge") or low.ends_with("guard") or low == "jetty end" or low.ends_with(" void")
+	if _unseen.size() > 4000:
+		_unseen.clear()
+	_unseen[key] = answer
+	return answer
+
+## 0.34: where the hands do not take the body (scripts/player.gd, `_try_mantle`): a climb, a catch off a jump or a
+## vault that would end inside one of these is not made. Found with tests/climb_integration.gd, which asks the
+## player's own climbing code from every cell of the world.
+## - The canal district and the warren, from 1.35 m above the lane: off a perch (the culvert headwall, a crate) a
+##   jump caught the top of the boundary wall or a roof, and from there the far side was a drop out of the world
+##   or into the dead ground behind the warren. Crates, carts, low walls and the headwall are still climbed.
+const NO_PERCH := [AABB(Vector3(-125.0, -.75, -20.0), Vector3(88.0, 30.0, 96.0))]
+
+## 0.34: is this shape a rail (a boardwalk's, a catwalk's, a bridge's, a balcony's)? Nobody stands on one: the
+## warren's are 1.2 m high and 0.4 m wide, and from the top of one the drop on the far side was into its drain,
+## which leads out behind its walls. A rail low enough is still vaulted. Told by the shape's name, like `unseen`.
+static var _rails := {}
+
+static func rail(collider: Object, shape_index: int) -> bool:
+	if not collider is CollisionObject3D:
+		return false
+	var key := Vector2i(collider.get_instance_id() & 0x7fffffff, shape_index)
+	if _rails.has(key):
+		return _rails[key]
+	var node := _shape_node(collider, shape_index)
+	var answer := false
+	if node != null:
+		var low := String(node.name).to_lower()
+		answer = low.contains("rail") or low.contains("baluster")
+	if _rails.size() > 4000:
+		_rails.clear()
+	_rails[key] = answer
+	return answer
+
+static func no_perch(to: Vector3) -> bool:
+	for box: AABB in NO_PERCH:
+		if box.has_point(to):
+			return true
+	return false
+
+## A ray against `mask` that goes on through the unseen walls. Returns the hit, or {}.
+static func seen_ray(space: PhysicsDirectSpaceState3D, from: Vector3, to: Vector3, mask: int, exclude: Array[RID] = []) -> Dictionary:
+	var start := from
+	for i in 8:
+		var query := PhysicsRayQueryParameters3D.create(start, to, mask)
+		query.exclude = exclude
+		var hit := space.intersect_ray(query)
+		if hit.is_empty() or not unseen(hit.collider, int(hit.get("shape", 0))):
+			return hit
+		var on: Vector3 = hit.position
+		if on.distance_to(to) < .3:
+			return {}
+		# 0.49: just inside it (a ray from inside a box does not meet that box): what is drawn inside a walking box
+		# (a gate's lower sheet in its frame) is met; the old .28 m step went clean over it.
+		start = on + (to - on).normalized() * .01
+	return {}
+
 static func _shape_node(collider: Object, shape_index: int) -> Node:
 	if not collider is CollisionObject3D:
 		return null

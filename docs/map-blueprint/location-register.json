@@ -1,0 +1,2091 @@
+[
+  {
+    "id": "H01",
+    "name": "Player spawn",
+    "position": [
+      0.62,
+      0.1,
+      1.3
+    ],
+    "area": "Home",
+    "detail": "Player feet spawn; room floor near Y=0.",
+    "evidence": "runtime transform",
+    "node_path": "Player",
+    "node_id": "N-64aee8c6cbd0",
+    "source": {
+      "file": "game/scripts/interior.gd",
+      "line": 93
+    }
+  },
+  {
+    "id": "H02",
+    "name": "Navy entry door hinge",
+    "position": [
+      2.43,
+      0.0,
+      2.6335
+    ],
+    "area": "Home",
+    "detail": "Leaf spans X=1.39..2.43; inner face Z=2.6335. Swings inward toward -Z.",
+    "evidence": "runtime transform",
+    "node_path": "LivingRoom/ReferenceRoomSurroundings/EntryDoor",
+    "node_id": "N-f9c52706b3be",
+    "source": {
+      "file": "game/scripts/hinged_door.gd",
+      "line": 1
+    }
+  },
+  {
+    "id": "H03",
+    "name": "Studio sliding door",
+    "position": [
+      -3.23,
+      0.0,
+      2.84
+    ],
+    "area": "Home",
+    "detail": "Door node origin, not doorway midpoint. Opening X=-3.25..-1.24, Z near 2.9, height 2.4.",
+    "evidence": "runtime transform",
+    "node_path": "Studio/StudioDoor",
+    "node_id": "N-2977ce2c29d7",
+    "source": {
+      "file": "game/scripts/sliding_door.gd",
+      "line": 1
+    }
+  },
+  {
+    "id": "H04",
+    "name": "Locked closet door",
+    "position": [
+      3.25,
+      0.0,
+      0.9
+    ],
+    "area": "Home",
+    "detail": "Locked prop door on east wall; no documented playable room beyond it.",
+    "evidence": "runtime transform",
+    "node_path": "LivingRoom/LockedClosetDoor",
+    "node_id": "N-9691d997a52a",
+    "source": {
+      "file": "game/scripts/locked_room_door.gd",
+      "line": 1
+    }
+  },
+  {
+    "id": "H05",
+    "name": "Kitchen entrance",
+    "position": [
+      -3.3,
+      0.0,
+      1.95
+    ],
+    "area": "Home",
+    "detail": "West-side opening; kitchen bounds X=-5.65..-3.3, Z=-2.7..2.7.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/scripts/room_surroundings.gd",
+      "line": 20
+    }
+  },
+  {
+    "id": "H10",
+    "name": "Fabric sofa",
+    "position": [
+      -2.08,
+      0.0,
+      0.45
+    ],
+    "area": "Home",
+    "detail": "Physical furniture assembly.",
+    "evidence": "runtime transform",
+    "node_path": "LivingRoom/fabric_sofa_0",
+    "node_id": "N-6410e49d7988",
+    "source": {
+      "file": "game/scripts/physics_object.gd",
+      "line": 1
+    }
+  },
+  {
+    "id": "H11",
+    "name": "Leather sofa",
+    "position": [
+      0.2,
+      0.0,
+      2.21
+    ],
+    "area": "Home",
+    "detail": "Physical furniture along north/rear wall.",
+    "evidence": "runtime transform",
+    "node_path": "LivingRoom/leather_sofa_1",
+    "node_id": "N-89150fd94736",
+    "source": {
+      "file": "game/scripts/physics_object.gd",
+      "line": 1
+    }
+  },
+  {
+    "id": "H12",
+    "name": "Marble table",
+    "position": [
+      -0.65,
+      0.0,
+      0.15
+    ],
+    "area": "Home",
+    "detail": "Physical table; tray, plant and tissue box rest above it.",
+    "evidence": "runtime transform",
+    "node_path": "LivingRoom/marble_table_2",
+    "node_id": "N-506b0123be4a",
+    "source": {
+      "file": "game/scripts/physics_object.gd",
+      "line": 1
+    }
+  },
+  {
+    "id": "H13",
+    "name": "Television",
+    "position": [
+      -0.55,
+      1.77,
+      -2.6
+    ],
+    "area": "Home",
+    "detail": "TV-wall anchor; power, channels, inspect interaction and mystery lock.",
+    "evidence": "runtime transform",
+    "node_path": "LivingRoom/television_4",
+    "node_id": "N-551641f53bbd",
+    "source": {
+      "file": "game/scripts/physics_object.gd",
+      "line": 1
+    }
+  },
+  {
+    "id": "H14",
+    "name": "TV console",
+    "position": [
+      -0.55,
+      0.095,
+      -2.42
+    ],
+    "area": "Home",
+    "detail": "Console below television.",
+    "evidence": "runtime transform",
+    "node_path": "LivingRoom/tv_console_3",
+    "node_id": "N-763cdb46b37e",
+    "source": {
+      "file": "game/scripts/physics_object.gd",
+      "line": 1
+    }
+  },
+  {
+    "id": "H15",
+    "name": "Digital clock",
+    "position": [
+      -0.55,
+      0.67,
+      -2.3399
+    ],
+    "area": "Home",
+    "detail": "One of the note-bearing props; clock has abnormal time display.",
+    "evidence": "runtime transform",
+    "node_path": "LivingRoom/digital_clock_17",
+    "node_id": "N-e15aa5c4d120",
+    "source": {
+      "file": "game/scripts/physics_object.gd",
+      "line": 1
+    }
+  },
+  {
+    "id": "H16",
+    "name": "Table plant",
+    "position": [
+      -0.5305,
+      0.8907,
+      0.1395
+    ],
+    "area": "Home",
+    "detail": "One of the note-bearing props.",
+    "evidence": "runtime transform",
+    "node_path": "LivingRoom/potted_plant_15",
+    "node_id": "N-1ee87a65b507",
+    "source": {
+      "file": "game/scripts/physics_object.gd",
+      "line": 1
+    }
+  },
+  {
+    "id": "H17",
+    "name": "Cabinet photo",
+    "position": [
+      -1.13,
+      0.845,
+      -2.2895
+    ],
+    "area": "Home",
+    "detail": "One of the note-bearing props.",
+    "evidence": "runtime transform",
+    "node_path": "LivingRoom/photo_frame_19",
+    "node_id": "N-25f7979b30e4",
+    "source": {
+      "file": "game/scripts/physics_object.gd",
+      "line": 1
+    }
+  },
+  {
+    "id": "H18",
+    "name": "Hamster enclosure stand",
+    "position": [
+      -2.5975,
+      0.0034,
+      -1.103
+    ],
+    "area": "Home",
+    "detail": "Three-level habitat; movable assembly with attached animal systems.",
+    "evidence": "runtime transform",
+    "node_path": "LivingRoom/pet_enclosure_11",
+    "node_id": "N-04781ecd8878",
+    "source": {
+      "file": "game/scripts/physics_object.gd",
+      "line": 1
+    }
+  },
+  {
+    "id": "H19",
+    "name": "Small aquarium",
+    "position": [
+      -2.3598,
+      0.1394,
+      -1.1099
+    ],
+    "area": "Home",
+    "detail": "Lower shelf aquarium.",
+    "evidence": "runtime transform",
+    "node_path": "LivingRoom/SmallAquarium",
+    "node_id": "N-8373b594a964",
+    "source": {
+      "file": "game/scripts/physics_object.gd",
+      "line": 1
+    }
+  },
+  {
+    "id": "H20",
+    "name": "Computer desk",
+    "position": [
+      2.17,
+      -0.025,
+      -2.15
+    ],
+    "area": "Home",
+    "detail": "Desk in the southeast/TV-wall corner.",
+    "evidence": "runtime transform",
+    "node_path": "LivingRoom/computer_desk_6",
+    "node_id": "N-da2ed1c48832",
+    "source": {
+      "file": "game/scripts/physics_object.gd",
+      "line": 1
+    }
+  },
+  {
+    "id": "H21",
+    "name": "Baby crib",
+    "position": [
+      2.05,
+      -0.006,
+      -0.99
+    ],
+    "area": "Home",
+    "detail": "Physical crib assembly.",
+    "evidence": "runtime transform",
+    "node_path": "LivingRoom/baby_crib_9",
+    "node_id": "N-89bd879358e5",
+    "source": {
+      "file": "game/scripts/physics_object.gd",
+      "line": 1
+    }
+  },
+  {
+    "id": "H22",
+    "name": "Standing fan",
+    "position": [
+      1.03,
+      0.0001,
+      -1.35
+    ],
+    "area": "Home",
+    "detail": "Physical standing fan.",
+    "evidence": "runtime transform",
+    "node_path": "LivingRoom/standing_fan_5",
+    "node_id": "N-58cb842ff7f7",
+    "source": {
+      "file": "game/scripts/physics_object.gd",
+      "line": 1
+    }
+  },
+  {
+    "id": "H23",
+    "name": "White display rack",
+    "position": [
+      1.1613,
+      0.0051,
+      -2.3704
+    ],
+    "area": "Home",
+    "detail": "Named furniture, beside the TV area.",
+    "evidence": "runtime transform",
+    "node_path": "LivingRoom/White display rack",
+    "node_id": "N-822c7fb9f4ff",
+    "source": {
+      "file": "game/scripts/physics_object.gd",
+      "line": 1
+    }
+  },
+  {
+    "id": "H24",
+    "name": "Black storage rack",
+    "position": [
+      3.0477,
+      0.0268,
+      -2.4573
+    ],
+    "area": "Home",
+    "detail": "Named furniture, at east end of TV wall.",
+    "evidence": "runtime transform",
+    "node_path": "LivingRoom/Black storage rack",
+    "node_id": "N-36cfdba6b322",
+    "source": {
+      "file": "game/scripts/physics_object.gd",
+      "line": 1
+    }
+  },
+  {
+    "id": "H30",
+    "name": "Studio interior centre",
+    "position": [
+      -3.45,
+      0.0,
+      5.1
+    ],
+    "area": "Home",
+    "detail": "4.4 by 4.4 m; X=-5.65..-1.25, Z=2.9..7.3; ceiling Y=2.9.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/scripts/studio_builder.gd",
+      "line": 14
+    }
+  },
+  {
+    "id": "H31",
+    "name": "Studio production desk",
+    "position": [
+      -2.6,
+      0.0,
+      6.745
+    ],
+    "area": "Home",
+    "detail": "Desk base reference; desk top Y=.692.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/scripts/studio_builder.gd",
+      "line": 23
+    }
+  },
+  {
+    "id": "H32",
+    "name": "Studio couch",
+    "position": [
+      -4.62,
+      0.0,
+      3.37
+    ],
+    "area": "Studio",
+    "detail": "Runtime model origin. See parent collision body and siblings for the complete assembly.",
+    "evidence": "runtime transform",
+    "node_path": "Studio/Couch/sofa_02",
+    "node_id": "N-561db5597cc2"
+  },
+  {
+    "id": "H33",
+    "name": "Drum kit",
+    "position": [
+      -4.73,
+      0.0,
+      6.4
+    ],
+    "area": "Studio",
+    "detail": "Runtime model origin. See parent collision body and siblings for the complete assembly.",
+    "evidence": "runtime transform",
+    "node_path": "Studio/Drum kit/drum_kit",
+    "node_id": "N-f434d1417a4f"
+  },
+  {
+    "id": "H34",
+    "name": "Two-tier synthesizers",
+    "position": [
+      -1.68,
+      0.815,
+      4.55
+    ],
+    "area": "Studio",
+    "detail": "Runtime model origin. See parent collision body and siblings for the complete assembly.",
+    "evidence": "runtime transform",
+    "node_path": "Studio/Synth 61-key/synth_b",
+    "node_id": "N-86b19f571c97"
+  },
+  {
+    "id": "H35",
+    "name": "Acoustic guitar A",
+    "position": [
+      -5.585,
+      1.42,
+      3.78
+    ],
+    "area": "Studio",
+    "detail": "Runtime model origin. See parent collision body and siblings for the complete assembly.",
+    "evidence": "runtime transform",
+    "node_path": "Studio/Guitar acoustic_a/guitar_acoustic_a",
+    "node_id": "N-86d92b9f4cc9"
+  },
+  {
+    "id": "H36",
+    "name": "Bass on stand",
+    "position": [
+      -3.95,
+      0.0,
+      5.35
+    ],
+    "area": "Studio",
+    "detail": "Runtime model origin. See parent collision body and siblings for the complete assembly.",
+    "evidence": "runtime transform",
+    "node_path": "Studio/Bass on stand/bass_precision",
+    "node_id": "N-bca5bb34f84b"
+  },
+  {
+    "id": "H37",
+    "name": "Gaming chair",
+    "position": [
+      -2.65,
+      0.0,
+      5.795
+    ],
+    "area": "Studio",
+    "detail": "Runtime model origin. See parent collision body and siblings for the complete assembly.",
+    "evidence": "runtime transform",
+    "node_path": "Studio/Gaming chair/gaming_chair",
+    "node_id": "N-4411e4648883"
+  },
+  {
+    "id": "H38",
+    "name": "Microphone stand",
+    "position": [
+      -2.5,
+      0.0,
+      4.3
+    ],
+    "area": "Studio",
+    "detail": "Runtime model origin. See parent collision body and siblings for the complete assembly.",
+    "evidence": "runtime transform",
+    "node_path": "Studio/Mic boom stand/mic_boom_stand",
+    "node_id": "N-f8f10015843c"
+  },
+  {
+    "id": "H40",
+    "name": "Balcony centre",
+    "position": [
+      3.275,
+      0.0,
+      3.725
+    ],
+    "area": "Home",
+    "detail": "Floor bounds X=.95..5.6, Z=2.9..4.55; outer parapet Z=4.75.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/scripts/balcony_builder.gd",
+      "line": 19
+    }
+  },
+  {
+    "id": "H41",
+    "name": "Stair upper end",
+    "position": [
+      5.6,
+      0.0,
+      3.38
+    ],
+    "area": "Home",
+    "detail": "16 risers, rise .18125 m each; treads .27 m. Descends east to Y=-2.9.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/scripts/balcony_builder.gd",
+      "line": 26
+    }
+  },
+  {
+    "id": "H42",
+    "name": "Courtyard",
+    "position": [
+      11.1,
+      -2.9,
+      4.1
+    ],
+    "area": "Home",
+    "detail": "Courtyard reference; X=9.65..12.6, Z=2.9..5.3.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/scripts/balcony_builder.gd",
+      "line": 30
+    }
+  },
+  {
+    "id": "T01",
+    "name": "Courtyard gate opening",
+    "position": [
+      12.6,
+      -2.9,
+      4.12
+    ],
+    "area": "Town",
+    "detail": "Opening midpoint derived from leaf hinges. CourtyardGate root itself is at (0,0,0). Tap E unlatches; push or hold E and move to swing leaves.",
+    "evidence": "derived from runtime hinge transforms",
+    "node_path": "Balcony/CourtyardGate",
+    "node_id": "N-7b231b8eadf8"
+  },
+  {
+    "id": "T02",
+    "name": "Lane outside courtyard gate",
+    "position": [
+      14.0,
+      -2.9,
+      4.6
+    ],
+    "area": "Town",
+    "detail": "Reachability audit origin; head east through lane to street B, then north to street A.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/tests/world_audit.gd",
+      "line": 18
+    }
+  },
+  {
+    "id": "T03",
+    "name": "Courtyard lane / street B",
+    "position": [
+      21.4,
+      -2.9,
+      6.0
+    ],
+    "area": "Town",
+    "detail": "Actual player-route test point at the lane mouth on Malasugue Street. Head north to A/B corner T04.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/tests/street_integration.gd",
+      "line": 99
+    }
+  },
+  {
+    "id": "T13",
+    "name": "Bent Malasugue Street sign base",
+    "position": [
+      18.5,
+      -2.78,
+      7.35
+    ],
+    "area": "Town",
+    "detail": "Source base of snapped street-sign pole beside the lane mouth.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/scripts/street_dressing.gd",
+      "line": 127
+    }
+  },
+  {
+    "id": "T14",
+    "name": "Whisper source behind east gate",
+    "position": [
+      23.4,
+      -1.45,
+      10.5
+    ],
+    "area": "Town",
+    "detail": "Positional psst sound; approach trigger X=18..24, Z=5.5..16.5.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/scripts/neighborhood_encounters.gd",
+      "line": 9
+    }
+  },
+  {
+    "id": "T04",
+    "name": "Street A / B corner",
+    "position": [
+      21.0,
+      -2.9,
+      18.0
+    ],
+    "area": "Town",
+    "detail": "Intersection centre; street corridor width 6 m, including 1 m sidewalks each side.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/scripts/neighborhood_builder.gd",
+      "line": 17
+    }
+  },
+  {
+    "id": "T05",
+    "name": "Street A / D corner",
+    "position": [
+      -19.0,
+      -2.9,
+      18.0
+    ],
+    "area": "Town",
+    "detail": "Intersection centre; street corridor width 6 m, including 1 m sidewalks each side.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/scripts/neighborhood_builder.gd",
+      "line": 17
+    }
+  },
+  {
+    "id": "T06",
+    "name": "Street B / C corner",
+    "position": [
+      21.0,
+      -2.9,
+      49.0
+    ],
+    "area": "Town",
+    "detail": "Intersection centre; street corridor width 6 m, including 1 m sidewalks each side.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/scripts/neighborhood_builder.gd",
+      "line": 17
+    }
+  },
+  {
+    "id": "T07",
+    "name": "Street C / D corner",
+    "position": [
+      -19.0,
+      -2.9,
+      49.0
+    ],
+    "area": "Town",
+    "detail": "Intersection centre; street corridor width 6 m, including 1 m sidewalks each side.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/scripts/neighborhood_builder.gd",
+      "line": 17
+    }
+  },
+  {
+    "id": "T08",
+    "name": "Open west passage",
+    "position": [
+      -23.85,
+      -2.9,
+      18.0
+    ],
+    "area": "Town",
+    "detail": "West wall opening Z=15.15..20.85; leads to canal settlement.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/scripts/town_siege.gd",
+      "line": 38
+    }
+  },
+  {
+    "id": "T09",
+    "name": "North wall crouch hole",
+    "position": [
+      21.32,
+      -2.9,
+      54.8
+    ],
+    "area": "Town",
+    "detail": "Width .95 m; height 1.3 m. Standing player cannot pass; hold C. Leads to field road.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/scripts/town_siege.gd",
+      "line": 28
+    }
+  },
+  {
+    "id": "T10",
+    "name": "Hidden south crawl",
+    "position": [
+      19.35,
+      -2.9,
+      -18.55
+    ],
+    "area": "Town",
+    "detail": "Width .9 m. Enter from east end behind leaned sheets, crouch along wall, crawl south to Nichols path.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/scripts/town_siege.gd",
+      "line": 40
+    }
+  },
+  {
+    "id": "T11",
+    "name": "Hooded man waiting point",
+    "position": [
+      21.32,
+      -2.9,
+      53.35
+    ],
+    "area": "Town",
+    "detail": "Scripted actor waits here after courtyard gate opens.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/scripts/town_siege.gd",
+      "line": 32
+    }
+  },
+  {
+    "id": "T12",
+    "name": "Hooded man beyond hole",
+    "position": [
+      21.32,
+      -2.9,
+      56.6
+    ],
+    "area": "Town",
+    "detail": "Actor can stand again here before fleeing along field road.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/scripts/town_siege.gd",
+      "line": 33
+    }
+  },
+  {
+    "id": "C01",
+    "name": "Settlement approach",
+    "position": [
+      -30.0,
+      -2.9,
+      18.4
+    ],
+    "area": "Canal",
+    "detail": "Approach from west end of street A. Ramp joins settlement bank at Y=-2.1.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/tests/world_audit.gd",
+      "line": 21
+    }
+  },
+  {
+    "id": "C02",
+    "name": "Upper east-bank lane",
+    "position": [
+      -49.5528,
+      -2.1,
+      22.2
+    ],
+    "area": "Canal",
+    "detail": "Lane between house rows; river coordinates approximately U=12.9..16.9.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/scripts/canal_settlement.gd",
+      "line": 26
+    }
+  },
+  {
+    "id": "C03",
+    "name": "Trench stair top",
+    "position": [
+      -53.7528,
+      -2.1,
+      22.2
+    ],
+    "area": "Canal",
+    "detail": "1.4 m wide walking ramp with 15 visible steps, down 2.3 m to catwalk.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/scripts/canal_settlement.gd",
+      "line": 596
+    }
+  },
+  {
+    "id": "C04",
+    "name": "Trench stair foot",
+    "position": [
+      -59.1528,
+      -4.4,
+      22.2
+    ],
+    "area": "Canal",
+    "detail": "East retaining-wall catwalk at Y=-4.4.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/scripts/canal_settlement.gd",
+      "line": 597
+    }
+  },
+  {
+    "id": "C05",
+    "name": "Plank footbridge east end",
+    "position": [
+      -63.7816,
+      -4.4,
+      -9.0
+    ],
+    "area": "Canal",
+    "detail": "Footbridge width 1.15 m; spans to far bank U=-6.7 at Y=-5.45.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/scripts/canal_settlement.gd",
+      "line": 637
+    }
+  },
+  {
+    "id": "C06",
+    "name": "Plank footbridge west end",
+    "position": [
+      -74.2016,
+      -5.45,
+      -9.0
+    ],
+    "area": "Canal",
+    "detail": "From here head north on far-bank path to the warren approach.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/scripts/canal_settlement.gd",
+      "line": 637
+    }
+  },
+  {
+    "id": "C07",
+    "name": "Warren approach stair bottom",
+    "position": [
+      -72.8044,
+      -5.45,
+      8.0
+    ],
+    "area": "Canal",
+    "detail": "Bank steps climb west over U=-7.3..-13.6; then continue to fence opening.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/scripts/canal_settlement.gd",
+      "line": 83
+    }
+  },
+  {
+    "id": "C08",
+    "name": "Concrete road bridge",
+    "position": [
+      -68.9781,
+      -2.1,
+      60.2
+    ],
+    "area": "Canal",
+    "detail": "Deck spans U=-15..8, Z=58..62.4 (23 by 4.4 m).",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/scripts/canal_settlement.gd",
+      "line": 663
+    }
+  },
+  {
+    "id": "C09",
+    "name": "Catwalk north stair start",
+    "position": [
+      -59.7148,
+      -4.4,
+      50.0
+    ],
+    "area": "Canal",
+    "detail": "Climbs to Y=-2.1 at Z=55.4; landing connects to road bridge.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/scripts/canal_settlement.gd",
+      "line": 617
+    }
+  },
+  {
+    "id": "C10",
+    "name": "Far-bank path north climb",
+    "position": [
+      -70.9045,
+      -5.45,
+      44.0
+    ],
+    "area": "Canal",
+    "detail": "Path height smoothly rises from -5.45 at Z=44 to -2.1 at Z=57.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/scripts/canal_settlement.gd",
+      "line": 67
+    }
+  },
+  {
+    "id": "W01",
+    "name": "Warren fence entrance",
+    "position": [
+      -94.0044,
+      -2.1,
+      8.0
+    ],
+    "area": "Warren",
+    "detail": "Pried tin sheet near actual door W10; continue west through access alley to east boardwalk.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/scripts/canal_warren.gd",
+      "line": 32
+    }
+  },
+  {
+    "id": "W02",
+    "name": "Collapsed roof",
+    "position": [
+      -105.2176,
+      -2.05,
+      -1.25
+    ],
+    "area": "Warren",
+    "detail": "Crouch section Z=-2.2..-.3 on east boardwalk. Roof low point Y=-.83; deck Y=-2.05.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/scripts/canal_warren.gd",
+      "line": 44
+    }
+  },
+  {
+    "id": "W03",
+    "name": "South plank crossing",
+    "position": [
+      -108.7867,
+      -2.05,
+      -11.0
+    ],
+    "area": "Warren",
+    "detail": "Cross east to west boardwalk here; bridge 4.9 by 1 m nominal.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/scripts/canal_warren.gd",
+      "line": 34
+    }
+  },
+  {
+    "id": "W04",
+    "name": "Family room",
+    "position": [
+      -109.7313,
+      -2.05,
+      3.5
+    ],
+    "area": "Warren",
+    "detail": "Through-room on west side, Z=1..6; radio, light switch, sleeping area and old TV.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/scripts/canal_warren.gd",
+      "line": 41
+    }
+  },
+  {
+    "id": "W05",
+    "name": "Altar room",
+    "position": [
+      -108.4594,
+      -2.05,
+      20.5
+    ],
+    "area": "Warren",
+    "detail": "Through-room on west side, Z=18..23; one votive candle.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/scripts/canal_warren.gd",
+      "line": 41
+    }
+  },
+  {
+    "id": "W06",
+    "name": "Moonlit courtyard",
+    "position": [
+      -109.4068,
+      -2.05,
+      31.0
+    ],
+    "area": "Warren",
+    "detail": "Open courtyard Z=28..34; pump, cages, clotheslines and gutted tricycle.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/scripts/canal_warren.gd",
+      "line": 43
+    }
+  },
+  {
+    "id": "W07",
+    "name": "Store rear room",
+    "position": [
+      -109.6196,
+      -2.05,
+      42.5
+    ],
+    "area": "Warren",
+    "detail": "Through-room Z=40..45 behind padlocked sari-sari store; kerosene lamp.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/scripts/canal_warren.gd",
+      "line": 41
+    }
+  },
+  {
+    "id": "W08",
+    "name": "North plank crossing",
+    "position": [
+      -106.2815,
+      -2.05,
+      52.6
+    ],
+    "area": "Warren",
+    "detail": "Cross west to short north segment of east boardwalk.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/scripts/canal_warren.gd",
+      "line": 35
+    }
+  },
+  {
+    "id": "W09",
+    "name": "Warren fence exit",
+    "position": [
+      -93.3385,
+      -2.1,
+      54.7
+    ],
+    "area": "Warren",
+    "detail": "Second pried sheet near road bridge. Actual gate origin is W11.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/scripts/canal_warren.gd",
+      "line": 33
+    }
+  },
+  {
+    "id": "W10",
+    "name": "Entrance tin door",
+    "position": [
+      -93.9459,
+      -2.08,
+      8.48
+    ],
+    "area": "Warren",
+    "detail": "Door hinge origin, beside W01.",
+    "evidence": "runtime transform",
+    "node_path": "Balcony/Neighbourhood/Canal settlement/Canal warren/Warren door 06",
+    "node_id": "N-b720d5194ecc",
+    "source": {
+      "file": "game/scripts/warren_door.gd",
+      "line": 1
+    }
+  },
+  {
+    "id": "W11",
+    "name": "Exit tin door",
+    "position": [
+      -93.3912,
+      -2.08,
+      55.18
+    ],
+    "area": "Warren",
+    "detail": "Door hinge origin, beside W09.",
+    "evidence": "runtime transform",
+    "node_path": "Balcony/Neighbourhood/Canal settlement/Canal warren/Warren door 07",
+    "node_id": "N-bbc8240b2b32",
+    "source": {
+      "file": "game/scripts/warren_door.gd",
+      "line": 1
+    }
+  },
+  {
+    "id": "W12",
+    "name": "Radio",
+    "position": [
+      -109.2463,
+      -1.67,
+      4.7
+    ],
+    "area": "Warren",
+    "detail": "Usable radio in family room.",
+    "evidence": "runtime transform",
+    "node_path": "Balcony/Neighbourhood/Canal settlement/Canal warren/Warren radio",
+    "node_id": "N-2f4bf0d35c9a",
+    "source": {
+      "file": "game/scripts/warren_usable.gd",
+      "line": 1
+    }
+  },
+  {
+    "id": "W13",
+    "name": "Family-room light switch",
+    "position": [
+      -108.7908,
+      -0.75,
+      1.07
+    ],
+    "area": "Warren",
+    "detail": "Usable tube-light switch.",
+    "evidence": "runtime transform",
+    "node_path": "Balcony/Neighbourhood/Canal settlement/Canal warren/Warren switch",
+    "node_id": "N-ddb6fdc56c03",
+    "source": {
+      "file": "game/scripts/warren_usable.gd",
+      "line": 1
+    }
+  },
+  {
+    "id": "W14",
+    "name": "Courtyard hand pump",
+    "position": [
+      -109.4068,
+      -2.02,
+      31.0
+    ],
+    "area": "Warren",
+    "detail": "Usable pump in courtyard.",
+    "evidence": "runtime transform",
+    "node_path": "Balcony/Neighbourhood/Canal settlement/Canal warren/Warren pump",
+    "node_id": "N-27cb53f6c916",
+    "source": {
+      "file": "game/scripts/warren_usable.gd",
+      "line": 1
+    }
+  },
+  {
+    "id": "N01",
+    "name": "Nichols outer gate",
+    "position": [
+      -12.0,
+      -2.9,
+      -60.0
+    ],
+    "area": "Nichols",
+    "detail": "Open wrought-iron gate; estate X=-40..14, Z=-124..-60.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/scripts/nichols_property.gd",
+      "line": 14
+    }
+  },
+  {
+    "id": "N02",
+    "name": "Nichols facade origin",
+    "position": [
+      -12.0,
+      -1.7,
+      -82.0
+    ],
+    "area": "Nichols",
+    "detail": "Origin of house-local Godot coordinates. Ground floor Y=-1.7; upstairs Y=2.7.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/scripts/nichols_property.gd",
+      "line": 13
+    }
+  },
+  {
+    "id": "N03",
+    "name": "Porch Steps",
+    "position": [
+      -12.0,
+      -2.9,
+      -75.62
+    ],
+    "area": "Nichols",
+    "detail": "Translated from house layout.json spots.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/assets/models/nichols/house/layout.json",
+      "line": 13070
+    }
+  },
+  {
+    "id": "N04",
+    "name": "Front Door",
+    "position": [
+      -12.0,
+      -1.7,
+      -80.2
+    ],
+    "area": "Nichols",
+    "detail": "Translated from house layout.json spots.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/assets/models/nichols/house/layout.json",
+      "line": 13075
+    }
+  },
+  {
+    "id": "N05",
+    "name": "Stair Foot",
+    "position": [
+      -12.0,
+      -1.7,
+      -85.3
+    ],
+    "area": "Nichols",
+    "detail": "Translated from house layout.json spots.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/assets/models/nichols/house/layout.json",
+      "line": 13040
+    }
+  },
+  {
+    "id": "N06",
+    "name": "Landing",
+    "position": [
+      -12.0,
+      0.5,
+      -90.4
+    ],
+    "area": "Nichols",
+    "detail": "Translated from house layout.json spots.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/assets/models/nichols/house/layout.json",
+      "line": 13045
+    }
+  },
+  {
+    "id": "N07",
+    "name": "Bridge",
+    "position": [
+      -12.0,
+      2.7,
+      -83.2
+    ],
+    "area": "Nichols",
+    "detail": "Translated from house layout.json spots.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/assets/models/nichols/house/layout.json",
+      "line": 11538
+    }
+  },
+  {
+    "id": "N08",
+    "name": "Mantel Parlour",
+    "position": [
+      -24.05,
+      -0.36,
+      -87.5
+    ],
+    "area": "Nichols",
+    "detail": "Translated from house layout.json spots.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/assets/models/nichols/house/layout.json",
+      "line": 13055
+    }
+  },
+  {
+    "id": "N09",
+    "name": "Tower Top",
+    "position": [
+      -12.0,
+      17.65,
+      -84.4
+    ],
+    "area": "Nichols",
+    "detail": "Translated from house layout.json spots.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/assets/models/nichols/house/layout.json",
+      "line": 13065
+    }
+  },
+  {
+    "id": "NR01",
+    "name": "Foyer",
+    "position": [
+      -12.0,
+      -1.7,
+      -86.85
+    ],
+    "area": "Nichols rooms",
+    "detail": "Room volume; see room-register.json for all rectangles, world bounds, floor and ceiling.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/assets/models/nichols/house/layout.json",
+      "line": 12662
+    },
+    "room_name": "foyer"
+  },
+  {
+    "id": "NR02",
+    "name": "Parlour",
+    "position": [
+      -20.35,
+      -1.7,
+      -87.65
+    ],
+    "area": "Nichols rooms",
+    "detail": "Room volume; see room-register.json for all rectangles, world bounds, floor and ceiling.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/assets/models/nichols/house/layout.json",
+      "line": 12694
+    },
+    "room_name": "parlour"
+  },
+  {
+    "id": "NR03",
+    "name": "Dining",
+    "position": [
+      -3.65,
+      -1.7,
+      -87.65
+    ],
+    "area": "Nichols rooms",
+    "detail": "Room volume; see room-register.json for all rectangles, world bounds, floor and ceiling.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/assets/models/nichols/house/layout.json",
+      "line": 12714
+    },
+    "room_name": "dining"
+  },
+  {
+    "id": "NR04",
+    "name": "Closet",
+    "position": [
+      -12.0,
+      -1.7,
+      -92.2
+    ],
+    "area": "Nichols rooms",
+    "detail": "Room volume; see room-register.json for all rectangles, world bounds, floor and ceiling.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/assets/models/nichols/house/layout.json",
+      "line": 12734
+    },
+    "room_name": "closet"
+  },
+  {
+    "id": "NR05",
+    "name": "Hall",
+    "position": [
+      -12.0,
+      -1.7,
+      -94.2
+    ],
+    "area": "Nichols rooms",
+    "detail": "Room volume; see room-register.json for all rectangles, world bounds, floor and ceiling.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/assets/models/nichols/house/layout.json",
+      "line": 12754
+    },
+    "room_name": "hall"
+  },
+  {
+    "id": "NR06",
+    "name": "Library",
+    "position": [
+      -20.35,
+      -1.7,
+      -98.55
+    ],
+    "area": "Nichols rooms",
+    "detail": "Room volume; see room-register.json for all rectangles, world bounds, floor and ceiling.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/assets/models/nichols/house/layout.json",
+      "line": 12774
+    },
+    "room_name": "library"
+  },
+  {
+    "id": "NR07",
+    "name": "Pantry",
+    "position": [
+      -12.0,
+      -1.7,
+      -98.55
+    ],
+    "area": "Nichols rooms",
+    "detail": "Room volume; see room-register.json for all rectangles, world bounds, floor and ceiling.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/assets/models/nichols/house/layout.json",
+      "line": 12794
+    },
+    "room_name": "pantry"
+  },
+  {
+    "id": "NR08",
+    "name": "Kitchen",
+    "position": [
+      -3.65,
+      -1.7,
+      -98.55
+    ],
+    "area": "Nichols rooms",
+    "detail": "Room volume; see room-register.json for all rectangles, world bounds, floor and ceiling.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/assets/models/nichols/house/layout.json",
+      "line": 12814
+    },
+    "room_name": "kitchen"
+  },
+  {
+    "id": "NR09",
+    "name": "Corridor W",
+    "position": [
+      -20.35,
+      2.7,
+      -83.35
+    ],
+    "area": "Nichols rooms",
+    "detail": "Room volume; see room-register.json for all rectangles, world bounds, floor and ceiling.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/assets/models/nichols/house/layout.json",
+      "line": 12834
+    },
+    "room_name": "corridor_w"
+  },
+  {
+    "id": "NR10",
+    "name": "Corridor E",
+    "position": [
+      -3.65,
+      2.7,
+      -83.35
+    ],
+    "area": "Nichols rooms",
+    "detail": "Room volume; see room-register.json for all rectangles, world bounds, floor and ceiling.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/assets/models/nichols/house/layout.json",
+      "line": 12854
+    },
+    "room_name": "corridor_e"
+  },
+  {
+    "id": "NR11",
+    "name": "Bridge",
+    "position": [
+      -12.0,
+      2.7,
+      -83.35
+    ],
+    "area": "Nichols rooms",
+    "detail": "Room volume; see room-register.json for all rectangles, world bounds, floor and ceiling.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/assets/models/nichols/house/layout.json",
+      "line": 12874
+    },
+    "room_name": "bridge"
+  },
+  {
+    "id": "NR12",
+    "name": "Gallery W",
+    "position": [
+      -15.3,
+      2.7,
+      -85.05
+    ],
+    "area": "Nichols rooms",
+    "detail": "Room volume; see room-register.json for all rectangles, world bounds, floor and ceiling.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/assets/models/nichols/house/layout.json",
+      "line": 12906
+    },
+    "room_name": "gallery_w"
+  },
+  {
+    "id": "NR13",
+    "name": "Gallery E",
+    "position": [
+      -8.7,
+      2.7,
+      -85.05
+    ],
+    "area": "Nichols rooms",
+    "detail": "Room volume; see room-register.json for all rectangles, world bounds, floor and ceiling.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/assets/models/nichols/house/layout.json",
+      "line": 12926
+    },
+    "room_name": "gallery_e"
+  },
+  {
+    "id": "NR14",
+    "name": "Master",
+    "position": [
+      -20.35,
+      2.7,
+      -88.7
+    ],
+    "area": "Nichols rooms",
+    "detail": "Room volume; see room-register.json for all rectangles, world bounds, floor and ceiling.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/assets/models/nichols/house/layout.json",
+      "line": 12946
+    },
+    "room_name": "master"
+  },
+  {
+    "id": "NR15",
+    "name": "Nursery",
+    "position": [
+      -3.65,
+      2.7,
+      -88.7
+    ],
+    "area": "Nichols rooms",
+    "detail": "Room volume; see room-register.json for all rectangles, world bounds, floor and ceiling.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/assets/models/nichols/house/layout.json",
+      "line": 12966
+    },
+    "room_name": "nursery"
+  },
+  {
+    "id": "NR16",
+    "name": "Sealed",
+    "position": [
+      -12.0,
+      2.7,
+      -97.35
+    ],
+    "area": "Nichols rooms",
+    "detail": "Room volume; see room-register.json for all rectangles, world bounds, floor and ceiling.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/assets/models/nichols/house/layout.json",
+      "line": 12986
+    },
+    "room_name": "sealed"
+  },
+  {
+    "id": "B01",
+    "name": "Nook",
+    "position": [
+      -10.05,
+      -1.7,
+      -89.6
+    ],
+    "area": "Basement",
+    "detail": "House-local vector translated by (-12,-1.7,-82).",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/assets/models/nichols/house/layout.json",
+      "line": 13488
+    }
+  },
+  {
+    "id": "B02",
+    "name": "Landing",
+    "position": [
+      -9.8,
+      -1.7,
+      -92.2
+    ],
+    "area": "Basement",
+    "detail": "House-local vector translated by (-12,-1.7,-82).",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/assets/models/nichols/house/layout.json",
+      "line": 13045
+    }
+  },
+  {
+    "id": "B03",
+    "name": "Shaft Foot",
+    "position": [
+      -15.35,
+      -4.4,
+      -92.2
+    ],
+    "area": "Basement",
+    "detail": "House-local vector translated by (-12,-1.7,-82).",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/assets/models/nichols/house/layout.json",
+      "line": 13498
+    }
+  },
+  {
+    "id": "B04",
+    "name": "Cellar",
+    "position": [
+      -18.0,
+      -4.4,
+      -96.0
+    ],
+    "area": "Basement",
+    "detail": "House-local vector translated by (-12,-1.7,-82).",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/assets/models/nichols/house/layout.json",
+      "line": 13229
+    }
+  },
+  {
+    "id": "B05",
+    "name": "Hole",
+    "position": [
+      -12.9,
+      -4.4,
+      -98.85
+    ],
+    "area": "Basement",
+    "detail": "House-local vector translated by (-12,-1.7,-82).",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/assets/models/nichols/house/layout.json",
+      "line": 13513
+    }
+  },
+  {
+    "id": "B06",
+    "name": "Corridor",
+    "position": [
+      -9.7,
+      -5.3,
+      -98.8
+    ],
+    "area": "Basement",
+    "detail": "House-local vector translated by (-12,-1.7,-82).",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/assets/models/nichols/house/layout.json",
+      "line": 13280
+    }
+  },
+  {
+    "id": "B07",
+    "name": "Steel Door",
+    "position": [
+      -0.7,
+      -5.3,
+      -98.8
+    ],
+    "area": "Basement",
+    "detail": "House-local vector translated by (-12,-1.7,-82).",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/assets/models/nichols/house/layout.json",
+      "line": 13523
+    }
+  },
+  {
+    "id": "B08",
+    "name": "Cages",
+    "position": [
+      -2.1,
+      -5.3,
+      -98.3
+    ],
+    "area": "Basement",
+    "detail": "House-local vector translated by (-12,-1.7,-82).",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/assets/models/nichols/house/layout.json",
+      "line": 13528
+    }
+  },
+  {
+    "id": "B09",
+    "name": "Tarp",
+    "position": [
+      -20.4,
+      -4.4,
+      -99.3
+    ],
+    "area": "Basement",
+    "detail": "House-local vector translated by (-12,-1.7,-82).",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/assets/models/nichols/house/layout.json",
+      "line": 13533
+    }
+  },
+  {
+    "id": "B10",
+    "name": "Workbench",
+    "position": [
+      -15.3,
+      -3.52,
+      -100.82
+    ],
+    "area": "Basement",
+    "detail": "House-local vector translated by (-12,-1.7,-82).",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/assets/models/nichols/house/layout.json",
+      "line": 13538
+    }
+  },
+  {
+    "id": "B11",
+    "name": "Hooks",
+    "position": [
+      -18.9,
+      -2.1,
+      -100.4
+    ],
+    "area": "Basement",
+    "detail": "House-local vector translated by (-12,-1.7,-82).",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/assets/models/nichols/house/layout.json",
+      "line": 13543
+    }
+  },
+  {
+    "id": "B12",
+    "name": "Drain",
+    "position": [
+      -18.2,
+      -4.4,
+      -99.6
+    ],
+    "area": "Basement",
+    "detail": "House-local vector translated by (-12,-1.7,-82).",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/assets/models/nichols/house/layout.json",
+      "line": 13508
+    }
+  },
+  {
+    "id": "B13",
+    "name": "Cellar door hinge",
+    "position": [
+      -9.65,
+      -1.7,
+      -91.4
+    ],
+    "area": "Basement",
+    "detail": "Under grand-stair landing; .78 m wide, 1.77 m high, initially 48 degrees ajar.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/assets/models/nichols/house/layout.json",
+      "line": 13165
+    }
+  },
+  {
+    "id": "B14",
+    "name": "Cellar light switch",
+    "position": [
+      -9.412,
+      -0.38,
+      -91.12
+    ],
+    "area": "Basement",
+    "detail": "Turns on basement bulbs. Starts off.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/scripts/nichols_basement.gd",
+      "line": 140
+    }
+  },
+  {
+    "id": "B15",
+    "name": "Chained iron door",
+    "position": [
+      0.24,
+      -5.3,
+      -98.8
+    ],
+    "area": "Basement",
+    "detail": "Terminal locked barrier; new padlock, no traversable continuation documented.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/scripts/nichols_basement.gd",
+      "line": 590
+    }
+  },
+  {
+    "id": "F01",
+    "name": "Field-road start",
+    "position": [
+      21.0,
+      -2.9,
+      54.5
+    ],
+    "area": "Fields",
+    "detail": "First stored road sample; begins under the north-wall exit.",
+    "evidence": "source coordinate",
+    "node_path": "",
+    "source": {
+      "file": "game/scripts/fields_builder.gd",
+      "line": 29
+    }
+  },
+  {
+    "id": "F02",
+    "name": "Hut yard reference",
+    "position": [
+      32.9555,
+      -2.9,
+      148.6332
+    ],
+    "area": "Fields",
+    "detail": "Metadata yard reference. Hut model origin is .15 m lower; finished hut floor is Y=-2.63.",
+    "evidence": "source coordinate",
+    "node_path": ""
+  },
+  {
+    "id": "F03",
+    "name": "Bahay kubo model",
+    "position": [
+      32.9555,
+      -3.05,
+      148.6332
+    ],
+    "area": "Fields",
+    "detail": "Runtime orientation faces the road; hut dimensions use local frame in hut_house.gd.",
+    "evidence": "runtime transform",
+    "node_path": "Fields/Models/BahayKubo",
+    "node_id": "N-af30559ac88f"
+  },
+  {
+    "id": "F04",
+    "name": "Scarecrow",
+    "position": [
+      28.9456,
+      -3.06,
+      178.7335
+    ],
+    "area": "Fields",
+    "detail": "Scarecrow islet reached from road by a dike; actor points toward viewer while unseen.",
+    "evidence": "runtime transform",
+    "node_path": "Fields/Models/Scarecrow",
+    "node_id": "N-b6e8f5f61fce"
+  },
+  {
+    "id": "F05",
+    "name": "Buried ammunition box",
+    "position": [
+      29.442,
+      -3.054,
+      178.4967
+    ],
+    "area": "Fields",
+    "detail": "Initially hidden near scarecrow; scripted dig and handover sequence.",
+    "evidence": "runtime transform",
+    "node_path": "Fields/AmmoBox",
+    "node_id": "N-fe33791e5e09"
+  },
+  {
+    "id": "F06",
+    "name": "Pond centre",
+    "position": [
+      28.0103,
+      -3.32,
+      225.5523
+    ],
+    "area": "Fields",
+    "detail": "Ellipse radii 15 m by 12.5 m. Water Y=-3.32.",
+    "evidence": "source coordinate",
+    "node_path": ""
+  },
+  {
+    "id": "F07",
+    "name": "Jetty collider centre",
+    "position": [
+      39.503,
+      -3.06,
+      218.4142
+    ],
+    "area": "Fields",
+    "detail": "Deck walking top near Y=-2.96; node origin is collider centre at Y=-3.06.",
+    "evidence": "runtime transform",
+    "node_path": "Fields/FieldsColliders/Jetty",
+    "node_id": "N-73cdd77bdf9a"
+  },
+  {
+    "id": "F08",
+    "name": "Road dead end",
+    "position": [
+      40.0,
+      -2.9,
+      530.0
+    ],
+    "area": "Fields",
+    "detail": "Road ends at fallen tree and SIRADO barrier; no road beyond this point.",
+    "evidence": "source coordinate",
+    "node_path": ""
+  },
+  {
+    "id": "F09",
+    "name": "Giant tree",
+    "position": [
+      25.09,
+      -2.9,
+      551.3
+    ],
+    "area": "Fields",
+    "detail": "Scenery knoll beyond the road barrier; do not infer a connected playable route.",
+    "evidence": "source coordinate",
+    "node_path": ""
+  },
+  {
+    "id": "K01",
+    "name": "Hut root",
+    "position": [
+      32.9555,
+      -3.05,
+      148.6332
+    ],
+    "area": "Hut",
+    "detail": "Local origin at model base, Y=-3.05; local floor .42 -> world Y=-2.63.",
+    "evidence": "runtime transform",
+    "node_path": "Fields/HutHouse",
+    "node_id": "N-0d6f3af61be0",
+    "source": {
+      "file": "game/scripts/hut_house.gd",
+      "line": 1
+    }
+  },
+  {
+    "id": "K02",
+    "name": "Brass key",
+    "position": [
+      34.399,
+      -1.786,
+      149.0401
+    ],
+    "area": "Hut",
+    "detail": "Take key before opening top dresser drawer.",
+    "evidence": "runtime transform",
+    "node_path": "Fields/HutHouse/Key",
+    "node_id": "N-bd9f3aa639f3",
+    "source": {
+      "file": "game/scripts/hut_usable.gd",
+      "line": 1
+    }
+  },
+  {
+    "id": "K03",
+    "name": "Dresser drawer",
+    "position": [
+      34.2263,
+      -2.048,
+      148.851
+    ],
+    "area": "Hut",
+    "detail": "Drawer node; travel .3 m in hut local frame.",
+    "evidence": "runtime transform",
+    "node_path": "Fields/HutHouse/Dresser/TopDrawer",
+    "node_id": "N-b5250787bd65"
+  },
+  {
+    "id": "K04",
+    "name": "Glock",
+    "position": [
+      34.3548,
+      -2.001,
+      148.8226
+    ],
+    "area": "Hut",
+    "detail": "Inside dresser drawer; scripted pickup.",
+    "evidence": "runtime transform",
+    "node_path": "Fields/HutHouse/Dresser/TopDrawer/Glock",
+    "node_id": "N-bf885f13fec1"
+  },
+  {
+    "id": "K05",
+    "name": "Flashlight",
+    "position": [
+      34.4178,
+      -2.0025,
+      149.1742
+    ],
+    "area": "Hut",
+    "detail": "Inside dresser drawer; scripted pickup.",
+    "evidence": "runtime transform",
+    "node_path": "Fields/HutHouse/Dresser/TopDrawer/Flashlight",
+    "node_id": "N-d087d3512159"
+  }
+]

@@ -51,6 +51,11 @@ func _run() -> void:
 	main._play()
 	await _frames(4)
 	player = main.player
+	# 0.23: walking up to the courtyard gate would start the hooded man's cutscene, which holds the player; this
+	# test drives the gate and the stair, so he stays out of it (tests/stranger_integration.gd covers him).
+	var hooded := main.get_node_or_null("Stranger")
+	if hooded != null:
+		hooded.process_mode = Node.PROCESS_MODE_DISABLED
 	var balcony := main.get_node_or_null("Balcony") as Node3D
 	check(balcony != null, "main.tscn instances the baked balcony scene")
 	var doors := get_nodes_in_group("interior_doors").filter(func(d: Node) -> bool: return d is InteriorHingedDoor and not d is InteriorSlidingDoor)
@@ -166,7 +171,14 @@ func _run() -> void:
 
 	# 6. Daylight is isolated: outdoor lights only hit layer 2; room lights skip layer 2.
 	var outdoor_lights := 0
+	# 0.21: the Nichols house's interior moon lights only the house's own inside layers (never the room's layer 1).
+	# 0.22: the house's basement has a layer of its own (1 << 12), lit only by its bulbs.
+	var nichols_inside: int = (1 << 10) | (1 << 11) | (1 << 12)
 	for light in balcony.find_children("*", "DirectionalLight3D", true, false):
+		if str(light.get_path()).contains("Nichols property"):
+			check(((light as Light3D).light_cull_mask & 1) == 0 and ((light as Light3D).light_cull_mask & ~nichols_inside) == 0,
+				"Nichols light %s lights only the house's inside layers" % light.name)
+			continue
 		outdoor_lights += 1
 		check((light as Light3D).light_cull_mask == 2, "Outdoor light %s lights only the outdoor layer" % light.name)
 	check(outdoor_lights >= 2, "Balcony has a sun and a sky fill")
@@ -175,9 +187,12 @@ func _run() -> void:
 		room_lights += 1
 		check(((light as Light3D).light_cull_mask & 2) == 0, "Room light %s is masked off the outdoor layer" % light.name)
 	results["room_lights_masked"] = room_lights
+	for light in main.get_node("LivingRoom").find_children("*", "DirectionalLight3D", true, false):
+		check(((light as Light3D).light_cull_mask & ((1 << 10) | (1 << 12))) == 0, "Room light %s never reaches the Nichols house's inside" % light.name)
 	var leaked := 0
 	for mesh in balcony.find_children("*", "GeometryInstance3D", true, false):
-		if ((mesh as GeometryInstance3D).layers & 2) == 0:
+		var layers := (mesh as GeometryInstance3D).layers
+		if (layers & 2) == 0 and not ((layers & nichols_inside) != 0 and (layers & 1) == 0):
 			leaked += 1
 	check(leaked == 0, "Every balcony mesh is on the outdoor layer (%d are not)" % leaked)
 

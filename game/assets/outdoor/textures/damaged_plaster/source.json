@@ -1,0 +1,24 @@
+{
+  "asset": "Damaged Plaster",
+  "author": "Amal Kumar",
+  "source": "https://polyhaven.com/a/damaged_plaster",
+  "license": "CC0-1.0",
+  "retrieved": "2026-10-07",
+  "maps": [
+    {
+      "file": "albedo.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/damaged_plaster/damaged_plaster_diff_1k.jpg",
+      "sha256": "391649dbb391c978b0d95cdd2351617fe3b7a577e432b94171208e576c9b2c63"
+    },
+    {
+      "file": "normal.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/damaged_plaster/damaged_plaster_nor_gl_1k.jpg",
+      "sha256": "9d2e4c261211c951fc424fe695483596e821f86b13d1d05485551ef0240d6b67"
+    },
+    {
+      "file": "roughness.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/damaged_plaster/damaged_plaster_rough_1k.jpg",
+      "sha256": "595b9cc69e163687c27681f73fae4a34f5f82ecd70a1ce3867fc8026a0db76cb"
+    }
+  ]
+}

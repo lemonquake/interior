@@ -56,10 +56,15 @@ func _run() -> void:
 	main._play()
 	await _frames(4)
 	player = main.player
+	# 0.23: walking up to the courtyard gate would start the hooded man's cutscene, which holds the player; this
+	# test drives the gate and the stair, so he stays out of it (tests/stranger_integration.gd covers him).
+	var hooded := main.get_node_or_null("Stranger")
+	if hooded != null:
+		hooded.process_mode = Node.PROCESS_MODE_DISABLED
 	player.stepped.connect(func(surface: String, _strength: float) -> void: steps.append([Time.get_ticks_msec(), surface, Engine.get_physics_frames()]))
 	var gate: InteriorPushGate = null
 	for door in get_nodes_in_group("interior_doors"):
-		if door is InteriorPushGate:
+		if door is InteriorPushGate and not door.neighborhood_gate:
 			gate = door
 	check(gate != null, "The courtyard gate is a push gate in the interior_doors group")
 	if gate == null:
@@ -74,7 +79,7 @@ func _run() -> void:
 	player.touch_move = Vector2.ZERO
 	await _frames(3)
 	check(not gate.is_open() and player.global_position.x < 12.6, "A locked gate holds (player x %.2f)" % player.global_position.x)
-	# 2. E unlocks; it only drifts ajar by itself.
+	# 2. E releases the latch without swinging either leaf.
 	player.camera.rotation.x = -.2
 	player.update_target()
 	check(player.door_target == gate, "Looking at the gate targets it")
@@ -112,9 +117,9 @@ func _run() -> void:
 		surfaces[s[1]] = true
 	results["surfaces"] = surfaces.keys()
 	check(surfaces.has("asphalt") and surfaces.has("grass"), "Footsteps name the street surfaces (%s)" % str(surfaces.keys()))
-	# 5. The barricade / play-area edge stops the player at the end of street A.
-	await _walk_to(Vector3(-30.0, -2.9, 18.0), 900)
-	check(player.global_position.x > -24.2, "The edge of the play area holds (x %.2f)" % player.global_position.x)
+	# 5. Since 0.16 the end of street A is open: it leads west into the canal settlement (0.17: down to the ravine lane).
+	await _walk_to(Vector3(-30.0, -2.9, 18.4), 900)
+	check(player.global_position.x < -29.0, "Street A opens into the canal settlement (x %.2f)" % player.global_position.x)
 
 	# 6. The TV.
 	var tv: InteriorTelevision = main.find_child("TelevisionController", true, false)

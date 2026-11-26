@@ -852,10 +852,26 @@ func _poles() -> void:
 		previous = tips
 		s += rng.randf_range(34.0, 42.0)
 
+## 0.11: the scarecrow stands about 40 m past the hut's footpath, on the hut's side, 9 m off the road, on an islet
+## whose flat top is 2.4 m across (two people fit). A dike from the road reaches it; the dike itself is made at
+## runtime (scripts/footpath.gd, called by hut_house.gd); here only its strip is kept free of rice.
+const SCARECROW_PAST_HUT := 38       # road samples (~1 m each) past the hut's own sample
+const SCARECROW_OFF_ROAD := 9.0
+const SCARECROW_ISLET := 2.2         # radius at the waterline; the flat top is 0.55 of it
+
 func _scarecrow() -> void:
-	var i := _nearest_index(Vector2(66, 300))
-	var p := road[i] - side[i] * 11.0
-	_islet(p, 1.0)
+	var i := _nearest_index(Vector2(12, 150)) + SCARECROW_PAST_HUT
+	var p := road[i] - side[i] * SCARECROW_OFF_ROAD
+	if in_pond(p, 6.0):
+		push_warning("Fields: the scarecrow's islet is in the pond")
+	var from := road[i] - side[i] * (WALK_HALF + .1)
+	var steps := int(from.distance_to(p))
+	for k in steps + 1:
+		var q := from.lerp(p, float(k) / maxf(1.0, steps))
+		dry.append(Rect2(q - Vector2.ONE * 1.1, Vector2.ONE * 2.2))
+	_islet(p, SCARECROW_ISLET)
+	root.set_meta("scarecrow_index", i)
+	root.set_meta("scarecrow_islet", _v3(p, GROUND - .16))
 	var face := rad_to_deg(atan2(side[i].x, side[i].y))
 	var crow := _model("fields/scarecrow", _v3(p, GROUND - .16), face, 1.05, 0.0)
 	crow.name = "Scarecrow"

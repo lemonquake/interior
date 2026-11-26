@@ -34,6 +34,7 @@ func _materials() -> void:
 	b._flat("sd plastic bag", Color(.88, .88, .86), .4)
 	b._flat("sd cardboard", Color(.55, .42, .28), .9)
 	b._flat("sd leaf", Color(.36, .3, .14), .9)
+	InteriorHorrorPropMaterials.dress_palette(b._materials)
 
 # ---------------------------------------------------------------- placement guard
 
@@ -56,7 +57,8 @@ func _place(path: String, at: Vector3, yaw: float, scale: float, slide := Vector
 		# Trees keep their trunks out of the footprint.
 		n._no_trunk.append(foot.grow(.4))
 		if collide:
-			InteriorModelKit.add_box_collider(n.solids, node, Vector3(.04, 0, .04), String(node.name) + " collider")
+			# (0.49: rounds strike the model as drawn, not its walking box.)
+			InteriorModelKit.shot_proxy(InteriorModelKit.add_box_collider(n.solids, node, Vector3(.04, 0, .04), String(node.name) + " collider"), node)
 		node.set_meta("fade", 120.0)
 		return node
 	push_warning("Street dressing: no room for " + path + " near " + str(at))

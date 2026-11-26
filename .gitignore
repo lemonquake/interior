@@ -10,3 +10,7 @@ work/
 
 # Claude Code worktrees
 .claude/worktrees/
+
+# launcher build output
+launcher/windows/bin/
+launcher/windows/obj/

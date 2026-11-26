@@ -1,0 +1,20 @@
+{
+	"failures": [],
+	"passed": true,
+	"textures": [
+		{
+			"android": "(512.0, 512.0)",
+			"bytes": 174776,
+			"format": 30,
+			"path": "res://assets/models/nature/tree_small_02_tree_small_02_leaves_diff_1k.png",
+			"source": "(1024.0, 1024.0)"
+		},
+		{
+			"android": "(512.0, 512.0)",
+			"bytes": 349552,
+			"format": 28,
+			"path": "res://assets/models/nature/island_tree_01_island_tree_01_nor_gl_1k.jpg",
+			"source": "(1024.0, 1024.0)"
+		}
+	]
+}

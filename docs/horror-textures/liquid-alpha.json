@@ -1,0 +1,17 @@
+[
+  {
+    "file": "drag_smear.png",
+    "fully_transparent_fraction": 0.817,
+    "transparent_borders": true
+  },
+  {
+    "file": "pool.png",
+    "fully_transparent_fraction": 0.549,
+    "transparent_borders": false
+  },
+  {
+    "file": "splatter.png",
+    "fully_transparent_fraction": 0.47,
+    "transparent_borders": false
+  }
+]

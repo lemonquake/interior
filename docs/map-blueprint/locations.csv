@@ -1,0 +1,125 @@
+﻿id,name,area,x_m,y_m,z_m,evidence,node_path,node_id,detail
+H01,Player spawn,Home,0.62,0.1,1.3,runtime transform,Player,N-64aee8c6cbd0,Player feet spawn; room floor near Y=0.
+H02,Navy entry door hinge,Home,2.43,0.0,2.6335,runtime transform,LivingRoom/ReferenceRoomSurroundings/EntryDoor,N-f9c52706b3be,Leaf spans X=1.39..2.43; inner face Z=2.6335. Swings inward toward -Z.
+H03,Studio sliding door,Home,-3.23,0.0,2.84,runtime transform,Studio/StudioDoor,N-2977ce2c29d7,"Door node origin, not doorway midpoint. Opening X=-3.25..-1.24, Z near 2.9, height 2.4."
+H04,Locked closet door,Home,3.25,0.0,0.9,runtime transform,LivingRoom/LockedClosetDoor,N-9691d997a52a,Locked prop door on east wall; no documented playable room beyond it.
+H05,Kitchen entrance,Home,-3.3,0.0,1.95,source coordinate,,,"West-side opening; kitchen bounds X=-5.65..-3.3, Z=-2.7..2.7."
+H10,Fabric sofa,Home,-2.08,0.0,0.45,runtime transform,LivingRoom/fabric_sofa_0,N-6410e49d7988,Physical furniture assembly.
+H11,Leather sofa,Home,0.2,0.0,2.21,runtime transform,LivingRoom/leather_sofa_1,N-89150fd94736,Physical furniture along north/rear wall.
+H12,Marble table,Home,-0.65,0.0,0.15,runtime transform,LivingRoom/marble_table_2,N-506b0123be4a,"Physical table; tray, plant and tissue box rest above it."
+H13,Television,Home,-0.55,1.77,-2.6,runtime transform,LivingRoom/television_4,N-551641f53bbd,"TV-wall anchor; power, channels, inspect interaction and mystery lock."
+H14,TV console,Home,-0.55,0.095,-2.42,runtime transform,LivingRoom/tv_console_3,N-763cdb46b37e,Console below television.
+H15,Digital clock,Home,-0.55,0.67,-2.3399,runtime transform,LivingRoom/digital_clock_17,N-e15aa5c4d120,One of the note-bearing props; clock has abnormal time display.
+H16,Table plant,Home,-0.5305,0.8907,0.1395,runtime transform,LivingRoom/potted_plant_15,N-1ee87a65b507,One of the note-bearing props.
+H17,Cabinet photo,Home,-1.13,0.845,-2.2895,runtime transform,LivingRoom/photo_frame_19,N-25f7979b30e4,One of the note-bearing props.
+H18,Hamster enclosure stand,Home,-2.5975,0.0034,-1.103,runtime transform,LivingRoom/pet_enclosure_11,N-04781ecd8878,Three-level habitat; movable assembly with attached animal systems.
+H19,Small aquarium,Home,-2.3598,0.1394,-1.1099,runtime transform,LivingRoom/SmallAquarium,N-8373b594a964,Lower shelf aquarium.
+H20,Computer desk,Home,2.17,-0.025,-2.15,runtime transform,LivingRoom/computer_desk_6,N-da2ed1c48832,Desk in the southeast/TV-wall corner.
+H21,Baby crib,Home,2.05,-0.006,-0.99,runtime transform,LivingRoom/baby_crib_9,N-89bd879358e5,Physical crib assembly.
+H22,Standing fan,Home,1.03,0.0001,-1.35,runtime transform,LivingRoom/standing_fan_5,N-58cb842ff7f7,Physical standing fan.
+H23,White display rack,Home,1.1613,0.0051,-2.3704,runtime transform,LivingRoom/White display rack,N-822c7fb9f4ff,"Named furniture, beside the TV area."
+H24,Black storage rack,Home,3.0477,0.0268,-2.4573,runtime transform,LivingRoom/Black storage rack,N-36cfdba6b322,"Named furniture, at east end of TV wall."
+H30,Studio interior centre,Home,-3.45,0.0,5.1,source coordinate,,,"4.4 by 4.4 m; X=-5.65..-1.25, Z=2.9..7.3; ceiling Y=2.9."
+H31,Studio production desk,Home,-2.6,0.0,6.745,source coordinate,,,Desk base reference; desk top Y=.692.
+H32,Studio couch,Studio,-4.62,0.0,3.37,runtime transform,Studio/Couch/sofa_02,N-561db5597cc2,Runtime model origin. See parent collision body and siblings for the complete assembly.
+H33,Drum kit,Studio,-4.73,0.0,6.4,runtime transform,Studio/Drum kit/drum_kit,N-f434d1417a4f,Runtime model origin. See parent collision body and siblings for the complete assembly.
+H34,Two-tier synthesizers,Studio,-1.68,0.815,4.55,runtime transform,Studio/Synth 61-key/synth_b,N-86b19f571c97,Runtime model origin. See parent collision body and siblings for the complete assembly.
+H35,Acoustic guitar A,Studio,-5.585,1.42,3.78,runtime transform,Studio/Guitar acoustic_a/guitar_acoustic_a,N-86d92b9f4cc9,Runtime model origin. See parent collision body and siblings for the complete assembly.
+H36,Bass on stand,Studio,-3.95,0.0,5.35,runtime transform,Studio/Bass on stand/bass_precision,N-bca5bb34f84b,Runtime model origin. See parent collision body and siblings for the complete assembly.
+H37,Gaming chair,Studio,-2.65,0.0,5.795,runtime transform,Studio/Gaming chair/gaming_chair,N-4411e4648883,Runtime model origin. See parent collision body and siblings for the complete assembly.
+H38,Microphone stand,Studio,-2.5,0.0,4.3,runtime transform,Studio/Mic boom stand/mic_boom_stand,N-f8f10015843c,Runtime model origin. See parent collision body and siblings for the complete assembly.
+H40,Balcony centre,Home,3.275,0.0,3.725,source coordinate,,,"Floor bounds X=.95..5.6, Z=2.9..4.55; outer parapet Z=4.75."
+H41,Stair upper end,Home,5.6,0.0,3.38,source coordinate,,,"16 risers, rise .18125 m each; treads .27 m. Descends east to Y=-2.9."
+H42,Courtyard,Home,11.1,-2.9,4.1,source coordinate,,,"Courtyard reference; X=9.65..12.6, Z=2.9..5.3."
+T01,Courtyard gate opening,Town,12.6,-2.9,4.12,derived from runtime hinge transforms,Balcony/CourtyardGate,N-7b231b8eadf8,"Opening midpoint derived from leaf hinges. CourtyardGate root itself is at (0,0,0). Tap E unlatches; push or hold E and move to swing leaves."
+T02,Lane outside courtyard gate,Town,14.0,-2.9,4.6,source coordinate,,,"Reachability audit origin; head east through lane to street B, then north to street A."
+T03,Courtyard lane / street B,Town,21.4,-2.9,6.0,source coordinate,,,Actual player-route test point at the lane mouth on Malasugue Street. Head north to A/B corner T04.
+T13,Bent Malasugue Street sign base,Town,18.5,-2.78,7.35,source coordinate,,,Source base of snapped street-sign pole beside the lane mouth.
+T14,Whisper source behind east gate,Town,23.4,-1.45,10.5,source coordinate,,,"Positional psst sound; approach trigger X=18..24, Z=5.5..16.5."
+T04,Street A / B corner,Town,21.0,-2.9,18.0,source coordinate,,,"Intersection centre; street corridor width 6 m, including 1 m sidewalks each side."
+T05,Street A / D corner,Town,-19.0,-2.9,18.0,source coordinate,,,"Intersection centre; street corridor width 6 m, including 1 m sidewalks each side."
+T06,Street B / C corner,Town,21.0,-2.9,49.0,source coordinate,,,"Intersection centre; street corridor width 6 m, including 1 m sidewalks each side."
+T07,Street C / D corner,Town,-19.0,-2.9,49.0,source coordinate,,,"Intersection centre; street corridor width 6 m, including 1 m sidewalks each side."
+T08,Open west passage,Town,-23.85,-2.9,18.0,source coordinate,,,West wall opening Z=15.15..20.85; leads to canal settlement.
+T09,North wall crouch hole,Town,21.32,-2.9,54.8,source coordinate,,,Width .95 m; height 1.3 m. Standing player cannot pass; hold C. Leads to field road.
+T10,Hidden south crawl,Town,19.35,-2.9,-18.55,source coordinate,,,"Width .9 m. Enter from east end behind leaned sheets, crouch along wall, crawl south to Nichols path."
+T11,Hooded man waiting point,Town,21.32,-2.9,53.35,source coordinate,,,Scripted actor waits here after courtyard gate opens.
+T12,Hooded man beyond hole,Town,21.32,-2.9,56.6,source coordinate,,,Actor can stand again here before fleeing along field road.
+C01,Settlement approach,Canal,-30.0,-2.9,18.4,source coordinate,,,Approach from west end of street A. Ramp joins settlement bank at Y=-2.1.
+C02,Upper east-bank lane,Canal,-49.5528,-2.1,22.2,source coordinate,,,Lane between house rows; river coordinates approximately U=12.9..16.9.
+C03,Trench stair top,Canal,-53.7528,-2.1,22.2,source coordinate,,,"1.4 m wide walking ramp with 15 visible steps, down 2.3 m to catwalk."
+C04,Trench stair foot,Canal,-59.1528,-4.4,22.2,source coordinate,,,East retaining-wall catwalk at Y=-4.4.
+C05,Plank footbridge east end,Canal,-63.7816,-4.4,-9.0,source coordinate,,,Footbridge width 1.15 m; spans to far bank U=-6.7 at Y=-5.45.
+C06,Plank footbridge west end,Canal,-74.2016,-5.45,-9.0,source coordinate,,,From here head north on far-bank path to the warren approach.
+C07,Warren approach stair bottom,Canal,-72.8044,-5.45,8.0,source coordinate,,,Bank steps climb west over U=-7.3..-13.6; then continue to fence opening.
+C08,Concrete road bridge,Canal,-68.9781,-2.1,60.2,source coordinate,,,"Deck spans U=-15..8, Z=58..62.4 (23 by 4.4 m)."
+C09,Catwalk north stair start,Canal,-59.7148,-4.4,50.0,source coordinate,,,Climbs to Y=-2.1 at Z=55.4; landing connects to road bridge.
+C10,Far-bank path north climb,Canal,-70.9045,-5.45,44.0,source coordinate,,,Path height smoothly rises from -5.45 at Z=44 to -2.1 at Z=57.
+W01,Warren fence entrance,Warren,-94.0044,-2.1,8.0,source coordinate,,,Pried tin sheet near actual door W10; continue west through access alley to east boardwalk.
+W02,Collapsed roof,Warren,-105.2176,-2.05,-1.25,source coordinate,,,Crouch section Z=-2.2..-.3 on east boardwalk. Roof low point Y=-.83; deck Y=-2.05.
+W03,South plank crossing,Warren,-108.7867,-2.05,-11.0,source coordinate,,,Cross east to west boardwalk here; bridge 4.9 by 1 m nominal.
+W04,Family room,Warren,-109.7313,-2.05,3.5,source coordinate,,,"Through-room on west side, Z=1..6; radio, light switch, sleeping area and old TV."
+W05,Altar room,Warren,-108.4594,-2.05,20.5,source coordinate,,,"Through-room on west side, Z=18..23; one votive candle."
+W06,Moonlit courtyard,Warren,-109.4068,-2.05,31.0,source coordinate,,,"Open courtyard Z=28..34; pump, cages, clotheslines and gutted tricycle."
+W07,Store rear room,Warren,-109.6196,-2.05,42.5,source coordinate,,,Through-room Z=40..45 behind padlocked sari-sari store; kerosene lamp.
+W08,North plank crossing,Warren,-106.2815,-2.05,52.6,source coordinate,,,Cross west to short north segment of east boardwalk.
+W09,Warren fence exit,Warren,-93.3385,-2.1,54.7,source coordinate,,,Second pried sheet near road bridge. Actual gate origin is W11.
+W10,Entrance tin door,Warren,-93.9459,-2.08,8.48,runtime transform,Balcony/Neighbourhood/Canal settlement/Canal warren/Warren door 06,N-b720d5194ecc,"Door hinge origin, beside W01."
+W11,Exit tin door,Warren,-93.3912,-2.08,55.18,runtime transform,Balcony/Neighbourhood/Canal settlement/Canal warren/Warren door 07,N-bbc8240b2b32,"Door hinge origin, beside W09."
+W12,Radio,Warren,-109.2463,-1.67,4.7,runtime transform,Balcony/Neighbourhood/Canal settlement/Canal warren/Warren radio,N-2f4bf0d35c9a,Usable radio in family room.
+W13,Family-room light switch,Warren,-108.7908,-0.75,1.07,runtime transform,Balcony/Neighbourhood/Canal settlement/Canal warren/Warren switch,N-ddb6fdc56c03,Usable tube-light switch.
+W14,Courtyard hand pump,Warren,-109.4068,-2.02,31.0,runtime transform,Balcony/Neighbourhood/Canal settlement/Canal warren/Warren pump,N-27cb53f6c916,Usable pump in courtyard.
+N01,Nichols outer gate,Nichols,-12.0,-2.9,-60.0,source coordinate,,,"Open wrought-iron gate; estate X=-40..14, Z=-124..-60."
+N02,Nichols facade origin,Nichols,-12.0,-1.7,-82.0,source coordinate,,,Origin of house-local Godot coordinates. Ground floor Y=-1.7; upstairs Y=2.7.
+N03,Porch Steps,Nichols,-12.0,-2.9,-75.62,source coordinate,,,Translated from house layout.json spots.
+N04,Front Door,Nichols,-12.0,-1.7,-80.2,source coordinate,,,Translated from house layout.json spots.
+N05,Stair Foot,Nichols,-12.0,-1.7,-85.3,source coordinate,,,Translated from house layout.json spots.
+N06,Landing,Nichols,-12.0,0.5,-90.4,source coordinate,,,Translated from house layout.json spots.
+N07,Bridge,Nichols,-12.0,2.7,-83.2,source coordinate,,,Translated from house layout.json spots.
+N08,Mantel Parlour,Nichols,-24.05,-0.36,-87.5,source coordinate,,,Translated from house layout.json spots.
+N09,Tower Top,Nichols,-12.0,17.65,-84.4,source coordinate,,,Translated from house layout.json spots.
+NR01,Foyer,Nichols rooms,-12.0,-1.7,-86.85,source coordinate,,,"Room volume; see room-register.json for all rectangles, world bounds, floor and ceiling."
+NR02,Parlour,Nichols rooms,-20.35,-1.7,-87.65,source coordinate,,,"Room volume; see room-register.json for all rectangles, world bounds, floor and ceiling."
+NR03,Dining,Nichols rooms,-3.65,-1.7,-87.65,source coordinate,,,"Room volume; see room-register.json for all rectangles, world bounds, floor and ceiling."
+NR04,Closet,Nichols rooms,-12.0,-1.7,-92.2,source coordinate,,,"Room volume; see room-register.json for all rectangles, world bounds, floor and ceiling."
+NR05,Hall,Nichols rooms,-12.0,-1.7,-94.2,source coordinate,,,"Room volume; see room-register.json for all rectangles, world bounds, floor and ceiling."
+NR06,Library,Nichols rooms,-20.35,-1.7,-98.55,source coordinate,,,"Room volume; see room-register.json for all rectangles, world bounds, floor and ceiling."
+NR07,Pantry,Nichols rooms,-12.0,-1.7,-98.55,source coordinate,,,"Room volume; see room-register.json for all rectangles, world bounds, floor and ceiling."
+NR08,Kitchen,Nichols rooms,-3.65,-1.7,-98.55,source coordinate,,,"Room volume; see room-register.json for all rectangles, world bounds, floor and ceiling."
+NR09,Corridor W,Nichols rooms,-20.35,2.7,-83.35,source coordinate,,,"Room volume; see room-register.json for all rectangles, world bounds, floor and ceiling."
+NR10,Corridor E,Nichols rooms,-3.65,2.7,-83.35,source coordinate,,,"Room volume; see room-register.json for all rectangles, world bounds, floor and ceiling."
+NR11,Bridge,Nichols rooms,-12.0,2.7,-83.35,source coordinate,,,"Room volume; see room-register.json for all rectangles, world bounds, floor and ceiling."
+NR12,Gallery W,Nichols rooms,-15.3,2.7,-85.05,source coordinate,,,"Room volume; see room-register.json for all rectangles, world bounds, floor and ceiling."
+NR13,Gallery E,Nichols rooms,-8.7,2.7,-85.05,source coordinate,,,"Room volume; see room-register.json for all rectangles, world bounds, floor and ceiling."
+NR14,Master,Nichols rooms,-20.35,2.7,-88.7,source coordinate,,,"Room volume; see room-register.json for all rectangles, world bounds, floor and ceiling."
+NR15,Nursery,Nichols rooms,-3.65,2.7,-88.7,source coordinate,,,"Room volume; see room-register.json for all rectangles, world bounds, floor and ceiling."
+NR16,Sealed,Nichols rooms,-12.0,2.7,-97.35,source coordinate,,,"Room volume; see room-register.json for all rectangles, world bounds, floor and ceiling."
+B01,Nook,Basement,-10.05,-1.7,-89.6,source coordinate,,,"House-local vector translated by (-12,-1.7,-82)."
+B02,Landing,Basement,-9.8,-1.7,-92.2,source coordinate,,,"House-local vector translated by (-12,-1.7,-82)."
+B03,Shaft Foot,Basement,-15.35,-4.4,-92.2,source coordinate,,,"House-local vector translated by (-12,-1.7,-82)."
+B04,Cellar,Basement,-18.0,-4.4,-96.0,source coordinate,,,"House-local vector translated by (-12,-1.7,-82)."
+B05,Hole,Basement,-12.9,-4.4,-98.85,source coordinate,,,"House-local vector translated by (-12,-1.7,-82)."
+B06,Corridor,Basement,-9.7,-5.3,-98.8,source coordinate,,,"House-local vector translated by (-12,-1.7,-82)."
+B07,Steel Door,Basement,-0.7,-5.3,-98.8,source coordinate,,,"House-local vector translated by (-12,-1.7,-82)."
+B08,Cages,Basement,-2.1,-5.3,-98.3,source coordinate,,,"House-local vector translated by (-12,-1.7,-82)."
+B09,Tarp,Basement,-20.4,-4.4,-99.3,source coordinate,,,"House-local vector translated by (-12,-1.7,-82)."
+B10,Workbench,Basement,-15.3,-3.52,-100.82,source coordinate,,,"House-local vector translated by (-12,-1.7,-82)."
+B11,Hooks,Basement,-18.9,-2.1,-100.4,source coordinate,,,"House-local vector translated by (-12,-1.7,-82)."
+B12,Drain,Basement,-18.2,-4.4,-99.6,source coordinate,,,"House-local vector translated by (-12,-1.7,-82)."
+B13,Cellar door hinge,Basement,-9.65,-1.7,-91.4,source coordinate,,,"Under grand-stair landing; .78 m wide, 1.77 m high, initially 48 degrees ajar."
+B14,Cellar light switch,Basement,-9.412,-0.38,-91.12,source coordinate,,,Turns on basement bulbs. Starts off.
+B15,Chained iron door,Basement,0.24,-5.3,-98.8,source coordinate,,,"Terminal locked barrier; new padlock, no traversable continuation documented."
+F01,Field-road start,Fields,21.0,-2.9,54.5,source coordinate,,,First stored road sample; begins under the north-wall exit.
+F02,Hut yard reference,Fields,32.9555,-2.9,148.6332,source coordinate,,,Metadata yard reference. Hut model origin is .15 m lower; finished hut floor is Y=-2.63.
+F03,Bahay kubo model,Fields,32.9555,-3.05,148.6332,runtime transform,Fields/Models/BahayKubo,N-af30559ac88f,Runtime orientation faces the road; hut dimensions use local frame in hut_house.gd.
+F04,Scarecrow,Fields,28.9456,-3.06,178.7335,runtime transform,Fields/Models/Scarecrow,N-b6e8f5f61fce,Scarecrow islet reached from road by a dike; actor points toward viewer while unseen.
+F05,Buried ammunition box,Fields,29.442,-3.054,178.4967,runtime transform,Fields/AmmoBox,N-fe33791e5e09,Initially hidden near scarecrow; scripted dig and handover sequence.
+F06,Pond centre,Fields,28.0103,-3.32,225.5523,source coordinate,,,Ellipse radii 15 m by 12.5 m. Water Y=-3.32.
+F07,Jetty collider centre,Fields,39.503,-3.06,218.4142,runtime transform,Fields/FieldsColliders/Jetty,N-73cdd77bdf9a,Deck walking top near Y=-2.96; node origin is collider centre at Y=-3.06.
+F08,Road dead end,Fields,40.0,-2.9,530.0,source coordinate,,,Road ends at fallen tree and SIRADO barrier; no road beyond this point.
+F09,Giant tree,Fields,25.09,-2.9,551.3,source coordinate,,,Scenery knoll beyond the road barrier; do not infer a connected playable route.
+K01,Hut root,Hut,32.9555,-3.05,148.6332,runtime transform,Fields/HutHouse,N-0d6f3af61be0,"Local origin at model base, Y=-3.05; local floor .42 -> world Y=-2.63."
+K02,Brass key,Hut,34.399,-1.786,149.0401,runtime transform,Fields/HutHouse/Key,N-bd9f3aa639f3,Take key before opening top dresser drawer.
+K03,Dresser drawer,Hut,34.2263,-2.048,148.851,runtime transform,Fields/HutHouse/Dresser/TopDrawer,N-b5250787bd65,Drawer node; travel .3 m in hut local frame.
+K04,Glock,Hut,34.3548,-2.001,148.8226,runtime transform,Fields/HutHouse/Dresser/TopDrawer/Glock,N-bf885f13fec1,Inside dresser drawer; scripted pickup.
+K05,Flashlight,Hut,34.4178,-2.0025,149.1742,runtime transform,Fields/HutHouse/Dresser/TopDrawer/Flashlight,N-d087d3512159,Inside dresser drawer; scripted pickup.

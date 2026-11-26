@@ -1,0 +1,210 @@
+{
+ "about": "0.40 squad voice lines. tools/squad_voices.py makes assets/audio/voices/<survivor>/<line>_<n>.(mp3|wav) from this; scripts/coop/voices.gd plays them. Survivors map to ElevenLabs voices by name (first one found on the account wins). 0.60: made on the ElevenLabs website (Eleven v4, emotion tags in dialogue.json \"callouts\"); tools/install_voices.py splits the takes. Alex/Louie/Anthony/Clyde have take 1 of each line only (free-plan credits).",
+ "survivors": {
+  "Alex": {
+   "elevenlabs": [
+    "Adam",
+    "Brian",
+    "Daniel"
+   ],
+   "sapi_pitch": "-5%",
+   "sapi_rate": 1
+  },
+  "Aljay": {
+   "elevenlabs": [
+    "Will",
+    "Liam",
+    "Josh"
+   ],
+   "sapi_pitch": "+6%",
+   "sapi_rate": 2
+  },
+  "Louie": {
+   "elevenlabs": [
+    "Harry",
+    "Antoni",
+    "Eric"
+   ],
+   "sapi_pitch": "+14%",
+   "sapi_rate": 1
+  },
+  "Anthony": {
+   "elevenlabs": [
+    "Arnold",
+    "George",
+    "Bill"
+   ],
+   "sapi_pitch": "-12%",
+   "sapi_rate": 0
+  },
+  "Clyde": {
+   "elevenlabs": [
+    "Clyde",
+    "Callum",
+    "Chris"
+   ],
+   "sapi_pitch": "-20%",
+   "sapi_rate": 0
+  }
+ },
+ "lines": {
+  "spotted": [
+   "Infected, up ahead!",
+   "Contact! Zombie spotted!",
+   "Eyes up, they're coming!"
+  ],
+  "horde": [
+   "There's a lot of them!",
+   "Here comes a whole crowd!"
+  ],
+  "behind": [
+   "Behind you! Turn around!"
+  ],
+  "reloading": [
+   "Reloading!",
+   "Changing mags, cover me!"
+  ],
+  "low_ammo": [
+   "I'm running low on ammo.",
+   "Getting low on rounds."
+  ],
+  "no_ammo": [
+   "I'm out! I'm out of ammo!"
+  ],
+  "guns": [
+   "Guns over here!",
+   "Got weapons here!"
+  ],
+  "ammo": [
+   "Ammo over here."
+  ],
+  "medkit": [
+   "Found a medkit."
+  ],
+  "lets_go": [
+   "Let's go, let's go!",
+   "Move up, let's go!"
+  ],
+  "backup": [
+   "I need backup!",
+   "Need help over here!"
+  ],
+  "check": [
+   "Hey, check this out."
+  ],
+  "follow": [
+   "On me! Follow me."
+  ],
+  "hold": [
+   "Hold here. Watch the corners."
+  ],
+  "fall_back": [
+   "Fall back! Fall back!",
+   "Too many, back up!"
+  ],
+  "covering": [
+   "I got you covered!",
+   "Covering you!"
+  ],
+  "down": [
+   "I'm down! Somebody help me!"
+  ],
+  "reviving": [
+   "Hang on, I got you!"
+  ],
+  "thanks": [
+   "Thanks, I owe you one."
+  ],
+  "kill": [
+   "Got him.",
+   "Target down.",
+   "One less."
+  ],
+  "clear": [
+   "Clear.",
+   "Area's clear."
+  ],
+  "hit": [
+   "I'm hit!",
+   "Agh, it got me!"
+  ],
+  "healing": [
+   "Patching up."
+  ],
+  "copy": [
+   "Copy that.",
+   "On it."
+  ],
+  "fire_in_the_hole": [
+   "Fire in the hole!",
+   "Grenade out! Fire in the hole!",
+   "Fire in the hole! Get down!"
+  ]
+ },
+ "menu": [
+  [
+   "spotted",
+   "Zombie spotted"
+  ],
+  [
+   "lets_go",
+   "Let's go"
+  ],
+  [
+   "backup",
+   "Need backup"
+  ],
+  [
+   "check",
+   "Check this out"
+  ],
+  [
+   "no_ammo",
+   "Out of ammo"
+  ],
+  [
+   "low_ammo",
+   "Low on ammo"
+  ],
+  [
+   "guns",
+   "Guns over here"
+  ],
+  [
+   "fall_back",
+   "Fall back"
+  ],
+  [
+   "follow",
+   "Follow me"
+  ],
+  [
+   "hold",
+   "Hold here"
+  ],
+  [
+   "thanks",
+   "Thanks"
+  ],
+  [
+   "behind",
+   "Behind you"
+  ],
+  [
+   "reloading",
+   "Reloading"
+  ],
+  [
+   "medkit",
+   "Medkit here"
+  ],
+  [
+   "ammo",
+   "Ammo here"
+  ],
+  [
+   "clear",
+   "Area clear"
+  ]
+ ]
+}

@@ -135,5 +135,6 @@ static func build(room: Node3D) -> Dictionary:
 	var lights: Array = []
 	RoomSurroundings.apply(room, visual, room_manifest)
 	RoomVisuals.apply(room, visual, room_manifest, lights)
+	preload("res://scripts/room_furnishings.gd").apply(room)
 	print("INTERIOR_ROOM_READY ",JSON.stringify({"actors":room.get_tree().get_nodes_in_group("movable").size(),"original_actors":room.get_tree().get_nodes_in_group("original_room_props").size(),"expected_original":room_manifest.actors.size(),"base_triangles":room_manifest.geometryTriangles}))
 	return room_manifest

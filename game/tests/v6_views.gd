@@ -59,7 +59,7 @@ func _run() -> void:
 	var tv: InteriorTelevision = main.find_child("TelevisionController", true, false)
 	var gate: Node = null
 	for door in get_nodes_in_group("interior_doors"):
-		if door.has_method("unlock"):
+		if door is InteriorPushGate and not door.neighborhood_gate:
 			gate = door
 	for view: Array in VIEWS:
 		if which != "all" and view[1] != which:

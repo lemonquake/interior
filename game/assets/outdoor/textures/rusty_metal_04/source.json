@@ -1,0 +1,24 @@
+{
+  "asset": "Rusty Metal 04",
+  "author": "Amal Kumar",
+  "source": "https://polyhaven.com/a/rusty_metal_04",
+  "license": "CC0-1.0",
+  "retrieved": "2026-10-07",
+  "maps": [
+    {
+      "file": "albedo.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rusty_metal_04/rusty_metal_04_diff_1k.jpg",
+      "sha256": "37c6757c5b6b2229f61423c7e5013f970e4dafb48070d35f53ed6d08958ed288"
+    },
+    {
+      "file": "normal.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rusty_metal_04/rusty_metal_04_nor_gl_1k.jpg",
+      "sha256": "9c432bee334e65e73ff0b20676dd3f0efbed3f91d261a13dc03b9c8c1a4f4eec"
+    },
+    {
+      "file": "roughness.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rusty_metal_04/rusty_metal_04_rough_1k.jpg",
+      "sha256": "02c2fe5dfd5f4f7a692659261b8c99e103f33fb1a4c363c3e763542fae32d4fe"
+    }
+  ]
+}

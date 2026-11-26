@@ -1,0 +1,54 @@
+# Sleep: the game page, launcher downloads and signed updates, and the live room count.
+# Imported by /etc/caddy/Caddyfile ("import /etc/caddy/sites/*.caddy"); Caddy gets and renews the certificate itself.
+sleep.15-235-246-87.sslip.io {
+	encode zstd gzip
+	header {
+		X-Content-Type-Options nosniff
+		Referrer-Policy strict-origin-when-cross-origin
+		-Server
+	}
+
+	# Rooms open on the relay right now (for the page's "playing now" line).
+	handle /api/rooms {
+		rewrite * /rooms
+		header Cache-Control "no-store"
+		reverse_proxy 127.0.0.1:8480
+	}
+
+	# Signed releases and the content-addressed chunk store the launcher downloads from.
+	handle /updates/* {
+		root * /srv/sleep
+		@hidden path /updates/next/* /updates/history/*
+		respond @hidden 404
+		@meta path */release.json
+		header @meta Cache-Control "no-store"
+		@chunks path /updates/chunks/*
+		header @chunks Cache-Control "public, max-age=31536000, immutable"
+		file_server
+	}
+
+	handle /downloads/* {
+		root * /srv/sleep
+		header Cache-Control "no-cache"
+		file_server
+	}
+
+	handle {
+		root * /srv/sleep/site
+		header Content-Security-Policy "default-src 'self'; img-src 'self' data:; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; media-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+		file_server
+	}
+
+	log {
+		output file /var/log/caddy/sleep-access.log {
+			roll_size 10MiB
+			roll_keep 5
+			roll_keep_for 168h
+		}
+	}
+}
+
+# The server's bare name now points at Sleep.
+15-235-246-87.sslip.io {
+	redir https://sleep.15-235-246-87.sslip.io{uri} 302
+}

@@ -1,0 +1,24 @@
+{
+  "generated_asset_entries": [
+    "assets/assets/horror_textures/liquid/drag_smear.png.import",
+    "assets/assets/horror_textures/liquid/pool.png.import",
+    "assets/assets/horror_textures/liquid/splatter.png.import",
+    "assets/assets/horror_textures/props/discarded_paper.png.import",
+    "assets/assets/horror_textures/props/refuse_plastic_black.png.import",
+    "assets/assets/horror_textures/props/stained_fabric.png.import",
+    "assets/assets/horror_textures/props/tarnished_metal.png.import",
+    "assets/assets/horror_textures/props/waterlogged_cardboard.png.import",
+    "assets/assets/horror_textures/props/weathered_plastic.png.import",
+    "assets/licenses/HORROR_TEXTURES.md"
+  ],
+  "runtime_script_entries": [
+    "assets/scripts/horror_liquid.gdc",
+    "assets/scripts/horror_prop_materials.gdc",
+    "assets/scripts/horror_liquid.gd.remap",
+    "assets/scripts/horror_prop_materials.gd.remap"
+  ],
+  "abis": [
+    "lib/arm64-v8a/libgodot_android.so",
+    "lib/armeabi-v7a/libgodot_android.so"
+  ]
+}

@@ -1,0 +1,1426 @@
+{
+ "about": "0.60: gathers every spoken line of the game from the scripts into game/assets/audio/voices/dialogue.json.",
+ "lines": [
+  {
+   "speaker": "Jonna",
+   "text": "Salamat sa Diyos. You're real. When the shooting stopped I prayed it was you out there and not them.",
+   "source": "scripts/coop/mission.gd:TALK",
+   "key": "2f52112c7ae9",
+   "whisper": false,
+   "tts": "[shaky, close to tears] Salamat sa Diyos... you're real. [exhales] When the shooting stopped, I prayed it was you out there... and not them.",
+   "voice": "Sarah"
+  },
+  {
+   "speaker": "Alex",
+   "text": "You're hurt. What happened here?",
+   "source": "scripts/coop/mission.gd:TALK",
+   "key": "b1ce37dd703e",
+   "whisper": false,
+   "tts": "[concerned] You're hurt. What happened here?",
+   "voice": "Adam"
+  },
+  {
+   "speaker": "Aljay",
+   "text": "You're hurt. What happened here?",
+   "source": "scripts/coop/mission.gd:TALK",
+   "key": "f6fd1068fc02",
+   "whisper": false,
+   "tts": "[concerned] You're hurt. What happened here?",
+   "voice": "Will"
+  },
+  {
+   "speaker": "Louie",
+   "text": "You're hurt. What happened here?",
+   "source": "scripts/coop/mission.gd:TALK",
+   "key": "c00abc9a72b4",
+   "whisper": false,
+   "tts": "[concerned] You're hurt. What happened here?",
+   "voice": "Harry"
+  },
+  {
+   "speaker": "Anthony",
+   "text": "You're hurt. What happened here?",
+   "source": "scripts/coop/mission.gd:TALK",
+   "key": "4de84ef4b1da",
+   "whisper": false,
+   "tts": "[concerned] You're hurt. What happened here?",
+   "voice": "Brian"
+  },
+  {
+   "speaker": "Clyde",
+   "text": "You're hurt. What happened here?",
+   "source": "scripts/coop/mission.gd:TALK",
+   "key": "29cd540849b9",
+   "whisper": false,
+   "tts": "[concerned] You're hurt. What happened here?",
+   "voice": "Callum"
+  },
+  {
+   "speaker": "Jonna",
+   "text": "Three nights ago it was only the news. A fight at Bankerohan market, people biting. By morning the barangay was ringing the bell and nobody knew why.",
+   "source": "scripts/coop/mission.gd:TALK",
+   "key": "bdbd1756c1ca",
+   "whisper": false,
+   "tts": "[tired, haunted] Three nights ago, it was only the news. A fight at Bankerohan market... people biting. By morning the barangay was ringing the bell, and nobody knew why.",
+   "voice": "Sarah"
+  },
+  {
+   "speaker": "Jonna",
+   "text": "Then it was everywhere at once. The ambulances stopped coming. The soldiers came in yesterday and made the mart their supply point. They held that door all night.",
+   "source": "scripts/coop/mission.gd:TALK",
+   "key": "612e5807310c",
+   "whisper": false,
+   "tts": "Then it was everywhere. At once. The ambulances stopped coming. The soldiers came in yesterday, made the mart their supply point... [quietly] They held that door all night.",
+   "voice": "Sarah"
+  },
+  {
+   "speaker": "Jonna",
+   "text": "When the front glass went they pushed the customers to the back. I got this door shut. The others... I heard them. I could not open it.",
+   "source": "scripts/coop/mission.gd:TALK",
+   "key": "fedcadaa2539",
+   "whisper": false,
+   "tts": "When the front glass went, they pushed the customers to the back. I got this door shut. The others... [voice breaking] I heard them. I could not open it.",
+   "voice": "Sarah"
+  },
+  {
+   "speaker": "Alex",
+   "text": "Let me look at that.",
+   "source": "scripts/coop/mission.gd:TALK",
+   "key": "34e4ee1cc76f",
+   "whisper": false,
+   "tts": "[gently] Let me look at that.",
+   "voice": "Adam"
+  },
+  {
+   "speaker": "Aljay",
+   "text": "Let me look at that.",
+   "source": "scripts/coop/mission.gd:TALK",
+   "key": "d525b6008cac",
+   "whisper": false,
+   "tts": "[gently] Let me look at that.",
+   "voice": "Will"
+  },
+  {
+   "speaker": "Louie",
+   "text": "Let me look at that.",
+   "source": "scripts/coop/mission.gd:TALK",
+   "key": "102002f11f90",
+   "whisper": false,
+   "tts": "[gently] Let me look at that.",
+   "voice": "Harry"
+  },
+  {
+   "speaker": "Anthony",
+   "text": "Let me look at that.",
+   "source": "scripts/coop/mission.gd:TALK",
+   "key": "0af5fc14d459",
+   "whisper": false,
+   "tts": "[gently] Let me look at that.",
+   "voice": "Brian"
+  },
+  {
+   "speaker": "Clyde",
+   "text": "Let me look at that.",
+   "source": "scripts/coop/mission.gd:TALK",
+   "key": "8fe7f2daddc0",
+   "whisper": false,
+   "tts": "[gently] Let me look at that.",
+   "voice": "Callum"
+  },
+  {
+   "speaker": "Jonna",
+   "text": "Leave it. It's the fridge glass, not a bite. I tied it off. If I stand too long the room turns, that's all.",
+   "source": "scripts/coop/mission.gd:TALK",
+   "key": "3b06ab7f3def",
+   "whisper": false,
+   "tts": "[pained, waving it off] Leave it. It's the fridge glass, not a bite! I tied it off. If I stand too long, the room turns... that's all.",
+   "voice": "Sarah"
+  },
+  {
+   "speaker": "Jonna",
+   "text": "Listen to me. That radio on the desk. Last night someone came on the barangay channel, a teacher. There are survivors at the college up north, the Prof. Ivan Lawrence College, five hundred metres from here. The gates are shut. They have water and a generator.",
+   "source": "scripts/coop/mission.gd:TALK",
+   "key": "8385cdd2bb48",
+   "whisper": false,
+   "tts": "[urgent] Listen to me. That radio, on the desk. Last night someone came on the barangay channel... a teacher. There are survivors at the college up north, the Prof. Ivan Lawrence College. Five hundred metres from here. The gates are shut. They have water, and a generator.",
+   "voice": "Sarah"
+  },
+  {
+   "speaker": "Alex",
+   "text": "Then we take the main road. It runs straight there.",
+   "source": "scripts/coop/mission.gd:TALK",
+   "key": "eb67d5392902",
+   "whisper": false,
+   "tts": "Then we take the main road. It runs straight there.",
+   "voice": "Adam"
+  },
+  {
+   "speaker": "Aljay",
+   "text": "Then we take the main road. It runs straight there.",
+   "source": "scripts/coop/mission.gd:TALK",
+   "key": "8ed872034d20",
+   "whisper": false,
+   "tts": "Then we take the main road. It runs straight there.",
+   "voice": "Will"
+  },
+  {
+   "speaker": "Louie",
+   "text": "Then we take the main road. It runs straight there.",
+   "source": "scripts/coop/mission.gd:TALK",
+   "key": "4dcc370f7109",
+   "whisper": false,
+   "tts": "Then we take the main road. It runs straight there.",
+   "voice": "Harry"
+  },
+  {
+   "speaker": "Anthony",
+   "text": "Then we take the main road. It runs straight there.",
+   "source": "scripts/coop/mission.gd:TALK",
+   "key": "238d267bd7a1",
+   "whisper": false,
+   "tts": "Then we take the main road. It runs straight there.",
+   "voice": "Brian"
+  },
+  {
+   "speaker": "Clyde",
+   "text": "Then we take the main road. It runs straight there.",
+   "source": "scripts/coop/mission.gd:TALK",
+   "key": "433926d44dbe",
+   "whisper": false,
+   "tts": "Then we take the main road. It runs straight there.",
+   "voice": "Callum"
+  },
+  {
+   "speaker": "Jonna",
+   "text": "No. The main road is finished. Cars on top of cars, fires, and them, hundreds of them. You won't drive it and you won't walk it.",
+   "source": "scripts/coop/mission.gd:TALK",
+   "key": "842482cee0ad",
+   "whisper": false,
+   "tts": "[firmly] No. No! The main road is finished. Cars on top of cars, fires... and them. Hundreds of them. You won't drive it, and you won't walk it.",
+   "voice": "Sarah"
+  },
+  {
+   "speaker": "Jonna",
+   "text": "Go out the back. The service gate opens on the old backstreets behind the shops: the pawnshop, the bakery, the Avenida arcade. They're narrow, but they run all the way to the school's back gate.",
+   "source": "scripts/coop/mission.gd:TALK",
+   "key": "e4604e4fc4f7",
+   "whisper": false,
+   "tts": "Go out the back. The service gate opens on the old backstreets behind the shops. The pawnshop, the bakery, the Avenida arcade. They're narrow... but they run all the way to the school's back gate.",
+   "voice": "Sarah"
+  },
+  {
+   "speaker": "Alex",
+   "text": "Come with us.",
+   "source": "scripts/coop/mission.gd:TALK",
+   "key": "f83d5a91a173",
+   "whisper": false,
+   "tts": "[pleading] Come with us.",
+   "voice": "Adam"
+  },
+  {
+   "speaker": "Aljay",
+   "text": "Come with us.",
+   "source": "scripts/coop/mission.gd:TALK",
+   "key": "16832ea2dc84",
+   "whisper": false,
+   "tts": "[pleading] Come with us.",
+   "voice": "Will"
+  },
+  {
+   "speaker": "Louie",
+   "text": "Come with us.",
+   "source": "scripts/coop/mission.gd:TALK",
+   "key": "d7887a295943",
+   "whisper": false,
+   "tts": "[pleading] Come with us.",
+   "voice": "Harry"
+  },
+  {
+   "speaker": "Anthony",
+   "text": "Come with us.",
+   "source": "scripts/coop/mission.gd:TALK",
+   "key": "999589545adc",
+   "whisper": false,
+   "tts": "[pleading] Come with us.",
+   "voice": "Brian"
+  },
+  {
+   "speaker": "Clyde",
+   "text": "Come with us.",
+   "source": "scripts/coop/mission.gd:TALK",
+   "key": "05a7f9a68e7d",
+   "whisper": false,
+   "tts": "[pleading] Come with us.",
+   "voice": "Callum"
+  },
+  {
+   "speaker": "Jonna",
+   "text": "I would slow you down and you know it. Lock this door behind you. If the radio comes back I'll tell them you're coming. Go, before the night gets any older.",
+   "source": "scripts/coop/mission.gd:TALK",
+   "key": "f35e6e9242e5",
+   "whisper": false,
+   "tts": "[sad smile] I would slow you down, and you know it. Lock this door behind you. If the radio comes back, I'll tell them you're coming. [softly] Go... before the night gets any older.",
+   "voice": "Sarah"
+  },
+  {
+   "speaker": "Rommel",
+   "text": "You came through the backstreets? Diyos ko... I thought the whole city was gone.",
+   "source": "scripts/coop/mission.gd:GUARD_TALK",
+   "key": "fcd1d0b81da2",
+   "whisper": false,
+   "tts": "[stunned, weak] You came through the backstreets? Diyos ko... [shaky laugh] I thought the whole city was gone.",
+   "voice": "Bill"
+  },
+  {
+   "speaker": "Alex",
+   "text": "You're hurt. Who are you?",
+   "source": "scripts/coop/mission.gd:GUARD_TALK",
+   "key": "6dc141681e43",
+   "whisper": false,
+   "tts": "[cautious] You're hurt. Who are you?",
+   "voice": "Adam"
+  },
+  {
+   "speaker": "Aljay",
+   "text": "You're hurt. Who are you?",
+   "source": "scripts/coop/mission.gd:GUARD_TALK",
+   "key": "eea92ee69620",
+   "whisper": false,
+   "tts": "[cautious] You're hurt. Who are you?",
+   "voice": "Will"
+  },
+  {
+   "speaker": "Louie",
+   "text": "You're hurt. Who are you?",
+   "source": "scripts/coop/mission.gd:GUARD_TALK",
+   "key": "239e3c57e57c",
+   "whisper": false,
+   "tts": "[cautious] You're hurt. Who are you?",
+   "voice": "Harry"
+  },
+  {
+   "speaker": "Anthony",
+   "text": "You're hurt. Who are you?",
+   "source": "scripts/coop/mission.gd:GUARD_TALK",
+   "key": "091faf750c1e",
+   "whisper": false,
+   "tts": "[cautious] You're hurt. Who are you?",
+   "voice": "Brian"
+  },
+  {
+   "speaker": "Clyde",
+   "text": "You're hurt. Who are you?",
+   "source": "scripts/coop/mission.gd:GUARD_TALK",
+   "key": "49fabbf999c0",
+   "whisper": false,
+   "tts": "[cautious] You're hurt. Who are you?",
+   "voice": "Callum"
+  },
+  {
+   "speaker": "Rommel",
+   "text": "Rommel. Night guard. Eleven years on this gate. Sir Ivan hired me himself.",
+   "source": "scripts/coop/mission.gd:GUARD_TALK",
+   "key": "7106468db77b",
+   "whisper": false,
+   "tts": "[tired, a little proud] Rommel. Night guard. Eleven years on this gate. Sir Ivan hired me himself.",
+   "voice": "Bill"
+  },
+  {
+   "speaker": "Rommel",
+   "text": "When it started he told me: nobody in, nobody out, until the ambulances come. So I locked it. I locked it with four thousand kids inside.",
+   "source": "scripts/coop/mission.gd:GUARD_TALK",
+   "key": "352c4abab7fc",
+   "whisper": false,
+   "tts": "When it started, he told me: nobody in, nobody out, until the ambulances come. So I locked it. [voice breaking] I locked it... with four thousand kids inside.",
+   "voice": "Bill"
+  },
+  {
+   "speaker": "Alex",
+   "text": "Is anyone still alive in there?",
+   "source": "scripts/coop/mission.gd:GUARD_TALK",
+   "key": "1c5cfb2e09e4",
+   "whisper": false,
+   "tts": "[hopeful, tense] Is anyone still alive in there?",
+   "voice": "Adam"
+  },
+  {
+   "speaker": "Aljay",
+   "text": "Is anyone still alive in there?",
+   "source": "scripts/coop/mission.gd:GUARD_TALK",
+   "key": "c2bfd61e71ce",
+   "whisper": false,
+   "tts": "[hopeful, tense] Is anyone still alive in there?",
+   "voice": "Will"
+  },
+  {
+   "speaker": "Louie",
+   "text": "Is anyone still alive in there?",
+   "source": "scripts/coop/mission.gd:GUARD_TALK",
+   "key": "8feba5dc7492",
+   "whisper": false,
+   "tts": "[hopeful, tense] Is anyone still alive in there?",
+   "voice": "Harry"
+  },
+  {
+   "speaker": "Anthony",
+   "text": "Is anyone still alive in there?",
+   "source": "scripts/coop/mission.gd:GUARD_TALK",
+   "key": "7605fe77e335",
+   "whisper": false,
+   "tts": "[hopeful, tense] Is anyone still alive in there?",
+   "voice": "Brian"
+  },
+  {
+   "speaker": "Clyde",
+   "text": "Is anyone still alive in there?",
+   "source": "scripts/coop/mission.gd:GUARD_TALK",
+   "key": "e2cb1a19e521",
+   "whisper": false,
+   "tts": "[hopeful, tense] Is anyone still alive in there?",
+   "voice": "Callum"
+  },
+  {
+   "speaker": "Rommel",
+   "text": "The fifth floor. Last night a light came on in a classroom up there, west side. Someone flashed it three times. They're waiting for someone.",
+   "source": "scripts/coop/mission.gd:GUARD_TALK",
+   "key": "af49e6ce11af",
+   "whisper": false,
+   "tts": "[looking up, hopeful] The fifth floor. Last night a light came on in a classroom up there, west side. Someone flashed it. Three times. They're waiting for someone.",
+   "voice": "Bill"
+  },
+  {
+   "speaker": "Rommel",
+   "text": "I tried to go up. The kids piled their desks into the stairs to stop the others following them. Only one way is open from each floor. You'll have to cross every floor to find it.",
+   "source": "scripts/coop/mission.gd:GUARD_TALK",
+   "key": "3d85029f8608",
+   "whisper": false,
+   "tts": "[frustrated] I tried to go up. The kids piled their desks into the stairs, to stop the others following them. Only one way is open from each floor. You'll have to cross every floor to find it.",
+   "voice": "Bill"
+  },
+  {
+   "speaker": "Alex",
+   "text": "And Sir Ivan?",
+   "source": "scripts/coop/mission.gd:GUARD_TALK",
+   "key": "db5b9128205a",
+   "whisper": false,
+   "tts": "[hesitant] And Sir Ivan?",
+   "voice": "Adam"
+  },
+  {
+   "speaker": "Aljay",
+   "text": "And Sir Ivan?",
+   "source": "scripts/coop/mission.gd:GUARD_TALK",
+   "key": "ca39cefa9137",
+   "whisper": false,
+   "tts": "[hesitant] And Sir Ivan?",
+   "voice": "Will"
+  },
+  {
+   "speaker": "Louie",
+   "text": "And Sir Ivan?",
+   "source": "scripts/coop/mission.gd:GUARD_TALK",
+   "key": "4f75ae1b5108",
+   "whisper": false,
+   "tts": "[hesitant] And Sir Ivan?",
+   "voice": "Harry"
+  },
+  {
+   "speaker": "Anthony",
+   "text": "And Sir Ivan?",
+   "source": "scripts/coop/mission.gd:GUARD_TALK",
+   "key": "90d221289dc2",
+   "whisper": false,
+   "tts": "[hesitant] And Sir Ivan?",
+   "voice": "Brian"
+  },
+  {
+   "speaker": "Clyde",
+   "text": "And Sir Ivan?",
+   "source": "scripts/coop/mission.gd:GUARD_TALK",
+   "key": "a28710525b4c",
+   "whisper": false,
+   "tts": "[hesitant] And Sir Ivan?",
+   "voice": "Callum"
+  },
+  {
+   "speaker": "Rommel",
+   "text": "He went up after them the first night, with a fire extinguisher and his keys. He never came down.",
+   "source": "scripts/coop/mission.gd:GUARD_TALK",
+   "key": "db4c4e2f0426",
+   "whisper": false,
+   "tts": "[quietly, grieving] He went up after them the first night... with a fire extinguisher and his keys. [pause] He never came down.",
+   "voice": "Bill"
+  },
+  {
+   "speaker": "Rommel",
+   "text": "They're not sick anymore, the students. They're fast, and they don't stop. Don't let them follow you up the stairs.",
+   "source": "scripts/coop/mission.gd:GUARD_TALK",
+   "key": "d2bec862e882",
+   "whisper": false,
+   "tts": "[grim warning] They're not sick anymore, the students. They're fast. And they don't stop. Don't let them follow you up the stairs.",
+   "voice": "Bill"
+  },
+  {
+   "speaker": "Rommel",
+   "text": "Look at my arm. You know what this is. I'll hold the gate behind you for as long as I'm still me. Please. Bring those children out.",
+   "source": "scripts/coop/mission.gd:GUARD_TALK",
+   "key": "2bbee545e5d1",
+   "whisper": false,
+   "tts": "[bitter laugh] Look at my arm. You know what this is. [steady] I'll hold the gate behind you... for as long as I'm still me. [pleading] Please. Bring those children out.",
+   "voice": "Bill"
+  },
+  {
+   "speaker": "Ma'am Teves",
+   "text": "Diyos ko... you're real. You're not from the barangay. Who sent you?",
+   "source": "scripts/coop/escape.gd:TALK",
+   "key": "d0038f0ccf11",
+   "whisper": false,
+   "tts": "[trembling, disbelieving] Diyos ko... you're real. [wary] You're not from the barangay. Who sent you?",
+   "voice": "Matilda"
+  },
+  {
+   "speaker": "Alex",
+   "text": "Rommel, at the back gate. He said someone up here flashes a light every night.",
+   "source": "scripts/coop/escape.gd:TALK",
+   "key": "862804979357",
+   "whisper": false,
+   "tts": "Rommel... at the back gate. He said someone up here flashes a light every night.",
+   "voice": "Adam"
+  },
+  {
+   "speaker": "Aljay",
+   "text": "Rommel, at the back gate. He said someone up here flashes a light every night.",
+   "source": "scripts/coop/escape.gd:TALK",
+   "key": "2ef460c69620",
+   "whisper": false,
+   "tts": "Rommel... at the back gate. He said someone up here flashes a light every night.",
+   "voice": "Will"
+  },
+  {
+   "speaker": "Louie",
+   "text": "Rommel, at the back gate. He said someone up here flashes a light every night.",
+   "source": "scripts/coop/escape.gd:TALK",
+   "key": "03b50da02f2c",
+   "whisper": false,
+   "tts": "Rommel... at the back gate. He said someone up here flashes a light every night.",
+   "voice": "Harry"
+  },
+  {
+   "speaker": "Anthony",
+   "text": "Rommel, at the back gate. He said someone up here flashes a light every night.",
+   "source": "scripts/coop/escape.gd:TALK",
+   "key": "3cd9cf009e4f",
+   "whisper": false,
+   "tts": "Rommel... at the back gate. He said someone up here flashes a light every night.",
+   "voice": "Brian"
+  },
+  {
+   "speaker": "Clyde",
+   "text": "Rommel, at the back gate. He said someone up here flashes a light every night.",
+   "source": "scripts/coop/escape.gd:TALK",
+   "key": "8df09a659e8c",
+   "whisper": false,
+   "tts": "Rommel... at the back gate. He said someone up here flashes a light every night.",
+   "voice": "Callum"
+  },
+  {
+   "speaker": "Ma'am Teves",
+   "text": "That was me. Three times, every night. Eleven of us came up here the first night. Some went down to find their parents. Five of us are left.",
+   "source": "scripts/coop/escape.gd:TALK",
+   "key": "e2918d202eb3",
+   "whisper": false,
+   "tts": "That was me. Three times, every night. Eleven of us came up here the first night. Some went down to find their parents. [voice cracking] Five of us are left.",
+   "voice": "Matilda"
+  },
+  {
+   "speaker": "Ma'am Teves",
+   "text": "Bea, Paolo, Jerome, Trisha. Up. Get your bags. These people are taking us out.",
+   "source": "scripts/coop/escape.gd:TALK",
+   "key": "53b64b61e434",
+   "whisper": false,
+   "tts": "[firm teacher's voice] Bea, Paolo, Jerome, Trisha. Up! Get your bags. These people are taking us out.",
+   "voice": "Matilda"
+  },
+  {
+   "speaker": "Ma'am Teves",
+   "text": "He brought us water on the second night, through the ceiling. He went back down for the others. We heard him on the stairs. Then we didn't.",
+   "source": "scripts/coop/escape.gd:TALK",
+   "key": "0be723ff2a02",
+   "whisper": false,
+   "tts": "[sadly] He brought us water on the second night, through the ceiling. He went back down for the others. We heard him on the stairs. [long pause] Then we didn't.",
+   "voice": "Matilda"
+  },
+  {
+   "speaker": "Ma'am Teves",
+   "text": "Listen to me. At this hour they come through. All of them. Up the east stairs and along this hall, every night, like the bell still rings for them.",
+   "source": "scripts/coop/escape.gd:TALK",
+   "key": "69967267197d",
+   "whisper": false,
+   "tts": "[urgent, low] Listen to me. At this hour, they come through. All of them. Up the east stairs and along this hall, every night... like the bell still rings for them.",
+   "voice": "Matilda"
+  },
+  {
+   "speaker": "Ma'am Teves",
+   "text": "Every light off. Everyone inside, away from the door, and nobody moves until they've gone past. Not a sound. Please.",
+   "source": "scripts/coop/escape.gd:TALK",
+   "key": "3635f30aa8cd",
+   "whisper": false,
+   "tts": "Every light off. Everyone inside, away from the door, and nobody moves until they've gone past. Not a sound. [begging] Please.",
+   "voice": "Matilda"
+  },
+  {
+   "speaker": "Ma'am Teves",
+   "text": "They've stopped. They won't go now. Not until it's light.",
+   "source": "scripts/coop/escape.gd:AFTER",
+   "key": "8c6326fcdd44",
+   "whisper": true,
+   "tts": "[whispers, afraid] They've stopped. They won't go now... Not until it's light.",
+   "voice": "Matilda"
+  },
+  {
+   "speaker": "Ma'am Teves",
+   "text": "Hear that, in the ceiling? They're in the vent. The way you came is full of them.",
+   "source": "scripts/coop/escape.gd:AFTER",
+   "key": "bde0ea8525d0",
+   "whisper": true,
+   "tts": "[whispers] Hear that? In the ceiling? [shaky whisper] They're in the vent. The way you came is full of them.",
+   "voice": "Matilda"
+  },
+  {
+   "speaker": "Ma'am Teves",
+   "text": "The fire exit, at the far end of this hall. We chained it ourselves the first night. Here, the key. Slowly. Lights off. If anyone fires, all of them come.",
+   "source": "scripts/coop/escape.gd:AFTER",
+   "key": "8c9bf3597ace",
+   "whisper": true,
+   "tts": "[whispers] The fire exit, at the far end of this hall. We chained it ourselves, the first night. Here... the key. Slowly. Lights off. [tense whisper] If anyone fires, all of them come.",
+   "voice": "Matilda"
+  },
+  {
+   "speaker": "Alex",
+   "text": "Wait. There's someone by the gate. Sitting there.",
+   "source": "scripts/coop/heavyarm.gd:TALK",
+   "key": "2f03eff9e06e",
+   "whisper": false,
+   "tts": "[whispers, alarmed] Wait. There's someone by the gate. Sitting there.",
+   "voice": "Adam"
+  },
+  {
+   "speaker": "Aljay",
+   "text": "Wait. There's someone by the gate. Sitting there.",
+   "source": "scripts/coop/heavyarm.gd:TALK",
+   "key": "ee303bf3d831",
+   "whisper": false,
+   "tts": "[whispers, alarmed] Wait. There's someone by the gate. Sitting there.",
+   "voice": "Will"
+  },
+  {
+   "speaker": "Louie",
+   "text": "Wait. There's someone by the gate. Sitting there.",
+   "source": "scripts/coop/heavyarm.gd:TALK",
+   "key": "9bbb5452def3",
+   "whisper": false,
+   "tts": "[whispers, alarmed] Wait. There's someone by the gate. Sitting there.",
+   "voice": "Harry"
+  },
+  {
+   "speaker": "Anthony",
+   "text": "Wait. There's someone by the gate. Sitting there.",
+   "source": "scripts/coop/heavyarm.gd:TALK",
+   "key": "e4f21de5d0c8",
+   "whisper": false,
+   "tts": "[whispers, alarmed] Wait. There's someone by the gate. Sitting there.",
+   "voice": "Brian"
+  },
+  {
+   "speaker": "Clyde",
+   "text": "Wait. There's someone by the gate. Sitting there.",
+   "source": "scripts/coop/heavyarm.gd:TALK",
+   "key": "0eaa1102c370",
+   "whisper": false,
+   "tts": "[whispers, alarmed] Wait. There's someone by the gate. Sitting there.",
+   "voice": "Callum"
+  },
+  {
+   "speaker": "Alex",
+   "text": "That's no survivor. Look at its arm. Look at the size of that arm.",
+   "source": "scripts/coop/heavyarm.gd:TALK",
+   "key": "6fd08ee389dd",
+   "whisper": false,
+   "tts": "[horrified] That's no survivor. Look at its arm... Look at the size of that arm!",
+   "voice": "Adam"
+  },
+  {
+   "speaker": "Aljay",
+   "text": "That's no survivor. Look at its arm. Look at the size of that arm.",
+   "source": "scripts/coop/heavyarm.gd:TALK",
+   "key": "3c3389ecef9f",
+   "whisper": false,
+   "tts": "[horrified] That's no survivor. Look at its arm... Look at the size of that arm!",
+   "voice": "Will"
+  },
+  {
+   "speaker": "Louie",
+   "text": "That's no survivor. Look at its arm. Look at the size of that arm.",
+   "source": "scripts/coop/heavyarm.gd:TALK",
+   "key": "061cb9b919c7",
+   "whisper": false,
+   "tts": "[horrified] That's no survivor. Look at its arm... Look at the size of that arm!",
+   "voice": "Harry"
+  },
+  {
+   "speaker": "Anthony",
+   "text": "That's no survivor. Look at its arm. Look at the size of that arm.",
+   "source": "scripts/coop/heavyarm.gd:TALK",
+   "key": "c39b00af9448",
+   "whisper": false,
+   "tts": "[horrified] That's no survivor. Look at its arm... Look at the size of that arm!",
+   "voice": "Brian"
+  },
+  {
+   "speaker": "Clyde",
+   "text": "That's no survivor. Look at its arm. Look at the size of that arm.",
+   "source": "scripts/coop/heavyarm.gd:TALK",
+   "key": "3157db19ac35",
+   "whisper": false,
+   "tts": "[horrified] That's no survivor. Look at its arm... Look at the size of that arm!",
+   "voice": "Callum"
+  },
+  {
+   "speaker": "Ma'am Teves",
+   "text": "Diyos ko... Mang Dado? That's Mang Dado. He kept this gate. He locked it every night at nine.",
+   "source": "scripts/coop/heavyarm.gd:TALK",
+   "key": "cf7efa394a0e",
+   "whisper": false,
+   "tts": "[horrified] Diyos ko... Mang Dado? [voice breaking] That's Mang Dado. He kept this gate. He locked it every night, at nine.",
+   "voice": "Matilda"
+  },
+  {
+   "speaker": "Alex",
+   "text": "That's not him any more. The others didn't do this. It's changed into something.",
+   "source": "scripts/coop/heavyarm.gd:TALK",
+   "key": "36aa756012a4",
+   "whisper": false,
+   "tts": "[grim] That's not him any more. The others didn't do this... It's changed into something.",
+   "voice": "Adam"
+  },
+  {
+   "speaker": "Aljay",
+   "text": "That's not him any more. The others didn't do this. It's changed into something.",
+   "source": "scripts/coop/heavyarm.gd:TALK",
+   "key": "e2fcbcbbd451",
+   "whisper": false,
+   "tts": "[grim] That's not him any more. The others didn't do this... It's changed into something.",
+   "voice": "Will"
+  },
+  {
+   "speaker": "Louie",
+   "text": "That's not him any more. The others didn't do this. It's changed into something.",
+   "source": "scripts/coop/heavyarm.gd:TALK",
+   "key": "996dded24d64",
+   "whisper": false,
+   "tts": "[grim] That's not him any more. The others didn't do this... It's changed into something.",
+   "voice": "Harry"
+  },
+  {
+   "speaker": "Anthony",
+   "text": "That's not him any more. The others didn't do this. It's changed into something.",
+   "source": "scripts/coop/heavyarm.gd:TALK",
+   "key": "afc109a838ca",
+   "whisper": false,
+   "tts": "[grim] That's not him any more. The others didn't do this... It's changed into something.",
+   "voice": "Brian"
+  },
+  {
+   "speaker": "Clyde",
+   "text": "That's not him any more. The others didn't do this. It's changed into something.",
+   "source": "scripts/coop/heavyarm.gd:TALK",
+   "key": "8c167a2e6dfc",
+   "whisper": false,
+   "tts": "[grim] That's not him any more. The others didn't do this... It's changed into something.",
+   "voice": "Callum"
+  },
+  {
+   "speaker": "Ma'am Teves",
+   "text": "The key... the gate's key is on his lanyard. It's still round his neck.",
+   "source": "scripts/coop/heavyarm.gd:TALK",
+   "key": "2225f92e3224",
+   "whisper": false,
+   "tts": "[realizing, quietly] The key... the gate's key is on his lanyard. It's still round his neck.",
+   "voice": "Matilda"
+  },
+  {
+   "speaker": "Dodong Sikma",
+   "text": "I'm bitten. Please, I just want to go home. The soldiers went to the Olivar mart. None came back, but their equipment is still there. Stay with me.",
+   "source": "scripts/coop/mission.gd:say",
+   "key": "11d36048c3b6",
+   "whisper": false,
+   "tts": "[pained, weak] I'm bitten. Please... I just want to go home. The soldiers went to the Olivar mart. None came back... but their equipment is still there. [pleading] Stay with me.",
+   "voice": "Roger"
+  },
+  {
+   "speaker": "Dodong Sikma",
+   "text": "This is my house. I used to keep watch for the neighbourhood. My keys are beside the candle.",
+   "source": "scripts/coop/mission.gd:say",
+   "key": "549d08469d84",
+   "whisper": false,
+   "tts": "[tired relief] This is my house. I used to keep watch for the neighbourhood. My keys are beside the candle.",
+   "voice": "Roger"
+  },
+  {
+   "speaker": "Dodong Sikma",
+   "text": "Those are my gate keys. Leave me here. Take the north walk to the bridge, then the ramp. Go quietly up there. Hurry!",
+   "source": "scripts/coop/mission.gd:say",
+   "key": "fa644d0ca8dc",
+   "whisper": false,
+   "tts": "[weakly] Those are my gate keys. Leave me here. [coughs] Take the north walk to the bridge, then the ramp. Go quietly up there. [urgent] Hurry!",
+   "voice": "Roger"
+  },
+  {
+   "speaker": "Dodong Sikma",
+   "text": "The roof fell in. Hold C and follow me under. The plank bridge is just ahead.",
+   "source": "scripts/coop/mission.gd:say",
+   "key": "061a4cc94d5a",
+   "whisper": false,
+   "tts": "[whispers, strained] The roof fell in. Crouch, and follow me under. The plank bridge is just ahead.",
+   "voice": "Roger"
+  },
+  {
+   "speaker": "",
+   "text": "Dodong didn't make it home.",
+   "source": "scripts/coop/mission.gd:say",
+   "key": "e87cf94e951b",
+   "whisper": false,
+   "tts": "[grave, quiet] Dodong didn't make it home.",
+   "voice": "George"
+  },
+  {
+   "speaker": "",
+   "text": "The back door gives way!",
+   "source": "scripts/coop/mission.gd:say",
+   "key": "c81789d6c494",
+   "whisper": false,
+   "tts": "[tense] The back door gives way!",
+   "voice": "George"
+  },
+  {
+   "speaker": "Jonna",
+   "text": "Pssst! Hoy! Here, the office! Quick, before more of them come!",
+   "source": "scripts/coop/mission.gd:say",
+   "key": "fc3b2dd87646",
+   "whisper": false,
+   "tts": "[loud whisper, frantic] Pssst! Hoy! Here! The office! Quick, before more of them come!",
+   "voice": "Sarah"
+  },
+  {
+   "speaker": "Jonna",
+   "text": "Take it. The service gate key. Lock my door behind you. Go.",
+   "source": "scripts/coop/mission.gd:say",
+   "key": "f5365e068b87",
+   "whisper": false,
+   "tts": "[pressing it into your hand] Take it. The service gate key. Lock my door behind you. [urgent] Go.",
+   "voice": "Sarah"
+  },
+  {
+   "speaker": "Jonna",
+   "text": "Wait. Let me shut the front first. The light draws them.",
+   "source": "scripts/coop/mission.gd:say",
+   "key": "c774c1df6872",
+   "whisper": false,
+   "tts": "[nervous] Wait, wait. Let me shut the front first. The light draws them.",
+   "voice": "Sarah"
+  },
+  {
+   "speaker": "Jonna",
+   "text": "There. Nothing comes through that now.",
+   "source": "scripts/coop/mission.gd:say",
+   "key": "a42fd3487a92",
+   "whisper": false,
+   "tts": "[out of breath, relieved] There. Nothing comes through that now.",
+   "voice": "Sarah"
+  },
+  {
+   "speaker": "Rommel",
+   "text": "Hoy... hoy! Over here, by the gate! Don't shoot... I'm not one of them!",
+   "source": "scripts/coop/mission.gd:say",
+   "key": "1775cb7fba93",
+   "whisper": false,
+   "tts": "[hoarse, desperate] Hoy... hoy! Over here, by the gate! Don't shoot! [panicked] I'm not one of them!",
+   "voice": "Bill"
+  },
+  {
+   "speaker": "Rommel",
+   "text": "It's open. The main doors are at the end of the covered walk. Fifth floor, west side. Go!",
+   "source": "scripts/coop/mission.gd:say",
+   "key": "a5de6afb45ba",
+   "whisper": false,
+   "tts": "[straining, urgent] It's open! The main doors are at the end of the covered walk. Fifth floor, west side. Go!",
+   "voice": "Bill"
+  },
+  {
+   "speaker": "",
+   "text": "Both stairs up are piled with desks. Someone wrote on the wall: FIRE EXIT, EAST END.",
+   "source": "scripts/coop/mission.gd:say",
+   "key": "e3813361a92f",
+   "whisper": false,
+   "tts": "[low, ominous] Both stairs up are piled with desks. Someone wrote on the wall... Fire exit. East end.",
+   "voice": "George"
+  },
+  {
+   "speaker": "",
+   "text": "Both stairs are blocked again. A note says the janitor's ladder goes up.",
+   "source": "scripts/coop/mission.gd:say",
+   "key": "f0d2443be498",
+   "whisper": false,
+   "tts": "[low] Both stairs are blocked again. A note says... the janitor's ladder goes up.",
+   "voice": "George"
+  },
+  {
+   "speaker": "",
+   "text": "Somewhere down this corridor someone is knocking. Three times, then nothing.",
+   "source": "scripts/coop/mission.gd:say",
+   "key": "f9d08777554e",
+   "whisper": false,
+   "tts": "[hushed, eerie] Somewhere down this corridor, someone is knocking. Three times... [pause] then nothing.",
+   "voice": "George"
+  },
+  {
+   "speaker": "Rommel",
+   "text": "I've got the gate. Go! Don't wait for me!",
+   "source": "scripts/coop/mission.gd:say",
+   "key": "9f977fe9416d",
+   "whisper": false,
+   "tts": "[shouting over the noise] I've got the gate! Go! Don't wait for me!",
+   "voice": "Bill"
+  },
+  {
+   "speaker": "Dodong Sikma",
+   "text": "This is my house. My keys are beside the candle.",
+   "source": "scripts/coop/mission.gd:say",
+   "key": "324431f02b09",
+   "whisper": false,
+   "tts": "[tired relief] This is my house. My keys are beside the candle.",
+   "voice": "Roger"
+  },
+  {
+   "speaker": "Room 501",
+   "text": "The desks behind the door scrape aside. A teacher in a maroon blazer, and four students behind her.",
+   "source": "scripts/coop/escape.gd:say",
+   "key": "f0bf3a7275ad",
+   "whisper": false,
+   "tts": "[hushed] The desks behind the door scrape aside. A teacher in a maroon blazer... and four students behind her.",
+   "voice": "George"
+  },
+  {
+   "speaker": "Ma'am Teves",
+   "text": "Inside. Lights off. Here they come.",
+   "source": "scripts/coop/escape.gd:say",
+   "key": "39983edb8739",
+   "whisper": true,
+   "tts": "[whispers urgently] Inside. Lights off. Here they come.",
+   "voice": "Matilda"
+  },
+  {
+   "speaker": "Ma'am Teves",
+   "text": "Inside! Now! I can hear them on the stairs!",
+   "source": "scripts/coop/escape.gd:say",
+   "key": "4f5c3a048d5a",
+   "whisper": true,
+   "tts": "[panicked whisper] Inside! Now! I can hear them on the stairs!",
+   "voice": "Matilda"
+  },
+  {
+   "speaker": "Ma'am Teves",
+   "text": "That's the east stairs. Don't. Move.",
+   "source": "scripts/coop/escape.gd:say",
+   "key": "b3c57e0b6f0b",
+   "whisper": true,
+   "tts": "[barely a whisper] That's the east stairs. Don't. Move.",
+   "voice": "Matilda"
+  },
+  {
+   "speaker": "",
+   "text": "The chain slides off the push bar. Cold air. The fire escape goes all the way down.",
+   "source": "scripts/coop/escape.gd:say",
+   "key": "60eed0781aa9",
+   "whisper": false,
+   "tts": "[quiet tension] The chain slides off the push bar. Cold air. The fire escape goes all the way down.",
+   "voice": "George"
+  },
+  {
+   "speaker": "Ma'am Teves",
+   "text": "The gas! The kitchen's gas store! Hold on to something!",
+   "source": "scripts/coop/escape.gd:say",
+   "key": "c98262a84eae",
+   "whisper": false,
+   "tts": "[screaming] The gas! The kitchen's gas store! Hold on to something!",
+   "voice": "Matilda"
+  },
+  {
+   "speaker": "Paolo",
+   "text": "Ma'am, look: the stairs are gone! There's smoke coming out of 208... the wall's gone, there's a roof under it!",
+   "source": "scripts/coop/escape.gd:say",
+   "key": "647a1c0d02c4",
+   "whisper": false,
+   "tts": "[panicked, shouting] Ma'am, look, the stairs are gone! There's smoke coming out of two-oh-eight... the wall's gone! There's a roof under it!",
+   "voice": "Liam"
+  },
+  {
+   "speaker": "",
+   "text": "The field. The blast brought them all out here, and they've heard you. The rear gate is at the far end.",
+   "source": "scripts/coop/escape.gd:say",
+   "key": "1fdf49781b4b",
+   "whisper": false,
+   "tts": "[grave, urgent] The field. The blast brought them all out here... and they've heard you. The rear gate is at the far end.",
+   "voice": "George"
+  },
+  {
+   "speaker": "Alex",
+   "text": "It went up right on him! Again, find another drum!",
+   "source": "scripts/coop/heavyarm.gd:say",
+   "key": "bb3adddd4a8f",
+   "whisper": false,
+   "tts": "[shouting, fired up] It went up right on him! Again! Find another drum!",
+   "voice": "Adam"
+  },
+  {
+   "speaker": "Aljay",
+   "text": "It went up right on him! Again, find another drum!",
+   "source": "scripts/coop/heavyarm.gd:say",
+   "key": "fd718b63ad19",
+   "whisper": false,
+   "tts": "[shouting, fired up] It went up right on him! Again! Find another drum!",
+   "voice": "Will"
+  },
+  {
+   "speaker": "Louie",
+   "text": "It went up right on him! Again, find another drum!",
+   "source": "scripts/coop/heavyarm.gd:say",
+   "key": "f7be81fc6b76",
+   "whisper": false,
+   "tts": "[shouting, fired up] It went up right on him! Again! Find another drum!",
+   "voice": "Harry"
+  },
+  {
+   "speaker": "Anthony",
+   "text": "It went up right on him! Again, find another drum!",
+   "source": "scripts/coop/heavyarm.gd:say",
+   "key": "63995193349c",
+   "whisper": false,
+   "tts": "[shouting, fired up] It went up right on him! Again! Find another drum!",
+   "voice": "Brian"
+  },
+  {
+   "speaker": "Clyde",
+   "text": "It went up right on him! Again, find another drum!",
+   "source": "scripts/coop/heavyarm.gd:say",
+   "key": "c2561e699d47",
+   "whisper": false,
+   "tts": "[shouting, fired up] It went up right on him! Again! Find another drum!",
+   "voice": "Callum"
+  },
+  {
+   "speaker": "Alex",
+   "text": "Behind us! They're coming up behind us!",
+   "source": "scripts/coop/heavyarm.gd:say",
+   "key": "199d2ce15416",
+   "whisper": false,
+   "tts": "[yelling, panicked] Behind us! They're coming up behind us!",
+   "voice": "Adam"
+  },
+  {
+   "speaker": "Aljay",
+   "text": "Behind us! They're coming up behind us!",
+   "source": "scripts/coop/heavyarm.gd:say",
+   "key": "5d9e27d448cb",
+   "whisper": false,
+   "tts": "[yelling, panicked] Behind us! They're coming up behind us!",
+   "voice": "Will"
+  },
+  {
+   "speaker": "Louie",
+   "text": "Behind us! They're coming up behind us!",
+   "source": "scripts/coop/heavyarm.gd:say",
+   "key": "78dfb8664a42",
+   "whisper": false,
+   "tts": "[yelling, panicked] Behind us! They're coming up behind us!",
+   "voice": "Harry"
+  },
+  {
+   "speaker": "Anthony",
+   "text": "Behind us! They're coming up behind us!",
+   "source": "scripts/coop/heavyarm.gd:say",
+   "key": "7baccc33fbc2",
+   "whisper": false,
+   "tts": "[yelling, panicked] Behind us! They're coming up behind us!",
+   "voice": "Brian"
+  },
+  {
+   "speaker": "Clyde",
+   "text": "Behind us! They're coming up behind us!",
+   "source": "scripts/coop/heavyarm.gd:say",
+   "key": "f3eca2ec5ed9",
+   "whisper": false,
+   "tts": "[yelling, panicked] Behind us! They're coming up behind us!",
+   "voice": "Callum"
+  },
+  {
+   "speaker": "Ma'am Teves",
+   "text": "It's down... it's over. The key, there, on the ground. Take it, open the gate!",
+   "source": "scripts/coop/heavyarm.gd:say",
+   "key": "0dcb84c89fbc",
+   "whisper": false,
+   "tts": "[breathless, shaking] It's down... it's over. [urgent] The key! There, on the ground. Take it, open the gate!",
+   "voice": "Matilda"
+  },
+  {
+   "speaker": "Alex",
+   "text": "Got it. The rear gate's key, still on the guard's ring.",
+   "source": "scripts/coop/heavyarm.gd:say",
+   "key": "f359516a190f",
+   "whisper": false,
+   "tts": "[out of breath] Got it! The rear gate's key... still on the guard's ring.",
+   "voice": "Adam"
+  },
+  {
+   "speaker": "Aljay",
+   "text": "Got it. The rear gate's key, still on the guard's ring.",
+   "source": "scripts/coop/heavyarm.gd:say",
+   "key": "4a495703a12c",
+   "whisper": false,
+   "tts": "[out of breath] Got it! The rear gate's key... still on the guard's ring.",
+   "voice": "Will"
+  },
+  {
+   "speaker": "Louie",
+   "text": "Got it. The rear gate's key, still on the guard's ring.",
+   "source": "scripts/coop/heavyarm.gd:say",
+   "key": "458b79bfd3d2",
+   "whisper": false,
+   "tts": "[out of breath] Got it! The rear gate's key... still on the guard's ring.",
+   "voice": "Harry"
+  },
+  {
+   "speaker": "Anthony",
+   "text": "Got it. The rear gate's key, still on the guard's ring.",
+   "source": "scripts/coop/heavyarm.gd:say",
+   "key": "014a124a3762",
+   "whisper": false,
+   "tts": "[out of breath] Got it! The rear gate's key... still on the guard's ring.",
+   "voice": "Brian"
+  },
+  {
+   "speaker": "Clyde",
+   "text": "Got it. The rear gate's key, still on the guard's ring.",
+   "source": "scripts/coop/heavyarm.gd:say",
+   "key": "b97f26bb5bfa",
+   "whisper": false,
+   "tts": "[out of breath] Got it! The rear gate's key... still on the guard's ring.",
+   "voice": "Callum"
+  },
+  {
+   "speaker": "",
+   "text": "The padlock opens; the chain rattles down. The gate swings out onto the street.",
+   "source": "scripts/coop/heavyarm.gd:say",
+   "key": "5637939afd00",
+   "whisper": false,
+   "tts": "[relief, quiet] The padlock opens... the chain rattles down. The gate swings out onto the street.",
+   "voice": "George"
+  },
+  {
+   "speaker": "",
+   "text": "The whole team is down.",
+   "source": "scripts/coop/mission.gd:say",
+   "key": "81cc247f5fb8",
+   "whisper": false,
+   "tts": "[grave] The whole team is down.",
+   "voice": "George"
+  },
+  {
+   "speaker": "Hooded man",
+   "text": "You have to hurry!",
+   "source": "scripts/story.gd",
+   "key": "5fabe67936ce",
+   "whisper": false,
+   "tts": "[out of breath, urgent] You have to hurry!",
+   "voice": "Eric"
+  },
+  {
+   "speaker": "Hooded man",
+   "text": "Your wife and 2 daughters are with the association, so you can breathe easy.",
+   "source": "scripts/story.gd",
+   "key": "a4d3ef88f9f2",
+   "whisper": false,
+   "tts": "[calmer, reassuring] Your wife and two daughters are with the association... so you can breathe easy.",
+   "voice": "Eric"
+  },
+  {
+   "speaker": "Hooded man",
+   "text": "Now, I have to give you something. Please follow me.",
+   "source": "scripts/story.gd",
+   "key": "aa4ed108b5c5",
+   "whisper": false,
+   "tts": "[serious] Now... I have to give you something. Please, follow me.",
+   "voice": "Eric"
+  },
+  {
+   "speaker": "Hooded man",
+   "text": "Now, take these with you and go back! Hurry, before they notice!",
+   "source": "scripts/story.gd",
+   "key": "234f2699d680",
+   "whisper": false,
+   "tts": "[frantic] Now, take these with you and go back! Hurry, before they notice!",
+   "voice": "Eric"
+  },
+  {
+   "speaker": "You",
+   "text": "Hello? ...Nobody.",
+   "source": "scripts/canal_warren.gd",
+   "key": "09d9026ce252",
+   "whisper": false,
+   "tts": "[calling softly] Hello?... [uneasy] Nobody.",
+   "voice": "Chris"
+  },
+  {
+   "speaker": "You",
+   "text": "Padlocked. From the outside.",
+   "source": "scripts/canal_warren.gd",
+   "key": "5dbc725a72cc",
+   "whisper": false,
+   "tts": "[quietly, uneasy] Padlocked. From the outside.",
+   "voice": "Chris"
+  },
+  {
+   "speaker": "You",
+   "text": "Something moved in there. Or I imagined it.",
+   "source": "scripts/canal_warren.gd",
+   "key": "b43e16151e6c",
+   "whisper": false,
+   "tts": "[tense whisper] Something moved in there. [nervous breath] Or I imagined it.",
+   "voice": "Chris"
+  },
+  {
+   "speaker": "You",
+   "text": "It smells like something died behind this door.",
+   "source": "scripts/canal_warren.gd",
+   "key": "0335d9ee2f8e",
+   "whisper": false,
+   "tts": "[disgusted, gagging] It smells like something died behind this door.",
+   "voice": "Chris"
+  },
+  {
+   "speaker": "You",
+   "text": "Locked. A wet rag is stuffed under it.",
+   "source": "scripts/canal_warren.gd",
+   "key": "613d20ecd114",
+   "whisper": false,
+   "tts": "Locked. [puzzled] A wet rag is stuffed under it.",
+   "voice": "Chris"
+  },
+  {
+   "speaker": "You",
+   "text": "Someone sprayed a number on it. A census mark... or a warning.",
+   "source": "scripts/canal_warren.gd",
+   "key": "eee6a4e17af6",
+   "whisper": false,
+   "tts": "Someone sprayed a number on it. A census mark... [ominous] or a warning.",
+   "voice": "Chris"
+  },
+  {
+   "speaker": "You",
+   "text": "I can hear dripping inside.",
+   "source": "scripts/canal_warren.gd",
+   "key": "209c19eaba06",
+   "whisper": false,
+   "tts": "[whispers] I can hear dripping inside.",
+   "voice": "Chris"
+  },
+  {
+   "speaker": "You",
+   "text": "Locked. Good.",
+   "source": "scripts/canal_warren.gd",
+   "key": "2b1e59842e71",
+   "whisper": false,
+   "tts": "[relieved exhale] Locked. Good.",
+   "voice": "Chris"
+  },
+  {
+   "speaker": "You",
+   "text": "I guess no one's home..",
+   "source": "scripts/neighborhood_encounters.gd",
+   "key": "3c55ffaab610",
+   "whisper": false,
+   "tts": "[sighs] I guess no one's home...",
+   "voice": "Chris"
+  },
+  {
+   "speaker": "You",
+   "text": "Hello? ...Anyone there?",
+   "source": "scripts/neighborhood_encounters.gd",
+   "key": "847e63307539",
+   "whisper": false,
+   "tts": "[calling out, hesitant] Hello?... [quieter] Anyone there?",
+   "voice": "Chris"
+  },
+  {
+   "speaker": "You",
+   "text": "Locked. No answer, either.",
+   "source": "scripts/neighborhood_encounters.gd",
+   "key": "3cb00a9d764f",
+   "whisper": false,
+   "tts": "Locked. [uneasy] No answer, either.",
+   "voice": "Chris"
+  },
+  {
+   "speaker": "You",
+   "text": "Someone used to live here. Where did everybody go?",
+   "source": "scripts/neighborhood_encounters.gd",
+   "key": "21e5e368dfe6",
+   "whisper": false,
+   "tts": "[sad, quiet] Someone used to live here. Where did everybody go?",
+   "voice": "Chris"
+  },
+  {
+   "speaker": "You",
+   "text": "I thought I heard something inside.",
+   "source": "scripts/neighborhood_encounters.gd",
+   "key": "559e501c544a",
+   "whisper": false,
+   "tts": "[nervous whisper] I thought I heard something inside.",
+   "voice": "Chris"
+  },
+  {
+   "speaker": "You",
+   "text": "No lights. Not a sound.",
+   "source": "scripts/neighborhood_encounters.gd",
+   "key": "2a04de55dc29",
+   "whisper": false,
+   "tts": "[quietly] No lights. Not a sound.",
+   "voice": "Chris"
+  },
+  {
+   "speaker": "You",
+   "text": "Maybe I should leave this one alone.",
+   "source": "scripts/neighborhood_encounters.gd",
+   "key": "0bd9cf6685f0",
+   "whisper": false,
+   "tts": "[uneasy] Maybe I should leave this one alone.",
+   "voice": "Chris"
+  },
+  {
+   "speaker": "You",
+   "text": "Shit..",
+   "source": "scripts/nichols_basement.gd",
+   "key": "0d86b60ae8a6",
+   "whisper": false,
+   "tts": "[shocked, under his breath] Shit...",
+   "voice": "Chris"
+  },
+  {
+   "speaker": "You",
+   "text": "I thought this place was empty decades ago?",
+   "source": "scripts/nichols_basement.gd",
+   "key": "6dc4bd23fe21",
+   "whisper": false,
+   "tts": "[disturbed] I thought this place was empty... decades ago?",
+   "voice": "Chris"
+  },
+  {
+   "speaker": "You",
+   "text": "Chained shut.",
+   "source": "scripts/nichols_basement.gd",
+   "key": "2f29ef7b79ed",
+   "whisper": false,
+   "tts": "[frustrated] Chained shut.",
+   "voice": "Chris"
+  },
+  {
+   "speaker": "You",
+   "text": "That padlock is new.",
+   "source": "scripts/nichols_basement.gd",
+   "key": "39c746f2ac0c",
+   "whisper": false,
+   "tts": "[suspicious] That padlock is new.",
+   "voice": "Chris"
+  },
+  {
+   "speaker": "You",
+   "text": "Someone comes down here.",
+   "source": "scripts/nichols_basement.gd",
+   "key": "8bc42b3c27a9",
+   "whisper": false,
+   "tts": "[ominous whisper] Someone comes down here.",
+   "voice": "Chris"
+  },
+  {
+   "speaker": "You",
+   "text": "I've never been inside of the Nichols property..",
+   "source": "scripts/nichols_property.gd",
+   "key": "99946a460df0",
+   "whisper": false,
+   "tts": "[nervous, hushed] I've never been inside of the Nichols property...",
+   "voice": "Chris"
+  },
+  {
+   "speaker": "You",
+   "text": "It's.. locked? Weird.",
+   "source": "scripts/interior.gd",
+   "key": "5fd22de5d5fd",
+   "whisper": false,
+   "tts": "[confused] It's... locked? [puzzled] Weird.",
+   "voice": "Chris"
+  },
+  {
+   "speaker": "You",
+   "text": "The roof's caved in. I'll have to crouch to get under.",
+   "source": "scripts/canal_warren.gd",
+   "key": "197c50d47f76",
+   "whisper": false,
+   "tts": "[grunts] The roof's caved in. I'll have to crouch to get under.",
+   "voice": "Chris"
+  }
+ ],
+ "callouts": {
+  "Infected, up ahead!": "[alert, sharp] Infected, up ahead!",
+  "Contact! Zombie spotted!": "[shouting] Contact! Zombie spotted!",
+  "Eyes up, they're coming!": "[tense] Eyes up, they're coming!",
+  "There's a lot of them!": "[panicked] There's a lot of them!",
+  "Here comes a whole crowd!": "[alarmed] Here comes a whole crowd!",
+  "Behind you! Turn around!": "[yelling] Behind you! Turn around!",
+  "Reloading!": "[shouting] Reloading!",
+  "Changing mags, cover me!": "[hurried] Changing mags, cover me!",
+  "I'm running low on ammo.": "[worried] I'm running low on ammo.",
+  "Getting low on rounds.": "[tense] Getting low on rounds.",
+  "I'm out! I'm out of ammo!": "[panicked] I'm out! I'm out of ammo!",
+  "Guns over here!": "[excited] Guns over here!",
+  "Got weapons here!": "Got weapons here!",
+  "Ammo over here.": "Ammo over here.",
+  "Found a medkit.": "[relieved] Found a medkit.",
+  "Let's go, let's go!": "[urgent] Let's go, let's go!",
+  "Move up, let's go!": "Move up, let's go!",
+  "I need backup!": "[desperate] I need backup!",
+  "Need help over here!": "[strained, shouting] Need help over here!",
+  "Hey, check this out.": "[curious] Hey, check this out.",
+  "On me! Follow me.": "On me! Follow me.",
+  "Hold here. Watch the corners.": "[low, focused] Hold here. Watch the corners.",
+  "Fall back! Fall back!": "[shouting] Fall back! Fall back!",
+  "Too many, back up!": "[panicked] Too many, back up!",
+  "I got you covered!": "[determined] I got you covered!",
+  "Covering you!": "Covering you!",
+  "I'm down! Somebody help me!": "[screaming in pain] I'm down! Somebody help me!",
+  "Hang on, I got you!": "[straining] Hang on, I got you!",
+  "Thanks, I owe you one.": "[relieved, breathless] Thanks, I owe you one.",
+  "Got him.": "[grim] Got him.",
+  "Target down.": "[calm] Target down.",
+  "One less.": "[cold] One less.",
+  "Clear.": "[exhales] Clear.",
+  "Area's clear.": "Area's clear.",
+  "I'm hit!": "[pained cry] I'm hit!",
+  "Agh, it got me!": "[pained] Agh, it got me!",
+  "Patching up.": "[tired] Patching up.",
+  "Copy that.": "Copy that.",
+  "On it.": "On it.",
+  "Fire in the hole!": "[yelling] Fire in the hole!",
+  "Grenade out! Fire in the hole!": "[shouting] Grenade out! Fire in the hole!",
+  "Fire in the hole! Get down!": "[urgent yell] Fire in the hole! Get down!"
+ }
+}

@@ -569,11 +569,9 @@ func _build_right() -> void:
 	# A calm, aligned gallery of five family photos (was eight scattered frames).
 	for item: Array in [[-2.05,1.72,.36,.46,4],[-1.55,1.72,.36,.46,3],[-1.05,1.72,.36,.46,6],[-.55,1.72,.36,.46,2],[-1.30,2.30,.60,.40,0]]:
 		_frame(Vector3(3.239,item[1],item[0]),item[2],item[3],item[4],facing)
-	_feature("Sheer linen curtain doorway and shallow closet")
+	_feature("Closed locked door and shallow closet")
 	for z in [.34,1.46]: _box("Curtain doorway frame",Vector3(3.245,1.18,z),Vector3(.085,2.36,.062),"darkwood")
 	_box("Curtain doorway lintel",Vector3(3.245,2.37,.90),Vector3(.085,.060,1.20),"darkwood")
-	_curtain(Vector3(3.237,.07,.375),.51,2.23,"leaf curtain",true)
-	_curtain(Vector3(3.237,.07,.932),.49,2.23,"leaf curtain",true)
 	_box("Closet shelf",Vector3(3.90,1.89,.90),Vector3(.53,.028,.95),"ivory",true)
 	_box("Closet back storage",Vector3(4.12,.42,.89),Vector3(.22,.83,.73),"ivory",true)
 	_feature("Tall white storage cupboard")

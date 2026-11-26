@@ -3,9 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cb6ex56amb3jn"
-path="res://.godot/imported/tree_mango_Image_1.png-bdabd3df719951a1c5323b4921cd111c.ctex"
+path.s3tc="res://.godot/imported/tree_mango_Image_1.png-bdabd3df719951a1c5323b4921cd111c.s3tc.ctex"
+path.etc2="res://.godot/imported/tree_mango_Image_1.png-bdabd3df719951a1c5323b4921cd111c.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "9ac3cf653eae6f706a99725e33f21e6c"
@@ -14,11 +16,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/models/nature/tree_mango_Image_1.png"
-dest_files=["res://.godot/imported/tree_mango_Image_1.png-bdabd3df719951a1c5323b4921cd111c.ctex"]
+dest_files=["res://.godot/imported/tree_mango_Image_1.png-bdabd3df719951a1c5323b4921cd111c.s3tc.ctex", "res://.godot/imported/tree_mango_Image_1.png-bdabd3df719951a1c5323b4921cd111c.etc2.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -40,4 +42,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

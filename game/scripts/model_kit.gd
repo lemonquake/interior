@@ -12,6 +12,12 @@ const FOLIAGE_HINTS := ["lea", "frond", "leef", "twi", "hair", "bra", "palm", "b
 static var _cache: Dictionary = {}
 
 static func scene(path: String) -> PackedScene:
+	var _t := Time.get_ticks_usec()
+	var _r = scene__timed(path)
+	InteriorLoadClock.tally("model scene load", _t)
+	return _r
+
+static func scene__timed(path: String) -> PackedScene:
 	var full := path if path.begins_with("res://") else ROOT + path + ".glb"
 	if not _cache.has(full):
 		_cache[full] = load(full)
@@ -91,8 +97,53 @@ static func add_box_collider(owner_body: StaticBody3D, node: Node3D, inset := Ve
 	owner_body.add_child(collision, true)
 	return collision
 
+## 0.49: the layer only rounds strike (InteriorGun.MASK has it; nothing walks on it or is stopped by it).
+const SHOT_LAYER := 64
+static var _shot_shapes := {}
+
+## 0.49: a box collider round a model keeps people out of it, but it is not the model: a round through a jeepney's
+## open side, between a cart's legs or a rack's shelves went on striking the box, an invisible wall. The box is
+## marked "unseen" (rounds go on through it, InteriorSurfaces.unseen) and the model's own drawn triangles go on the
+## shot layer, so a round strikes what is drawn and nothing else.
+static func shot_proxy(box: CollisionShape3D, model: Node3D, surface := "metal") -> StaticBody3D:
+	if box != null:
+		box.set_meta("unseen", true)
+	if model == null:
+		return null
+	var body := StaticBody3D.new()
+	body.name = "Shot mesh"
+	body.collision_layer = SHOT_LAYER
+	body.collision_mask = 0
+	body.set_meta("surface", surface)
+	model.add_child(body)
+	for child in model.find_children("*", "MeshInstance3D", true, false):
+		var mi := child as MeshInstance3D
+		if mi.mesh == null or not mi.visible:
+			continue
+		var key := mi.mesh.get_rid().get_id()
+		if not _shot_shapes.has(key):
+			_shot_shapes[key] = mi.mesh.create_trimesh_shape()
+		if _shot_shapes[key] == null:
+			continue
+		var c := CollisionShape3D.new()
+		c.shape = _shot_shapes[key]
+		var relative := Transform3D.IDENTITY
+		var walker: Node = mi
+		while walker != model and walker != null:
+			if walker is Node3D:
+				relative = (walker as Node3D).transform * relative
+			walker = walker.get_parent()
+		c.transform = relative
+		body.add_child(c)
+	return body
+
 ## Runtime: alpha-scissor foliage, put every model mesh on `layers`, and optionally fade by distance.
 static func prepare_instance(node: Node, layers: int, visibility_end := 0.0, shadows := true, foliage := false) -> void:
+	var _t := Time.get_ticks_usec()
+	prepare_instance__timed(node, layers, visibility_end, shadows, foliage)
+	InteriorLoadClock.tally("model prepare_instance", _t)
+
+static func prepare_instance__timed(node: Node, layers: int, visibility_end := 0.0, shadows := true, foliage := false) -> void:
 	for child in node.find_children("*", "GeometryInstance3D", true, false):
 		var geometry := child as GeometryInstance3D
 		geometry.layers = layers

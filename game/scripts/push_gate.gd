@@ -14,6 +14,8 @@ const DAMPING := 2.2
 const PUSH_RESPONSE := 7.0
 
 @export var locked := true
+@export var neighborhood_gate := false
+static var _shared_creak: AudioStreamWAV
 
 var _leaves: Array[AnimatableBody3D] = []
 var _base_yaw: Array[float] = []
@@ -65,7 +67,7 @@ func _ready() -> void:
 func prompt_text() -> String:
 	if locked:
 		return "Unlock the gate"
-	return "Unlocked • push to open"
+	return "Gate unlocked"
 
 func toggle() -> void:
 	if locked:
@@ -114,9 +116,10 @@ func unlock() -> void:
 		return
 	locked = false
 	_play(0, -4.0, .9)
-	# The latch springs back and the first leaf drifts ajar.
-	if not _speed.is_empty():
-		_speed[0] = .16
+	var latch := find_child("Latch bolt", true, false) as Node3D
+	if latch != null:
+		latch.position.z -= .17
+	# Releasing the latch does not move the leaf. The player's hand/body supplies all motion.
 
 func is_open() -> bool:
 	for a in _angle:
@@ -146,6 +149,10 @@ func snap_closed() -> void:
 # ---------------------------------------------------------------- swing
 
 func _physics_process(delta: float) -> void:
+	if neighborhood_gate and (_pull_leaf < 0 and not is_moving()) and (_player == null or global_position.distance_squared_to(_player.global_position) > 100.0):
+		if _player == null:
+			_player = _find_player()
+		return
 	if _player == null or not is_instance_valid(_player):
 		_player = _find_player()
 	var creak := 0.0
@@ -247,6 +254,10 @@ func _play(index: int, volume: float, pitch: float) -> void:
 	_audio.pitch_scale = pitch * randf_range(.95, 1.05)
 	_audio.play()
 
+## Someone outside letting go of the bars (0.9: the stranger): one loud clank.
+func rattle_from_outside() -> void:
+	_play(2 + randi() % 2, -3.0, .85)
+
 func _rattle(delta: float) -> void:
 	_rattle_wait -= delta
 	if _rattle_wait <= 0.0:
@@ -266,6 +277,8 @@ func _update_creak(speed: float) -> void:
 
 ## Rusty hinge: a slow, irregular stick-slip squeal.
 func _creak_loop() -> AudioStreamWAV:
+	if _shared_creak != null:
+		return _shared_creak
 	var rate := 22050
 	var count := rate * 2
 	var data := PackedByteArray()
@@ -290,4 +303,5 @@ func _creak_loop() -> AudioStreamWAV:
 	stream.data = data
 	stream.loop_mode = AudioStreamWAV.LOOP_FORWARD
 	stream.loop_end = count
+	_shared_creak = stream
 	return stream

@@ -38,6 +38,9 @@ var held := false
 ## props. Such bodies are converted to sleeping (unfrozen) bodies on _ready.
 var dormant := false
 var home_transform := Transform3D.IDENTITY
+## Outdoor props (0.18, loose_props.gd) live far outside the room's +-40 m box and below its floor;
+## for them only a fall out of the world (the canal bed is at -6.6) sends them home.
+var outdoor := false
 
 var _round_radius := 0.0
 var _rolling_coefficient := 0.012
@@ -60,10 +63,12 @@ func _ready() -> void:
 	add_to_group("movable", true)
 	if not body_entered.is_connected(_on_body_entered):
 		body_entered.connect(_on_body_entered)
+	if not sleeping_state_changed.is_connected(_on_sleep_changed):
+		sleeping_state_changed.connect(_on_sleep_changed)
 	_apply_material()
 	# Builders append shapes and set exports right after add_child(); a baked
 	# scene already has them. Either way finish once the current frame settles.
-	_finish_setup.call_deferred()
+	InteriorLoadClock.later(_finish_setup)
 
 func _apply_material() -> void:
 	var values := PropPhysics.params(physics_material)
@@ -86,6 +91,8 @@ func _finish_setup() -> void:
 	# Small or light props get CCD so throws never tunnel through thin walls.
 	continuous_cd = mass < 6.0 or bounds.size.length() < 0.6
 	_configure_mass_distribution(bounds)
+	if outdoor and has_meta("loose_prop") and get_meta("loose_prop") != "chair":
+		_clear_spawn_overlap.call_deferred()
 	if anchored:
 		freeze_mode = RigidBody3D.FREEZE_MODE_STATIC
 		freeze = true
@@ -98,6 +105,26 @@ func _finish_setup() -> void:
 		# Jolt commits shape / mass changes on the next step and wakes the body;
 		# put it back to sleep once that has happened.
 		_sleep_countdown = 2
+
+## Procedural lane clutter can share a position with a cabinet or a rubbish heap.
+## Place a small loose prop on that surface instead of letting penetration push
+## it through the one-sided terrain. Ordinary drops and throws keep normal physics.
+func _clear_spawn_overlap() -> void:
+	for i in 3: await get_tree().physics_frame
+	if not is_inside_tree() or held: return
+	var seed := home_transform.origin
+	var query := PhysicsRayQueryParameters3D.create(seed+Vector3.UP*1.2,seed-Vector3.UP*.5,2)
+	var hit := get_world_3d().direct_space_state.intersect_ray(query)
+	if hit.is_empty() or (hit.normal as Vector3).y < .7: return
+	var bounds := Transform3D(home_transform.basis,Vector3.ZERO)*PropPhysics.shape_bounds(self)
+	var bottom := seed.y+bounds.position.y
+	var support: float = hit.position.y
+	if support <= bottom+.015 or support > seed.y+1.0: return
+	global_position = Vector3(seed.x,support-bounds.position.y+.003,seed.z)
+	linear_velocity = Vector3.ZERO
+	angular_velocity = Vector3.ZERO
+	home_transform = global_transform
+	reset_physics_interpolation()
 
 func _shape_count() -> int:
 	var count := 0
@@ -143,9 +170,14 @@ func _configure_mass_distribution(bounds: AABB) -> void:
 		# Soil fills the bottom of the pot.
 		center_of_mass.y = minimum_y + height * 0.36
 
+func _on_sleep_changed() -> void:
+	if not sleeping:
+		set_physics_process(true)
+
 func activate(detach := false) -> void:
 	if anchored and freeze and not detach:
 		return
+	set_physics_process(true)
 	dormant = false
 	freeze = false
 	sleeping = false
@@ -250,8 +282,13 @@ func _physics_process(_delta: float) -> void:
 			linear_velocity = Vector3.ZERO
 			angular_velocity = Vector3.ZERO
 			sleeping = true
+	# 0.26: asleep or frozen there is nothing to watch; waking (a touch, a shot, a grab) starts the tick again.
+	if (sleeping or freeze) and _sleep_countdown == 0 and not held:
+		set_physics_process(false)
+		return
 	var position_now := global_position
-	if not position_now.is_finite() or position_now.y < -4.0 or absf(position_now.x) > 40.0 or absf(position_now.z) > 40.0:
+	var lost := position_now.y < -14.0 if outdoor else (position_now.y < -4.0 or absf(position_now.x) > 40.0 or absf(position_now.z) > 40.0)
+	if not position_now.is_finite() or lost:
 		recover()
 
 ## Rolling contact speed in m/s for audio; 0 while airborne or not round.
@@ -266,6 +303,7 @@ func is_supported() -> bool:
 	return _supported
 
 func recover() -> void:
+	set_physics_process(true)
 	held = false
 	dormant = false
 	freeze = anchored

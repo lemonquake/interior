@@ -1,0 +1,20 @@
+{
+  "version": "0.24.0",
+  "android_code": 24,
+  "windows_smoke_exit": 0,
+  "apk_signature_verified": true,
+  "apk_zipalign_exit": 0,
+  "physical_android_device_tested": false,
+  "files": [
+    {
+      "path": "builds/windows/Interior.exe",
+      "bytes": 1381112384,
+      "sha256": "0aa30a041fffe9e133d1f2b6164ec133e77c86e1e2e02d48760d0e20deffeb69"
+    },
+    {
+      "path": "builds/android/Interior.apk",
+      "bytes": 1329433929,
+      "sha256": "4079239a19ed6f9acc2425efe7428a1bbaa159174268524207b4ec0314b89ee6"
+    }
+  ]
+}

@@ -1,0 +1,4646 @@
+[
+  {
+    "file": "game/scripts/interior.gd",
+    "sha256": "92358bdfd7569c45d2772881460e2902c51c76be0bfc7e3c3ee813ca2dcc712f",
+    "declarations": [
+      {
+        "line": 3,
+        "declaration": "const PlayerScript = preload(\"res://scripts/player.gd\")"
+      },
+      {
+        "line": 4,
+        "declaration": "const RoomBuilder = preload(\"res://scripts/room_builder.gd\")"
+      },
+      {
+        "line": 5,
+        "declaration": "const BAKED_ROOM := \"res://scenes/room/living_room.tscn\""
+      },
+      {
+        "line": 6,
+        "declaration": "const ObjectScript = preload(\"res://scripts/physics_object.gd\")"
+      },
+      {
+        "line": 7,
+        "declaration": "const TouchScript = preload(\"res://scripts/mobile_controls.gd\")"
+      },
+      {
+        "line": 8,
+        "declaration": "const RoomAudioScript = preload(\"res://scripts/room_audio.gd\")"
+      },
+      {
+        "line": 9,
+        "declaration": "const PropColliders = preload(\"res://scripts/prop_colliders.gd\")"
+      },
+      {
+        "line": 10,
+        "declaration": "const RoomVisuals = preload(\"res://scripts/room_visuals.gd\")"
+      },
+      {
+        "line": 11,
+        "declaration": "const EnclosureScript = preload(\"res://scripts/hamster_enclosure.gd\")"
+      },
+      {
+        "line": 12,
+        "declaration": "const AquariumScript = preload(\"res://scripts/aquarium.gd\")"
+      },
+      {
+        "line": 13,
+        "declaration": "const RoomSurroundings = preload(\"res://scripts/room_surroundings.gd\")"
+      },
+      {
+        "line": 14,
+        "declaration": "const NightAudioScript = preload(\"res://scripts/night_audio.gd\")"
+      },
+      {
+        "line": 15,
+        "declaration": "const StrangerScript = preload(\"res://scripts/stranger.gd\")"
+      },
+      {
+        "line": 16,
+        "declaration": "const StoryScript = preload(\"res://scripts/story.gd\")"
+      },
+      {
+        "line": 17,
+        "declaration": "const AtmosphereScript = preload(\"res://scripts/atmosphere.gd\")"
+      },
+      {
+        "line": 18,
+        "declaration": "const AtmosphereParticlesScript = preload(\"res://scripts/atmosphere_particles.gd\")"
+      },
+      {
+        "line": 56,
+        "declaration": "func _ready() -> void:"
+      },
+      {
+        "line": 157,
+        "declaration": "func _setup_inputs() -> void:"
+      },
+      {
+        "line": 187,
+        "declaration": "func _mat(color: Color) -> StandardMaterial3D:"
+      },
+      {
+        "line": 193,
+        "declaration": "func _box(parent: Node3D, location: Vector3, dimensions: Vector3, color: Color, collide := true) -> MeshInstance3D:"
+      },
+      {
+        "line": 210,
+        "declaration": "func _vector(values: Array) -> Vector3:"
+      },
+      {
+        "line": 213,
+        "declaration": "func _build_living_room() -> bool:"
+      },
+      {
+        "line": 236,
+        "declaration": "func _setup_living_props() -> void:"
+      },
+      {
+        "line": 249,
+        "declaration": "func _on_locked_room_door() -> void:"
+      },
+      {
+        "line": 253,
+        "declaration": "func _build_control_test_room() -> void:"
+      },
+      {
+        "line": 310,
+        "declaration": "func _build_ui() -> void:"
+      },
+      {
+        "line": 436,
+        "declaration": "func _label(text: String, font_size: int) -> Label:"
+      },
+      {
+        "line": 442,
+        "declaration": "func _button(text: String, callable: Callable) -> Button:"
+      },
+      {
+        "line": 450,
+        "declaration": "func _show_menu(kind: String) -> void:"
+      },
+      {
+        "line": 522,
+        "declaration": "func _focus_menu() -> void:"
+      },
+      {
+        "line": 529,
+        "declaration": "func _layout_menu() -> void:"
+      },
+      {
+        "line": 539,
+        "declaration": "func _home_button(text: String, callback: Callable) -> void:"
+      },
+      {
+        "line": 554,
+        "declaration": "func _build_options() -> void:"
+      },
+      {
+        "line": 577,
+        "declaration": "func _play() -> void:"
+      },
+      {
+        "line": 591,
+        "declaration": "func _restart() -> void:"
+      },
+      {
+        "line": 595,
+        "declaration": "func _apply_quality(index: int) -> void:"
+      },
+      {
+        "line": 621,
+        "declaration": "func _notification(what: int) -> void:"
+      },
+      {
+        "line": 634,
+        "declaration": "func _on_grabbed(body: InteriorObject) -> void:"
+      },
+      {
+        "line": 644,
+        "declaration": "func _on_target_changed(body: InteriorObject) -> void:"
+      },
+      {
+        "line": 665,
+        "declaration": "func _show_console() -> void:"
+      },
+      {
+        "line": 684,
+        "declaration": "func try_unlock(code: String) -> String:"
+      },
+      {
+        "line": 693,
+        "declaration": "func _capture_control_lab() -> void:"
+      },
+      {
+        "line": 715,
+        "declaration": "func _capture_review() -> void:"
+      },
+      {
+        "line": 814,
+        "declaration": "const BALCONY_VIEWS := ["
+      },
+      {
+        "line": 823,
+        "declaration": "func _capture_neighborhood_views(directory: String) -> void:"
+      },
+      {
+        "line": 859,
+        "declaration": "func _capture_balcony_views(directory: String) -> void:"
+      },
+      {
+        "line": 879,
+        "declaration": "func _capture_hut_views(directory: String) -> void:"
+      },
+      {
+        "line": 953,
+        "declaration": "func _capture_canal_views(directory: String) -> void:"
+      },
+      {
+        "line": 982,
+        "declaration": "func _capture_siege_views(directory: String) -> void:"
+      },
+      {
+        "line": 1021,
+        "declaration": "func _capture_nichols_views(directory: String) -> void:"
+      },
+      {
+        "line": 1057,
+        "declaration": "func _capture_basement_views(directory: String) -> void:"
+      },
+      {
+        "line": 1107,
+        "declaration": "func _capture_warren_views(directory: String) -> void:"
+      },
+      {
+        "line": 1138,
+        "declaration": "func _capture_debug_views(directory: String) -> void:"
+      },
+      {
+        "line": 1162,
+        "declaration": "func _capture_eye(eye: Vector3, at: Vector3) -> void:"
+      },
+      {
+        "line": 1169,
+        "declaration": "func _capture_gun_views(directory: String) -> void:"
+      },
+      {
+        "line": 1234,
+        "declaration": "func _gun_look(eye: Vector3, at: Vector3) -> void:"
+      },
+      {
+        "line": 1242,
+        "declaration": "func _save_review_image(directory: String, label: String) -> void:"
+      },
+      {
+        "line": 1248,
+        "declaration": "func _unhandled_input(event: InputEvent) -> void:"
+      },
+      {
+        "line": 1264,
+        "declaration": "func _process(delta: float) -> void:"
+      },
+      {
+        "line": 1307,
+        "declaration": "func entry_door() -> InteriorHingedDoor:"
+      }
+    ]
+  },
+  {
+    "file": "game/scripts/room_builder.gd",
+    "sha256": "9407cc9be4c478e165702bc0400b09d9b73cba85d1270c07f22236070f9c23eb",
+    "declarations": [
+      {
+        "line": 8,
+        "declaration": "const ObjectScript = preload(\"res://scripts/physics_object.gd\")"
+      },
+      {
+        "line": 9,
+        "declaration": "const PropColliders = preload(\"res://scripts/prop_colliders.gd\")"
+      },
+      {
+        "line": 10,
+        "declaration": "const PropPhysics = preload(\"res://scripts/prop_physics.gd\")"
+      },
+      {
+        "line": 11,
+        "declaration": "const RoomVisuals = preload(\"res://scripts/room_visuals.gd\")"
+      },
+      {
+        "line": 12,
+        "declaration": "const EnclosureScript = preload(\"res://scripts/hamster_enclosure.gd\")"
+      },
+      {
+        "line": 13,
+        "declaration": "const AquariumScript = preload(\"res://scripts/aquarium.gd\")"
+      },
+      {
+        "line": 14,
+        "declaration": "const RoomSurroundings = preload(\"res://scripts/room_surroundings.gd\")"
+      },
+      {
+        "line": 15,
+        "declaration": "const MANIFEST_PATH := \"res://assets/room_manifest.json\""
+      },
+      {
+        "line": 17,
+        "declaration": "static func load_manifest() -> Dictionary:"
+      },
+      {
+        "line": 24,
+        "declaration": "static func _vector(values: Array) -> Vector3:"
+      },
+      {
+        "line": 29,
+        "declaration": "static func build(room: Node3D) -> Dictionary:"
+      }
+    ]
+  },
+  {
+    "file": "game/scripts/room_surroundings.gd",
+    "sha256": "97f0c35c6ea1558351153b49cf20c5d2668920c5fa00691841ebb4d534766408",
+    "declarations": [
+      {
+        "line": 6,
+        "declaration": "const ObjectScript = preload(\"res://scripts/physics_object.gd\")"
+      },
+      {
+        "line": 7,
+        "declaration": "const DoorScript = preload(\"res://scripts/hinged_door.gd\")"
+      },
+      {
+        "line": 10,
+        "declaration": "const ENTRY_HINGE := Vector3(2.43, 0, 2.6335)"
+      },
+      {
+        "line": 11,
+        "declaration": "const DOOR_PREFIX := \"door|\""
+      },
+      {
+        "line": 12,
+        "declaration": "const TOY_BALL := Vector3(-1.05, .112, 1.05)"
+      },
+      {
+        "line": 13,
+        "declaration": "const TOY_TENNIS := Vector3(-.62, .036, 1.28)"
+      },
+      {
+        "line": 14,
+        "declaration": "const REPLACED_COLLIDERS := [\"Left wall\", \"Right wall\", \"Rear wall\", \"Ceiling\"]"
+      },
+      {
+        "line": 22,
+        "declaration": "static func apply(room: Node3D, visual: Node3D, _manifest: Dictionary) -> Dictionary:"
+      },
+      {
+        "line": 45,
+        "declaration": "func _strip_old_shell(visual: Node3D) -> void:"
+      },
+      {
+        "line": 91,
+        "declaration": "func _build() -> void:"
+      },
+      {
+        "line": 136,
+        "declaration": "func _build_entry_door() -> AnimatableBody3D:"
+      },
+      {
+        "line": 161,
+        "declaration": "func _build_rear_mirrored() -> void:"
+      },
+      {
+        "line": 201,
+        "declaration": "func _prepare_materials() -> void:"
+      },
+      {
+        "line": 252,
+        "declaration": "func _material(key: String, color: Color, roughness: float, texture := \"\") -> StandardMaterial3D:"
+      },
+      {
+        "line": 272,
+        "declaration": "func _feature(label: String) -> void:"
+      },
+      {
+        "line": 275,
+        "declaration": "func _builder(base_key: String) -> SurfaceTool:"
+      },
+      {
+        "line": 283,
+        "declaration": "func _quad(points: Array, normal: Vector3, key: String, uv := Vector2.ONE) -> void:"
+      },
+      {
+        "line": 292,
+        "declaration": "func _box(label: String, center: Vector3, size: Vector3, key: String, collide := false, basis := Basis.IDENTITY) -> void:"
+      },
+      {
+        "line": 301,
+        "declaration": "func _collider(label: String, center: Vector3, size: Vector3, basis := Basis.IDENTITY) -> void:"
+      },
+      {
+        "line": 312,
+        "declaration": "func _rod(a: Vector3, b: Vector3, radius: float, key: String, sides := 8, top_radius := -1.0) -> void:"
+      },
+      {
+        "line": 336,
+        "declaration": "func _tube(points: Array, radius: float, key: String, sides := 7) -> void:"
+      },
+      {
+        "line": 340,
+        "declaration": "func _lathe(center: Vector3, profile: Array, key: String, sides := 20, basis := Basis.IDENTITY) -> void:"
+      },
+      {
+        "line": 353,
+        "declaration": "func _sphere(center: Vector3, size: Vector3, key: String, segments := 12) -> void:"
+      },
+      {
+        "line": 360,
+        "declaration": "func _frame(center: Vector3, width: float, height: float, photo: int, facing: Basis) -> void:"
+      },
+      {
+        "line": 367,
+        "declaration": "func _build_shell() -> void:"
+      },
+      {
+        "line": 399,
+        "declaration": "func _build_kitchen() -> void:"
+      },
+      {
+        "line": 473,
+        "declaration": "func _counter_bottle(p: Vector3, variant: int) -> void:"
+      },
+      {
+        "line": 479,
+        "declaration": "func _loose_kitchen_prop(label: String, p: Vector3, mass: float, size: Vector3, key: String, cup: bool) -> void:"
+      },
+      {
+        "line": 525,
+        "declaration": "func _build_rear() -> void:"
+      },
+      {
+        "line": 561,
+        "declaration": "func _build_right() -> void:"
+      },
+      {
+        "line": 588,
+        "declaration": "func _curtain(origin: Vector3, width: float, height: float, key: String, along_z: bool) -> void:"
+      },
+      {
+        "line": 606,
+        "declaration": "func _rack(p: Vector3, size: Vector3, key: String, shelves: int) -> void:"
+      },
+      {
+        "line": 612,
+        "declaration": "func _basket(p: Vector3, size: Vector3, key: String) -> void:"
+      },
+      {
+        "line": 625,
+        "declaration": "func _flower_mat(p: Vector3, radius: float) -> void:"
+      },
+      {
+        "line": 633,
+        "declaration": "func _lathe_mesh(profile: Array, sides := 24) -> ArrayMesh:"
+      },
+      {
+        "line": 653,
+        "declaration": "func _toy_body(label: String, p: Vector3, mass: float, mesh: Mesh, key: String, shapes: Array, material_hint: String, rolls: bool) -> InteriorObject:"
+      },
+      {
+        "line": 683,
+        "declaration": "func _sphere_toy(label: String, p: Vector3, radius: float, mass: float, key: String, hint: String) -> void:"
+      },
+      {
+        "line": 693,
+        "declaration": "func _build_toys() -> void:"
+      }
+    ]
+  },
+  {
+    "file": "game/scripts/room_furnishings.gd",
+    "sha256": "07c38ab1a90514875aa80b2e8bcac60b79106292f3ba1adf8dc93e99f4cc0df9",
+    "declarations": [
+      {
+        "line": 3,
+        "declaration": "const LockedDoor = preload(\"res://scripts/locked_room_door.gd\")"
+      },
+      {
+        "line": 5,
+        "declaration": "static func apply(room: Node3D) -> void:"
+      },
+      {
+        "line": 24,
+        "declaration": "static func _pillow(body: InteriorObject) -> void:"
+      },
+      {
+        "line": 78,
+        "declaration": "static func _pillow_point(uv: Vector2, side: float) -> Vector3:"
+      },
+      {
+        "line": 86,
+        "declaration": "static func _box(parent: Node3D, label: String, center: Vector3, size: Vector3, material: Material) -> void:"
+      },
+      {
+        "line": 96,
+        "declaration": "static func _door(room: Node3D) -> void:"
+      }
+    ]
+  },
+  {
+    "file": "game/scripts/balcony_builder.gd",
+    "sha256": "eaa4a1f83aaebb2abcdde21d01210447d0e1100bbca1c229dc14df6c0937b9e1",
+    "declarations": [
+      {
+        "line": 14,
+        "declaration": "const BalconyScript = preload(\"res://scripts/balcony.gd\")"
+      },
+      {
+        "line": 15,
+        "declaration": "const PetSpawnerScript = preload(\"res://scripts/pet_spawner.gd\")"
+      },
+      {
+        "line": 16,
+        "declaration": "const OUTDOOR_LAYER := 2"
+      },
+      {
+        "line": 18,
+        "declaration": "const PROP_LAYERS := 3"
+      },
+      {
+        "line": 19,
+        "declaration": "const X0 := .95"
+      },
+      {
+        "line": 20,
+        "declaration": "const X_END := 5.6"
+      },
+      {
+        "line": 21,
+        "declaration": "const Z_WALL := 2.9"
+      },
+      {
+        "line": 22,
+        "declaration": "const Z_LEDGE := 4.55"
+      },
+      {
+        "line": 23,
+        "declaration": "const Z_OUT := 4.75"
+      },
+      {
+        "line": 24,
+        "declaration": "const CEIL := 2.75"
+      },
+      {
+        "line": 25,
+        "declaration": "const STAIR_Z := 3.85"
+      },
+      {
+        "line": 26,
+        "declaration": "const RISERS := 16"
+      },
+      {
+        "line": 27,
+        "declaration": "const RISE := 2.9 / 16.0"
+      },
+      {
+        "line": 28,
+        "declaration": "const TREAD := .27"
+      },
+      {
+        "line": 29,
+        "declaration": "const GROUND := -2.9"
+      },
+      {
+        "line": 30,
+        "declaration": "const YARD_X := 9.65"
+      },
+      {
+        "line": 31,
+        "declaration": "const FENCE_X := 12.6"
+      },
+      {
+        "line": 32,
+        "declaration": "const YARD_Z := 5.3"
+      },
+      {
+        "line": 40,
+        "declaration": "static func build(root: Node3D) -> Dictionary:"
+      },
+      {
+        "line": 51,
+        "declaration": "func _build_all() -> void:"
+      },
+      {
+        "line": 70,
+        "declaration": "func _prepare_balcony_materials() -> void:"
+      },
+      {
+        "line": 138,
+        "declaration": "func _lib(key: String, library_key: String, tint: Color) -> void:"
+      },
+      {
+        "line": 145,
+        "declaration": "func _flat(key: String, color: Color, roughness: float) -> StandardMaterial3D:"
+      },
+      {
+        "line": 153,
+        "declaration": "func _image(key: String, path: String, roughness: float) -> StandardMaterial3D:"
+      },
+      {
+        "line": 164,
+        "declaration": "func _pbr(key: String, id: String, tile: float, tint := Color(1, 1, 1), roughness := 1.0, normal := 1.0) -> StandardMaterial3D:"
+      },
+      {
+        "line": 185,
+        "declaration": "func _static_body(label: String, at: Vector3, yaw := 0.0) -> StaticBody3D:"
+      },
+      {
+        "line": 199,
+        "declaration": "func _begin_prop(label: String, at: Vector3, yaw := 0.0) -> StaticBody3D:"
+      },
+      {
+        "line": 206,
+        "declaration": "func _end_prop() -> void:"
+      },
+      {
+        "line": 212,
+        "declaration": "func _commit(parent: Node3D, prefix: String) -> void:"
+      },
+      {
+        "line": 227,
+        "declaration": "func _plate(points: Array, key: String) -> void:"
+      },
+      {
+        "line": 233,
+        "declaration": "func _ring(center: Vector3, radius: float, key: String, axis_basis: Basis, thickness := .006, segments := 14) -> void:"
+      },
+      {
+        "line": 242,
+        "declaration": "func _build_balcony_shell() -> void:"
+      },
+      {
+        "line": 253,
+        "declaration": "func _build_end_wall() -> void:"
+      },
+      {
+        "line": 272,
+        "declaration": "func _sign(center: Vector3, width: float, height: float, key: String) -> void:"
+      },
+      {
+        "line": 278,
+        "declaration": "func _build_house_wall() -> void:"
+      },
+      {
+        "line": 304,
+        "declaration": "func _window(center: Vector3, width: float, height: float) -> void:"
+      },
+      {
+        "line": 315,
+        "declaration": "func _build_railing() -> void:"
+      },
+      {
+        "line": 343,
+        "declaration": "func _build_stair() -> void:"
+      },
+      {
+        "line": 379,
+        "declaration": "func _build_courtyard() -> void:"
+      },
+      {
+        "line": 413,
+        "declaration": "const GATE_MID := 4.1"
+      },
+      {
+        "line": 414,
+        "declaration": "const PushGateScript = preload(\"res://scripts/push_gate.gd\")"
+      },
+      {
+        "line": 416,
+        "declaration": "func _build_gate() -> void:"
+      },
+      {
+        "line": 472,
+        "declaration": "const MOON_DIRECTION := InteriorNight.MOON_DIRECTION"
+      },
+      {
+        "line": 474,
+        "declaration": "func _build_neighbourhood() -> void:"
+      },
+      {
+        "line": 478,
+        "declaration": "func _wire(a: Vector3, b: Vector3, sag: float) -> void:"
+      },
+      {
+        "line": 487,
+        "declaration": "func _build_bounds() -> void:"
+      },
+      {
+        "line": 501,
+        "declaration": "func _build_props() -> void:"
+      },
+      {
+        "line": 520,
+        "declaration": "func _shoe_rack() -> void:"
+      },
+      {
+        "line": 544,
+        "declaration": "func _flower_vase() -> void:"
+      },
+      {
+        "line": 556,
+        "declaration": "func _aquarium() -> void:"
+      },
+      {
+        "line": 583,
+        "declaration": "func _ring_planter(label: String, at: Vector3, yaw: float) -> void:"
+      },
+      {
+        "line": 599,
+        "declaration": "func _greenery_panel() -> void:"
+      },
+      {
+        "line": 621,
+        "declaration": "func _plant_print() -> void:"
+      },
+      {
+        "line": 630,
+        "declaration": "func _rattan_chair(label: String, at: Vector3, yaw: float) -> void:"
+      },
+      {
+        "line": 645,
+        "declaration": "func _blue_bottle() -> void:"
+      },
+      {
+        "line": 685,
+        "declaration": "func _ladder() -> void:"
+      },
+      {
+        "line": 698,
+        "declaration": "func _covered_cabinet() -> void:"
+      },
+      {
+        "line": 704,
+        "declaration": "func _plank_stack() -> void:"
+      },
+      {
+        "line": 713,
+        "declaration": "func _build_lights() -> void:"
+      },
+      {
+        "line": 769,
+        "declaration": "func _lamp_glow(label: String, at: Vector3, color: Color, radius: float) -> void:"
+      }
+    ]
+  },
+  {
+    "file": "game/scripts/balcony.gd",
+    "sha256": "41a993ee43037e2832382a059e85f8ab5fc36a1cf557c362cdfaee718f3307be",
+    "declarations": [
+      {
+        "line": 8,
+        "declaration": "const OUTDOOR_LAYER := 2"
+      },
+      {
+        "line": 19,
+        "declaration": "func _ready() -> void:"
+      },
+      {
+        "line": 25,
+        "declaration": "func _setup_night_lamps() -> void:"
+      },
+      {
+        "line": 45,
+        "declaration": "func _sync_lenses() -> void:"
+      },
+      {
+        "line": 52,
+        "declaration": "func _street_flicker(lamp: Light3D, delta: float) -> float:"
+      },
+      {
+        "line": 74,
+        "declaration": "func _mask_room_lights() -> void:"
+      },
+      {
+        "line": 83,
+        "declaration": "func sun() -> DirectionalLight3D:"
+      },
+      {
+        "line": 88,
+        "declaration": "func _update_visibility() -> void:"
+      },
+      {
+        "line": 104,
+        "declaration": "func _flicker(delta: float) -> void:"
+      },
+      {
+        "line": 125,
+        "declaration": "func _process(delta: float) -> void:"
+      }
+    ]
+  },
+  {
+    "file": "game/scripts/studio_builder.gd",
+    "sha256": "2c82ca9655133be9e13f3790794f9bb18c7803bd18342b013e2745f890cc9a0b",
+    "declarations": [
+      {
+        "line": 12,
+        "declaration": "const StudioScript = preload(\"res://scripts/studio.gd\")"
+      },
+      {
+        "line": 13,
+        "declaration": "const SlidingDoorScript = preload(\"res://scripts/sliding_door.gd\")"
+      },
+      {
+        "line": 14,
+        "declaration": "const SX0 := -5.65"
+      },
+      {
+        "line": 15,
+        "declaration": "const SX1 := -1.25"
+      },
+      {
+        "line": 16,
+        "declaration": "const SZ0 := 2.9"
+      },
+      {
+        "line": 17,
+        "declaration": "const SZ1 := 7.3"
+      },
+      {
+        "line": 18,
+        "declaration": "const SH := 2.9"
+      },
+      {
+        "line": 19,
+        "declaration": "const FOAM := .05"
+      },
+      {
+        "line": 20,
+        "declaration": "const DOOR_X0 := -3.25"
+      },
+      {
+        "line": 21,
+        "declaration": "const DOOR_X1 := -1.24"
+      },
+      {
+        "line": 22,
+        "declaration": "const DOOR_H := 2.4"
+      },
+      {
+        "line": 23,
+        "declaration": "const DESK := Vector3(-2.6, 0, 6.745)"
+      },
+      {
+        "line": 24,
+        "declaration": "const DESK_TOP := .692"
+      },
+      {
+        "line": 26,
+        "declaration": "static func build(root: Node3D) -> Dictionary:"
+      },
+      {
+        "line": 38,
+        "declaration": "func _build_all() -> void:"
+      },
+      {
+        "line": 56,
+        "declaration": "func _prepare_studio_materials() -> void:"
+      },
+      {
+        "line": 109,
+        "declaration": "func _build_shell() -> void:"
+      },
+      {
+        "line": 140,
+        "declaration": "func _foam_wall(origin: Vector3, right: Vector3, normal: Vector3, width: float, height: float, up := Vector3.UP, skip := Rect2()) -> void:"
+      },
+      {
+        "line": 155,
+        "declaration": "func _foam_tile(corner: Vector3, right: Vector3, up: Vector3, normal: Vector3, vertical: bool, key: String) -> void:"
+      },
+      {
+        "line": 174,
+        "declaration": "func _tri_quad(p0: Vector3, p1: Vector3, p2: Vector3, p3: Vector3, key: String, hint: Vector3) -> void:"
+      },
+      {
+        "line": 179,
+        "declaration": "func _tri(p0: Vector3, p1: Vector3, p2: Vector3, key: String, hint: Vector3) -> void:"
+      },
+      {
+        "line": 193,
+        "declaration": "func _build_foam() -> void:"
+      },
+      {
+        "line": 210,
+        "declaration": "func _build_led_cove() -> void:"
+      },
+      {
+        "line": 222,
+        "declaration": "func _hanger(at: Vector3) -> void:"
+      },
+      {
+        "line": 230,
+        "declaration": "func _build_fixed_glass() -> void:"
+      },
+      {
+        "line": 236,
+        "declaration": "func _glass_panel(origin: Vector3, width: float, height: float, handle: bool) -> void:"
+      },
+      {
+        "line": 251,
+        "declaration": "func _build_door() -> void:"
+      },
+      {
+        "line": 283,
+        "declaration": "func _model(label: String, path: String, at: Vector3, yaw := 0.0, scale := 1.0, anchor := \"bottom\", tilt := Vector3.ZERO, collide := true, inset := Vector3.ZERO) -> Node3D:"
+      },
+      {
+        "line": 293,
+        "declaration": "func _build_furniture() -> void:"
+      },
+      {
+        "line": 313,
+        "declaration": "func _build_instruments() -> void:"
+      },
+      {
+        "line": 354,
+        "declaration": "func _build_desk() -> void:"
+      },
+      {
+        "line": 388,
+        "declaration": "func _build_studio_lights() -> void:"
+      }
+    ]
+  },
+  {
+    "file": "game/scripts/studio.gd",
+    "sha256": "201b4523513369dc3f124bad9ce8e8caa4308258cdd9e80a736c6cf0ebb2cebe",
+    "declarations": [
+      {
+        "line": 10,
+        "declaration": "func _ready() -> void:"
+      },
+      {
+        "line": 18,
+        "declaration": "func _process(delta: float) -> void:"
+      },
+      {
+        "line": 39,
+        "declaration": "func _light_screen(model: Node, kind: String) -> void:"
+      },
+      {
+        "line": 54,
+        "declaration": "static func _screen_image(kind: String) -> Image:"
+      }
+    ]
+  },
+  {
+    "file": "game/scripts/neighborhood_builder.gd",
+    "sha256": "4ed86c8047ae52b5a107b0bd711a6d9e829517f786f9fb02771e5304cf5872da",
+    "declarations": [
+      {
+        "line": 12,
+        "declaration": "const NeighborhoodScript = preload(\"res://scripts/neighborhood.gd\")"
+      },
+      {
+        "line": 13,
+        "declaration": "const GROUND := -2.9"
+      },
+      {
+        "line": 14,
+        "declaration": "const STOREY := 2.95"
+      },
+      {
+        "line": 17,
+        "declaration": "const STREETS := [[\"x\", 18.0, -70.0, 80.0, 6.0], [\"z\", 21.0, -40.0, 54.5, 6.0], [\"x\", 49.0, -70.0, 80.0, 6.0], [\"z\", -19.0, -40.0, 66.0, 6.0]]"
+      },
+      {
+        "line": 19,
+        "declaration": "const ROWS := ["
+      },
+      {
+        "line": 33,
+        "declaration": "const WALL_COLOURS := [Color(.95, .92, .84), Color(.86, .93, .86), Color(.97, .84, .74), Color(.80, .88, .95), Color(.94, .90, .70),"
+      },
+      {
+        "line": 35,
+        "declaration": "const ROOF_COLOURS := [Color(.62, .18, .14), Color(.20, .38, .56), Color(.24, .44, .30), Color(.55, .55, .56), Color(.42, .24, .16)]"
+      },
+      {
+        "line": 56,
+        "declaration": "const PLAY_AREA := Rect2(-24.0, -18.0, 50.0, 73.0)"
+      },
+      {
+        "line": 58,
+        "declaration": "static func build(builder: InteriorBalconyBuilder, parent: Node3D, sun_direction: Vector3) -> Dictionary:"
+      },
+      {
+        "line": 101,
+        "declaration": "func _materials() -> void:"
+      },
+      {
+        "line": 161,
+        "declaration": "func _ground() -> void:"
+      },
+      {
+        "line": 170,
+        "declaration": "func _streets() -> void:"
+      },
+      {
+        "line": 196,
+        "declaration": "func _lots() -> void:"
+      },
+      {
+        "line": 213,
+        "declaration": "func _lot(along_x: bool, line: float, start: float, frontage: float, facing: int, depth: float, max_storeys: int) -> void:"
+      },
+      {
+        "line": 266,
+        "declaration": "func _sized(basis: Basis, size: Vector3) -> Vector3:"
+      },
+      {
+        "line": 270,
+        "declaration": "func _wall_segment(a: Vector3, c: Vector3, height: float, key: String) -> void:"
+      },
+      {
+        "line": 282,
+        "declaration": "func _gate(a: Vector3, c: Vector3, height: float) -> void:"
+      },
+      {
+        "line": 299,
+        "declaration": "func _house(centre: Vector3, basis: Basis, w: float, d: float, storeys: int) -> void:"
+      },
+      {
+        "line": 362,
+        "declaration": "func _window(to_world: Callable, basis: Basis, local: Vector3, ww: float, wh: float, frame: String, face: int) -> void:"
+      },
+      {
+        "line": 379,
+        "declaration": "func _side_window(to_world: Callable, basis: Basis, local: Vector3, frame: String, side: float) -> void:"
+      },
+      {
+        "line": 384,
+        "declaration": "func _door(to_world: Callable, basis: Basis, local: Vector3, frame: String, style: int) -> void:"
+      },
+      {
+        "line": 395,
+        "declaration": "func _gable_roof(to_world: Callable, basis: Basis, w: float, d: float, top: float, key: String, gable_key: String) -> void:"
+      },
+      {
+        "line": 427,
+        "declaration": "func _hip_roof(to_world: Callable, basis: Basis, w: float, d: float, top: float, key: String) -> void:"
+      },
+      {
+        "line": 445,
+        "declaration": "func _flat_roof(to_world: Callable, basis: Basis, w: float, d: float, top: float, wall: String, unfinished: bool) -> void:"
+      },
+      {
+        "line": 468,
+        "declaration": "func _our_house_shell() -> void:"
+      },
+      {
+        "line": 476,
+        "declaration": "func _model(path: String, at: Vector3, yaw: float, scale: float, fade := 0.0) -> Node3D:"
+      },
+      {
+        "line": 482,
+        "declaration": "func _want(at: Vector3, kind: String, scale: float, search: float) -> void:"
+      },
+      {
+        "line": 485,
+        "declaration": "func _plant() -> void:"
+      },
+      {
+        "line": 513,
+        "declaration": "func _hits_point(rects: Array[Rect2], p: Vector3, margin: float) -> bool:"
+      },
+      {
+        "line": 519,
+        "declaration": "func _hits_rect(rects: Array[Rect2], crown: Rect2) -> bool:"
+      },
+      {
+        "line": 526,
+        "declaration": "func _crowded(crown: Rect2) -> bool:"
+      },
+      {
+        "line": 534,
+        "declaration": "func _hero_trees() -> void:"
+      },
+      {
+        "line": 564,
+        "declaration": "func _poles() -> void:"
+      },
+      {
+        "line": 599,
+        "declaration": "func _street_lamp(base: Vector3, toward: Vector3, height: float, state: String) -> void:"
+      },
+      {
+        "line": 626,
+        "declaration": "func _wire(a: Vector3, c: Vector3, sag: float) -> void:"
+      },
+      {
+        "line": 635,
+        "declaration": "func _sky(_moon_direction: Vector3) -> void:"
+      },
+      {
+        "line": 655,
+        "declaration": "func solid(label: String, center: Vector3, size: Vector3) -> CollisionShape3D:"
+      },
+      {
+        "line": 668,
+        "declaration": "func _curb_collider(center: Vector3, size: Vector3, along_x: bool) -> void:"
+      },
+      {
+        "line": 690,
+        "declaration": "func _near_play_area(center: Vector3, size: Vector3) -> bool:"
+      },
+      {
+        "line": 693,
+        "declaration": "func _trunk_collider(spot: Vector3, kind: String, scale: float) -> void:"
+      },
+      {
+        "line": 715,
+        "declaration": "func _play_bounds() -> void:"
+      }
+    ]
+  },
+  {
+    "file": "game/scripts/neighborhood.gd",
+    "sha256": "1082079109eb181397353a6b9f0254eac0622494f3b2402feb641c0a84d06f02",
+    "declarations": [
+      {
+        "line": 18,
+        "declaration": "const OUTDOOR_LAYER := 2"
+      },
+      {
+        "line": 19,
+        "declaration": "const FAR := 900.0"
+      },
+      {
+        "line": 20,
+        "declaration": "const MIST_SHADER := preload(\"res://scripts/night_mist.gdshader\")"
+      },
+      {
+        "line": 21,
+        "declaration": "const MIST_SIZE := Vector3(180.0, 5.0, 180.0)"
+      },
+      {
+        "line": 22,
+        "declaration": "const GROUND_Y := -2.9"
+      },
+      {
+        "line": 23,
+        "declaration": "const WEATHERING := preload(\"res://scripts/neighborhood_weathering.gd\")"
+      },
+      {
+        "line": 24,
+        "declaration": "const STREET_DECAY := preload(\"res://scripts/neighborhood_ground.gd\")"
+      },
+      {
+        "line": 25,
+        "declaration": "const DERELICT := preload(\"res://scripts/neighborhood_derelict.gd\")"
+      },
+      {
+        "line": 39,
+        "declaration": "func _ready() -> void:"
+      },
+      {
+        "line": 73,
+        "declaration": "func _install_interactions() -> void:"
+      },
+      {
+        "line": 108,
+        "declaration": "func _darken_windows() -> void:"
+      },
+      {
+        "line": 122,
+        "declaration": "func _process(delta: float) -> void:"
+      },
+      {
+        "line": 162,
+        "declaration": "func _environment() -> Environment:"
+      },
+      {
+        "line": 170,
+        "declaration": "func _apply_fog(on: bool) -> void:"
+      },
+      {
+        "line": 190,
+        "declaration": "func _apply_outdoors(on: bool) -> void:"
+      },
+      {
+        "line": 205,
+        "declaration": "func _blend_grade() -> void:"
+      },
+      {
+        "line": 241,
+        "declaration": "func refresh_quality() -> void:"
+      },
+      {
+        "line": 251,
+        "declaration": "func _update_zone(weight: float) -> void:"
+      },
+      {
+        "line": 267,
+        "declaration": "func _set_mist(on: bool) -> void:"
+      }
+    ]
+  },
+  {
+    "file": "game/scripts/neighborhood_interactions.gd",
+    "sha256": "230ab616fbff85d7ff67e5143f6fa6bb6bdd78305d8178f555c12d3a036e9d9d",
+    "declarations": [
+      {
+        "line": 3,
+        "declaration": "const Usable := preload(\"res://scripts/neighborhood_usable.gd\")"
+      },
+      {
+        "line": 4,
+        "declaration": "const Encounters := preload(\"res://scripts/neighborhood_encounters.gd\")"
+      },
+      {
+        "line": 13,
+        "declaration": "func build(town: Node3D) -> void:"
+      },
+      {
+        "line": 43,
+        "declaration": "func _material(texture: String, tint: Color, metal: float) -> StandardMaterial3D:"
+      },
+      {
+        "line": 59,
+        "declaration": "func _box(parent: Node3D, label: String, at: Vector3, size: Vector3, mat: Material) -> MeshInstance3D:"
+      },
+      {
+        "line": 71,
+        "declaration": "func _collision(parent: Node3D, at: Vector3, size: Vector3, movable := false) -> PhysicsBody3D:"
+      },
+      {
+        "line": 84,
+        "declaration": "func _make_gate(bounds: AABB) -> void:"
+      },
+      {
+        "line": 129,
+        "declaration": "func _extract_gates(instance: MeshInstance3D) -> void:"
+      },
+      {
+        "line": 153,
+        "declaration": "func _find_doors(instance: MeshInstance3D, houses: Array[AABB], controller: Node) -> void:"
+      },
+      {
+        "line": 178,
+        "declaration": "func _make_door(point: Vector3, normal: Vector3, controller: Node) -> void:"
+      }
+    ]
+  },
+  {
+    "file": "game/scripts/neighborhood_usable.gd",
+    "sha256": "923dd413a974e134c9f315593ceb04011f2c89513d2c212948e2666497a544f5",
+    "declarations": [
+      {
+        "line": 9,
+        "declaration": "func _ready() -> void:"
+      },
+      {
+        "line": 13,
+        "declaration": "func prompt_text() -> String:"
+      },
+      {
+        "line": 21,
+        "declaration": "func toggle() -> void:"
+      },
+      {
+        "line": 29,
+        "declaration": "func _process(delta: float) -> void:"
+      }
+    ]
+  },
+  {
+    "file": "game/scripts/neighborhood_encounters.gd",
+    "sha256": "5b3a2e7332a0910f9b046c3e21fdad1748b21f71be6483cc28c9bff0d84905a1",
+    "declarations": [
+      {
+        "line": 3,
+        "declaration": "const LINES := [\"I guess no one's home..\", \"Hello? ...Anyone there?\", \"Locked. No answer, either.\","
+      },
+      {
+        "line": 6,
+        "declaration": "const ZONES := [Vector3(20.5, -2.9, 10.5), Vector3(-8, -2.9, 18), Vector3(21, -2.9, 39)]"
+      },
+      {
+        "line": 8,
+        "declaration": "const PSST_APPROACH := Rect2(18.0, 5.5, 6.0, 11.0)"
+      },
+      {
+        "line": 9,
+        "declaration": "const PSST_SOURCE := Vector3(23.4, -1.45, 10.5)"
+      },
+      {
+        "line": 35,
+        "declaration": "func _ready() -> void:"
+      },
+      {
+        "line": 53,
+        "declaration": "func _voice(label: String, reach: float) -> AudioStreamPlayer3D:"
+      },
+      {
+        "line": 62,
+        "declaration": "func _resolve() -> bool:"
+      },
+      {
+        "line": 69,
+        "declaration": "func _outside() -> bool:"
+      },
+      {
+        "line": 75,
+        "declaration": "func use_object(object: Node3D) -> bool:"
+      },
+      {
+        "line": 97,
+        "declaration": "func within_knocking_reach(object: Node3D) -> bool:"
+      },
+      {
+        "line": 101,
+        "declaration": "func _contact_point(object: Node3D) -> Vector3:"
+      },
+      {
+        "line": 107,
+        "declaration": "func _reset_hand_pose() -> void:"
+      },
+      {
+        "line": 113,
+        "declaration": "func _place_hand(object: Node3D) -> void:"
+      },
+      {
+        "line": 122,
+        "declaration": "func _update_hand_pose() -> void:"
+      },
+      {
+        "line": 133,
+        "declaration": "func _process(delta: float) -> void:"
+      },
+      {
+        "line": 160,
+        "declaration": "func trigger_zone(index: int) -> bool:"
+      },
+      {
+        "line": 173,
+        "declaration": "func _start_steps() -> void:"
+      },
+      {
+        "line": 183,
+        "declaration": "func _update_steps(delta: float) -> void:"
+      },
+      {
+        "line": 196,
+        "declaration": "func _update_action(delta: float) -> void:"
+      },
+      {
+        "line": 236,
+        "declaration": "func _cancel_action() -> void:"
+      },
+      {
+        "line": 248,
+        "declaration": "func _ensure_arms() -> void:"
+      },
+      {
+        "line": 276,
+        "declaration": "func _play(voice: AudioStreamPlayer3D, stream: AudioStream, db: float, pitch: float) -> void:"
+      },
+      {
+        "line": 282,
+        "declaration": "func _synthesize(kind: String, duration: float) -> AudioStreamWAV:"
+      }
+    ]
+  },
+  {
+    "file": "game/scripts/street_dressing.gd",
+    "sha256": "43dcfa2372a86a496153a4b4727154aef38d45d526d86082b8a8044e49f4a510",
+    "declarations": [
+      {
+        "line": 10,
+        "declaration": "const GROUND := -2.9"
+      },
+      {
+        "line": 11,
+        "declaration": "const SIGN_TEXTURE := \"res://assets/outdoor/street/sign_malasugue.png\""
+      },
+      {
+        "line": 17,
+        "declaration": "static func build(neighbourhood: InteriorNeighborhoodBuilder) -> void:"
+      },
+      {
+        "line": 28,
+        "declaration": "func _materials() -> void:"
+      },
+      {
+        "line": 44,
+        "declaration": "func _place(path: String, at: Vector3, yaw: float, scale: float, slide := Vector3.ZERO, collide := true, label := \"\") -> Node3D:"
+      },
+      {
+        "line": 66,
+        "declaration": "func _blocked(foot: Rect2) -> bool:"
+      },
+      {
+        "line": 87,
+        "declaration": "func _vehicles() -> void:"
+      },
+      {
+        "line": 100,
+        "declaration": "func _stalls() -> void:"
+      },
+      {
+        "line": 113,
+        "declaration": "func _tipped_chair(at: Vector3) -> void:"
+      },
+      {
+        "line": 126,
+        "declaration": "func _street_sign() -> void:"
+      },
+      {
+        "line": 159,
+        "declaration": "func solid_sign_plate(c: Vector3, u: Vector3, v: Vector3, normal: Vector3, half_l: float, half_h: float) -> void:"
+      },
+      {
+        "line": 171,
+        "declaration": "func _barricades() -> void:"
+      },
+      {
+        "line": 195,
+        "declaration": "func _sawhorse(at: Vector3, across: Vector3, index: int) -> void:"
+      },
+      {
+        "line": 213,
+        "declaration": "func _litter() -> void:"
+      }
+    ]
+  },
+  {
+    "file": "game/scripts/town_siege.gd",
+    "sha256": "4cfb741e3a2b74e2da15af77ac514c0fe11e3f52d3139b017dbe190ded590f42",
+    "declarations": [
+      {
+        "line": 19,
+        "declaration": "const GROUND := -2.9"
+      },
+      {
+        "line": 20,
+        "declaration": "const OUTDOOR_LAYER := 2"
+      },
+      {
+        "line": 23,
+        "declaration": "const NORTH_Z := 54.8"
+      },
+      {
+        "line": 24,
+        "declaration": "const EAST_X := 25.8"
+      },
+      {
+        "line": 25,
+        "declaration": "const SOUTH_Z := -18.55"
+      },
+      {
+        "line": 26,
+        "declaration": "const WEST_X := -23.85"
+      },
+      {
+        "line": 28,
+        "declaration": "const HOLE_X := 21.32"
+      },
+      {
+        "line": 29,
+        "declaration": "const HOLE_WIDTH := .95"
+      },
+      {
+        "line": 30,
+        "declaration": "const HOLE_HEIGHT := 1.3        # crouching (1.0 m capsule) fits, standing (1.7 m) does not"
+      },
+      {
+        "line": 32,
+        "declaration": "const STRANGER_WAIT := Vector3(21.32, GROUND, 53.35)"
+      },
+      {
+        "line": 33,
+        "declaration": "const STRANGER_OUT := Vector3(21.32, GROUND, 56.6)  # through the hole, standing again on the dirt road"
+      },
+      {
+        "line": 35,
+        "declaration": "const INNER_Z := 8.95"
+      },
+      {
+        "line": 36,
+        "declaration": "const INNER_TO_X := -7.6"
+      },
+      {
+        "line": 38,
+        "declaration": "const PASSAGE_Z := Vector2(15.15, 20.85)"
+      },
+      {
+        "line": 40,
+        "declaration": "const SECRET_X := 19.35"
+      },
+      {
+        "line": 41,
+        "declaration": "const SECRET_WIDTH := .9"
+      },
+      {
+        "line": 43,
+        "declaration": "const PATH_Z := 18.15"
+      },
+      {
+        "line": 44,
+        "declaration": "const PATH_FROM_X := 16.6"
+      },
+      {
+        "line": 45,
+        "declaration": "const PATH_TO_X := -23.2"
+      },
+      {
+        "line": 46,
+        "declaration": "const SHEETS_TEX := \"res://assets/outdoor/textures/\""
+      },
+      {
+        "line": 47,
+        "declaration": "const SIEGE := \"res://assets/siege/\""
+      },
+      {
+        "line": 48,
+        "declaration": "const AUDIO := \"res://assets/audio/siege/\""
+      },
+      {
+        "line": 49,
+        "declaration": "const HORROR := preload(\"res://scripts/town_horror.gd\")"
+      },
+      {
+        "line": 80,
+        "declaration": "static func outward(run: String) -> Vector3:"
+      },
+      {
+        "line": 88,
+        "declaration": "static func inside(at: Vector3) -> bool:"
+      },
+      {
+        "line": 91,
+        "declaration": "func build(parent_town: Node3D) -> void:"
+      },
+      {
+        "line": 130,
+        "declaration": "func _survey() -> void:"
+      },
+      {
+        "line": 147,
+        "declaration": "func _house_at(p: Vector2, along: Vector2, half: float) -> bool:"
+      },
+      {
+        "line": 155,
+        "declaration": "func _thin_near(p: Vector2, along: Vector2, half: float) -> bool:"
+      },
+      {
+        "line": 163,
+        "declaration": "func _materials() -> void:"
+      },
+      {
+        "line": 185,
+        "declaration": "func _sheet_tool(at: Vector3) -> SurfaceTool:"
+      },
+      {
+        "line": 195,
+        "declaration": "func sheet(origin: Vector3, right: Vector3, up: Vector3, normal: Vector3, width: float, height: float, colour: Color,"
+      },
+      {
+        "line": 233,
+        "declaration": "func _sheet_colour(rusty := -1.0) -> Color:"
+      },
+      {
+        "line": 240,
+        "declaration": "func _commit_sheets() -> void:"
+      },
+      {
+        "line": 253,
+        "declaration": "func _solid(label: String, p: Vector3, size: Vector3, surface := \"metal\", basis := Basis.IDENTITY) -> CollisionShape3D:"
+      },
+      {
+        "line": 268,
+        "declaration": "func _perimeter() -> void:"
+      },
+      {
+        "line": 283,
+        "declaration": "func _run(label: String, a: Vector2, c: Vector2, gaps: Array) -> void:"
+      },
+      {
+        "line": 326,
+        "declaration": "func _wall_collider(label: String, a: Vector2, along: Vector2, t0: float, t1: float, out3: Vector3) -> void:"
+      },
+      {
+        "line": 333,
+        "declaration": "func _wall_bay(label: String, start: Vector2, along: Vector3, out3: Vector3, w: float, push: float, index: int) -> void:"
+      },
+      {
+        "line": 374,
+        "declaration": "func _post(at: Vector3, out3: Vector3, index: int) -> void:"
+      },
+      {
+        "line": 397,
+        "declaration": "func _rails(label: String, a: Vector2, c: Vector2, out3: Vector3, gaps: Array) -> void:"
+      },
+      {
+        "line": 437,
+        "declaration": "func _barbed(a: Vector3, c: Vector3, sag: float) -> void:"
+      },
+      {
+        "line": 455,
+        "declaration": "func _tyre(at: Vector3, flat: bool) -> void:"
+      },
+      {
+        "line": 459,
+        "declaration": "func _sandbag(at: Vector3, along: Vector3) -> void:"
+      },
+      {
+        "line": 468,
+        "declaration": "func _hole() -> void:"
+      },
+      {
+        "line": 503,
+        "declaration": "func _secret() -> void:"
+      },
+      {
+        "line": 534,
+        "declaration": "func _passage() -> void:"
+      },
+      {
+        "line": 567,
+        "declaration": "func _lot_fences() -> void:"
+      },
+      {
+        "line": 605,
+        "declaration": "func _survivor_path() -> void:"
+      },
+      {
+        "line": 637,
+        "declaration": "func _pallet(at: Vector3, basis: Basis, index: int) -> void:"
+      },
+      {
+        "line": 664,
+        "declaration": "func _cable(a: Vector3, c: Vector3, sag: float) -> void:"
+      },
+      {
+        "line": 672,
+        "declaration": "func _bulb(at: Vector3, index: int, colour: Color, reach: float, energy: float, flicker: float) -> void:"
+      },
+      {
+        "line": 709,
+        "declaration": "func _setup_audio() -> void:"
+      },
+      {
+        "line": 743,
+        "declaration": "func _process(delta: float) -> void:"
+      },
+      {
+        "line": 772,
+        "declaration": "func _main_scene() -> Node:"
+      },
+      {
+        "line": 778,
+        "declaration": "func _knock(player: Node3D) -> void:"
+      },
+      {
+        "line": 799,
+        "declaration": "func _groan(player: Node3D) -> void:"
+      },
+      {
+        "line": 819,
+        "declaration": "func _crouch_hint(main: Node, player: Node3D) -> void:"
+      }
+    ]
+  },
+  {
+    "file": "game/scripts/town_horror.gd",
+    "sha256": "ddfe90bb3e9511f7d4bdd3051a572890725324b89ec611782ee2787e9ad69bb7",
+    "declarations": [
+      {
+        "line": 15,
+        "declaration": "const GROUND := -2.9"
+      },
+      {
+        "line": 16,
+        "declaration": "const LAYER := 2"
+      },
+      {
+        "line": 17,
+        "declaration": "const SIEGE := \"res://assets/siege/\""
+      },
+      {
+        "line": 18,
+        "declaration": "const NICHOLS_BLOOD := \"res://assets/nichols/blood/\""
+      },
+      {
+        "line": 19,
+        "declaration": "const MODELS := \"res://assets/models/\""
+      },
+      {
+        "line": 20,
+        "declaration": "const FLIES := \"res://assets/audio/nichols/flies.ogg\""
+      },
+      {
+        "line": 21,
+        "declaration": "const HorrorLiquid := preload(\"res://scripts/horror_liquid.gd\")"
+      },
+      {
+        "line": 33,
+        "declaration": "func build(siege: InteriorTownSiege) -> void:"
+      },
+      {
+        "line": 52,
+        "declaration": "func _materials() -> void:"
+      },
+      {
+        "line": 96,
+        "declaration": "func _model(file: String, at: Vector3, yaw: float, scale := 1.0, label := \"\", tilt := Vector3.ZERO, solid := false) -> Node3D:"
+      },
+      {
+        "line": 107,
+        "declaration": "func _texture_set(kind: String) -> Array:"
+      },
+      {
+        "line": 119,
+        "declaration": "func decal(kind: String, at: Vector3, along: Vector3, up: Vector3, size: Vector3, alpha := 1.0, fade := 34.0) -> Decal:"
+      },
+      {
+        "line": 144,
+        "declaration": "func wall_decal(kind: String, at: Vector3, n: Vector3, width: float, height: float, alpha := 1.0) -> Decal:"
+      },
+      {
+        "line": 148,
+        "declaration": "func ground_decal(kind: String, at: Vector3, along: Vector3, length: float, width: float, alpha := 1.0) -> Decal:"
+      },
+      {
+        "line": 152,
+        "declaration": "func trail(points: Array, width := .62, start_pool := true, alpha := .95) -> void:"
+      },
+      {
+        "line": 174,
+        "declaration": "func covered_body(at: Vector3, yaw: float, cover := \"sheet white\", stain := .8, flies := true, candles := false) -> void:"
+      },
+      {
+        "line": 274,
+        "declaration": "func _body_height(x: float, z: float) -> float:"
+      },
+      {
+        "line": 292,
+        "declaration": "func _bodies() -> void:"
+      },
+      {
+        "line": 305,
+        "declaration": "func _camp() -> void:"
+      },
+      {
+        "line": 357,
+        "declaration": "func _line(a: Vector3, c: Vector3, items: int) -> void:"
+      },
+      {
+        "line": 383,
+        "declaration": "func _checkpoint() -> void:"
+      },
+      {
+        "line": 428,
+        "declaration": "func _bunting() -> void:"
+      },
+      {
+        "line": 445,
+        "declaration": "func _flags(a: Vector3, c: Vector3, sag: float, across: bool) -> void:"
+      },
+      {
+        "line": 475,
+        "declaration": "func _tyre_fire() -> void:"
+      },
+      {
+        "line": 489,
+        "declaration": "func _reinforcements() -> void:"
+      },
+      {
+        "line": 513,
+        "declaration": "func _belongings() -> void:"
+      },
+      {
+        "line": 535,
+        "declaration": "func _on_pavement(p: Vector3) -> bool:"
+      },
+      {
+        "line": 541,
+        "declaration": "func ground_y(p: Vector3) -> float:"
+      },
+      {
+        "line": 569,
+        "declaration": "func _slipper(at: Vector3, yaw: float, key: String) -> void:"
+      },
+      {
+        "line": 580,
+        "declaration": "func _umbrella(at: Vector3, yaw: float) -> void:"
+      },
+      {
+        "line": 587,
+        "declaration": "func _creatures() -> void:"
+      },
+      {
+        "line": 600,
+        "declaration": "func _ground_marks() -> void:"
+      },
+      {
+        "line": 630,
+        "declaration": "func _late() -> void:"
+      },
+      {
+        "line": 638,
+        "declaration": "func _place_late() -> void:"
+      },
+      {
+        "line": 648,
+        "declaration": "func _wall_hit(space: PhysicsDirectSpaceState3D, from: Vector3, to: Vector3) -> Dictionary:"
+      },
+      {
+        "line": 657,
+        "declaration": "func _wall_splatter(space: PhysicsDirectSpaceState3D) -> void:"
+      },
+      {
+        "line": 694,
+        "declaration": "func _near_home(p: Vector3) -> bool:"
+      },
+      {
+        "line": 699,
+        "declaration": "func _route_arrows(space: PhysicsDirectSpaceState3D) -> void:"
+      },
+      {
+        "line": 714,
+        "declaration": "func _door_marks(space: PhysicsDirectSpaceState3D) -> void:"
+      },
+      {
+        "line": 733,
+        "declaration": "func _gate_trails() -> void:"
+      },
+      {
+        "line": 755,
+        "declaration": "func _process(delta: float) -> void:"
+      }
+    ]
+  },
+  {
+    "file": "game/scripts/canal_settlement.gd",
+    "sha256": "8898c35a0df5ae8186d00ce3996c5daa3fb8bc919ce52c06879ff1d74a45ab8d",
+    "declarations": [
+      {
+        "line": 11,
+        "declaration": "const FLOOR := -2.10        # bank top: the lanes and the house floors"
+      },
+      {
+        "line": 12,
+        "declaration": "const CATWALK := -4.40      # catwalk deck"
+      },
+      {
+        "line": 13,
+        "declaration": "const WATER := -6.00"
+      },
+      {
+        "line": 14,
+        "declaration": "const BED := -6.55"
+      },
+      {
+        "line": 15,
+        "declaration": "const PATH := -5.45         # the far-bank footpath"
+      },
+      {
+        "line": 16,
+        "declaration": "const Z_SOUTH := -16.0"
+      },
+      {
+        "line": 17,
+        "declaration": "const Z_NORTH := 70.0"
+      },
+      {
+        "line": 18,
+        "declaration": "const WALL_U := 5.6         # east bank edge"
+      },
+      {
+        "line": 19,
+        "declaration": "const CAT_IN := 5.58        # catwalk deck spans u CAT_OUT..CAT_IN"
+      },
+      {
+        "line": 20,
+        "declaration": "const CAT_OUT := 3.72"
+      },
+      {
+        "line": 21,
+        "declaration": "const CAT_END := 50.0       # the catwalk climbs to the bridge from here"
+      },
+      {
+        "line": 22,
+        "declaration": "const STAIR_Z := 22.2       # trench stair from the lane down to the catwalk"
+      },
+      {
+        "line": 23,
+        "declaration": "const BRIDGE_Z := 60.2"
+      },
+      {
+        "line": 24,
+        "declaration": "const BRIDGE_HALF := 2.2"
+      },
+      {
+        "line": 25,
+        "declaration": "const FOOT_Z := -9.0        # plank footbridge to the far bank"
+      },
+      {
+        "line": 26,
+        "declaration": "const LANE_U := 12.9        # lane between the river houses and the lane houses"
+      },
+      {
+        "line": 27,
+        "declaration": "const BACK_U := 16.9"
+      },
+      {
+        "line": 28,
+        "declaration": "const KIT := \"res://assets/models/canal/kit/\""
+      },
+      {
+        "line": 29,
+        "declaration": "const WARREN := preload(\"res://scripts/canal_warren.gd\")"
+      },
+      {
+        "line": 30,
+        "declaration": "const TAGS := \"res://assets/outdoor/canal/tags/\""
+      },
+      {
+        "line": 48,
+        "declaration": "static func rx(z: float) -> float:"
+      },
+      {
+        "line": 51,
+        "declaration": "static func rslope(z: float) -> float:"
+      },
+      {
+        "line": 54,
+        "declaration": "static func at(u: float, y: float, z: float) -> Vector3:"
+      },
+      {
+        "line": 58,
+        "declaration": "static func east_basis(z: float) -> Basis:"
+      },
+      {
+        "line": 62,
+        "declaration": "static func west_basis(z: float) -> Basis:"
+      },
+      {
+        "line": 67,
+        "declaration": "static func path_y(z: float) -> float:"
+      },
+      {
+        "line": 70,
+        "declaration": "static func stair_y(u: float) -> float:"
+      },
+      {
+        "line": 73,
+        "declaration": "func ground(u: float, z: float) -> float:"
+      },
+      {
+        "line": 115,
+        "declaration": "func build(town: Node3D) -> void:"
+      },
+      {
+        "line": 177,
+        "declaration": "func _materials() -> void:"
+      },
+      {
+        "line": 272,
+        "declaration": "func _kit_material(key: String) -> Material:"
+      },
+      {
+        "line": 279,
+        "declaration": "func _decal_material(tag: String, mirrored := false) -> Material:"
+      },
+      {
+        "line": 297,
+        "declaration": "func _solid(label: String, p: Vector3, size: Vector3, surface := \"wood\", basis := Basis.IDENTITY) -> CollisionShape3D:"
+      },
+      {
+        "line": 310,
+        "declaration": "func _box(label: String, p: Vector3, size: Vector3, mat: String, solid := false, surface := \"wood\", basis := Basis.IDENTITY) -> void:"
+      },
+      {
+        "line": 315,
+        "declaration": "func _beam(label: String, a: Vector3, c: Vector3, width: float, thick: float, mat: String, solid := false, surface := \"wood\") -> void:"
+      },
+      {
+        "line": 323,
+        "declaration": "func _ramp(label: String, a: Vector3, c: Vector3, width: float, surface: String) -> void:"
+      },
+      {
+        "line": 330,
+        "declaration": "func _decal(p: Vector3, normal: Vector3, width: float, tag := \"\") -> void:"
+      },
+      {
+        "line": 343,
+        "declaration": "func _model(path: String, p: Vector3, scale: float, yaw: float, label: String, collision := false, tilt := Vector3.ZERO) -> Node3D:"
+      },
+      {
+        "line": 356,
+        "declaration": "func _kit(name_: String, p: Vector3, basis: Basis, _label: String) -> void:"
+      },
+      {
+        "line": 373,
+        "declaration": "func _kit_parts(path: String) -> Array:"
+      },
+      {
+        "line": 389,
+        "declaration": "func _commit_kit() -> void:"
+      },
+      {
+        "line": 402,
+        "declaration": "func _bind(node: Node) -> void:"
+      },
+      {
+        "line": 413,
+        "declaration": "func _wire(a: Vector3, c: Vector3, sag: float, radius := .008) -> void:"
+      },
+      {
+        "line": 423,
+        "declaration": "func _terrain() -> void:"
+      },
+      {
+        "line": 502,
+        "declaration": "func _dedupe(values: Array[float]) -> Array[float]:"
+      },
+      {
+        "line": 508,
+        "declaration": "func _water() -> void:"
+      },
+      {
+        "line": 531,
+        "declaration": "func _catwalk() -> void:"
+      },
+      {
+        "line": 594,
+        "declaration": "func _stairs() -> void:"
+      },
+      {
+        "line": 637,
+        "declaration": "func _footbridge() -> void:"
+      },
+      {
+        "line": 663,
+        "declaration": "func _road_bridge() -> void:"
+      },
+      {
+        "line": 699,
+        "declaration": "func _headwalls() -> void:"
+      },
+      {
+        "line": 737,
+        "declaration": "func _houses() -> void:"
+      },
+      {
+        "line": 780,
+        "declaration": "func _place_house(spec: Dictionary, p: Vector3, basis: Basis, label: String) -> void:"
+      },
+      {
+        "line": 790,
+        "declaration": "func _lane() -> void:"
+      },
+      {
+        "line": 878,
+        "declaration": "func _lane_details() -> void:"
+      },
+      {
+        "line": 909,
+        "declaration": "func _hanging_wires_over_river() -> void:"
+      },
+      {
+        "line": 921,
+        "declaration": "func _wall_dressing() -> void:"
+      },
+      {
+        "line": 948,
+        "declaration": "func _vine(p: Vector3, out: Vector3) -> void:"
+      },
+      {
+        "line": 965,
+        "declaration": "func _rubbish() -> void:"
+      },
+      {
+        "line": 1009,
+        "declaration": "func _occupied(z: float) -> bool:"
+      },
+      {
+        "line": 1014,
+        "declaration": "func _flora() -> void:"
+      },
+      {
+        "line": 1083,
+        "declaration": "func _bounds() -> void:"
+      },
+      {
+        "line": 1108,
+        "declaration": "func _hanging_bulb(p: Vector3, index: int, mount: String) -> void:"
+      },
+      {
+        "line": 1156,
+        "declaration": "func _bulb(parent: Node3D, offset: Vector3, index: int, color: Color, reach: float, energy := .8) -> void:"
+      },
+      {
+        "line": 1184,
+        "declaration": "func _bridge_lamp(base: Vector3, index: int) -> void:"
+      },
+      {
+        "line": 1199,
+        "declaration": "func _shrine(p: Vector3, index: int) -> void:"
+      },
+      {
+        "line": 1226,
+        "declaration": "func _mist_and_reflections() -> void:"
+      },
+      {
+        "line": 1254,
+        "declaration": "func _process(delta: float) -> void:"
+      },
+      {
+        "line": 1291,
+        "declaration": "const HOLE := Rect2(-123.5, -18.5, 88.1, 91.0)"
+      },
+      {
+        "line": 1293,
+        "declaration": "func _open_connection(town: Node3D) -> void:"
+      },
+      {
+        "line": 1353,
+        "declaration": "func _split_ground(parent: Node, c: CollisionShape3D) -> void:"
+      },
+      {
+        "line": 1381,
+        "declaration": "func _carve_mesh(mi: MeshInstance3D, hole := HOLE) -> void:"
+      },
+      {
+        "line": 1446,
+        "declaration": "func _append_interp(dst: Variant, src: Variant, t: Array, w: Vector3, kind: int) -> Variant:"
+      },
+      {
+        "line": 1475,
+        "declaration": "func _outside_pieces(poly: Array, hole := HOLE) -> Array:"
+      },
+      {
+        "line": 1482,
+        "declaration": "func _clip(poly: Array, axis: int, value: float, below: bool) -> Array:"
+      }
+    ]
+  },
+  {
+    "file": "game/scripts/canal_warren.gd",
+    "sha256": "f6a9b06a57d2dd46ab9b9cbcb0703759ea11b1b6c95ad5ba94aea964fe2f90d2",
+    "declarations": [
+      {
+        "line": 18,
+        "declaration": "const LooseProps := preload(\"res://scripts/loose_props.gd\")"
+      },
+      {
+        "line": 19,
+        "declaration": "const Usable := preload(\"res://scripts/neighborhood_usable.gd\")"
+      },
+      {
+        "line": 20,
+        "declaration": "const WarrenUsable := preload(\"res://scripts/warren_usable.gd\")"
+      },
+      {
+        "line": 21,
+        "declaration": "const WarrenDoor := preload(\"res://scripts/warren_door.gd\")"
+      },
+      {
+        "line": 23,
+        "declaration": "const FLOOR := -2.10"
+      },
+      {
+        "line": 24,
+        "declaration": "const DECK := -2.05          # boardwalk top"
+      },
+      {
+        "line": 25,
+        "declaration": "const COVER := FLOOR + 2.32  # underside of the tunnel roof"
+      },
+      {
+        "line": 26,
+        "declaration": "const EW := -3.55            # estero water"
+      },
+      {
+        "line": 27,
+        "declaration": "const EBED := -4.10"
+      },
+      {
+        "line": 28,
+        "declaration": "const Z0 := -15.6            # the warren's south and north walls (the estero runs into culverts there)"
+      },
+      {
+        "line": 29,
+        "declaration": "const Z1 := 58.6"
+      },
+      {
+        "line": 30,
+        "declaration": "const WEST_U := -53.2"
+      },
+      {
+        "line": 31,
+        "declaration": "const FENCE_U := -28.5"
+      },
+      {
+        "line": 32,
+        "declaration": "const ENTRY_Z := 8.0"
+      },
+      {
+        "line": 33,
+        "declaration": "const EXIT_Z := 54.7"
+      },
+      {
+        "line": 34,
+        "declaration": "const B1_Z := -11.0"
+      },
+      {
+        "line": 35,
+        "declaration": "const B2_Z := 52.6"
+      },
+      {
+        "line": 36,
+        "declaration": "const EAST_SOUTH := Vector2(-11.9, 9.2)  # z span of the east boardwalk's south part"
+      },
+      {
+        "line": 37,
+        "declaration": "const EAST_NORTH := Vector2(51.6, 55.8)"
+      },
+      {
+        "line": 38,
+        "declaration": "const WEST_WALK := Vector2(-11.9, 53.5)"
+      },
+      {
+        "line": 39,
+        "declaration": "const HOUSE_D := 2.45        # house fronts stand this far from the centre line"
+      },
+      {
+        "line": 40,
+        "declaration": "const WALK_IN := .85         # boardwalks reach this far over the water"
+      },
+      {
+        "line": 41,
+        "declaration": "const ROOMS := [[\"family\", 1.0, 6.0], [\"altar\", 18.0, 23.0], [\"store\", 40.0, 45.0]]"
+      },
+      {
+        "line": 42,
+        "declaration": "const ROOM_BACK := -6.5"
+      },
+      {
+        "line": 43,
+        "declaration": "const YARD := Vector2(28.0, 34.0)"
+      },
+      {
+        "line": 44,
+        "declaration": "const SAG := Vector2(-2.2, -.3)  # the caved-in stretch of the east boardwalk"
+      },
+      {
+        "line": 45,
+        "declaration": "const SLITS := [Vector2(-6.9, -6.3), Vector2(12.4, 13.1), Vector2(36.2, 36.9), Vector2(47.4, 48.0), Vector2(-14.2, -13.4),"
+      },
+      {
+        "line": 49,
+        "declaration": "const SPILLS := [-6.6, 12.75, 36.55, 47.7, -9.35, -3.15, 2.55, 6.8, 9.85, 15.55, 25.35, 38.55, 50.55]"
+      },
+      {
+        "line": 50,
+        "declaration": "const LINES := [\"Tao po? ...Nobody.\", \"Padlocked. From the outside.\", \"Something moved in there. Or I imagined it.\","
+      },
+      {
+        "line": 68,
+        "declaration": "static func rx(z: float) -> float:"
+      },
+      {
+        "line": 71,
+        "declaration": "static func ec(z: float) -> float:"
+      },
+      {
+        "line": 75,
+        "declaration": "static func slope(z: float) -> float:"
+      },
+      {
+        "line": 78,
+        "declaration": "static func at(u: float, y: float, z: float) -> Vector3:"
+      },
+      {
+        "line": 81,
+        "declaration": "static func pos(d: float, y: float, z: float) -> Vector3:"
+      },
+      {
+        "line": 85,
+        "declaration": "static func along(z: float) -> Basis:"
+      },
+      {
+        "line": 90,
+        "declaration": "static func faces_west(z: float) -> Basis:"
+      },
+      {
+        "line": 95,
+        "declaration": "static func faces_east(z: float) -> Basis:"
+      },
+      {
+        "line": 99,
+        "declaration": "static func ground(u: float, z: float, n: float) -> float:"
+      },
+      {
+        "line": 107,
+        "declaration": "static func in_spans(z: float, spans: Array) -> bool:"
+      },
+      {
+        "line": 114,
+        "declaration": "func build(settlement: Node3D) -> void:"
+      },
+      {
+        "line": 138,
+        "declaration": "func _materials() -> void:"
+      },
+      {
+        "line": 172,
+        "declaration": "func _along_box(label: String, d: float, y: float, z: float, size: Vector3, mat: String, solid := false, surface := \"wood\", tilt := Basis.IDENTITY) -> void:"
+      },
+      {
+        "line": 176,
+        "declaration": "func _strip(label: String, d: float, y: float, z0: float, z1: float, across: float, height: float, mat: String, solid := false, surface := \"wood\", step := 2.0) -> void:"
+      },
+      {
+        "line": 184,
+        "declaration": "func _water() -> void:"
+      },
+      {
+        "line": 205,
+        "declaration": "func _banks() -> void:"
+      },
+      {
+        "line": 240,
+        "declaration": "func _houses() -> void:"
+      },
+      {
+        "line": 291,
+        "declaration": "func _house(spec: Dictionary, row: String, zc: float, walk: bool) -> void:"
+      },
+      {
+        "line": 311,
+        "declaration": "func _colliders(spec: Dictionary, p: Vector3, basis: Basis) -> void:"
+      },
+      {
+        "line": 318,
+        "declaration": "func _locked_door(front: Vector3, normal: Vector3, style: String, size := Vector2(.9, 2.0), centre_y := FLOOR + 1.0) -> Node3D:"
+      },
+      {
+        "line": 350,
+        "declaration": "func _static(parent: Node3D, centre: Vector3, size: Vector3) -> StaticBody3D:"
+      },
+      {
+        "line": 364,
+        "declaration": "func _mesh_box(parent: Node3D, centre: Vector3, size: Vector3, mat: String, basis := Basis.IDENTITY) -> MeshInstance3D:"
+      },
+      {
+        "line": 375,
+        "declaration": "func _mesh_tube(parent: Node3D, centre: Vector3, radius: float, height: float, mat: String, basis := Basis.IDENTITY, top := -1.0) -> MeshInstance3D:"
+      },
+      {
+        "line": 391,
+        "declaration": "func _walks() -> void:"
+      },
+      {
+        "line": 403,
+        "declaration": "func _deck(d0: float, d1: float, z0: float, z1: float) -> void:"
+      },
+      {
+        "line": 435,
+        "declaration": "func _rail(d: float, z0: float, z1: float, gaps: Array) -> void:"
+      },
+      {
+        "line": 458,
+        "declaration": "func _bridges() -> void:"
+      },
+      {
+        "line": 479,
+        "declaration": "func _covers() -> void:"
+      },
+      {
+        "line": 498,
+        "declaration": "func _cover(d0: float, d1: float, z0: float, z1: float, open: Array) -> void:"
+      },
+      {
+        "line": 536,
+        "declaration": "func _rag(a: Vector3, c: Vector3) -> void:"
+      },
+      {
+        "line": 543,
+        "declaration": "func _rooms() -> void:"
+      },
+      {
+        "line": 550,
+        "declaration": "func _room_shell(kind: String, z0: float, z1: float) -> void:"
+      },
+      {
+        "line": 599,
+        "declaration": "func _hinged_door(hinge: Vector3, basis: Basis, width: float, height: float, mat: String, label: String, angle: float) -> Node3D:"
+      },
+      {
+        "line": 638,
+        "declaration": "func _family_room(z0: float, z1: float) -> void:"
+      },
+      {
+        "line": 686,
+        "declaration": "func _altar_room(z0: float, z1: float) -> void:"
+      },
+      {
+        "line": 719,
+        "declaration": "func _store(z0: float, z1: float) -> void:"
+      },
+      {
+        "line": 766,
+        "declaration": "func _usable(kind: String, p: Vector3, basis: Basis, size: Vector3) -> Node3D:"
+      },
+      {
+        "line": 780,
+        "declaration": "func _yard() -> void:"
+      },
+      {
+        "line": 830,
+        "declaration": "func _cage(c: Vector3, a: Basis) -> void:"
+      },
+      {
+        "line": 840,
+        "declaration": "func _ends() -> void:"
+      },
+      {
+        "line": 857,
+        "declaration": "func _barricade(d0: float, d1: float, z: float) -> void:"
+      },
+      {
+        "line": 868,
+        "declaration": "func _gates() -> void:"
+      },
+      {
+        "line": 920,
+        "declaration": "func _bounds() -> void:"
+      },
+      {
+        "line": 937,
+        "declaration": "func _dressing() -> void:"
+      },
+      {
+        "line": 971,
+        "declaration": "func _room_or_yard(z: float) -> bool:"
+      },
+      {
+        "line": 976,
+        "declaration": "func _props() -> void:"
+      },
+      {
+        "line": 1021,
+        "declaration": "func _lights() -> void:"
+      },
+      {
+        "line": 1057,
+        "declaration": "func _tube_light(p: Vector3, a: Basis) -> void:"
+      },
+      {
+        "line": 1085,
+        "declaration": "func _light(parent: Node3D, offset: Vector3, color: Color, reach: float, energy: float, kind: String, shadows: bool) -> void:"
+      },
+      {
+        "line": 1113,
+        "declaration": "func _sounds() -> void:"
+      },
+      {
+        "line": 1126,
+        "declaration": "static func _hum() -> AudioStreamWAV:"
+      },
+      {
+        "line": 1136,
+        "declaration": "static func _drips(seed_value: int) -> AudioStreamWAV:"
+      },
+      {
+        "line": 1152,
+        "declaration": "func usable_changed(_node: Node) -> void:"
+      },
+      {
+        "line": 1155,
+        "declaration": "func _process(delta: float) -> void:"
+      },
+      {
+        "line": 1189,
+        "declaration": "func _crouch_hint() -> void:"
+      }
+    ]
+  },
+  {
+    "file": "game/scripts/warren_door.gd",
+    "sha256": "4f8519b085f356a90c6a1cfdf1dec198b1e933199356b6df8bbc3ebb2a032ec9",
+    "declarations": [
+      {
+        "line": 10,
+        "declaration": "func _ready() -> void:"
+      },
+      {
+        "line": 23,
+        "declaration": "func _physics_process(delta: float) -> void:"
+      },
+      {
+        "line": 36,
+        "declaration": "static func _make_creak() -> AudioStreamWAV:"
+      }
+    ]
+  },
+  {
+    "file": "game/scripts/warren_usable.gd",
+    "sha256": "6fad637c32cd238f7e9b4c67c2b97d304b93c6b431a6d6e4ae7ff2aad09e2ff7",
+    "declarations": [
+      {
+        "line": 15,
+        "declaration": "func _ready() -> void:"
+      },
+      {
+        "line": 35,
+        "declaration": "func prompt_text() -> String:"
+      },
+      {
+        "line": 42,
+        "declaration": "func toggle() -> void:"
+      },
+      {
+        "line": 63,
+        "declaration": "func _process(delta: float) -> void:"
+      },
+      {
+        "line": 75,
+        "declaration": "static func _wav(samples: PackedFloat32Array, rate: int, loop := false) -> AudioStreamWAV:"
+      },
+      {
+        "line": 91,
+        "declaration": "static func _radio_loop() -> AudioStreamWAV:"
+      },
+      {
+        "line": 117,
+        "declaration": "static func _click() -> AudioStreamWAV:"
+      }
+    ]
+  },
+  {
+    "file": "game/scripts/nichols_property.gd",
+    "sha256": "50f372e7ec1d7e759f416b655ce2e9fb7beb2b29c0e1e37e98cc1bc15505765f",
+    "declarations": [
+      {
+        "line": 12,
+        "declaration": "const GROUND := -2.9"
+      },
+      {
+        "line": 13,
+        "declaration": "const HOUSE_POS := Vector3(-12.0, GROUND + 1.2, -82.0)   # front facade centre, ground-floor boards"
+      },
+      {
+        "line": 14,
+        "declaration": "const GATE := Vector3(-12.0, GROUND, -60.0)"
+      },
+      {
+        "line": 15,
+        "declaration": "const GATE_HALF := 2.95"
+      },
+      {
+        "line": 16,
+        "declaration": "const ESTATE := Rect2(-40.0, -124.0, 54.0, 64.0)          # x -40..14, z -124..-60"
+      },
+      {
+        "line": 17,
+        "declaration": "const REGION := Rect2(-46.0, -130.0, 72.0, 112.0)         # walkable south region, x -46..26, z -130..-18"
+      },
+      {
+        "line": 18,
+        "declaration": "const DIR := \"res://assets/models/nichols/\""
+      },
+      {
+        "line": 19,
+        "declaration": "const HOUSE_DIR := \"res://assets/models/nichols/house/\""
+      },
+      {
+        "line": 20,
+        "declaration": "const TEX := \"res://assets/outdoor/textures/\""
+      },
+      {
+        "line": 21,
+        "declaration": "const INTERIOR_LAYER := 1 << 10"
+      },
+      {
+        "line": 22,
+        "declaration": "const OUTDOOR_LAYER := 2"
+      },
+      {
+        "line": 23,
+        "declaration": "const SURFACE := preload(\"res://scripts/nichols_surface.gdshader\")"
+      },
+      {
+        "line": 24,
+        "declaration": "const WALLPAPER := preload(\"res://scripts/nichols_wallpaper.gdshader\")"
+      },
+      {
+        "line": 25,
+        "declaration": "const MARBLE := preload(\"res://scripts/nichols_marble.gdshader\")"
+      },
+      {
+        "line": 26,
+        "declaration": "const GROUND_SHADER := preload(\"res://scripts/nichols_ground.gdshader\")"
+      },
+      {
+        "line": 27,
+        "declaration": "const DoorScript := preload(\"res://scripts/nichols_door.gd\")"
+      },
+      {
+        "line": 28,
+        "declaration": "const LockedScript := preload(\"res://scripts/nichols_locked.gd\")"
+      },
+      {
+        "line": 29,
+        "declaration": "const ENTRY_LINE := \"I've never been inside of the Nichols property..\""
+      },
+      {
+        "line": 31,
+        "declaration": "const PATH := [Vector2(20.6, -24.0), Vector2(20.2, -33.0), Vector2(17.0, -40.5), Vector2(10.0, -47.0), Vector2(1.0, -52.5), Vector2(-6.5, -57.0), Vector2(-12.0, -59.6)]"
+      },
+      {
+        "line": 49,
+        "declaration": "const SHADOW_LAYER := 1 << 11"
+      },
+      {
+        "line": 51,
+        "declaration": "const BASEMENT_LAYER := 1 << 12"
+      },
+      {
+        "line": 52,
+        "declaration": "const BasementScript := preload(\"res://scripts/nichols_basement.gd\")"
+      },
+      {
+        "line": 54,
+        "declaration": "const BEAM := preload(\"res://scripts/nichols_beam.gdshader\")"
+      },
+      {
+        "line": 56,
+        "declaration": "const ARCH_LAYER := 1 << 19"
+      },
+      {
+        "line": 58,
+        "declaration": "const BASEMENT_FLOOR := -2.7"
+      },
+      {
+        "line": 61,
+        "declaration": "static func local(x: float, depth: float, up := 0.0) -> Vector3:"
+      },
+      {
+        "line": 65,
+        "declaration": "func build(town: Node3D) -> void:"
+      },
+      {
+        "line": 105,
+        "declaration": "func _noise() -> void:"
+      },
+      {
+        "line": 117,
+        "declaration": "func _tex(id: String, map: String) -> Texture2D:"
+      },
+      {
+        "line": 121,
+        "declaration": "func _surface(key: String, id: String, tile: float, opts := {}) -> ShaderMaterial:"
+      },
+      {
+        "line": 135,
+        "declaration": "func _wallpaper(key: String, channel: int, paper: Color, ink: Color, opts := {}) -> void:"
+      },
+      {
+        "line": 152,
+        "declaration": "func _flat(key: String, color: Color, rough: float, metal := 0.0) -> StandardMaterial3D:"
+      },
+      {
+        "line": 161,
+        "declaration": "func _materials() -> void:"
+      },
+      {
+        "line": 257,
+        "declaration": "func _basement_materials() -> void:"
+      },
+      {
+        "line": 328,
+        "declaration": "func _lace_texture() -> ImageTexture:"
+      },
+      {
+        "line": 350,
+        "declaration": "func _material_for(key: String) -> Material:"
+      },
+      {
+        "line": 353,
+        "declaration": "func _bind(node: Node, layers: int, shadows := true) -> void:"
+      },
+      {
+        "line": 371,
+        "declaration": "func _house() -> void:"
+      },
+      {
+        "line": 407,
+        "declaration": "func _v(a: Array) -> Vector3:"
+      },
+      {
+        "line": 411,
+        "declaration": "func is_inside(p: Vector3) -> bool:"
+      },
+      {
+        "line": 416,
+        "declaration": "func is_below(p: Vector3) -> bool:"
+      },
+      {
+        "line": 421,
+        "declaration": "func _door(hinge: Vector3, latch: Vector3, swing: Vector3, height: float, width: float, leaf_path: String, label: String,"
+      },
+      {
+        "line": 465,
+        "declaration": "func _doors() -> void:"
+      },
+      {
+        "line": 513,
+        "declaration": "func _interior_light() -> void:"
+      },
+      {
+        "line": 576,
+        "declaration": "func _update_light() -> void:"
+      },
+      {
+        "line": 605,
+        "declaration": "func _beams() -> void:"
+      },
+      {
+        "line": 673,
+        "declaration": "func _card(st: SurfaceTool, a: Vector3, c: Vector3, fc: Vector3, fa: Vector3, L: Vector3) -> void:"
+      },
+      {
+        "line": 687,
+        "declaration": "const STATIC_PROPS := [\"chandelier_01\", \"chandelier_02\", \"bench_vice_01\", \"hatchet\"]"
+      },
+      {
+        "line": 689,
+        "declaration": "const PROP_SPECS := {"
+      },
+      {
+        "line": 737,
+        "declaration": "func _physical(visual: Node3D, name_: String, hung := false, floor_clip := false) -> InteriorObject:"
+      },
+      {
+        "line": 777,
+        "declaration": "const SEATS := {\"dining_chair_02\": .47, \"rockingchair_01\": .42, \"wheelchair_01\": .45, \"old_bed_frame\": .4, \"gothicbed_01\": .42}"
+      },
+      {
+        "line": 779,
+        "declaration": "func _box_shape(body: CollisionObject3D, box: AABB, shrink := Vector3.ONE) -> void:"
+      },
+      {
+        "line": 788,
+        "declaration": "func _seat_shapes(body: InteriorObject, visual: Node3D, seat_frac: float) -> void:"
+      },
+      {
+        "line": 829,
+        "declaration": "func _model(name_: String, p: Vector3, yaw: float, scale := 1.0, collide := true, tilt := Vector3.ZERO, layer := INTERIOR_LAYER) -> Node3D:"
+      },
+      {
+        "line": 859,
+        "declaration": "func _age(node: Node) -> void:"
+      },
+      {
+        "line": 876,
+        "declaration": "func _tint(node: Node, c: Color) -> void:"
+      },
+      {
+        "line": 888,
+        "declaration": "func _dust_pass() -> ShaderMaterial:"
+      },
+      {
+        "line": 909,
+        "declaration": "func _furnish() -> void:"
+      },
+      {
+        "line": 1007,
+        "declaration": "func _sheet(name_: String, p: Vector3, yaw: float) -> void:"
+      },
+      {
+        "line": 1019,
+        "declaration": "func C0() -> float: return 4.0"
+      },
+      {
+        "line": 1020,
+        "declaration": "func F1() -> float: return 4.4"
+      },
+      {
+        "line": 1023,
+        "declaration": "func _rubble() -> void:"
+      },
+      {
+        "line": 1091,
+        "declaration": "func _webs() -> void:"
+      },
+      {
+        "line": 1157,
+        "declaration": "func _open_street(town: Node3D) -> void:"
+      },
+      {
+        "line": 1197,
+        "declaration": "func _sawhorse(at: Vector3, basis: Basis) -> void:"
+      },
+      {
+        "line": 1205,
+        "declaration": "func _path_dist(p: Vector2) -> float:"
+      },
+      {
+        "line": 1214,
+        "declaration": "func _drive_dist(p: Vector2) -> float:"
+      },
+      {
+        "line": 1223,
+        "declaration": "func _terrain() -> void:"
+      },
+      {
+        "line": 1289,
+        "declaration": "func _solid(label: String, p: Vector3, size: Vector3, surface := \"grass\", basis := Basis.IDENTITY) -> CollisionShape3D:"
+      },
+      {
+        "line": 1302,
+        "declaration": "func _bounds() -> void:"
+      },
+      {
+        "line": 1316,
+        "declaration": "func _estate() -> void:"
+      },
+      {
+        "line": 1423,
+        "declaration": "func _railing_wall(a: Vector3, c: Vector3) -> void:"
+      },
+      {
+        "line": 1451,
+        "declaration": "func _fountain(c: Vector3) -> void:"
+      },
+      {
+        "line": 1466,
+        "declaration": "func _grounds() -> void:"
+      },
+      {
+        "line": 1498,
+        "declaration": "func _overgrowth() -> void:"
+      },
+      {
+        "line": 1573,
+        "declaration": "func _fog_inside(delta: float) -> void:"
+      },
+      {
+        "line": 1586,
+        "declaration": "func _process(delta: float) -> void:"
+      }
+    ]
+  },
+  {
+    "file": "game/scripts/nichols_basement.gd",
+    "sha256": "5e4c8e7c98c262fb0edbd2d6e2b50935e56789bd376d02d16049b47cbab061c9",
+    "declarations": [
+      {
+        "line": 13,
+        "declaration": "const INTERIOR_LAYER := 1 << 10"
+      },
+      {
+        "line": 14,
+        "declaration": "const BASEMENT_LAYER := 1 << 12"
+      },
+      {
+        "line": 15,
+        "declaration": "const OUTDOOR_LAYER := 2"
+      },
+      {
+        "line": 16,
+        "declaration": "const BLOOD := \"res://assets/nichols/blood/\""
+      },
+      {
+        "line": 17,
+        "declaration": "const AUDIO := \"res://assets/audio/nichols/\""
+      },
+      {
+        "line": 18,
+        "declaration": "const SIGHT_LINES := [\"Shit..\", \"I thought this place was empty decades ago?\"]"
+      },
+      {
+        "line": 19,
+        "declaration": "const LOCK_LINES := [\"Chained shut.\", \"That padlock is new.\", \"Someone comes down here.\"]"
+      },
+      {
+        "line": 21,
+        "declaration": "const HOLE := Rect2(-25.0, -102.0, 26.0, 20.0)"
+      },
+      {
+        "line": 22,
+        "declaration": "const BULB_COLOR := Color(1.0, .7, .43)"
+      },
+      {
+        "line": 23,
+        "declaration": "const LockedScript := preload(\"res://scripts/nichols_locked.gd\")"
+      },
+      {
+        "line": 24,
+        "declaration": "const HorrorLiquid := preload(\"res://scripts/horror_liquid.gd\")"
+      },
+      {
+        "line": 50,
+        "declaration": "func build(property: Node3D, town: Node3D) -> void:"
+      },
+      {
+        "line": 71,
+        "declaration": "func _v(a: Array) -> Vector3:"
+      },
+      {
+        "line": 74,
+        "declaration": "func _at(a: Array) -> Vector3:"
+      },
+      {
+        "line": 78,
+        "declaration": "func bl(x: float, depth: float, up := 0.0) -> Vector3:"
+      },
+      {
+        "line": 84,
+        "declaration": "func _cut_ground(town: Node3D) -> void:"
+      },
+      {
+        "line": 101,
+        "declaration": "func _split_box(parent: Node, c: CollisionShape3D) -> void:"
+      },
+      {
+        "line": 130,
+        "declaration": "func _door() -> void:"
+      },
+      {
+        "line": 140,
+        "declaration": "func _switch() -> void:"
+      },
+      {
+        "line": 200,
+        "declaration": "func set_basement_lights(on: bool, instant := false) -> void:"
+      },
+      {
+        "line": 224,
+        "declaration": "func is_lit() -> bool:"
+      },
+      {
+        "line": 229,
+        "declaration": "func _cyl(top: float, bottom: float, height: float, segments := 10) -> CylinderMesh:"
+      },
+      {
+        "line": 238,
+        "declaration": "func _mesh(parent: Node3D, mesh: Mesh, material: Material, at := Vector3.ZERO, basis := Basis.IDENTITY, layers := BASEMENT_LAYER) -> MeshInstance3D:"
+      },
+      {
+        "line": 248,
+        "declaration": "func _rod(parent: Node3D, a: Vector3, b: Vector3, r: float, material: Material, layers := BASEMENT_LAYER) -> void:"
+      },
+      {
+        "line": 257,
+        "declaration": "func _bulbs() -> void:"
+      },
+      {
+        "line": 353,
+        "declaration": "func _flicker(b: Dictionary, delta: float) -> void:"
+      },
+      {
+        "line": 392,
+        "declaration": "func _air() -> void:"
+      },
+      {
+        "line": 424,
+        "declaration": "func _room_light(room: String) -> float:"
+      },
+      {
+        "line": 436,
+        "declaration": "const RETINT := {\"old_tyre\": Color(.035, .033, .032), \"metal_office_desk\": Color(.2, .21, .2)}"
+      },
+      {
+        "line": 438,
+        "declaration": "func _p(name_: String, x: float, depth: float, up: float, yaw := 0.0, scale := 1.0, tilt := Vector3.ZERO) -> Node3D:"
+      },
+      {
+        "line": 455,
+        "declaration": "func _props() -> void:"
+      },
+      {
+        "line": 509,
+        "declaration": "func _bundle_on_hook() -> void:"
+      },
+      {
+        "line": 590,
+        "declaration": "func _locked_door() -> void:"
+      },
+      {
+        "line": 614,
+        "declaration": "func _kitchen() -> void:"
+      },
+      {
+        "line": 679,
+        "declaration": "func _texture_set(kind: String) -> Array:"
+      },
+      {
+        "line": 687,
+        "declaration": "func decal(kind: String, at: Vector3, along: Vector3, up: Vector3, size: Vector3, alpha := 1.0, mask := INTERIOR_LAYER | BASEMENT_LAYER) -> Decal:"
+      },
+      {
+        "line": 711,
+        "declaration": "const DRAGS := [\"drag_a\", \"drag_b\", \"drag_c\"]"
+      },
+      {
+        "line": 713,
+        "declaration": "func _blood() -> void:"
+      },
+      {
+        "line": 802,
+        "declaration": "func _audio(clip: String, loop := false) -> AudioStream:"
+      },
+      {
+        "line": 812,
+        "declaration": "func _sounds() -> void:"
+      },
+      {
+        "line": 839,
+        "declaration": "func _process(delta: float) -> void:"
+      },
+      {
+        "line": 877,
+        "declaration": "func _check_sight(cam: Camera3D) -> void:"
+      }
+    ]
+  },
+  {
+    "file": "game/scripts/nichols_door.gd",
+    "sha256": "777deb043279fcda0ad65f46c8ec354c934ccb43bd5c86a5fcdccf5123a88a87",
+    "declarations": [
+      {
+        "line": 8,
+        "declaration": "const OPENS := [\"door_open_a\", \"door_open_b\", \"door_open_c\", \"door_open_d\"]"
+      },
+      {
+        "line": 9,
+        "declaration": "const SHUTS := [\"door_close_a\", \"door_close_b\"]"
+      },
+      {
+        "line": 18,
+        "declaration": "func _ready() -> void:"
+      },
+      {
+        "line": 41,
+        "declaration": "func _physics_process(delta: float) -> void:"
+      },
+      {
+        "line": 58,
+        "declaration": "func _play(stream: AudioStream, pitch: float) -> void:"
+      },
+      {
+        "line": 63,
+        "declaration": "func prompt_text() -> String:"
+      }
+    ]
+  },
+  {
+    "file": "game/scripts/nichols_locked.gd",
+    "sha256": "1314da9bf481ae1ce2ee809db3c3754154638e219e0b5223495ef0786a3897b8",
+    "declarations": [
+      {
+        "line": 10,
+        "declaration": "func _ready() -> void:"
+      },
+      {
+        "line": 22,
+        "declaration": "func prompt_text() -> String:"
+      },
+      {
+        "line": 25,
+        "declaration": "func toggle() -> void:"
+      },
+      {
+        "line": 37,
+        "declaration": "func _process(delta: float) -> void:"
+      }
+    ]
+  },
+  {
+    "file": "game/scripts/fields_builder.gd",
+    "sha256": "04ff88da0fd396a15289979f6ae90fc6342298580dc227df11e784be27f09afc",
+    "declarations": [
+      {
+        "line": 14,
+        "declaration": "const FieldsScript = preload(\"res://scripts/fields.gd\")"
+      },
+      {
+        "line": 15,
+        "declaration": "const WATER_SHADER = preload(\"res://scripts/night_water.gdshader\")"
+      },
+      {
+        "line": 16,
+        "declaration": "const BLADE_SHADER = preload(\"res://scripts/field_blades.gdshader\")"
+      },
+      {
+        "line": 17,
+        "declaration": "const FIREFLY_SHADER = preload(\"res://scripts/firefly.gdshader\")"
+      },
+      {
+        "line": 18,
+        "declaration": "const OUTDOOR_LAYER := 2"
+      },
+      {
+        "line": 19,
+        "declaration": "const GROUND := -2.9"
+      },
+      {
+        "line": 20,
+        "declaration": "const WATER_Y := GROUND - .42"
+      },
+      {
+        "line": 21,
+        "declaration": "const GRID_ORIGIN := Vector2(-150.0, 60.0)"
+      },
+      {
+        "line": 22,
+        "declaration": "const CELL_W := 28.0"
+      },
+      {
+        "line": 23,
+        "declaration": "const CELL_H := 22.0"
+      },
+      {
+        "line": 25,
+        "declaration": "const FIELD_RECT := Rect2(-150.0, 66.0, 330.0, 574.0)"
+      },
+      {
+        "line": 26,
+        "declaration": "const TOWN_NOTCH := Rect2(-150.0, 66.0, 136.0, 14.0)"
+      },
+      {
+        "line": 29,
+        "declaration": "const ROAD_POINTS := [Vector2(21, 40), Vector2(21, 54.5), Vector2(21, 66), Vector2(17, 110), Vector2(12, 150), Vector2(22, 185),"
+      },
+      {
+        "line": 32,
+        "declaration": "const ROAD_HALF := 2.05"
+      },
+      {
+        "line": 33,
+        "declaration": "const VERGE := 3.1"
+      },
+      {
+        "line": 35,
+        "declaration": "const WALK_HALF := 3.2"
+      },
+      {
+        "line": 36,
+        "declaration": "const RICE_REACH := 42.0"
+      },
+      {
+        "line": 37,
+        "declaration": "const CHUNK := 16.0"
+      },
+      {
+        "line": 38,
+        "declaration": "const POND_RADII := Vector2(15.0, 12.5)"
+      },
+      {
+        "line": 39,
+        "declaration": "const POND_OFFSET := 19.0"
+      },
+      {
+        "line": 40,
+        "declaration": "const MOON := InteriorNight.MOON_DIRECTION"
+      },
+      {
+        "line": 63,
+        "declaration": "static func build(parent: Node3D) -> Dictionary:"
+      },
+      {
+        "line": 113,
+        "declaration": "static func cell_kind(x: float, z: float) -> int:"
+      },
+      {
+        "line": 124,
+        "declaration": "static func in_water(p: Vector2) -> bool:"
+      },
+      {
+        "line": 127,
+        "declaration": "func in_pond(p: Vector2, margin := 0.0) -> bool:"
+      },
+      {
+        "line": 133,
+        "declaration": "func is_dry(p: Vector2) -> bool:"
+      },
+      {
+        "line": 139,
+        "declaration": "func _v3(p: Vector2, y: float) -> Vector3:"
+      },
+      {
+        "line": 143,
+        "declaration": "func nearest(p: Vector2, limit := 64.0) -> Array:"
+      },
+      {
+        "line": 165,
+        "declaration": "func coarse_distance(p: Vector2) -> float:"
+      },
+      {
+        "line": 172,
+        "declaration": "static func tile_key(p: Vector2, material: String) -> String:"
+      },
+      {
+        "line": 175,
+        "declaration": "func _materials() -> void:"
+      },
+      {
+        "line": 203,
+        "declaration": "func _ripple_texture(seed_value: int, frequency: float) -> NoiseTexture2D:"
+      },
+      {
+        "line": 220,
+        "declaration": "func _sample_road() -> void:"
+      },
+      {
+        "line": 252,
+        "declaration": "func _place_pond() -> void:"
+      },
+      {
+        "line": 276,
+        "declaration": "const PROFILE := [[6.7, -.48], [6.15, -.15], [5.65, -.15], [5.35, -.75], [4.55, -.75], [4.15, -.47], [3.1, -.06],"
+      },
+      {
+        "line": 279,
+        "declaration": "const STRIPS := [\"dike\", \"dike\", \"mud\", \"mud\", \"mud\", \"bank\", \"verge\", \"road\", \"road\", \"road\", \"road\", \"road\", \"road\","
+      },
+      {
+        "line": 282,
+        "declaration": "const PROFILE_POND := [[6.7, -.75], [6.15, -.7], [5.65, -.66], [5.35, -.62], [4.55, -.55], [4.15, -.45], [3.1, -.06]]"
+      },
+      {
+        "line": 284,
+        "declaration": "func _profile_at(i: int) -> Array:"
+      },
+      {
+        "line": 304,
+        "declaration": "func _road_mesh() -> void:"
+      },
+      {
+        "line": 344,
+        "declaration": "func _point(i: int, uy: Array) -> Vector3:"
+      },
+      {
+        "line": 348,
+        "declaration": "func _trimesh(label: String, faces: PackedVector3Array, surface: String) -> void:"
+      },
+      {
+        "line": 361,
+        "declaration": "func _town_bank() -> void:"
+      },
+      {
+        "line": 387,
+        "declaration": "func _water() -> void:"
+      },
+      {
+        "line": 413,
+        "declaration": "func _dikes() -> void:"
+      },
+      {
+        "line": 427,
+        "declaration": "func _dike_clear(p: Vector2) -> bool:"
+      },
+      {
+        "line": 434,
+        "declaration": "func _dike_line(a: Vector2, c: Vector2) -> void:"
+      },
+      {
+        "line": 447,
+        "declaration": "func _dike(a: Vector2, c: Vector2) -> void:"
+      },
+      {
+        "line": 467,
+        "declaration": "func _pond_details() -> void:"
+      },
+      {
+        "line": 520,
+        "declaration": "func _lily(p: Vector2, radius: float, yaw: float, flower: bool) -> void:"
+      },
+      {
+        "line": 535,
+        "declaration": "func _jetty() -> void:"
+      },
+      {
+        "line": 571,
+        "declaration": "func _puddles() -> void:"
+      },
+      {
+        "line": 590,
+        "declaration": "func _index_at(distance: float) -> int:"
+      },
+      {
+        "line": 604,
+        "declaration": "func _hut() -> void:"
+      },
+      {
+        "line": 658,
+        "declaration": "func _nearest_index(p: Vector2) -> int:"
+      },
+      {
+        "line": 662,
+        "declaration": "func _road_end() -> void:"
+      },
+      {
+        "line": 712,
+        "declaration": "func _model(path: String, at: Vector3, yaw: float, scale: float, fade: float) -> Node3D:"
+      },
+      {
+        "line": 717,
+        "declaration": "func _plants() -> void:"
+      },
+      {
+        "line": 803,
+        "declaration": "func _islet(p: Vector2, radius: float) -> void:"
+      },
+      {
+        "line": 827,
+        "declaration": "func _poles() -> void:"
+      },
+      {
+        "line": 858,
+        "declaration": "const SCARECROW_PAST_HUT := 38       # road samples (~1 m each) past the hut's own sample"
+      },
+      {
+        "line": 859,
+        "declaration": "const SCARECROW_OFF_ROAD := 9.0"
+      },
+      {
+        "line": 860,
+        "declaration": "const SCARECROW_ISLET := 2.2         # radius at the waterline; the flat top is 0.55 of it"
+      },
+      {
+        "line": 862,
+        "declaration": "func _scarecrow() -> void:"
+      },
+      {
+        "line": 882,
+        "declaration": "func _blade_clump(blades: int, panicles: int, width: float, droop: float, seed_value: int) -> ArrayMesh:"
+      },
+      {
+        "line": 919,
+        "declaration": "func _rice_and_grass() -> void:"
+      },
+      {
+        "line": 994,
+        "declaration": "func _add_instance(store: Dictionary, kind: String, p: Vector2, t: Transform3D, custom: Color) -> void:"
+      },
+      {
+        "line": 1001,
+        "declaration": "func _emit_chunks(store: Dictionary, meshes: Dictionary, material: ShaderMaterial, parent: Node3D, label: String) -> int:"
+      },
+      {
+        "line": 1043,
+        "declaration": "func _wall_box(label: String, base: Vector3, size: Vector3, basis: Basis) -> void:"
+      },
+      {
+        "line": 1053,
+        "declaration": "func _walls() -> void:"
+      },
+      {
+        "line": 1085,
+        "declaration": "func _fireflies() -> void:"
+      },
+      {
+        "line": 1142,
+        "declaration": "func _commit() -> void:"
+      }
+    ]
+  },
+  {
+    "file": "game/scripts/fields.gd",
+    "sha256": "accd24f26db66470bb8e4fdae413bdbd41b058e40d987ff7d7eaed498871965d",
+    "declarations": [
+      {
+        "line": 17,
+        "declaration": "const OUTDOOR_LAYER := 2"
+      },
+      {
+        "line": 29,
+        "declaration": "func _ready() -> void:"
+      },
+      {
+        "line": 56,
+        "declaration": "func _mobile_budget() -> void:"
+      },
+      {
+        "line": 71,
+        "declaration": "static func zone_weight(position: Vector3) -> float:"
+      },
+      {
+        "line": 76,
+        "declaration": "func _process(delta: float) -> void:"
+      },
+      {
+        "line": 92,
+        "declaration": "func _scarecrow(camera: Camera3D) -> void:"
+      }
+    ]
+  },
+  {
+    "file": "game/scripts/hut_house.gd",
+    "sha256": "add05517aa99bf8d69f4e9173579e40ca451beca09dd6c1ad8b8e9517172e4d0",
+    "declarations": [
+      {
+        "line": 22,
+        "declaration": "const OUTDOOR_LAYER := 2"
+      },
+      {
+        "line": 23,
+        "declaration": "const GROUND := -2.9"
+      },
+      {
+        "line": 24,
+        "declaration": "const WATER_Y := GROUND - .42"
+      },
+      {
+        "line": 25,
+        "declaration": "const FLOOR := .42"
+      },
+      {
+        "line": 26,
+        "declaration": "const BACK := -1.734"
+      },
+      {
+        "line": 27,
+        "declaration": "const FRONT := 1.695"
+      },
+      {
+        "line": 28,
+        "declaration": "const SIDE_POS := 1.691"
+      },
+      {
+        "line": 29,
+        "declaration": "const SIDE_NEG := -1.64"
+      },
+      {
+        "line": 30,
+        "declaration": "const DOOR_Z0 := -.62"
+      },
+      {
+        "line": 31,
+        "declaration": "const DOOR_Z1 := .02"
+      },
+      {
+        "line": 32,
+        "declaration": "const DOOR_Z := -.3"
+      },
+      {
+        "line": 33,
+        "declaration": "const DOOR_TOP := 2.3"
+      },
+      {
+        "line": 34,
+        "declaration": "const WINDOW_Z := Vector2(.62, 1.28)"
+      },
+      {
+        "line": 35,
+        "declaration": "const WINDOW_Y := Vector2(1.45, 2.18)"
+      },
+      {
+        "line": 36,
+        "declaration": "const YARD := 6.6"
+      },
+      {
+        "line": 37,
+        "declaration": "const PATH_HALF := 1.15"
+      },
+      {
+        "line": 38,
+        "declaration": "const WALK_HALF := 3.2"
+      },
+      {
+        "line": 39,
+        "declaration": "const GLOCK := preload(\"res://assets/models/story/glock17.glb\")"
+      },
+      {
+        "line": 40,
+        "declaration": "const AMMO_BOX := \"res://assets/models/story/ammo_box.glb\""
+      },
+      {
+        "line": 42,
+        "declaration": "const ISLET_TOP := 2.0"
+      },
+      {
+        "line": 43,
+        "declaration": "const DIKE_HALF := 1.05"
+      },
+      {
+        "line": 44,
+        "declaration": "const SPARKLE_SHADER := preload(\"res://scripts/sparkle.gdshader\")"
+      },
+      {
+        "line": 45,
+        "declaration": "const DRAWER_TRAVEL := .3"
+      },
+      {
+        "line": 77,
+        "declaration": "static func attach(fields_root: Node3D) -> InteriorHutHouse:"
+      },
+      {
+        "line": 90,
+        "declaration": "func _ready() -> void:"
+      },
+      {
+        "line": 125,
+        "declaration": "func _road_samples() -> PackedVector2Array:"
+      },
+      {
+        "line": 128,
+        "declaration": "static func _nearest(points: PackedVector2Array, p: Vector2) -> int:"
+      },
+      {
+        "line": 140,
+        "declaration": "func _tex_mat(key: String, albedo: String, normal: String, rough: String, tile: float, tint: Color, roughness := 1.0) -> StandardMaterial3D:"
+      },
+      {
+        "line": 159,
+        "declaration": "func _flat(key: String, color: Color, roughness := .8, metallic := 0.0) -> StandardMaterial3D:"
+      },
+      {
+        "line": 168,
+        "declaration": "func _materials() -> void:"
+      },
+      {
+        "line": 203,
+        "declaration": "func _box(parent: Node3D, label: String, lo: Vector3, hi: Vector3, mat: String, collide := false) -> MeshInstance3D:"
+      },
+      {
+        "line": 217,
+        "declaration": "func _solid(label: String, center: Vector3, size: Vector3, basis := Basis.IDENTITY, body: CollisionObject3D = null) -> CollisionShape3D:"
+      },
+      {
+        "line": 227,
+        "declaration": "func _cylinder(parent: Node3D, label: String, at: Vector3, radius: float, height: float, mat: String, top_radius := -1.0, segments := 24) -> MeshInstance3D:"
+      },
+      {
+        "line": 245,
+        "declaration": "func _move_lantern() -> void:"
+      },
+      {
+        "line": 265,
+        "declaration": "func _shell() -> void:"
+      },
+      {
+        "line": 311,
+        "declaration": "func _steps() -> void:"
+      },
+      {
+        "line": 334,
+        "declaration": "func _furniture() -> void:"
+      },
+      {
+        "line": 399,
+        "declaration": "const DRESSER_W := 1.0"
+      },
+      {
+        "line": 400,
+        "declaration": "const DRESSER_D := .46"
+      },
+      {
+        "line": 401,
+        "declaration": "const DRESSER_H := .84"
+      },
+      {
+        "line": 405,
+        "declaration": "func _dresser() -> void:"
+      },
+      {
+        "line": 503,
+        "declaration": "func _knob(parent: Node3D, at: Vector3) -> void:"
+      },
+      {
+        "line": 515,
+        "declaration": "func _candle() -> void:"
+      },
+      {
+        "line": 565,
+        "declaration": "func _key_on_top() -> void:"
+      },
+      {
+        "line": 617,
+        "declaration": "func _footpath(road: PackedVector2Array) -> void:"
+      },
+      {
+        "line": 640,
+        "declaration": "func _scarecrow_dike() -> void:"
+      },
+      {
+        "line": 648,
+        "declaration": "func _clear_approach() -> void:"
+      },
+      {
+        "line": 698,
+        "declaration": "func crow_frame() -> Array:"
+      },
+      {
+        "line": 708,
+        "declaration": "func box_spot() -> Vector3:"
+      },
+      {
+        "line": 716,
+        "declaration": "func _hide_ammo_box() -> void:"
+      },
+      {
+        "line": 731,
+        "declaration": "static func make_ammo_box() -> Node3D:"
+      },
+      {
+        "line": 752,
+        "declaration": "func is_inside(world: Vector3) -> bool:"
+      },
+      {
+        "line": 757,
+        "declaration": "func call_spot() -> Vector3:"
+      },
+      {
+        "line": 760,
+        "declaration": "func door_point() -> Vector3:"
+      },
+      {
+        "line": 764,
+        "declaration": "func route_out() -> Array[Vector3]:"
+      },
+      {
+        "line": 771,
+        "declaration": "func usable_prompt(kind: String) -> String:"
+      },
+      {
+        "line": 786,
+        "declaration": "func use(kind: String) -> void:"
+      },
+      {
+        "line": 817,
+        "declaration": "func _unlock_and_open() -> void:"
+      },
+      {
+        "line": 833,
+        "declaration": "func remove_flashlight() -> void:"
+      },
+      {
+        "line": 841,
+        "declaration": "func take_gun() -> void:"
+      },
+      {
+        "line": 848,
+        "declaration": "func _play_sfx(path: String, at: Vector3, pitch := 1.0, volume := 0.0) -> void:"
+      },
+      {
+        "line": 857,
+        "declaration": "func _process(delta: float) -> void:"
+      }
+    ]
+  },
+  {
+    "file": "game/scripts/hut_usable.gd",
+    "sha256": "31e04716c1998e5d984590fe5a575c7a9719ea814527f88979be4e3442fe6418",
+    "declarations": [
+      {
+        "line": 9,
+        "declaration": "func _ready() -> void:"
+      },
+      {
+        "line": 12,
+        "declaration": "func prompt_text() -> String:"
+      },
+      {
+        "line": 15,
+        "declaration": "func toggle() -> void:"
+      }
+    ]
+  },
+  {
+    "file": "game/scripts/stranger.gd",
+    "sha256": "18157f413f47454de8f90aef9d8a1c6bd2e49f36b4631c1cc0769b51af8c8524",
+    "declarations": [
+      {
+        "line": 46,
+        "declaration": "const MODEL := preload(\"res://assets/characters/stranger.glb\")"
+      },
+      {
+        "line": 47,
+        "declaration": "const CutsceneScript := preload(\"res://scripts/stranger_cutscene.gd\")"
+      },
+      {
+        "line": 48,
+        "declaration": "const OUTDOOR_LAYER := 2"
+      },
+      {
+        "line": 49,
+        "declaration": "const GROUND := -2.9"
+      },
+      {
+        "line": 51,
+        "declaration": "const GATE_SPOT := Vector3(13.0, GROUND, 4.1)"
+      },
+      {
+        "line": 53,
+        "declaration": "const WAIT_SPOT := Vector3(19.05, GROUND, 45.1)"
+      },
+      {
+        "line": 55,
+        "declaration": "const CART := Vector3(19.7, GROUND, 17.0)"
+      },
+      {
+        "line": 58,
+        "declaration": "const ROUTE_TO_ROAD := [Vector3(14.0, GROUND, 4.6), Vector3(16.5, GROUND, 5.5), Vector3(18.9, GROUND, 6.0),"
+      },
+      {
+        "line": 62,
+        "declaration": "const ROUTE_TO_FIELDS := [Vector3(20.4, GROUND, 49.0), Vector3(21.0, GROUND, 54.1), Vector3(21.0, GROUND, 58.0)]"
+      },
+      {
+        "line": 63,
+        "declaration": "const RUN_SPEED := 5.7          # m/s; the player runs 4.7"
+      },
+      {
+        "line": 66,
+        "declaration": "const RUN_CLIP_SPEED := 5.62"
+      },
+      {
+        "line": 67,
+        "declaration": "const RUN_STEPS := [6.0 / 30.0, 16.0 / 30.0] # contacts in the authored 19-frame cycle"
+      },
+      {
+        "line": 68,
+        "declaration": "const ACCELERATION := 9.0"
+      },
+      {
+        "line": 69,
+        "declaration": "const TURN_RATE := 9.0"
+      },
+      {
+        "line": 70,
+        "declaration": "const REACTION := .25           # seconds he must be in view before he bolts"
+      },
+      {
+        "line": 71,
+        "declaration": "const SEE_DISTANCE := 48.0"
+      },
+      {
+        "line": 72,
+        "declaration": "const CART_PASS := .6           # metres past the cart (northward) that count as passing it"
+      },
+      {
+        "line": 73,
+        "declaration": "const NEAR_FLEE := 20.0"
+      },
+      {
+        "line": 74,
+        "declaration": "const ROAD_RUN := 230.0         # metres down the dirt road before he may vanish"
+      },
+      {
+        "line": 77,
+        "declaration": "const LOOPS := [\"gate_grip\", \"stand_stare\", \"run\", \"idle\", \"idle_look\", \"walk\", \"hero_run\", \"hero_walk\", \"interact_talk\", \"walk_back\","
+      },
+      {
+        "line": 79,
+        "declaration": "const CLIPS := [\"gate_grip\", \"stand_stare\", \"run\", \"walk\", \"interact_talk\", \"interact_pickup\", \"idle_adjust\", \"hand_over\","
+      },
+      {
+        "line": 81,
+        "declaration": "const WADE_SPEED := 2.0         # m/s through the flooded paddy"
+      },
+      {
+        "line": 82,
+        "declaration": "const WADE_DEPTH := .62         # feet below the road level while wading (water at GROUND - 0.42)"
+      },
+      {
+        "line": 83,
+        "declaration": "const FOLLOW_GAP := 20.0        # he waits when the player is further behind than this"
+      },
+      {
+        "line": 84,
+        "declaration": "const FOLLOW_RESUME := 12.0"
+      },
+      {
+        "line": 87,
+        "declaration": "const PICKUP_RATE := .8"
+      },
+      {
+        "line": 88,
+        "declaration": "const PICKUP_LOW := .333        # frame 10 of 30; hand.R is then 0.36 m up (a deep crouch, not the ground)"
+      },
+      {
+        "line": 89,
+        "declaration": "const PICKUP_HAND := Vector2(.108, .025)"
+      },
+      {
+        "line": 90,
+        "declaration": "const BOX_LIFT := .22           # s for the box to come up out of the mud into his fist"
+      },
+      {
+        "line": 92,
+        "declaration": "const HAND_OVER_RELEASE := 1.2"
+      },
+      {
+        "line": 93,
+        "declaration": "const BOX_POCKET_TIME := .35"
+      },
+      {
+        "line": 94,
+        "declaration": "const WALK_SPEED := 1.45"
+      },
+      {
+        "line": 95,
+        "declaration": "const WALK_CLIP_SPEED := 1.6"
+      },
+      {
+        "line": 96,
+        "declaration": "const BRING_WALK := 4.0         # the last metres back to the player are walked, box in hand"
+      },
+      {
+        "line": 97,
+        "declaration": "const GIVE_DISTANCE := 1.15     # he stops this far from the player to hold the box out"
+      },
+      {
+        "line": 99,
+        "declaration": "const CUT_LOOK := 2.9           # his head turns toward the player"
+      },
+      {
+        "line": 100,
+        "declaration": "const CUT_LET_GO := 3.7         # hands off the bars, backing off"
+      },
+      {
+        "line": 101,
+        "declaration": "const CUT_TURN := 5.1           # turns away and walks"
+      },
+      {
+        "line": 102,
+        "declaration": "const BACK_SPEED := .5          # m/s backing off (walk_back played slow)"
+      },
+      {
+        "line": 103,
+        "declaration": "const BACK_CLIP_SPEED := 1.2"
+      },
+      {
+        "line": 105,
+        "declaration": "const CRAWL_SPEED := .78"
+      },
+      {
+        "line": 106,
+        "declaration": "const CRAWL_CLIP_SPEED := 1.15"
+      },
+      {
+        "line": 107,
+        "declaration": "const HOLE_REACTION := .6       # s in view before he goes through"
+      },
+      {
+        "line": 108,
+        "declaration": "const HOLE_NEAR := 12.0"
+      },
+      {
+        "line": 110,
+        "declaration": "const BOX_IN_HAND := Transform3D(Basis.IDENTITY, Vector3(0, .09, .03))"
+      },
+      {
+        "line": 147,
+        "declaration": "func _ready() -> void:"
+      },
+      {
+        "line": 168,
+        "declaration": "func _own_loops() -> void:"
+      },
+      {
+        "line": 182,
+        "declaration": "func _setup_audio() -> void:"
+      },
+      {
+        "line": 205,
+        "declaration": "func _require_clip(clip: String) -> bool:"
+      },
+      {
+        "line": 211,
+        "declaration": "func _play(clip: String, blend: float, rate := 1.0) -> void:"
+      },
+      {
+        "line": 218,
+        "declaration": "func _face(yaw: float) -> void:"
+      },
+      {
+        "line": 223,
+        "declaration": "static func yaw_toward(direction: Vector3) -> float:"
+      },
+      {
+        "line": 226,
+        "declaration": "func _find_player() -> Node3D:"
+      },
+      {
+        "line": 233,
+        "declaration": "func _find_gate() -> void:"
+      },
+      {
+        "line": 246,
+        "declaration": "func _physics_process(delta: float) -> void:"
+      },
+      {
+        "line": 351,
+        "declaration": "static func passed_cart(at: Vector3) -> bool:"
+      },
+      {
+        "line": 354,
+        "declaration": "func _bolt() -> void:"
+      },
+      {
+        "line": 363,
+        "declaration": "func _flee() -> void:"
+      },
+      {
+        "line": 383,
+        "declaration": "func road_path() -> Array[Vector3]:"
+      },
+      {
+        "line": 402,
+        "declaration": "func road_range(from_z: float, to_index: int, start_index := -1) -> Array[Vector3]:"
+      },
+      {
+        "line": 421,
+        "declaration": "static func nearest_road_index(samples: PackedVector2Array, at: Vector3) -> int:"
+      },
+      {
+        "line": 431,
+        "declaration": "func _road_samples() -> PackedVector2Array:"
+      },
+      {
+        "line": 435,
+        "declaration": "func _face_player(player: Node3D, delta: float, rate: float) -> void:"
+      },
+      {
+        "line": 443,
+        "declaration": "func _start_cutscene() -> void:"
+      },
+      {
+        "line": 454,
+        "declaration": "func _act(delta: float) -> void:"
+      },
+      {
+        "line": 479,
+        "declaration": "func end_cutscene() -> void:"
+      },
+      {
+        "line": 492,
+        "declaration": "func in_cutscene() -> bool:"
+      },
+      {
+        "line": 496,
+        "declaration": "func _gate_opened() -> bool:"
+      },
+      {
+        "line": 504,
+        "declaration": "func to_hole() -> void:"
+      },
+      {
+        "line": 518,
+        "declaration": "func _start_crawl() -> void:"
+      },
+      {
+        "line": 525,
+        "declaration": "func _crawl(delta: float) -> void:"
+      },
+      {
+        "line": 543,
+        "declaration": "func _flee_from_hole() -> void:"
+      },
+      {
+        "line": 562,
+        "declaration": "func _setup_look() -> void:"
+      },
+      {
+        "line": 599,
+        "declaration": "func _set_look(weight: float, seconds: float) -> void:"
+      },
+      {
+        "line": 605,
+        "declaration": "func _process(_delta: float) -> void:"
+      },
+      {
+        "line": 615,
+        "declaration": "func _hide_in_hut() -> void:"
+      },
+      {
+        "line": 623,
+        "declaration": "func call_out(hut: InteriorHutHouse) -> void:"
+      },
+      {
+        "line": 636,
+        "declaration": "func lead_to_scarecrow(hut: InteriorHutHouse) -> void:"
+      },
+      {
+        "line": 641,
+        "declaration": "func _start_leading() -> void:"
+      },
+      {
+        "line": 673,
+        "declaration": "func dig_spot() -> Vector3:"
+      },
+      {
+        "line": 684,
+        "declaration": "func _start_digging() -> void:"
+      },
+      {
+        "line": 703,
+        "declaration": "func _dig(delta: float) -> void:"
+      },
+      {
+        "line": 723,
+        "declaration": "func _safe_path_to(target: Vector3) -> Array[Vector3]:"
+      },
+      {
+        "line": 768,
+        "declaration": "func _supported_link(from: Vector3, to: Vector3) -> bool:"
+      },
+      {
+        "line": 788,
+        "declaration": "func _handover_clear(target: Vector3) -> bool:"
+      },
+      {
+        "line": 796,
+        "declaration": "func _project_route(route: Array[Vector3], at: Vector3) -> Dictionary:"
+      },
+      {
+        "line": 809,
+        "declaration": "func _take_box() -> void:"
+      },
+      {
+        "line": 829,
+        "declaration": "func has_box() -> bool:"
+      },
+      {
+        "line": 832,
+        "declaration": "func _freeze_scarecrow(frozen: bool) -> void:"
+      },
+      {
+        "line": 837,
+        "declaration": "func _start_giving() -> void:"
+      },
+      {
+        "line": 848,
+        "declaration": "func _give(player: Node3D, delta: float) -> void:"
+      },
+      {
+        "line": 862,
+        "declaration": "func _hand_over_box() -> void:"
+      },
+      {
+        "line": 885,
+        "declaration": "func leave() -> void:"
+      },
+      {
+        "line": 905,
+        "declaration": "func _run_along(delta: float) -> bool:"
+      },
+      {
+        "line": 939,
+        "declaration": "func _ground_at(at: Vector3) -> float:"
+      },
+      {
+        "line": 954,
+        "declaration": "func _footsteps(_delta: float) -> void:"
+      },
+      {
+        "line": 979,
+        "declaration": "func _sees_me(delta: float) -> bool:"
+      },
+      {
+        "line": 987,
+        "declaration": "func _in_view(strict: bool) -> bool:"
+      }
+    ]
+  },
+  {
+    "file": "game/scripts/story.gd",
+    "sha256": "c7d532a7848e1988db1bf8b93e9f34b00defc432ee920d8520554b99037505b0",
+    "declarations": [
+      {
+        "line": 17,
+        "declaration": "const SPEAKER := \"Hooded man\""
+      },
+      {
+        "line": 18,
+        "declaration": "const CALL_LINES := [\"You have to hurry!\","
+      },
+      {
+        "line": 21,
+        "declaration": "const RUN_LINE := \"Now, take these with you and go back! Hurry, before they notice!\""
+      },
+      {
+        "line": 22,
+        "declaration": "const AMMO_GIVEN := 60"
+      },
+      {
+        "line": 23,
+        "declaration": "const SIREN := \"res://assets/audio/sfx/siren_wail.ogg\""
+      },
+      {
+        "line": 25,
+        "declaration": "const SIREN_SPOTS := [Vector3(4.0, 22.0, 36.0), Vector3(-95.0, 22.0, 170.0), Vector3(115.0, 22.0, 255.0), Vector3(40.0, 22.0, 470.0)]"
+      },
+      {
+        "line": 50,
+        "declaration": "func setup(main_node: Node, hut_house: InteriorHutHouse) -> void:"
+      },
+      {
+        "line": 87,
+        "declaration": "func stranger() -> InteriorStranger:"
+      },
+      {
+        "line": 90,
+        "declaration": "func notify(text: String) -> void:"
+      },
+      {
+        "line": 94,
+        "declaration": "func consume_hold() -> bool:"
+      },
+      {
+        "line": 102,
+        "declaration": "func _unhandled_input(event: InputEvent) -> void:"
+      },
+      {
+        "line": 107,
+        "declaration": "func _update_inventory() -> void:"
+      },
+      {
+        "line": 117,
+        "declaration": "func _play(path: String, volume := 0.0, pitch := 1.0) -> void:"
+      },
+      {
+        "line": 126,
+        "declaration": "func _on_key_taken() -> void:"
+      },
+      {
+        "line": 132,
+        "declaration": "func _on_drawer_opened() -> void:"
+      },
+      {
+        "line": 136,
+        "declaration": "func _on_flashlight_picked() -> void:"
+      },
+      {
+        "line": 142,
+        "declaration": "func _on_gun_requested() -> void:"
+      },
+      {
+        "line": 151,
+        "declaration": "func _on_inspect_closed(taken: bool) -> void:"
+      },
+      {
+        "line": 170,
+        "declaration": "func _on_dialogue_finished() -> void:"
+      },
+      {
+        "line": 186,
+        "declaration": "func receive_ammo() -> void:"
+      },
+      {
+        "line": 197,
+        "declaration": "func _on_ammo_changed() -> void:"
+      },
+      {
+        "line": 202,
+        "declaration": "func inspect_carried_gun() -> void:"
+      },
+      {
+        "line": 213,
+        "declaration": "func debug_give_key() -> void:"
+      },
+      {
+        "line": 226,
+        "declaration": "func debug_give_gun() -> void:"
+      },
+      {
+        "line": 236,
+        "declaration": "func debug_give_flashlight() -> void:"
+      },
+      {
+        "line": 248,
+        "declaration": "func start_alarm() -> void:"
+      },
+      {
+        "line": 256,
+        "declaration": "func _start_sirens() -> void:"
+      },
+      {
+        "line": 287,
+        "declaration": "func _kill_street_lamps() -> void:"
+      },
+      {
+        "line": 315,
+        "declaration": "func _darken_lenses() -> void:"
+      },
+      {
+        "line": 328,
+        "declaration": "func lamps_lit() -> int:"
+      },
+      {
+        "line": 336,
+        "declaration": "static func is_home(at: Vector3) -> bool:"
+      },
+      {
+        "line": 340,
+        "declaration": "static func is_inside_house(at: Vector3) -> bool:"
+      },
+      {
+        "line": 343,
+        "declaration": "func _process(_delta: float) -> void:"
+      }
+    ]
+  },
+  {
+    "file": "game/scripts/player.gd",
+    "sha256": "e49ea7625fe41aae9f12ffb3953efedf6fa6f7e36d509b8046deebac9f94de49",
+    "declarations": [
+      {
+        "line": 13,
+        "declaration": "const WALK_SPEED := 2.45"
+      },
+      {
+        "line": 14,
+        "declaration": "const RUN_SPEED := 4.7"
+      },
+      {
+        "line": 15,
+        "declaration": "const CROUCH_SPEED := 1.2"
+      },
+      {
+        "line": 17,
+        "declaration": "const WALK_STEP := 1.05"
+      },
+      {
+        "line": 18,
+        "declaration": "const RUN_STEP := 1.55"
+      },
+      {
+        "line": 19,
+        "declaration": "const CROUCH_STEP := .7"
+      },
+      {
+        "line": 21,
+        "declaration": "const BOB_HEIGHT := .034"
+      },
+      {
+        "line": 22,
+        "declaration": "const BOB_SWAY := .022"
+      },
+      {
+        "line": 23,
+        "declaration": "const BOB_ROLL := .011"
+      },
+      {
+        "line": 24,
+        "declaration": "const GROUND_ACCELERATION := 10.5"
+      },
+      {
+        "line": 25,
+        "declaration": "const SPRINT_ACCELERATION := 13.5"
+      },
+      {
+        "line": 26,
+        "declaration": "const GROUND_BRAKING := 12.0"
+      },
+      {
+        "line": 27,
+        "declaration": "const AIR_ACCELERATION := 1.8"
+      },
+      {
+        "line": 28,
+        "declaration": "const GRAVITY := 14.0"
+      },
+      {
+        "line": 29,
+        "declaration": "const JUMP_SPEED := 4.8"
+      },
+      {
+        "line": 30,
+        "declaration": "const PLAYER_MASS := 78.0"
+      },
+      {
+        "line": 31,
+        "declaration": "const COYOTE_TIME := 0.11"
+      },
+      {
+        "line": 32,
+        "declaration": "const JUMP_BUFFER_TIME := 0.14"
+      },
+      {
+        "line": 33,
+        "declaration": "const STANDING_HEIGHT := 1.70"
+      },
+      {
+        "line": 34,
+        "declaration": "const CROUCH_HEIGHT := 1.00"
+      },
+      {
+        "line": 35,
+        "declaration": "const STANDING_EYE := 1.58"
+      },
+      {
+        "line": 36,
+        "declaration": "const CROUCH_EYE := 0.88"
+      },
+      {
+        "line": 37,
+        "declaration": "const REACH := 3.0"
+      },
+      {
+        "line": 38,
+        "declaration": "const HOLD_DISTANCE := 1.55"
+      },
+      {
+        "line": 39,
+        "declaration": "const HOLD_MIN_DISTANCE := 0.7"
+      },
+      {
+        "line": 40,
+        "declaration": "const HOLD_MAX_DISTANCE := 2.4"
+      },
+      {
+        "line": 41,
+        "declaration": "const CARRY_FORCE := 420.0          # N; heavier props lag and sag, ~40 kg cannot be lifted"
+      },
+      {
+        "line": 42,
+        "declaration": "const DRAG_FORCE := 520.0           # N at the grab point for heavy furniture"
+      },
+      {
+        "line": 43,
+        "declaration": "const PUSH_FORCE := 520.0           # N sustained shove into props"
+      },
+      {
+        "line": 44,
+        "declaration": "const THROW_CHARGE_TIME := 0.6"
+      },
+      {
+        "line": 45,
+        "declaration": "const OBSTRUCT_DISTANCE := 0.55"
+      },
+      {
+        "line": 46,
+        "declaration": "const OBSTRUCT_TIME := 0.3"
+      },
+      {
+        "line": 49,
+        "declaration": "const TAP_TIME := 0.28"
+      },
+      {
+        "line": 140,
+        "declaration": "func _ready() -> void:"
+      },
+      {
+        "line": 176,
+        "declaration": "func _register_actions() -> void:"
+      },
+      {
+        "line": 183,
+        "declaration": "func _save_spawn() -> void:"
+      },
+      {
+        "line": 187,
+        "declaration": "func set_fov(deg: float) -> void:"
+      },
+      {
+        "line": 191,
+        "declaration": "func _view_basis() -> Basis:"
+      },
+      {
+        "line": 195,
+        "declaration": "func _sync_camera(origin: Vector3) -> void:"
+      },
+      {
+        "line": 205,
+        "declaration": "func _process(delta: float) -> void:"
+      },
+      {
+        "line": 213,
+        "declaration": "func kick(degrees: float) -> void:"
+      },
+      {
+        "line": 217,
+        "declaration": "func look(motion: Vector2) -> void:"
+      },
+      {
+        "line": 225,
+        "declaration": "func rotate_held(delta: Vector2) -> void:"
+      },
+      {
+        "line": 232,
+        "declaration": "func _unhandled_input(event: InputEvent) -> void:"
+      },
+      {
+        "line": 273,
+        "declaration": "func _interactor_with(method: String) -> Object:"
+      },
+      {
+        "line": 279,
+        "declaration": "func change_channel(step: int) -> void:"
+      },
+      {
+        "line": 285,
+        "declaration": "func touch_throw() -> void:"
+      },
+      {
+        "line": 293,
+        "declaration": "func request_jump() -> void:"
+      },
+      {
+        "line": 297,
+        "declaration": "func inspect_object() -> void:"
+      },
+      {
+        "line": 302,
+        "declaration": "func _physics_process(delta: float) -> void:"
+      },
+      {
+        "line": 377,
+        "declaration": "func hold_pressed() -> void:"
+      },
+      {
+        "line": 400,
+        "declaration": "func hold_released() -> void:"
+      },
+      {
+        "line": 418,
+        "declaration": "func is_pulling() -> bool:"
+      },
+      {
+        "line": 421,
+        "declaration": "func _update_pull(delta: float) -> void:"
+      },
+      {
+        "line": 432,
+        "declaration": "func _update_stance() -> void:"
+      },
+      {
+        "line": 443,
+        "declaration": "func can_stand() -> bool:"
+      },
+      {
+        "line": 453,
+        "declaration": "func _push_contacts(approach_velocity: Vector3, delta: float) -> void:"
+      },
+      {
+        "line": 492,
+        "declaration": "func _update_camera(delta: float, sprinting: bool) -> void:"
+      },
+      {
+        "line": 541,
+        "declaration": "func _fly(delta: float) -> void:"
+      },
+      {
+        "line": 557,
+        "declaration": "func _end_teleport() -> void:"
+      },
+      {
+        "line": 563,
+        "declaration": "func reset_motion(spawn_position: Vector3, restore_stance := true) -> void:"
+      },
+      {
+        "line": 602,
+        "declaration": "func ray_hit(distance: float, mask: int, exclude: Array[RID] = []) -> Dictionary:"
+      },
+      {
+        "line": 608,
+        "declaration": "func update_target() -> void:"
+      },
+      {
+        "line": 633,
+        "declaration": "func toggle_hold() -> void:"
+      },
+      {
+        "line": 653,
+        "declaration": "func grab_object(body: InteriorObject) -> void:"
+      },
+      {
+        "line": 677,
+        "declaration": "func update_hold(delta: float) -> void:"
+      },
+      {
+        "line": 722,
+        "declaration": "func release_object() -> InteriorObject:"
+      },
+      {
+        "line": 740,
+        "declaration": "func throw_object() -> void:"
+      }
+    ]
+  },
+  {
+    "file": "game/scripts/debug_menu.gd",
+    "sha256": "c24772ae77b416f55d3d4297e650e291902096a413daeecf579a066ccfeab04b",
+    "declarations": [
+      {
+        "line": 15,
+        "declaration": "const SEQUENCE := [KEY_Q, KEY_W, KEY_E, KEY_R, KEY_T, KEY_Y]"
+      },
+      {
+        "line": 16,
+        "declaration": "const SEQUENCE_GAP := 2.0"
+      },
+      {
+        "line": 17,
+        "declaration": "const PANEL_WIDTH := 460.0"
+      },
+      {
+        "line": 18,
+        "declaration": "const C := preload(\"res://scripts/canal_settlement.gd\")"
+      },
+      {
+        "line": 19,
+        "declaration": "const NICHOLS := preload(\"res://scripts/nichols_property.gd\")"
+      },
+      {
+        "line": 20,
+        "declaration": "const W := preload(\"res://scripts/canal_warren.gd\")"
+      },
+      {
+        "line": 44,
+        "declaration": "func setup(main_node: Node) -> void:"
+      },
+      {
+        "line": 66,
+        "declaration": "func _input(event: InputEvent) -> void:"
+      },
+      {
+        "line": 90,
+        "declaration": "func can_open() -> bool:"
+      },
+      {
+        "line": 97,
+        "declaration": "func show_menu() -> void:"
+      },
+      {
+        "line": 107,
+        "declaration": "func close() -> void:"
+      },
+      {
+        "line": 115,
+        "declaration": "func _build() -> void:"
+      },
+      {
+        "line": 175,
+        "declaration": "func _tab(tabs: TabContainer, label: String) -> VBoxContainer:"
+      },
+      {
+        "line": 186,
+        "declaration": "func _section(box: VBoxContainer, text: String) -> void:"
+      },
+      {
+        "line": 193,
+        "declaration": "func _note(box: VBoxContainer, text: String) -> void:"
+      },
+      {
+        "line": 202,
+        "declaration": "func _buttons(box: VBoxContainer, specs: Array) -> void:"
+      },
+      {
+        "line": 216,
+        "declaration": "func _check(box: VBoxContainer, key: String, text: String, apply: Callable) -> CheckBox:"
+      },
+      {
+        "line": 227,
+        "declaration": "func _slider(box: VBoxContainer, key: String, text: String, lo: float, hi: float, value: float, apply: Callable, step := .05) -> HSlider:"
+      },
+      {
+        "line": 256,
+        "declaration": "func _items_tab(box: VBoxContainer) -> void:"
+      },
+      {
+        "line": 275,
+        "declaration": "func _draw_gun() -> void:"
+      },
+      {
+        "line": 279,
+        "declaration": "func _fill_magazine() -> void:"
+      },
+      {
+        "line": 283,
+        "declaration": "func _toggle_flashlight() -> void:"
+      },
+      {
+        "line": 287,
+        "declaration": "func _give_everything() -> void:"
+      },
+      {
+        "line": 293,
+        "declaration": "func _rounds(count: int) -> void:"
+      },
+      {
+        "line": 300,
+        "declaration": "func _lighting_tab(box: VBoxContainer) -> void:"
+      },
+      {
+        "line": 330,
+        "declaration": "func _environment() -> Environment:"
+      },
+      {
+        "line": 339,
+        "declaration": "func _set_exposure(v: float) -> void:"
+      },
+      {
+        "line": 347,
+        "declaration": "func _moon_lights() -> Array[DirectionalLight3D]:"
+      },
+      {
+        "line": 355,
+        "declaration": "func _set_moon(v: float) -> void:"
+      },
+      {
+        "line": 362,
+        "declaration": "func _street_lamps() -> Array[Light3D]:"
+      },
+      {
+        "line": 368,
+        "declaration": "func _set_lamps(on: bool) -> void:"
+      },
+      {
+        "line": 378,
+        "declaration": "func _reset_lighting() -> void:"
+      },
+      {
+        "line": 388,
+        "declaration": "func _player_tab(box: VBoxContainer) -> void:"
+      },
+      {
+        "line": 414,
+        "declaration": "func _toggle_cellar_lights() -> void:"
+      },
+      {
+        "line": 420,
+        "declaration": "func _stranger_to_hole() -> void:"
+      },
+      {
+        "line": 426,
+        "declaration": "func _to_scarecrow() -> void:"
+      },
+      {
+        "line": 431,
+        "declaration": "func _teleport(at: Vector3, drop := true) -> void:"
+      },
+      {
+        "line": 445,
+        "declaration": "func _world_tab(box: VBoxContainer) -> void:"
+      },
+      {
+        "line": 455,
+        "declaration": "func _open_drawer() -> void:"
+      },
+      {
+        "line": 460,
+        "declaration": "func _restart() -> void:"
+      },
+      {
+        "line": 466,
+        "declaration": "func _refresh() -> void:"
+      },
+      {
+        "line": 482,
+        "declaration": "func _update_info() -> void:"
+      },
+      {
+        "line": 492,
+        "declaration": "func _process(delta: float) -> void:"
+      }
+    ]
+  }
+]

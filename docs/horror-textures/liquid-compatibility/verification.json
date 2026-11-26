@@ -1,0 +1,8 @@
+{
+	"compatibility_meshes": 270,
+	"compatibility_triangles": 8226,
+	"failures": [],
+	"generated_decals": 201,
+	"passed": true,
+	"renderer": "gl_compatibility"
+}

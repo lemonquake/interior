@@ -21,6 +21,7 @@ const TICKER := "ADVISORY: ALL RESIDENTS OF DAVAO CITY ARE ORDERED TO REMAIN IND
 var body: InteriorObject
 var screen: MeshInstance3D
 var powered := false
+var broken := false
 var channel := NEWS_CHANNEL
 var _off_material: Material
 var _material: ShaderMaterial
@@ -128,12 +129,22 @@ func set_power(on: bool) -> void:
 		_osd_left = 0.0
 
 func change_channel(step := 1) -> void:
-	if not powered:
+	if not powered or broken:
 		return
 	channel = wrapi(channel + step, 1, CHANNELS + 1)
 	_osd_left = 2.5
 	_glitch_left = .25
 	_play_once("click", -14.0)
+	_update_sound()
+
+## 0.11: hit by a round (scripts/gun.gd): the picture stops on static for good.
+func shoot() -> void:
+	broken = true
+	if not powered:
+		set_power(true)
+	if channel == NEWS_CHANNEL:
+		channel = wrapi(NEWS_CHANNEL + 1, 1, CHANNELS + 1)
+	_glitch_left = .5
 	_update_sound()
 
 func is_news() -> bool:

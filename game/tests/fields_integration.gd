@@ -58,6 +58,9 @@ func _run() -> void:
 	main._play()
 	await _frames(4)
 	player = main.player
+	# 0.23: pulling the courtyard gate would start the hooded man's cutscene (it holds the player and takes the camera);
+	# tests/stranger_integration.gd covers him.
+	main.get_node("Stranger").process_mode = Node.PROCESS_MODE_DISABLED
 	await _door_pull()
 	await _gate_pull()
 	await _prop_hold()
@@ -101,7 +104,7 @@ func _door_pull() -> void:
 func _gate_pull() -> void:
 	var gate: InteriorPushGate = null
 	for node in get_nodes_in_group("interior_doors"):
-		if node is InteriorPushGate:
+		if node is InteriorPushGate and not node.neighborhood_gate:
 			gate = node
 	check(gate != null, "The courtyard gate exists")
 	if gate == null:
@@ -172,11 +175,18 @@ func _fields_walk() -> void:
 	await _place(Vector3(road[0].x, -2.85, road[0].y), PI)
 	await _frames(3)
 	check(fields.visible, "The fields show from the end of street B")
+	# 0.23: the town wall closes the road's first metres (the way through is the crouch hole, tests/siege_integration.gd);
+	# the walk starts on the far side of it.
+	var first := 0
+	while first < road.size() - 1 and road[first].y < InteriorTownSiege.NORTH_Z + 1.2:
+		first += 1
+	await _place(Vector3(road[first].x, -2.85, road[first].y), PI)
+	await _frames(3)
 	player.touch_sprinting = true
 	lowest = INF
 	var reached := 0
 	var surfaces := {}
-	for i in range(8, road.size() - 6, 8):
+	for i in range(first + 8, road.size() - 6, 8):
 		if not await _walk_to(Vector3(road[i].x, 0, road[i].y), 400, .9):
 			break
 		reached = i

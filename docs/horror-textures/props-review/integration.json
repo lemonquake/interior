@@ -1,0 +1,17 @@
+{
+  "command": "Godot --headless --path game --script res://tests/horror_props_integration.gd",
+  "passed": true,
+  "checks": 504,
+  "failures": [],
+  "canal_materials": 18,
+  "street_batches": 3,
+  "material_bindings_by_family": {
+    "bag": 28,
+    "cardboard": 12,
+    "fabric": 44,
+    "metal": 142,
+    "paper": 44,
+    "plastic": 220
+  },
+  "count_note": "Bindings include active surface materials and material overrides, so these are not unique prop counts."
+}

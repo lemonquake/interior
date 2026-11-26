@@ -1,0 +1,47 @@
+[
+  {
+    "source": "assets/assets/horror_textures/liquid/drag_smear.png.import",
+    "imported_texture": "assets/.godot/imported/drag_smear.png-ac6198f34e8bfc8bd33aceecb1a46db2.etc2.ctex",
+    "present": true
+  },
+  {
+    "source": "assets/assets/horror_textures/liquid/pool.png.import",
+    "imported_texture": "assets/.godot/imported/pool.png-6b65a070fdc0433ee9b2c1c3b458afec.etc2.ctex",
+    "present": true
+  },
+  {
+    "source": "assets/assets/horror_textures/liquid/splatter.png.import",
+    "imported_texture": "assets/.godot/imported/splatter.png-57d9595729c01dacd218d5af10388d2e.etc2.ctex",
+    "present": true
+  },
+  {
+    "source": "assets/assets/horror_textures/props/discarded_paper.png.import",
+    "imported_texture": "assets/.godot/imported/discarded_paper.png-fa4543008169b91aabebaeadf9b077f8.etc2.ctex",
+    "present": true
+  },
+  {
+    "source": "assets/assets/horror_textures/props/refuse_plastic_black.png.import",
+    "imported_texture": "assets/.godot/imported/refuse_plastic_black.png-98f4990e2b8c6b3471ee38d12a594574.etc2.ctex",
+    "present": true
+  },
+  {
+    "source": "assets/assets/horror_textures/props/stained_fabric.png.import",
+    "imported_texture": "assets/.godot/imported/stained_fabric.png-bf44a21f123153a0dc06a0dddf3a6837.etc2.ctex",
+    "present": true
+  },
+  {
+    "source": "assets/assets/horror_textures/props/tarnished_metal.png.import",
+    "imported_texture": "assets/.godot/imported/tarnished_metal.png-5dccbd06615b08f615f16edf16cf3d58.etc2.ctex",
+    "present": true
+  },
+  {
+    "source": "assets/assets/horror_textures/props/waterlogged_cardboard.png.import",
+    "imported_texture": "assets/.godot/imported/waterlogged_cardboard.png-ab0a572db4267d4caa2323b48c9f0823.etc2.ctex",
+    "present": true
+  },
+  {
+    "source": "assets/assets/horror_textures/props/weathered_plastic.png.import",
+    "imported_texture": "assets/.godot/imported/weathered_plastic.png-65c3058ae5d641d38d3f00427da53836.etc2.ctex",
+    "present": true
+  }
+]

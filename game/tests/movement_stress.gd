@@ -254,7 +254,8 @@ func _run() -> void:
 		player.touch_sprinting = true
 		var peak_velocity := 0.0
 		var peak_spin := 0.0
-		for i in 65:
+		# 0.26: 80 frames (was 65): the sprint builds a little more slowly (11.5 m/s2, was 13.5).
+		for i in 80:
 			await physics_frame
 			peak_velocity = maxf(peak_velocity, body.linear_velocity.length())
 			peak_spin = maxf(peak_spin, body.angular_velocity.length())
